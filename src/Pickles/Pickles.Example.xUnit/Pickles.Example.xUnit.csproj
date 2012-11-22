@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -160,6 +160,11 @@
     <Compile Include="Features\11ContextInjection\FeatureWithASingleContextSteps.cs" />
     <Compile Include="Features\11ContextInjection\FeatureWithMultipleContextsSteps.cs" />
     <Compile Include="Features\11ContextInjection\FeatureWithNoContextSteps.cs" />
+    <Compile Include="Features\12NestedFolders\ChildFolder\ChildChildFolder\NestedFolderExample.feature.cs">
+      <DependentUpon>NestedFolderExample.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\99TestEntities\Person.cs" />
     <Compile Include="Features\99TestEntities\Style.cs" />
     <Compile Include="Features\Arithmetic1.feature.cs">
@@ -243,6 +248,10 @@
     <None Include="Features\11ContextInjection\ContextInjection.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ContextInjection1.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\12NestedFolders\ChildFolder\ChildChildFolder\NestedFolderExample.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>NestedFolderExample.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Arithmetic.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -49,6 +49,10 @@
     padding: 0;
 }
 
+#toc ul.features ul.features .features {
+    padding-left: 1.25em;
+}
+
 #toc ul li a {
     color: gray;
     text-decoration: none;
