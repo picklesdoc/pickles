@@ -165,7 +165,7 @@ div.description ul {
  * Feature - formatting tables (example or step tables)
  *************************************************************************/
 
-#feature .table_container { margin: 8px 0px 8px 0px; }
+#feature .table_container { margin: 8px 0px 8px 0px; overflow:auto; }
 
 #feature table {
     border-collapse: collapse;
