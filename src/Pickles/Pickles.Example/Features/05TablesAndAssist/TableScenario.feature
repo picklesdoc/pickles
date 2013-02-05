@@ -35,3 +35,8 @@ Scenario: Creating a entity from field value
 	Then the following person should be returned using assist
 		| Name		| Style		| Birth date | Cred |
 		| Marcus    | Very cool	| 1972-10-09 | 1000 |
+
+Scenario: Example of a wide table
+	Given this wide table
+		| Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred | Name   | Style     | Birth date | Cred |
+		| Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 | Marcus | Very cool | 10/9/1972  | 1000 |

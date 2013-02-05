@@ -18,8 +18,8 @@
 
 #endregion
 
-using System;
 using System.Collections.Generic;
+using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles.Parser
 {
@@ -39,6 +39,7 @@ namespace PicklesDoc.Pickles.Parser
         public string Description { get; set; }
         public List<Step> Steps { get; set; }
         public List<string> Tags { get; set; }
+        public TestResult Result { get; set; }
         public Feature Feature { get; set; }
 
         #endregion

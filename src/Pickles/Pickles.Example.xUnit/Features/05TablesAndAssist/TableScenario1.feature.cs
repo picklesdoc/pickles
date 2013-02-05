@@ -216,6 +216,87 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.FactAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Showing table usage")]
+        [Xunit.TraitAttribute("Description", "Example of a wide table")]
+        public virtual void ExampleOfAWideTable()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Example of a wide table", ((string[])(null)));
+#line 39
+this.ScenarioSetup(scenarioInfo);
+#line hidden
+            TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred",
+                        "Name",
+                        "Style",
+                        "Birth date",
+                        "Cred"});
+            table7.AddRow(new string[] {
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000",
+                        "Marcus",
+                        "Very cool",
+                        "10/9/1972",
+                        "1000"});
+#line 40
+ testRunner.Given("this wide table", ((string)(null)), table7, "Given ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

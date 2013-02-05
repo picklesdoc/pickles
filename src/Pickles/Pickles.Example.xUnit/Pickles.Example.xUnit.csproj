@@ -165,6 +165,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
+    <Compile Include="Features\13MultilineText\MultilineFeatureExample.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MultilineFeatureExample.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\99TestEntities\Person.cs" />
     <Compile Include="Features\99TestEntities\Style.cs" />
     <Compile Include="Features\Arithmetic1.feature.cs">
@@ -252,6 +257,10 @@
     <None Include="Features\12NestedFolders\ChildFolder\ChildChildFolder\NestedFolderExample.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>NestedFolderExample.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\13MultilineText\MultilineFeatureExample.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>MultilineFeatureExample.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Arithmetic.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

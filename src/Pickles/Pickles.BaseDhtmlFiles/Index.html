@@ -1,0 +1,287 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <script type="text/html" id="features-template">
+        <div style="padding: 5px" class="feature" data-bind="click: $root.showFeature.bind(Path)"><a data-bind="text: Name, click: $root.showFeature.bind(Path)" href="#"></a></div>
+    </script>
+
+    <script type="text/html" id="featuresByFolder-template">
+        <div data-bind="text: Name" style="padding: 5px"></div>
+        <div style="margin-left: 15px">
+            <div data-bind="template: { name: 'features-template', foreach: features }"></div>
+            <div data-bind="template: { name: 'featuresByFolder-template', foreach: SubDirectories }"></div>
+        </div>
+    </script>
+
+    <script type="text/html" id="testResults-template">
+        <div style="float: right" data-bind="if: WasExecuted">
+            <div data-bind="if: WasSuccessful"><span class="badge badge-success"><i class="icon-ok passed" title="Passed"></i></span></div>
+            <div data-bind="if: !WasSuccessful"><span class="badge badge-important"><i class="icon-minus-sign failed" title="Failed"></i></span></div>
+        </div>
+        <!--<div style="float: right" data-bind="if: !WasExecuted">
+            <span class="badge badge-warning"><i class="icon-warning-sign inconclusive" title="Inconclusive"></i></span>
+        </div>-->
+    </script>
+
+    <script type="text/html" id="steps-template">
+        <li class="step">
+            <span class="keyword" data-bind="text: NativeKeyword"></span><span data-bind="text:Name"></span>
+            <div data-bind="if: DocStringArgument != ''"><div data-bind="text: DocStringArgument" class="pre"></div></div>
+            <div data-bind="template: { name: 'table-template', data: $data }"></div>
+        </li>
+    </script>
+
+    <script type="text/html" id="table-template">
+        <div data-bind="if: TableArgument.HeaderRow">
+            <div style="overflow-x: auto">
+                <table class="table table-bordered table-condensed table-striped">
+
+                    <thead>
+                        <tr data-bind="foreach: TableArgument.HeaderRow">
+                            <th data-bind="text: $data"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody data-bind="foreach: TableArgument.DataRows">
+                        <tr data-bind="foreach: $data">
+                            <td data-bind="text: $data"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="TopNav">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="brand" href="#">Features</a>
+                <div class="navbar-search pull-left">
+                    <input type="text" id="TypeAheadSearchBox" class="search-query" data-bind="value: whatToSearchFor" style="width: 300px" placeholder="@tag or feature name" />
+                    <a id="SearchButton" data-bind="click: search" class="btn">Search</a>
+                    <a id="ClearSearchButton" data-bind="click: clearSearch" class="btn">Clear</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="MainContainer">
+        <div class="row-fluid">
+            <div class="span3" id="FolderNav">
+                <div>
+                    <div data-bind="template: { name: 'features-template', foreach: featuresByFolder().features }"></div>
+                    <div data-bind="template: { name: 'featuresByFolder-template', foreach: featuresByFolder().SubDirectories }"></div>
+                </div>
+            </div>
+
+            <div class="span9" data-bind="with: currentFeature">
+                <div data-bind="with: Feature" id="featureDetails">
+                    <div data-bind="template: { name: 'testResults-template', data: Result }"></div>
+                    <div data-bind="if: Tags.length > 0" class="canHighlight inline">
+                        <i class=" icon-tags"></i>
+                        <!-- ko foreach: Tags.sort() -->
+                        <span data-bind="text: $data" class="inline"></span>
+                        <!-- /ko -->
+                    </div>
+                    <h1 data-bind="text: Name" class="canHighlight"></h1>
+                    <h5 data-bind="text: Description" class="pre"></h5>
+                </div>
+
+                <div class="row-fluid" data-bind="with: Feature">
+                    <div class="row-fluid" data-bind="if: Background.Steps">
+                        <div class="scenario">
+                            <h4>Background:</h4>
+                            <ul data-bind="template: { name: 'steps-template', foreach: Background.Steps }"></ul>
+                        </div>
+                    </div>
+
+                    <div id="scenarios" data-bind="foreach: FeatureElements">
+                        <div data-bind="if: Tags.length > 0" class="canHighlight inline">
+                            <i class=" icon-tags"></i><em>
+                                <!-- ko foreach: Tags.sort() -->
+                                <span data-bind="text: $data" class="inline"></span>
+                                <!-- /ko -->
+                            </em>
+                        </div>
+
+                        <div class="scenario">
+                            <div data-bind="template: { name: 'testResults-template', data: Result }"></div>
+                        
+                            <div>
+                                <h4 data-bind="text: Name" class="canHighlight"></h4>
+                            </div>
+
+                            <div class="steps">
+
+                                <ul data-bind="template: { name: 'steps-template', foreach: Steps }"></ul>
+
+                                <ul data-bind="foreach: Examples">
+                                    <li class="step">
+                                        <div><strong>Examples:</strong> <span data-bind="text: Name"></span></div>
+                                        <div data-bind="template: { name: 'table-template', data: $data }"></div>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Enable to dump JSON to the screen -->
+                <!--<div class="row-fluid">
+                    Current Features List JSON:
+                    <pre data-bind="text: ko.toJSON($parent.featuresList())"></pre>
+                </div>-->
+            </div>
+            <!--/span-->
+        </div>
+        <!--/row-->
+
+        <hr>
+
+        <footer>
+            <p></p>
+        </footer>
+
+    </div>
+    <!--/.fluid-container-->
+
+    <!-- Le javascript
+            ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/knockout-2.2.0.debug.js"></script>
+    <script src="js/knockout.mapping-latest.debug.js"></script>
+    <script src="js/underscore.js"></script>
+    <script src="js/jquery.highlight.js"></script>
+    <script src="js/featuresModel.js"></script>
+    <script src="js/logger.js"></script>
+    <script src="js/stringFormatting.js"></script>
+    <script src="js/heirarchyBuilder.js"></script>
+    <script src="js/typeaheadList.js"></script>
+    <script src="js/featureSearch.js"></script>
+    <script type="text/javascript">
+        function ViewModel(features) {
+            var self = this;
+
+            self.originalFeaturesList = ko.observableArray(features);
+            self.featuresByFolder = ko.observable(buildFullHierarchy(getFeaturesFromScenariosList(features)));
+            self.currentFeature = ko.observable();
+
+            self.setCurrentFeature = function () {
+                if (window.location.hash != '') {
+                    var featureFromHashLocation = findFeatureByRelativeFolder(removeBeginningHash(window.location.hash), features);
+                    self.updateCurrentFeature(featureFromHashLocation);
+                } else {
+                    self.updateCurrentFeature(self.originalFeaturesList()[0]);
+                }
+            };
+
+            self.whatToSearchFor = ko.observable("");
+
+            self.clearSearch = function () {
+                self.whatToSearchFor('');
+                self.search();
+            };
+
+            self.search = function () {
+                var searchString = this.whatToSearchFor().toLowerCase();
+
+                if (searchString == "") {
+                    self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(features)));
+                    self.setCurrentFeature();
+                    return;
+                } else {
+                    var matchingFeatures = getFeaturesMatching(searchString, features);
+
+                    self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(matchingFeatures)));
+
+                    if (matchingFeatures.length > 0) {
+                        self.updateCurrentFeature(matchingFeatures[0]);
+                    }
+
+                    highlightSearchString(self.whatToSearchFor());
+                }
+            };
+
+            self.showFeature = function (data) {
+                var foundFeature = findFeatureByRelativeFolder(data.Path, features);
+                self.updateCurrentFeature(foundFeature);
+            };
+
+            self.updateCurrentFeature = function (feature) {
+                self.currentFeature(feature);
+                document.location.hash = feature.RelativeFolder;
+                document.title = feature.Feature.Name;
+                window.scroll(0, 0);
+                highlightSearchString(self.whatToSearchFor());
+            };
+        };
+
+        function highlightSearchString(searchString) {
+            if (searchString != '') {
+                $('.canHighlight').highlight(searchString);
+            }
+        }
+
+        function jsonPWrapper(data) {
+            data.reverse();
+
+            var viewModel = new window.ViewModel(data);
+            viewModel.setCurrentFeature();
+
+            window.ko.applyBindings(viewModel);
+
+            var searchItems = getTagsAndFeatureAndScenarioNames(data);
+            $('#TypeAheadSearchBox').typeahead({
+                source: searchItems
+            });
+        }
+
+        $(document).ready(function () {
+            function chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag() {
+                var url = "pickledFeatures.js"; // URL of the external script
+
+                // this shows dynamic script insertion
+                var script = document.createElement('script');
+                script.setAttribute('src', url);
+
+                // load the script
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+
+            chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag();
+
+            function setupSubmitSearchWhenEnterKeyPressed() {
+                $("#TypeAheadSearchBox").keyup(function (event) {
+                    if (event.keyCode == 13) {
+                        $("#SearchButton").click();
+                    }
+                });
+            }
+
+            setupSubmitSearchWhenEnterKeyPressed();
+        });
+    </script>
+</body>
+</html>

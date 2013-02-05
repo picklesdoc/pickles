@@ -18,11 +18,13 @@
 
 #endregion
 
-using System;
-using NGenerics.DataStructures.Trees;
 using Autofac;
+using NGenerics.DataStructures.Trees;
+using NGenerics.Patterns.Visitor;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
+using PicklesDoc.Pickles.Parser;
+using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles
 {
@@ -36,8 +38,47 @@ namespace PicklesDoc.Pickles
             var featureCrawler = container.Resolve<DirectoryTreeCrawler>();
             GeneralTree<IDirectoryTreeNode> features = featureCrawler.Crawl(configuration.FeatureFolder);
 
+            ApplyTestResultsToFeatures(container, configuration, features);
+
             var documentationBuilder = container.Resolve<IDocumentationBuilder>();
             documentationBuilder.Build(features);
+        }
+
+        private static void ApplyTestResultsToFeatures(IContainer container, Configuration configuration, GeneralTree<IDirectoryTreeNode> features)
+        {
+            var testResults = container.Resolve<ITestResults>();
+
+            var actionVisitor = new ActionVisitor<IDirectoryTreeNode>(node =>
+                {
+                    var featureTreeNode = node as FeatureDirectoryTreeNode;
+                    if (featureTreeNode == null) return;
+                    if (configuration.HasTestResults)
+                    {
+                        SetResultsAtFeatureLevel(featureTreeNode, testResults);
+                        SetResultsForIndividualScenariosUnderFeature(featureTreeNode, testResults);
+                    }
+                    else
+                    {
+                        featureTreeNode.Feature.Result = TestResult.Inconclusive();
+                    }
+                });
+
+            features.AcceptVisitor(actionVisitor);
+        }
+
+        private static void SetResultsForIndividualScenariosUnderFeature(FeatureDirectoryTreeNode featureTreeNode, ITestResults testResults)
+        {
+            foreach (var scenario in featureTreeNode.Feature.FeatureElements)
+            {
+                scenario.Result = scenario.GetType().Name == "Scenario"
+                                      ? testResults.GetScenarioResult(scenario as Scenario)
+                                      : testResults.GetScenarioOutlineResult(scenario as ScenarioOutline);
+            }
+        }
+
+        private static void SetResultsAtFeatureLevel(FeatureDirectoryTreeNode featureTreeNode, ITestResults testResults)
+        {
+            featureTreeNode.Feature.Result = testResults.GetFeatureResult(featureTreeNode.Feature);
         }
     }
 }

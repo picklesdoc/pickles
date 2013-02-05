@@ -48,7 +48,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
             this.testResults = testResults;
         }
 
-        private string OutputFilePath
+        public string OutputFilePath
         {
             get { return Path.Combine(this.configuration.OutputFolder.FullName, JsonFileName); }
         }

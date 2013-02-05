@@ -35,7 +35,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.Feature = feature;
         }
 
-        public Feature Feature { get; private set; }
+        public Feature Feature { get; set; }
 
         #region IDirectoryTreeNode Members
 

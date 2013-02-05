@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles
     {
         [Description("HTML")]
         Html,
-        
+
         [Description("Microsoft Word OpenXML (.docx)")]
         Word,
 
@@ -38,6 +38,9 @@ namespace PicklesDoc.Pickles
         JSON,
 
         [Description("Microsoft Excel OpenXML (.xlsx)")]
-        Excel
+        Excel,
+
+        [Description("HTML w/search")]
+        DHtml
     }
 }

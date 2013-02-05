@@ -190,13 +190,13 @@ div.description ul {
  * Feature - formatting scenarios and steps
  *************************************************************************/
 
-ul#scenarios {
+ul#scenarios, div#scenarios {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-li.scenario {
+li.scenario, div.scenario {
     background-color: #F5F9FD;
     border: 1px solid #C3D9FF;
     margin: 6px 0px 28px 0px;

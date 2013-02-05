@@ -1,4 +1,4 @@
-﻿#region License
+#region License
 
 /*
     Copyright [2011] [Jeffrey Cameron]
@@ -22,6 +22,7 @@ using System;
 using Autofac;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
+using PicklesDoc.Pickles.DocumentationBuilders.DHTML;
 using PicklesDoc.Pickles.DocumentationBuilders.DITA;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 using PicklesDoc.Pickles.DocumentationBuilders.HTML;
@@ -46,6 +47,7 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<DitaDocumentationBuilder>().SingleInstance();
             builder.RegisterType<JSONDocumentationBuilder>().SingleInstance();
             builder.RegisterType<ExcelDocumentationBuilder>().SingleInstance();
+            builder.RegisterType<DhtmlDocumentationBuilder>().SingleInstance();
 
             builder.Register<IDocumentationBuilder>(c =>
             {
@@ -57,6 +59,7 @@ namespace PicklesDoc.Pickles
                     case DocumentationFormat.Dita: return c.Resolve<DitaDocumentationBuilder>();
                     case DocumentationFormat.JSON: return c.Resolve<JSONDocumentationBuilder>();
                     case DocumentationFormat.Excel: return c.Resolve<ExcelDocumentationBuilder>();
+                    case DocumentationFormat.DHtml: return c.Resolve<DhtmlDocumentationBuilder>();
                     default: return c.Resolve<HtmlDocumentationBuilder>();
                 }
             }).SingleInstance();

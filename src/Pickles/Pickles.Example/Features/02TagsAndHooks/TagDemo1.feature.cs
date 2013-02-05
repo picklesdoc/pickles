@@ -20,6 +20,8 @@ namespace PicklesDoc.Pickles.Example.Features._02TagsAndHooks
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
     [NUnit.Framework.DescriptionAttribute("Tag demonstrator")]
+    [NUnit.Framework.CategoryAttribute("allAboutTags")]
+    [NUnit.Framework.CategoryAttribute("important")]
     public partial class TagDemonstratorFeature
     {
         
@@ -33,7 +35,9 @@ namespace PicklesDoc.Pickles.Example.Features._02TagsAndHooks
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Tag demonstrator", "In order to show the capabilities of tags in SpecFlow\r\nAs a SpecFlow evanglist\r\nI" +
-                    " want to write scenarios that has tags and show their usage in code", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    " want to write scenarios that has tags and show their usage in code", ProgrammingLanguage.CSharp, new string[] {
+                        "allAboutTags",
+                        "important"});
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -72,15 +76,15 @@ namespace PicklesDoc.Pickles.Example.Features._02TagsAndHooks
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Ignored scenario", new string[] {
                         "ignore"});
-#line 7
-this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("that my scenario has the @ignore tag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 9
- testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that my scenario has the @ignore tag", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 10
- testRunner.Then("the scenario is ignored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 11
+ testRunner.Then("the scenario is ignored", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 12
   testRunner.And("the missing step definitions are not reported", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -91,13 +95,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void AScenarioWithoutTags()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A scenario without tags", ((string[])(null)));
-#line 13
-this.ScenarioSetup(scenarioInfo);
 #line 14
- testRunner.Given("that my scenario has 0 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 15
- testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that my scenario has 0 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 16
+ testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 17
  testRunner.Then("before scenario hook with \'\' is run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -110,13 +114,13 @@ this.ScenarioSetup(scenarioInfo);
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A scenario with 1 tag", new string[] {
                         "testTag1"});
-#line 19
-this.ScenarioSetup(scenarioInfo);
 #line 20
- testRunner.Given("that my scenario has 1 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 21
- testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that my scenario has 1 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 22
+ testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 23
  testRunner.Then("before scenario hook with \'testTag1\' is run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -133,13 +137,13 @@ this.ScenarioSetup(scenarioInfo);
                         "testTag1",
                         "testTag2",
                         "testTag3"});
-#line 25
-this.ScenarioSetup(scenarioInfo);
 #line 26
- testRunner.Given("that my scenario has 3 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 27
- testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that my scenario has 3 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 28
+ testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 29
  testRunner.Then("before scenario hook with \'testTag1, testTag2, testTag3\' is run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -154,13 +158,13 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A scenario with 2 tags", new string[] {
                         "testTag1",
                         "testTag3"});
-#line 31
-this.ScenarioSetup(scenarioInfo);
 #line 32
- testRunner.Given("that my scenario has 2 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 33
- testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("that my scenario has 2 tags", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 34
+ testRunner.When("I run the scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 35
  testRunner.Then("before scenario hook with \'testTag1, testTag3\' is run", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

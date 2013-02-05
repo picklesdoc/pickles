@@ -1,0 +1,96 @@
+﻿body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+#featureDetails h5 {
+    margin-bottom: 20px
+}
+
+#scenarios, .steps {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scenario {
+    background-color: #F5F5F5;
+    border: 1px solid #D0D0D0;
+    margin: 6px 0px 28px 0px;
+    padding: 6px;
+}
+
+.scenario h4 {
+    margin: 5px;
+}
+
+li.step {
+    list-style-type: none;
+    margin: 6px 0px 6px 0px;
+    padding: 0;
+}
+
+.keyword {
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.steps table {
+    margin-bottom: 0px;
+}
+
+.steps table td {
+    color: #B21515;
+}
+
+.steps table th {
+    font-style: italic;
+}
+
+#SearchButton {
+    margin-top: 0;
+}
+
+.nav .nav-tabs .nav-stacked .active {
+    background-color: #0088CC;
+    color: white;
+}
+
+#FolderNav {
+    border: 1px lightgrey solid;
+}
+
+#FolderNav a:hover {
+    background-color: #EEEEEE;
+    color: #1A668C;
+    text-decoration: none;
+}
+
+.feature:hover {
+    background-color: #EEEEEE;
+    cursor: pointer;
+    color: #1A668C;
+}
+
+.canHighlight {
+    
+}
+
+.highlight { background-color: yellow; }
+
+.inconclusive, .failed, .passed {
+  font-size: 300%;
+}
+
+.pre {
+    border-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-style: italic;
+}

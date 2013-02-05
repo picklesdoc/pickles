@@ -180,6 +180,11 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
     <Compile Include="DirectoryCrawler\FolderDirectoryTreeNode.cs" />
+    <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
+    <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceSet.cs" />
+    <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceProcessor.cs" />
+    <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />
+    <Compile Include="DocumentationBuilders\DHTML\UnZipper.cs" />
     <Compile Include="DocumentationBuilders\DITA\DitaDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\DITA\DitaFeatureFormatter.cs" />
     <Compile Include="DocumentationBuilders\DITA\DitaMapBuilder.cs" />
@@ -275,6 +280,11 @@
     <Compile Include="PicklesModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DirectoryCrawler\RelevantFileDetector.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Runner.cs" />
     <Compile Include="TestFrameworks\ITestResults.cs" />
     <Compile Include="TestFrameworks\MsTestResults.cs" />
@@ -291,10 +301,15 @@
   <ItemGroup>
     <None Include="FeatureTree\ClassDiagram.cd" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.eot" />
     <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.ttf" />
     <EmbeddedResource Include="Resources\fonts\fontawesome-webfont.woff" />
     <EmbeddedResource Include="Resources\fonts\FontAwesome.ttf" />
+    <None Include="Resources\Pickles.BaseDhtmlFiles.zip" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\global.css" />

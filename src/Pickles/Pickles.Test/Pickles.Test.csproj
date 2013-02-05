@@ -160,6 +160,7 @@
     <Compile Include="AssertExtensions.cs" />
     <Compile Include="BaseFixture.cs" />
     <Compile Include="DirectoryCrawlers\FolderDirectoryTreeNodeTests.cs" />
+    <Compile Include="DocumentationBuilders\DHTML\WhenDoingGarbageIntegrationTests.cs" />
     <Compile Include="DocumentationBuilders\HTML\WhenFormattingScenario.cs" />
     <Compile Include="DocumentationBuilders\HTML\WhenFormattingMultilineStrings.cs" />
     <Compile Include="DocumentationBuilders\HTML\WhenFormattingScenarioOutlines.cs" />
@@ -331,4 +332,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-</Project>
+  </Project>

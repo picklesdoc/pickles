@@ -1,5 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles.Parser
 {
@@ -10,5 +10,6 @@ namespace PicklesDoc.Pickles.Parser
         string Name { get; set; }
         List<Step> Steps { get; set; }
         List<string> Tags { get; set; }
+        TestResult Result { get; set; }
     }
 }

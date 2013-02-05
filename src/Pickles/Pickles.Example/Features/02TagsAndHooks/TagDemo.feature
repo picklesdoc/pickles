@@ -1,4 +1,5 @@
-﻿Feature: Tag demonstrator
+﻿@allAboutTags @important
+Feature: Tag demonstrator
 	In order to show the capabilities of tags in SpecFlow
 	As a SpecFlow evanglist
 	I want to write scenarios that has tags and show their usage in code

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>QUnit Example</title>
+    <link href="qunit-1.10.0.css" rel="stylesheet" />
+
+</head>
+    <body>
+        <h1 id="qunit-header">QUnit Test Suite</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+    </body>
+    <!-- dependencies -->
+    <script src="../js/jquery-1.8.3.js"></script>
+    <script src="../js/underscore.js"></script>
+    <script src="../js/knockout-2.2.0.debug.js"></script>
+    <script src="qunit-1.10.0.js"></script>
+    <!-- end dependencies -->
+
+    <!-- custom scripts files with code that I'm testing -->
+    <script src="../js/stringFormatting.js"></script>
+    <script src="../js/heirarchyBuilder.js"></script>
+    <script src="../js/typeaheadList.js"></script>
+    <script src="../js/featureSearch.js"></script>
+    <!-- end custom scripts -->
+
+    <script src="tests.js"></script>
+    <script>
+        function showTestDetailsByDefault() {
+            QUnit.config.urlConfig.push({
+                id: "showDetails",
+                label: "Show All Test Details",
+                tooltip: "Expands the details and assertions from all tests after the tests run"
+            });
+            QUnit.done(function (details) {
+                if (QUnit.config.showDetails) {
+                    $('html body div#qunit ol#qunit-tests li ol').removeAttr('style');
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            showTestDetailsByDefault();
+        });
+    </script>
+</html>
