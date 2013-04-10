@@ -8,7 +8,8 @@ Why stop with just the features though?  Pickles can also read plain text files 
 Supported Output Formats
 ------------------------
 
-- static HTML
+- HTML
+- DHTML (javascript-enabled, search capabilities)
 - JSON
 - Word
 - Excel
