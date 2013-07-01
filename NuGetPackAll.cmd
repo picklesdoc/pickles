@@ -2,3 +2,5 @@ pushd src\Pickles\Pickles.PowerShell && ..\.nuget\nuget.exe pack Pickles.nuspec 
 popd
 pushd src\Pickles\Pickles.MSBuild && ..\.nuget\nuget.exe pack Pickles.MSBuild.nuspec -Version %1
 popd
+pushd src\Pickles\Pickles.CommandLine && ..\.nuget\nuget.exe pack Pickles.CommandLine.nuspec -Version %1
+popd
