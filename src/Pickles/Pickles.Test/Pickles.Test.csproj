@@ -215,6 +215,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="TestResultExtensionsTests.cs" />
+    <Compile Include="WhenParsingCucumberJsonResultsFile.cs" />
     <Compile Include="WhenParsingMsTestResultsFile.cs" />
     <Compile Include="Formatters\JSON\when_creating_a_feature_with_meta_info.cs" />
     <Compile Include="Formatters\JSON\when_formatting_a_folder_structure_with_features.cs" />
@@ -330,6 +331,7 @@
     <None Include="Formatters\JSON\results-example-failing-and-pasing-mstest.trx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <EmbeddedResource Include="results-example-json.json" />
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>

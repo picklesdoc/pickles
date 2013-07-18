@@ -271,6 +271,12 @@
     <Compile Include="Parser\Example.cs" />
     <Compile Include="Parser\FeatureElementState.cs" />
     <Compile Include="Parser\IFeatureElement.cs" />
+    <Compile Include="Parser\JsonResult\Element.cs" />
+    <Compile Include="Parser\JsonResult\Feature.cs" />
+    <Compile Include="Parser\JsonResult\Match.cs" />
+    <Compile Include="Parser\JsonResult\Result.cs" />
+    <Compile Include="Parser\JsonResult\Step.cs" />
+    <Compile Include="Parser\JsonResult\Tag.cs" />
     <Compile Include="Parser\PicklesParser.cs" />
     <Compile Include="Parser\ScenarioBuilder.cs" />
     <Compile Include="Parser\ScenarioOutlineBuilder.cs" />
@@ -294,6 +300,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Runner.cs" />
+    <Compile Include="TestFrameworks\CucumberJsonResults.cs" />
     <Compile Include="TestFrameworks\ITestResults.cs" />
     <Compile Include="TestFrameworks\MsTestResults.cs" />
     <Compile Include="TestFrameworks\NullTestResults.cs" />
