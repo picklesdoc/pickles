@@ -170,6 +170,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MultilineFeatureExample.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\13MultilineText\MultiLineSteps.cs" />
     <Compile Include="Features\99TestEntities\Person.cs" />
     <Compile Include="Features\99TestEntities\Style.cs" />
     <Compile Include="Features\Arithmetic1.feature.cs">

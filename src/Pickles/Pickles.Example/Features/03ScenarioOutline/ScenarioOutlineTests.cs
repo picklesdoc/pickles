@@ -11,7 +11,7 @@ namespace Specs.ScenarioOutline
         private const string VALUES_KEY = "Values";
         private const string SUM_KEY = "Result";
 
-        private List<int> TalLista
+        private static List<int> NumberList
         {
             get
             {
@@ -27,16 +27,17 @@ namespace Specs.ScenarioOutline
         [Given(@"I enter (\d+) into the calculator")]
         public void GivenIHaveEntered(int numberToEnter)
         {
-            TalLista.Add(numberToEnter);
+            NumberList.Add(numberToEnter);
         }
 
 
-        [When(@"I preform add")]
+        [When(@"I perform add")]
         public void WhenIPressAdd()
         {
-            ScenarioContext.Current.Set(TalLista.Sum(), SUM_KEY);
+            ScenarioContext.Current.Set(NumberList.Sum(), SUM_KEY);
         }
 
+        
         [Then(@"the result should be (\d+)")]
         public void ThenTheResultShouldBe(int expectedResult)
         {

@@ -12,9 +12,8 @@ namespace PicklesDoc.Pickles.Test.Extensions
         {
             // Arrange
             string root = @"c:\test";
-            string location = @"c:\test\blah.feature";
-
-            string expected = @"test\blah.feature";
+            string location = @"c:\test\deep\blah.feature";
+            string expected = @"deep\blah.feature";
 
             // Act
             string actual = PathExtensions.MakeRelativePath(root, location, FileSystem);
@@ -27,8 +26,8 @@ namespace PicklesDoc.Pickles.Test.Extensions
         public void Get_A_Relative_Path_When_Location_Is_Deeper_Than_Root_Even_When_Root_Contains_End_Slash()
         {
             string root = @"c:\test\";
-            string location = @"c:\test\blah.feature";
-            string expected = @"test\blah.feature";
+            string location = @"c:\test\deep\blah.feature";
+            string expected = @"deep\blah.feature";
 
             string actual = PathExtensions.MakeRelativePath(root, location, FileSystem);
 

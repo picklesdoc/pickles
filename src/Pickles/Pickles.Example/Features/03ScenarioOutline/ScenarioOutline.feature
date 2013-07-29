@@ -6,7 +6,7 @@
 
 # This is called Abstrakt Scenario in Swedish (!!!)
 Scenario Outline: Add two positive numbers with many examples
-	Given I ented <number 1> into the calculator
+	Given I enter <number 1> into the calculator
 	And I enter <number 2> into the calculator
 	When I perform add
 	Then the result should be <result>
@@ -24,7 +24,7 @@ Examples: more than 100
 
 # This is called Abstrakt Scenario in Swedish (!!!)
 Scenario Outline: Add two negative numbers with many examples
-	Given I ented <number 1> into the calculator
+	Given I enter <number 1> into the calculator
 	And I enter <number 2> into the calculator
 	When I perform add
 	Then the result should be <result>

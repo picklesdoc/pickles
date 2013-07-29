@@ -11,6 +11,5 @@ Scenario: Mutliline Output
 	This is line 2!
 	This is line 3!!
 	"""
-	And I have entered 70 into the calculator
 	When I process this input
 	Then the result will be saved to the multiline text data store

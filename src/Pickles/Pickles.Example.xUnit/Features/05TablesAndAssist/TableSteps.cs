@@ -73,5 +73,11 @@ namespace Specs.TablesAndAssist
             var personList = new List<Person> {person};
             ScenarioContext.Current.Set(personList, SEARCH_RESULT_KEY);
         }
+
+        [Given(@"this wide table")]
+        public void GivenThisWideTable(Table table)
+        {
+            Console.WriteLine("TESTING: Yeah, what about the wide table? {0}", table.ToString());
+        }
     }
 }
