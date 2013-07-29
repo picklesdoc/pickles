@@ -1,96 +1,304 @@
-﻿<assembly
-name="c:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.xUnit\bin\Debug\Pickles.TestHarness.xUnit.dll"
-run-date="2012-01-14" run-time="10:21:10"
-configFile="c:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.xUnit\bin\Debug\Pickles.TestHarness.xUnit.dll.config"
-time="0.185" total="4" passed="3" failed="1" skipped="0" environment="32-bit .NET 4.0.30319.239"
-test-framework="xUnit.net 1.9.0.1566">
-  <class time="0.185" name="Pickles.TestHarness.xUnit.AdditionFeature" total="4" passed="3" failed="1" skipped="0">
-    <test name="Pickles.TestHarness.xUnit.AdditionFeature.AddTwoNumbers"
-          type="Pickles.TestHarness.xUnit.AdditionFeature" method="AddTwoNumbers" result="Pass" time="0.153">
-      <traits>
-        <trait name="Description" value="Add two numbers" />
-        <trait name="FeatureTitle" value="Addition" />
-      </traits>
-      <output>
-        Given I have entered 50 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
-        And I have entered 70 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(70) (0.0s)
-        When I press add
-        -&gt; done: Steps.WhenIPressAdd() (0.0s)
-        Then the result should be 120 on the screen
-        -&gt; done: Steps.ThenTheResultShouldBePass(120) (0.0s)
-      </output>
-    </test>
-    <test
-name="Pickles.TestHarness.xUnit.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, result: &quot;90&quot;, exampleTags: System.String[])"
-type="Pickles.TestHarness.xUnit.AdditionFeature" method="AddingSeveralNumbers" result="Pass" time="0.006">
-      <traits>
-        <trait name="Description" value="Adding several numbers" />
-        <trait name="FeatureTitle" value="Addition" />
-      </traits>
-      <output>
-        Given I have entered 40 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(40) (0.0s)
-        And I have entered 50 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
-        When I press add
-        -&gt; done: Steps.WhenIPressAdd() (0.0s)
-        Then the result should be 90 on the screen
-        -&gt; done: Steps.ThenTheResultShouldBePass(90) (0.0s)
-      </output>
-    </test>
-    <test
-name="Pickles.TestHarness.xUnit.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, result: &quot;130&quot;, exampleTags: System.String[])"
-type="Pickles.TestHarness.xUnit.AdditionFeature" method="AddingSeveralNumbers" result="Pass" time="0.003">
-      <traits>
-        <trait name="Description" value="Adding several numbers" />
-        <trait name="FeatureTitle" value="Addition" />
-      </traits>
-      <output>
-        Given I have entered 60 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(60) (0.0s)
-        And I have entered 70 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(70) (0.0s)
-        When I press add
-        -&gt; done: Steps.WhenIPressAdd() (0.0s)
-        Then the result should be 130 on the screen
-        -&gt; done: Steps.ThenTheResultShouldBePass(130) (0.0s)
-      </output>
-    </test>
-    <test name="Pickles.TestHarness.xUnit.AdditionFeature.FailToAddTwoNumbers"
-          type="Pickles.TestHarness.xUnit.AdditionFeature" method="FailToAddTwoNumbers" result="Fail" time="0.023">
-      <traits>
-        <trait name="Description" value="Fail to add two numbers" />
-        <trait name="FeatureTitle" value="Addition" />
-      </traits>
-      <output>
-        Given I have entered 50 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
-        And I have entered -1 into the calculator
-        -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(-1) (0.0s)
-        When I press add
-        -&gt; done: Steps.WhenIPressAdd() (0.0s)
-        Then the result should be -50 on the screen
-        -&gt; error: This is a fake failure message
-      </output>
-      <failure exception-type="System.InvalidOperationException">
-        <message>
-          System.InvalidOperationException : This is a fake failure message
-        </message>
-        <stack-trace>
-          at Pickles.TestHarness.xUnit.Steps.ThenTheResultShouldBePass(Int32 result) in C:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.xUnit\Steps.cs:line 26
-          at lambda_method(Closure , IContextManager , Int32 )
-          at TechTalk.SpecFlow.Bindings.MethodBinding.InvokeAction(IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
-          at TechTalk.SpecFlow.Bindings.StepDefinitionBinding.Invoke(IContextManager contextManager, ITestTracer testTracer, Object[] arguments, TimeSpan&amp; duration)
-          at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-          at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepArgs stepArgs)
-          at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-          at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
-          at Pickles.TestHarness.xUnit.AdditionFeature.ScenarioCleanup() in C:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.xUnit\Addition.feature.cs:line 0
-          at Pickles.TestHarness.xUnit.AdditionFeature.FailToAddTwoNumbers() in c:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.xUnit\Addition.feature:line 18
-        </stack-trace>
-      </failure>
-    </test>
-  </class>
-</assembly>
+<assembly name="C:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\bin\Debug\xunitHarness.dll" run-date="2013-07-27" run-time="22:38:59" configFile="C:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\bin\Debug\xunitHarness.dll.config" time="0.487" total="9" passed="3" failed="5" skipped="1" environment="64-bit .NET 4.0.30319.18051" test-framework="xUnit.net 1.9.1.1600"><class time="0.473" name="Pickles.TestHarness.xunit.AdditionFeature" total="6" passed="3" failed="2" skipped="1"><test name="Pickles.TestHarness.xunit.AdditionFeature.FailToAddTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="FailToAddTwoNumbers" result="Fail" time="0.329"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Fail to add two numbers" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 1 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
+And I have entered 2.2 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2,2) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 3.2 on the screen
+-&gt; error: Assert.Equal() Failure
+Expected: 3.2
+Actual:   3
+</output><failure exception-type="Xunit.Sdk.EqualException"><message>Assert.Equal() Failure
+Expected: 3.2
+Actual:   3</message><stack-trace>   w Xunit.Assert.Equal[T](T expected, T actual, IEqualityComparer`1 comparer)
+   w Xunit.Assert.Equal[T](T expected, T actual)
+   w Pickles.TestHarness.xunit.AdditionSteps.ThenTheResultShouldBeOnTheScreen(Decimal p0) w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\AdditionSteps.cs:wiersz 39
+   w lambda_method(Closure , IContextManager , Decimal )
+   w TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w Pickles.TestHarness.xunit.AdditionFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\Addition.feature.cs:wiersz 0
+   w Pickles.TestHarness.xunit.AdditionFeature.FailToAddTwoNumbers() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\Addition.feature:wiersz 34</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.AdditionFeature.NotAutomatedAddingTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="NotAutomatedAddingTwoNumbers" result="Fail" time="0.142"><traits><trait name="Description" value="Not automated adding two numbers" /><trait name="FeatureTitle" value="Addition" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</message><stack-trace>   w TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w Pickles.TestHarness.xunit.AdditionFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\Addition.feature.cs:wiersz 0
+   w Pickles.TestHarness.xunit.AdditionFeature.NotAutomatedAddingTwoNumbers() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\Addition.feature:wiersz 46</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.AdditionFeature.IgnoredAddingTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="IgnoredAddingTwoNumbers" result="Skip"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Ignored adding two numbers" /></traits><reason><message>Ignored</message></reason></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddingSeveralNumbers" result="Pass" time="0.002"><traits><trait name="Description" value="Adding several numbers" /><trait name="FeatureTitle" value="Addition" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 40 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(40) (0,0s)
+And I have entered 50 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(50) (0,0s)
+And I have entered 90 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(90) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 180 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(180) (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddingSeveralNumbers" result="Pass" time="0.000"><traits><trait name="Description" value="Adding several numbers" /><trait name="FeatureTitle" value="Addition" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 60 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(60) (0,0s)
+And I have entered 70 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(70) (0,0s)
+And I have entered 130 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(130) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 260 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(260) (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddTwoNumbers" result="Pass" time="0.000"><traits><trait name="Description" value="Add two numbers" /><trait name="FeatureTitle" value="Addition" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 1 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
+And I have entered 2 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 3 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(3) (0,0s)
+</output></test></class><class time="0.014" name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" total="3" passed="0" failed="3" skipped="0"><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario3" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario3" result="Fail" time="0.005"><traits><trait name="Description" value="Not automated scenario 3" /><trait name="FeatureTitle" value="Not Automated At All" /></traits><output>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</message><stack-trace>   w TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\NotAutomatedAtAll.feature.cs:wiersz 0
+   w Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario3() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\NotAutomatedAtAll.feature:wiersz 19</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario1" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario1" result="Fail" time="0.004"><traits><trait name="FeatureTitle" value="Not Automated At All" /><trait name="Description" value="Not automated scenario 1" /></traits><output>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</message><stack-trace>   w TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\NotAutomatedAtAll.feature.cs:wiersz 0
+   w Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario1() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\NotAutomatedAtAll.feature:wiersz 9</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario2" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario2" result="Fail" time="0.005"><traits><trait name="FeatureTitle" value="Not Automated At All" /><trait name="Description" value="Not automated scenario 2" /></traits><output>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</message><stack-trace>   w TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\NotAutomatedAtAll.feature.cs:wiersz 0
+   w Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario2() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\xunit\NotAutomatedAtAll.feature:wiersz 14</stack-trace></failure></test></class></assembly>

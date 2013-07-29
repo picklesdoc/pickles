@@ -28,6 +28,7 @@ namespace PicklesDoc.Pickles.TestFrameworks
     {
         public bool WasExecuted;
         public bool WasSuccessful;
+        public bool WasNotFound;
 
         public static TestResult Passed()
         {
@@ -42,6 +43,11 @@ namespace PicklesDoc.Pickles.TestFrameworks
         public static TestResult Inconclusive()
         {
           return new TestResult { WasExecuted = false, WasSuccessful = false };
+        }
+
+        public static TestResult NotFound()
+        {
+            return new TestResult {WasExecuted = false, WasSuccessful = false, WasNotFound = true};
         }
     }
 

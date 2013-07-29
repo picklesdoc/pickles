@@ -80,7 +80,7 @@ namespace PicklesDoc.Pickles.TestFrameworks
             XElement scenarioElement = this.GetScenarioElement(scenario);
             return scenarioElement != null 
                 ? this.GetResultFromElement(scenarioElement)
-                : new TestResult() { WasExecuted = false, WasSuccessful = false };
+                : TestResult.NotFound();
         }
 
         #endregion
@@ -164,20 +164,17 @@ namespace PicklesDoc.Pickles.TestFrameworks
         private static TestResult GetAggregateResult(int passedCount, int failedCount, int skippedCount)
         {
             TestResult result;
-            if (skippedCount > 0)
+            if (passedCount > 0 && failedCount == 0)
             {
-                result.WasExecuted = false;
-                result.WasSuccessful = false;
+                result = TestResult.Passed();
             }
             else if (failedCount > 0)
             {
-                result.WasExecuted = true;
-                result.WasSuccessful = false;
+                result = TestResult.Failed();
             }
             else
             {
-                result.WasExecuted = true;
-                result.WasSuccessful = true;
+                result = TestResult.Inconclusive();
             }
 
             return result;

@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Reflection;
 using NUnit.Framework;
 using Autofac;
@@ -18,61 +17,134 @@ namespace PicklesDoc.Pickles.Test
         public void ThenCanReadFeatureResultSuccessfully()
         {
             // Write out the embedded test results file
-          using (var input = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("PicklesDoc.Pickles.Test." + RESULTS_FILE_NAME)))
-            using (var output = new StreamWriter(RESULTS_FILE_NAME))
-            {
-                output.Write(input.ReadToEnd());
-            }
+            var results = ParseResultsFile();
 
-            var configuration = Container.Resolve<Configuration>();
-            configuration.TestResultsFile = new FileInfo(RESULTS_FILE_NAME);
-
-            var results = Container.Resolve<NUnitResults>();
-
-            var feature = new Feature {Name = "Addition"};
+            var feature = new Feature { Name = "Addition" };
             TestResult result = results.GetFeatureResult(feature);
 
             result.WasExecuted.ShouldBeTrue();
             result.WasSuccessful.ShouldBeFalse();
+            result.WasNotFound.ShouldBeFalse();
         }
 
         [Test]
         public void ThenCanReadScenarioOutlineResultSuccessfully()
         {
-            // Write out the embedded test results file
-          using (var input = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("PicklesDoc.Pickles.Test." + RESULTS_FILE_NAME)))
-            using (var output = new StreamWriter(RESULTS_FILE_NAME))
-            {
-                output.Write(input.ReadToEnd());
-            }
+            var results = ParseResultsFile();
 
-            var configuration = Container.Resolve<Configuration>();
-            configuration.TestResultsFile = new FileInfo(RESULTS_FILE_NAME);
+            var feature = new Feature { Name = "Addition" };
 
-            var results = Container.Resolve<NUnitResults>();
-
-            var feature = new Feature {Name = "Addition"};
-
-            var scenarioOutline = new ScenarioOutline {Name = "Adding several numbers", Feature = feature};
+            var scenarioOutline = new ScenarioOutline { Name = "Adding several numbers", Feature = feature };
             TestResult result = results.GetScenarioOutlineResult(scenarioOutline);
 
             result.WasExecuted.ShouldBeTrue();
             result.WasSuccessful.ShouldBeTrue();
+            result.WasNotFound.ShouldBeFalse();
 
-            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] {"40", "50", "90"});
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "40", "50", "90" });
             exampleResult1.WasExecuted.ShouldBeTrue();
             exampleResult1.WasSuccessful.ShouldBeTrue();
+            exampleResult1.WasNotFound.ShouldBeFalse();
 
-            TestResult exampleResult2 = results.GetExampleResult(scenarioOutline, new[] {"60", "70", "130"});
+            TestResult exampleResult2 = results.GetExampleResult(scenarioOutline, new[] { "60", "70", "130" });
             exampleResult2.WasExecuted.ShouldBeTrue();
             exampleResult2.WasSuccessful.ShouldBeTrue();
+            exampleResult2.WasNotFound.ShouldBeFalse();
         }
 
         [Test]
-        public void ThenCanReadScenarioResultSuccessfully()
+        public void ThenCanReadSuccessfulScenarioResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Addition" };
+
+            var passedScenario = new Scenario { Name = "Add two numbers", Feature = feature };
+            TestResult result = results.GetScenarioResult(passedScenario);
+
+            result.WasExecuted.ShouldBeTrue();
+            result.WasSuccessful.ShouldBeTrue();
+            result.WasNotFound.ShouldBeFalse();
+        }
+
+        [Test]
+        public void ThenCanReadFailedScenarioResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+            var feature = new Feature { Name = "Addition" };
+            var scenario = new Scenario { Name = "Fail to add two numbers", Feature = feature };
+            TestResult result = results.GetScenarioResult(scenario);
+
+            result.WasExecuted.ShouldBeTrue();
+            result.WasSuccessful.ShouldBeFalse();
+            result.WasNotFound.ShouldBeFalse();
+        }
+
+        [Test]
+        public void ThenCanReadIgnoredScenarioResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+            var feature = new Feature { Name = "Addition" };
+            var ignoredScenario = new Scenario { Name = "Ignored adding two numbers", Feature = feature };
+            var result = results.GetScenarioResult(ignoredScenario);
+
+            result.WasExecuted.ShouldBeFalse();
+            result.WasSuccessful.ShouldBeFalse();
+            result.WasNotFound.ShouldBeFalse();
+        }
+
+        [Test]
+        public void ThenCanReadInconclusiveScenarioResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+            var feature = new Feature { Name = "Addition" };
+            var inconclusiveScenario = new Scenario
+            {
+                Name = "Not automated adding two numbers",
+                Feature = feature
+            };
+            var result = results.GetScenarioResult(inconclusiveScenario);
+
+            result.WasExecuted.ShouldBeFalse();
+            result.WasSuccessful.ShouldBeFalse();
+            result.WasNotFound.ShouldBeFalse();
+        }
+
+        [Test]
+        public void ThenCanReadInconclusiveFeatureResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+            var feature = new Feature { Name = "Not Automated At All" };
+
+            var result = results.GetFeatureResult(feature);
+
+            result.WasExecuted.ShouldBeFalse();
+            result.WasSuccessful.ShouldBeFalse();
+            result.WasNotFound.ShouldBeFalse();
+        }
+
+        [Test]
+        public void ThenCanReadNotFoundScenarioCorrectly()
+        {
+            var results = ParseResultsFile();
+            var feature = new Feature { Name = "Addition" };
+            var notFoundScenario = new Scenario
+            {
+                Name = "Not in the file at all!",
+                Feature = feature
+            };
+
+            var result = results.GetScenarioResult(notFoundScenario);
+
+            result.WasExecuted.ShouldBeFalse();
+            result.WasSuccessful.ShouldBeFalse();
+            result.WasNotFound.ShouldBeTrue();
+        }
+
+        private NUnitResults ParseResultsFile()
         {
             // Write out the embedded test results file
-          using (var input = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("PicklesDoc.Pickles.Test." + RESULTS_FILE_NAME)))
+            using (var input = new StreamReader(Assembly.GetExecutingAssembly().GetManifestResourceStream("PicklesDoc.Pickles.Test." + RESULTS_FILE_NAME)))
             using (var output = new StreamWriter(RESULTS_FILE_NAME))
             {
                 output.Write(input.ReadToEnd());
@@ -82,20 +154,9 @@ namespace PicklesDoc.Pickles.Test
             configuration.TestResultsFile = new FileInfo(RESULTS_FILE_NAME);
 
             var results = Container.Resolve<NUnitResults>();
-
-            var feature = new Feature {Name = "Addition"};
-
-            var scenario1 = new Scenario {Name = "Add two numbers", Feature = feature};
-            TestResult result1 = results.GetScenarioResult(scenario1);
-
-            result1.WasExecuted.ShouldBeTrue();
-            result1.WasSuccessful.ShouldBeTrue();
-
-            var scenario2 = new Scenario {Name = "Fail to add two numbers", Feature = feature};
-            TestResult result2 = results.GetScenarioResult(scenario2);
-
-            result2.WasExecuted.ShouldBeTrue();
-            result2.WasSuccessful.ShouldBeFalse();
+            return results;
         }
+
+
     }
 }

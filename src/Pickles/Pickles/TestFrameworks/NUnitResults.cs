@@ -104,14 +104,42 @@ namespace PicklesDoc.Pickles.TestFrameworks
 
         private TestResult GetResultFromElement(XElement element)
         {
-            if (element == null) return new TestResult {WasExecuted = false, WasSuccessful = false};
-            bool wasExecuted = element.Attribute("executed") != null
-                                   ? element.Attribute("executed").Value.ToLowerInvariant() == "true"
-                                   : false;
-            bool wasSuccessful = element.Attribute("success") != null
-                                     ? element.Attribute("success").Value.ToLowerInvariant() == "true"
-                                     : false;
-            return new TestResult {WasExecuted = wasExecuted, WasSuccessful = wasSuccessful};
+            if (element == null)
+            {
+                return TestResult.NotFound();
+            }
+            else if (IsAttributeSetToValue(element, "result", "Ignored"))
+            {
+                return TestResult.Inconclusive();
+            }
+            else if (IsAttributeSetToValue(element, "result", "Inconclusive"))
+            {
+                return TestResult.Inconclusive();
+            }
+            else if (IsAttributeSetToValue(element, "result", "Failure"))
+            {
+                return TestResult.Failed();
+            }
+            else if (IsAttributeSetToValue(element, "result", "Success"))
+            {
+                return TestResult.Passed();
+            }
+            else
+            {
+                bool wasExecuted = IsAttributeSetToValue(element, "executed", "true");
+                bool wasSuccessful = IsAttributeSetToValue(element, "success", "true");
+                return new TestResult { WasExecuted = wasExecuted, WasSuccessful = wasSuccessful };
+            }
+        }
+
+        private static bool IsAttributeSetToValue(XElement element, string attributeName, string expectedValue)
+        {
+            return element.Attribute(attributeName) != null
+                ? string.Equals(
+                    element.Attribute(attributeName).Value, 
+                    expectedValue, 
+                    StringComparison.InvariantCultureIgnoreCase)
+                : false;
         }
 
         public TestResult GetExampleResult(ScenarioOutline scenarioOutline, string[] row)
