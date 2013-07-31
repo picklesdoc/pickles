@@ -19,6 +19,7 @@
 #endregion
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml;
 using System.Xml.Linq;
@@ -53,20 +54,15 @@ namespace PicklesDoc.Pickles.TestFrameworks
             return document;
         }
 
-        private Guid GetScenarioExecutionId(Scenario scenario)
+        private Guid GetScenarioExecutionId(Scenario queriedScenario)
         {
             var idString =
-                (from unitTest in this.resultsDocument.Root.Descendants(ns + "UnitTest")
-                 let properties = unitTest.Element(ns + "Properties")
+                (from scenario in AllScenariosInResultFile()
+                 let properties = PropertiesOf(scenario)
                  where properties != null
-                 let property = properties.Element(ns + "Property")
-                 let key = property.Element(ns + "Key")
-                 let value = property.Element(ns + "Value")
-                 where key.Value == "FeatureTitle" && value.Value == scenario.Feature.Name
-                 let description = unitTest.Element(ns + "Description")
-                 where description.Value == scenario.Name
-                 let id = unitTest.Element(ns + "Execution").Attribute("id").Value
-                 select id).FirstOrDefault();
+                 where FeatureNamePropertyExistsWith(queriedScenario.Feature.Name, among: properties)
+                 where NameOf(scenario) == queriedScenario.Name
+                 select ScenarioExecutionIdStringOf(scenario)).FirstOrDefault();
 
             return !string.IsNullOrEmpty(idString) ? new Guid(idString) : Guid.Empty;
         }
@@ -74,10 +70,10 @@ namespace PicklesDoc.Pickles.TestFrameworks
         private TestResult GetExecutionResult(Guid scenarioExecutionId)
         {
             var resultText =
-                (from unitTestResult in this.resultsDocument.Root.Descendants(ns + "UnitTestResult")
-                 let executionId = new Guid(unitTestResult.Attribute("executionId").Value)
+                (from scenarioResult in AllScenarioExecutionResultsInResultFile()
+                 let executionId = ResultExecutionIdOf(scenarioResult)
                  where scenarioExecutionId == executionId
-                 let outcome = unitTestResult.Attribute("outcome").Value
+                 let outcome = ResultOutcomeOf(scenarioResult)
                  select outcome).FirstOrDefault() ?? string.Empty;
 
             switch (resultText.ToLowerInvariant())
@@ -91,48 +87,103 @@ namespace PicklesDoc.Pickles.TestFrameworks
             }
         }
 
+        private static string ResultOutcomeOf(XElement scenarioResult)
+        {
+            return scenarioResult.Attribute("outcome").Value;
+        }
+
+        private static Guid ResultExecutionIdOf(XElement unitTestResult)
+        {
+            return new Guid(unitTestResult.Attribute("executionId").Value);
+        }
+
         #region ITestResults Members
+
+        #endregion
+
+        #region Linq Helpers
 
         public TestResult GetFeatureResult(Feature feature)
         {
             var featureExecutionIds =
-                from unitTest in this.resultsDocument.Root.Descendants(ns + "UnitTest")
-                let properties = unitTest.Element(ns + "Properties")
+                from scenario in AllScenariosInResultFile()
+                let properties = PropertiesOf(scenario)
                 where properties != null
-                let property = properties.Element(ns + "Property")
-                let key = property.Element(ns + "Key")
-                let value = property.Element(ns + "Value")
-                where key.Value == "FeatureTitle" && value.Value == feature.Name
-                select new Guid(unitTest.Element(ns + "Execution").Attribute("id").Value);
+                where FeatureNamePropertyExistsWith(feature.Name, among: properties)
+                select ScenarioExecutionIdOf(scenario);
 
-            TestResult result = featureExecutionIds.Select(this.GetExecutionResult).Merge();
+            TestResult result = featureExecutionIds.Select(this.GetExecutionResult).Where(r => r.WasExecuted).Merge();
 
             return result;
         }
 
         public TestResult GetScenarioOutlineResult(ScenarioOutline scenarioOutline)
         {
-            var scenarioOutlineExecutionIds =
-                from unitTest in this.resultsDocument.Root.Descendants(ns + "UnitTest")
-                let properties = unitTest.Element(ns + "Properties")
-                where properties != null
-                let property = properties.Element(ns + "Property")
-                let key = property.Element(ns + "Key")
-                let value = property.Element(ns + "Value")
-                where key.Value == "FeatureTitle" && value.Value == scenarioOutline.Feature.Name
-                let description = unitTest.Element(ns + "Description")
-                where description.Value == scenarioOutline.Name
-                select new Guid(unitTest.Element(ns + "Execution").Attribute("id").Value);
+            var queriedFeatureName = scenarioOutline.Feature.Name;
+            var queriedScenarioOutlineName = scenarioOutline.Name;
+
+            var allScenariosForAFeature =
+                from scenario in AllScenariosInResultFile()
+                let scenarioProperties = PropertiesOf(scenario)
+                where scenarioProperties != null
+                where FeatureNamePropertyExistsWith(queriedFeatureName, among: scenarioProperties)
+                select scenario;
+
+            var scenarioOutlineExecutionIds = from scenario in allScenariosForAFeature
+                                              where NameOf(scenario) == queriedScenarioOutlineName
+                                              select ScenarioExecutionIdOf(scenario);
 
             TestResult result = scenarioOutlineExecutionIds.Select(this.GetExecutionResult).Merge();
 
             return result;
         }
 
+
         public TestResult GetScenarioResult(Scenario scenario)
         {
             Guid scenarioExecutionId = this.GetScenarioExecutionId(scenario);
             return this.GetExecutionResult(scenarioExecutionId);
+        }
+
+
+        private static Guid ScenarioExecutionIdOf(XElement scenario)
+        {
+            return new Guid(ScenarioExecutionIdStringOf(scenario));
+        }
+
+        private static string ScenarioExecutionIdStringOf(XElement scenario)
+        {
+            return scenario.Element(ns + "Execution").Attribute("id").Value;
+        }
+
+        private static string NameOf(XElement scenario)
+        {
+            return scenario.Element(ns + "Description").Value;
+        }
+
+        private static XElement PropertiesOf(XElement scenariosReportes)
+        {
+            return scenariosReportes.Element(ns + "Properties");
+        }
+
+        private static bool FeatureNamePropertyExistsWith(string featureName, XElement among)
+        {
+            var properties = among;
+            return (from property in properties.Elements(ns + "Property")
+                    let key = property.Element(ns + "Key")
+                    let value = property.Element(ns + "Value")
+                    where key.Value == "FeatureTitle" && value.Value == featureName
+                    select property).Any();
+        }
+
+        private IEnumerable<XElement> AllScenariosInResultFile()
+        {
+            return this.resultsDocument.Root.Descendants(ns + "UnitTest");
+        }
+
+        private IEnumerable<XElement> AllScenarioExecutionResultsInResultFile()
+        {
+            return this.resultsDocument.Root.Descendants(ns + "UnitTestResult");
         }
 
         #endregion

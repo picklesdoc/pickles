@@ -1,93 +1,157 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="97f57849-3919-4bc0-8b5a-60884faca4a9" name="camejef@BUMBLEBEE 2012-02-19 09:25:24" runUser="BUMBLEBEE\camejef" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestSettings name="Default Test Settings" id="fca8b5a8-ae49-45c5-b2b7-a975e4a4fd10">
-    <Deployment userDeploymentRoot="c:\dev\pickles-results-harness" useDefaultDeploymentRoot="false" runDeploymentRoot="camejef_BUMBLEBEE 2012-02-19 09_25_24" />
+<TestRun id="ea975540-3cf8-4023-a673-f0a54731659a" name="astral@JERUSALEM 2013-07-31 19:19:02" runUser="Jerusalem\astral" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="4eed1200-b54f-4425-a966-6250c56cd149">
+    <Deployment userDeploymentRoot="C:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\bin\Debug" useDefaultDeploymentRoot="false" runDeploymentRoot="astral_JERUSALEM 2013-07-31 19_19_02" />
     <Execution>
       <TestTypeSpecific />
       <AgentRule name="Execution Agents">
       </AgentRule>
     </Execution>
   </TestSettings>
-  <Times creation="2012-02-19T09:25:24.8479038-05:00" queuing="2012-02-19T09:25:25.1799228-05:00" start="2012-02-19T09:25:25.2569272-05:00" finish="2012-02-19T09:25:26.0819744-05:00" />
+  <Times creation="2013-07-31T19:19:02.0974874+02:00" queuing="2013-07-31T19:19:02.5021859+02:00" start="2013-07-31T19:19:02.5682296+02:00" finish="2013-07-31T19:19:03.0595270+02:00" />
   <ResultSummary outcome="Failed">
-    <Counters total="4" executed="4" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="8" executed="8" passed="3" error="0" failed="1" timeout="0" aborted="0" inconclusive="4" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
-    <UnitTest name="FailToAddTwoNumbers" storage="pickles.testharness\pickles.testharness.mstest\bin\debug\pickles.testharness.mstest.dll" id="10684beb-1457-c825-5087-2d0029460463">
-      <Description>Fail to add two numbers</Description>
-      <Execution id="6a02f552-17f1-4f86-9eaa-bcddec97f075" />
+    <UnitTest name="NotAutomatedScenario1" storage="mstestharness.dll" id="0e090158-43a1-1be8-47c2-13e1b2c9f8c7">
+      <Description>Not automated scenario 1</Description>
+      <Execution id="707e3183-1317-4b74-80ed-69b46ed4d3e7" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
-          <Value>Addition</Value>
+          <Value>Not Automated At All</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="c:/dev/pickles-results-harness/Pickles.TestHarness/Pickles.TestHarness.MSTest/bin/debug/Pickles.TestHarness.MSTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MSTest.AdditionFeature, Pickles.TestHarness.MSTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailToAddTwoNumbers" />
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario1" />
     </UnitTest>
-    <UnitTest name="AddTwoNumbers" storage="pickles.testharness\pickles.testharness.mstest\bin\debug\pickles.testharness.mstest.dll" id="45571f70-456e-69eb-dbf2-7ec265c4b751">
+    <UnitTest name="AddTwoNumbers" storage="mstestharness.dll" id="6b8581c3-611e-6116-4232-a31382677735">
       <Description>Add two numbers</Description>
-      <Execution id="17356f2f-b3c9-4bee-b6b3-74fe17b2e82b" />
+      <TestCategory>
+        <TestCategoryItem TestCategory="tag1" />
+      </TestCategory>
+      <Execution id="04532745-db2d-4cb6-92f3-0aa69dd339d9" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="c:/dev/pickles-results-harness/Pickles.TestHarness/Pickles.TestHarness.MSTest/bin/debug/Pickles.TestHarness.MSTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MSTest.AdditionFeature, Pickles.TestHarness.MSTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTwoNumbers" />
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTwoNumbers" />
     </UnitTest>
-    <UnitTest name="AddingSeveralNumbers_40" storage="pickles.testharness\pickles.testharness.mstest\bin\debug\pickles.testharness.mstest.dll" id="272c9292-71fc-4aaa-5ed5-d7869de15ae4">
-      <Description>Adding several numbers</Description>
-      <Execution id="d7b75d23-a952-4578-8542-326abd65c695" />
+    <UnitTest name="NotAutomatedScenario3" storage="mstestharness.dll" id="64813bea-d79b-d74b-adb5-1302eaf5641f">
+      <Description>Not automated scenario 3</Description>
+      <Execution id="72a1e263-32dc-4890-977c-eb174bbdc3ba" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
-          <Value>Addition</Value>
-        </Property>
-        <Property>
-          <Key>VariantName</Key>
-          <Value>40</Value>
-        </Property>
-        <Property>
-          <Key>Parameter:Second Number</Key>
-          <Value>50</Value>
-        </Property>
-        <Property>
-          <Key>Parameter:Result</Key>
-          <Value>90</Value>
-        </Property>
-        <Property>
-          <Key>Parameter:First Number</Key>
-          <Value>40</Value>
+          <Value>Not Automated At All</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="c:/dev/pickles-results-harness/Pickles.TestHarness/Pickles.TestHarness.MSTest/bin/debug/Pickles.TestHarness.MSTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MSTest.AdditionFeature, Pickles.TestHarness.MSTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_40" />
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario3" />
     </UnitTest>
-    <UnitTest name="AddingSeveralNumbers_60" storage="pickles.testharness\pickles.testharness.mstest\bin\debug\pickles.testharness.mstest.dll" id="0156926a-5b5c-a0f3-47b4-9cf23f44894b">
-      <Description>Adding several numbers</Description>
-      <Execution id="0f00d527-6edd-4045-b9b5-65ebce5b3874" />
+    <UnitTest name="FailToAddTwoNumbers" storage="mstestharness.dll" id="b13a186e-33df-348e-f9e2-a18b445d0d6e">
+      <Description>Fail to add two numbers</Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="tag1" />
+      </TestCategory>
+      <Execution id="54adf0b0-4045-40f5-aabb-15ec8ab7f1ba" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Addition</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailToAddTwoNumbers" />
+    </UnitTest>
+    <UnitTest name="AddingSeveralNumbers_60" storage="mstestharness.dll" id="f4b45c2f-fc98-d23c-6179-62d5b5a59825">
+      <Description>Adding several numbers</Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="tag2" />
+      </TestCategory>
+      <Execution id="6b709f98-be85-469b-83e8-31eda6e98a4c" />
+      <Properties>
+        <Property>
+          <Key>Parameter:first number</Key>
+          <Value>60</Value>
         </Property>
         <Property>
           <Key>VariantName</Key>
           <Value>60</Value>
         </Property>
         <Property>
-          <Key>Parameter:Second Number</Key>
-          <Value>70</Value>
+          <Key>Parameter:result</Key>
+          <Value>260</Value>
         </Property>
         <Property>
-          <Key>Parameter:Result</Key>
+          <Key>Parameter:third number</Key>
           <Value>130</Value>
         </Property>
         <Property>
-          <Key>Parameter:First Number</Key>
-          <Value>60</Value>
+          <Key>Parameter:second number</Key>
+          <Value>70</Value>
+        </Property>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="c:/dev/pickles-results-harness/Pickles.TestHarness/Pickles.TestHarness.MSTest/bin/debug/Pickles.TestHarness.MSTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MSTest.AdditionFeature, Pickles.TestHarness.MSTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_60" />
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_60" />
+    </UnitTest>
+    <UnitTest name="NotAutomatedAddingTwoNumbers" storage="mstestharness.dll" id="2124dd33-7aaa-d4fb-c72f-98ad434251c0">
+      <Description>Not automated adding two numbers</Description>
+      <Execution id="c417c075-9548-4273-a286-38b2b37f4ca8" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Addition</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedAddingTwoNumbers" />
+    </UnitTest>
+    <UnitTest name="AddingSeveralNumbers_40" storage="mstestharness.dll" id="4d0f7327-ed22-9a43-969a-ac2ea8102d66">
+      <Description>Adding several numbers</Description>
+      <TestCategory>
+        <TestCategoryItem TestCategory="tag2" />
+      </TestCategory>
+      <Execution id="02f4f334-156d-4116-a153-6936282df0e0" />
+      <Properties>
+        <Property>
+          <Key>Parameter:first number</Key>
+          <Value>40</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>40</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:third number</Key>
+          <Value>90</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:second number</Key>
+          <Value>50</Value>
+        </Property>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Addition</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result</Key>
+          <Value>180</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_40" />
+    </UnitTest>
+    <UnitTest name="NotAutomatedScenario2" storage="mstestharness.dll" id="067e1c92-2860-531b-28dc-c2863e91b7f5">
+      <Description>Not automated scenario 2</Description>
+      <Execution id="115665e5-05e1-4d23-acec-523b3018ad2f" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Not Automated At All</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Users/astral/Documents/GitHub/pickles-testresults/TestHarness/MsTest/bin/Debug/MsTestHarness.dll" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario2" />
     </UnitTest>
   </TestDefinitions>
   <TestLists>
@@ -95,83 +159,380 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <TestEntries>
-    <TestEntry testId="272c9292-71fc-4aaa-5ed5-d7869de15ae4" executionId="d7b75d23-a952-4578-8542-326abd65c695" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0156926a-5b5c-a0f3-47b4-9cf23f44894b" executionId="0f00d527-6edd-4045-b9b5-65ebce5b3874" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="45571f70-456e-69eb-dbf2-7ec265c4b751" executionId="17356f2f-b3c9-4bee-b6b3-74fe17b2e82b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="10684beb-1457-c825-5087-2d0029460463" executionId="6a02f552-17f1-4f86-9eaa-bcddec97f075" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" executionId="02f4f334-156d-4116-a153-6936282df0e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4b45c2f-fc98-d23c-6179-62d5b5a59825" executionId="6b709f98-be85-469b-83e8-31eda6e98a4c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b8581c3-611e-6116-4232-a31382677735" executionId="04532745-db2d-4cb6-92f3-0aa69dd339d9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b13a186e-33df-348e-f9e2-a18b445d0d6e" executionId="54adf0b0-4045-40f5-aabb-15ec8ab7f1ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2124dd33-7aaa-d4fb-c72f-98ad434251c0" executionId="c417c075-9548-4273-a286-38b2b37f4ca8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e090158-43a1-1be8-47c2-13e1b2c9f8c7" executionId="707e3183-1317-4b74-80ed-69b46ed4d3e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="067e1c92-2860-531b-28dc-c2863e91b7f5" executionId="115665e5-05e1-4d23-acec-523b3018ad2f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64813bea-d79b-d74b-adb5-1302eaf5641f" executionId="72a1e263-32dc-4890-977c-eb174bbdc3ba" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
-    <UnitTestResult executionId="d7b75d23-a952-4578-8542-326abd65c695" testId="272c9292-71fc-4aaa-5ed5-d7869de15ae4" testName="AddingSeveralNumbers_40" computerName="BUMBLEBEE" duration="00:00:00.0768910" startTime="2012-02-19T09:25:25.2729281-05:00" endTime="2012-02-19T09:25:25.9379661-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7b75d23-a952-4578-8542-326abd65c695">
+    <UnitTestResult executionId="02f4f334-156d-4116-a153-6936282df0e0" testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" testName="AddingSeveralNumbers_40" computerName="JERUSALEM" duration="00:00:00.0406079" startTime="2013-07-31T19:19:02.5912450+02:00" endTime="2013-07-31T19:19:02.9098440+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="02f4f334-156d-4116-a153-6936282df0e0">
       <Output>
-        <StdOut>
-          Given I have entered 40 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(40) (0.0s)
-          And I have entered 50 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
-          When I press add
-          -&gt; done: Steps.WhenIPressAdd() (0.0s)
-          Then the result should be 90 on the screen
-          -&gt; done: Steps.ThenTheResultShouldBePass(90) (0.0s)
-        </StdOut>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 40 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(40) (0,0s)
+And I have entered 50 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(50) (0,0s)
+And I have entered 90 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(90) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 180 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(180) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="0f00d527-6edd-4045-b9b5-65ebce5b3874" testId="0156926a-5b5c-a0f3-47b4-9cf23f44894b" testName="AddingSeveralNumbers_60" computerName="BUMBLEBEE" duration="00:00:00.0111534" startTime="2012-02-19T09:25:25.9399663-05:00" endTime="2012-02-19T09:25:25.9719681-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f00d527-6edd-4045-b9b5-65ebce5b3874">
+    <UnitTestResult executionId="6b709f98-be85-469b-83e8-31eda6e98a4c" testId="f4b45c2f-fc98-d23c-6179-62d5b5a59825" testName="AddingSeveralNumbers_60" computerName="JERUSALEM" duration="00:00:00.0003784" startTime="2013-07-31T19:19:02.9128443+02:00" endTime="2013-07-31T19:19:02.9148473+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b709f98-be85-469b-83e8-31eda6e98a4c">
       <Output>
-        <StdOut>
-          Given I have entered 60 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(60) (0.0s)
-          And I have entered 70 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(70) (0.0s)
-          When I press add
-          -&gt; done: Steps.WhenIPressAdd() (0.0s)
-          Then the result should be 130 on the screen
-          -&gt; done: Steps.ThenTheResultShouldBePass(130) (0.0s)
-        </StdOut>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 60 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(60) (0,0s)
+And I have entered 70 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(70) (0,0s)
+And I have entered 130 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(130) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 260 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(260) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="17356f2f-b3c9-4bee-b6b3-74fe17b2e82b" testId="45571f70-456e-69eb-dbf2-7ec265c4b751" testName="AddTwoNumbers" computerName="BUMBLEBEE" duration="00:00:00.0055623" startTime="2012-02-19T09:25:25.9799685-05:00" endTime="2012-02-19T09:25:25.9919692-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="17356f2f-b3c9-4bee-b6b3-74fe17b2e82b">
+    <UnitTestResult executionId="04532745-db2d-4cb6-92f3-0aa69dd339d9" testId="6b8581c3-611e-6116-4232-a31382677735" testName="AddTwoNumbers" computerName="JERUSALEM" duration="00:00:00.0003797" startTime="2013-07-31T19:19:02.9158480+02:00" endTime="2013-07-31T19:19:02.9188487+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="04532745-db2d-4cb6-92f3-0aa69dd339d9">
       <Output>
-        <StdOut>
-          Given I have entered 50 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
-          And I have entered 70 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(70) (0.0s)
-          When I press add
-          -&gt; done: Steps.WhenIPressAdd() (0.0s)
-          Then the result should be 120 on the screen
-          -&gt; done: Steps.ThenTheResultShouldBePass(120) (0.0s)
-        </StdOut>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 1 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
+And I have entered 2 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 3 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(3) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="6a02f552-17f1-4f86-9eaa-bcddec97f075" testId="10684beb-1457-c825-5087-2d0029460463" testName="FailToAddTwoNumbers" computerName="BUMBLEBEE" duration="00:00:00.0459057" startTime="2012-02-19T09:25:25.9949694-05:00" endTime="2012-02-19T09:25:26.0469724-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6a02f552-17f1-4f86-9eaa-bcddec97f075">
+    <UnitTestResult executionId="54adf0b0-4045-40f5-aabb-15ec8ab7f1ba" testId="b13a186e-33df-348e-f9e2-a18b445d0d6e" testName="FailToAddTwoNumbers" computerName="JERUSALEM" duration="00:00:00.0484730" startTime="2013-07-31T19:19:02.9208496+02:00" endTime="2013-07-31T19:19:02.9708844+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="54adf0b0-4045-40f5-aabb-15ec8ab7f1ba">
       <Output>
-        <StdOut>
-          Given I have entered 50 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(50) (0.0s)
-          And I have entered -1 into the calculator
-          -&gt; done: Steps.GivenIHaveEnteredSomethingIntoTheCalculator(-1) (0.0s)
-          When I press add
-          -&gt; done: Steps.WhenIPressAdd() (0.0s)
-          Then the result should be -50 on the screen
-          -&gt; error: Assert.NotEqual() Failure
-        </StdOut>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 1 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
+And I have entered 2.2 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2,2) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 3.2 on the screen
+-&gt; error: Assert.AreEqual failed. Expected:&lt;3.2&gt;. Actual:&lt;3&gt;.</StdOut>
         <ErrorInfo>
-          <Message>
-            Test method Pickles.TestHarness.MSTest.AdditionFeature.FailToAddTwoNumbers threw exception:
-            Should.Core.Exceptions.NotEqualException: Assert.NotEqual() Failure
-          </Message>
-          <StackTrace>
-            at Pickles.TestHarness.MSTest.Steps.ThenTheResultShouldBePass(Int32 result) in C:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.MSTest\Steps.cs:line 28
-            at lambda_method(Closure , IContextManager , Int32 )
-            at TechTalk.SpecFlow.Bindings.MethodBinding.InvokeAction(IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
-            at TechTalk.SpecFlow.Bindings.StepDefinitionBinding.Invoke(IContextManager contextManager, ITestTracer testTracer, Object[] arguments, TimeSpan&amp; duration)
-            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepArgs stepArgs)
-            at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-            at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
-            at Pickles.TestHarness.MSTest.AdditionFeature.ScenarioCleanup() in C:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.MSTest\Addition.feature.cs:line 0
-            at Pickles.TestHarness.MSTest.AdditionFeature.FailToAddTwoNumbers() in c:\dev\pickles-results-harness\Pickles.TestHarness\Pickles.TestHarness.MSTest\Addition.feature:line 18
-          </StackTrace>
+          <Message>Assert.AreEqual failed. Expected:&lt;3.2&gt;. Actual:&lt;3&gt;. </Message>
+          <StackTrace>   w Pickles.TestHarness.MsTest.AdditionSteps.ThenTheResultShouldBeOnTheScreen(Decimal p0) w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\AdditionSteps.cs:wiersz 39
+   w lambda_method(Closure , IContextManager , Decimal )
+   w TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   w Pickles.TestHarness.MsTest.AdditionFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\Addition.feature.cs:wiersz 0
+   w Pickles.TestHarness.MsTest.AdditionFeature.FailToAddTwoNumbers() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\Addition.feature:wiersz 34
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c417c075-9548-4273-a286-38b2b37f4ca8" testId="2124dd33-7aaa-d4fb-c72f-98ad434251c0" testName="NotAutomatedAddingTwoNumbers" computerName="JERUSALEM" duration="00:00:00.0280298" startTime="2013-07-31T19:19:02.9728853+02:00" endTime="2013-07-31T19:19:03.0029058+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c417c075-9548-4273-a286-38b2b37f4ca8">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</Message>
+          <StackTrace>   w lambda_method(Closure , String , Object[] )
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   w Pickles.TestHarness.MsTest.AdditionFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\Addition.feature.cs:wiersz 0
+   w Pickles.TestHarness.MsTest.AdditionFeature.NotAutomatedAddingTwoNumbers() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\Addition.feature:wiersz 46
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="707e3183-1317-4b74-80ed-69b46ed4d3e7" testId="0e090158-43a1-1be8-47c2-13e1b2c9f8c7" testName="NotAutomatedScenario1" computerName="JERUSALEM" duration="00:00:00.0048096" startTime="2013-07-31T19:19:03.0045120+02:00" endTime="2013-07-31T19:19:03.0125190+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="707e3183-1317-4b74-80ed-69b46ed4d3e7">
+      <Output>
+        <StdOut>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</Message>
+          <StackTrace>   w lambda_method(Closure , String , Object[] )
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   w Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\NotAutomatedAtAll.feature.cs:wiersz 0
+   w Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario1() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\NotAutomatedAtAll.feature:wiersz 9
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="115665e5-05e1-4d23-acec-523b3018ad2f" testId="067e1c92-2860-531b-28dc-c2863e91b7f5" testName="NotAutomatedScenario2" computerName="JERUSALEM" duration="00:00:00.0042866" startTime="2013-07-31T19:19:03.0145208+02:00" endTime="2013-07-31T19:19:03.0205248+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="115665e5-05e1-4d23-acec-523b3018ad2f">
+      <Output>
+        <StdOut>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</Message>
+          <StackTrace>   w lambda_method(Closure , String , Object[] )
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   w Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\NotAutomatedAtAll.feature.cs:wiersz 0
+   w Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario2() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\NotAutomatedAtAll.feature:wiersz 14
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="72a1e263-32dc-4890-977c-eb174bbdc3ba" testId="64813bea-d79b-d74b-adb5-1302eaf5641f" testName="NotAutomatedScenario3" computerName="JERUSALEM" duration="00:00:00.0044110" startTime="2013-07-31T19:19:03.0225249+02:00" endTime="2013-07-31T19:19:03.0285298+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72a1e263-32dc-4890-977c-eb174bbdc3ba">
+      <Output>
+        <StdOut>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Inconclusive failed. No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</Message>
+          <StackTrace>   w lambda_method(Closure , String , Object[] )
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestInconclusive(String message)
+   w TechTalk.SpecFlow.UnitTestProvider.MsTestRuntimeProvider.TestPending(String message)
+   w TechTalk.SpecFlow.ErrorHandling.ErrorProvider.ThrowPendingError(TestStatus testStatus, String message)
+   w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   w TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
+   w Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\NotAutomatedAtAll.feature.cs:wiersz 0
+   w Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario3() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\MsTest\NotAutomatedAtAll.feature:wiersz 19
+</StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
