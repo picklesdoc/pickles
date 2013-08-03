@@ -34,14 +34,34 @@ namespace PicklesDoc.Pickles.Test
         }
 
         [Test]
-        public void ThenCanReadFeatureResultSuccessfully()
+        public void ThenCanReadInconclusiveFeatureResultSuccessfully()
         {
             var results = ParseResultsFile();
             
-            TestResult result = results.GetFeatureResult(AdditionFeature());
+            TestResult result = results.GetFeatureResult(InconclusiveFeature());
 
-            result.WasExecuted.ShouldBeTrue();
-            result.WasSuccessful.ShouldBeFalse();
+            Assert.AreEqual(TestResult.Inconclusive(), result);
+        }
+
+        [Test]
+        public void ThenCanReadFailedFeatureResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+
+            TestResult result = results.GetFeatureResult(FailingFeature());
+
+            Assert.AreEqual(TestResult.Failed(), result);
+        }
+
+
+        [Test]
+        public void ThenCanReadPassedFeatureResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+
+            TestResult result = results.GetFeatureResult(PassingFeature());
+
+            Assert.AreEqual(TestResult.Passed(), result);
         }
 
         [Test]
@@ -112,19 +132,6 @@ namespace PicklesDoc.Pickles.Test
             result.WasNotFound.ShouldBeFalse();
         }
 
-        [Test]
-        public void ThenCanReadInconclusiveFeatureResultSuccessfully()
-        {
-            var results = ParseResultsFile();
-            var feature = new Feature { Name = "Not Automated At All" };
-
-            var result = results.GetFeatureResult(feature);
-
-            result.WasExecuted.ShouldBeFalse();
-            result.WasSuccessful.ShouldBeFalse();
-            result.WasNotFound.ShouldBeFalse();
-        }
-
         private MsTestResults ParseResultsFile()
         {
             // Write out the embedded test results file
@@ -144,6 +151,20 @@ namespace PicklesDoc.Pickles.Test
         private Feature AdditionFeature()
         {
             return new Feature() { Name = "Addition" };
+        }
+
+        private Feature InconclusiveFeature()
+        {
+            return new Feature() { Name = "Inconclusive" };
+        }
+        private Feature FailingFeature()
+        {
+            return new Feature() { Name = "Failing" };
+        }
+
+        private Feature PassingFeature()
+        {
+            return new Feature() { Name = "Passing" };
         }
 
 

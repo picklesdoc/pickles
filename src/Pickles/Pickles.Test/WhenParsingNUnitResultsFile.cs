@@ -116,13 +116,40 @@ namespace PicklesDoc.Pickles.Test
         public void ThenCanReadInconclusiveFeatureResultSuccessfully()
         {
             var results = ParseResultsFile();
-            var feature = new Feature { Name = "Not Automated At All" };
+            var result = results.GetFeatureResult(InconclusiveFeature());
+            Assert.AreEqual(TestResult.Inconclusive(), result);
+        }
 
-            var result = results.GetFeatureResult(feature);
 
-            result.WasExecuted.ShouldBeFalse();
-            result.WasSuccessful.ShouldBeFalse();
-            result.WasNotFound.ShouldBeFalse();
+        [Test]
+        public void ThenCanReadPassedFeatureResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+            var result = results.GetFeatureResult(PassingFeature());
+            Assert.AreEqual(TestResult.Passed(), result);
+        }
+
+        [Test]
+        public void ThenCanReadFailedFeatureResultSuccessfully()
+        {
+            var results = ParseResultsFile();
+            var result = results.GetFeatureResult(FailingFeature());
+            Assert.AreEqual(TestResult.Failed(), result);
+        }
+
+        private Feature FailingFeature()
+        {
+            return new Feature() {Name = "Failing"};
+        }
+
+        private Feature InconclusiveFeature()
+        {
+            return new Feature() { Name = "Inconclusive" };
+        }
+
+        private Feature PassingFeature()
+        {
+            return new Feature() { Name = "Passing" };
         }
 
         [Test]

@@ -112,7 +112,7 @@ namespace PicklesDoc.Pickles.TestFrameworks
                 where FeatureNamePropertyExistsWith(feature.Name, among: properties)
                 select ScenarioExecutionIdOf(scenario);
 
-            TestResult result = featureExecutionIds.Select(this.GetExecutionResult).Where(r => r.WasExecuted).Merge();
+            TestResult result = featureExecutionIds.Select(this.GetExecutionResult).Merge();
 
             return result;
         }

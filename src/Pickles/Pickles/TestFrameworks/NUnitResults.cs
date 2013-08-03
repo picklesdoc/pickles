@@ -44,12 +44,17 @@ namespace PicklesDoc.Pickles.TestFrameworks
             }
         }
 
+
         #region ITestResults Members
 
         public TestResult GetFeatureResult(Feature feature)
         {
-            XElement featureElement = this.GetFeatureElement(feature);
-            return this.GetResultFromElement(featureElement);
+            var featureElement = this.GetFeatureElement(feature);
+
+            var results = featureElement.Descendants("test-case")
+                .Select(GetResultFromElement);
+
+            return results.Merge();
         }
 
         public TestResult GetScenarioResult(Scenario scenario)

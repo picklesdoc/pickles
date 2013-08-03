@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\nunit\bin\Debug\nunit.dll" total="8" errors="0" failures="1" not-run="1" inconclusive="4" ignored="1" skipped="0" invalid="0" date="2013-07-27" time="21:20:33">
+<test-results name="C:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\bin\Debug\nunitHarness.dll" total="14" errors="0" failures="2" not-run="1" inconclusive="6" ignored="1" skipped="0" invalid="0" date="2013-08-03" time="14:22:16">
   <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.6407" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Program Files (x86)\NUnit 2.6.2\bin" machine-name="JERUSALEM" user="astral" user-domain="Jerusalem" />
   <culture-info current-culture="pl-PL" current-uiculture="pl-PL" />
-  <test-suite type="Assembly" name="C:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\nunit\bin\Debug\nunit.dll" executed="True" result="Failure" success="False" time="0.999" asserts="0">
+  <test-suite type="Assembly" name="C:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\bin\Debug\nunitHarness.dll" executed="True" result="Failure" success="False" time="1.184" asserts="0">
     <results>
-      <test-suite type="Namespace" name="Pickles" executed="True" result="Failure" success="False" time="0.982" asserts="0">
+      <test-suite type="Namespace" name="Pickles" executed="True" result="Failure" success="False" time="1.166" asserts="0">
         <results>
-          <test-suite type="Namespace" name="TestHarness" executed="True" result="Failure" success="False" time="0.982" asserts="0">
+          <test-suite type="Namespace" name="TestHarness" executed="True" result="Failure" success="False" time="1.165" asserts="0">
             <results>
-              <test-suite type="Namespace" name="nunit" executed="True" result="Failure" success="False" time="0.981" asserts="0">
+              <test-suite type="Namespace" name="nunit" executed="True" result="Failure" success="False" time="1.165" asserts="0">
                 <results>
-                  <test-suite type="TestFixture" name="AdditionFeature" description="Addition" executed="True" result="Failure" success="False" time="0.959" asserts="0">
+                  <test-suite type="TestFixture" name="AdditionFeature" description="Addition" executed="True" result="Failure" success="False" time="1.110" asserts="0">
                     <results>
-                      <test-suite type="ParameterizedTest" name="AddingSeveralNumbers" description="Adding several numbers" executed="True" result="Success" success="True" time="0.295" asserts="0">
+                      <test-suite type="ParameterizedTest" name="AddingSeveralNumbers" description="Adding several numbers" executed="True" result="Success" success="True" time="0.308" asserts="0">
                         <categories>
                           <category name="tag2" />
                         </categories>
                         <results>
-                          <test-case name="Pickles.TestHarness.nunit.AdditionFeature.AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" executed="True" result="Success" success="True" time="0.284" asserts="1" />
-                          <test-case name="Pickles.TestHarness.nunit.AdditionFeature.AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+                          <test-case name="Pickles.TestHarness.nunit.AdditionFeature.AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" executed="True" result="Success" success="True" time="0.289" asserts="1" />
+                          <test-case name="Pickles.TestHarness.nunit.AdditionFeature.AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="1" />
                         </results>
                       </test-suite>
-                      <test-case name="Pickles.TestHarness.nunit.AdditionFeature.AddTwoNumbers" description="Add two numbers" executed="True" result="Success" success="True" time="0.000" asserts="1">
+                      <test-case name="Pickles.TestHarness.nunit.AdditionFeature.AddTwoNumbers" description="Add two numbers" executed="True" result="Success" success="True" time="0.001" asserts="1">
                         <categories>
                           <category name="tag1" />
                         </categories>
@@ -35,14 +35,14 @@
                           <message><![CDATA[  Expected: 3.2m
   But was:  3m
 ]]></message>
-                          <stack-trace><![CDATA[w Pickles.TestHarness.nunit.AdditionSteps.ThenTheResultShouldBeOnTheScreen(Decimal p0) w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\nunit\AdditionSteps.cs:wiersz 39
+                          <stack-trace><![CDATA[w Pickles.TestHarness.nunit.AdditionSteps.ThenTheResultShouldBeOnTheScreen(Decimal p0) w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\AdditionSteps.cs:wiersz 39
 w lambda_method(Closure , IContextManager , Decimal )
 w TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
 w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
 w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
 w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-w Pickles.TestHarness.nunit.AdditionFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\nunit\Addition.feature.cs:wiersz 0
-w Pickles.TestHarness.nunit.AdditionFeature.FailToAddTwoNumbers() w c:\Users\astral\Documents\GitHub\pickles\src\Pickles.TestDataSource\TestHarness\nunit\Addition.feature:wiersz 34
+w Pickles.TestHarness.nunit.AdditionFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\Addition.feature.cs:wiersz 0
+w Pickles.TestHarness.nunit.AdditionFeature.FailToAddTwoNumbers() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\Addition.feature:wiersz 34
 ]]></stack-trace>
                         </failure>
                       </test-case>
@@ -51,7 +51,7 @@ w Pickles.TestHarness.nunit.AdditionFeature.FailToAddTwoNumbers() w c:\Users\ast
                           <message><![CDATA[]]></message>
                         </reason>
                       </test-case>
-                      <test-case name="Pickles.TestHarness.nunit.AdditionFeature.NotAutomatedAddingTwoNumbers" description="Not automated adding two numbers" executed="True" result="Inconclusive" success="False" time="0.166" asserts="0">
+                      <test-case name="Pickles.TestHarness.nunit.AdditionFeature.NotAutomatedAddingTwoNumbers" description="Not automated adding two numbers" executed="True" result="Inconclusive" success="False" time="0.177" asserts="0">
                         <reason>
                           <message><![CDATA[No matching step definition found for one or more steps.
 using System;
@@ -86,7 +86,49 @@ namespace MyNamespace
                       </test-case>
                     </results>
                   </test-suite>
-                  <test-suite type="TestFixture" name="NotAutomatedAtAllFeature" description="Not Automated At All" executed="True" result="Inconclusive" success="False" time="0.019" asserts="0">
+                  <test-suite type="Namespace" name="MinimalFeatures" executed="True" result="Failure" success="False" time="0.026" asserts="0">
+                    <results>
+                      <test-suite type="TestFixture" name="FailingFeature" description="Failing" executed="True" result="Failure" success="False" time="0.014" asserts="0">
+                        <results>
+                          <test-case name="Pickles.TestHarness.nunit.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" description="Failing Feature Failing Scenario" executed="True" result="Failure" success="False" time="0.003" asserts="0">
+                            <failure>
+                              <message><![CDATA[by design]]></message>
+                              <stack-trace><![CDATA[w Pickles.TestHarness.MsTest.MinimalSteps.ThenFailingStep() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\Minimal Features\MinimalSteps.cs:wiersz 25
+w TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+w TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+w Pickles.TestHarness.nunit.MinimalFeatures.FailingFeature.ScenarioCleanup() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\Minimal Features\Failing.feature.cs:wiersz 0
+w Pickles.TestHarness.nunit.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() w c:\Users\astral\Documents\GitHub\pickles-testresults\TestHarness\nunit\Minimal Features\Failing.feature:wiersz 10
+]]></stack-trace>
+                            </failure>
+                          </test-case>
+                          <test-case name="Pickles.TestHarness.nunit.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" description="Failing Feature Inconclusive Scenario" executed="True" result="Inconclusive" success="False" time="0.002" asserts="0">
+                            <reason>
+                              <message><![CDATA[by design]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="Pickles.TestHarness.nunit.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" description="Failing Feature Passing Scenario" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="InconclusiveFeature" description="Inconclusive" executed="True" result="Success" success="True" time="0.005" asserts="0">
+                        <results>
+                          <test-case name="Pickles.TestHarness.nunit.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario" description="Inconclusive Feature Inconclusive Scenario" executed="True" result="Inconclusive" success="False" time="0.002" asserts="0">
+                            <reason>
+                              <message><![CDATA[by design]]></message>
+                            </reason>
+                          </test-case>
+                          <test-case name="Pickles.TestHarness.nunit.MinimalFeatures.InconclusiveFeature.InconclusiveFeaturePassingScenario" description="Inconclusive Feature Passing Scenario" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        </results>
+                      </test-suite>
+                      <test-suite type="TestFixture" name="PassingFeature" description="Passing" executed="True" result="Success" success="True" time="0.002" asserts="0">
+                        <results>
+                          <test-case name="Pickles.TestHarness.nunit.MinimalFeatures.PassingFeature.PassingFeaturePassingScenario" description="Passing Feature Passing Scenario" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                  <test-suite type="TestFixture" name="NotAutomatedAtAllFeature" description="Not Automated At All" executed="True" result="Inconclusive" success="False" time="0.022" asserts="0">
                     <results>
                       <test-case name="Pickles.TestHarness.nunit.NotAutomatedAtAllFeature.NotAutomatedScenario1" description="Not automated scenario 1" executed="True" result="Inconclusive" success="False" time="0.006" asserts="0">
                         <reason>
@@ -121,7 +163,7 @@ namespace MyNamespace
 ]]></message>
                         </reason>
                       </test-case>
-                      <test-case name="Pickles.TestHarness.nunit.NotAutomatedAtAllFeature.NotAutomatedScenario2" description="Not automated scenario 2" executed="True" result="Inconclusive" success="False" time="0.005" asserts="0">
+                      <test-case name="Pickles.TestHarness.nunit.NotAutomatedAtAllFeature.NotAutomatedScenario2" description="Not automated scenario 2" executed="True" result="Inconclusive" success="False" time="0.004" asserts="0">
                         <reason>
                           <message><![CDATA[No matching step definition found for one or more steps.
 using System;
