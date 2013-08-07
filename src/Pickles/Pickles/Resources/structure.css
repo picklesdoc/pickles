@@ -49,8 +49,8 @@
     padding: 0;
 }
 
-#toc ul.features ul.features .features {
-    padding-left: 1.25em;
+#toc ul li {
+    margin-left: 1.25em;
 }
 
 #toc ul li a {
@@ -78,6 +78,7 @@
 #toc .file {
     border-bottom: 1px solid #E8E8e8;
     padding: 3px 10px 4px 20px;
+    margin-left: 0;
 }
 
 #toc.collapsed ul { display: none; }
