@@ -37,17 +37,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
         public void Format(Body body, Step step)
         {
-            // HACK - We need to generate a custom paragraph here because 2 Run objects are needed to allow for the bolded keyword
-            var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId {Val = "Normal"}));
-            paragraph.Append(new Run(new RunProperties(new Bold()), new Text(step.NativeKeyword)));
-            var nameText = new Text {Space = SpaceProcessingModeValues.Preserve};
-            nameText.Text = " " + step.Name;
-            paragraph.Append(new Run(nameText));
+            var paragraph = GenerateStepParagraph(step);
             body.Append(paragraph);
 
             if (!string.IsNullOrEmpty(step.DocStringArgument))
             {
-                string[] lines = step.DocStringArgument.Split(new[] {Environment.NewLine},
+                string[] lines = step.DocStringArgument.Split(new[] { Environment.NewLine },
                                                               StringSplitOptions.RemoveEmptyEntries);
                 foreach (string line in lines)
                 {
@@ -59,6 +54,17 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             {
                 this.wordTableFormatter.Format(body, step.TableArgument);
             }
+        }
+
+        public static Paragraph GenerateStepParagraph(Step step)
+        {
+            // HACK - We need to generate a custom paragraph here because 2 Run objects are needed to allow for the bolded keyword
+            var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }));
+            paragraph.Append(new Run(new RunProperties(new Bold()), new Text(step.NativeKeyword)));
+            var nameText = new Text { Space = SpaceProcessingModeValues.Preserve };
+            nameText.Text = " " + step.Name;
+            paragraph.Append(new Run(nameText));
+            return paragraph;
         }
     }
 }
