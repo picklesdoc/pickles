@@ -238,6 +238,7 @@
     <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtOpenXmlUtil.cs" />
     <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtUtil.cs" />
     <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\TocAdder.cs" />
+    <Compile Include="DocumentationBuilders\Word\WordBackgroundFormatter.cs" />
     <Compile Include="DocumentationBuilders\Word\WordDescriptionFormatter.cs" />
     <Compile Include="DocumentationBuilders\Word\WordDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\Word\WordFeatureFormatter.cs" />

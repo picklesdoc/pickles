@@ -8,10 +8,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
     {
         public void Format(Body body, string description)
         {
-            foreach (var paragraph in description.Split(new string[] {"\n", "\r"}, StringSplitOptions.RemoveEmptyEntries))
+            foreach (var paragraph in SplitDescription(description))
             {
                 body.GenerateParagraph(paragraph, "Normal");
             }
+        }
+
+        public static string[] SplitDescription(string description)
+        {
+            return description.Split(new string[] {"\n", "\r"}, StringSplitOptions.RemoveEmptyEntries);
         }
     }
 }
