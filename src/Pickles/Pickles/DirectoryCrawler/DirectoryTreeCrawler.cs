@@ -22,14 +22,16 @@ using System;
 using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Reflection;
 using NGenerics.DataStructures.Trees;
+using NLog;
 
 namespace PicklesDoc.Pickles.DirectoryCrawler
 {
     public class DirectoryTreeCrawler
     {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-        private readonly FeatureNodeFactory featureNodeFactory;
+      private static readonly Logger log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+      private readonly FeatureNodeFactory featureNodeFactory;
 
         private readonly IFileSystem fileSystem;
 
@@ -112,7 +114,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
           {
             if (log.IsWarnEnabled)
             {
-              log.WarnFormat("The file, {0}, will be ignored because it could not be read in properly", file.FullName);
+              log.Warn("The file, {0}, will be ignored because it could not be read in properly", file.FullName);
             }
           }
 

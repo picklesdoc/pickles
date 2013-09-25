@@ -4,8 +4,6 @@ namespace PicklesDoc.Pickles
 {
     public class ConfigurationReporter
     {
-        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-
         public void ReportOn(Configuration configuration, Action<String> writeToLog)
         {
             writeToLog("Generating documentation based on the following parameters");

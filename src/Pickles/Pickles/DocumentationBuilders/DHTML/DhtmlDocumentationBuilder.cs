@@ -19,7 +19,7 @@
 #endregion
 
 using System.IO.Abstractions;
-using log4net;
+using NLog;
 using NGenerics.DataStructures.Trees;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.JSON;
@@ -30,7 +30,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
 {
     public class DhtmlDocumentationBuilder : IDocumentationBuilder
     {
-        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly Logger log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
 
         private readonly Configuration configuration;
         private readonly ITestResults testResults;
@@ -50,7 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
         {
             if (log.IsInfoEnabled)
             {
-                log.InfoFormat("Writing DHTML files to {0}", this.configuration.OutputFolder.FullName);
+                log.Info("Writing DHTML files to {0}", this.configuration.OutputFolder.FullName);
             }
 
             var resource = new DhtmlResourceSet(configuration, this.fileSystem);

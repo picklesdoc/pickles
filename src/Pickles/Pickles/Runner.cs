@@ -18,9 +18,12 @@
 
 #endregion
 
+using System;
+using System.Reflection;
 using Autofac;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
+using NLog;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
 using PicklesDoc.Pickles.Parser;
@@ -30,7 +33,9 @@ namespace PicklesDoc.Pickles
 {
     public class Runner
     {
-        public void Run(IContainer container)
+      private static readonly Logger log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+      
+      public void Run(IContainer container)
         {
             var configuration = container.Resolve<Configuration>();
             if (!configuration.OutputFolder.Exists) configuration.OutputFolder.Create();
@@ -38,10 +43,24 @@ namespace PicklesDoc.Pickles
             var featureCrawler = container.Resolve<DirectoryTreeCrawler>();
             GeneralTree<INode> features = featureCrawler.Crawl(configuration.FeatureFolder);
 
+            if (features == null)
+            {
+              log.Warn("No features found at {0}", configuration.FeatureFolder);
+              return;
+            }
+
             ApplyTestResultsToFeatures(container, configuration, features);
 
             var documentationBuilder = container.Resolve<IDocumentationBuilder>();
-            documentationBuilder.Build(features);
+            try
+            {
+              documentationBuilder.Build(features);
+            }
+            catch (Exception ex)
+            {
+              log.Error("Something went wrong while during generation: {0}", ex);
+              throw;
+            }
         }
 
         private static void ApplyTestResultsToFeatures(IContainer container, Configuration configuration, GeneralTree<INode> features)

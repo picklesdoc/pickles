@@ -155,6 +155,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\NGenerics.1.4.1.0\lib\net35\NGenerics.dll</HintPath>
     </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.2.0.1.2\lib\net35\NLog.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -175,9 +178,6 @@
     </Reference>
     <Reference Include="IKVM.Runtime">
       <HintPath>..\packages\IKVM.0.46.0.1\lib\net20\IKVM.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net">
-      <HintPath>..\packages\log4net.2.0.0\lib\net35-full\log4net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

@@ -22,19 +22,16 @@ using System;
 using System.IO.Abstractions;
 using System.Reflection;
 using Autofac;
-using log4net;
-using log4net.Config;
+using NLog;
 
 namespace PicklesDoc.Pickles.CommandLine
 {
     internal class Program
     {
-        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+      private static readonly Logger log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
 
         private static void Main(string[] args)
         {
-            XmlConfigurator.Configure();
-
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
             builder.Register<FileSystem>(_ => new FileSystem()).As<IFileSystem>().SingleInstance();
@@ -50,7 +47,7 @@ namespace PicklesDoc.Pickles.CommandLine
             {
                 if (log.IsInfoEnabled)
                 {
-                    log.InfoFormat("Pickles v.{0}{1}", Assembly.GetExecutingAssembly().GetName().Version,
+                    log.Info("Pickles v.{0}{1}", Assembly.GetExecutingAssembly().GetName().Version,
                                    Environment.NewLine);
                     new ConfigurationReporter().ReportOn(configuration, message => log.Info(message));
                 }

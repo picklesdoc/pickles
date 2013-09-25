@@ -23,7 +23,7 @@ using System.IO.Abstractions;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
-using log4net;
+using NLog;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
 using PicklesDoc.Pickles.DirectoryCrawler;
@@ -33,7 +33,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
 {
     public class HtmlDocumentationBuilder : IDocumentationBuilder
     {
-        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+      private static readonly Logger log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
 
         private readonly Configuration configuration;
         private readonly HtmlDocumentFormatter htmlDocumentFormatter;
@@ -59,7 +59,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
         {
             if (log.IsInfoEnabled)
             {
-                log.InfoFormat("Writing HTML to {0}", this.configuration.OutputFolder.FullName);
+              log.Info("Writing HTML to {0}", this.configuration.OutputFolder.FullName);
             }
 
             this.htmlResourceWriter.WriteTo(this.configuration.OutputFolder.FullName);

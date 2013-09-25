@@ -24,14 +24,14 @@ using System.Reflection;
 using ClosedXML.Excel;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
+using NLog;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using log4net;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
 {
     public class ExcelDocumentationBuilder : IDocumentationBuilder
     {
-        private static readonly ILog log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
+      private static readonly Logger log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
 
         private readonly Configuration configuration;
         private readonly ExcelFeatureFormatter excelFeatureFormatter;
@@ -62,7 +62,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
         {
             if (log.IsInfoEnabled)
             {
-                log.InfoFormat("Writing Excel workbook to {0}", this.configuration.OutputFolder.FullName);
+              log.Info("Writing Excel workbook to {0}", this.configuration.OutputFolder.FullName);
             }
 
             string spreadsheetPath = this.fileSystem.Path.Combine(this.configuration.OutputFolder.FullName, "features.xlsx");
