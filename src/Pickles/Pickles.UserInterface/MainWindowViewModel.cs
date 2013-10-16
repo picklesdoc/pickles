@@ -505,25 +505,25 @@ namespace PicklesDoc.Pickles.UserInterface
 
         private void DoWork()
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
-            builder.Register<FileSystem>(_ => new FileSystem()).As<IFileSystem>().SingleInstance();
-            builder.RegisterModule<PicklesModule>();
-            var container = builder.Build();
-
-            var configuration = container.Resolve<Configuration>();
-            var fileSystem = container.Resolve<IFileSystem>();
-
-            configuration.FeatureFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.featureFolder);
-            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.outputFolder);
-            configuration.SystemUnderTestName = this.projectName;
-            configuration.SystemUnderTestVersion = this.projectVersion;
-            configuration.TestResultsFile = this.IncludeTests ? fileSystem.FileInfo.FromFileName(this.testResultsFile) : null;
-            configuration.TestResultsFormat = this.testResultsFormats.Selected;
-            configuration.Language = this.selectedLanguage != null ? this.selectedLanguage.TwoLetterISOLanguageName : CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
-
             foreach (DocumentationFormat documentationFormat in this.documentationFormats.Selected)
             {
+                var builder = new ContainerBuilder();
+                builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
+                builder.Register<FileSystem>(_ => new FileSystem()).As<IFileSystem>().SingleInstance();
+                builder.RegisterModule<PicklesModule>();
+                var container = builder.Build();
+
+                var configuration = container.Resolve<Configuration>();
+                var fileSystem = container.Resolve<IFileSystem>();
+
+                configuration.FeatureFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.featureFolder);
+                configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.outputFolder);
+                configuration.SystemUnderTestName = this.projectName;
+                configuration.SystemUnderTestVersion = this.projectVersion;
+                configuration.TestResultsFile = this.IncludeTests ? fileSystem.FileInfo.FromFileName(this.testResultsFile) : null;
+                configuration.TestResultsFormat = this.testResultsFormats.Selected;
+                configuration.Language = this.selectedLanguage != null ? this.selectedLanguage.TwoLetterISOLanguageName : CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
                 configuration.DocumentationFormat = documentationFormat;
                 var runner = container.Resolve<Runner>();
                 runner.Run(container);
