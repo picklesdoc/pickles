@@ -516,8 +516,8 @@ namespace PicklesDoc.Pickles.UserInterface
                 var configuration = container.Resolve<Configuration>();
                 var fileSystem = container.Resolve<IFileSystem>();
 
-                configuration.FeatureFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.featureFolder);
-                configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.outputFolder);
+				configuration.FeatureFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.featureFolder);
+				configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(fileSystem.Path.Combine(outputFolder, documentationFormat.ToString("G")));
                 configuration.SystemUnderTestName = this.projectName;
                 configuration.SystemUnderTestVersion = this.projectVersion;
                 configuration.TestResultsFile = this.IncludeTests ? fileSystem.FileInfo.FromFileName(this.testResultsFile) : null;
