@@ -112,7 +112,7 @@
                     <div class="row-fluid" data-bind="if: Background.Steps">
                         <div class="scenario">
                             <h4>Background:</h4>
-                            <div class="description" data-bind="html: renderMarkdownBlock(Description)"></div>
+                            <div class="description" data-bind="html: renderMarkdownBlock(Background.Description)"></div>
                             <ul data-bind="template: { name: 'steps-template', foreach: Background.Steps }"></ul>
                         </div>
                     </div>
