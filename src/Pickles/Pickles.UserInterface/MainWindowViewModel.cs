@@ -82,6 +82,8 @@ namespace PicklesDoc.Pickles.UserInterface
 
         private bool isLanguageValid = true;
 
+        private bool createDirectoryForEachOutputFormat;
+
         private readonly CultureInfo[] neutralCultures;
 
         private bool isDocumentationFormatValid;
@@ -343,6 +345,20 @@ namespace PicklesDoc.Pickles.UserInterface
             }
         }
 
+        public bool CreateDirectoryForEachOutputFormat
+        {
+            get
+            {
+                return this.createDirectoryForEachOutputFormat;
+            }
+
+            set
+            {
+                this.createDirectoryForEachOutputFormat = value;
+                this.RaisePropertyChanged(() => this.CreateDirectoryForEachOutputFormat);
+            }
+        }
+
         public void SaveToSettings()
         {
             MainModel mainModel = new MainModel
@@ -355,7 +371,8 @@ namespace PicklesDoc.Pickles.UserInterface
                                           TestResultsFile = this.testResultsFile,
                                           TestResultsFormat = this.testResultsFormats.Selected,
                                           SelectedLanguageLcid = this.selectedLanguage.LCID,
-                                          DocumentationFormats = this.documentationFormats.Where(item => item.IsSelected).Select(item => item.Item).ToArray()
+                                          DocumentationFormats = this.documentationFormats.Where(item => item.IsSelected).Select(item => item.Item).ToArray(),
+                                          CreateDirectoryForEachOutputFormat = this.createDirectoryForEachOutputFormat
                                       };
 
             this.mainModelSerializer.Write(mainModel);
@@ -395,6 +412,8 @@ namespace PicklesDoc.Pickles.UserInterface
             {
                 item.IsSelected = mainModel.DocumentationFormats.Contains(item.Item);
             }
+
+            this.CreateDirectoryForEachOutputFormat = mainModel.CreateDirectoryForEachOutputFormat;
         }
 
         private void MainWindowViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
@@ -517,7 +536,16 @@ namespace PicklesDoc.Pickles.UserInterface
                 var fileSystem = container.Resolve<IFileSystem>();
 
                 configuration.FeatureFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.featureFolder);
-                configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.outputFolder);
+
+                if (this.createDirectoryForEachOutputFormat)
+                {
+                    configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(fileSystem.Path.Combine(outputFolder, documentationFormat.ToString("G")));
+                }
+                else
+                {
+                    configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(this.outputFolder);
+                }
+                
                 configuration.SystemUnderTestName = this.projectName;
                 configuration.SystemUnderTestVersion = this.projectVersion;
                 configuration.TestResultsFile = this.IncludeTests ? fileSystem.FileInfo.FromFileName(this.testResultsFile) : null;

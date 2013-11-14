@@ -49,5 +49,8 @@ namespace PicklesDoc.Pickles.UserInterface.Settings
 
         [DataMember(Name = "selectedLanguageLcid")]
         public int SelectedLanguageLcid { get; set; }
+
+        [DataMember(Name = "createDirectoryForEachOutputFormat", IsRequired = false)]
+        public bool CreateDirectoryForEachOutputFormat { get; set; }
     }
 }

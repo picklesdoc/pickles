@@ -42,6 +42,7 @@
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto"/>
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
       <RowDefinition Height="Auto" />
@@ -71,7 +72,10 @@
     <Button Command="{Binding BrowseForOutputFolder}" Content="Browse ..." Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Width="62" VerticalAlignment="Top" />
     <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="2" IsChecked="{Binding Path=IsOutputDirectoryValid}" VerticalAlignment="Top"/>
 
-    <ListBox ItemsSource="{Binding DocumentationFormatValues}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="10">
+    <mahapps:ToggleSwitch Header="Create Directory For Each Output Format" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=CreateDirectoryForEachOutputFormat, Mode=TwoWay}" Margin="0,0,0,5" />
+
+
+    <ListBox ItemsSource="{Binding DocumentationFormatValues}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="11">
       <ListBox.ItemsPanel>
         <ItemsPanelTemplate>
           <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" />
@@ -84,24 +88,24 @@
       </ListBox.ItemTemplate>
     </ListBox>
 
-    <Label Content="Project Name" Grid.Column="0" Grid.Row="3" VerticalAlignment="Top" />
-    <TextBox Text="{Binding ProjectName}" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" mahapps:TextboxHelper.Watermark="Enter The Name Of Your Project Here" VerticalAlignment="Top" />
-    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="3" IsChecked="{Binding Path=IsProjectNameValid}" VerticalAlignment="Top"/>
+    <Label Content="Project Name" Grid.Column="0" Grid.Row="4" VerticalAlignment="Top" />
+    <TextBox Text="{Binding ProjectName}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" mahapps:TextboxHelper.Watermark="Enter The Name Of Your Project Here" VerticalAlignment="Top" />
+    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="4" IsChecked="{Binding Path=IsProjectNameValid}" VerticalAlignment="Top"/>
 
-    <Label Content="Project Version" Grid.Column="0" Grid.Row="4" VerticalAlignment="Top" />
-    <TextBox Text="{Binding ProjectVersion}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" mahapps:TextboxHelper.Watermark="Enter The Version Of Your Project Here" VerticalAlignment="Top" />
-    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="4" IsChecked="{Binding Path=IsProjectVersionValid}" VerticalAlignment="Top"/>
+    <Label Content="Project Version" Grid.Column="0" Grid.Row="5" VerticalAlignment="Top" />
+    <TextBox Text="{Binding ProjectVersion}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" mahapps:TextboxHelper.Watermark="Enter The Version Of Your Project Here" VerticalAlignment="Top" />
+    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="5" IsChecked="{Binding Path=IsProjectVersionValid}" VerticalAlignment="Top"/>
 
-    <Label Content="Include Test Results" Grid.Column="0" Grid.Row="6" Visibility="Hidden" />
-    <mahapps:ToggleSwitch Header="Include Test Results" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=IncludeTests, Mode=TwoWay}" Margin="0,0,0,5" />
+    <Label Content="Include Test Results" Grid.Column="0" Grid.Row="7" Visibility="Hidden" />
+    <mahapps:ToggleSwitch Header="Include Test Results" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=IncludeTests, Mode=TwoWay}" Margin="0,0,0,5" />
 
-    <Label Content="Test Results File" Grid.Column="0" Grid.Row="6" VerticalAlignment="Top" />
-    <TextBox Text="{Binding TestResultsFile}" Grid.Column="1" Grid.Row="6" IsEnabled="{Binding Path=IncludeTests}" mahapps:TextboxHelper.Watermark="Browse To The Location Of Your Test Results File" VerticalAlignment="Top" />
-    <Button Command="{Binding BrowseForTestResultsFile}" Content="Browse" Grid.Row="6" Grid.Column="2" IsEnabled="{Binding Path=IncludeTests}" VerticalAlignment="Top" />
-    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="6" IsChecked="{Binding Path=IsTestResultsFileValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}"/>
+    <Label Content="Test Results File" Grid.Column="0" Grid.Row="7" VerticalAlignment="Top" />
+    <TextBox Text="{Binding TestResultsFile}" Grid.Column="1" Grid.Row="7" IsEnabled="{Binding Path=IncludeTests}" mahapps:TextboxHelper.Watermark="Browse To The Location Of Your Test Results File" VerticalAlignment="Top" />
+    <Button Command="{Binding BrowseForTestResultsFile}" Content="Browse" Grid.Row="7" Grid.Column="2" IsEnabled="{Binding Path=IncludeTests}" VerticalAlignment="Top" />
+    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="7" IsChecked="{Binding Path=IsTestResultsFileValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}"/>
 
-    <Label Content="Test Results Format" Grid.Column="0"  Grid.Row="7" VerticalAlignment="Top"/>
-    <ListBox ItemsSource="{Binding TestResultsFormatValues}" Grid.Column="1" Grid.Row="7" Grid.ColumnSpan="2" IsEnabled="{Binding Path=IncludeTests}" VerticalAlignment="Top">
+    <Label Content="Test Results Format" Grid.Column="0"  Grid.Row="8" VerticalAlignment="Top"/>
+    <ListBox ItemsSource="{Binding TestResultsFormatValues}" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" IsEnabled="{Binding Path=IncludeTests}" VerticalAlignment="Top">
       <ListBox.ItemsPanel>
         <ItemsPanelTemplate>
           <StackPanel Orientation="Horizontal" />
@@ -113,13 +117,15 @@
         </DataTemplate>
       </ListBox.ItemTemplate>
     </ListBox>
-    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="7" IsChecked="{Binding Path=IsTestResultsFormatValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}"/>
+    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="8" IsChecked="{Binding Path=IsTestResultsFormatValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}"/>
 
-    <Label Content="Gherkin Language" Grid.Column="0" Grid.Row="8" VerticalAlignment="Top" />
-    <ComboBox ItemsSource="{Binding LanguageValues}" Grid.Column="1" SelectedItem="{Binding SelectedLanguage}" Grid.Row="8"  Grid.ColumnSpan="2" DisplayMemberPath="NativeName" VerticalAlignment="Top"/>
-    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="8" IsChecked="{Binding Path=IsLanguageValid}" VerticalAlignment="Top"/>
+    <Label Content="Gherkin Language" Grid.Column="0" Grid.Row="9" VerticalAlignment="Top" />
+    <ComboBox ItemsSource="{Binding LanguageValues}" Grid.Column="1" SelectedItem="{Binding SelectedLanguage}" Grid.Row="9"  Grid.ColumnSpan="2" DisplayMemberPath="NativeName" VerticalAlignment="Top"/>
+    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="9" IsChecked="{Binding Path=IsLanguageValid}" VerticalAlignment="Top"/>
 
-    <Button Command="{Binding GeneratePickles}" Content="Generate" Grid.Row="9" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Padding="15" Grid.ColumnSpan="2" Margin="0,20" />
-    <nlogViewer:NlogViewer x:Name="logCtrl" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="10" />
+
+
+    <Button Command="{Binding GeneratePickles}" Content="Generate" Grid.Row="10" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Padding="15" Grid.ColumnSpan="2" Margin="0,20" />
+    <nlogViewer:NlogViewer x:Name="logCtrl" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="11" />
   </Grid>
 </mahapps:MetroWindow>
