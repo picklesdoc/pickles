@@ -132,27 +132,36 @@ namespace PicklesDoc.Pickles.TestFrameworks
 
     public TestResult GetExampleResult(ScenarioOutline scenarioOutline, string[] exampleValues)
     {
-      XElement featureElement = this.GetFeatureElement(scenarioOutline.Feature);
-      XElement examplesElement = null;
-      if (featureElement != null)
-      {
+        XElement featureElement = this.GetFeatureElement(scenarioOutline.Feature);
+        XElement examplesElement = null;
+        
+        if (featureElement == null)
+        {
+            return TestResult.Inconclusive;
+        }
+
         var signatureBuilder = this.ExampleSignatureBuilder;
 
         if (signatureBuilder == null)
         {
-          throw new InvalidOperationException("You need to set the ExampleSignatureBuilder before using GetExampleResult.");
+            throw new InvalidOperationException(
+                "You need to set the ExampleSignatureBuilder before using GetExampleResult.");
         }
 
         Regex exampleSignature = signatureBuilder.Build(scenarioOutline, exampleValues);
-        examplesElement = featureElement
-          .Descendants("test-suite")
-          .Where(x => x.Attribute("description") != null)
-          .FirstOrDefault(x => x.Attribute("description").Value.Equals(scenarioOutline.Name, StringComparison.OrdinalIgnoreCase))
-          .Descendants("test-case")
-          .Where(x => x.Attribute("name") != null)
-          .FirstOrDefault(x => exampleSignature.IsMatch(x.Attribute("name").Value.ToLowerInvariant().Replace(@"\", "")));
-      }
-      return this.GetResultFromElement(examplesElement);
+        var testSuites = featureElement.Descendants("test-suite").Where(x => x.Attribute("description") != null).ToList();
+
+        if (!testSuites.Any()) 
+        {
+            return TestResult.Inconclusive;
+        }
+
+        var testSuiteForScenario = testSuites.FirstOrDefault(x => x.Attribute("description").Value.Equals(scenarioOutline.Name, StringComparison.OrdinalIgnoreCase));
+
+        var testCases = testSuiteForScenario.Descendants("test-case").Where(x => x.Attribute("name") != null);
+        examplesElement = testCases.FirstOrDefault(x => exampleSignature.IsMatch(x.Attribute("name").Value.ToLowerInvariant().Replace(@"\", "")));
+
+        return this.GetResultFromElement(examplesElement);
     }
   }
 }

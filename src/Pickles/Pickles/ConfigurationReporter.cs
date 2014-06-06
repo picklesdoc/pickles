@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO.Abstractions;
+using System.Linq;
+using System.Text;
 
 namespace PicklesDoc.Pickles
 {
@@ -18,8 +22,15 @@ namespace PicklesDoc.Pickles
             if (configuration.HasTestResults)
             {
                 writeToLog(string.Format("Test Result Format        : {0}", configuration.TestResultsFormat));
-                writeToLog(string.Format("Test Result File          : {0}", configuration.TestResultsFile.FullName));
+                writeToLog(string.Format("Test Result File(s)       : {0}", GetTestResultFileNames(configuration.TestResultsFiles)));
             }
         }
+
+        private static string GetTestResultFileNames(IEnumerable<FileInfoBase> testResultsFiles)
+        {
+            var fileNames = testResultsFiles.Select(x => x.FullName).ToArray();
+            return string.Join(";", fileNames);
+        }
+
     }
 }

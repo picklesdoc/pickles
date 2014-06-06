@@ -65,7 +65,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             return new XElement(this.xmlns + "div",
                                 new XAttribute("id", "footer"),
                                 this.BuildVersionString(),
-                                new XElement(this.xmlns + "p", "Pickled on: " + DateTime.Now.ToString("d MMMM yyyy hh:mm:ss")),
+                                new XElement(this.xmlns + "p", "Pickled on: " + DateTime.Now.ToString("d MMMM yyyy HH:mm:ss")),
                                 new XElement(this.xmlns + "p",
                                              "Produced by Pickles, version " +
                                              Assembly.GetExecutingAssembly().GetName().Version)

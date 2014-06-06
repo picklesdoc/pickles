@@ -97,8 +97,19 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         #endregion
 
-        private static string GenerateJSON(List<FeatureWithMetaInfo> features)
+        private string GenerateJSON(List<FeatureWithMetaInfo> features)
         {
+            var data = new
+            {
+                Features = features,
+                Configuration = new
+                {
+                    SutName = this.configuration.SystemUnderTestName, 
+                    SutVersion = this.configuration.SystemUnderTestVersion,
+                    PickledOn = DateTime.Now.ToString("d MMMM yyyy HH:mm:ss")
+                }
+            };
+            
             var settings = new JsonSerializerSettings
                                {
                                    ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
@@ -106,7 +117,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                                    Converters = new List<JsonConverter> {new StringEnumConverter()}
                                };
 
-            return JsonConvert.SerializeObject(features, Formatting.Indented, settings);
+            return JsonConvert.SerializeObject(data, Formatting.Indented, settings);
         }
 
         private void CreateFile(string outputFolderName, string jsonToWrite)

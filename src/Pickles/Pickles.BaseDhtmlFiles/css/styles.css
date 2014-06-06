@@ -120,6 +120,11 @@ li.step {
     cursor: pointer;
 }
 
+#SutInfo {
+    margin-top: 30px;
+    border-top: 1px lightgrey solid;
+}
+
 .clickable {    
     cursor: pointer;
 }

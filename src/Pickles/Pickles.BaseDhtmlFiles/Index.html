@@ -75,7 +75,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top" id="TopNav">
         <div class="navbar-inner">
             <div class="container-fluid">
-                <a class="brand" href="#">Features</a>
+                <a class="brand" href="#" data-bind="text: configuration().SutName != null ? configuration().SutName : 'Features'"></a>
                 <div class="navbar-search pull-left">
                     <input type="text" id="TypeAheadSearchBox" class="search-query" data-bind="value: whatToSearchFor" style="width: 300px" placeholder="@tag or feature name" />
                     <a id="SearchButton" data-bind="click: search" class="btn">Search</a>
@@ -93,6 +93,11 @@
                     <div id="InnerNav">
                         <div data-bind="template: { name: 'features-template', foreach: featuresByFolder().features }"></div>
                         <div data-bind="template: { name: 'featuresByFolder-template', foreach: featuresByFolder().SubDirectories }"></div>
+                        <div id="SutInfo">
+                            <div data-bind="if: configuration().SutName, text: configuration().SutName"></div>
+                            <div data-bind="if: configuration().SutVersion, text: configuration().SutVersion"></div>
+                            <div>Pickled On: <span data-bind="text: configuration().PickledOn"></span></div>
+                        </div>
                     </div>
                 </div>
 
@@ -196,7 +201,7 @@
     <script src="js/typeaheadList.js" type="text/javascript"></script>
     <script src="js/featureSearch.js" type="text/javascript"></script>
     <script type="text/javascript">
-        function ViewModel(features) {
+        function ViewModel(features, configuration) {
             var self = this;
 
             features = $.map(features, function(el, i) { return new FeatureParent(el); });
@@ -204,6 +209,7 @@
             self.originalFeaturesList = ko.observableArray(features);
             self.featuresByFolder = ko.observable(buildFullHierarchy(getFeaturesFromScenariosList(features)));
             self.currentFeature = ko.observable();
+            self.configuration = ko.observable(configuration);
 
             self.setCurrentFeature = function () {
                 if (window.location.hash != '') {
@@ -281,14 +287,14 @@
         }
 
         function jsonPWrapper(data) {
-            data.reverse();
+            data.Features.reverse();
 
-            var viewModel = new window.ViewModel(data);
+            var viewModel = new window.ViewModel(data.Features, data.Configuration);
             viewModel.setCurrentFeature();
 
             window.ko.applyBindings(viewModel);
 
-            var searchItems = getTagsAndFeatureAndScenarioNames(data);
+            var searchItems = getTagsAndFeatureAndScenarioNames(data.Features);
             $('#TypeAheadSearchBox').typeahead({
                 source: searchItems
             });
