@@ -58,6 +58,7 @@ reports/
 merged/
 test/
 Documentation-*/
+Output/
 
 #nCrunch files
 *.crunchproject.local.xml
