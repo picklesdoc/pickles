@@ -118,6 +118,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.CucumberJson
                 return TestResult.Inconclusive;
             }
 
+            cucumberFeature.elements.RemoveAll(e => e.type == "background");
+
             bool wasSuccessful = cucumberFeature.elements.All(CheckScenarioStatus);
 
             return wasSuccessful ? TestResult.Passed : TestResult.Failed;
