@@ -14,6 +14,20 @@
     ],
     "elements": [
       {
+        "name": "",
+        "keyword": "Background",
+        "description": "",
+        "type": "background",
+        "line": 8,
+        "steps": [
+          {
+            "name": "I have a system under test",
+            "line": 9,
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
         "keyword": "Scenario",
         "id": "one-passing-scenario,-one-failing-scenario;passing",
         "name": "Passing",
@@ -27,6 +41,25 @@
         ],
         "type": "scenario",
         "steps": [
+          {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "duration": 570775,
+              "status": "passed"
+            },
+            "match": {}
+          },
+          {
+            "name": "I have a system under test",
+            "line": 4,
+            "keyword": "Given ",
+            "result": {
+              "duration": 344974,
+              "status": "passed"
+            },
+            "match": {}
+          },
           {
             "keyword": "Given ",
             "name": "a passing step",
@@ -54,6 +87,25 @@
         ],
         "type": "scenario",
         "steps": [
+                    {
+            "keyword": "Before ",
+            "hidden": true,
+            "result": {
+              "duration": 570775,
+              "status": "passed"
+            },
+            "match": {}
+          },
+          {
+            "name": "I have a system under test",
+            "line": 4,
+            "keyword": "Given ",
+            "result": {
+              "duration": 344974,
+              "status": "passed"
+            },
+            "match": {}
+          },
           {
             "keyword": "Given ",
             "name": "a failing step",

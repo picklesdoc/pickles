@@ -38,7 +38,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.CucumberJson
         }
 
         [Test]
-        public void ThenCanReadFeatureResultSuccesfully()
+        public void ThenCanReadFeatureResultSuccessfully()
         {
             var results = ParseResultsFile();
 
