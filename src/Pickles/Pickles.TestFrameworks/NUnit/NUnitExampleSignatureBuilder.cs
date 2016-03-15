@@ -27,10 +27,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit
 {
     public class NUnitExampleSignatureBuilder
     {
+        private static readonly Regex PunctuationCharactersRegex = new Regex(@"[\n\.-]+", RegexOptions.Compiled);
+        private static readonly Regex NonIdentifierCharacterRegex = new Regex(@"[^\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}\p{Pc}]", RegexOptions.Compiled);
+
         public Regex Build(ScenarioOutline scenarioOutline, string[] row)
         {
             var stringBuilder = new StringBuilder();
-            stringBuilder.Append(scenarioOutline.Name.ToLowerInvariant().Replace(" ", string.Empty) + "\\(");
+
+            var name = scenarioOutline.Name.ToLowerInvariant();
+            name = PunctuationCharactersRegex.Replace(name, "_");
+            name = NonIdentifierCharacterRegex.Replace(name, string.Empty);
+            stringBuilder.Append(name).Append("\\(");
 
             foreach (string value in row)
             {
