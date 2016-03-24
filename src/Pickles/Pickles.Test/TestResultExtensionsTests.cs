@@ -30,10 +30,9 @@ namespace PicklesDoc.Pickles.Test
     public class TestResultExtensionsTests
     {
         [Test]
-        [ExpectedException(typeof(ArgumentNullException))]
         public void Merge_NullReference_ThrowsArgumentNullException()
         {
-            TestResultExtensions.Merge(null);
+            Check.ThatCode(() => TestResultExtensions.Merge(null)).Throws<ArgumentNullException>();
         }
 
         [Test]
