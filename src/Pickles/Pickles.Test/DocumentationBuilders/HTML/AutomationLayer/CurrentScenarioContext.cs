@@ -19,23 +19,25 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections;
 using System.Xml.Linq;
 using Autofac;
 
 using PicklesDoc.Pickles.ObjectModel;
-using TechTalk.SpecFlow;
 
 namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
 {
-    public static class CurrentScenarioContext
+    public class CurrentScenarioContext
     {
-        public static Feature Feature
+        private Hashtable Current { get; } = new Hashtable();
+
+        public Feature Feature
         {
             get
             {
-                if (ScenarioContext.Current.ContainsKey("Feature"))
+                if (Current.ContainsKey("Feature"))
                 {
-                    return ScenarioContext.Current["Feature"] as Feature;
+                    return Current["Feature"] as Feature;
                 }
                 else
                 {
@@ -45,19 +47,19 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
 
             set
             {
-                ScenarioContext.Current["Feature"] = value;
+                Current["Feature"] = value;
             }
         }
 
-        public static IContainer Container { get; set; }
+        public IContainer Container { get; set; }
 
-        public static XElement Html
+        public XElement Html
         {
             get
             {
-                if (ScenarioContext.Current.ContainsKey("Html"))
+                if (Current.ContainsKey("Html"))
                 {
-                    return ScenarioContext.Current["Html"] as XElement;
+                    return Current["Html"] as XElement;
                 }
                 else
                 {
@@ -67,7 +69,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
 
             set
             {
-                ScenarioContext.Current["Html"] = value;
+                Current["Html"] = value;
             }
         }
     }

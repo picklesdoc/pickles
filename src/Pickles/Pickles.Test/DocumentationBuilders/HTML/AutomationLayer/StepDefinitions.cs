@@ -31,6 +31,13 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
     [Binding]
     public class StepDefinitions
     {
+        public StepDefinitions(CurrentScenarioContext currentScenarioContext)
+        {
+            this.CurrentScenarioContext = currentScenarioContext;
+        }
+
+        private CurrentScenarioContext CurrentScenarioContext { get; }
+
         [Given(@"I have this feature description")]
         public void GivenIHaveThisFeatureDescription(string multilineText)
         {

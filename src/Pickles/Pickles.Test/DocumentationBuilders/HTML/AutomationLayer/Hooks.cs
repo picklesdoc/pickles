@@ -28,6 +28,13 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
     [Binding]
     public class Hooks
     {
+        public Hooks(CurrentScenarioContext currentScenarioContext)
+        {
+            this.CurrentScenarioContext = currentScenarioContext;
+        }
+
+        private CurrentScenarioContext CurrentScenarioContext { get; }
+
         [BeforeScenario]
         public void BeforeScenario()
         {
