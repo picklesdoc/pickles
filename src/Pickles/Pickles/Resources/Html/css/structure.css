@@ -233,6 +233,7 @@ li.scenario, div.scenario {
 }
 
 .comment {
+    display: block;
     font-weight: normal;
     color: gray;
 }

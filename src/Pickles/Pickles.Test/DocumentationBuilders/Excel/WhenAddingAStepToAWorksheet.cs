@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using Autofac;
 using ClosedXML.Excel;
 using NFluent;
@@ -45,6 +47,32 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
 
                 Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.NativeKeyword);
                 Check.That(worksheet.Cell("D5").Value).IsEqualTo(step.Name);
+            }
+        }
+
+        [Test]
+        public void ThenStepCommentsAreAddedSuccesfully()
+        {
+            var excelStepFormatter = Container.Resolve<ExcelStepFormatter>();
+            var step = new Step
+            {
+                NativeKeyword = "Given",
+                Name = "I have some precondition",
+                Comments = new List<Comment>()
+                {
+                    new Comment() { Text = "# A comment" }
+                }
+            };
+
+            using (var workbook = new XLWorkbook())
+            {
+                IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
+                int row = 5;
+                excelStepFormatter.Format(worksheet, step, ref row);
+
+                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments.First().Text);
+                Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D6").Value).IsEqualTo(step.Name);
             }
         }
     }

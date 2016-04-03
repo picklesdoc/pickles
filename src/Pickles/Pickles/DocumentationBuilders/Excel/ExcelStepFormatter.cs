@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Linq;
 using ClosedXML.Excel;
 
 using PicklesDoc.Pickles.ObjectModel;
@@ -40,6 +41,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
 
         public void Format(IXLWorksheet worksheet, Step step, ref int row)
         {
+            // Add comments
+            if (step.Comments.Any())
+            {
+                foreach (var comment in step.Comments)
+                {
+                    worksheet.Cell(row, "C").Style.Font.SetItalic();
+                    worksheet.Cell(row, "C").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
+                    worksheet.Cell(row, "C").Value = comment.Text;
+                    row++;
+                }
+            }
+
             worksheet.Cell(row, "C").Style.Font.SetBold();
             worksheet.Cell(row, "C").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
             worksheet.Cell(row, "C").Value = step.NativeKeyword;
