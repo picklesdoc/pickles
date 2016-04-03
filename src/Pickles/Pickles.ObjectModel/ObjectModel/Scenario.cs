@@ -44,6 +44,8 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Feature Feature { get; set; }
 
+        public Location Location { get; set; }
+
         #endregion
     }
 }

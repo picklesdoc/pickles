@@ -46,14 +46,17 @@
   <ItemGroup>
     <Compile Include="DocumentationFormat.cs" />
     <Compile Include="IConfiguration.cs" />
+    <Compile Include="ObjectModel\Location.cs" />
     <Compile Include="ObjectModel\Example.cs" />
     <Compile Include="ObjectModel\Feature.cs" />
     <Compile Include="ObjectModel\IFeatureElement.cs" />
     <Compile Include="ObjectModel\ITestResults.cs" />
+    <Compile Include="ObjectModel\CommentLocation.cs" />
     <Compile Include="ObjectModel\Keyword.cs" />
     <Compile Include="ObjectModel\Scenario.cs" />
     <Compile Include="ObjectModel\ScenarioOutline.cs" />
     <Compile Include="ObjectModel\Step.cs" />
+    <Compile Include="ObjectModel\Comment.cs" />
     <Compile Include="ObjectModel\Table.cs" />
     <Compile Include="ObjectModel\TableRow.cs" />
     <Compile Include="ObjectModel\TestResult.cs" />

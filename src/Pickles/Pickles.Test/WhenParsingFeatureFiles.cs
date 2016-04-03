@@ -353,5 +353,41 @@ Feature: Test
             Check.That(feature.FeatureElements[0].Tags[0]).IsEqualTo("@scenario-tag-1");
             Check.That(feature.FeatureElements[0].Tags[1]).IsEqualTo("@scenario-tag-2");
         }
+
+        [Test]
+        public void Then_can_parse_scenario_with_comments_successfully()
+        {
+            string featureText =
+              @"# ignore this comment
+Feature: Test
+    In order to do something
+    As a user
+    I want to run this scenario
+
+  Scenario: A scenario
+    # A single line comment
+    Given some feature
+    # A multiline comment - first line
+    # Second line
+    When it runs
+    Then I should see that this thing happens";
+
+            var parser = Container.Resolve<FeatureParser>();
+            Feature feature = parser.Parse(new StringReader(featureText));
+
+            IFeatureElement scenario = feature.FeatureElements.First();
+
+            Step stepGiven = scenario.Steps[0];
+            Check.That(stepGiven.Comments.Count).IsEqualTo(1);
+            Check.That(stepGiven.Comments[0].Text).IsEqualTo("# A single line comment");
+
+            Step stepWhen = scenario.Steps[1];
+            Check.That(stepWhen.Comments.Count).IsEqualTo(2);
+            Check.That(stepWhen.Comments[0].Text).IsEqualTo("# A multiline comment - first line");
+            Check.That(stepWhen.Comments[1].Text).IsEqualTo("# Second line");
+
+            Step stepThen = scenario.Steps[2];
+            Check.That(stepThen.Comments.Count).IsEqualTo(0);
+        }
     }
 }

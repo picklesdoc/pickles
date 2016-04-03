@@ -19,8 +19,11 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using System.Xml.Linq;
-
+using DocumentFormat.OpenXml.Office.Word;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
@@ -45,13 +48,41 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             this.xmlns = HtmlNamespace.Xhtml;
         }
 
+        protected XElement FormatComments(Step step)
+        {
+            XElement comment = new XElement(this.xmlns + "span", new XAttribute("class", "comment"));
+            
+            foreach (var stepComment in step.Comments)
+            {
+                comment.Add(stepComment.Text.Trim());
+                comment.Add(new XElement(this.xmlns + "br"));
+            }
+            comment.LastNode.Remove();
+            
+            return comment;
+        }
+
         public XElement Format(Step step)
         {
-            var li = new XElement(
-                this.xmlns + "li",
-                new XAttribute("class", "step"),
-                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
-                step.Name);
+            XElement li;
+
+            if (step.Comments.Any())
+            {
+                li = new XElement(
+                    this.xmlns + "li",
+                    new XAttribute("class", "step"),
+                    this.FormatComments(step),
+                    new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
+                    step.Name);
+            }
+            else
+            {
+                li = new XElement(
+                    this.xmlns + "li",
+                    new XAttribute("class", "step"),
+                    new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
+                    step.Name);
+            }
 
             if (step.TableArgument != null)
             {

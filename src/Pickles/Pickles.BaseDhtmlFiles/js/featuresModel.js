@@ -28,6 +28,11 @@ function Step(data) {
     this.NativeKeyword = data.NativeKeyword || '';
     this.DocStringArgument = data.DocStringArgument || '';
     this.TableArgument = data.TableArgument == null ? null : new TableArgument(data.TableArgument.HeaderRow, data.TableArgument.DataRows);
+    this.Comments = data.Comments == null ? null : $.map(data.Comments, function (c) { return new Comment(c); });
+}
+
+function Comment(data) {
+    this.Text = data.Text || '';
 }
 
 function TableArgument(headerRow, dataRows) {

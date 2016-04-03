@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="Step.cs" company="PicklesDoc">
+//  <copyright file="Keyword.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -18,29 +18,15 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    public class Step
+    /// <summary>
+    /// The Gherkin Keywords.
+    /// </summary>
+    public enum CommentLocation
     {
-        public Step()
-        {
-            this.Comments = new List<Comment>();
-        }
-
-        public Keyword Keyword { get; set; }
-
-        public string NativeKeyword { get; set; }
-
-        public string Name { get; set; }
-
-        public Table TableArgument { get; set; }
-
-        public string DocStringArgument { get; set; }
-
-        public Location Location { get; set; }
-
-        public List<Comment> Comments { get; set; } 
+        StartOfScenario,
+        EndOfScenario,
+        BeforeStep
     }
 }

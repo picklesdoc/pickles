@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="Step.cs" company="PicklesDoc">
+//  <copyright file="JsonStep.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -18,29 +18,14 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
+using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.ObjectModel
+namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 {
-    public class Step
+    public class JsonComment
     {
-        public Step()
-        {
-            this.Comments = new List<Comment>();
-        }
-
-        public Keyword Keyword { get; set; }
-
-        public string NativeKeyword { get; set; }
-
-        public string Name { get; set; }
-
-        public Table TableArgument { get; set; }
-
-        public string DocStringArgument { get; set; }
-
-        public Location Location { get; set; }
-
-        public List<Comment> Comments { get; set; } 
+        public string Text { get; set; }
     }
 }

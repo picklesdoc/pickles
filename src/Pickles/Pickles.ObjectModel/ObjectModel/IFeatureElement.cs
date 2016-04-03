@@ -35,5 +35,7 @@ namespace PicklesDoc.Pickles.ObjectModel
         List<string> Tags { get; set; }
 
         TestResult Result { get; set; }
+
+        Location Location { get; set; }
     }
 }

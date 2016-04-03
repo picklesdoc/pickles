@@ -38,7 +38,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             this.mapper = new MappingEngine(configurationStore);
 
             configurationStore.CreateMap<string, Keyword>().ConvertUsing(new KeywordResolver(featureLanguage));
-
+            
             configurationStore.CreateMap<G.TableCell, string>()
                 .ConstructUsing(cell => cell.Value);
 
@@ -51,9 +51,24 @@ namespace PicklesDoc.Pickles.ObjectModel
 
             configurationStore.CreateMap<G.DocString, string>().ConstructUsing(docString => docString.Content);
 
+            configurationStore.CreateMap<G.Location, Location>()
+                .ForMember(t => t.Column, opt => opt.MapFrom(s => s.Column))
+                .ForMember(t => t.Line, opt => opt.MapFrom(s => s.Line));
+
+            configurationStore.CreateMap<G.Comment, Comment>()
+                .ForMember(t => t.Text, opt => opt.MapFrom(s => s.Text))
+                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location))
+                .AfterMap(
+                    (sourceComment, targetComment) =>
+                    {
+                        targetComment.Text = targetComment.Text.Trim();
+                    }
+                );
+
             configurationStore.CreateMap<G.Step, Step>()
                 .ForMember(t => t.NativeKeyword, opt => opt.MapFrom(s => s.Keyword))
                 .ForMember(t => t.Name, opt => opt.MapFrom(s => s.Text))
+                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location))
                 .ForMember(t => t.DocStringArgument, opt => opt.MapFrom(s => s.Argument is G.DocString ? s.Argument : null))
                 .ForMember(t => t.TableArgument, opt => opt.MapFrom(s => s.Argument is G.DataTable ? s.Argument : null));
 
@@ -61,7 +76,8 @@ namespace PicklesDoc.Pickles.ObjectModel
                 .ConstructUsing(tag => tag.Name);
 
             configurationStore.CreateMap<G.Scenario, Scenario>()
-                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty));
+                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
+                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location));
 
             configurationStore.CreateMap<IEnumerable<G.TableRow>, Table>()
                 .ForMember(t => t.HeaderRow, opt => opt.MapFrom(s => s.Take(1).Single()))
@@ -71,7 +87,8 @@ namespace PicklesDoc.Pickles.ObjectModel
                 .ForMember(t => t.TableArgument, opt => opt.MapFrom(s => ((G.IHasRows)s).Rows));
 
             configurationStore.CreateMap<G.ScenarioOutline, ScenarioOutline>()
-                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty));
+                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
+                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location));
 
             configurationStore.CreateMap<G.Background, Scenario>()
                 .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty));
@@ -96,9 +113,29 @@ namespace PicklesDoc.Pickles.ObjectModel
 
             configurationStore.CreateMap<G.Feature, Feature>()
                 .ForMember(t => t.FeatureElements, opt => opt.ResolveUsing(s => s.ScenarioDefinitions))
+                .ForMember(t => t.Comments, opt => opt.ResolveUsing(s => s.Comments))
                 .AfterMap(
                     (sourceFeature, targetFeature) =>
                         {
+                            foreach (var comment in targetFeature.Comments.ToArray())
+                            {
+                                // Find the step to which the comment is related to
+                                var relatedFeatureElement = targetFeature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+                                if (relatedFeatureElement != null)
+                                {
+                                    var relatedStep = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
+                                    if (relatedStep != null)
+                                    {
+                                        // Change the type to StepComment
+                                        comment.Type = CommentType.StepComment;
+
+                                        // Link the step and the comment
+                                        comment.Step = relatedStep;
+                                        relatedStep.Comments.Add(comment);
+                                    }
+                                }
+                            }
+
                             foreach (var featureElement in targetFeature.FeatureElements.ToArray())
                             {
                                 featureElement.Feature = targetFeature;

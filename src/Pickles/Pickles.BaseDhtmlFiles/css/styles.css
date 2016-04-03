@@ -72,6 +72,11 @@ li.step {
     padding: 0;
 }
 
+.comment {
+    font-weight: bold;
+    color: #0088CC;
+}
+
 .keyword {
     font-weight: bold;
     color: #0000FF;

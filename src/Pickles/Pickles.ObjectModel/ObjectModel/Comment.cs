@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="Step.cs" company="PicklesDoc">
+//  <copyright file="Table.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -22,25 +22,26 @@ using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    public class Step
+    public enum CommentType
     {
-        public Step()
+        Normal,
+        StepComment
+    }
+
+    public class Comment
+    {
+        public Comment()
         {
-            this.Comments = new List<Comment>();
+            // Set default
+            this.Type = CommentType.Normal;
         }
-
-        public Keyword Keyword { get; set; }
-
-        public string NativeKeyword { get; set; }
-
-        public string Name { get; set; }
-
-        public Table TableArgument { get; set; }
-
-        public string DocStringArgument { get; set; }
+        
+        public string Text { get; set; }
 
         public Location Location { get; set; }
 
-        public List<Comment> Comments { get; set; } 
+        public CommentType Type { get; set; }
+
+        public Step Step { get; set; }
     }
 }

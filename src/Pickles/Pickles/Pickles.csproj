@@ -152,6 +152,7 @@
     <Compile Include="DocumentationBuilders\JSON\JsonMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonScenario.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonScenarioOutline.cs" />
+    <Compile Include="DocumentationBuilders\JSON\JsonComment.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonStep.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonTable.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonTableRow.cs" />

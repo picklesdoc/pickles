@@ -52,6 +52,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                  .ForMember(t => t.Feature, opt => opt.Ignore());
             configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>()
                  .ForMember(t => t.Feature, opt => opt.Ignore());
+            configurationStore.CreateMap<Comment, JsonComment>();
             configurationStore.CreateMap<Step, JsonStep>();
             configurationStore.CreateMap<Table, JsonTable>();
             configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(ToJsonTestResult);

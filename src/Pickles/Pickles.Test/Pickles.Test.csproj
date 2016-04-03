@@ -217,6 +217,7 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FormattingAFeature.feature.cs</LastGenOutput>
     </None>
+    <EmbeddedResource Include="HtmlFormatterTestFiles\Comment.feature" />
     <None Include="Resources\test.jpg" />
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -226,6 +227,7 @@
       <LastGenOutput>SimplestFile.feature.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\image.png" />
+    <Content Include="HtmlFormatterTestFiles\Comment.html" />
     <Content Include="HtmlFormatterTestFiles\MultilineString.html" />
     <EmbeddedResource Include="HtmlFormatterTestFiles\Simple.feature">
       <LastGenOutput>SimplestFile.feature.cs</LastGenOutput>

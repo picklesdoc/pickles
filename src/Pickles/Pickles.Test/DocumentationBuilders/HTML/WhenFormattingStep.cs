@@ -128,7 +128,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             var table = new Table
             {
                 HeaderRow = new TableRow("Column 1", "Column 2"),
-                DataRows = new List<TableRow> { new TableRow("Value 1", "Value 2") }
+                DataRows = new List<TableRow> {new TableRow("Value 1", "Value 2")}
             };
 
             var step = new Step
@@ -181,5 +181,83 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             Check.That(expected).IsDeeplyEqualTo(actual);
         }
+
+        [Test]
+        public void Comments_are_displayed_above_their_related_step()
+        {
+            var step = new Step
+            {
+                Keyword = Keyword.Given,
+                NativeKeyword = "Given ",
+                Name = "a simple step",
+                TableArgument = null,
+                DocStringArgument = null,
+                Comments = new List<Comment>()
+                {
+                    new Comment()
+                    {
+                        Text = "    # A simple comment",
+                        Type = CommentType.StepComment
+                    }
+                }
+            };
+
+            var formatter = Container.Resolve<HtmlStepFormatter>();
+            XElement actual = formatter.Format(step);
+
+            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            var expected = new XElement(
+                xmlns + "li",
+                new XAttribute("class", "step"),
+                new XElement(xmlns + "span", new XAttribute("class", "comment"), "# A simple comment"),
+                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                "a simple step");
+
+            Check.That(expected).IsDeeplyEqualTo(actual);
+        }
+
+        [Test]
+        public void Multiline_comments_are_displayed_in_the_same_element()
+        {
+            var step = new Step
+            {
+                Keyword = Keyword.Given,
+                NativeKeyword = "Given ",
+                Name = "a simple step",
+                TableArgument = null,
+                DocStringArgument = null,
+                Comments = new List<Comment>()
+                {
+                    new Comment()
+                    {
+                        Text = "    # A first line",
+                        Type = CommentType.StepComment
+                    },
+                    new Comment()
+                    {
+                        Text = "    # A second line",
+                        Type = CommentType.StepComment
+                    }
+                }
+            };
+
+            var formatter = Container.Resolve<HtmlStepFormatter>();
+            XElement actual = formatter.Format(step);
+
+            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            var expected = new XElement(
+                xmlns + "li",
+                new XAttribute("class", "step"),
+                new XElement(xmlns + "span", new XAttribute("class", "comment"),
+                    "# A first line",
+                    new XElement(xmlns + "br"),
+                    "# A second line"
+                ),
+                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                "a simple step");
+
+            Check.That(expected).IsDeeplyEqualTo(actual);
+        }
     }
 }
+

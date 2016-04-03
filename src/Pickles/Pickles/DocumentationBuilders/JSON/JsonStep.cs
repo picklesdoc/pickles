@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 {
@@ -33,5 +35,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         public JsonTable TableArgument { get; set; }
 
         public string DocStringArgument { get; set; }
+
+        public List<JsonComment> Comments { get; set; }
     }
 }

@@ -27,6 +27,7 @@ namespace PicklesDoc.Pickles.ObjectModel
         public Feature()
         {
             this.FeatureElements = new List<IFeatureElement>();
+            this.Comments = new List<Comment>();
             this.Tags = new List<string>();
         }
 
@@ -35,6 +36,8 @@ namespace PicklesDoc.Pickles.ObjectModel
         public string Description { get; set; }
 
         public List<IFeatureElement> FeatureElements { get; }
+
+        public List<Comment> Comments { get; }
 
         public Scenario Background { get; private set; }
 
