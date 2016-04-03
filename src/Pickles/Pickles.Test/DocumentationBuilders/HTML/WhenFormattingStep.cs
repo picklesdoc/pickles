@@ -128,7 +128,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             var table = new Table
             {
                 HeaderRow = new TableRow("Column 1", "Column 2"),
-                DataRows = new List<TableRow> {new TableRow("Value 1", "Value 2")}
+                DataRows = new List<TableRow> { new TableRow("Value 1", "Value 2") }
             };
 
             var step = new Step
