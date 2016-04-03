@@ -51,7 +51,6 @@
     <Compile Include="ObjectModel\Feature.cs" />
     <Compile Include="ObjectModel\IFeatureElement.cs" />
     <Compile Include="ObjectModel\ITestResults.cs" />
-    <Compile Include="ObjectModel\CommentLocation.cs" />
     <Compile Include="ObjectModel\Keyword.cs" />
     <Compile Include="ObjectModel\Scenario.cs" />
     <Compile Include="ObjectModel\ScenarioOutline.cs" />
