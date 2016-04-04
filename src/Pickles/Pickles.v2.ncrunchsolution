@@ -1,12 +1,17 @@
-<SolutionConfiguration>
+﻿<SolutionConfiguration>
   <FileVersion>1</FileVersion>
+  <InferProjectReferencesUsingAssemblyNames>false</InferProjectReferencesUsingAssemblyNames>
   <AllowParallelTestExecution>true</AllowParallelTestExecution>
   <AllowTestsToRunInParallelWithThemselves>true</AllowTestsToRunInParallelWithThemselves>
   <FrameworkUtilisationTypeForNUnit>UseDynamicAnalysis</FrameworkUtilisationTypeForNUnit>
   <FrameworkUtilisationTypeForGallio>UseStaticAnalysis</FrameworkUtilisationTypeForGallio>
   <FrameworkUtilisationTypeForMSpec>UseStaticAnalysis</FrameworkUtilisationTypeForMSpec>
   <FrameworkUtilisationTypeForMSTest>UseStaticAnalysis</FrameworkUtilisationTypeForMSTest>
+  <FrameworkUtilisationTypeForXUnit2>UseDynamicAnalysis</FrameworkUtilisationTypeForXUnit2>
+  <NCrunchCacheStoragePath />
   <EngineModes>Run all tests automatically:BFRydWU=;Run all tests manually:BUZhbHNl;Run impacted tests automatically, others manually (experimental!):CklzSW1wYWN0ZWQ=;Run pinned tests automatically, others manually:CElzUGlubmVk</EngineModes>
   <MetricsExclusionList>
+Pickles.Test\Pickles.Test.csproj
+Pickles.TestFrameworks.UnitTests\Pickles.TestFrameworks.UnitTests.csproj
 </MetricsExclusionList>
 </SolutionConfiguration>
