@@ -87,3 +87,4 @@ packages/Chocolatey/
 !src/Pickles/packages/Fody*/build/*
 src/Pickles/.vs/config/applicationhost.config
 src/Pickles/Pickles/PortabilityAnalysis.html
+src/Pickles/.vs/config/applicationhost.config
