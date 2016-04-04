@@ -35,22 +35,26 @@ Scenario: A simple feature
                       {
                         "Keyword": "Given",
                         "NativeKeyword": "Given ",
-                        "Name": "I have entered 50 into the calculator"
+                        "Name": "I have entered 50 into the calculator",
+                        "Comments": []
                       },
                       {
                         "Keyword": "And",
                         "NativeKeyword": "And ",
-                        "Name": "I have entered 70 into the calculator"
+                        "Name": "I have entered 70 into the calculator",
+                        "Comments": []
                       },
                       {
                         "Keyword": "When",
                         "NativeKeyword": "When ",
-                        "Name": "I press C"
+                        "Name": "I press C",
+                        "Comments": []
                       },
                       {
                         "Keyword": "Then",
                         "NativeKeyword": "Then ",
-                        "Name": "the screen should be empty"
+                        "Name": "the screen should be empty",
+                        "Comments": []
                       }
                     ],
                     "Tags": [
@@ -231,17 +235,20 @@ Scenario: A feature with a table
                               "105"
                             ]
                           ]
-                        }
+                        },
+                        "Comments": []
                       },
                       {
                         "Keyword": "When",
                         "NativeKeyword": "When ",
-                        "Name": "I click on the table heading"
+                        "Name": "I click on the table heading",
+                        "Comments": []
                       },
                       {
                         "Keyword": "Then",
                         "NativeKeyword": "Then ",
-                        "Name": "the table body should collapse"
+                        "Name": "the table body should collapse",
+                        "Comments": []
                       }
                     ],
                     "Tags": [],
