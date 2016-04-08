@@ -48,5 +48,18 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
             var isMatch = signature.IsMatch("AddingSeveralNumbers(\"40\",\"50\",\"90\",System.String[])".ToLowerInvariant());
             Check.That(isMatch).IsTrue();
         }
+
+        [Test]
+        public void ThenCanSuccessfullyMatchSpecialCharacters()
+        {
+            var scenarioOutline = new ScenarioOutline { Name = "Adding several numbers (foo-bar, foo bar)" };
+            var exampleRow = new[] { "40", "50", "90" };
+
+            var signatureBuilder = new NUnitExampleSignatureBuilder();
+            Regex signature = signatureBuilder.Build(scenarioOutline, exampleRow);
+
+            var isMatch = signature.IsMatch("AddingSeveralNumbersFoo_BarFooBar(\"40\",\"50\",\"90\",System.String[])".ToLowerInvariant());
+            Check.That(isMatch).IsTrue();
+        }
     }
 }

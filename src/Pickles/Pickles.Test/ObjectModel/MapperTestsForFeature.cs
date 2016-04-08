@@ -102,5 +102,17 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
             Check.That(result.Tags).ContainsExactly("my tag 1", "my tag 2");
         }
+
+        [Test]
+        public void MapToFeature_FeatureWithNullDescription_ReturnsFeatureWithEmptyDescription()
+        {
+            var feature = this.factory.CreateFeature("My Feature", null);
+
+            var mapper = this.factory.CreateMapper();
+
+            var result = mapper.MapToFeature(feature);
+
+            Check.That(result.Description).Equals(string.Empty);
+        }
     }
 }

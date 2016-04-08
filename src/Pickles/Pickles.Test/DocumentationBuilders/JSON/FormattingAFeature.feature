@@ -17,7 +17,7 @@ Scenario: A simple feature
             When I press C
             Then the screen should be empty
         """
-	When I generate the documentation
+    When I generate the documentation
     Then the JSON file should contain
         """
         {
@@ -79,7 +79,6 @@ Scenario: A simple feature
               }
             }
           ],
-          "Configuration": {
         """
 
 @json
@@ -121,7 +120,7 @@ Scenario: A feature with a table
             When I click on the table heading
             Then the table body should collapse
         """
-	When I generate the documentation
+    When I generate the documentation
     Then the JSON file should contain
         """
         {
@@ -270,5 +269,4 @@ Scenario: A feature with a table
               }
             }
           ],
-          "Configuration": {
         """
