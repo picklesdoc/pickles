@@ -49,7 +49,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -83,7 +83,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -110,7 +110,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -140,7 +140,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -201,7 +201,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -239,7 +239,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -278,7 +278,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-            
+
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
