@@ -18,8 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace PicklesDoc.Pickles.ObjectModel
 {
     public class Location

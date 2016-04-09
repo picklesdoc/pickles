@@ -33,6 +33,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
     public class WhenFormattingStep : BaseFixture
     {
         private const string ExpectedGivenHtml = "Given ";
+        private readonly XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
 
         [Test]
         public void Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal()
@@ -48,8 +49,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -83,8 +83,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -111,8 +110,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -142,8 +140,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -192,9 +189,9 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
                 Name = "a simple step",
                 TableArgument = null,
                 DocStringArgument = null,
-                Comments = new List<Comment>()
+                Comments = new List<Comment>
                 {
-                    new Comment()
+                    new Comment
                     {
                         Text = "    # A simple comment",
                         Type = CommentType.StepComment
@@ -204,8 +201,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -226,14 +222,14 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
                 Name = "a simple step",
                 TableArgument = null,
                 DocStringArgument = null,
-                Comments = new List<Comment>()
+                Comments = new List<Comment>
                 {
-                    new Comment()
+                    new Comment
                     {
                         Text = "    # A simple comment",
                         Type = CommentType.StepComment
                     },
-                    new Comment()
+                    new Comment
                     {
                         Text = "    # A comment after the last step",
                         Type = CommentType.AfterLastStepComment
@@ -243,8 +239,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),
@@ -266,14 +261,14 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
                 Name = "a simple step",
                 TableArgument = null,
                 DocStringArgument = null,
-                Comments = new List<Comment>()
+                Comments = new List<Comment>
                 {
-                    new Comment()
+                    new Comment
                     {
                         Text = "    # A first line",
                         Type = CommentType.StepComment
                     },
-                    new Comment()
+                    new Comment
                     {
                         Text = "    # A second line",
                         Type = CommentType.StepComment
@@ -283,8 +278,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 
             var formatter = Container.Resolve<HtmlStepFormatter>();
             XElement actual = formatter.Format(step);
-
-            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            
             var expected = new XElement(
                 xmlns + "li",
                 new XAttribute("class", "step"),

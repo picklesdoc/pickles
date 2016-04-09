@@ -41,6 +41,6 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Location Location { get; set; }
 
-        public List<Comment> Comments { get; set; } 
+        public List<Comment> Comments { get; set; }
     }
 }

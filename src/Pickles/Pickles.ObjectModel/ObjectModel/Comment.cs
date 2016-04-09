@@ -18,8 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace PicklesDoc.Pickles.ObjectModel
 {
     public enum CommentType
@@ -36,7 +34,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             // Set default
             this.Type = CommentType.Normal;
         }
-        
+
         public string Text { get; set; }
 
         public Location Location { get; set; }

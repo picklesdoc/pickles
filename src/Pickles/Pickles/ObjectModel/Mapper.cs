@@ -38,7 +38,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             this.mapper = new MappingEngine(configurationStore);
 
             configurationStore.CreateMap<string, Keyword>().ConvertUsing(new KeywordResolver(featureLanguage));
-            
+
             configurationStore.CreateMap<G.TableCell, string>()
                 .ConstructUsing(cell => cell.Value);
 
@@ -122,12 +122,10 @@ namespace PicklesDoc.Pickles.ObjectModel
                             {
                                 // Find the related feature
                                 var relatedFeatureElement = targetFeature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
-
                                 // Find the step to which the comment is related to
                                 if (relatedFeatureElement != null)
                                 {
                                     var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
-                                    
                                     if (stepAfterComment != null)
                                     {
                                         // Comment is before a step

@@ -51,7 +51,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
         }
 
         [Test]
-        public void ThenStepCommentsAreAddedSuccesfully()
+        public void ThenStepCommentsAreAddedSuccessfully()
         {
             var excelStepFormatter = Container.Resolve<ExcelStepFormatter>();
             var step = new Step
@@ -81,7 +81,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
         }
 
         [Test]
-        public void ThenMultilineStepCommentsAreAddedSuccesfully()
+        public void ThenMultilineStepCommentsAreAddedSuccessfully()
         {
             var excelStepFormatter = Container.Resolve<ExcelStepFormatter>();
             var step = new Step
@@ -117,7 +117,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
         }
 
         [Test]
-        public void ThenCommentsAfterTheLastStepAreAddedSuccesfully()
+        public void ThenCommentsAfterTheLastStepAreAddedSuccessfully()
         {
             var excelStepFormatter = Container.Resolve<ExcelStepFormatter>();
             var step = new Step
