@@ -85,24 +85,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
                     step.Name,
                     afterStepComments);
 
-            //if (step.Comments.Any())
-            //{
-            //    li = new XElement(
-            //        this.xmlns + "li",
-            //        new XAttribute("class", "step"),
-            //        this.FormatComments(step),
-            //        new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
-            //        step.Name);
-            //}
-            //else
-            //{
-            //    li = new XElement(
-            //        this.xmlns + "li",
-            //        new XAttribute("class", "step"),
-            //        new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
-            //        step.Name);
-            //}
-
             if (step.TableArgument != null)
             {
                 li.Add(this.htmlTableFormatter.Format(step.TableArgument));

@@ -147,8 +147,6 @@ namespace PicklesDoc.Pickles.ObjectModel
                                             stepBeforeComment.Comments.Add(comment);
                                         }
                                     }
-
-
                                 }
                             }
 
