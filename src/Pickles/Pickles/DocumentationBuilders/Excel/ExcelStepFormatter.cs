@@ -42,9 +42,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
         public void Format(IXLWorksheet worksheet, Step step, ref int row)
         {
             // Add comments
-            if (step.Comments.Any())
+            if (step.Comments.Any(o => o.Type == CommentType.StepComment))
             {
-                foreach (var comment in step.Comments)
+                foreach (var comment in step.Comments.Where(o => o.Type == CommentType.StepComment))
                 {
                     worksheet.Cell(row, "C").Style.Font.SetItalic();
                     worksheet.Cell(row, "C").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
@@ -57,6 +57,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             worksheet.Cell(row, "C").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Right);
             worksheet.Cell(row, "C").Value = step.NativeKeyword;
             worksheet.Cell(row++, "D").Value = step.Name;
+
+            if (step.Comments.Any(o => o.Type == CommentType.AfterLastStepComment))
+            {
+                foreach (var comment in step.Comments.Where(o => o.Type == CommentType.AfterLastStepComment))
+                {
+                    worksheet.Cell(row, "C").Style.Font.SetItalic();
+                    worksheet.Cell(row, "C").Style.Alignment.SetHorizontal(XLAlignmentHorizontalValues.Left);
+                    worksheet.Cell(row, "C").Value = comment.Text;
+                    row++;
+                }
+            }
+            
 
             if (step.TableArgument != null)
             {

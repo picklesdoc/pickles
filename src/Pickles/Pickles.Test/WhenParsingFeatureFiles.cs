@@ -370,7 +370,8 @@ Feature: Test
     # A multiline comment - first line
     # Second line
     When it runs
-    Then I should see that this thing happens";
+    Then I should see that this thing happens
+    # A last comment after the scenario";
 
             var parser = Container.Resolve<FeatureParser>();
             Feature feature = parser.Parse(new StringReader(featureText));
@@ -387,7 +388,12 @@ Feature: Test
             Check.That(stepWhen.Comments[1].Text).IsEqualTo("# Second line");
 
             Step stepThen = scenario.Steps[2];
-            Check.That(stepThen.Comments.Count).IsEqualTo(0);
+            Check.That(stepThen.Comments.Count).IsEqualTo(1);
+            Check.That(stepThen.Comments.Count(o => o.Type == CommentType.StepComment)).IsEqualTo(0);
+            Check.That(stepThen.Comments.Count(o => o.Type == CommentType.AfterLastStepComment)).IsEqualTo(1);
+            Check.That(stepThen.Comments[0].Text = "# A last comment after the scenario");
         }
+
+
     }
 }

@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
 using AutoMapper.Mappers;
 using PicklesDoc.Pickles.ObjectModel;
@@ -53,7 +55,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
             configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>()
                  .ForMember(t => t.Feature, opt => opt.Ignore());
             configurationStore.CreateMap<Comment, JsonComment>();
-            configurationStore.CreateMap<Step, JsonStep>();
+            configurationStore.CreateMap<Step, JsonStep>()
+                .ForMember(t => t.StepComments, opt => opt.UseValue(new List<JsonComment>()))
+                .ForMember(t => t.AfterLastStepComments, opt => opt.UseValue(new List<JsonComment>()))
+                .AfterMap(
+                    (sourceStep, targetStep) =>
+                    {
+                        this.mapper.Map(sourceStep.Comments.Where(o => o.Type == CommentType.StepComment), targetStep.StepComments);
+                        this.mapper.Map(sourceStep.Comments.Where(o => o.Type == CommentType.AfterLastStepComment), targetStep.AfterLastStepComments);
+                    }
+                );
             configurationStore.CreateMap<Table, JsonTable>();
             configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(ToJsonTestResult);
 

@@ -60,7 +60,11 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
                 Name = "I have some precondition",
                 Comments = new List<Comment>()
                 {
-                    new Comment() { Text = "# A comment" }
+                    new Comment()
+                    {
+                        Text = "# A comment",
+                        Type = CommentType.StepComment
+                    }
                 }
             };
 
@@ -73,6 +77,78 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
                 Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments.First().Text);
                 Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.NativeKeyword);
                 Check.That(worksheet.Cell("D6").Value).IsEqualTo(step.Name);
+            }
+        }
+
+        [Test]
+        public void ThenMultilineStepCommentsAreAddedSuccesfully()
+        {
+            var excelStepFormatter = Container.Resolve<ExcelStepFormatter>();
+            var step = new Step
+            {
+                NativeKeyword = "Given",
+                Name = "I have some precondition",
+                Comments = new List<Comment>()
+                {
+                    new Comment()
+                    {
+                        Text = "# A comment - line 1",
+                        Type = CommentType.StepComment
+                    },
+                    new Comment()
+                    {
+                        Text = "# A comment - line 2",
+                        Type = CommentType.StepComment
+                    }
+                }
+            };
+
+            using (var workbook = new XLWorkbook())
+            {
+                IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
+                int row = 5;
+                excelStepFormatter.Format(worksheet, step, ref row);
+
+                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments[0].Text);
+                Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.Comments[1].Text);
+                Check.That(worksheet.Cell("C7").Value).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D7").Value).IsEqualTo(step.Name);
+            }
+        }
+
+        [Test]
+        public void ThenCommentsAfterTheLastStepAreAddedSuccesfully()
+        {
+            var excelStepFormatter = Container.Resolve<ExcelStepFormatter>();
+            var step = new Step
+            {
+                NativeKeyword = "Given",
+                Name = "I have some precondition",
+                Comments = new List<Comment>()
+                {
+                    new Comment()
+                    {
+                        Text = "# A comment",
+                        Type = CommentType.StepComment
+                    },
+                    new Comment()
+                    {
+                        Text = "# A comment the last step",
+                        Type = CommentType.AfterLastStepComment
+                    }
+                }
+            };
+
+            using (var workbook = new XLWorkbook())
+            {
+                IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
+                int row = 5;
+                excelStepFormatter.Format(worksheet, step, ref row);
+
+                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments.First(o => o.Type == CommentType.StepComment).Text);
+                Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D6").Value).IsEqualTo(step.Name);
+                Check.That(worksheet.Cell("C7").Value).IsEqualTo(step.Comments.First(o => o.Type == CommentType.AfterLastStepComment).Text);
             }
         }
     }

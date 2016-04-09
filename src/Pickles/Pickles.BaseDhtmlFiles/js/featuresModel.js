@@ -28,7 +28,8 @@ function Step(data) {
     this.NativeKeyword = data.NativeKeyword || '';
     this.DocStringArgument = data.DocStringArgument || '';
     this.TableArgument = data.TableArgument == null ? null : new TableArgument(data.TableArgument.HeaderRow, data.TableArgument.DataRows);
-    this.Comments = data.Comments == null ? null : $.map(data.Comments, function (c) { return new Comment(c); });
+    this.StepComments = data.StepComments == null ? null : $.map(data.StepComments, function (c) { return new Comment(c); });
+    this.AfterLastStepComments = data.AfterLastStepComments == null ? null : $.map(data.AfterLastStepComments, function (c) { return new Comment(c); });
 }
 
 function Comment(data) {

@@ -25,7 +25,8 @@ namespace PicklesDoc.Pickles.ObjectModel
     public enum CommentType
     {
         Normal,
-        StepComment
+        StepComment,
+        AfterLastStepComment
     }
 
     public class Comment

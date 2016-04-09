@@ -217,6 +217,46 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
         }
 
         [Test]
+        public void Comments_after_the_last_step_are_displayed()
+        {
+            var step = new Step
+            {
+                Keyword = Keyword.Given,
+                NativeKeyword = "Given ",
+                Name = "a simple step",
+                TableArgument = null,
+                DocStringArgument = null,
+                Comments = new List<Comment>()
+                {
+                    new Comment()
+                    {
+                        Text = "    # A simple comment",
+                        Type = CommentType.StepComment
+                    },
+                    new Comment()
+                    {
+                        Text = "    # A comment after the last step",
+                        Type = CommentType.AfterLastStepComment
+                    }
+                }
+            };
+
+            var formatter = Container.Resolve<HtmlStepFormatter>();
+            XElement actual = formatter.Format(step);
+
+            XNamespace xmlns = XNamespace.Get("http://www.w3.org/1999/xhtml");
+            var expected = new XElement(
+                xmlns + "li",
+                new XAttribute("class", "step"),
+                new XElement(xmlns + "span", new XAttribute("class", "comment"), "# A simple comment"),
+                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                "a simple step",
+                new XElement(xmlns + "span", new XAttribute("class", "comment"), "# A comment after the last step"));
+
+            Check.That(expected).IsDeeplyEqualTo(actual);
+        }
+
+        [Test]
         public void Multiline_comments_are_displayed_in_the_same_element()
         {
             var step = new Step

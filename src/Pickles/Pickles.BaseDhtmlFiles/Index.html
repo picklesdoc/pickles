@@ -50,19 +50,27 @@
 
     <script type="text/html" id="steps-template">
         <li class="step">
-            <!-- ko if: Comments != null && Comments.length > 0 -->
-			<span class="comment">
-				<!-- ko foreach: Comments -->
-					<span data-bind="text: Text"></span>
-					<br data-bind="visible : $index() != ($parent.length-1)" />
-				<!-- /ko -->
+            <!-- ko if: StepComments != null && StepComments.length > 0 -->
+            <span class="comment">
+				    <!-- ko foreach: StepComments -->
+					    <span data-bind="text: Text"></span>
+					    <br data-bind="visible : $index() != ($parent.length-1)" />
+				    <!-- /ko -->
 			</span>
-			<!-- /ko -->
+            <!-- /ko -->
             <span class="keyword" data-bind="text: NativeKeyword"></span><span data-bind="text: Name"></span>
             <div data-bind="if: DocStringArgument != ''">
                 <div data-bind="text: DocStringArgument" class="pre"></div>
             </div>
             <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
+            <!-- ko if: AfterLastStepComments != null && AfterLastStepComments.length > 0 -->
+			<span class="comment">
+				<!-- ko foreach: AfterLastStepComments -->
+					<span data-bind="text: Text"></span>
+					<br data-bind="visible : $index() != ($parent.length-1)" />
+				<!-- /ko -->
+			</span>
+			<!-- /ko -->
         </li>
     </script>
 

@@ -48,11 +48,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             this.xmlns = HtmlNamespace.Xhtml;
         }
 
-        protected XElement FormatComments(Step step)
+        protected XElement FormatComments(Step step, CommentType type)
         {
             XElement comment = new XElement(this.xmlns + "span", new XAttribute("class", "comment"));
             
-            foreach (var stepComment in step.Comments)
+            foreach (var stepComment in step.Comments.Where(o => o.Type == type))
             {
                 comment.Add(stepComment.Text.Trim());
                 comment.Add(new XElement(this.xmlns + "br"));
@@ -66,23 +66,42 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
         {
             XElement li;
 
-            if (step.Comments.Any())
+            XElement beforeStepComments = null;
+            XElement afterStepComments = null;
+            if (step.Comments.Any(o => o.Type == CommentType.StepComment))
             {
-                li = new XElement(
+                beforeStepComments = this.FormatComments(step, CommentType.StepComment);
+            }
+            if (step.Comments.Any(o => o.Type == CommentType.AfterLastStepComment))
+            {
+                afterStepComments = this.FormatComments(step, CommentType.AfterLastStepComment);
+            }
+
+            li = new XElement(
                     this.xmlns + "li",
                     new XAttribute("class", "step"),
-                    this.FormatComments(step),
+                    beforeStepComments,
                     new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
-                    step.Name);
-            }
-            else
-            {
-                li = new XElement(
-                    this.xmlns + "li",
-                    new XAttribute("class", "step"),
-                    new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
-                    step.Name);
-            }
+                    step.Name,
+                    afterStepComments);
+
+            //if (step.Comments.Any())
+            //{
+            //    li = new XElement(
+            //        this.xmlns + "li",
+            //        new XAttribute("class", "step"),
+            //        this.FormatComments(step),
+            //        new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
+            //        step.Name);
+            //}
+            //else
+            //{
+            //    li = new XElement(
+            //        this.xmlns + "li",
+            //        new XAttribute("class", "step"),
+            //        new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
+            //        step.Name);
+            //}
 
             if (step.TableArgument != null)
             {

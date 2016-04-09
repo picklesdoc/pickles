@@ -22,3 +22,4 @@
 		# But the middle line is empty
 		Then I should see that this thing happens
 		And there is no comment here
+		# A comment after the last step

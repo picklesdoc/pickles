@@ -96,20 +96,24 @@ Scenario: Clear the screen
                     "r the screen\",\r\n        \"FeatureElements\": [\r\n          {\r\n            \"Name\": \"" +
                     "Clear the screen\",\r\n            \"Description\": \"\",\r\n            \"Steps\": [\r\n    " +
                     "          {\r\n                \"Keyword\": \"Given\",\r\n                \"NativeKeyword" +
-                    "\": \"Given \",\r\n                \"Name\": \"I have entered 50 into the calculator\"\r\n " +
-                    "             },\r\n              {\r\n                \"Keyword\": \"And\",\r\n           " +
-                    "     \"NativeKeyword\": \"And \",\r\n                \"Name\": \"I have entered 70 into t" +
-                    "he calculator\"\r\n              },\r\n              {\r\n                \"Keyword\": \"W" +
-                    "hen\",\r\n                \"NativeKeyword\": \"When \",\r\n                \"Name\": \"I pre" +
-                    "ss C\"\r\n              },\r\n              {\r\n                \"Keyword\": \"Then\",\r\n  " +
-                    "              \"NativeKeyword\": \"Then \",\r\n                \"Name\": \"the screen sho" +
-                    "uld be empty\"\r\n              }\r\n            ],\r\n            \"Tags\": [\r\n         " +
-                    "     \"@workflow\",\r\n              \"@slow\"\r\n            ],\r\n            \"Result\": " +
-                    "{\r\n              \"WasExecuted\": false,\r\n              \"WasSuccessful\": false\r\n  " +
-                    "          }\r\n          }\r\n        ],\r\n        \"Result\": {\r\n          \"WasExecute" +
-                    "d\": false,\r\n          \"WasSuccessful\": false\r\n        },\r\n        \"Tags\": []\r\n  " +
-                    "    },\r\n      \"Result\": {\r\n        \"WasExecuted\": false,\r\n        \"WasSuccessful" +
-                    "\": false\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "\": \"Given \",\r\n                \"Name\": \"I have entered 50 into the calculator\",\r\n" +
+                    "                \"StepComments\": [],\r\n                \"AfterLastStepComments\": []" +
+                    "\r\n              },\r\n              {\r\n                \"Keyword\": \"And\",\r\n        " +
+                    "        \"NativeKeyword\": \"And \",\r\n                \"Name\": \"I have entered 70 int" +
+                    "o the calculator\",\r\n                \"StepComments\": [],\r\n                \"AfterL" +
+                    "astStepComments\": []\r\n              },\r\n              {\r\n                \"Keywor" +
+                    "d\": \"When\",\r\n                \"NativeKeyword\": \"When \",\r\n                \"Name\": " +
+                    "\"I press C\",\r\n                \"StepComments\": [],\r\n                \"AfterLastSte" +
+                    "pComments\": []\r\n              },\r\n              {\r\n                \"Keyword\": \"T" +
+                    "hen\",\r\n                \"NativeKeyword\": \"Then \",\r\n                \"Name\": \"the s" +
+                    "creen should be empty\",\r\n                \"StepComments\": [],\r\n                \"A" +
+                    "fterLastStepComments\": []\r\n              }\r\n            ],\r\n            \"Tags\": " +
+                    "[\r\n              \"@workflow\",\r\n              \"@slow\"\r\n            ],\r\n          " +
+                    "  \"Result\": {\r\n              \"WasExecuted\": false,\r\n              \"WasSuccessful" +
+                    "\": false\r\n            }\r\n          }\r\n        ],\r\n        \"Result\": {\r\n         " +
+                    " \"WasExecuted\": false,\r\n          \"WasSuccessful\": false\r\n        },\r\n        \"T" +
+                    "ags\": []\r\n      },\r\n      \"Result\": {\r\n        \"WasExecuted\": false,\r\n        \"W" +
+                    "asSuccessful\": false\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -121,10 +125,10 @@ Scenario: Clear the screen
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A feature with a table", new string[] {
                         "json"});
-#line 81
+#line 89
 this.ScenarioSetup(scenarioInfo);
 #line hidden
-#line 83
+#line 91
     testRunner.Given("I have this feature description", @"Feature: Interactive DHTML View
     In order to increase stakeholder engagement with pickled specs
     As a SpecFlow evangelist
@@ -158,10 +162,10 @@ Scenario: Scenario with large data table
         | Chapter 22 | 105    |
     When I click on the table heading
     Then the table body should collapse", ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 119
+#line 127
     testRunner.When("I generate the documentation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 120
+#line 128
     testRunner.Then("the JSON file should contain", "{\r\n  \"Features\": [\r\n    {\r\n      \"RelativeFolder\": \"\",\r\n      \"Feature\": {\r\n     " +
                     "   \"Name\": \"Interactive DHTML View\",\r\n        \"Description\": \"    In order to in" +
                     "crease stakeholder engagement with pickled specs\\r\\n    As a SpecFlow evangelist" +
@@ -204,16 +208,19 @@ Scenario: Scenario with large data table
                     "[\r\n                      \"Chapter 21\",\r\n                      \"100\"\r\n           " +
                     "         ],\r\n                    [\r\n                      \"Chapter 22\",\r\n       " +
                     "               \"105\"\r\n                    ]\r\n                  ]\r\n              " +
-                    "  }\r\n              },\r\n              {\r\n                \"Keyword\": \"When\",\r\n    " +
-                    "            \"NativeKeyword\": \"When \",\r\n                \"Name\": \"I click on the t" +
-                    "able heading\"\r\n              },\r\n              {\r\n                \"Keyword\": \"Th" +
-                    "en\",\r\n                \"NativeKeyword\": \"Then \",\r\n                \"Name\": \"the ta" +
-                    "ble body should collapse\"\r\n              }\r\n            ],\r\n            \"Tags\": " +
-                    "[],\r\n            \"Result\": {\r\n              \"WasExecuted\": false,\r\n             " +
-                    " \"WasSuccessful\": false\r\n            }\r\n          }\r\n        ],\r\n        \"Result" +
-                    "\": {\r\n          \"WasExecuted\": false,\r\n          \"WasSuccessful\": false\r\n       " +
-                    " },\r\n        \"Tags\": []\r\n      },\r\n      \"Result\": {\r\n        \"WasExecuted\": fal" +
-                    "se,\r\n        \"WasSuccessful\": false\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "  },\r\n                \"StepComments\": [],\r\n                \"AfterLastStepComment" +
+                    "s\": []\r\n              },\r\n              {\r\n                \"Keyword\": \"When\",\r\n " +
+                    "               \"NativeKeyword\": \"When \",\r\n                \"Name\": \"I click on th" +
+                    "e table heading\",\r\n                \"StepComments\": [],\r\n                \"AfterLa" +
+                    "stStepComments\": []\r\n              },\r\n              {\r\n                \"Keyword" +
+                    "\": \"Then\",\r\n                \"NativeKeyword\": \"Then \",\r\n                \"Name\": \"" +
+                    "the table body should collapse\",\r\n                \"StepComments\": [],\r\n         " +
+                    "       \"AfterLastStepComments\": []\r\n              }\r\n            ],\r\n           " +
+                    " \"Tags\": [],\r\n            \"Result\": {\r\n              \"WasExecuted\": false,\r\n    " +
+                    "          \"WasSuccessful\": false\r\n            }\r\n          }\r\n        ],\r\n      " +
+                    "  \"Result\": {\r\n          \"WasExecuted\": false,\r\n          \"WasSuccessful\": false" +
+                    "\r\n        },\r\n        \"Tags\": []\r\n      },\r\n      \"Result\": {\r\n        \"WasExecu" +
+                    "ted\": false,\r\n        \"WasSuccessful\": false\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

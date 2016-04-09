@@ -36,6 +36,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         public string DocStringArgument { get; set; }
 
-        public List<JsonComment> Comments { get; set; }
+        public List<JsonComment> StepComments { get; set; }
+
+        public List<JsonComment> AfterLastStepComments { get; set; }
     }
 }

@@ -120,20 +120,35 @@ namespace PicklesDoc.Pickles.ObjectModel
                         {
                             foreach (var comment in targetFeature.Comments.ToArray())
                             {
-                                // Find the step to which the comment is related to
+                                // Find the related feature
                                 var relatedFeatureElement = targetFeature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+
+                                // Find the step to which the comment is related to
                                 if (relatedFeatureElement != null)
                                 {
-                                    var relatedStep = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
-                                    if (relatedStep != null)
+                                    var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
+                                    
+                                    if (stepAfterComment != null)
                                     {
-                                        // Change the type to StepComment
+                                        // Comment is before a step
                                         comment.Type = CommentType.StepComment;
-
-                                        // Link the step and the comment
-                                        comment.Step = relatedStep;
-                                        relatedStep.Comments.Add(comment);
+                                        comment.Step = stepAfterComment;
+                                        stepAfterComment.Comments.Add(comment);
                                     }
+                                    else
+                                    {
+                                        // Comment is located after the last step
+                                        var stepBeforeComment = relatedFeatureElement.Steps.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+                                        if (stepBeforeComment != null && stepBeforeComment == relatedFeatureElement.Steps.Last())
+                                        {
+
+                                            comment.Type = CommentType.AfterLastStepComment;
+                                            comment.Step = stepBeforeComment;
+                                            stepBeforeComment.Comments.Add(comment);
+                                        }
+                                    }
+
+
                                 }
                             }
 
