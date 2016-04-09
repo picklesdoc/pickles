@@ -48,14 +48,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
         protected XElement FormatComments(Step step, CommentType type)
         {
             XElement comment = new XElement(this.xmlns + "span", new XAttribute("class", "comment"));
-            
+
             foreach (var stepComment in step.Comments.Where(o => o.Type == type))
             {
                 comment.Add(stepComment.Text.Trim());
                 comment.Add(new XElement(this.xmlns + "br"));
             }
             comment.LastNode.Remove();
-            
+
             return comment;
         }
 

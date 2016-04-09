@@ -52,11 +52,11 @@
         <li class="step">
             <!-- ko if: StepComments != null && StepComments.length > 0 -->
             <span class="comment">
-				    <!-- ko foreach: StepComments -->
-					    <span data-bind="text: Text"></span>
-					    <br data-bind="visible : $index() != ($parent.length-1)" />
-				    <!-- /ko -->
-			</span>
+                    <!-- ko foreach: StepComments -->
+                        <span data-bind="text: Text"></span>
+                        <br data-bind="visible : $index() != ($parent.length-1)" />
+                    <!-- /ko -->
+            </span>
             <!-- /ko -->
             <span class="keyword" data-bind="text: NativeKeyword"></span><span data-bind="text: Name"></span>
             <div data-bind="if: DocStringArgument != ''">
@@ -64,13 +64,13 @@
             </div>
             <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
             <!-- ko if: AfterLastStepComments != null && AfterLastStepComments.length > 0 -->
-			<span class="comment">
-				<!-- ko foreach: AfterLastStepComments -->
-					<span data-bind="text: Text"></span>
-					<br data-bind="visible : $index() != ($parent.length-1)" />
-				<!-- /ko -->
-			</span>
-			<!-- /ko -->
+            <span class="comment">
+                <!-- ko foreach: AfterLastStepComments -->
+                    <span data-bind="text: Text"></span>
+                    <br data-bind="visible : $index() != ($parent.length-1)" />
+                <!-- /ko -->
+            </span>
+            <!-- /ko -->
         </li>
     </script>
 
