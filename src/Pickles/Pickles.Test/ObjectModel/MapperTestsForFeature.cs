@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Linq;
 using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.ObjectModel;
@@ -113,6 +114,63 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             var result = mapper.MapToFeature(feature);
 
             Check.That(result.Description).Equals(string.Empty);
+        }
+
+        [Test]
+        public void MapToFeature_FeatureWithComments_ReturnsFeatureWithComments()
+        {
+            var feature = this.factory.CreateFeature(
+                "My Feature",
+                string.Empty,
+                location: new G.Location(2, 0),
+                comments: new G.Comment[]
+                {
+                    this.factory.CreateComment("# single line comment before the given step", 4, 4),
+                    this.factory.CreateComment("# multiline comment before the then step - line 1", 6, 4),
+                    this.factory.CreateComment("# multiline comment before the then step - line 2", 7, 4),
+                    this.factory.CreateComment("# line comment before the last step", 10, 4),
+                    this.factory.CreateComment("# line comment after the last step", 12, 4),
+                },
+                scenarioDefinitions: new G.ScenarioDefinition[]
+                {
+                    this.factory.CreateScenario(
+                        new string[0], "My scenario", string.Empty,
+                        new G.Step[]
+                        {
+                            this.factory.CreateStep("Given", "I am on the first step", 5, 4),
+                            this.factory.CreateStep("When", "I am on the second step", 8, 4),
+                            this.factory.CreateStep("When", "there is a third step without comment", 9, 4),
+                            this.factory.CreateStep("Then", "I am on the last step", 11, 4)
+                        },
+                        location: new G.Location(3, 0)
+                    )
+                });
+
+            var mapper = this.factory.CreateMapper();
+
+            var result = mapper.MapToFeature(feature);
+            var scenario = result.FeatureElements[0];
+
+            Check.That(scenario.Steps[0].Comments.Count).IsEqualTo(1);
+            Check.That(scenario.Steps[0].Comments.Count(o => o.Type == CommentType.StepComment)).IsEqualTo(1);
+            Check.That(scenario.Steps[0].Comments.Count(o => o.Type == CommentType.AfterLastStepComment)).IsEqualTo(0);
+            Check.That(scenario.Steps[0].Comments[0].Text).IsEqualTo("# single line comment before the given step");
+
+            Check.That(scenario.Steps[1].Comments.Count).IsEqualTo(2);
+            Check.That(scenario.Steps[1].Comments.Count(o => o.Type == CommentType.StepComment)).IsEqualTo(2);
+            Check.That(scenario.Steps[1].Comments.Count(o => o.Type == CommentType.AfterLastStepComment)).IsEqualTo(0);
+            Check.That(scenario.Steps[1].Comments[0].Text).IsEqualTo("# multiline comment before the then step - line 1");
+            Check.That(scenario.Steps[1].Comments[1].Text).IsEqualTo("# multiline comment before the then step - line 2");
+
+            Check.That(scenario.Steps[2].Comments.Count).IsEqualTo(0);
+            Check.That(scenario.Steps[2].Comments.Count(o => o.Type == CommentType.StepComment)).IsEqualTo(0);
+            Check.That(scenario.Steps[2].Comments.Count(o => o.Type == CommentType.AfterLastStepComment)).IsEqualTo(0);
+
+            Check.That(scenario.Steps[3].Comments.Count).IsEqualTo(2);
+            Check.That(scenario.Steps[3].Comments.Count(o => o.Type == CommentType.StepComment)).IsEqualTo(1);
+            Check.That(scenario.Steps[3].Comments.Count(o => o.Type == CommentType.AfterLastStepComment)).IsEqualTo(1);
+            Check.That(scenario.Steps[3].Comments[0].Text).IsEqualTo("# line comment before the last step");
+            Check.That(scenario.Steps[3].Comments[1].Text).IsEqualTo("# line comment after the last step");
         }
     }
 }

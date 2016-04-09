@@ -66,6 +66,12 @@ My doc string line 2");
             return new G.Step(AnyLocation, keyword, text, null);
         }
 
+        internal G.Step CreateStep(string keyword, string text, int locationLine, int locationColumn)
+        {
+            var step =  new G.Step(new G.Location(locationLine, locationColumn), keyword, text, null);
+            return step;
+        }
+
         internal G.Step CreateStep(string keyword, string text, string docString)
         {
             return new G.Step(AnyLocation, keyword, text, this.CreateDocString(docString));
@@ -81,11 +87,16 @@ My doc string line 2");
             return new G.Tag(AnyLocation, tag);
         }
 
-        internal G.Scenario CreateScenario(string[] tags, string name, string description, G.Step[] steps)
+        internal G.Comment CreateComment(string comment, int locationLine, int locationColumn)
+        {
+            return new G.Comment(new G.Location(locationLine, locationColumn), comment);
+        }
+
+        internal G.Scenario CreateScenario(string[] tags, string name, string description, G.Step[] steps, G.Location location = null)
         {
             G.Scenario scenario = new G.Scenario(
                 tags.Select(this.CreateTag).ToArray(),
-                AnyLocation,
+                location ?? AnyLocation,
                 "Scenario",
                 name,
                 description,
@@ -131,9 +142,9 @@ My doc string line 2");
             return background;
         }
 
-        internal G.Feature CreateFeature(string name, string description, string[] tags = null, G.Background background = null, G.ScenarioDefinition[] scenarioDefinitions = null)
+        internal G.Feature CreateFeature(string name, string description, string[] tags = null, G.Background background = null, G.ScenarioDefinition[] scenarioDefinitions = null, G.Comment[] comments = null, G.Location location = null)
         {
-            return new G.Feature((tags ?? new string[0]).Select(this.CreateTag).ToArray(), null, null, "Feature", name, description, background, scenarioDefinitions, null);
+            return new G.Feature((tags ?? new string[0]).Select(this.CreateTag).ToArray(), location, null, "Feature", name, description, background, scenarioDefinitions, comments);
         }
     }
 }
