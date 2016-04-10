@@ -115,11 +115,13 @@
     <Compile Include="ObjectModel\Factory.cs" />
     <Compile Include="ObjectModel\Json\JsonScenarioTests.cs" />
     <Compile Include="ObjectModel\Json\JsonTableRowTests.cs" />
+    <Compile Include="ObjectModel\MapperTestsForComment.cs" />
     <Compile Include="ObjectModel\MapperTestsForDataTable.cs" />
     <Compile Include="ObjectModel\MapperTestsForDocString.cs" />
     <Compile Include="ObjectModel\MapperTestsForExample.cs" />
     <Compile Include="ObjectModel\MapperTestsForBackground.cs" />
     <Compile Include="ObjectModel\MapperTestsForFeature.cs" />
+    <Compile Include="ObjectModel\MapperTestsForLocation.cs" />
     <Compile Include="ObjectModel\MapperTestsForScenarioOutline.cs" />
     <Compile Include="ObjectModel\MapperTestsForScenario.cs" />
     <Compile Include="ObjectModel\MapperTestsForStep.cs" />

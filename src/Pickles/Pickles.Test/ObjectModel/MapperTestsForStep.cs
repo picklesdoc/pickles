@@ -55,6 +55,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Name).IsEqualTo("I enter '50' in the calculator");
             Check.That(result.DocStringArgument).IsNull();
             Check.That(result.TableArgument).IsNull();
+            Check.That(result.Location).IsNull();
+            Check.That(result.Comments).IsEmpty();
         }
 
         [Test]
@@ -71,6 +73,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Name).IsEqualTo("I press 'enter'");
             Check.That(result.DocStringArgument).IsNull();
             Check.That(result.TableArgument).IsNull();
+            Check.That(result.Location).IsNull();
+            Check.That(result.Comments).IsEmpty();
         }
 
         [Test]
@@ -107,6 +111,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Name).IsEqualTo("I see this value on the screen");
             Check.That(result.DocStringArgument).IsEqualTo("120");
             Check.That(result.TableArgument).IsNull();
+            Check.That(result.Location).IsNull();
+            Check.That(result.Comments).IsEmpty();
         }
 
         [Test]
@@ -132,6 +138,30 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.TableArgument.DataRows).HasSize(1);
             Check.That(result.TableArgument.DataRows[0].Cells).ContainsExactly("Value 1", "Value 2");
             Check.That(result.DocStringArgument).IsNull();
+            Check.That(result.Location).IsNull();
+            Check.That(result.Comments).IsEmpty();
+        }
+
+        [Test]
+        public void MapToStep_StepWithLocation_ReturnStepWithLocation()
+        {
+            var mapper = this.factory.CreateMapper();
+
+            G.Step step = this.factory.CreateStep(
+                "Given", "I am on a step", 3, 4
+            );
+
+            var result = mapper.MapToStep(step);
+
+            Check.That(result.Keyword).IsEqualTo(Keyword.Given);
+            Check.That(result.NativeKeyword).IsEqualTo("Given");
+            Check.That(result.Name).IsEqualTo("I am on a step");
+            Check.That(result.DocStringArgument).IsNull();
+            Check.That(result.TableArgument).IsNull();
+            Check.That(result.Location).IsNotNull();
+            Check.That(result.Location.Line).IsEqualTo(3);
+            Check.That(result.Location.Column).IsEqualTo(4);
+            Check.That(result.Comments).IsEmpty();
         }
     }
 }

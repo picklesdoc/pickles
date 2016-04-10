@@ -68,7 +68,7 @@ My doc string line 2");
 
         internal G.Step CreateStep(string keyword, string text, int locationLine, int locationColumn)
         {
-            var step =  new G.Step(new G.Location(locationLine, locationColumn), keyword, text, null);
+            var step =  new G.Step(this.CreateLocation(locationLine, locationColumn), keyword, text, null);
             return step;
         }
 
@@ -87,9 +87,14 @@ My doc string line 2");
             return new G.Tag(AnyLocation, tag);
         }
 
+        internal G.Location CreateLocation(int line, int column)
+        {
+            return new G.Location(line, column);
+        }
+
         internal G.Comment CreateComment(string comment, int locationLine, int locationColumn)
         {
-            return new G.Comment(new G.Location(locationLine, locationColumn), comment);
+            return new G.Comment(this.CreateLocation(locationLine, locationColumn), comment);
         }
 
         internal G.Scenario CreateScenario(string[] tags, string name, string description, G.Step[] steps, G.Location location = null)

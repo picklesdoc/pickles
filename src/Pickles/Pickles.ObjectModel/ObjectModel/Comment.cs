@@ -40,7 +40,5 @@ namespace PicklesDoc.Pickles.ObjectModel
         public Location Location { get; set; }
 
         public CommentType Type { get; set; }
-
-        public Step Step { get; set; }
     }
 }

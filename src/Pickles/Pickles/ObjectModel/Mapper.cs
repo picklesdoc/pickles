@@ -130,7 +130,6 @@ namespace PicklesDoc.Pickles.ObjectModel
                                     {
                                         // Comment is before a step
                                         comment.Type = CommentType.StepComment;
-                                        comment.Step = stepAfterComment;
                                         stepAfterComment.Comments.Add(comment);
                                     }
                                     else
@@ -141,7 +140,6 @@ namespace PicklesDoc.Pickles.ObjectModel
                                         {
 
                                             comment.Type = CommentType.AfterLastStepComment;
-                                            comment.Step = stepBeforeComment;
                                             stepBeforeComment.Comments.Add(comment);
                                         }
                                     }
@@ -193,6 +191,16 @@ namespace PicklesDoc.Pickles.ObjectModel
         public string MapToString(G.Tag tag)
         {
             return this.mapper.Map<string>(tag);
+        }
+
+        public Comment MapToComment(G.Comment comment)
+        {
+            return this.mapper.Map<Comment>(comment);
+        }
+
+        public Location MapToLocation(G.Location location)
+        {
+            return this.mapper.Map<Location>(location);
         }
 
         public Scenario MapToScenario(G.Scenario scenario)
