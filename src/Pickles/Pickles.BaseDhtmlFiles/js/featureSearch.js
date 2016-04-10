@@ -16,7 +16,7 @@
 
 function findFeatureByRelativeFolder(path, features) {
     var feature = _.find(features, function(featureTesting) {
-         return featureTesting.RelativeFolder == path;
+        return featureTesting.RelativeFolder == path;
     });
     return feature ? feature : null;
 }
@@ -27,13 +27,20 @@ function matchesFeatureName(searchString, feature) {
 }
 
 function matchesFeatureTag(searchString, feature) {
-    var foundMatch = false;    
-    $.each(feature.Feature.Tags, function (key, scenarioTag) {
-        var lowerCasedTag = scenarioTag.toLowerCase();
-        if (lowerCasedTag.indexOf(searchString) > -1) {
-            foundMatch = true;
+    var foundMatch = false;
+    var tags = searchString.split(" ");
+    $.each(tags, function (index, tag) {
+        tag = tag.toLowerCase();
+        if (tag.indexOf("@") > -1) {
+            $.each(feature.Feature.Tags, function (key, scenarioTag) {
+                var lowerCasedTag = scenarioTag.toLowerCase();
+                if (lowerCasedTag.indexOf(tag) > -1) {
+                    foundMatch = true;
+                }
+            });
         }
     });
+    
     return foundMatch;
 }
 
@@ -48,15 +55,21 @@ function matchesScenarioName(searchString, feature) {
 }
 
 function matchesScenarioTag(searchString, feature) {
-    for (var i = 0; i < feature.Feature.FeatureElements.length; i++) {
-        var foundMatch = false;
-        $.each(feature.Feature.FeatureElements[i].Tags, function (key, scenarioTag) {
-            var lowerCasedTag = scenarioTag.toLowerCase();
-            if (lowerCasedTag.indexOf(searchString) > -1) {
-                foundMatch = true;
+    var foundMatch = false;
+    var tags = searchString.split(" ");
+    $.each(tags, function (index, tag) {
+        tag = tag.toLowerCase();
+        if (tag.indexOf("@") > -1) {
+            for (var i = 0; i < feature.Feature.FeatureElements.length; i++) {
+                $.each(feature.Feature.FeatureElements[i].Tags, function (key, scenarioTag) {
+                    var lowerCasedTag = scenarioTag.toLowerCase();
+                    if (lowerCasedTag.indexOf(tag) > -1) {
+                        foundMatch = true;
+                    }
+                });
+                if (foundMatch) { break; }
             }
-        });
-        if (foundMatch) return true;
-    }
-    return false;
+        }
+    });
+    return foundMatch;
 }

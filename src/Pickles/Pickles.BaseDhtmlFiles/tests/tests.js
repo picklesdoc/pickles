@@ -494,13 +494,15 @@ test("Can search for tags and feature/scenarios names", function () {
         "Feature level level tag search - across multiple features");
     deepEqual(getFeaturesMatching('@doesnotexist', sampleJSONForSearch), [],
         "Neither a tag or feature in list.");
+    deepEqual(getFeaturesMatching('@clearing @nestedFolder', sampleJSONForSearch), sampleJSONForSearch,
+        "Can search using multiple tags - will or them");
 
 });
 
 test("Can find feature by RelativeFolder", function () {
 
     deepEqual(findFeatureByRelativeFolder('Workflow\\ClearingScreen.feature', sampleJSONForSearch), sampleJSONForSearch[0],
-        "Feature exists");
+         "Feature exists");
     deepEqual(findFeatureByRelativeFolder('Workflow\\ClearingScreen2.feature', sampleJSONForSearch), null,
         "Feature does not exist");
 
