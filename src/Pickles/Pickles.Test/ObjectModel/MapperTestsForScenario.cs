@@ -100,7 +100,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
                 "My scenario title",
                 null,
                 new[] { this.factory.CreateStep("Given", "unimportant step") });
-            var feature = this.factory.CreateFeature(
+            var gherkinDocument = this.factory.CreateGherkinDocument(
                 "My Feature",
                 "My Description",
                 scenarioDefinitions: new G.ScenarioDefinition[] { scenario });
@@ -108,7 +108,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
             var mapper = this.factory.CreateMapper();
 
-            var mappedFeature = mapper.MapToFeature(feature);
+            var mappedFeature = mapper.MapToFeature(gherkinDocument);
 
             Check.That(mappedFeature.FeatureElements.Count).IsEqualTo(1);
 

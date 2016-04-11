@@ -45,11 +45,11 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToFeature_FeatureWithSimpleProperties_ReturnsFeaturesWithThoseProperties()
         {
-            G.Feature feature = this.factory.CreateFeature("Title of the feature", "Description of the feature");
+            var gherkinDocument = this.factory.CreateGherkinDocument("Title of the feature", "Description of the feature");
 
             var mapper = this.factory.CreateMapper();
 
-            var result = mapper.MapToFeature(feature);
+            var result = mapper.MapToFeature(gherkinDocument);
 
             Check.That(result.Name).IsEqualTo("Title of the feature");
             Check.That(result.Description).IsEqualTo("Description of the feature");
@@ -58,7 +58,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToFeature_FeatureWithScenarioDefinitions_ReturnsFeatureWithFeatureElements()
         {
-            var feature = this.factory.CreateFeature(
+            var gherkinDocument = this.factory.CreateGherkinDocument(
                 "My Feature",
                 string.Empty,
                 scenarioDefinitions: new G.ScenarioDefinition[]
@@ -69,7 +69,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
             var mapper = this.factory.CreateMapper();
 
-            var result = mapper.MapToFeature(feature);
+            var result = mapper.MapToFeature(gherkinDocument);
 
             Check.That(result.FeatureElements.Count).IsEqualTo(2);
             Check.That(result.FeatureElements[0].Name).IsEqualTo("My scenario");
@@ -79,14 +79,14 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToFeature_FeatureWithBackground_ReturnsFeatureWithBackground()
         {
-            var feature = this.factory.CreateFeature(
+            var gherkinDocument = this.factory.CreateGherkinDocument(
                 "My Feature",
                 string.Empty,
                 background: this.factory.CreateBackground("My background", "My description", new G.Step[0]));
 
             var mapper = this.factory.CreateMapper();
 
-            var result = mapper.MapToFeature(feature);
+            var result = mapper.MapToFeature(gherkinDocument);
 
             Check.That(result.Background.Name).IsEqualTo("My background");
             Check.That(result.Background.Description).IsEqualTo("My description");
@@ -95,11 +95,11 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToFeature_FeatureWithTags_ReturnsFeatureWithTags()
         {
-            var feature = this.factory.CreateFeature("My Feature", string.Empty, tags: new[] { "my tag 1", "my tag 2" });
+            var gherkinDocument = this.factory.CreateGherkinDocument("My Feature", string.Empty, tags: new[] { "my tag 1", "my tag 2" });
 
             var mapper = this.factory.CreateMapper();
 
-            var result = mapper.MapToFeature(feature);
+            var result = mapper.MapToFeature(gherkinDocument);
 
             Check.That(result.Tags).ContainsExactly("my tag 1", "my tag 2");
         }
@@ -107,11 +107,11 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToFeature_FeatureWithNullDescription_ReturnsFeatureWithEmptyDescription()
         {
-            var feature = this.factory.CreateFeature("My Feature", null);
+            var gherkinDocument = this.factory.CreateGherkinDocument("My Feature", null);
 
             var mapper = this.factory.CreateMapper();
 
-            var result = mapper.MapToFeature(feature);
+            var result = mapper.MapToFeature(gherkinDocument);
 
             Check.That(result.Description).Equals(string.Empty);
         }
@@ -119,7 +119,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToFeature_FeatureWithComments_ReturnsFeatureWithComments()
         {
-            var feature = this.factory.CreateFeature(
+            var gherkinDocument = this.factory.CreateGherkinDocument(
                 "My Feature",
                 string.Empty,
                 location: new G.Location(2, 0),
@@ -148,7 +148,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
             var mapper = this.factory.CreateMapper();
 
-            var result = mapper.MapToFeature(feature);
+            var result = mapper.MapToFeature(gherkinDocument);
             var scenario = result.FeatureElements[0];
 
             Check.That(scenario.Steps[0].Comments.Count).IsEqualTo(1);
