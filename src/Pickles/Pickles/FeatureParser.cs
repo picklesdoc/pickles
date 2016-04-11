@@ -67,11 +67,11 @@ namespace PicklesDoc.Pickles
             var language = this.DetermineLanguage();
             var gherkinParser = new Gherkin.Parser();
 
-            Gherkin.Ast.Feature feature = gherkinParser.Parse(
+            Gherkin.Ast.GherkinDocument gherkinDocument = gherkinParser.Parse(
                 new Gherkin.TokenScanner(featureFileReader),
                 new Gherkin.TokenMatcher(language));
 
-            Feature result = new Mapper(feature.Language).MapToFeature(feature);
+            Feature result = new Mapper(gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
 
             return result;
         }
