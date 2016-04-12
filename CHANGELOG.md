@@ -14,6 +14,24 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.6.0] - 2016-04-12
+
+### Added
+
+- Support for multiple tags in DHTML version ([#283](https://github.com/picklesdoc/pickles/issues/283)) (by [@aaronjrich](https://github.com/aaronjrich)).
+- Output commented lines ([#271](https://github.com/picklesdoc/pickles/issues/271)) (by [@ludwigjossieaux](https://github.com/ludwigjossieaux)).
+
+### Changed
+
+- Use version 4 of the Gherkin parser ([#322](https://github.com/picklesdoc/pickles/issues/322)) (by [@dirkrombauts](https://github.com/dirkrombauts)).
+- Use new logo as icon and in nuget packages ([#323](https://github.com/picklesdoc/pickles/issues/323)) (by [@dirkrombauts](https://github.com/dirkrombauts)).
+- Update external libraries ([#310](https://github.com/picklesdoc/pickles/issues/310)) (by [@dirkrombauts](https://github.com/dirkrombauts)).
+
+### Fixed
+
+- SpecFlow conformant name mapping in nUnit test result provider ([#315](https://github.com/picklesdoc/pickles/issues/315)) (by [@danielpullwitt](https://github.com/danielpullwitt)).
+- Prevent crash when no Description is provided ([#314](https://github.com/picklesdoc/pickles/issues/314)) (by [@danielpullwitt](https://github.com/danielpullwitt)).
+
 
 ## [2.5.0] - 2016-03-21
 
