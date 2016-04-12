@@ -96,6 +96,11 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.ScenarioDefinition, IFeatureElement>().ConvertUsing(
                 sd =>
                 {
+                    if (sd == null)
+                    {
+                        return null;
+                    }
+
                     var scenario = sd as G.Scenario;
                     if (scenario != null)
                     {
@@ -108,13 +113,25 @@ namespace PicklesDoc.Pickles.ObjectModel
                         return this.mapper.Map<ScenarioOutline>(scenarioOutline);
                     }
 
-                    throw new ArgumentException("Only arguments of type Scenario and ScenarioOutline are supported.");
+                    var background = sd as G.Background;
+                    if (background != null)
+                    {
+                        return this.mapper.Map<Scenario>(background);
+                    }
+
+                    throw new ArgumentException("Only arguments of type Scenario, ScenarioOutline and Background are supported.");
                 });
 
-            configurationStore.CreateMap<G.Feature, Feature>()
-                .ForMember(t => t.FeatureElements, opt => opt.ResolveUsing(s => s.ScenarioDefinitions))
-                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
+            configurationStore.CreateMap<G.GherkinDocument, Feature>()
+                .ForMember(t => t.Background, opt => opt.ResolveUsing(s => s.Feature.Children.SingleOrDefault(c => c is G.Background) as G.Background))
                 .ForMember(t => t.Comments, opt => opt.ResolveUsing(s => s.Comments))
+                .ForMember(t => t.Description, opt => opt.ResolveUsing(s => s.Feature.Description))
+                .ForMember(t => t.FeatureElements, opt => opt.ResolveUsing(s => s.Feature.Children.Where(c => !(c is G.Background))))
+                .ForMember(t => t.Name, opt => opt.ResolveUsing(s => s.Feature.Name))
+                .ForMember(t => t.Tags, opt => opt.ResolveUsing(s => s.Feature.Tags))
+
+
+                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
                 .AfterMap(
                     (sourceFeature, targetFeature) =>
                         {
@@ -223,9 +240,9 @@ namespace PicklesDoc.Pickles.ObjectModel
             return this.mapper.Map<Scenario>(background);
         }
 
-        public Feature MapToFeature(G.Feature feature)
+        public Feature MapToFeature(G.GherkinDocument gherkinDocument)
         {
-            return this.mapper.Map<Feature>(feature);
+            return this.mapper.Map<Feature>(gherkinDocument);
         }
 
         public void Dispose()

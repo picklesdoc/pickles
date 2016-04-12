@@ -149,6 +149,7 @@ My doc string line 2");
 
         internal G.GherkinDocument CreateGherkinDocument(string name, string description, string[] tags = null, G.Background background = null, G.ScenarioDefinition[] scenarioDefinitions = null, G.Comment[] comments = null, G.Location location = null)
         {
+            var nonNullScenarioDefinitions = scenarioDefinitions ?? new G.ScenarioDefinition[0];
             return new G.GherkinDocument(
                 new G.Feature(
                     (tags ?? new string[0]).Select(this.CreateTag).ToArray(),
@@ -157,7 +158,7 @@ My doc string line 2");
                     "Feature",
                     name,
                     description,
-                    new G.ScenarioDefinition[] { background }.Concat(scenarioDefinitions ?? new G.ScenarioDefinition[0]).ToArray()),
+                    background != null ? new G.ScenarioDefinition[] { background }.Concat(nonNullScenarioDefinitions).ToArray() : nonNullScenarioDefinitions),
                 comments);
         }
     }
