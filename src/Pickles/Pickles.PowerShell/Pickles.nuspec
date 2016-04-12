@@ -33,7 +33,7 @@
     <summary>A documentation generator for features written in the Gherkin language</summary>
     <copyright>Copyright © 2010-2012 Jeffrey Cameron, Copyright © 2013-present PicklesDoc and contributors</copyright>
     <tags>SpecificationByExample BDD SpecFlow Gherkin Cucumber SpecByEx LivingDocumentation Documentation</tags>
-    <iconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.jpeg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.png</iconUrl>
     <releaseNotes>https://github.com/picklesdoc/pickles/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
   <files>

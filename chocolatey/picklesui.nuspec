@@ -32,7 +32,7 @@ Optionally, *Pickles* can **integrate test results**, so that your stakeholders 
         <copyright>Copyright © 2010-2012 Jeffrey Cameron, Copyright © 2013-present PicklesDoc and contributors</copyright>
         <licenseUrl>http://apache.org/licenses/LICENSE-2.0.html</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.jpeg</iconUrl>
+        <iconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.png</iconUrl>
         <releaseNotes>https://github.com/picklesdoc/pickles/blob/master/CHANGELOG.md</releaseNotes>
     </metadata>
     <files>
