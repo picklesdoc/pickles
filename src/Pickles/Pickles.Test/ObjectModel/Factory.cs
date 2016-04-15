@@ -28,10 +28,11 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
     internal class Factory
     {
         private const G.Location AnyLocation = null;
+        private readonly IConfiguration configuration = new Configuration();
 
         internal Mapper CreateMapper(string defaultLanguage = "en")
         {
-            var mapper = new Mapper(defaultLanguage);
+            var mapper = new Mapper(this.configuration, defaultLanguage);
             return mapper;
         }
 

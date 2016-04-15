@@ -80,8 +80,14 @@ namespace PicklesDoc.Pickles
             this.ShouldIncludeExperimentalFeatures = false;
             Features.Are.AlwaysDisabled();
         }
+        public void DisableComments()
+        {
+            this.ShouldExcludeComments = true;
+        }
 
         public bool ShouldIncludeExperimentalFeatures { get; private set; }
+
+        public bool ShouldExcludeComments { get; private set; }
 
         public void AddTestResultFile(FileInfoBase fileInfoBase)
         {

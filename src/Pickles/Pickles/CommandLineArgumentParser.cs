@@ -39,6 +39,7 @@ namespace PicklesDoc.Pickles
         public const string HelpDocumentationFormat = "the format of the output documentation";
         public const string HelpTestResultsFormat = "the format of the linked test results (nunit|xunit)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
+        public const string HelpExcludeComments = "whether to exclude comments from output";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
@@ -56,6 +57,7 @@ namespace PicklesDoc.Pickles
         private string testResultsFormat;
         private bool versionRequested;
         private bool includeExperimentalFeatures;
+        private bool excludeComments;
 
         public CommandLineArgumentParser(IFileSystem fileSystem)
         {
@@ -72,7 +74,8 @@ namespace PicklesDoc.Pickles
                 { "df|documentation-format=", HelpDocumentationFormat, v => this.documentationFormat = v },
                 { "v|version", v => this.versionRequested = v != null },
                 { "h|?|help", v => this.helpRequested = v != null },
-                { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => includeExperimentalFeatures = v != null }
+                { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
+                { "nocomments|exclude-comments", HelpExcludeComments, v => this.excludeComments = v != null }
             };
         }
 
@@ -145,6 +148,10 @@ namespace PicklesDoc.Pickles
                 configuration.EnableExperimentalFeatures();
             }
 
+            if (this.excludeComments)
+            {
+                configuration.DisableComments();
+            }
 
             return true;
         }

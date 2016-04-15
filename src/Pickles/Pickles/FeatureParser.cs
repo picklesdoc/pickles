@@ -71,7 +71,7 @@ namespace PicklesDoc.Pickles
                 new Gherkin.TokenScanner(featureFileReader),
                 new Gherkin.TokenMatcher(language));
 
-            Feature result = new Mapper(gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
+            Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
 
             return result;
         }
