@@ -135,5 +135,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.CucumberJson
         {
             base.ThenCanReadResultOfScenarioOutlineExampleWithFailingBackground();
         }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioWithSpecialCharacters()
+        {
+            base.ThenCanReadResultOfScenarioWithSpecialCharacters();
+        }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioOutlineWithSpecialCharacters()
+        {
+            base.ThenCanReadResultOfScenarioOutlineWithSpecialCharacters();
+        }
     }
 }

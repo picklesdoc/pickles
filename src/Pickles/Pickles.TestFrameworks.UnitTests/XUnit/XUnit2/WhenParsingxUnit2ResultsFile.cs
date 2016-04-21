@@ -111,5 +111,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.XUnit.XUnit2
         {
             base.ThenCanReadResultOfScenarioOutlineExampleWithFailingBackground();
         }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioWithSpecialCharacters()
+        {
+            base.ThenCanReadResultOfScenarioWithSpecialCharacters();
+        }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioOutlineWithSpecialCharacters()
+        {
+            base.ThenCanReadResultOfScenarioOutlineWithSpecialCharacters();
+        }
     }
 }
