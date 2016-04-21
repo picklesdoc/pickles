@@ -56,14 +56,12 @@ namespace PicklesDoc.Pickles.ObjectModel
                 .ForMember(t => t.Line, opt => opt.MapFrom(s => s.Line));
 
             configurationStore.CreateMap<G.Comment, Comment>()
-                .ForMember(t => t.Text, opt => opt.MapFrom(s => s.Text))
-                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location))
-                .AfterMap(
-                    (sourceComment, targetComment) =>
+                .ConvertUsing(
+                    s => new Comment
                     {
-                        targetComment.Text = targetComment.Text.Trim();
-                    }
-                );
+                        Text = s.Text.Trim(),
+                        Location = this.mapper.Map<Location>(s.Location)
+                    });
 
             configurationStore.CreateMap<G.Step, Step>()
                 .ForMember(t => t.NativeKeyword, opt => opt.MapFrom(s => s.Keyword))
