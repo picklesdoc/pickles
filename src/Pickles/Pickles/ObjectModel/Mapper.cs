@@ -52,8 +52,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.DocString, string>().ConstructUsing(docString => docString.Content);
 
             configurationStore.CreateMap<G.Location, Location>()
-                .ForMember(t => t.Column, opt => opt.MapFrom(s => s.Column))
-                .ForMember(t => t.Line, opt => opt.MapFrom(s => s.Line));
+                .ConvertUsing(s => s != null ? new Location { Column = s.Column, Line = s.Line } : null);
 
             configurationStore.CreateMap<G.Comment, Comment>()
                 .ConvertUsing(
