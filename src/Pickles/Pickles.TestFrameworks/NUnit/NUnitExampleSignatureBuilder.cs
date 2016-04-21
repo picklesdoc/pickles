@@ -34,9 +34,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit
         {
             var stringBuilder = new StringBuilder();
 
-            var name = scenarioOutline.Name.ToLowerInvariant();
-            name = PunctuationCharactersRegex.Replace(name, "_");
-            name = NonIdentifierCharacterRegex.Replace(name, string.Empty);
+            var name = SpecFlowNameMapping.Build(scenarioOutline.Name.ToLowerInvariant());
             stringBuilder.Append(name).Append("\\(");
 
             foreach (string value in row)

@@ -143,7 +143,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
 
         private static string TransformName(string name)
         {
-            return name.Replace(" ", "").Replace(".", "_").ToUpperInvariant();
+            return SpecFlowNameMapping.Build(name).ToUpperInvariant();
         }
     }
 }
