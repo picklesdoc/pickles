@@ -78,7 +78,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 });
 
             configurationStore.CreateMap<G.Tag, string>()
-                .ConstructUsing(tag => tag.Name);
+                .ConvertUsing(tag => tag.Name);
 
             configurationStore.CreateMap<G.Scenario, Scenario>()
                 .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
