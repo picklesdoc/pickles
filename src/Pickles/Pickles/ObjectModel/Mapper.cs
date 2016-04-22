@@ -63,11 +63,15 @@ namespace PicklesDoc.Pickles.ObjectModel
                     });
 
             configurationStore.CreateMap<G.Step, Step>()
-                .ForMember(t => t.NativeKeyword, opt => opt.MapFrom(s => s.Keyword))
-                .ForMember(t => t.Name, opt => opt.MapFrom(s => s.Text))
-                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location))
-                .ForMember(t => t.DocStringArgument, opt => opt.MapFrom(s => s.Argument is G.DocString ? s.Argument : null))
-                .ForMember(t => t.TableArgument, opt => opt.MapFrom(s => s.Argument is G.DataTable ? s.Argument : null));
+                .ConvertUsing(s => new Step
+                {
+                    Location = this.mapper.Map<Location>(s.Location),
+                    DocStringArgument = s.Argument is G.DocString ? this.mapper.Map<string>((G.DocString) s.Argument) : null,
+                    Keyword = this.mapper.Map<Keyword>(s.Keyword),
+                    NativeKeyword = s.Keyword,
+                    Name = s.Text,
+                    TableArgument = s.Argument is G.DataTable ? this.mapper.Map<Table>((G.DataTable) s.Argument) : null,
+                });
 
             configurationStore.CreateMap<G.Tag, string>()
                 .ConstructUsing(tag => tag.Name);
