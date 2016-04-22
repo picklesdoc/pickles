@@ -46,12 +46,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 .ConstructUsing(this.MapToTableRow);
 
             configurationStore.CreateMap<G.DataTable, Table>()
-                .ConvertUsing(s => new Table
-                {
-                    HeaderRow = this.mapper.Map<TableRow>(s.Rows.First()),
-                    DataRows = this.mapper.Map<List<TableRow>>(s.Rows.Skip(1))
-                })
-                ;
+                .ConvertUsing(this.MapToTable);
 
             configurationStore.CreateMap<G.DocString, string>().ConstructUsing(docString => docString.Content);
 
@@ -197,7 +192,16 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Table MapToTable(G.DataTable dataTable)
         {
-            return this.mapper.Map<Table>(dataTable);
+            if (dataTable == null)
+            {
+                return null;
+            }
+
+            return new Table
+            {
+                HeaderRow = this.MapToTableRow(dataTable.Rows.First()),
+                DataRows = dataTable.Rows.Skip(1).Select(this.MapToTableRow).ToList()
+            };
         }
 
         public string MapToString(G.DocString docString)
