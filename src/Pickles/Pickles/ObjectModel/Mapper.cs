@@ -46,8 +46,12 @@ namespace PicklesDoc.Pickles.ObjectModel
                 .ConstructUsing(row => new TableRow(row.Cells.Select(this.mapper.Map<string>)));
 
             configurationStore.CreateMap<G.DataTable, Table>()
-                .ForMember(t => t.HeaderRow, opt => opt.MapFrom(dt => dt.Rows.Take(1).Single()))
-                .ForMember(t => t.DataRows, opt => opt.MapFrom(dt => dt.Rows.Skip(1)));
+                .ConvertUsing(s => new Table
+                {
+                    HeaderRow = this.mapper.Map<TableRow>(s.Rows.First()),
+                    DataRows = this.mapper.Map<List<TableRow>>(s.Rows.Skip(1))
+                })
+                ;
 
             configurationStore.CreateMap<G.DocString, string>().ConstructUsing(docString => docString.Content);
 
