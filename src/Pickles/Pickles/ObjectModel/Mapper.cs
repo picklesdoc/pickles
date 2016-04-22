@@ -39,14 +39,9 @@ namespace PicklesDoc.Pickles.ObjectModel
 
             configurationStore.CreateMap<string, Keyword>().ConvertUsing(new KeywordResolver(featureLanguage));
 
-            configurationStore.CreateMap<G.TableCell, string>()
-                .ConvertUsing(this.MapToString);
-
-            configurationStore.CreateMap<G.TableRow, TableRow>()
-                .ConstructUsing(this.MapToTableRow);
-
-            configurationStore.CreateMap<G.DataTable, Table>()
-                .ConvertUsing(this.MapToTable);
+            configurationStore.CreateMap<G.TableCell, string>().ConvertUsing(this.MapToString);
+            configurationStore.CreateMap<G.TableRow, TableRow>().ConstructUsing(this.MapToTableRow);
+            configurationStore.CreateMap<G.DataTable, Table>().ConvertUsing(this.MapToTable);
 
             configurationStore.CreateMap<G.DocString, string>().ConstructUsing(docString => docString.Content);
 
