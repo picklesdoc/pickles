@@ -78,7 +78,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 });
 
             configurationStore.CreateMap<G.Tag, string>()
-                .ConvertUsing(tag => tag.Name);
+                .ConvertUsing(this.MapToString);
 
             configurationStore.CreateMap<G.Scenario, Scenario>()
                 .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
@@ -212,7 +212,7 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public string MapToString(G.Tag tag)
         {
-            return this.mapper.Map<string>(tag);
+            return tag?.Name;
         }
 
         public Comment MapToComment(G.Comment comment)
