@@ -40,7 +40,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<string, Keyword>().ConvertUsing(new KeywordResolver(featureLanguage));
 
             configurationStore.CreateMap<G.TableCell, string>()
-                .ConvertUsing(cell => cell.Value);
+                .ConvertUsing(this.MapToString);
 
             configurationStore.CreateMap<G.TableRow, TableRow>()
                 .ConstructUsing(row => new TableRow(row.Cells.Select(this.mapper.Map<string>)));
@@ -182,7 +182,7 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public string MapToString(G.TableCell cell)
         {
-            return this.mapper.Map<string>(cell);
+            return cell?.Value;
         }
 
         public TableRow MapToTableRow(G.TableRow tableRow)
