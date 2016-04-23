@@ -45,17 +45,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.DocString, string>().ConvertUsing(this.MapToString);
             configurationStore.CreateMap<G.Location, Location>().ConvertUsing(this.MapToLocation);
             configurationStore.CreateMap<G.Comment, Comment>().ConvertUsing(this.MapToComment);
-
-            configurationStore.CreateMap<G.Step, Step>()
-                .ConvertUsing(s => new Step
-                {
-                    Location = this.mapper.Map<Location>(s.Location),
-                    DocStringArgument = s.Argument is G.DocString ? this.mapper.Map<string>((G.DocString) s.Argument) : null,
-                    Keyword = this.mapper.Map<Keyword>(s.Keyword),
-                    NativeKeyword = s.Keyword,
-                    Name = s.Text,
-                    TableArgument = s.Argument is G.DataTable ? this.mapper.Map<Table>((G.DataTable) s.Argument) : null,
-                });
+            configurationStore.CreateMap<G.Step, Step>().ConvertUsing(this.MapToStep);
 
             configurationStore.CreateMap<G.Tag, string>().ConvertUsing(this.MapToString);
 
@@ -195,7 +185,20 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Step MapToStep(G.Step step)
         {
-            return this.mapper.Map<Step>(step);
+            if (step == null)
+            {
+                return null;
+            }
+
+            return new Step
+            {
+                Location = this.mapper.Map<Location>(step.Location),
+                DocStringArgument = step.Argument is G.DocString ? this.mapper.Map<string>((G.DocString) step.Argument) : null,
+                Keyword = this.mapper.Map<Keyword>(step.Keyword),
+                NativeKeyword = step.Keyword,
+                Name = step.Text,
+                TableArgument = step.Argument is G.DataTable ? this.mapper.Map<Table>((G.DataTable) step.Argument) : null,
+            };
         }
 
         public Keyword MapToKeyword(string keyword)
