@@ -47,10 +47,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.Comment, Comment>().ConvertUsing(this.MapToComment);
             configurationStore.CreateMap<G.Step, Step>().ConvertUsing(this.MapToStep);
             configurationStore.CreateMap<G.Tag, string>().ConvertUsing(this.MapToString);
-
-            configurationStore.CreateMap<G.Scenario, Scenario>()
-                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
-                .ForMember(t => t.Location, opt => opt.MapFrom(s => s.Location));
+            configurationStore.CreateMap<G.Scenario, Scenario>().ConvertUsing(this.MapToScenario);
 
             configurationStore.CreateMap<IEnumerable<G.TableRow>, Table>()
                 .ForMember(t => t.HeaderRow, opt => opt.MapFrom(s => s.Take(1).Single()))
@@ -231,7 +228,19 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Scenario MapToScenario(G.Scenario scenario)
         {
-            return this.mapper.Map<Scenario>(scenario);
+            if (scenario == null)
+            {
+                return null;
+            }
+
+            return new Scenario
+            {
+                Description = scenario.Description ?? string.Empty,
+                Location = this.MapToLocation(scenario.Location),
+                Name = scenario.Name,
+                Steps = scenario.Steps.Select(this.MapToStep).ToList(),
+                Tags = scenario.Tags.Select(this.MapToString).ToList()
+            };
         }
 
         public Example MapToExample(G.Examples examples)
