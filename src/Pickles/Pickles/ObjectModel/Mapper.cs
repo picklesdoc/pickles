@@ -55,58 +55,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.ScenarioOutline, ScenarioOutline>().ConvertUsing(this.MapToScenarioOutline);
             configurationStore.CreateMap<G.Background, Scenario>().ConvertUsing(this.MapToScenario);
             configurationStore.CreateMap<G.ScenarioDefinition, IFeatureElement>().ConvertUsing(this.MapToFeatureElement);
-
-            configurationStore.CreateMap<G.GherkinDocument, Feature>()
-                .ForMember(t => t.Background, opt => opt.ResolveUsing(s => s.Feature.Children.SingleOrDefault(c => c is G.Background) as G.Background))
-                .ForMember(t => t.Comments, opt => opt.ResolveUsing(s => s.Comments))
-                .ForMember(t => t.Description, opt => opt.ResolveUsing(s => s.Feature.Description))
-                .ForMember(t => t.FeatureElements, opt => opt.ResolveUsing(s => s.Feature.Children.Where(c => !(c is G.Background))))
-                .ForMember(t => t.Name, opt => opt.ResolveUsing(s => s.Feature.Name))
-                .ForMember(t => t.Tags, opt => opt.ResolveUsing(s => s.Feature.Tags))
-
-
-                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
-                .AfterMap(
-                    (sourceFeature, targetFeature) =>
-                        {
-                            foreach (var comment in targetFeature.Comments.ToArray())
-                            {
-                                // Find the related feature
-                                var relatedFeatureElement = targetFeature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
-                                // Find the step to which the comment is related to
-                                if (relatedFeatureElement != null)
-                                {
-                                    var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
-                                    if (stepAfterComment != null)
-                                    {
-                                        // Comment is before a step
-                                        comment.Type = CommentType.StepComment;
-                                        stepAfterComment.Comments.Add(comment);
-                                    }
-                                    else
-                                    {
-                                        // Comment is located after the last step
-                                        var stepBeforeComment = relatedFeatureElement.Steps.LastOrDefault(x => x.Location.Line < comment.Location.Line);
-                                        if (stepBeforeComment != null && stepBeforeComment == relatedFeatureElement.Steps.Last())
-                                        {
-
-                                            comment.Type = CommentType.AfterLastStepComment;
-                                            stepBeforeComment.Comments.Add(comment);
-                                        }
-                                    }
-                                }
-                            }
-
-                            foreach (var featureElement in targetFeature.FeatureElements.ToArray())
-                            {
-                                featureElement.Feature = targetFeature;
-                            }
-
-                            if (targetFeature.Background != null)
-                            {
-                                targetFeature.Background.Feature = targetFeature;
-                            }
-                        });
+            configurationStore.CreateMap<G.GherkinDocument, Feature>().ConvertUsing(this.MapToFeature);
         }
 
         public string MapToString(G.TableCell cell)
@@ -296,7 +245,74 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Feature MapToFeature(G.GherkinDocument gherkinDocument)
         {
-            return this.mapper.Map<Feature>(gherkinDocument);
+            if (gherkinDocument == null)
+            {
+                return null;
+            }
+
+            var feature = new Feature();
+
+            var background = gherkinDocument.Feature.Children.SingleOrDefault(c => c is G.Background) as G.Background;
+            if (background != null)
+            {
+                feature.AddBackground(this.MapToScenario(background));
+            }
+
+            feature.Comments.AddRange((gherkinDocument.Comments ?? new G.Comment[0]).Select(this.MapToComment));
+
+            feature.Description = gherkinDocument.Feature.Description ?? string.Empty;
+
+            foreach (var featureElement in gherkinDocument.Feature.Children.Where(c => !(c is G.Background)))
+            {
+                feature.AddFeatureElement(this.MapToFeatureElement(featureElement));
+            }
+
+            feature.Name = gherkinDocument.Feature.Name;
+
+            foreach (var tag in gherkinDocument.Feature.Tags)
+            {
+                feature.AddTag(this.MapToString(tag));
+            }
+
+            foreach (var comment in feature.Comments.ToArray())
+            {
+                // Find the related feature
+                var relatedFeatureElement = feature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+                // Find the step to which the comment is related to
+                if (relatedFeatureElement != null)
+                {
+                    var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
+                    if (stepAfterComment != null)
+                    {
+                        // Comment is before a step
+                        comment.Type = CommentType.StepComment;
+                        stepAfterComment.Comments.Add(comment);
+                    }
+                    else
+                    {
+                        // Comment is located after the last step
+                        var stepBeforeComment = relatedFeatureElement.Steps.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+                        if (stepBeforeComment != null && stepBeforeComment == relatedFeatureElement.Steps.Last())
+                        {
+
+                            comment.Type = CommentType.AfterLastStepComment;
+                            stepBeforeComment.Comments.Add(comment);
+                        }
+                    }
+                }
+            }
+
+            foreach (var featureElement in feature.FeatureElements.ToArray())
+            {
+                featureElement.Feature = feature;
+            }
+
+            if (feature.Background != null)
+            {
+                feature.Background.Feature = feature;
+            }
+
+            return feature;
         }
 
         public void Dispose()
