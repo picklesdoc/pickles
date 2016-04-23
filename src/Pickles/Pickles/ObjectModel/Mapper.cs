@@ -46,7 +46,6 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.Location, Location>().ConvertUsing(this.MapToLocation);
             configurationStore.CreateMap<G.Comment, Comment>().ConvertUsing(this.MapToComment);
             configurationStore.CreateMap<G.Step, Step>().ConvertUsing(this.MapToStep);
-
             configurationStore.CreateMap<G.Tag, string>().ConvertUsing(this.MapToString);
 
             configurationStore.CreateMap<G.Scenario, Scenario>()
