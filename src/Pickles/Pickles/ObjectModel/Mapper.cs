@@ -44,14 +44,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.DataTable, Table>().ConvertUsing(this.MapToTable);
             configurationStore.CreateMap<G.DocString, string>().ConvertUsing(this.MapToString);
             configurationStore.CreateMap<G.Location, Location>().ConvertUsing(this.MapToLocation);
-
-            configurationStore.CreateMap<G.Comment, Comment>()
-                .ConvertUsing(
-                    s => new Comment
-                    {
-                        Text = s.Text.Trim(),
-                        Location = this.mapper.Map<Location>(s.Location)
-                    });
+            configurationStore.CreateMap<G.Comment, Comment>().ConvertUsing(this.MapToComment);
 
             configurationStore.CreateMap<G.Step, Step>()
                 .ConvertUsing(s => new Step
@@ -218,7 +211,16 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Comment MapToComment(G.Comment comment)
         {
-            return this.mapper.Map<Comment>(comment);
+            if (comment == null)
+            {
+                return null;
+            }
+
+            return new Comment
+            {
+                Text = comment.Text.Trim(),
+                Location = this.mapper.Map<Location>(comment.Location)
+            };
         }
 
         public Location MapToLocation(G.Location location)
