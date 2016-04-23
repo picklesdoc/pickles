@@ -84,7 +84,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         {
             var mapper = new Mapper();
 
-            Table result = mapper.MapToTable(null);
+            Table result = mapper.MapToTable((G.DataTable) null);
 
             Check.That(result).IsNull();
         }

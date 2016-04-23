@@ -48,10 +48,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.Step, Step>().ConvertUsing(this.MapToStep);
             configurationStore.CreateMap<G.Tag, string>().ConvertUsing(this.MapToString);
             configurationStore.CreateMap<G.Scenario, Scenario>().ConvertUsing(this.MapToScenario);
-
-            configurationStore.CreateMap<IEnumerable<G.TableRow>, Table>()
-                .ForMember(t => t.HeaderRow, opt => opt.MapFrom(s => s.Take(1).Single()))
-                .ForMember(t => t.DataRows, opt => opt.MapFrom(s => s.Skip(1)));
+            configurationStore.CreateMap<IEnumerable<G.TableRow>, Table>().ConvertUsing(this.MapToTable);
 
             configurationStore.CreateMap<G.Examples, Example>()
                 .ForMember(t => t.TableArgument, opt => opt.MapFrom(s => ((G.IHasRows)s).Rows));
@@ -167,10 +164,16 @@ namespace PicklesDoc.Pickles.ObjectModel
                 return null;
             }
 
+            var tableRows = dataTable.Rows;
+            return this.MapToTable(tableRows);
+        }
+
+        public Table MapToTable(IEnumerable<G.TableRow> tableRows)
+        {
             return new Table
             {
-                HeaderRow = this.MapToTableRow(dataTable.Rows.First()),
-                DataRows = dataTable.Rows.Skip(1).Select(this.MapToTableRow).ToList()
+                HeaderRow = this.MapToTableRow(tableRows.First()),
+                DataRows = tableRows.Skip(1).Select(this.MapToTableRow).ToList()
             };
         }
 
