@@ -21,8 +21,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
-using AutoMapper.Mappers;
 using G = Gherkin.Ast;
 
 namespace PicklesDoc.Pickles.ObjectModel
@@ -34,25 +32,6 @@ namespace PicklesDoc.Pickles.ObjectModel
         public Mapper(string featureLanguage = LanguageServices.DefaultLanguage)
         {
             this.languageServices = new LanguageServices(featureLanguage);
-
-            var configurationStore = new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers);
-
-            configurationStore.CreateMap<string, Keyword>().ConvertUsing(this.MapToKeyword);
-            configurationStore.CreateMap<G.TableCell, string>().ConvertUsing(this.MapToString);
-            configurationStore.CreateMap<G.TableRow, TableRow>().ConstructUsing(this.MapToTableRow);
-            configurationStore.CreateMap<G.DataTable, Table>().ConvertUsing(this.MapToTable);
-            configurationStore.CreateMap<G.DocString, string>().ConvertUsing(this.MapToString);
-            configurationStore.CreateMap<G.Location, Location>().ConvertUsing(this.MapToLocation);
-            configurationStore.CreateMap<G.Comment, Comment>().ConvertUsing(this.MapToComment);
-            configurationStore.CreateMap<G.Step, Step>().ConvertUsing(this.MapToStep);
-            configurationStore.CreateMap<G.Tag, string>().ConvertUsing(this.MapToString);
-            configurationStore.CreateMap<G.Scenario, Scenario>().ConvertUsing(this.MapToScenario);
-            configurationStore.CreateMap<IEnumerable<G.TableRow>, Table>().ConvertUsing(this.MapToTable);
-            configurationStore.CreateMap<G.Examples, Example>().ConvertUsing(this.MapToExample);
-            configurationStore.CreateMap<G.ScenarioOutline, ScenarioOutline>().ConvertUsing(this.MapToScenarioOutline);
-            configurationStore.CreateMap<G.Background, Scenario>().ConvertUsing(this.MapToScenario);
-            configurationStore.CreateMap<G.ScenarioDefinition, IFeatureElement>().ConvertUsing(this.MapToFeatureElement);
-            configurationStore.CreateMap<G.GherkinDocument, Feature>().ConvertUsing(this.MapToFeature);
         }
 
         public string MapToString(G.TableCell cell)
