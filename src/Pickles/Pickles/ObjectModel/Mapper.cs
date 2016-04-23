@@ -54,35 +54,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.Examples, Example>().ConvertUsing(this.MapToExample);
             configurationStore.CreateMap<G.ScenarioOutline, ScenarioOutline>().ConvertUsing(this.MapToScenarioOutline);
             configurationStore.CreateMap<G.Background, Scenario>().ConvertUsing(this.MapToScenario);
-
-            configurationStore.CreateMap<G.ScenarioDefinition, IFeatureElement>().ConvertUsing(
-                sd =>
-                {
-                    if (sd == null)
-                    {
-                        return null;
-                    }
-
-                    var scenario = sd as G.Scenario;
-                    if (scenario != null)
-                    {
-                        return this.mapper.Map<Scenario>(scenario);
-                    }
-
-                    var scenarioOutline = sd as G.ScenarioOutline;
-                    if (scenarioOutline != null)
-                    {
-                        return this.mapper.Map<ScenarioOutline>(scenarioOutline);
-                    }
-
-                    var background = sd as G.Background;
-                    if (background != null)
-                    {
-                        return this.mapper.Map<Scenario>(background);
-                    }
-
-                    throw new ArgumentException("Only arguments of type Scenario, ScenarioOutline and Background are supported.");
-                });
+            configurationStore.CreateMap<G.ScenarioDefinition, IFeatureElement>().ConvertUsing(this.MapToFeatureElement);
 
             configurationStore.CreateMap<G.GherkinDocument, Feature>()
                 .ForMember(t => t.Background, opt => opt.ResolveUsing(s => s.Feature.Children.SingleOrDefault(c => c is G.Background) as G.Background))
@@ -338,6 +310,34 @@ namespace PicklesDoc.Pickles.ObjectModel
             {
                 this.mapper.Dispose();
             }
+        }
+
+        private IFeatureElement MapToFeatureElement(G.ScenarioDefinition sd)
+        {
+            if (sd == null)
+            {
+                return null;
+            }
+
+            var scenario = sd as G.Scenario;
+            if (scenario != null)
+            {
+                return this.mapper.Map<Scenario>(scenario);
+            }
+
+            var scenarioOutline = sd as G.ScenarioOutline;
+            if (scenarioOutline != null)
+            {
+                return this.mapper.Map<ScenarioOutline>(scenarioOutline);
+            }
+
+            var background = sd as G.Background;
+            if (background != null)
+            {
+                return this.mapper.Map<Scenario>(background);
+            }
+
+            throw new ArgumentException("Only arguments of type Scenario, ScenarioOutline and Background are supported.");
         }
     }
 }
