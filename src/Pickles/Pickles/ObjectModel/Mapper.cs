@@ -29,7 +29,6 @@ namespace PicklesDoc.Pickles.ObjectModel
 {
     public class Mapper : IDisposable
     {
-        private readonly MappingEngine mapper;
         private readonly LanguageServices languageServices;
 
         public Mapper(string featureLanguage = LanguageServices.DefaultLanguage)
@@ -37,8 +36,6 @@ namespace PicklesDoc.Pickles.ObjectModel
             this.languageServices = new LanguageServices(featureLanguage);
 
             var configurationStore = new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers);
-
-            this.mapper = new MappingEngine(configurationStore);
 
             configurationStore.CreateMap<string, Keyword>().ConvertUsing(this.MapToKeyword);
             configurationStore.CreateMap<G.TableCell, string>().ConvertUsing(this.MapToString);
@@ -107,12 +104,12 @@ namespace PicklesDoc.Pickles.ObjectModel
 
             return new Step
             {
-                Location = this.mapper.Map<Location>(step.Location),
-                DocStringArgument = step.Argument is G.DocString ? this.mapper.Map<string>((G.DocString) step.Argument) : null,
-                Keyword = this.mapper.Map<Keyword>(step.Keyword),
+                Location = this.MapToLocation(step.Location),
+                DocStringArgument = step.Argument is G.DocString ? this.MapToString((G.DocString) step.Argument) : null,
+                Keyword = this.MapToKeyword(step.Keyword),
                 NativeKeyword = step.Keyword,
                 Name = step.Text,
-                TableArgument = step.Argument is G.DataTable ? this.mapper.Map<Table>((G.DataTable) step.Argument) : null,
+                TableArgument = step.Argument is G.DataTable ? this.MapToTable((G.DataTable) step.Argument) : null,
             };
         }
 
@@ -168,7 +165,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             return new Comment
             {
                 Text = comment.Text.Trim(),
-                Location = this.mapper.Map<Location>(comment.Location)
+                Location = this.MapToLocation(comment.Location)
             };
         }
 
@@ -324,7 +321,6 @@ namespace PicklesDoc.Pickles.ObjectModel
         {
             if (isDisposing)
             {
-                this.mapper.Dispose();
             }
         }
 
@@ -338,19 +334,19 @@ namespace PicklesDoc.Pickles.ObjectModel
             var scenario = sd as G.Scenario;
             if (scenario != null)
             {
-                return this.mapper.Map<Scenario>(scenario);
+                return this.MapToScenario(scenario);
             }
 
             var scenarioOutline = sd as G.ScenarioOutline;
             if (scenarioOutline != null)
             {
-                return this.mapper.Map<ScenarioOutline>(scenarioOutline);
+                return this.MapToScenarioOutline(scenarioOutline);
             }
 
             var background = sd as G.Background;
             if (background != null)
             {
-                return this.mapper.Map<Scenario>(background);
+                return this.MapToScenario(background);
             }
 
             throw new ArgumentException("Only arguments of type Scenario, ScenarioOutline and Background are supported.");
