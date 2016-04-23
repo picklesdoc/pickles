@@ -57,8 +57,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                     TableArgument = s.Argument is G.DataTable ? this.mapper.Map<Table>((G.DataTable) s.Argument) : null,
                 });
 
-            configurationStore.CreateMap<G.Tag, string>()
-                .ConvertUsing(this.MapToString);
+            configurationStore.CreateMap<G.Tag, string>().ConvertUsing(this.MapToString);
 
             configurationStore.CreateMap<G.Scenario, Scenario>()
                 .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
