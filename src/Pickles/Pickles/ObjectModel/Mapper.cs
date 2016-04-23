@@ -53,9 +53,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<IEnumerable<G.TableRow>, Table>().ConvertUsing(this.MapToTable);
             configurationStore.CreateMap<G.Examples, Example>().ConvertUsing(this.MapToExample);
             configurationStore.CreateMap<G.ScenarioOutline, ScenarioOutline>().ConvertUsing(this.MapToScenarioOutline);
-
-            configurationStore.CreateMap<G.Background, Scenario>()
-                .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty));
+            configurationStore.CreateMap<G.Background, Scenario>().ConvertUsing(this.MapToScenario);
 
             configurationStore.CreateMap<G.ScenarioDefinition, IFeatureElement>().ConvertUsing(
                 sd =>
@@ -310,7 +308,18 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Scenario MapToScenario(G.Background background)
         {
-            return this.mapper.Map<Scenario>(background);
+            if (background == null)
+            {
+                return null;
+            }
+
+            return new Scenario
+            {
+                Description = background.Description ?? string.Empty,
+                Location = this.MapToLocation(background.Location),
+                Name = background.Name,
+                Steps = background.Steps.Select(this.MapToStep).ToList(),
+            };
         }
 
         public Feature MapToFeature(G.GherkinDocument gherkinDocument)
