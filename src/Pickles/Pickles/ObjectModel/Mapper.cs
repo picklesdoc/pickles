@@ -27,7 +27,7 @@ using G = Gherkin.Ast;
 
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    public class Mapper : IDisposable
+    public class Mapper
     {
         private readonly LanguageServices languageServices;
 
@@ -310,18 +310,6 @@ namespace PicklesDoc.Pickles.ObjectModel
             }
 
             return feature;
-        }
-
-        public void Dispose()
-        {
-            this.Dispose(true);
-        }
-
-        protected virtual void Dispose(bool isDisposing)
-        {
-            if (isDisposing)
-            {
-            }
         }
 
         private IFeatureElement MapToFeatureElement(G.ScenarioDefinition sd)
