@@ -30,15 +30,17 @@ namespace PicklesDoc.Pickles.ObjectModel
     public class Mapper : IDisposable
     {
         private readonly MappingEngine mapper;
+        private readonly LanguageServices languageServices;
 
         public Mapper(string featureLanguage = LanguageServices.DefaultLanguage)
         {
+            this.languageServices = new LanguageServices(featureLanguage);
+
             var configurationStore = new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers);
 
             this.mapper = new MappingEngine(configurationStore);
 
-            configurationStore.CreateMap<string, Keyword>().ConvertUsing(new KeywordResolver(featureLanguage));
-
+            configurationStore.CreateMap<string, Keyword>().ConvertUsing(this.MapToKeyword);
             configurationStore.CreateMap<G.TableCell, string>().ConvertUsing(this.MapToString);
             configurationStore.CreateMap<G.TableRow, TableRow>().ConstructUsing(this.MapToTableRow);
             configurationStore.CreateMap<G.DataTable, Table>().ConvertUsing(this.MapToTable);
@@ -197,7 +199,39 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public Keyword MapToKeyword(string keyword)
         {
-            return this.mapper.Map<Keyword>(keyword);
+            if (keyword == null)
+            {
+                return default(Keyword);
+            }
+
+            keyword = keyword.Trim();
+
+            if (this.languageServices.WhenStepKeywords.Contains(keyword))
+            {
+                return Keyword.When;
+            }
+
+            if (this.languageServices.GivenStepKeywords.Contains(keyword))
+            {
+                return Keyword.Given;
+            }
+
+            if (this.languageServices.ThenStepKeywords.Contains(keyword))
+            {
+                return Keyword.Then;
+            }
+
+            if (this.languageServices.AndStepKeywords.Contains(keyword))
+            {
+                return Keyword.And;
+            }
+
+            if (this.languageServices.ButStepKeywords.Contains(keyword))
+            {
+                return Keyword.But;
+            }
+
+            throw new ArgumentOutOfRangeException("keyword");
         }
 
         public string MapToString(G.Tag tag)

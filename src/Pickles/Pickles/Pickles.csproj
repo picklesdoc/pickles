@@ -193,7 +193,6 @@
     <Compile Include="IMarkdownProvider.cs" />
     <Compile Include="LanguageServices.cs" />
     <Compile Include="MarkdownProvider.cs" />
-    <Compile Include="ObjectModel\KeywordResolver.cs" />
     <Compile Include="ObjectModel\Mapper.cs" />
     <Compile Include="DirectoryCrawler\DirectoryTreeCrawler.cs" />
     <Compile Include="FeatureParser.cs" />
