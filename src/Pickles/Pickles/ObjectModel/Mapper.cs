@@ -42,8 +42,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             configurationStore.CreateMap<G.TableCell, string>().ConvertUsing(this.MapToString);
             configurationStore.CreateMap<G.TableRow, TableRow>().ConstructUsing(this.MapToTableRow);
             configurationStore.CreateMap<G.DataTable, Table>().ConvertUsing(this.MapToTable);
-
-            configurationStore.CreateMap<G.DocString, string>().ConstructUsing(docString => docString.Content);
+            configurationStore.CreateMap<G.DocString, string>().ConvertUsing(this.MapToString);
 
             configurationStore.CreateMap<G.Location, Location>()
                 .ConvertUsing(s => s != null ? new Location { Column = s.Column, Line = s.Line } : null);
@@ -201,7 +200,7 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public string MapToString(G.DocString docString)
         {
-            return this.mapper.Map<string>(docString);
+            return docString?.Content;
         }
 
         public Step MapToStep(G.Step step)
