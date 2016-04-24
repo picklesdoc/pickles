@@ -1,89 +1,365 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <assemblies>
-  <assembly name="C:\src\pickles-testresults\TestHarness\xunit2\bin\Debug\xunit2Harness.DLL" environment="64-bit .NET 4.0.30319.42000 [collection-per-class, non-parallel]" test-framework="xUnit.net 2.1.0.3179" run-date="2016-02-29" run-time="13:31:15" config-file="C:\src\pickles-testresults\TestHarness\xunit2\bin\Debug\xunit2Harness.dll.config" total="35" passed="17" failed="17" skipped="1" time="0.922" errors="0">
+  <assembly name="D:\Work\pickles-testresults\TestHarness\xunit2\bin\Debug\xunit2Harness.DLL" environment="64-bit .NET 4.0.30319.42000 [collection-per-class, non-parallel]" test-framework="xUnit.net 2.1.0.3179" run-date="2016-04-26" run-time="00:40:53" config-file="D:\Work\pickles-testresults\TestHarness\xunit2\bin\Debug\xunit2Harness.dll.config" total="37" passed="19" failed="17" skipped="1" time="1.726" errors="0">
     <errors />
-    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.FailingBackgroundFeature" time="0.097">
-      <test name="Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.FailingBackgroundFeature" method="AddingSeveralNumbers" time="0.0858221" result="Fail">
+    <collection total="17" passed="11" failed="6" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" time="0.062">
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" time="0.0033965" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where all scenarios pass" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" time="0.0020777" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where all scenarios pass" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_3&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" time="0.0020306" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where all scenarios pass" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" time="0.0023487" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where one scenario fails" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" time="0.0032682" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where one scenario fails" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;fail_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" time="0.0067292" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where one scenario fails" />
+        </traits>
+        <failure exception-type="Shouldly.ChuckedAWobbly">
+          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in D:\Work\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:Zeile 21.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:Zeile 34.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" time="0.0088421" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where one scenario is inconclusive" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" time="0.0021397" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where one scenario is inconclusive" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;inconclusive_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" time="0.0033886" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="This is a scenario outline where one scenario is inconclusive" />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:Zeile 21.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0024545" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0020786" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;inconclusive_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0035733" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:Zeile 45.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;inconclusive_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.003347" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_2")]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:Zeile 45.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;fail_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0031581" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
+        </traits>
+        <failure exception-type="Shouldly.ChuckedAWobbly">
+          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in D:\Work\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:Zeile 21.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:Zeile 45.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;fail_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0031432" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
+        </traits>
+        <failure exception-type="Shouldly.ChuckedAWobbly">
+          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in D:\Work\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:Zeile 21.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:Zeile 45.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples(description: &quot;This is a description (and more)&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="DealCorrectlyWithParenthesisInTheExamples" time="0.0057108" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="Deal correctly with parenthesis in the examples" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples(filePath: &quot;c:\Temp\&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="DealCorrectlyWithBackslashesInTheExamples" time="0.0043118" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenario Outlines" />
+          <trait name="Description" value="Deal correctly with backslashes in the examples" />
+        </traits>
+      </test>
+    </collection>
+    <collection total="3" passed="1" failed="2" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" time="0.156">
+      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" method="FailingFeaturePassingScenario" time="0.0024076" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Failing" />
+          <trait name="Description" value="Failing Feature Passing Scenario" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" method="FailingFeatureFailingScenario" time="0.1505908" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Failing" />
+          <trait name="Description" value="Failing Feature Failing Scenario" />
+        </traits>
+        <failure exception-type="Shouldly.ChuckedAWobbly">
+          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.MinimalFeatures.MinimalSteps.ThenFailingStep() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\MinimalFeatures\MinimalSteps.cs:Zeile 24.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in D:\Work\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature:Zeile 10.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" method="FailingFeatureInconclusiveScenario" time="0.0027648" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Failing" />
+          <trait name="Description" value="Failing Feature Inconclusive Scenario" />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  MinimalSteps.ThenInconclusiveStep()]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario() in D:\Work\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature:Zeile 7.]]></stack-trace>
+        </failure>
+      </test>
+    </collection>
+    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" time="0.067">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" time="0.0253361" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenarios With Special Characters" />
+          <trait name="Description" value="This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" time="0.0413514" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Scenarios With Special Characters" />
+          <trait name="Description" value="This is a scenario with parentheses, hyphen and comma (10-20, 30-40)" />
+        </traits>
+      </test>
+    </collection>
+    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.FailingBackgroundFeature" time="0.039">
+      <test name="Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.FailingBackgroundFeature" method="AddingSeveralNumbers" time="0.0153532" result="Fail">
         <traits>
           <trait name="FeatureTitle" value="Failing Background" />
           <trait name="Description" value="Adding several numbers" />
         </traits>
         <failure exception-type="Shouldly.ChuckedAWobbly">
           <message><![CDATA[Shouldly.ChuckedAWobbly : \n    1\n        should be\n    2\n        but was\n    1]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\src\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:line 25
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.FailingBackgroundFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\FailingBackground.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\FailingBackground.feature:line 19]]></stack-trace>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\FailingBackground.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\FailingBackground.feature:Zeile 19.]]></stack-trace>
         </failure>
       </test>
-      <test name="Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.FailingBackgroundFeature" method="AddingSeveralNumbers" time="0.0067753" result="Fail">
+      <test name="Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.FailingBackgroundFeature" method="AddingSeveralNumbers" time="0.0130668" result="Fail">
         <traits>
           <trait name="FeatureTitle" value="Failing Background" />
           <trait name="Description" value="Adding several numbers" />
         </traits>
         <failure exception-type="Shouldly.ChuckedAWobbly">
           <message><![CDATA[Shouldly.ChuckedAWobbly : \n    1\n        should be\n    2\n        but was\n    1]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\src\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:line 25
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.FailingBackgroundFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\FailingBackground.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\FailingBackground.feature:line 19]]></stack-trace>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\FailingBackground.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit2\FailingBackground.feature:Zeile 19.]]></stack-trace>
         </failure>
       </test>
-      <test name="Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit2.FailingBackgroundFeature" method="AddTwoNumbers" time="0.0048399" result="Fail">
+      <test name="Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit2.FailingBackgroundFeature" method="AddTwoNumbers" time="0.0107427" result="Fail">
         <traits>
           <trait name="FeatureTitle" value="Failing Background" />
           <trait name="Description" value="Add two numbers" />
         </traits>
         <failure exception-type="Shouldly.ChuckedAWobbly">
           <message><![CDATA[Shouldly.ChuckedAWobbly : \n    1\n        should be\n    2\n        but was\n    1]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\src\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:line 25
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.FailingBackgroundFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\FailingBackground.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddTwoNumbers() in C:\src\pickles-testresults\TestHarness\xunit2\FailingBackground.feature:line 12]]></stack-trace>
+          <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\FailingBackground.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.FailingBackgroundFeature.AddTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit2\FailingBackground.feature:Zeile 12.]]></stack-trace>
         </failure>
       </test>
     </collection>
-    <collection total="6" passed="3" failed="2" skipped="1" name="Test collection for Pickles.TestHarness.xunit2.AdditionFeature" time="0.021">
-      <test name="Pickles.TestHarness.xunit2.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.AdditionFeature" method="AddingSeveralNumbers" time="0.006154" result="Pass">
+    <collection total="2" passed="1" failed="1" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature" time="0.221">
+      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.InconclusiveFeaturePassingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature" method="InconclusiveFeaturePassingScenario" time="0.165995" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Inconclusive" />
+          <trait name="Description" value="Inconclusive Feature Passing Scenario" />
+        </traits>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature" method="InconclusiveFeatureInconclusiveScenario" time="0.0551102" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Inconclusive" />
+          <trait name="Description" value="Inconclusive Feature Inconclusive Scenario" />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  MinimalSteps.ThenInconclusiveStep()]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\Minimal Features\Inconclusive.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario() in D:\Work\pickles-testresults\TestHarness\xunit2\Minimal Features\Inconclusive.feature:Zeile 7.]]></stack-trace>
+        </failure>
+      </test>
+    </collection>
+    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" time="0.169">
+      <test name="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario2" type="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" method="NotAutomatedScenario2" time="0.115866" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Not Automated At All" />
+          <trait name="Description" value="Not automated scenario 2" />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario2() in D:\Work\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature:Zeile 14.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario3" type="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" method="NotAutomatedScenario3" time="0.0266974" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Not Automated At All" />
+          <trait name="Description" value="Not automated scenario 3" />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario3() in D:\Work\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature:Zeile 19.]]></stack-trace>
+        </failure>
+      </test>
+      <test name="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario1" type="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" method="NotAutomatedScenario1" time="0.0261464" result="Fail">
+        <traits>
+          <trait name="FeatureTitle" value="Not Automated At All" />
+          <trait name="Description" value="Not automated scenario 1" />
+        </traits>
+        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
+          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario1() in D:\Work\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature:Zeile 9.]]></stack-trace>
+        </failure>
+      </test>
+    </collection>
+    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.MinimalFeatures.PassingFeature" time="0.002">
+      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.PassingFeature.PassingFeaturePassingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.PassingFeature" method="PassingFeaturePassingScenario" time="0.0021794" result="Pass">
+        <traits>
+          <trait name="FeatureTitle" value="Passing" />
+          <trait name="Description" value="Passing Feature Passing Scenario" />
+        </traits>
+      </test>
+    </collection>
+    <collection total="6" passed="3" failed="2" skipped="1" name="Test collection for Pickles.TestHarness.xunit2.AdditionFeature" time="0.075">
+      <test name="Pickles.TestHarness.xunit2.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.AdditionFeature" method="AddingSeveralNumbers" time="0.0152651" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Addition" />
           <trait name="Description" value="Adding several numbers" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.AdditionFeature" method="AddingSeveralNumbers" time="0.0019932" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.AdditionFeature" method="AddingSeveralNumbers" time="0.0135082" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Addition" />
           <trait name="Description" value="Adding several numbers" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.AdditionFeature.NotAutomatedAddingTwoNumbers" type="Pickles.TestHarness.xunit2.AdditionFeature" method="NotAutomatedAddingTwoNumbers" time="0.0066196" result="Fail">
+      <test name="Pickles.TestHarness.xunit2.AdditionFeature.NotAutomatedAddingTwoNumbers" type="Pickles.TestHarness.xunit2.AdditionFeature" method="NotAutomatedAddingTwoNumbers" time="0.0201924" result="Fail">
         <traits>
           <trait name="FeatureTitle" value="Addition" />
           <trait name="Description" value="Not automated adding two numbers" />
         </traits>
         <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
           <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.AdditionFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\Addition.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.AdditionFeature.NotAutomatedAddingTwoNumbers() in C:\src\pickles-testresults\TestHarness\xunit2\Addition.feature:line 46]]></stack-trace>
+          <stack-trace><![CDATA[   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit2.AdditionFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\Addition.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.AdditionFeature.NotAutomatedAddingTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit2\Addition.feature:Zeile 46.]]></stack-trace>
         </failure>
       </test>
-      <test name="Pickles.TestHarness.xunit2.AdditionFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit2.AdditionFeature" method="AddTwoNumbers" time="0.0020522" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.AdditionFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit2.AdditionFeature" method="AddTwoNumbers" time="0.0117144" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Addition" />
           <trait name="Description" value="Add two numbers" />
@@ -96,288 +372,26 @@
         </traits>
         <reason><![CDATA[Ignored]]></reason>
       </test>
-      <test name="Pickles.TestHarness.xunit2.AdditionFeature.FailToAddTwoNumbers" type="Pickles.TestHarness.xunit2.AdditionFeature" method="FailToAddTwoNumbers" time="0.0038321" result="Fail">
+      <test name="Pickles.TestHarness.xunit2.AdditionFeature.FailToAddTwoNumbers" type="Pickles.TestHarness.xunit2.AdditionFeature" method="FailToAddTwoNumbers" time="0.0140861" result="Fail">
         <traits>
           <trait name="FeatureTitle" value="Addition" />
           <trait name="Description" value="Fail to add two numbers" />
         </traits>
         <failure exception-type="System.FormatException">
-          <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
-          <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
-   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
-   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
-   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
-   at System.Linq.Enumerable.<SelectIterator>d__5`2.MoveNext()
-   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
-   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.GetExecuteArguments(BindingMatch match)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.AdditionFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\Addition.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.AdditionFeature.FailToAddTwoNumbers() in C:\src\pickles-testresults\TestHarness\xunit2\Addition.feature:line 34]]></stack-trace>
+          <message><![CDATA[System.FormatException : Die Eingabezeichenfolge hat das falsche Format.]]></message>
+          <stack-trace><![CDATA[   bei System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   bei System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bei System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   bei System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   bei System.Linq.Enumerable.<SelectIterator>d__5`2.MoveNext()
+   bei System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   bei System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.GetExecuteArguments(BindingMatch match)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit2.AdditionFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit2\Addition.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit2.AdditionFeature.FailToAddTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit2\Addition.feature:Zeile 34.]]></stack-trace>
         </failure>
-      </test>
-    </collection>
-    <collection total="2" passed="1" failed="1" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature" time="0.004">
-      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.InconclusiveFeaturePassingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature" method="InconclusiveFeaturePassingScenario" time="0.0012419" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Inconclusive" />
-          <trait name="Description" value="Inconclusive Feature Passing Scenario" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature" method="InconclusiveFeatureInconclusiveScenario" time="0.0025451" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Inconclusive" />
-          <trait name="Description" value="Inconclusive Feature Inconclusive Scenario" />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  MinimalSteps.ThenInconclusiveStep()]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\Minimal Features\Inconclusive.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario() in C:\src\pickles-testresults\TestHarness\xunit2\Minimal Features\Inconclusive.feature:line 7]]></stack-trace>
-        </failure>
-      </test>
-    </collection>
-    <collection total="17" passed="11" failed="6" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" time="0.033">
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" time="0.0038048" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where all scenarios pass" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" time="0.0004233" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where all scenarios pass" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_3&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" time="0.0005659" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where all scenarios pass" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" time="0.0005764" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where one scenario fails" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" time="0.0003229" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where one scenario fails" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;fail_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" time="0.0070835" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where one scenario fails" />
-        </traits>
-        <failure exception-type="Shouldly.ChuckedAWobbly">
-          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\src\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:line 34]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" time="0.0006553" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where one scenario is inconclusive" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" time="0.0003766" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where one scenario is inconclusive" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;inconclusive_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" time="0.0073032" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="This is a scenario outline where one scenario is inconclusive" />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:line 21]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0007401" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0005" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;inconclusive_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0015254" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:line 45]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;inconclusive_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0016901" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_2")]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:line 45]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;fail_1&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0026199" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
-        </traits>
-        <failure exception-type="Shouldly.ChuckedAWobbly">
-          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\src\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:line 45]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;fail_2&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" time="0.0026273" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="And we can go totally bonkers with multiple example sections." />
-        </traits>
-        <failure exception-type="Shouldly.ChuckedAWobbly">
-          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\src\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\src\pickles-testresults\TestHarness\xunit2\ScenarioOutlines.feature:line 45]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples(description: &quot;This is a description (and more)&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="DealCorrectlyWithParenthesisInTheExamples" time="0.0014107" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="Deal correctly with parenthesis in the examples" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples(filePath: &quot;c:\Temp\&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenarioOutlinesFeature" method="DealCorrectlyWithBackslashesInTheExamples" time="0.0009254" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Scenario Outlines" />
-          <trait name="Description" value="Deal correctly with backslashes in the examples" />
-        </traits>
-      </test>
-    </collection>
-    <collection total="3" passed="1" failed="2" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" time="0.006">
-      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" method="FailingFeaturePassingScenario" time="0.001077" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Failing" />
-          <trait name="Description" value="Failing Feature Passing Scenario" />
-        </traits>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" method="FailingFeatureFailingScenario" time="0.0031601" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Failing" />
-          <trait name="Description" value="Failing Feature Failing Scenario" />
-        </traits>
-        <failure exception-type="Shouldly.ChuckedAWobbly">
-          <message><![CDATA[Shouldly.ChuckedAWobbly : \n    true\n        should be\n    False\n        but was\n    True]]></message>
-          <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
-   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.MinimalFeatures.MinimalSteps.ThenFailingStep() in C:\src\pickles-testresults\TestHarness\AutomationLayer\MinimalFeatures\MinimalSteps.cs:line 24
-   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   at Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in C:\src\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature:line 10]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature" method="FailingFeatureInconclusiveScenario" time="0.0019713" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Failing" />
-          <trait name="Description" value="Failing Feature Inconclusive Scenario" />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.\r\n  MinimalSteps.ThenInconclusiveStep()]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario() in C:\src\pickles-testresults\TestHarness\xunit2\Minimal Features\Failing.feature:line 7]]></stack-trace>
-        </failure>
-      </test>
-    </collection>
-    <collection total="3" passed="0" failed="3" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" time="0.102">
-      <test name="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario2" type="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" method="NotAutomatedScenario2" time="0.0862641" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Not Automated At All" />
-          <trait name="Description" value="Not automated scenario 2" />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario2() in C:\src\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature:line 14]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario3" type="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" method="NotAutomatedScenario3" time="0.007645" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Not Automated At All" />
-          <trait name="Description" value="Not automated scenario 3" />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario3() in C:\src\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature:line 19]]></stack-trace>
-        </failure>
-      </test>
-      <test name="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario1" type="Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature" method="NotAutomatedScenario1" time="0.0080992" result="Fail">
-        <traits>
-          <trait name="FeatureTitle" value="Not Automated At All" />
-          <trait name="Description" value="Not automated scenario 1" />
-        </traits>
-        <failure exception-type="TechTalk.SpecFlow.SpecFlowException">
-          <message><![CDATA[TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.\r\nusing System;\r\nusing TechTalk.SpecFlow;\r\n\r\nnamespace MyNamespace\r\n{\r\n    [Binding]\r\n    public class StepDefinitions\r\n    {\r\n        [Given(@"unimplemented step")]\r\n        public void GivenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [When(@"unimplemented step")]\r\n        public void WhenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n        \r\n        [Then(@"unimplemented step")]\r\n        public void ThenUnimplementedStep()\r\n        {\r\n            ScenarioContext.Current.Pending();\r\n        }\r\n    }\r\n}\r\n]]></message>
-          <stack-trace><![CDATA[   at TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   at Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.ScenarioCleanup() in C:\src\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature.cs:line 0
-   at Pickles.TestHarness.xunit2.NotAutomatedAtAllFeature.NotAutomatedScenario1() in C:\src\pickles-testresults\TestHarness\xunit2\NotAutomatedAtAll.feature:line 9]]></stack-trace>
-        </failure>
-      </test>
-    </collection>
-    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for Pickles.TestHarness.xunit2.MinimalFeatures.PassingFeature" time="0.124">
-      <test name="Pickles.TestHarness.xunit2.MinimalFeatures.PassingFeature.PassingFeaturePassingScenario" type="Pickles.TestHarness.xunit2.MinimalFeatures.PassingFeature" method="PassingFeaturePassingScenario" time="0.1237773" result="Pass">
-        <traits>
-          <trait name="FeatureTitle" value="Passing" />
-          <trait name="Description" value="Passing Feature Passing Scenario" />
-        </traits>
       </test>
     </collection>
   </assembly>

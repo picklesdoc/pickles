@@ -5,7 +5,7 @@
     "description": "In order to avoid silly mistakes\r\nAs a math idiot\r\nI want to be told the sum of two numbers",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/Addition.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/Addition.feature",
     "elements": [
       {
         "name": "",
@@ -41,9 +41,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 699285
+              "duration": 19430688
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 60 into the calculator",
@@ -51,9 +53,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 367430
+              "duration": 1440123
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 70 into the calculator",
@@ -61,9 +65,11 @@
             "keyword": "And ",
             "result": {
               "status": "passed",
-              "duration": 48668
+              "duration": 267312
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 130 into the calculator",
@@ -71,9 +77,11 @@
             "keyword": "And ",
             "result": {
               "status": "passed",
-              "duration": 48952
+              "duration": 224858
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I press add",
@@ -81,9 +89,11 @@
             "keyword": "When ",
             "result": {
               "status": "passed",
-              "duration": 151412
+              "duration": 526225
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 260 on the screen",
@@ -91,9 +101,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 97906
+              "duration": 435256
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       },
@@ -117,9 +129,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 75706
+              "duration": 308830
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 40 into the calculator",
@@ -127,9 +141,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 40414
+              "duration": 232789
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 50 into the calculator",
@@ -137,9 +153,11 @@
             "keyword": "And ",
             "result": {
               "status": "passed",
-              "duration": 37284
+              "duration": 229523
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 90 into the calculator",
@@ -147,9 +165,11 @@
             "keyword": "And ",
             "result": {
               "status": "passed",
-              "duration": 58060
+              "duration": 220660
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I press add",
@@ -157,9 +177,11 @@
             "keyword": "When ",
             "result": {
               "status": "passed",
-              "duration": 198942
+              "duration": 318628
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 180 on the screen",
@@ -167,9 +189,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 48099
+              "duration": 248185
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       },
@@ -193,9 +217,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 53506
+              "duration": 156282
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 1 into the calculator",
@@ -203,9 +229,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 40415
+              "duration": 125026
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 2 into the calculator",
@@ -213,9 +241,11 @@
             "keyword": "And ",
             "result": {
               "status": "passed",
-              "duration": 36999
+              "duration": 133423
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I press add",
@@ -223,9 +253,11 @@
             "keyword": "When ",
             "result": {
               "status": "passed",
-              "duration": 39845
+              "duration": 118961
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 3 on the screen",
@@ -233,9 +265,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 37853
+              "duration": 125025
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       },
@@ -259,9 +293,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 48668
+              "duration": 2251386
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 1 into the calculator",
@@ -269,9 +305,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 36430
+              "duration": 134356
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 2.2 into the calculator",
@@ -279,8 +317,7 @@
             "keyword": "And ",
             "result": {
               "status": "ambiguous"
-            },
-            "match": {}
+            }
           },
           {
             "name": "I press add",
@@ -289,7 +326,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 3.2 on the screen",
@@ -298,7 +337,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       },
@@ -316,9 +357,11 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 76845
+              "duration": 193603
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "unimplemented step",
@@ -326,8 +369,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -335,8 +377,7 @@
             "keyword": "When ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -344,8 +385,7 @@
             "keyword": "Then ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           }
         ]
       }
@@ -357,7 +397,7 @@
     "description": "This feature has a failing background.",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/FailingBackground.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/FailingBackground.feature",
     "elements": [
       {
         "name": "",
@@ -392,10 +432,12 @@
             "keyword": "Given ",
             "result": {
               "status": "failed",
-              "duration": 1630811,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 1713498,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
+            }
           },
           {
             "name": "the calculator has clean memory",
@@ -404,7 +446,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 50 into the calculator",
@@ -413,7 +457,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 70 into the calculator",
@@ -422,7 +468,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I press add",
@@ -431,7 +479,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 120 on the screen",
@@ -440,7 +490,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       },
@@ -458,10 +510,12 @@
             "keyword": "Given ",
             "result": {
               "status": "failed",
-              "duration": 383654,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 309297,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
+            }
           },
           {
             "name": "the calculator has clean memory",
@@ -470,7 +524,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 60 into the calculator",
@@ -479,7 +535,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 70 into the calculator",
@@ -488,7 +546,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 130 into the calculator",
@@ -497,7 +557,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I press add",
@@ -506,7 +568,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 260 on the screen",
@@ -515,7 +579,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       },
@@ -533,10 +599,12 @@
             "keyword": "Given ",
             "result": {
               "status": "failed",
-              "duration": 346939,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 171209,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
+            }
           },
           {
             "name": "the calculator has clean memory",
@@ -545,7 +613,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
           },
           {
             "name": "I have entered 40 into the calculator",
@@ -554,7 +624,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 50 into the calculator",
@@ -563,7 +635,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I have entered 90 into the calculator",
@@ -572,7 +646,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
           },
           {
             "name": "I press add",
@@ -581,7 +657,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
           },
           {
             "name": "the result should be 180 on the screen",
@@ -590,7 +668,9 @@
             "result": {
               "status": "skipped"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
           }
         ]
       }
@@ -602,7 +682,7 @@
     "description": "",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/Minimal Features/Failing.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/Minimal Features/Failing.feature",
     "elements": [
       {
         "name": "Failing Feature Passing Scenario",
@@ -618,9 +698,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 120390
+              "duration": 208997
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
+            }
           }
         ]
       },
@@ -639,7 +721,9 @@
             "result": {
               "status": "pending"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:12"
+            }
           }
         ]
       },
@@ -657,10 +741,12 @@
             "keyword": "Then ",
             "result": {
               "status": "failed",
-              "duration": 223418,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 197801,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:18:12)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:17"
+            }
           }
         ]
       }
@@ -672,7 +758,7 @@
     "description": "",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/Minimal Features/Inconclusive.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/Minimal Features/Inconclusive.feature",
     "elements": [
       {
         "name": "Inconclusive Feature Passing Scenario",
@@ -688,9 +774,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 44114
+              "duration": 190803
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
+            }
           }
         ]
       },
@@ -709,7 +797,9 @@
             "result": {
               "status": "pending"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:12"
+            }
           }
         ]
       }
@@ -721,7 +811,7 @@
     "description": "",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/Minimal Features/Passing.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/Minimal Features/Passing.feature",
     "elements": [
       {
         "name": "Passing Feature Passing Scenario",
@@ -737,9 +827,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 60622
+              "duration": 121760
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
+            }
           }
         ]
       }
@@ -751,7 +843,7 @@
     "description": "",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/NotAutomatedAtAll.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/NotAutomatedAtAll.feature",
     "elements": [
       {
         "name": "",
@@ -781,8 +873,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -790,8 +881,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -799,8 +889,7 @@
             "keyword": "When ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -808,8 +897,7 @@
             "keyword": "Then ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           }
         ]
       },
@@ -827,8 +915,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -836,8 +923,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -845,8 +931,7 @@
             "keyword": "When ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -854,8 +939,7 @@
             "keyword": "Then ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           }
         ]
       },
@@ -873,8 +957,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -882,8 +965,7 @@
             "keyword": "Given ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -891,8 +973,7 @@
             "keyword": "When ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           },
           {
             "name": "unimplemented step",
@@ -900,8 +981,7 @@
             "keyword": "Then ",
             "result": {
               "status": "undefined"
-            },
-            "match": {}
+            }
           }
         ]
       }
@@ -913,7 +993,7 @@
     "description": "Here we demonstrate how we deal with scenario outlines",
     "line": 1,
     "keyword": "Feature",
-    "uri": "C:/src/pickles-testresults/TestHarness/CucumberJS/features/ScenarioOutlines.feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/ScenarioOutlines.feature",
     "elements": [
       {
         "name": "This is a scenario outline where all scenarios pass",
@@ -929,9 +1009,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 96482
+              "duration": 210397
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -949,9 +1031,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 36145
+              "duration": 107297
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -969,9 +1053,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 33583
+              "duration": 113362
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -989,9 +1075,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 34437
+              "duration": 116629
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -1009,9 +1097,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 45538
+              "duration": 122693
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -1030,7 +1120,9 @@
             "result": {
               "status": "pending"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
+            }
           }
         ]
       },
@@ -1048,9 +1140,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 39845
+              "duration": 102633
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -1068,9 +1162,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 36430
+              "duration": 101233
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -1088,10 +1184,12 @@
             "keyword": "Then ",
             "result": {
               "status": "failed",
-              "duration": 287740,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 279907,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
+            }
           }
         ]
       },
@@ -1109,9 +1207,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 37853
+              "duration": 125025
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -1129,9 +1229,11 @@
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 36430
+              "duration": 104033
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       },
@@ -1150,7 +1252,9 @@
             "result": {
               "status": "pending"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
+            }
           }
         ]
       },
@@ -1169,7 +1273,9 @@
             "result": {
               "status": "pending"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
+            }
           }
         ]
       },
@@ -1187,10 +1293,12 @@
             "keyword": "Then ",
             "result": {
               "status": "failed",
-              "duration": 499489,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 167944,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
+            }
           }
         ]
       },
@@ -1208,10 +1316,12 @@
             "keyword": "Then ",
             "result": {
               "status": "failed",
-              "duration": 353200,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\src\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 178674,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at nextTickCallbackWith0Args (node.js:420:9)\n    at process._tickCallback (node.js:349:13)\n    at Function.Module.runMain (module.js:443:11)\n    at startup (node.js:139:18)"
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
+            }
           }
         ]
       },
@@ -1229,9 +1339,11 @@
             "keyword": "When ",
             "result": {
               "status": "passed",
-              "duration": 142020
+              "duration": 188005
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:22"
+            }
           }
         ]
       },
@@ -1249,9 +1361,139 @@
             "keyword": "When ",
             "result": {
               "status": "passed",
-              "duration": 78837
+              "duration": 147418
             },
-            "match": {}
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:27"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "Scenarios-With-Special-Characters",
+    "name": "Scenarios With Special Characters",
+    "description": "Here we demonstrate usage of special characters in scenario names",
+    "line": 1,
+    "keyword": "Feature",
+    "uri": "D:/Work/pickles-testresults/TestHarness/CucumberJS/features/ScenariosWithSpecialCharacters.feature",
+    "elements": [
+      {
+        "name": "",
+        "keyword": "Background",
+        "description": "",
+        "type": "background",
+        "line": 4,
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "name": "This is a scenario with parentheses, hyphen and comma (10-20, 30-40)",
+        "id": "Scenarios-With-Special-Characters;this-is-a-scenario-with-parentheses,-hyphen-and-comma-(10-20,-30-40)",
+        "line": 7,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 198267
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have entered 50 into the calculator",
+            "line": 8,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 118494
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
+          },
+          {
+            "name": "I have entered 70 into the calculator",
+            "line": 9,
+            "keyword": "And ",
+            "result": {
+              "status": "passed",
+              "duration": 102166
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+            }
+          },
+          {
+            "name": "I press add",
+            "line": 10,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 112430
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+            }
+          },
+          {
+            "name": "the result should be 120 on the screen",
+            "line": 11,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 100767
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)",
+        "id": "Scenarios-With-Special-Characters;this-is-a-scenario-outline-with-parentheses,-hyphen-and-comma-(10-20,-30-40)",
+        "line": 19,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 149284
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 15,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 106364
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
           }
         ]
       }

@@ -99,7 +99,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 38622000
             }
           }
         ]
@@ -330,7 +330,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 500000
             }
           },
           {
@@ -343,7 +343,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"fail\"\n     got: \"this is a hacky way of making the scenario with a non-integer number\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:11:in `/^I have entered (\\d+)\\.(\\d+) into the calculator$/'\nfeatures/Addition.feature:32:in `And I have entered 2.2 into the calculator'",
-              "duration": 15003000
+              "duration": 226570000
             }
           },
           {
@@ -800,7 +800,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/MinimalSteps.rb:10:in `/^failing step$/'\nfeatures/Minimal Features/Failing.feature:10:in `Then failing step'",
-              "duration": 0
+              "duration": 501000
             }
           }
         ]
@@ -1162,7 +1162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1011000
+              "duration": 0
             }
           }
         ]
@@ -1229,7 +1229,7 @@
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:27:in `Then the scenario will 'inconclusive_1''\nfeatures/ScenarioOutlines.feature:21:in `Then the scenario will '<result>''",
-              "duration": 994000
+              "duration": 500000
             }
           }
         ]
@@ -1296,7 +1296,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:40:in `Then the scenario will 'fail_1''\nfeatures/ScenarioOutlines.feature:34:in `Then the scenario will '<result>''",
-              "duration": 0
+              "duration": 500000
             }
           }
         ]
@@ -1340,7 +1340,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1000000
+              "duration": 0
             }
           }
         ]
@@ -1473,6 +1473,138 @@
             "line": 78,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "uri": "features/ScenariosWithSpecialCharacters.feature",
+    "id": "scenarios-with-special-characters",
+    "keyword": "Feature",
+    "name": "Scenarios With Special Characters",
+    "description": "  Here we demonstrate usage of special characters in scenario names",
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-is-a-scenario-with-parentheses,-hyphen-and-comma-(10-20,-30-40)",
+        "keyword": "Scenario",
+        "name": "This is a scenario with parentheses, hyphen and comma (10-20, 30-40)",
+        "description": "",
+        "line": 7,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "I have entered 50 into the calculator",
+            "line": 8,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I have entered 70 into the calculator",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "When ",
+            "name": "I press add",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the result should be 120 on the screen",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-is-a-scenario-outline-with-parentheses,-hyphen-and-comma-(10-20,-30-40);;2",
+        "keyword": "Scenario Outline",
+        "name": "This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
