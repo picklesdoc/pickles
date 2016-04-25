@@ -66,7 +66,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                     }
                 );
             configurationStore.CreateMap<Table, JsonTable>();
-            configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(ToJsonTestResult);
+            configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(this.ToJsonTestResult);
 
             configurationStore.CreateMap<TableRow, JsonTableRow>()
                 .ConstructUsing(row => new JsonTableRow(row.Cells.ToArray()));
@@ -118,7 +118,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
             }
         }
 
-        private static JsonTestResult ToJsonTestResult(TestResult testResult)
+        private JsonTestResult ToJsonTestResult(TestResult testResult)
         {
             return new Mapper.TestResultToJsonTestResultMapper().Map(testResult);
         }
