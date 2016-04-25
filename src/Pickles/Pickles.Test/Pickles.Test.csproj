@@ -117,6 +117,7 @@
     <Compile Include="ObjectModel\Json\CommentToJsonCommentMapperTests.cs" />
     <Compile Include="ObjectModel\Json\JsonScenarioTests.cs" />
     <Compile Include="ObjectModel\Json\JsonTableRowTests.cs" />
+    <Compile Include="ObjectModel\Json\KeywordToJsonKeywordMapperTests.cs" />
     <Compile Include="ObjectModel\Json\TestResultToJsonTestResultMapperTests.cs" />
     <Compile Include="ObjectModel\MapperTestsForComment.cs" />
     <Compile Include="ObjectModel\MapperTestsForDataTable.cs" />

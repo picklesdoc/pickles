@@ -49,7 +49,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                             }
                         });
             configurationStore.CreateMap<Example, JsonExample>();
-            configurationStore.CreateMap<Keyword, JsonKeyword>();
+            configurationStore.CreateMap<Keyword, JsonKeyword>().ConvertUsing(this.ToJsonKeyword);
             configurationStore.CreateMap<Scenario, JsonScenario>()
                  .ForMember(t => t.Feature, opt => opt.Ignore());
             configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>()
@@ -126,6 +126,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private JsonComment ToJsonComment(Comment comment)
         {
             return new Mapper.CommentToJsonCommentMapper().Map(comment);
+        }
+
+        private JsonKeyword ToJsonKeyword(Keyword keyword)
+        {
+            return new Mapper.KeywordToJsonKeywordMapper().Map(keyword);
         }
     }
 }
