@@ -120,15 +120,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         private static JsonTestResult ToJsonTestResult(TestResult testResult)
         {
-            switch (testResult)
-            {
-                case TestResult.Failed:
-                    return new JsonTestResult { WasExecuted = true, WasSuccessful = false };
-                case TestResult.Passed:
-                    return new JsonTestResult { WasExecuted = true, WasSuccessful = true };
-                default:
-                    return new JsonTestResult { WasExecuted = false, WasSuccessful = false };
-            }
+            return new Mapper.TestResultToJsonTestResultMapper().Map(testResult);
         }
     }
 }
