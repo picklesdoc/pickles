@@ -54,7 +54,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                  .ForMember(t => t.Feature, opt => opt.Ignore());
             configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>()
                  .ForMember(t => t.Feature, opt => opt.Ignore());
-            configurationStore.CreateMap<Comment, JsonComment>();
+            configurationStore.CreateMap<Comment, JsonComment>().ConvertUsing(this.ToJsonComment);
             configurationStore.CreateMap<Step, JsonStep>()
                 .ForMember(t => t.StepComments, opt => opt.UseValue(new List<JsonComment>()))
                 .ForMember(t => t.AfterLastStepComments, opt => opt.UseValue(new List<JsonComment>()))
@@ -121,6 +121,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private static JsonTestResult ToJsonTestResult(TestResult testResult)
         {
             return new Mapper.TestResultToJsonTestResultMapper().Map(testResult);
+        }
+
+        private JsonComment ToJsonComment(Comment comment)
+        {
+            return new Mapper.CommentToJsonCommentMapper().Map(comment);
         }
     }
 }

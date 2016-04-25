@@ -157,6 +157,7 @@
     <Compile Include="DocumentationBuilders\JSON\JsonTable.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonTableRow.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonTestResult.cs" />
+    <Compile Include="DocumentationBuilders\JSON\Mapper\CommentToJsonCommentMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\TestResultToJsonTestResultMapper.cs" />
     <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtOpenXmlUtil.cs">
       <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
