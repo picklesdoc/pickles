@@ -24,7 +24,6 @@ using System.Linq;
 using AutoMapper;
 using AutoMapper.Mappers;
 using PicklesDoc.Pickles.ObjectModel;
-using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 {
