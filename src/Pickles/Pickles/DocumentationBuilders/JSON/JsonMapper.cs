@@ -66,9 +66,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                 );
             configurationStore.CreateMap<Table, JsonTable>();
             configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(this.ToJsonTestResult);
-
-            configurationStore.CreateMap<TableRow, JsonTableRow>()
-                .ConstructUsing(row => new JsonTableRow(row.Cells.ToArray()));
+            configurationStore.CreateMap<TableRow, JsonTableRow>().ConvertUsing(this.ToJsonTableRow);
 
             configurationStore.CreateMap<IFeatureElement, IJsonFeatureElement>().ConvertUsing(
                 sd =>
@@ -130,6 +128,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private JsonKeyword ToJsonKeyword(Keyword keyword)
         {
             return new Mapper.KeywordToJsonKeywordMapper().Map(keyword);
+        }
+
+        private JsonTableRow ToJsonTableRow(TableRow tableRow)
+        {
+            return new Mapper.TableRowToJsonTableRowMapper().Map(tableRow);
         }
     }
 }
