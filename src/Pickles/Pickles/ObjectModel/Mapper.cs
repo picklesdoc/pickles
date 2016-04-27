@@ -31,10 +31,13 @@ namespace PicklesDoc.Pickles.ObjectModel
     {
         private readonly MappingEngine mapper;
 
-        public Mapper(string featureLanguage = LanguageServices.DefaultLanguage)
+        private readonly IConfiguration configuration;
+
+        public Mapper(IConfiguration configuration, string featureLanguage = LanguageServices.DefaultLanguage)
         {
             var configurationStore = new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers);
 
+            this.configuration = configuration;
             this.mapper = new MappingEngine(configurationStore);
 
             configurationStore.CreateMap<string, Keyword>().ConvertUsing(new KeywordResolver(featureLanguage));
@@ -129,35 +132,35 @@ namespace PicklesDoc.Pickles.ObjectModel
                 .ForMember(t => t.FeatureElements, opt => opt.ResolveUsing(s => s.Feature.Children.Where(c => !(c is G.Background))))
                 .ForMember(t => t.Name, opt => opt.ResolveUsing(s => s.Feature.Name))
                 .ForMember(t => t.Tags, opt => opt.ResolveUsing(s => s.Feature.Tags))
-
-
                 .ForMember(t => t.Description, opt => opt.NullSubstitute(string.Empty))
                 .AfterMap(
                     (sourceFeature, targetFeature) =>
                         {
-                            foreach (var comment in targetFeature.Comments.ToArray())
+                            if (!configuration.ShouldExcludeComments)
                             {
-                                // Find the related feature
-                                var relatedFeatureElement = targetFeature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
-                                // Find the step to which the comment is related to
-                                if (relatedFeatureElement != null)
+                                foreach (var comment in targetFeature.Comments.ToArray())
                                 {
-                                    var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
-                                    if (stepAfterComment != null)
+                                    // Find the related feature
+                                    var relatedFeatureElement = targetFeature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+                                    // Find the step to which the comment is related to
+                                    if (relatedFeatureElement != null)
                                     {
-                                        // Comment is before a step
-                                        comment.Type = CommentType.StepComment;
-                                        stepAfterComment.Comments.Add(comment);
-                                    }
-                                    else
-                                    {
-                                        // Comment is located after the last step
-                                        var stepBeforeComment = relatedFeatureElement.Steps.LastOrDefault(x => x.Location.Line < comment.Location.Line);
-                                        if (stepBeforeComment != null && stepBeforeComment == relatedFeatureElement.Steps.Last())
+                                        var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
+                                        if (stepAfterComment != null)
                                         {
+                                            // Comment is before a step
+                                            comment.Type = CommentType.StepComment;
+                                            stepAfterComment.Comments.Add(comment);
+                                        } else
+                                        {
+                                            // Comment is located after the last step
+                                            var stepBeforeComment = relatedFeatureElement.Steps.LastOrDefault(x => x.Location.Line < comment.Location.Line);
+                                            if (stepBeforeComment != null && stepBeforeComment == relatedFeatureElement.Steps.Last())
+                                            {
 
-                                            comment.Type = CommentType.AfterLastStepComment;
-                                            stepBeforeComment.Comments.Add(comment);
+                                                comment.Type = CommentType.AfterLastStepComment;
+                                                stepBeforeComment.Comments.Add(comment);
+                                            }
                                         }
                                     }
                                 }

@@ -47,6 +47,8 @@ namespace PicklesDoc.Pickles
 
         bool ShouldIncludeExperimentalFeatures { get; }
 
+        bool ShouldExcludeComments { get;  }
+
         void AddTestResultFile(FileInfoBase fileInfoBase);
 
         void AddTestResultFiles(IEnumerable<FileInfoBase> fileInfoBases);
@@ -54,5 +56,7 @@ namespace PicklesDoc.Pickles
         void EnableExperimentalFeatures();
 
         void DisableExperimentalFeatures();
+
+        void DisableComments();
     }
 }
