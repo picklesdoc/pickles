@@ -64,7 +64,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                         this.mapper.Map(sourceStep.Comments.Where(o => o.Type == CommentType.AfterLastStepComment), targetStep.AfterLastStepComments);
                     }
                 );
-            configurationStore.CreateMap<Table, JsonTable>();
+            configurationStore.CreateMap<Table, JsonTable>().ConvertUsing(this.ToJsonTable);
             configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(this.ToJsonTestResult);
             configurationStore.CreateMap<TableRow, JsonTableRow>().ConvertUsing(this.ToJsonTableRow);
 
@@ -133,6 +133,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private JsonTableRow ToJsonTableRow(TableRow tableRow)
         {
             return new Mapper.TableRowToJsonTableRowMapper().Map(tableRow);
+        }
+
+        private JsonTable ToJsonTable(Table table)
+        {
+            return new Mapper.TableToJsonTableMapper().Map(table);
         }
     }
 }
