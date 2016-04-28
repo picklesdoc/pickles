@@ -23,6 +23,7 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using AutoMapper.Mappers;
+using PicklesDoc.Pickles.DocumentationBuilders.JSON.Mapper;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
@@ -54,16 +55,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
             configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>()
                  .ForMember(t => t.Feature, opt => opt.Ignore());
             configurationStore.CreateMap<Comment, JsonComment>().ConvertUsing(this.ToJsonComment);
-            configurationStore.CreateMap<Step, JsonStep>()
-                .ForMember(t => t.StepComments, opt => opt.UseValue(new List<JsonComment>()))
-                .ForMember(t => t.AfterLastStepComments, opt => opt.UseValue(new List<JsonComment>()))
-                .AfterMap(
-                    (sourceStep, targetStep) =>
-                    {
-                        this.mapper.Map(sourceStep.Comments.Where(o => o.Type == CommentType.StepComment), targetStep.StepComments);
-                        this.mapper.Map(sourceStep.Comments.Where(o => o.Type == CommentType.AfterLastStepComment), targetStep.AfterLastStepComments);
-                    }
-                );
+            configurationStore.CreateMap<Step, JsonStep>().ConvertUsing(this.ToJsonStep);
             configurationStore.CreateMap<Table, JsonTable>().ConvertUsing(this.ToJsonTable);
             configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(this.ToJsonTestResult);
             configurationStore.CreateMap<TableRow, JsonTableRow>().ConvertUsing(this.ToJsonTableRow);
@@ -138,6 +130,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private JsonTable ToJsonTable(Table table)
         {
             return new Mapper.TableToJsonTableMapper().Map(table);
+        }
+
+        private JsonStep ToJsonStep(Step step)
+        {
+            return new StepToJsonStepMapper().Map(step);
         }
     }
 }
