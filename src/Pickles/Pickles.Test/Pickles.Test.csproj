@@ -115,6 +115,7 @@
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ObjectModel\Factory.cs" />
     <Compile Include="ObjectModel\Json\CommentToJsonCommentMapperTests.cs" />
+    <Compile Include="ObjectModel\Json\ExampleToJsonExampleMapperTests.cs" />
     <Compile Include="ObjectModel\Json\JsonScenarioTests.cs" />
     <Compile Include="ObjectModel\Json\JsonTableRowTests.cs" />
     <Compile Include="ObjectModel\Json\KeywordToJsonKeywordMapperTests.cs" />

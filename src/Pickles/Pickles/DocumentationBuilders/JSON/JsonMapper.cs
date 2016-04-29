@@ -21,7 +21,6 @@
 using System;
 using AutoMapper;
 using AutoMapper.Mappers;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON.Mapper;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
@@ -46,7 +45,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                                 featureElement.Feature = targetFeature;
                             }
                         });
-            configurationStore.CreateMap<Example, JsonExample>();
+            configurationStore.CreateMap<Example, JsonExample>().ConvertUsing(this.ToJsonExample);
             configurationStore.CreateMap<Keyword, JsonKeyword>().ConvertUsing(this.ToJsonKeyword);
             configurationStore.CreateMap<Scenario, JsonScenario>()
                  .ForMember(t => t.Feature, opt => opt.Ignore());
@@ -132,7 +131,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         private JsonStep ToJsonStep(Step step)
         {
-            return new StepToJsonStepMapper().Map(step);
+            return new Mapper.StepToJsonStepMapper().Map(step);
+        }
+
+        private JsonExample ToJsonExample(Example example)
+        {
+            return new Mapper.ExampleToJsonExampleMapper().Map(example);
         }
     }
 }

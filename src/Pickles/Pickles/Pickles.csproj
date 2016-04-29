@@ -158,6 +158,7 @@
     <Compile Include="DocumentationBuilders\JSON\JsonTableRow.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonTestResult.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\CommentToJsonCommentMapper.cs" />
+    <Compile Include="DocumentationBuilders\JSON\Mapper\ExampleToJsonExampleMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\KeywordToJsonKeywordMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\StepToJsonStepMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\TableRowToJsonTableRowMapper.cs" />
