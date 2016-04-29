@@ -47,8 +47,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                         });
             configurationStore.CreateMap<Example, JsonExample>().ConvertUsing(this.ToJsonExample);
             configurationStore.CreateMap<Keyword, JsonKeyword>().ConvertUsing(this.ToJsonKeyword);
-            configurationStore.CreateMap<Scenario, JsonScenario>()
-                 .ForMember(t => t.Feature, opt => opt.Ignore());
+            configurationStore.CreateMap<Scenario, JsonScenario>().ConvertUsing(this.ToJsonScenario);
             configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>().ConvertUsing(this.ToJsonScenarioOutline);
             configurationStore.CreateMap<Comment, JsonComment>().ConvertUsing(this.ToJsonComment);
             configurationStore.CreateMap<Step, JsonStep>().ConvertUsing(this.ToJsonStep);
@@ -141,6 +140,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private JsonScenarioOutline ToJsonScenarioOutline(ScenarioOutline scenarioOutline)
         {
             return new Mapper.ScenarioOutlineToJsonScenarioOutlineMapper().Map(scenarioOutline);
+        }
+
+        private JsonScenario ToJsonScenario(Scenario scenario)
+        {
+            return new Mapper.ScenarioToJsonScenarioMapper().Map(scenario);
         }
     }
 }
