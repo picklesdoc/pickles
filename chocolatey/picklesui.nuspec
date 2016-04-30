@@ -37,7 +37,6 @@ Optionally, *Pickles* can **integrate test results**, so that your stakeholders 
     </metadata>
     <files>
         <file src="Autofac.dll" target="tools" />
-        <file src="AutoMapper.dll" target="tools" />
         <file src="ClosedXML.dll" target="tools" />
         <file src="DocumentFormat.OpenXml.dll" target="tools" />
         <file src="GalaSoft.MvvmLight.dll" target="tools" />

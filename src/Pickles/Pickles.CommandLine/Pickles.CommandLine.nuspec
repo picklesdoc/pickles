@@ -38,7 +38,6 @@
   </metadata>
   <files>
     <file src="Autofac.dll" target="tools" />
-    <file src="AutoMapper.dll" target="tools" />
     <file src="ClosedXML.dll" target="tools" />
     <file src="DocumentFormat.OpenXml.dll" target="tools" />
     <file src="Gherkin.dll" target="tools" />
