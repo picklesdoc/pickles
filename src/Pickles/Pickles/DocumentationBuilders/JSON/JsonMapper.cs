@@ -19,18 +19,12 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using AutoMapper;
-using AutoMapper.Mappers;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 {
     public class JsonMapper
     {
-        public JsonMapper()
-        {
-        }
-
         public JsonFeature Map(Feature feature)
         {
             return this.ToJsonFeature(feature);
