@@ -58,46 +58,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
             return new Mapper.TestResultToJsonTestResultMapper().Map(testResult);
         }
 
-        private JsonComment ToJsonComment(Comment comment)
-        {
-            return new Mapper.CommentToJsonCommentMapper().Map(comment);
-        }
-
-        private JsonKeyword ToJsonKeyword(Keyword keyword)
-        {
-            return new Mapper.KeywordToJsonKeywordMapper().Map(keyword);
-        }
-
-        private JsonTableRow ToJsonTableRow(TableRow tableRow)
-        {
-            return new Mapper.TableRowToJsonTableRowMapper().Map(tableRow);
-        }
-
-        private JsonTable ToJsonTable(Table table)
-        {
-            return new Mapper.TableToJsonTableMapper().Map(table);
-        }
-
-        private JsonStep ToJsonStep(Step step)
-        {
-            return new Mapper.StepToJsonStepMapper().Map(step);
-        }
-
-        private JsonExample ToJsonExample(Example example)
-        {
-            return new Mapper.ExampleToJsonExampleMapper().Map(example);
-        }
-
-        private JsonScenarioOutline ToJsonScenarioOutline(ScenarioOutline scenarioOutline)
-        {
-            return new Mapper.ScenarioOutlineToJsonScenarioOutlineMapper().Map(scenarioOutline);
-        }
-
-        private JsonScenario ToJsonScenario(Scenario scenario)
-        {
-            return new Mapper.ScenarioToJsonScenarioMapper().Map(scenario);
-        }
-
         private JsonFeature ToJsonFeature(Feature feature)
         {
             return new Mapper.FeatureToJsonFeatureMapper().Map(feature);
