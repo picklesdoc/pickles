@@ -27,42 +27,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 {
     public class JsonMapper : IDisposable
     {
-        private readonly MappingEngine mapper;
-
         public JsonMapper()
         {
-            var configurationStore = new ConfigurationStore(new TypeMapFactory(), MapperRegistry.Mappers);
-
-            this.mapper = new MappingEngine(configurationStore);
-
-            configurationStore.CreateMap<Feature, JsonFeature>().ConvertUsing(this.ToJsonFeature);
-            configurationStore.CreateMap<Example, JsonExample>().ConvertUsing(this.ToJsonExample);
-            configurationStore.CreateMap<Keyword, JsonKeyword>().ConvertUsing(this.ToJsonKeyword);
-            configurationStore.CreateMap<Scenario, JsonScenario>().ConvertUsing(this.ToJsonScenario);
-            configurationStore.CreateMap<ScenarioOutline, JsonScenarioOutline>().ConvertUsing(this.ToJsonScenarioOutline);
-            configurationStore.CreateMap<Comment, JsonComment>().ConvertUsing(this.ToJsonComment);
-            configurationStore.CreateMap<Step, JsonStep>().ConvertUsing(this.ToJsonStep);
-            configurationStore.CreateMap<Table, JsonTable>().ConvertUsing(this.ToJsonTable);
-            configurationStore.CreateMap<TestResult, JsonTestResult>().ConstructUsing(this.ToJsonTestResult);
-            configurationStore.CreateMap<TableRow, JsonTableRow>().ConvertUsing(this.ToJsonTableRow);
-
-            configurationStore.CreateMap<IFeatureElement, IJsonFeatureElement>().ConvertUsing(
-                sd =>
-                {
-                    var scenario = sd as Scenario;
-                    if (scenario != null)
-                    {
-                        return this.mapper.Map<JsonScenario>(scenario);
-                    }
-
-                    var scenarioOutline = sd as ScenarioOutline;
-                    if (scenarioOutline != null)
-                    {
-                        return this.mapper.Map<JsonScenarioOutline>(scenarioOutline);
-                    }
-
-                    throw new ArgumentException("Only arguments of type Scenario and ScenarioOutline are supported.");
-                });
         }
 
         public JsonFeature Map(Feature feature)
@@ -84,7 +50,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         {
             if (isDisposing)
             {
-                this.mapper.Dispose();
             }
         }
 
