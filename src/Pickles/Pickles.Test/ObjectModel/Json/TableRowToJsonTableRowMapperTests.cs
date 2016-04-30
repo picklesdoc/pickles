@@ -68,5 +68,29 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual).ContainsExactly("first string", "second string", "third string");
         }
+        [Test]
+        public void Map_TableRowWithCells_ConvertsToJsonTableRow()
+        {
+            var tableRow = new TableRow { Cells = { "cell 1", "cell 2" } };
+
+            var mapper = CreateMapper();
+
+            var jsonTableRow = mapper.Map(tableRow);
+
+            Check.That(jsonTableRow).ContainsExactly("cell 1", "cell 2");
+        }
+
+        [Test]
+        public void Map_TableRowWithTestResult_ConvertsToJsonTableRowWithTestResult()
+        {
+            var tableRow = new TableRow { Result = TestResult.Passed };
+
+            var mapper = CreateMapper();
+
+            var jsonTableRow = mapper.Map(tableRow);
+
+            Check.That(jsonTableRow.Result.WasExecuted).IsEqualTo(true);
+            Check.That(jsonTableRow.Result.WasSuccessful).IsEqualTo(true);
+        }
     }
 }

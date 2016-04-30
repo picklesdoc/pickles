@@ -65,11 +65,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                 });
         }
 
-        public JsonTableRow Map(TableRow tableRow)
-        {
-            return this.mapper.Map<JsonTableRow>(tableRow);
-        }
-
         public JsonFeature Map(Feature feature)
         {
             return this.mapper.Map<JsonFeature>(feature);

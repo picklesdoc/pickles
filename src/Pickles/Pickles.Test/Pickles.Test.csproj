@@ -118,7 +118,6 @@
     <Compile Include="ObjectModel\Json\ExampleToJsonExampleMapperTests.cs" />
     <Compile Include="ObjectModel\Json\FeatureToJsonFeatureMapperTests.cs" />
     <Compile Include="ObjectModel\Json\JsonScenarioTests.cs" />
-    <Compile Include="ObjectModel\Json\JsonTableRowTests.cs" />
     <Compile Include="ObjectModel\Json\KeywordToJsonKeywordMapperTests.cs" />
     <Compile Include="ObjectModel\Json\ScenarioToJsonScenarioMapperTests.cs" />
     <Compile Include="ObjectModel\Json\ScenarioOutlineToJsonScenarioOutlineMapperTests.cs" />
