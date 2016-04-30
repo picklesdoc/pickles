@@ -35,16 +35,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
             this.mapper = new MappingEngine(configurationStore);
 
-            configurationStore.CreateMap<Feature, JsonFeature>()
-                .ForMember(t => t.FeatureElements, opt => opt.ResolveUsing(s => s.FeatureElements))
-                .AfterMap(
-                    (sourceFeature, targetFeature) =>
-                        {
-                            foreach (var featureElement in targetFeature.FeatureElements.ToArray())
-                            {
-                                featureElement.Feature = targetFeature;
-                            }
-                        });
+            configurationStore.CreateMap<Feature, JsonFeature>().ConvertUsing(this.ToJsonFeature);
             configurationStore.CreateMap<Example, JsonExample>().ConvertUsing(this.ToJsonExample);
             configurationStore.CreateMap<Keyword, JsonKeyword>().ConvertUsing(this.ToJsonKeyword);
             configurationStore.CreateMap<Scenario, JsonScenario>().ConvertUsing(this.ToJsonScenario);
@@ -145,6 +136,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         private JsonScenario ToJsonScenario(Scenario scenario)
         {
             return new Mapper.ScenarioToJsonScenarioMapper().Map(scenario);
+        }
+
+        private JsonFeature ToJsonFeature(Feature feature)
+        {
+            return new Mapper.FeatureToJsonFeatureMapper().Map(feature);
         }
     }
 }

@@ -159,6 +159,7 @@
     <Compile Include="DocumentationBuilders\JSON\JsonTestResult.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\CommentToJsonCommentMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\ExampleToJsonExampleMapper.cs" />
+    <Compile Include="DocumentationBuilders\JSON\Mapper\FeatureToJsonFeatureMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\KeywordToJsonKeywordMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\ScenarioToJsonScenarioMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\ScenarioOutlineToJsonScenarioOutlineMapper.cs" />

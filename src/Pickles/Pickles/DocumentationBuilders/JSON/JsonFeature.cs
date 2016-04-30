@@ -37,7 +37,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         public List<IJsonFeatureElement> FeatureElements { get; private set; }
 
-        public JsonScenario Background { get; private set; }
+        public JsonScenario Background { get; set; }
 
         public JsonTestResult Result { get; set; }
 
