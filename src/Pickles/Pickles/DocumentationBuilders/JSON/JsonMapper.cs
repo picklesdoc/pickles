@@ -25,7 +25,7 @@ using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 {
-    public class JsonMapper : IDisposable
+    public class JsonMapper
     {
         public JsonMapper()
         {
@@ -39,18 +39,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
         public JsonTestResult Map(TestResult testResult)
         {
             return this.ToJsonTestResult(testResult);
-        }
-
-        public void Dispose()
-        {
-            this.Dispose(true);
-        }
-
-        protected virtual void Dispose(bool isDisposing)
-        {
-            if (isDisposing)
-            {
-            }
         }
 
         private JsonTestResult ToJsonTestResult(TestResult testResult)
