@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         public JsonFeature Map(Feature feature)
         {
-            return this.mapper.Map<JsonFeature>(feature);
+            return this.ToJsonFeature(feature);
         }
 
         public JsonTestResult Map(TestResult testResult)
