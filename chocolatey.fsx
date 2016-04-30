@@ -20,7 +20,6 @@ Target "Clean" (fun _ ->
 Target "CreatePackage CMD" (fun _ ->
     CopyFiles packagingDir [
         cmdDir + "Autofac.dll";
-        cmdDir + "AutoMapper.dll";
         cmdDir + "ClosedXML.dll";
         cmdDir + "DocumentFormat.OpenXml.dll";
         cmdDir + "Gherkin.dll";
@@ -53,7 +52,6 @@ Target "CreatePackage CMD" (fun _ ->
 Target "CreatePackage GUI" (fun _ ->
     CopyFiles packagingDir [
         guiDir + "Autofac.dll";
-        guiDir + "AutoMapper.dll";
         guiDir + "ClosedXML.dll";
         guiDir + "DocumentFormat.OpenXml.dll";
         guiDir + "GalaSoft.MvvmLight.dll";

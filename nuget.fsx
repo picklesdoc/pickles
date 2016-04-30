@@ -22,7 +22,6 @@ Target "CreatePackageCommandLine" (fun _ ->
     // Copy all the package files into a package folder
     CopyFiles packagingDir [
         cmdDir + "Autofac.dll";
-        cmdDir + "AutoMapper.dll";
         cmdDir + "ClosedXML.dll";
         cmdDir + "DocumentFormat.OpenXml.dll";
         cmdDir + "Gherkin.dll";
@@ -54,7 +53,6 @@ Target "CreatePackageMsBuild" (fun _ ->
     // Copy all the package files into a package folder
     CopyFiles packagingDir [
         msBuildDir + "Autofac.dll";
-        msBuildDir + "AutoMapper.dll";
         msBuildDir + "ClosedXML.dll";
         msBuildDir + "DocumentFormat.OpenXml.dll";
         msBuildDir + "Gherkin.dll";
@@ -86,7 +84,6 @@ Target "CreatePackagePowerShell" (fun _ ->
     // Copy all the package files into a package folder
     CopyFiles packagingDir [
         powerShellDir + "Autofac.dll";
-        powerShellDir + "AutoMapper.dll";
         powerShellDir + "ClosedXML.dll";
         powerShellDir + "DocumentFormat.OpenXml.dll";
         powerShellDir + "Gherkin.dll";
