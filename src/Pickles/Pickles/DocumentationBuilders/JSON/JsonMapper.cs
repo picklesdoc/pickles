@@ -77,7 +77,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         public JsonTestResult Map(TestResult testResult)
         {
-            return this.mapper.Map<JsonTestResult>(testResult);
+            return this.ToJsonTestResult(testResult);
         }
 
         public void Dispose()
