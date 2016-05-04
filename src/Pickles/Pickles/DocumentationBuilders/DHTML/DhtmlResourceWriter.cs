@@ -75,7 +75,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
             this.WriteScript(scriptsFolder, "html5.js");
             this.WriteScript(scriptsFolder, "jquery-1.8.3.min.js");
             this.WriteScript(scriptsFolder, "jquery.highlight-4.closure.js");
-            this.WriteScript(scriptsFolder, "knockout-2.2.0.js");
+            this.WriteScript(scriptsFolder, "knockout-3.4.0.js");
             this.WriteScript(scriptsFolder, "knockout.mapping-latest.js");
             this.WriteScript(scriptsFolder, "logger.js");
             this.WriteScript(scriptsFolder, "Markdown.Converter.js");

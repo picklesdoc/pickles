@@ -294,9 +294,6 @@
     <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\jquery.highlight-4.closure.js">
       <Link>Resources\Dhtml\js\jquery.highlight-4.closure.js</Link>
     </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout-2.2.0.js">
-      <Link>Resources\Dhtml\js\knockout-2.2.0.js</Link>
-    </EmbeddedResource>
     <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout.mapping-latest.js">
       <Link>Resources\Dhtml\js\knockout.mapping-latest.js</Link>
     </EmbeddedResource>
@@ -345,6 +342,11 @@
   <ItemGroup>
     <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\picklesOverview.js">
       <Link>Resources\Dhtml\js\picklesOverview.js</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout-3.4.0.js">
+      <Link>Resources\Dhtml\js\knockout-3.4.0.js</Link>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

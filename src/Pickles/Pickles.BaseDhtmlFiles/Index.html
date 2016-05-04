@@ -131,8 +131,12 @@
                         <div data-bind="template: { name: 'features-template', foreach: featuresByFolder().features }"></div>
                         <div data-bind="template: { name: 'featuresByFolder-template', foreach: featuresByFolder().SubDirectories }"></div>
                         <div id="SutInfo">
-                            <div data-bind="if: configuration().SutName, text: configuration().SutName"></div>
-                            <div data-bind="if: configuration().SutVersion, text: configuration().SutVersion"></div>
+                            <!-- ko if: configuration().SutName != null -->
+                            <div data-bind="text: configuration().SutName"></div>
+                            <!-- /ko -->
+                            <!-- ko if: configuration().GeneratedOn != null -->
+                            <div data-bind="text: configuration().SutVersion"></div>
+                            <!-- /ko -->
                             <div>Generated on: <span data-bind="text: configuration().GeneratedOn"></span></div>
                         </div>
                     </div>
@@ -257,7 +261,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/knockout-2.2.0.js" type="text/javascript"></script>
+    <script src="js/knockout-3.4.0.js" type="text/javascript"></script>
     <script src="js/knockout.mapping-latest.js" type="text/javascript"></script>
     <script src="js/underscore-min.js" type="text/javascript"></script>
     <script src="js/jquery.highlight-4.closure.js"></script>
