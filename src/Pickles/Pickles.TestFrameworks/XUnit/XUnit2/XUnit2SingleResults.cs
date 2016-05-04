@@ -18,10 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -110,6 +108,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
         private assembliesAssemblyCollectionTest GetScenarioElement(Scenario scenario)
         {
             var featureElement = this.GetFeatureElement(scenario.Feature);
+            if (featureElement == null)
+                return null;
 
             var query = from test in featureElement.test
                         where HasDescriptionTrait(test, scenario.Name)
@@ -121,7 +121,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
         private IEnumerable<assembliesAssemblyCollectionTest> GetScenarioOutlineElements(ScenarioOutline scenario)
         {
             var featureElement = this.GetFeatureElement(scenario.Feature);
-
+            if (featureElement == null)
+                return Enumerable.Empty<assembliesAssemblyCollectionTest>();
             var query = from test in featureElement.test
                         where HasDescriptionTrait(test, scenario.Name)
                         select test;

@@ -40,7 +40,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit
                     .Replace(@"\", string.Empty)
                     .Replace(@"$", @"\$")
                     .Replace(@"(", @"\(")
-                    .Replace(@")", @"\)"));
+                    .Replace(@")", @"\)")
+                    .Replace(@"*", @"\*"));
             }
 
             stringBuilder.Remove(stringBuilder.Length - 2, 2);
