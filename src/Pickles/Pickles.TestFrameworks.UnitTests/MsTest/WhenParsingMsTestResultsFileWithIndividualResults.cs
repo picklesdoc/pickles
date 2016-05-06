@@ -18,7 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 
 using NUnit.Framework;
 
@@ -56,6 +55,12 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
         public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleExampleSections_ShouldBeTestResultFailed()
         {
             base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleExampleSections_ShouldBeTestResultFailed();
+        }
+
+        [Test]
+        public new void ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed()
+        {
+            base.ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed();
         }
     }
 }

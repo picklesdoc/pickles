@@ -12,9 +12,28 @@
   </TestSettings>
   <Times creation="2016-04-26T00:40:59.5246005+02:00" queuing="2016-04-26T00:41:00.5570129+02:00" start="2016-04-26T00:41:00.7418201+02:00" finish="2016-04-26T00:41:02.6558392+02:00" />
   <ResultSummary outcome="Failed">
-    <Counters total="37" executed="37" passed="20" error="0" failed="8" timeout="0" aborted="0" inconclusive="9" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Counters total="44" executed="44" passed="27" error="0" failed="8" timeout="0" aborted="0" inconclusive="9" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="7699da71-b819-eb00-3894-2f0be7eec39c">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="61785f50-f5dc-4437-b081-02593849bd6d" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 3</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>[]</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" />
+    </UnitTest>
     <UnitTest name="NotAutomatedScenario1" storage="d:\work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="0e090158-43a1-1be8-47c2-13e1b2c9f8c7">
       <Description>Not automated scenario 1</Description>
       <Execution id="19af94e1-f3c1-4656-94bf-380ab3734812" />
@@ -90,6 +109,25 @@
       </Properties>
       <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario3" />
     </UnitTest>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="a3bd6f67-daac-1ebc-5894-1d73dbe8d707">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="529bd48f-f2d3-4b4c-a2ae-a9afc76aa81c" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 2</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>.*</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" />
+    </UnitTest>
     <UnitTest name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" storage="d:\work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="3fe8806f-fabb-1deb-7e27-c59578f16da3">
       <Description>This is a scenario with parentheses, hyphen and comma (10-20, 30-40)</Description>
       <Execution id="23cc5923-00a0-42b4-8560-4cc48e52dbd7" />
@@ -100,6 +138,25 @@
         </Property>
       </Properties>
       <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" />
+    </UnitTest>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="fb3ec8b2-a410-ecc8-265b-29bfd3772553">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="cdb25a10-4f97-4d4b-b41a-44d31eedd6dd" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 1</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>++</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" />
     </UnitTest>
     <UnitTest name="AddTwoNumbers" storage="d:\work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="ca63316a-39e5-9545-3bca-f1839c7b4664">
       <Description>Add two numbers</Description>
@@ -201,6 +258,44 @@
         </Property>
       </Properties>
       <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" />
+    </UnitTest>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="22ccdb90-02c8-97c1-e2a1-6bec4f044d99">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="7c40a090-c2cc-4297-ae95-a0bb26bc6c19" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 6</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" />
+    </UnitTest>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="cca2404a-911a-a50e-9898-327264f0ea76">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="b78b5707-531c-49c7-97b3-71d6ab5bdef5" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 5</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>()</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" />
     </UnitTest>
     <UnitTest name="AddingSeveralNumbers_60" storage="d:\work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="f4b45c2f-fc98-d23c-6179-62d5b5a59825">
       <Description>Adding several numbers</Description>
@@ -544,6 +639,25 @@
       </Properties>
       <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.PassingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PassingFeaturePassingScenario" />
     </UnitTest>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="b891bd24-e5b1-222b-8d70-96a2ba7b0807">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="fa62de35-3c55-4670-9a8f-d1a9fd41fdcc" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 0</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>**</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" />
+    </UnitTest>
     <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" storage="d:\work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="9bb2410c-d8c6-90b8-75cd-5c93dc903745">
       <Description>This is a scenario outline where all scenarios pass</Description>
       <Execution id="abe19b91-d119-4034-8975-50ec9f56ccbb" />
@@ -581,6 +695,25 @@
         </Property>
       </Properties>
       <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" />
+    </UnitTest>
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" storage="D:\Work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="d253522e-be41-9b3a-247a-ca440d4ac588">
+      <Description>This scenario contains examples with Regex-special characters</Description>
+      <Execution id="ef03a0fe-6c4d-4ef1-9f39-1d4430cdaf7f" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Scenarios With Special Characters</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 4</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:regex</Key>
+          <Value>{}</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="D:/Work/pickles-testresults/TestHarness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" />
     </UnitTest>
     <UnitTest name="AddingSeveralNumbers_40" storage="d:\work\pickles-testresults\\testharness\mstest\bin\debug\mstestharness.dll" id="b4815779-aba4-cf1b-8df3-4a745af70720">
       <Description>Adding several numbers</Description>
@@ -700,6 +833,13 @@
     <TestEntry testId="8f2bb160-fa82-a566-570e-51eeb5237e95" executionId="fbd43871-8867-4393-98ff-267b9055c690" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestEntry testId="f8369e2e-c5ec-dade-ad85-e2c56909c853" executionId="214e99b7-3777-4a80-8276-fe2fcee2c389" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
     <TestEntry testId="3fe8806f-fabb-1deb-7e27-c59578f16da3" executionId="23cc5923-00a0-42b4-8560-4cc48e52dbd7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b891bd24-e5b1-222b-8d70-96a2ba7b0807" executionId="fa62de35-3c55-4670-9a8f-d1a9fd41fdcc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb3ec8b2-a410-ecc8-265b-29bfd3772553" executionId="cdb25a10-4f97-4d4b-b41a-44d31eedd6dd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3bd6f67-daac-1ebc-5894-1d73dbe8d707" executionId="529bd48f-f2d3-4b4c-a2ae-a9afc76aa81c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7699da71-b819-eb00-3894-2f0be7eec39c" executionId="61785f50-f5dc-4437-b081-02593849bd6d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d253522e-be41-9b3a-247a-ca440d4ac588" executionId="ef03a0fe-6c4d-4ef1-9f39-1d4430cdaf7f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cca2404a-911a-a50e-9898-327264f0ea76" executionId="b78b5707-531c-49c7-97b3-71d6ab5bdef5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22ccdb90-02c8-97c1-e2a1-6bec4f044d99" executionId="7c40a090-c2cc-4297-ae95-a0bb26bc6c19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
     <UnitTestResult executionId="a8f782e1-8c94-480c-b3f3-4f5d94d60b0d" testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" testName="AddingSeveralNumbers_40" computerName="DANIEL-NOTEBOOK" duration="00:00:00.1720155" startTime="2016-04-26T00:41:00.9107702+02:00" endTime="2016-04-26T00:41:01.7886724+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8f782e1-8c94-480c-b3f3-4f5d94d60b0d">
@@ -1546,6 +1686,76 @@ When I press add
 -&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
 Then the result should be 120 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(120) (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fa62de35-3c55-4670-9a8f-d1a9fd41fdcc" testId="b891bd24-e5b1-222b-8d70-96a2ba7b0807" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" computerName="DDAW10DEV001" duration="00:00:00.0004863" startTime="2016-05-06T16:55:17.7360945+02:00" endTime="2016-05-06T16:55:17.7380945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fa62de35-3c55-4670-9a8f-d1a9fd41fdcc">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '**'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("**") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="cdb25a10-4f97-4d4b-b41a-44d31eedd6dd" testId="fb3ec8b2-a410-ecc8-265b-29bfd3772553" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" computerName="DDAW10DEV001" duration="00:00:00.0001536" startTime="2016-05-06T16:55:17.7390945+02:00" endTime="2016-05-06T16:55:17.7400945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cdb25a10-4f97-4d4b-b41a-44d31eedd6dd">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '++'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("++") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="529bd48f-f2d3-4b4c-a2ae-a9afc76aa81c" testId="a3bd6f67-daac-1ebc-5894-1d73dbe8d707" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" computerName="DDAW10DEV001" duration="00:00:00.0001613" startTime="2016-05-06T16:55:17.7410945+02:00" endTime="2016-05-06T16:55:17.7430945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="529bd48f-f2d3-4b4c-a2ae-a9afc76aa81c">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '.*'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex(".*") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="61785f50-f5dc-4437-b081-02593849bd6d" testId="7699da71-b819-eb00-3894-2f0be7eec39c" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" computerName="DDAW10DEV001" duration="00:00:00.0002115" startTime="2016-05-06T16:55:17.7430945+02:00" endTime="2016-05-06T16:55:17.7450945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61785f50-f5dc-4437-b081-02593849bd6d">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '[]'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("[]") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ef03a0fe-6c4d-4ef1-9f39-1d4430cdaf7f" testId="d253522e-be41-9b3a-247a-ca440d4ac588" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" computerName="DDAW10DEV001" duration="00:00:00.0001568" startTime="2016-05-06T16:55:17.7460945+02:00" endTime="2016-05-06T16:55:17.7470945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ef03a0fe-6c4d-4ef1-9f39-1d4430cdaf7f">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '{}'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("{}") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b78b5707-531c-49c7-97b3-71d6ab5bdef5" testId="cca2404a-911a-a50e-9898-327264f0ea76" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" computerName="DDAW10DEV001" duration="00:00:00.0001493" startTime="2016-05-06T16:55:17.7480945+02:00" endTime="2016-05-06T16:55:17.7490945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b78b5707-531c-49c7-97b3-71d6ab5bdef5">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '()'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("()") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7c40a090-c2cc-4297-ae95-a0bb26bc6c19" testId="22ccdb90-02c8-97c1-e2a1-6bec4f044d99" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" computerName="DDAW10DEV001" duration="00:00:00.0001485" startTime="2016-05-06T16:55:17.7500945+02:00" endTime="2016-05-06T16:55:17.7510945+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c40a090-c2cc-4297-ae95-a0bb26bc6c19">
+      <Output>
+        <StdOut>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("^.*(?&lt;foo&gt;BAR)\s[...") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
   </Results>
