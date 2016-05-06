@@ -37,7 +37,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
 
         private bool ScenarioOutlineExampleIsMatch(assembliesAssemblyCollectionTest exampleElement, Regex signature)
         {
-            return signature.IsMatch(exampleElement.name.ToLowerInvariant().Replace(@"\", string.Empty));
+            return signature.IsMatch(exampleElement.name.ToLowerInvariant());
         }
     }
 }
