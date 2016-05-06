@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="D:\Work\pickles-testresults\TestHarness\nunit\bin\Debug\nunitHarness.dll" total="36" errors="8" failures="0" not-run="1" inconclusive="9" ignored="1" skipped="0" invalid="0" date="2016-04-26" time="00:40:28">
+<test-results name="D:\Work\pickles-testresults\TestHarness\nunit\bin\Debug\nunitHarness.dll" total="43" errors="8" failures="0" not-run="1" inconclusive="9" ignored="1" skipped="0" invalid="0" date="2016-04-26" time="00:40:28">
   <environment nunit-version="2.6.4.14350" clr-version="2.0.50727.8670" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="D:\Work\pickles-testresults" machine-name="DANIEL-NOTEBOOK" user="Daniel" user-domain="DANIEL-NOTEBOOK" />
   <culture-info current-culture="de-DE" current-uiculture="de-DE" />
   <test-suite type="Assembly" name="D:\Work\pickles-testresults\TestHarness\nunit\bin\Debug\nunitHarness.dll" executed="True" result="Failure" success="False" time="2.615" asserts="0">
@@ -435,6 +435,17 @@ bei Pickles.TestHarness.nunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWher
                         </results>
                       </test-suite>
                       <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" description="This is a scenario with parentheses, hyphen and comma (10-20, 30-40)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                      <test-suite type="ParameterizedTest" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" description="This scenario contains examples with Regex-special characters" executed="True" result="Success" success="True" time="0.010" asserts="0">
+                        <results>
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;**&quot;,null)" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;++&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;.*&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;[]&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;{}&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;()&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                          <test-case name="Pickles.TestHarness.nunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;^.*(?&lt;foo&gt;BAR)\\s[^0-9]{3,4}A+$&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                        </results>
+                      </test-suite>
                     </results>
                   </test-suite>
                 </results>

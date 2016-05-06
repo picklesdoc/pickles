@@ -1,35 +1,4 @@
-<assembly name="D:\Work\pickles-testresults\TestHarness\xunit\bin\Debug\xunitHarness.dll" run-date="2016-04-26" run-time="00:40:49" configFile="D:\Work\pickles-testresults\TestHarness\xunit\bin\Debug\xunitHarness.dll.config" time="0.746" total="37" passed="19" failed="17" skipped="1" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.9.2.1705"><class time="0.593" name="Pickles.TestHarness.xunit.AdditionFeature" total="6" passed="3" failed="2" skipped="1"><test name="Pickles.TestHarness.xunit.AdditionFeature.FailToAddTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="FailToAddTwoNumbers" result="Fail" time="0.306"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Fail to add two numbers" /></traits><output>Given the calculator has clean memory
--&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
-Given I have entered 1 into the calculator
--&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
-And I have entered 2.2 into the calculator
--&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2,2) (0,0s)
-When I press add
--&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
-Then the result should be 3.2 on the screen
--&gt; error: Die Eingabezeichenfolge hat das falsche Format.
-</output><failure exception-type="System.FormatException"><message>System.FormatException : Die Eingabezeichenfolge hat das falsche Format.</message><stack-trace>   bei System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer&amp; number, NumberFormatInfo info, Boolean parseDecimal)
-   bei System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
-   bei System.String.System.IConvertible.ToInt32(IFormatProvider provider)
-   bei System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
-   bei System.Linq.Enumerable.&lt;SelectIterator&gt;d__5`2.MoveNext()
-   bei System.Linq.Buffer`1..ctor(IEnumerable`1 source)
-   bei System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.GetExecuteArguments(BindingMatch match)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.xunit.AdditionFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.AdditionFeature.FailToAddTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature:Zeile 34.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddTwoNumbers" result="Pass" time="0.168"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Add two numbers" /></traits><output>Given the calculator has clean memory
--&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
-Given I have entered 1 into the calculator
--&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
-And I have entered 2 into the calculator
--&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2) (0,0s)
-When I press add
--&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
-Then the result should be 3 on the screen
--&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(3) (0,2s)
-</output></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddingSeveralNumbers" result="Pass" time="0.003"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Adding several numbers" /></traits><output>Given the calculator has clean memory
+<assembly name="D:\Work\pickles-testresults\TestHarness\xunit\bin\Debug\xunitHarness.dll" run-date="2016-04-26" run-time="00:40:49" configFile="D:\Work\pickles-testresults\TestHarness\xunit\bin\Debug\xunitHarness.dll.config" time="0.338" total="44" passed="26" failed="17" skipped="1" environment="64-bit .NET 4.0.30319.42000" test-framework="xUnit.net 1.9.2.1705"><class time="0.290" name="Pickles.TestHarness.xunit.AdditionFeature" total="6" passed="3" failed="2" skipped="1"><test name="Pickles.TestHarness.xunit.AdditionFeature.IgnoredAddingTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="IgnoredAddingTwoNumbers" result="Skip"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Ignored adding two numbers" /></traits><reason><message>Ignored</message></reason></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddingSeveralNumbers" result="Pass" time="0.178"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Adding several numbers" /></traits><output>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Given I have entered 60 into the calculator
 -&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(60) (0,0s)
@@ -53,7 +22,38 @@ When I press add
 -&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
 Then the result should be 180 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(180) (0,0s)
-</output></test><test name="Pickles.TestHarness.xunit.AdditionFeature.IgnoredAddingTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="IgnoredAddingTwoNumbers" result="Skip"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Ignored adding two numbers" /></traits><reason><message>Ignored</message></reason></test><test name="Pickles.TestHarness.xunit.AdditionFeature.NotAutomatedAddingTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="NotAutomatedAddingTwoNumbers" result="Fail" time="0.116"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Not automated adding two numbers" /></traits><output>Given the calculator has clean memory
+</output></test><test name="Pickles.TestHarness.xunit.AdditionFeature.FailToAddTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="FailToAddTwoNumbers" result="Fail" time="0.014"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Fail to add two numbers" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 1 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
+And I have entered 2.2 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2,2) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 3.2 on the screen
+-&gt; error: Die Eingabezeichenfolge hat das falsche Format.
+</output><failure exception-type="System.FormatException"><message>System.FormatException : Die Eingabezeichenfolge hat das falsche Format.</message><stack-trace>   bei System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer&amp; number, NumberFormatInfo info, Boolean parseDecimal)
+   bei System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   bei System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   bei System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   bei System.Linq.Enumerable.&lt;SelectIterator&gt;d__5`2.MoveNext()
+   bei System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   bei System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.GetExecuteArguments(BindingMatch match)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit.AdditionFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit.AdditionFeature.FailToAddTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature:Zeile 34.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.AdditionFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="AddTwoNumbers" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Add two numbers" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Given I have entered 1 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(1) (0,0s)
+And I have entered 2 into the calculator
+-&gt; done: AdditionSteps.GivenIHaveEnteredIntoTheCalculator(2) (0,0s)
+When I press add
+-&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
+Then the result should be 3 on the screen
+-&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(3) (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.AdditionFeature.NotAutomatedAddingTwoNumbers" type="Pickles.TestHarness.xunit.AdditionFeature" method="NotAutomatedAddingTwoNumbers" result="Fail" time="0.079"><traits><trait name="FeatureTitle" value="Addition" /><trait name="Description" value="Not automated adding two numbers" /></traits><output>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Given unimplemented step
 -&gt; No matching step definition found for the step. Use the following code to create one:
@@ -109,7 +109,71 @@ namespace MyNamespace
 }
 </message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
    bei Pickles.TestHarness.xunit.AdditionFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.AdditionFeature.NotAutomatedAddingTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature:Zeile 46.</stack-trace></failure></test></class><class time="0.110" name="Pickles.TestHarness.xunit.FailingBackgroundFeature" total="3" passed="0" failed="3" skipped="0"><test name="Pickles.TestHarness.xunit.FailingBackgroundFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit.FailingBackgroundFeature" method="AddTwoNumbers" result="Fail" time="0.105"><traits><trait name="FeatureTitle" value="Failing Background" /><trait name="Description" value="Add two numbers" /></traits><output>Given the background step fails
+   bei Pickles.TestHarness.xunit.AdditionFeature.NotAutomatedAddingTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit\Addition.feature:Zeile 46.</stack-trace></failure></test></class><class time="0.033" name="Pickles.TestHarness.xunit.FailingBackgroundFeature" total="3" passed="0" failed="3" skipped="0"><test name="Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.FailingBackgroundFeature" method="AddingSeveralNumbers" result="Fail" time="0.028"><traits><trait name="FeatureTitle" value="Failing Background" /><trait name="Description" value="Adding several numbers" /></traits><output>Given the background step fails
+-&gt; error: 
+    1
+        should be
+    2
+        but was
+    1
+And the calculator has clean memory
+-&gt; skipped because of previous errors
+Given I have entered 60 into the calculator
+-&gt; skipped because of previous errors
+And I have entered 70 into the calculator
+-&gt; skipped because of previous errors
+And I have entered 130 into the calculator
+-&gt; skipped because of previous errors
+When I press add
+-&gt; skipped because of previous errors
+Then the result should be 260 on the screen
+-&gt; skipped because of previous errors
+</output><failure exception-type="Shouldly.ChuckedAWobbly"><message>Shouldly.ChuckedAWobbly : 
+    1
+        should be
+    2
+        but was
+    1</message><stack-trace>   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature:Zeile 19.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.FailingBackgroundFeature" method="AddingSeveralNumbers" result="Fail" time="0.002"><traits><trait name="FeatureTitle" value="Failing Background" /><trait name="Description" value="Adding several numbers" /></traits><output>Given the background step fails
+-&gt; error: 
+    1
+        should be
+    2
+        but was
+    1
+And the calculator has clean memory
+-&gt; skipped because of previous errors
+Given I have entered 40 into the calculator
+-&gt; skipped because of previous errors
+And I have entered 50 into the calculator
+-&gt; skipped because of previous errors
+And I have entered 90 into the calculator
+-&gt; skipped because of previous errors
+When I press add
+-&gt; skipped because of previous errors
+Then the result should be 180 on the screen
+-&gt; skipped because of previous errors
+</output><failure exception-type="Shouldly.ChuckedAWobbly"><message>Shouldly.ChuckedAWobbly : 
+    1
+        should be
+    2
+        but was
+    1</message><stack-trace>   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
+   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
+   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
+   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature:Zeile 19.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.FailingBackgroundFeature.AddTwoNumbers" type="Pickles.TestHarness.xunit.FailingBackgroundFeature" method="AddTwoNumbers" result="Fail" time="0.003"><traits><trait name="FeatureTitle" value="Failing Background" /><trait name="Description" value="Add two numbers" /></traits><output>Given the background step fails
 -&gt; error: 
     1
         should be
@@ -139,133 +203,7 @@ Then the result should be 120 on the screen
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    bei Pickles.TestHarness.xunit.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.AddTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature:Zeile 12.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;60&quot;, secondNumber: &quot;70&quot;, thirdNumber: &quot;130&quot;, result: &quot;260&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.FailingBackgroundFeature" method="AddingSeveralNumbers" result="Fail" time="0.004"><traits><trait name="FeatureTitle" value="Failing Background" /><trait name="Description" value="Adding several numbers" /></traits><output>Given the background step fails
--&gt; error: 
-    1
-        should be
-    2
-        but was
-    1
-And the calculator has clean memory
--&gt; skipped because of previous errors
-Given I have entered 60 into the calculator
--&gt; skipped because of previous errors
-And I have entered 70 into the calculator
--&gt; skipped because of previous errors
-And I have entered 130 into the calculator
--&gt; skipped because of previous errors
-When I press add
--&gt; skipped because of previous errors
-Then the result should be 260 on the screen
--&gt; skipped because of previous errors
-</output><failure exception-type="Shouldly.ChuckedAWobbly"><message>Shouldly.ChuckedAWobbly : 
-    1
-        should be
-    2
-        but was
-    1</message><stack-trace>   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature:Zeile 19.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(firstNumber: &quot;40&quot;, secondNumber: &quot;50&quot;, thirdNumber: &quot;90&quot;, result: &quot;180&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.FailingBackgroundFeature" method="AddingSeveralNumbers" result="Fail" time="0.001"><traits><trait name="FeatureTitle" value="Failing Background" /><trait name="Description" value="Adding several numbers" /></traits><output>Given the background step fails
--&gt; error: 
-    1
-        should be
-    2
-        but was
-    1
-And the calculator has clean memory
--&gt; skipped because of previous errors
-Given I have entered 40 into the calculator
--&gt; skipped because of previous errors
-And I have entered 50 into the calculator
--&gt; skipped because of previous errors
-And I have entered 90 into the calculator
--&gt; skipped because of previous errors
-When I press add
--&gt; skipped because of previous errors
-Then the result should be 180 on the screen
--&gt; skipped because of previous errors
-</output><failure exception-type="Shouldly.ChuckedAWobbly"><message>Shouldly.ChuckedAWobbly : 
-    1
-        should be
-    2
-        but was
-    1</message><stack-trace>   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in D:\Work\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature:Zeile 19.</stack-trace></failure></test></class><class time="0.019" name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" total="3" passed="0" failed="3" skipped="0"><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario1" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario1" result="Fail" time="0.006"><traits><trait name="FeatureTitle" value="Not Automated At All" /><trait name="Description" value="Not automated scenario 1" /></traits><output>Given unimplemented step
--&gt; No matching step definition found for the step. Use the following code to create one:
-        [Given(@"unimplemented step")]
-        public void GivenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-Given unimplemented step
--&gt; No matching step definition found for the step. Use the following code to create one:
-        [Given(@"unimplemented step")]
-        public void GivenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-When unimplemented step
--&gt; No matching step definition found for the step. Use the following code to create one:
-        [When(@"unimplemented step")]
-        public void WhenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-Then unimplemented step
--&gt; No matching step definition found for the step. Use the following code to create one:
-        [Then(@"unimplemented step")]
-        public void ThenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-
-</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"unimplemented step")]
-        public void GivenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"unimplemented step")]
-        public void WhenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"unimplemented step")]
-        public void ThenUnimplementedStep()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario1() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature:Zeile 9.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario2" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario2" result="Fail" time="0.008"><traits><trait name="FeatureTitle" value="Not Automated At All" /><trait name="Description" value="Not automated scenario 2" /></traits><output>Given unimplemented step
+   bei Pickles.TestHarness.xunit.FailingBackgroundFeature.AddTwoNumbers() in D:\Work\pickles-testresults\TestHarness\xunit\FailingBackground.feature:Zeile 12.</stack-trace></failure></test></class><class time="0.019" name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" total="3" passed="0" failed="3" skipped="0"><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario2" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario2" result="Fail" time="0.005"><traits><trait name="FeatureTitle" value="Not Automated At All" /><trait name="Description" value="Not automated scenario 2" /></traits><output>Given unimplemented step
 -&gt; No matching step definition found for the step. Use the following code to create one:
         [Given(@"unimplemented step")]
         public void GivenUnimplementedStep()
@@ -389,13 +327,75 @@ namespace MyNamespace
 }
 </message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
    bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario3() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature:Zeile 19.</stack-trace></failure></test></class><class time="0.016" name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" total="17" passed="11" failed="6" skipped="0"><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples(filePath: &quot;c:\Temp\&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="DealCorrectlyWithBackslashesInTheExamples" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="Deal correctly with backslashes in the examples" /></traits><output>When I have backslashes in the value, for example a 'c:\Temp\'
--&gt; done: ScenarioOutlineSteps.WhenIHaveBackslashesInTheValueForExampleAFilePath("c:\Temp\") (0,0s)
-</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'pass_1'
+   bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario3() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature:Zeile 19.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario1" type="Pickles.TestHarness.xunit.NotAutomatedAtAllFeature" method="NotAutomatedScenario1" result="Fail" time="0.009"><traits><trait name="FeatureTitle" value="Not Automated At All" /><trait name="Description" value="Not automated scenario 1" /></traits><output>Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Given unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+When unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+Then unimplemented step
+-&gt; No matching step definition found for the step. Use the following code to create one:
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+
+</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: No matching step definition found for one or more steps.
+using System;
+using TechTalk.SpecFlow;
+
+namespace MyNamespace
+{
+    [Binding]
+    public class StepDefinitions
+    {
+        [Given(@"unimplemented step")]
+        public void GivenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [When(@"unimplemented step")]
+        public void WhenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+        
+        [Then(@"unimplemented step")]
+        public void ThenUnimplementedStep()
+        {
+            ScenarioContext.Current.Pending();
+        }
+    }
+}
+</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit.NotAutomatedAtAllFeature.NotAutomatedScenario1() in D:\Work\pickles-testresults\TestHarness\xunit\NotAutomatedAtAll.feature:Zeile 9.</stack-trace></failure></test></class><class time="0.010" name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" total="17" passed="11" failed="6" skipped="0"><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples(overlyDescriptiveField: &quot;This is a description (and more)&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="DealCorrectlyWithParenthesisInTheExamples" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="Deal correctly with parenthesis in the examples" /></traits><output>When I have parenthesis in the value, for example an 'This is a description (and more)'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveParenthesisInTheValueForExampleAnOverlyDescriptiveField("This is a descrip...") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 </output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;pass_2&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
-</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;inconclusive_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Fail" time="0.004"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'inconclusive_1'
+</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;inconclusive_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Fail" time="0.003"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'inconclusive_1'
 -&gt; pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")
 </output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.
   ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
@@ -405,7 +405,7 @@ namespace MyNamespace
 </output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.
   ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_2")</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
    bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature:Zeile 45.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;fail_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Fail" time="0.005"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'fail_1'
+   bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature:Zeile 45.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(result: &quot;fail_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" result="Fail" time="0.004"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="And we can go totally bonkers with multiple example sections." /></traits><output>Then the scenario will 'fail_1'
 -&gt; error: 
     true
         should be
@@ -445,8 +445,8 @@ namespace MyNamespace
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature:Zeile 45.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples(overlyDescriptiveField: &quot;This is a description (and more)&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="DealCorrectlyWithParenthesisInTheExamples" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="Deal correctly with parenthesis in the examples" /></traits><output>When I have parenthesis in the value, for example an 'This is a description (and more)'
--&gt; done: ScenarioOutlineSteps.WhenIHaveParenthesisInTheValueForExampleAnOverlyDescriptiveField("This is a descrip...") (0,0s)
+   bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature:Zeile 45.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples(filePath: &quot;c:\Temp\&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="DealCorrectlyWithBackslashesInTheExamples" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="Deal correctly with backslashes in the examples" /></traits><output>When I have backslashes in the value, for example a 'c:\Temp\'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveBackslashesInTheValueForExampleAFilePath("c:\Temp\") (0,0s)
 </output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where all scenarios pass" /></traits><output>Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 </output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(result: &quot;pass_2&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereAllScenariosPass" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where all scenarios pass" /></traits><output>Then the scenario will 'pass_2'
@@ -457,7 +457,7 @@ namespace MyNamespace
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 </output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;pass_2&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where one scenario is inconclusive" /></traits><output>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
-</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;inconclusive_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" result="Fail" time="0.001"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where one scenario is inconclusive" /></traits><output>Then the scenario will 'inconclusive_1'
+</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(result: &quot;inconclusive_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" result="Fail" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where one scenario is inconclusive" /></traits><output>Then the scenario will 'inconclusive_1'
 -&gt; pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")
 </output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.
   ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
@@ -466,7 +466,7 @@ namespace MyNamespace
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 </output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;pass_2&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where one scenario fails" /></traits><output>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
-</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;fail_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" result="Fail" time="0.001"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where one scenario fails" /></traits><output>Then the scenario will 'fail_1'
+</output></test><test name="Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(result: &quot;fail_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenarioOutlinesFeature" method="ThisIsAScenarioOutlineWhereOneScenarioFails" result="Fail" time="0.000"><traits><trait name="FeatureTitle" value="Scenario Outlines" /><trait name="Description" value="This is a scenario outline where one scenario fails" /></traits><output>Then the scenario will 'fail_1'
 -&gt; error: 
     true
         should be
@@ -486,10 +486,52 @@ namespace MyNamespace
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature:Zeile 34.</stack-trace></failure></test></class><class time="0.001" name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" total="2" passed="2" failed="0" skipped="0"><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(result: &quot;pass_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)" /></traits><output>Given the calculator has clean memory
+   bei Pickles.TestHarness.xunit.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in D:\Work\pickles-testresults\TestHarness\xunit\ScenarioOutlines.feature:Zeile 34.</stack-trace></failure></test></class><class time="0.001" name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" total="9" passed="9" failed="0" skipped="0"><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(result: &quot;pass_1&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)" /></traits><output>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;**&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '**'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("**") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;++&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '++'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("++") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;.*&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '.*'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex(".*") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;[]&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '[]'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("[]") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;{}&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '{}'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("{}") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;()&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '()'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("()") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+</output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$&quot;, exampleTags: System.String[])" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This scenario contains examples with Regex-special characters" /></traits><output>Given the calculator has clean memory
+-&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$'
+-&gt; done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("^.*(?&lt;foo&gt;BAR)\s[...") (0,0s)
+Then the scenario will 'PASS'
+-&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 </output></test><test name="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" type="Pickles.TestHarness.xunit.ScenariosWithSpecialCharactersFeature" method="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Scenarios With Special Characters" /><trait name="Description" value="This is a scenario with parentheses, hyphen and comma (10-20, 30-40)" /></traits><output>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Given I have entered 50 into the calculator
@@ -500,7 +542,12 @@ When I press add
 -&gt; done: AdditionSteps.WhenIPressAdd() (0,0s)
 Then the result should be 120 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(120) (0,0s)
-</output></test></class><class time="0.006" name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" total="3" passed="1" failed="2" skipped="0"><test name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" method="FailingFeatureFailingScenario" result="Fail" time="0.003"><traits><trait name="FeatureTitle" value="Failing" /><trait name="Description" value="Failing Feature Failing Scenario" /></traits><output>Then failing step
+</output></test></class><class time="0.003" name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" total="3" passed="1" failed="2" skipped="0"><test name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" method="FailingFeatureInconclusiveScenario" result="Fail" time="0.002"><traits><trait name="FeatureTitle" value="Failing" /><trait name="Description" value="Failing Feature Inconclusive Scenario" /></traits><output>Then inconclusive step
+-&gt; pending: MinimalSteps.ThenInconclusiveStep()
+</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.
+  MinimalSteps.ThenInconclusiveStep()</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
+   bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature.cs:Zeile 0.
+   bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature:Zeile 7.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" method="FailingFeatureFailingScenario" result="Fail" time="0.001"><traits><trait name="FeatureTitle" value="Failing" /><trait name="Description" value="Failing Feature Failing Scenario" /></traits><output>Then failing step
 -&gt; error: 
     true
         should be
@@ -520,12 +567,7 @@ Then the result should be 120 on the screen
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
    bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature:Zeile 10.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" method="FailingFeatureInconclusiveScenario" result="Fail" time="0.002"><traits><trait name="FeatureTitle" value="Failing" /><trait name="Description" value="Failing Feature Inconclusive Scenario" /></traits><output>Then inconclusive step
--&gt; pending: MinimalSteps.ThenInconclusiveStep()
-</output><failure exception-type="TechTalk.SpecFlow.SpecFlowException"><message>TechTalk.SpecFlow.SpecFlowException : Test pending: One or more step definitions are not implemented yet.
-  MinimalSteps.ThenInconclusiveStep()</message><stack-trace>   bei TechTalk.SpecFlow.UnitTestProvider.XUnitRuntimeProvider.TestPending(String message)
-   bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.ScenarioCleanup() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature:Zeile 7.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" method="FailingFeaturePassingScenario" result="Pass" time="0.001"><traits><trait name="FeatureTitle" value="Failing" /><trait name="Description" value="Failing Feature Passing Scenario" /></traits><output>Then passing step
+   bei Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in D:\Work\pickles-testresults\TestHarness\xunit\Minimal Features\Failing.feature:Zeile 10.</stack-trace></failure></test><test name="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.FailingFeature" method="FailingFeaturePassingScenario" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Failing" /><trait name="Description" value="Failing Feature Passing Scenario" /></traits><output>Then passing step
 -&gt; done: MinimalSteps.ThenPassingStep() (0,0s)
 </output></test></class><class time="0.001" name="Pickles.TestHarness.xunit.MinimalFeatures.InconclusiveFeature" total="2" passed="1" failed="1" skipped="0"><test name="Pickles.TestHarness.xunit.MinimalFeatures.InconclusiveFeature.InconclusiveFeaturePassingScenario" type="Pickles.TestHarness.xunit.MinimalFeatures.InconclusiveFeature" method="InconclusiveFeaturePassingScenario" result="Pass" time="0.000"><traits><trait name="FeatureTitle" value="Inconclusive" /><trait name="Description" value="Inconclusive Feature Passing Scenario" /></traits><output>Then passing step
 -&gt; done: MinimalSteps.ThenPassingStep() (0,0s)

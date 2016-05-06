@@ -39,10 +39,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit
 
             foreach (string value in row)
             {
-                stringBuilder.AppendFormat("\"{0}\",", value.ToLowerInvariant()
-                    .Replace(@"\", string.Empty).Replace(@"$", @"\$")
-                    .Replace(@"(", @"\(")
-                    .Replace(@")", @"\)"));
+                stringBuilder.AppendFormat("\"{0}\",", Regex.Escape(value.ToLowerInvariant()));
             }
 
             stringBuilder.Remove(stringBuilder.Length - 1, 1);
