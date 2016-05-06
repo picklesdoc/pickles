@@ -57,5 +57,11 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
         {
             base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleExampleSections_ShouldBeTestResultFailed();
         }
+
+        [Test]
+        public new void ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed()
+        {
+            base.ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed();
+        }
     }
 }
