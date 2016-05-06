@@ -1612,6 +1612,391 @@
             }
           }
         ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;2",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 27,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '**'",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 27,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;3",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '++'",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 28,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;4",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 29,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '.*'",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;5",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 30,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '[]'",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;6",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 31,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '{}'",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;7",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 32,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '()'",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 32,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-scenario-contains-examples-with-regex-special-characters;;8",
+        "keyword": "Scenario Outline",
+        "name": "This scenario contains examples with Regex-special characters",
+        "description": "",
+        "line": 33,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$'",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 33,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
       }
     ]
   }

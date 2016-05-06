@@ -1496,6 +1496,328 @@
             }
           }
         ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 27,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 79258
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '**'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 80969
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 56450
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 28,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 197574
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '++'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 62436
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 55595
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 29,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 84674
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '.*'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 61011
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 66713
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 30,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 69849
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '[]'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 51318
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 65573
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 31,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 66429
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '{}'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 51888
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 75266
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 32,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 65003
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '()'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 139414
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 213540
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
+      },
+      {
+        "name": "This scenario contains examples with Regex-special characters",
+        "id": "Scenarios-With-Special-Characters;this-scenario-contains-examples-with-regex-special-characters",
+        "line": 33,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "keyword": "Given ",
+            "result": {
+              "status": "passed",
+              "duration": 310474
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+            }
+          },
+          {
+            "name": "I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$'",
+            "line": 22,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 74982
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 23,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 56165
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
       }
     ]
   }
