@@ -211,43 +211,43 @@
           <trait name="Description" value="This is a scenario with parentheses, hyphen and comma (10-20, 30-40)" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Asterisks&quot;, regex: &quot;**&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0007188" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;**&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0007188" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Plus&quot;, regex: &quot;++&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004412" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;++&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004412" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Dot and Plus&quot;, regex: &quot;.*&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004306" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;.*&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004306" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Angle brackets&quot;, regex: &quot;[]&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004355" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;[]&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004355" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Curly braces&quot;, regex: &quot;{}&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004212" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;{}&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004212" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Parenthesis&quot;, regex: &quot;()&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004073" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;()&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004073" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />
         </traits>
       </test>
-      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(description: &quot;Regex&quot;, regex: &quot;^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004064" result="Pass">
+      <test name="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: &quot;^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$&quot;, exampleTags: [])" type="Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature" method="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" time="0.0004064" result="Pass">
         <traits>
           <trait name="FeatureTitle" value="Scenarios With Special Characters" />
           <trait name="Description" value="This scenario contains examples with Regex-special characters" />

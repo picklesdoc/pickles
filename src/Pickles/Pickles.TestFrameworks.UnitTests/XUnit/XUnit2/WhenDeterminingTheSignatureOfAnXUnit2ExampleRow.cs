@@ -18,7 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Text.RegularExpressions;
 
 using NFluent;
@@ -44,6 +43,72 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.XUnit.XUnit2
             Regex signature = signatureBuilder.Build(scenarioOutline, exampleRow);
 
             var isMatch = signature.IsMatch("Pickles.TestHarness.xUnit.AdditionFeature.AddingSeveralNumbers(firstNumber: \"40\", secondNumber: \"50\", result: \"90\", exampleTags: System.String[])".ToLowerInvariant());
+            Check.That(isMatch).IsTrue();
+        }
+
+        private static bool MatchRegexSpecialChars(string expectedParameter)
+        {
+            var scenarioOutline = new ScenarioOutline { Name = "This scenario contains examples with Regex-special characters" };
+            var exampleRow = new[] { expectedParameter };
+
+            var signatureBuilder = new XUnitExampleSignatureBuilder();
+            var signature = signatureBuilder.Build(scenarioOutline, exampleRow);
+
+            var matchEntry = string
+                .Format(
+                    "Pickles.TestHarness.xunit2.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(regex: \"{0}\", exampleTags: System.String[])",
+                    expectedParameter)
+                .ToLowerInvariant();
+
+            return signature.IsMatch(matchEntry);
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_Asterisk()
+        {
+            var isMatch = MatchRegexSpecialChars("**");
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_Plus()
+        {
+            var isMatch = MatchRegexSpecialChars("++");
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_FullStop_And_Asterisk()
+        {
+            var isMatch = MatchRegexSpecialChars(".*");
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_Angle_Brackets()
+        {
+            var isMatch = MatchRegexSpecialChars("[]");
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_Curly_Braces()
+        {
+            var isMatch = MatchRegexSpecialChars("{}");
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_Parentheses()
+        {
+            var isMatch = MatchRegexSpecialChars("()");
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void RegularExpressionAsExampleContentMatches_With_Full_Regular_Expression()
+        {
+            var isMatch = MatchRegexSpecialChars(@"^.*(?<foo>BAR)\s[^0-9]{3,4}A+$");
             Check.That(isMatch).IsTrue();
         }
     }
