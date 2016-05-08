@@ -14,6 +14,15 @@ Target "Test" (fun _ ->
              OutputFile = testDir + "TestResults.xml" })
 )
 
+Target "Test.TestFrameworks" (fun _ ->
+    !! (testDir + "PicklesDoc.Pickles.TestFrameworks.UnitTests")
+      |> NUnit (fun p ->
+          {p with
+             DisableShadowCopy = true;
+             OutputFile = testDir + "TestFrameworks.TestResults.xml" })
+)
+
+"Test" ==> "Test.TestFrameworks"
 
 // start build
-RunTargetOrDefault "Test"
+RunTargetOrDefault "Test.TestFrameworks"

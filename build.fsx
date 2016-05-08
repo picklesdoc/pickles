@@ -63,6 +63,12 @@ Target "BuildTest" (fun _ ->
       |> Log "AppBuild-Output: "
 )
 
+Target "BuildTest.TestFrameworks" (fun _ ->
+    !! "src/Pickles/Pickles.TestFrameworks.UnitTests/Pickles.TestFrameworks.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
 let createZip (packageType : string) =
     !! (buildDir + "/" + packageType + "/*.*") -- "*.zip"
         |> Zip (buildDir + packageType) (deployDir + "Pickles-" + packageType + "-" + version + ".zip")
@@ -87,6 +93,7 @@ Target "Default" (fun _ ->
   ==> "BuildPowerShell"
   ==> "BuildGui"
   ==> "BuildTest"
+  ==> "BuildTest.TestFrameworks"
   ==> "Zip"
   ==> "Default"
 
