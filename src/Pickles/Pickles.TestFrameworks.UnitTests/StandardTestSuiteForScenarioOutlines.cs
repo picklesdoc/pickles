@@ -18,9 +18,10 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 
 using NFluent;
+
+using NUnit.Framework;
 
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -128,6 +129,41 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             TestResult exampleResult6 = results.GetExampleResult(scenarioOutline, new[] { "fail_2" });
             Check.That(exampleResult6).IsEqualTo(TestResult.Failed);
+        }
+
+        public void ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed()
+        {
+            Assert.Fail("Deliberately breaking tests to check the CI build...");
+
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenarios With Special Characters" };
+
+            var scenarioOutline = new ScenarioOutline { Name = "This scenario contains examples with Regex-special characters", Feature = feature };
+
+            TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
+            Check.That(exampleResultOutline).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "**" });
+            Check.That(exampleResult1).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult2 = results.GetExampleResult(scenarioOutline, new[] { "++" });
+            Check.That(exampleResult2).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult3 = results.GetExampleResult(scenarioOutline, new[] { ".*" });
+            Check.That(exampleResult3).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult4 = results.GetExampleResult(scenarioOutline, new[] { "[]" });
+            Check.That(exampleResult4).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult5 = results.GetExampleResult(scenarioOutline, new[] { "{}" });
+            Check.That(exampleResult5).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult6 = results.GetExampleResult(scenarioOutline, new[] { "()" });
+            Check.That(exampleResult6).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult7 = results.GetExampleResult(scenarioOutline, new[] { @"^.*(?<foo>BAR)\s[^0-9]{3,4}A+$" });
+            Check.That(exampleResult7).IsEqualTo(TestResult.Passed);
         }
     }
 }
