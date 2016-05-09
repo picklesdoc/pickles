@@ -133,8 +133,6 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
         public void ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed()
         {
-            Assert.Fail("Deliberately breaking tests to check the CI build...");
-
             var results = ParseResultsFile();
 
             var feature = new Feature { Name = "Scenarios With Special Characters" };
