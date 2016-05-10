@@ -14,6 +14,18 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.6.1] - 2016-05-10
+
+### Changed
+
+- The DHTML version now uses Knockout version 3.4.0 ([335](https://github.com/picklesdoc/pickles/pull/335)) (by [@dirkrombauts](https://github.com/dirkrombauts)).
+- The dependency on AutoMapper was removed ([333](https://github.com/picklesdoc/pickles/pull/333)) (by [@dirkrombauts](https://github.com/dirkrombauts)).
+
+### Fixed
+
+- General handling of special characters in scenario outline inputs, and XUnit failed, if multiple TestResults.xml were used ([#336](https://github.com/picklesdoc/pickles/issues/336)) (by [@magicmonty](https://github.com/magicmonty)).
+- SpecFlow conformant name mapping in other test result providers ([#326](https://github.com/picklesdoc/pickles/issues/326)) (by [@danielpullwitt](https://github.com/danielpullwitt)).
+
 ## [2.6.0] - 2016-04-12
 
 ### Added
