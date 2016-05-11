@@ -40,6 +40,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.VsTest
         [Test]
         public void ThenCanReadFailedFeatureResultSuccessfully()
         {
+            Check.That(true).IsEqualTo(false);
             var results = ParseResultsFile();
 
             TestResult result = results.GetFeatureResult(new Feature { Name = "Failing" });
