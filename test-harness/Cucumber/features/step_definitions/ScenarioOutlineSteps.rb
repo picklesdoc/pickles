@@ -21,3 +21,7 @@ end
 When(/^I have special characters for regexes in the value, for example a '(.*)'$/) do |arg1|
   #Nothing to be done here
 end
+
+When(/^I have a field with value '(.*)'$/) do |arg1|
+  #Nothing to be done here
+end

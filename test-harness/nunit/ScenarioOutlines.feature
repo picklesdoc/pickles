@@ -76,3 +76,13 @@ Scenario Outline: Deal correctly with parenthesis in the examples
   Examples:
     | overly descriptive field         |
     | This is a description (and more) |
+    
+Scenario Outline: Deal correctly with overlong example values
+  
+  When I have a field with value '<value1>'
+  And I have a field with value '<value2>'
+  Then the scenario will 'pass_1'
+  
+  Examples:
+    | value1                                                  | value2                                                  |
+    | Please enter a valid two letter country code (e.g. DE)! | This is just a very very very veery long error message! |

@@ -237,6 +237,26 @@ this.ScenarioSetup(scenarioInfo);
             this.DealCorrectlyWithParenthesisInTheExamples("This is a description (and more)", ((string[])(null)));
         }
         
+        public virtual void DealCorrectlyWithOverlongExampleValues(string value1, string value2, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal correctly with overlong example values", exampleTags);
+#line 80
+ this.ScenarioSetup(scenarioInfo);
+#line 82
+  testRunner.When("I have a field with value \'<value>\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+  testRunner.Then("the scenario will \'pass_1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal correctly with overlong example values, Please enter a valid two letter coun" +
+            "try code (e.g. DE)!", SourceLine=86)]
+        public virtual void DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE()
+        {
+            this.DealCorrectlyWithOverlongExampleValues("Please enter a valid two letter country code (e.g. DE)!", "This is just a very very very veery long error message!", ((string[])(null)));
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {

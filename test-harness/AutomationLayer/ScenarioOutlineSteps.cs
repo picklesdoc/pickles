@@ -43,5 +43,11 @@ namespace AutomationLayer
     {
         // nothing to be done - test case requires pass
     }
+    
+    [When(@"I have a field with value '(.*)'")]
+    public void WhenIHaveAFieldWithValue(string value)
+    {
+        // nothing to be done - test case requires pass
+    }
   }
 }

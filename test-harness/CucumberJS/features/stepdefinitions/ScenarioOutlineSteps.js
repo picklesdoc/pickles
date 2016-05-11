@@ -33,4 +33,9 @@ module.exports = function() {
     // nothing to be done here
     callback();
   });
+  
+  this.When(/^I have a field with value '(.*)'$/, function name(value, callback) {
+    // nothing to be done here
+    callback();
+  });
 };

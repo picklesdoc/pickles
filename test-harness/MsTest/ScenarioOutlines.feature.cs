@@ -303,6 +303,32 @@ this.ScenarioSetup(scenarioInfo);
         {
             this.DealCorrectlyWithParenthesisInTheExamples("This is a description (and more)", ((string[])(null)));
         }
+        
+        public virtual void DealCorrectlyWithOverlongExampleValues(string value1, string value2, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal correctly with overlong example values", exampleTags);
+#line 80
+this.ScenarioSetup(scenarioInfo);
+#line 82
+  testRunner.When(string.Format("I have a field with value \'{0}\'", value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 83
+  testRunner.And(string.Format("I have a field with value \'{0}\'", value2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 84
+  testRunner.Then("the scenario will \'pass_1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal correctly with overlong example values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Please enter a valid two letter country code (e.g. DE)!")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:value1", "Please enter a valid two letter country code (e.g. DE)!")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:value2", "This is just a very very very veery long error message!")]
+        public virtual void DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE()
+        {
+            this.DealCorrectlyWithOverlongExampleValues("Please enter a valid two letter country code (e.g. DE)!", "This is just a very very very veery long error message!", ((string[])(null)));
+        }
     }
 }
 #pragma warning restore
