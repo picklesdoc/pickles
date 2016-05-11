@@ -37,7 +37,7 @@ namespace PicklesDoc.Pickles
         public const string HelpSutVersion = "the version of the system under test";
         public const string HelpLanguageFeatureFiles = "the language of the feature files";
         public const string HelpDocumentationFormat = "the format of the output documentation";
-        public const string HelpTestResultsFormat = "the format of the linked test results (nunit|xunit)";
+        public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
 
         public const string HelpTestResultsFile =

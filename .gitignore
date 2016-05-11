@@ -82,9 +82,15 @@ src/Pickles/PrecompiledWeb/
 # FAKE stuff
 packages/FAKE/
 packages/Chocolatey/
+packages/NUnit.ConsoleRunner/
 
 # Fody
 !src/Pickles/packages/Fody*/build/*
 src/Pickles/.vs/config/applicationhost.config
 src/Pickles/Pickles/PortabilityAnalysis.html
 src/Pickles/.vs/config/applicationhost.config
+TestResult.xml
+
+# test harness
+test-harness/packages/
+node_modules/

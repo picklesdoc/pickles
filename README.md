@@ -46,7 +46,7 @@ Supported Test Runner Integrations
 Contributing
 ------------
 
-It's easy to contribute to Pickles, just setup an account on github and fork the project.  When you have some code to contribute, send a pull request!  There are plenty of ideas for contributions on the wiki and in the issues list.
+Pickles welcomes contributions from the community! Please refer to [Contributing.md](https://github.com/picklesdoc/pickles/blob/develop/CONTRIBUTING.md) for more information on how to contribute and how to set up your environment.
 
 License
 -------

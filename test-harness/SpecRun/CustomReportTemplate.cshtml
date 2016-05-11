@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+@using System.Linq
+@using System.Globalization
+@using TechTalk.SpecRun.Framework
+@using TechTalk.SpecRun.Framework.Results
+@using TechTalk.SpecRun.Framework.TestSuiteStructure
+
+@helper GetResultForPickles(TestNode testNode)
+{
+    var summary = GetSummary(testNode);
+
+    if (summary.Succeeded > 0)
+    {<text>Passed</text>}
+    else if (summary.TotalFailure > 0)
+    {<text>Failed</text>}
+    else if (summary.Ignored > 0)
+    {<text>Ignored</text>}
+    else if (summary.Pending > 0)
+    {<text>Pending</text>}
+    else
+    {<text>Inconclusive</text>}
+}
+
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    </head>
+    <body>
+<!-- Pickles Begin
+&lt;features&gt;
+@foreach (var fixtureNode in GetTextFixtures())
+{
+    <text>&lt;feature&gt;</text>
+        <text>&lt;title&gt;</text>@fixtureNode.Title<text>&lt;/title&gt;</text>
+        <text>&lt;scenarios&gt;</text>
+foreach (TestNode testNode in fixtureNode.SubNodes)
+{
+            <text>&lt;scenario&gt;</text>
+                <text>&lt;title&gt;</text>@testNode.Title<text>&lt;/title&gt;</text>
+                <text>&lt;result&gt;</text>@GetResultForPickles(testNode)<text>&lt;/result&gt;</text>
+            <text>&lt;/scenario&gt;</text>
+}
+        <text>&lt;/scenarios&gt;</text>
+    <text>&lt;/feature&gt;</text>
+}
+&lt;/features&gt;
+Pickles End -->
+    </body>
+</html>
