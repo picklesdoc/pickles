@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestProfile xmlns="http://www.specrun.com/schemas/2011/09/TestProfile">
+  <Settings projectName="SpecRun" projectId="{ca37f04b-0bfb-452b-aba0-8b183088ac45}" reportTemplate="CustomReportTemplate.cshtml" />
+  <Execution testThreadCount="1" testSchedulingMode="Sequential" retryCount="0" />
+  <!-- For collecting by a SpecRun server update and enable the following element. For using the 
+      collected statistics, set testSchedulingMode="Adaptive" attribute on the <Execution> element.
+    <Server serverUrl="http://specrunserver:6365" publishResults="true" />
+  -->
+  <TestAssemblyPaths>
+    <TestAssemblyPath>SpecRun.dll</TestAssemblyPath>
+  </TestAssemblyPaths>
+    <DeploymentTransformation>
+    <Steps>
+      <!-- sample config transform to change the connection string-->
+      <!--<ConfigFileTransformation configFile="App.config">
+        <Transformation>
+          <![CDATA[<?xml version="1.0" encoding="utf-8"?>
+                            <configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+                <connectionStrings>
+                  <add name="MyDatabase" connectionString="Data Source=.;Initial Catalog=MyDatabaseForTesting;Integrated Security=True" 
+                       xdt:Locator="Match(name)" xdt:Transform="SetAttributes(connectionString)" />
+                </connectionStrings>
+                            </configuration>
+                        ]]>
+        </Transformation>
+      </ConfigFileTransformation>-->
+    </Steps>
+  </DeploymentTransformation>
+</TestProfile>

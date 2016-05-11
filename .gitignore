@@ -90,3 +90,7 @@ src/Pickles/.vs/config/applicationhost.config
 src/Pickles/Pickles/PortabilityAnalysis.html
 src/Pickles/.vs/config/applicationhost.config
 TestResult.xml
+
+# test harness
+test-harness/packages/
+node_modules/
