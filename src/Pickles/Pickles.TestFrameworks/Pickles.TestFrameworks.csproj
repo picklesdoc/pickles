@@ -56,6 +56,8 @@
     <Compile Include="CucumberJson\CucumberJsonSingleResultLoader.cs" />
     <Compile Include="IScenarioOutlineExampleMatcher.cs" />
     <Compile Include="ISingleResultLoader.cs" />
+    <Compile Include="NUnit\NUnit3\NUnit3ScenarioOutlineExampleMatcher.cs" />
+    <Compile Include="NUnit\NUnit3\NUnit3ExampleSignatureBuilder.cs" />
     <Compile Include="SpecFlowNameMapping.cs" />
     <Compile Include="VsTest\VsTestElementExtensions.cs" />
     <Compile Include="VsTest\VsTestExampleSignatureBuilder.cs" />
@@ -70,7 +72,7 @@
     <Compile Include="MsTest\MsTestSingleResults.cs" />
     <Compile Include="MsTest\MsTestSingleResultLoader.cs" />
     <Compile Include="MultipleTestRunsBase.cs" />
-    <Compile Include="NUnit\NUnitExampleSignatureBuilder.cs" />
+    <Compile Include="NUnit\NUnit2\NUnit2ExampleSignatureBuilder.cs" />
     <Compile Include="NUnit\NUnit2\NUnit2Results.cs" />
     <Compile Include="NUnit\NUnit2\NUnit2SingleResults.cs" />
     <Compile Include="NUnit\NUnit2\NUnit2SingleResultLoader.cs" />
@@ -80,7 +82,7 @@
     <Compile Include="NUnit\NUnit3\results-example-nunit3.cs">
       <DependentUpon>results-example-nunit3.xsd</DependentUpon>
     </Compile>
-    <Compile Include="NUnit\NUnitScenarioOutlineExampleMatcher.cs" />
+    <Compile Include="NUnit\NUnit2\NUnit2ScenarioOutlineExampleMatcher.cs" />
     <Compile Include="NUnit\NUnitSingleResultsBase.cs" />
     <Compile Include="NUnit\NUnitXElementExtensions.cs" />
     <Compile Include="NUnit\TestResultAndName.cs" />

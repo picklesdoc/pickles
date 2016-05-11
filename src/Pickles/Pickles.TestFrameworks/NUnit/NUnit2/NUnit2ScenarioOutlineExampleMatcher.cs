@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="NUnitScenarioOutlineExampleMatcher.cs" company="PicklesDoc">
+//  <copyright file="NUnit2ScenarioOutlineExampleMatcher.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -23,11 +23,11 @@ using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.TestFrameworks.NUnit
+namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
 {
-    public class NUnitScenarioOutlineExampleMatcher : IScenarioOutlineExampleMatcher
+    public class NUnit2ScenarioOutlineExampleMatcher : IScenarioOutlineExampleMatcher
     {
-        private readonly NUnitExampleSignatureBuilder signatureBuilder = new NUnitExampleSignatureBuilder();
+        private readonly NUnit2ExampleSignatureBuilder signatureBuilder = new NUnit2ExampleSignatureBuilder();
 
         public bool IsMatch(ScenarioOutline scenarioOutline, string[] exampleValues, object scenarioElement)
         {

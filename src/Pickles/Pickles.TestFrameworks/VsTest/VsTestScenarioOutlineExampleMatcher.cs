@@ -18,7 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
@@ -31,16 +30,18 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
         {
             var element = (XElement)scenarioElement;
 
+            var matchValue = exampleValues[0]
+                .Replace(" ", string.Empty)
+                .Replace(":", string.Empty)
+                .Replace("\\", string.Empty)
+                .Replace("(", string.Empty)
+                .Replace(")", string.Empty)
+                .Replace(".", "_")
+                .Replace("!", string.Empty)
+                .ToUpperInvariant();
+
             var isMatch = element.Name().ToUpperInvariant()
-                .EndsWith(
-                    exampleValues[0]
-                        .Replace(" ", string.Empty)
-                        .Replace(":", string.Empty)
-                        .Replace("\\", string.Empty)
-                        .Replace("(", string.Empty)
-                        .Replace(")", string.Empty)
-                        .ToUpperInvariant()
-                );
+                .EndsWith(matchValue);
 
             return isMatch;
         }

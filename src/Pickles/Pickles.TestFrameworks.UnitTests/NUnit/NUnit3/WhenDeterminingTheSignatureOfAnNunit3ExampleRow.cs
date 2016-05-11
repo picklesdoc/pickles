@@ -18,10 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Text.RegularExpressions;
 
-using Autofac;
 
 using NFluent;
 
@@ -29,7 +27,7 @@ using NUnit.Framework;
 
 using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.Test;
-using PicklesDoc.Pickles.TestFrameworks.NUnit;
+using PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3;
 
 namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
 {
@@ -42,10 +40,27 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
             var scenarioOutline = new ScenarioOutline { Name = "Adding several numbers" };
             var exampleRow = new[] { "40", "50", "90" };
 
-            var signatureBuilder = new NUnitExampleSignatureBuilder();
+            var signatureBuilder = new NUnit3ExampleSignatureBuilder();
             Regex signature = signatureBuilder.Build(scenarioOutline, exampleRow);
 
             var isMatch = signature.IsMatch("AddingSeveralNumbers(\"40\",\"50\",\"90\",System.String[])".ToLowerInvariant());
+            Check.That(isMatch).IsTrue();
+        }
+
+        [Test]
+        public void ThenCanSuccessfullyMatchExamplesWithLongValues()
+        {
+            var scenarioOutline = new ScenarioOutline { Name = "Deal correctly with overlong example values" };
+            var exampleRow = new[]
+            {
+                "Please enter a valid two letter country code (e.g. DE)!",
+                "This is just a very very very veery long error message!"
+            };
+
+            var signatureBuilder = new NUnit3ExampleSignatureBuilder();
+            var signature = signatureBuilder.Build(scenarioOutline, exampleRow);
+
+            var isMatch = signature.IsMatch("DealCorrectlyWithOverlongExampleValues(\"Please enter a valid two letter count...\",\"This is just a very very very veery l...\",null)".ToLowerInvariant());
             Check.That(isMatch).IsTrue();
         }
 
@@ -55,7 +70,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
             var scenarioOutline = new ScenarioOutline { Name = "Adding several numbers (foo-bar, foo bar)" };
             var exampleRow = new[] { "40", "50", "90" };
 
-            var signatureBuilder = new NUnitExampleSignatureBuilder();
+            var signatureBuilder = new NUnit3ExampleSignatureBuilder();
             Regex signature = signatureBuilder.Build(scenarioOutline, exampleRow);
 
             var isMatch = signature.IsMatch("AddingSeveralNumbersFoo_BarFooBar(\"40\",\"50\",\"90\",System.String[])".ToLowerInvariant());

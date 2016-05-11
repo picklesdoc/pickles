@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="NUnit2Results.cs" company="PicklesDoc">
+//  <copyright file="NUnit3ScenarioOutlineExampleMatcher.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -18,14 +18,28 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
-namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
+using PicklesDoc.Pickles.ObjectModel;
+
+namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
 {
-    public class NUnit2Results : MultipleTestRunsBase
+    public class NUnit3ScenarioOutlineExampleMatcher : IScenarioOutlineExampleMatcher
     {
-        public NUnit2Results(IConfiguration configuration, NUnit2SingleResultLoader singleResultLoader, NUnit2ScenarioOutlineExampleMatcher scenarioOutlineExampleMatcher)
-            : base(configuration, singleResultLoader, scenarioOutlineExampleMatcher)
+        private readonly NUnit3ExampleSignatureBuilder signatureBuilder = new NUnit3ExampleSignatureBuilder();
+
+        public bool IsMatch(ScenarioOutline scenarioOutline, string[] exampleValues, object scenarioElement)
         {
+            var build = this.signatureBuilder.Build(scenarioOutline, exampleValues);
+
+            return IsMatchingTestCase((XElement)scenarioElement, build);
+        }
+
+        internal static bool IsMatchingTestCase(XElement x, Regex exampleSignature)
+        {
+            var name = x.Attribute("name");
+            return name != null && exampleSignature.IsMatch(name.Value.ToLowerInvariant().Replace(@"\\", @"\"));
         }
     }
 }

@@ -1368,6 +1368,52 @@
             }
           }
         ]
+      },
+      {
+        "name": "Deal correctly with overlong example values",
+        "id": "Scenario-Outlines;deal-correctly-with-overlong-example-values",
+        "line": 88,
+        "keyword": "Scenario",
+        "description": "",
+        "type": "scenario",
+        "steps": [
+          {
+            "name": "I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'",
+            "line": 82,
+            "keyword": "When ",
+            "result": {
+              "status": "passed",
+              "duration": 80965
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:37"
+            }
+          },
+          {
+            "name": "I have a field with value 'This is just a very very very veery long error message!'",
+            "line": 83,
+            "keyword": "And ",
+            "result": {
+              "status": "passed",
+              "duration": 54167
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:37"
+            }
+          },
+          {
+            "name": "the scenario will 'pass_1'",
+            "line": 84,
+            "keyword": "Then ",
+            "result": {
+              "status": "passed",
+              "duration": 54736
+            },
+            "match": {
+              "location": "D:\\Work\\pickles-testresults\\TestHarness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+            }
+          }
+        ]
       }
     ]
   },

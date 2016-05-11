@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="XUnitExampleSignatureBuilder.cs" company="PicklesDoc">
+//  <copyright file="NUnit2ExampleSignatureBuilder.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -24,11 +24,11 @@ using System.Text.RegularExpressions;
 
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.TestFrameworks.XUnit
+namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
 {
-    public class XUnitExampleSignatureBuilder
+    public class NUnit3ExampleSignatureBuilder
     {
-        private const int MaxExampleValueLength = 50;
+        private const int MaxExampleValueLength = 37;
 
         public Regex Build(ScenarioOutline scenarioOutline, string[] row)
         {
@@ -38,9 +38,11 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit
             stringBuilder.Append(name).Append("\\(");
 
             foreach (var value in row.Select(v => v.Length > MaxExampleValueLength ? new { Value = v.Substring(0, MaxExampleValueLength), Ellipsis = "..." } : new { Value = v, Ellipsis = "" }))
-                stringBuilder.AppendFormat("(.*): \"{0}\"{1}, ", Regex.Escape(value.Value.ToLowerInvariant()), value.Ellipsis);
+            {
+                stringBuilder.AppendFormat("\"{0}{1}\",", Regex.Escape(value.Value.ToLowerInvariant()), value.Ellipsis);
+            }
 
-            stringBuilder.Remove(stringBuilder.Length - 2, 2);
+            stringBuilder.Remove(stringBuilder.Length - 1, 1);
 
             return new Regex(stringBuilder.ToString());
         }

@@ -62,5 +62,11 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
         {
             base.ThenCanReadExamplesWithRegexValuesFromScenarioOutline_ShouldBeTestResultPassed();
         }
+
+        [Test]
+        public new void ThenCanReadExamplesWithLongExampleValues()
+        {
+            base.ThenCanReadExamplesWithLongExampleValues();
+        }
     }
 }

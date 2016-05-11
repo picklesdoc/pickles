@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="NUnitExampleSignatureBuilder.cs" company="PicklesDoc">
+//  <copyright file="NUnit2ExampleSignatureBuilder.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -23,13 +23,10 @@ using System.Text.RegularExpressions;
 
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.TestFrameworks.NUnit
+namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
 {
-    public class NUnitExampleSignatureBuilder
+    public class NUnit2ExampleSignatureBuilder
     {
-        private static readonly Regex PunctuationCharactersRegex = new Regex(@"[\n\.-]+", RegexOptions.Compiled);
-        private static readonly Regex NonIdentifierCharacterRegex = new Regex(@"[^\p{Ll}\p{Lu}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}\p{Pc}]", RegexOptions.Compiled);
-
         public Regex Build(ScenarioOutline scenarioOutline, string[] row)
         {
             var stringBuilder = new StringBuilder();
@@ -37,7 +34,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit
             var name = SpecFlowNameMapping.Build(scenarioOutline.Name.ToLowerInvariant());
             stringBuilder.Append(name).Append("\\(");
 
-            foreach (string value in row)
+            foreach (var value in row)
             {
                 stringBuilder.AppendFormat("\"{0}\",", Regex.Escape(value.ToLowerInvariant()));
             }

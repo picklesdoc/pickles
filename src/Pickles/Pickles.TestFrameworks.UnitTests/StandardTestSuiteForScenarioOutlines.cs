@@ -21,7 +21,6 @@
 
 using NFluent;
 
-using NUnit.Framework;
 
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -162,6 +161,21 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             TestResult exampleResult7 = results.GetExampleResult(scenarioOutline, new[] { @"^.*(?<foo>BAR)\s[^0-9]{3,4}A+$" });
             Check.That(exampleResult7).IsEqualTo(TestResult.Passed);
+        }
+
+        public void ThenCanReadExamplesWithLongExampleValues()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenario Outlines" };
+
+            var scenarioOutline = new ScenarioOutline { Name = "Deal correctly with overlong example values", Feature = feature };
+
+            TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
+            Check.That(exampleResultOutline).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "Please enter a valid two letter country code (e.g. DE)!", "This is just a very very very veery long error message!" });
+            Check.That(exampleResult1).IsEqualTo(TestResult.Passed);
         }
     }
 }

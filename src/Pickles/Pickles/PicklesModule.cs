@@ -18,7 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using Autofac;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
@@ -32,7 +31,6 @@ using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.TestFrameworks;
 using PicklesDoc.Pickles.TestFrameworks.CucumberJson;
 using PicklesDoc.Pickles.TestFrameworks.MsTest;
-using PicklesDoc.Pickles.TestFrameworks.NUnit;
 using PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2;
 using PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3;
 using PicklesDoc.Pickles.TestFrameworks.SpecRun;
@@ -80,7 +78,8 @@ namespace PicklesDoc.Pickles
 
             builder.RegisterType<NUnit2Results>();
             builder.RegisterType<NUnit2SingleResultLoader>();
-            builder.RegisterType<NUnitScenarioOutlineExampleMatcher>();
+            builder.RegisterType<NUnit2ScenarioOutlineExampleMatcher>();
+            builder.RegisterType<NUnit3ScenarioOutlineExampleMatcher>();
             builder.RegisterType<NUnit3Results>();
             builder.RegisterType<NUnit3SingleResultLoader>();
             builder.RegisterType<XUnit1Results>();
@@ -145,18 +144,10 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<StrikeMarkdownProvider>();
             builder.RegisterType<MarkdownProvider>();
 
-            builder.Register<IMarkdownProvider>(
-                c =>
-                    {
-                        if (FeatureSwitcher.Feature<AlternateMarkdownProvider>.Is().Enabled)
-                        {
-                            return c.Resolve<StrikeMarkdownProvider>();
-                        }
-                        else
-                        {
-                            return c.Resolve<MarkdownProvider>();
-                        }
-                    }).SingleInstance();
+            builder.Register(
+                c => FeatureSwitcher.Feature<AlternateMarkdownProvider>.Is().Enabled
+                    ? (IMarkdownProvider)c.Resolve<StrikeMarkdownProvider>()
+                    : c.Resolve<MarkdownProvider>()).SingleInstance();
         }
     }
 }

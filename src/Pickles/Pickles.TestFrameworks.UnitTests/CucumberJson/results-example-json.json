@@ -1480,6 +1480,52 @@
             }
           }
         ]
+      },
+      {
+        "id": "scenario-outlines;deal-correctly-with-overlong-example-values;;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal correctly with overlong example values",
+        "description": "",
+        "line": 88,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "When ",
+            "name": "I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'",
+            "line": 88,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "And ",
+            "name": "I have a field with value 'This is just a very very very veery long error message!'",
+            "line": 88,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass_1'",
+            "line": 88,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 0
+            }
+          }
+        ]
       }
     ]
   },

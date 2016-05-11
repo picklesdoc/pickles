@@ -56,5 +56,11 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
         {
             base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleExampleSections_ShouldBeTestResultFailed();
         }
+
+        [Test]
+        public new void ThenCanReadExamplesWithLongExampleValues()
+        {
+            base.ThenCanReadExamplesWithLongExampleValues();
+        }
     }
 }
