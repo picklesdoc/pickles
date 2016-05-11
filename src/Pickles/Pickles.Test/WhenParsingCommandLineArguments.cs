@@ -41,7 +41,8 @@ namespace PicklesDoc.Pickles.Test
             "                             directory where output files will be placed" + "{0}" +
             "      --trfmt, --test-results-format=VALUE" + "{0}" +
             "                             the format of the linked test results " + "{0}" +
-            "                               (nunit|xunit)" + "{0}" +
+            "                               (nunit|nunit3|xunit|xunit2|mstest " + "{0}" +
+            "                               |cucumberjson|specrun|vstest)" + "{0}" +
             "      --lr, --link-results-file=VALUE" + "{0}" +
             "                             the path to the linked test results file (can be " + "{0}" +
             "                               a semicolon-separated list of files)" + "{0}" +
