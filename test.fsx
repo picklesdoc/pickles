@@ -12,6 +12,7 @@ Target "Test" (fun _ ->
       |> NUnit3 (fun p ->
           {p with
              ShadowCopy = false;
+             OutputDir = testDir; // + "PicklesDoc.Pickles.Test.TestResults.xml";
              ToolPath = "packages/NUnit.ConsoleRunner/tools/nunit3-console.exe" })
 )
 
