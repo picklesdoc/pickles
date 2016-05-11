@@ -82,6 +82,7 @@ src/Pickles/PrecompiledWeb/
 # FAKE stuff
 packages/FAKE/
 packages/Chocolatey/
+packages/NUnit.ConsoleRunner/
 
 # Fody
 !src/Pickles/packages/Fody*/build/*
