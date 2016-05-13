@@ -15,7 +15,7 @@
     <!--[if lt IE 9]>
     <script src="js/html5.js"></script>
     <![endif]-->
-
+    #### EMBED EXPERIMENTALS ####
 </head>
 
 <body data-bind="style: { overflow: overviewVisible() ? 'hidden' : 'auto' }">
@@ -53,9 +53,9 @@
     <li class="step">
         <!-- ko if: StepComments != null && StepComments.length > 0 -->
             <span class="comment">
-                    <!-- ko foreach: StepComments -->
-                        <span data-bind="text: Text"></span>
-                        <br data-bind="visible : $index() != ($parent.length-1)" />
+                <!-- ko foreach: StepComments -->
+                <span data-bind="text: Text"></span>
+                <br data-bind="visible : $index() != ($parent.length-1)" />
                 <!-- /ko -->
             </span>
         <!-- /ko -->
@@ -67,8 +67,8 @@
         <!-- ko if: AfterLastStepComments != null && AfterLastStepComments.length > 0 -->
             <span class="comment">
                 <!-- ko foreach: AfterLastStepComments -->
-                    <span data-bind="text: Text"></span>
-                    <br data-bind="visible : $index() != ($parent.length-1)" />
+                <span data-bind="text: Text"></span>
+                <br data-bind="visible : $index() != ($parent.length-1)" />
                 <!-- /ko -->
             </span>
         <!-- /ko -->
@@ -103,7 +103,7 @@
             <!-- ko ifnot: overviewVisible -->
             <a class="brand" href="#" data-bind="text: configuration().SutName != null ? configuration().SutName : 'Features'"></a>
             <div class="navbar-search pull-left">
-                <input type="text" id="TypeAheadSearchBox" class="search-query" data-bind="value: whatToSearchFor" style="width: 300px" placeholder="@tag or feature name"/>
+                <input type="text" id="TypeAheadSearchBox" class="search-query" data-bind="value: whatToSearchFor" style="width: 300px" placeholder="@tag or feature name" />
                 <a id="SearchButton" data-bind="click: search" class="btn">Search</a>
                 <a id="ClearSearchButton" data-bind="click: clearSearch" class="btn">Clear</a>
             </div>
@@ -132,8 +132,12 @@
                     <div data-bind="template: { name: 'features-template', foreach: featuresByFolder().features }"></div>
                     <div data-bind="template: { name: 'featuresByFolder-template', foreach: featuresByFolder().SubDirectories }"></div>
                     <div id="SutInfo">
-                        <div data-bind="if: configuration().SutName, text: configuration().SutName"></div>
-                        <div data-bind="if: configuration().SutVersion, text: configuration().SutVersion"></div>
+                        <!-- ko if: configuration().SutName != null -->
+                        <div data-bind="text: configuration().SutName"></div>
+                        <!-- /ko -->
+                        <!-- ko if: configuration().GeneratedOn != null -->
+                        <div data-bind="text: configuration().SutVersion"></div>
+                        <!-- /ko -->
                         <div>Generated on: <span data-bind="text: configuration().GeneratedOn"></span></div>
                     </div>
                 </div>
@@ -258,7 +262,7 @@
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
 <script src="js/bootstrap.min.js" type="text/javascript"></script>
-<script src="js/knockout-2.2.0.js" type="text/javascript"></script>
+<script src="js/knockout-3.4.0.js" type="text/javascript"></script>
 <script src="js/knockout.mapping-latest.js" type="text/javascript"></script>
 <script src="js/underscore-min.js" type="text/javascript"></script>
 <script src="js/jquery.highlight-4.closure.js"></script>
@@ -282,7 +286,7 @@
             });
         });
     });
-</script>
+
 <script type="text/javascript">
     function ViewModel(features, configuration, summary) {
         var self = this;
@@ -360,13 +364,13 @@
         self.showFeature = function (data) {
             var foundFeature = findFeatureByRelativeFolder(data.Path, features);
             self.updateCurrentFeature(foundFeature);
+            $('pre code').each(function(i, block) {
+                hljs.highlightBlock(block);
+            });
         };
 
         self.updateCurrentFeature = function (feature) {
             self.currentFeature(feature);
-            $('pre code').each(function(i, block) {
-                hljs.highlightBlock(block);
-            });
             document.location.hash = feature.RelativeFolder;
             document.title = feature.Feature.Name;
             window.scroll(0, 0);
