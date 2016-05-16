@@ -241,7 +241,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 feature.AddBackground(this.MapToScenario(background));
             }
 
-            if (this.configuration.ShouldIncludeComments)
+            if (this.configuration.ShouldEnableComments)
             {
                 feature.Comments.AddRange((gherkinDocument.Comments ?? new G.Comment[0]).Select(this.MapToComment));
             }

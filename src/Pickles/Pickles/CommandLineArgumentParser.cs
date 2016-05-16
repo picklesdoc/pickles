@@ -39,7 +39,7 @@ namespace PicklesDoc.Pickles
         public const string HelpDocumentationFormat = "the format of the output documentation";
         public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
-        public const string HelpIncludeComments = "whether to include comments in the output";
+        public const string HelpEnableComments = "whether to enable comments in the output";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
@@ -57,7 +57,7 @@ namespace PicklesDoc.Pickles
         private string testResultsFormat;
         private bool versionRequested;
         private bool includeExperimentalFeatures;
-        private string includeCommentsValue;
+        private string enableCommentsValue;
 
         public CommandLineArgumentParser(IFileSystem fileSystem)
         {
@@ -75,7 +75,7 @@ namespace PicklesDoc.Pickles
                 { "v|version", v => this.versionRequested = v != null },
                 { "h|?|help", v => this.helpRequested = v != null },
                 { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
-                { "cmt|comments=", HelpIncludeComments, v => this.includeCommentsValue = v }
+                { "cmt|enableComments=", HelpEnableComments, v => this.enableCommentsValue = v }
             };
         }
 
@@ -148,9 +148,9 @@ namespace PicklesDoc.Pickles
                 configuration.EnableExperimentalFeatures();
             }
 
-            bool includeComments;
+            bool enableComments;
 
-            if (bool.TryParse(this.includeCommentsValue, out includeComments) && includeComments == false)
+            if (bool.TryParse(this.enableCommentsValue, out enableComments) && enableComments == false)
             {
                 configuration.DisableComments();
             }

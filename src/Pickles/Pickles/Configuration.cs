@@ -18,7 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Reflection;
@@ -81,16 +80,16 @@ namespace PicklesDoc.Pickles
             Features.Are.AlwaysDisabled();
         }
 
-        public bool ShouldIncludeComments { get; private set; } = true;
+        public bool ShouldEnableComments { get; private set; } = true;
 
         public void EnableComments()
         {
-            this.ShouldIncludeComments = true;
+            this.ShouldEnableComments = true;
         }
 
         public void DisableComments()
         {
-            this.ShouldIncludeComments = false;
+            this.ShouldEnableComments = false;
         }
 
         public bool ShouldIncludeExperimentalFeatures { get; private set; }

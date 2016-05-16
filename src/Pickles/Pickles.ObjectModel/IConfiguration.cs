@@ -55,7 +55,7 @@ namespace PicklesDoc.Pickles
 
         void DisableExperimentalFeatures();
 
-        bool ShouldIncludeComments { get; }
+        bool ShouldEnableComments { get; }
 
         void EnableComments();
 
