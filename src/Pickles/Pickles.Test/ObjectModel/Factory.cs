@@ -35,6 +35,12 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             return mapper;
         }
 
+        internal Mapper CreateMapper(IConfiguration configuration, string defaultLanguage = "en")
+        {
+            var mapper = new Mapper(configuration, defaultLanguage);
+            return mapper;
+        }
+
         internal G.TableCell CreateGherkinTableCell(string cellValue)
         {
             return new G.TableCell(AnyLocation, cellValue);

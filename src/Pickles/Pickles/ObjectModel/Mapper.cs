@@ -27,12 +27,19 @@ namespace PicklesDoc.Pickles.ObjectModel
 {
     public class Mapper
     {
+        private readonly IConfiguration configuration;
+
         private readonly LanguageServices languageServices;
 
         public Mapper(string featureLanguage = LanguageServices.DefaultLanguage)
+            : this(new Configuration(), featureLanguage)
+        { } 
+
+        public Mapper(IConfiguration configuration, string featureLanguage = LanguageServices.DefaultLanguage)
         {
+            this.configuration = configuration;
             this.languageServices = new LanguageServices(featureLanguage);
-                    }
+        }
 
         public string MapToString(G.TableCell cell)
         {
@@ -234,7 +241,10 @@ namespace PicklesDoc.Pickles.ObjectModel
                 feature.AddBackground(this.MapToScenario(background));
             }
 
-            feature.Comments.AddRange((gherkinDocument.Comments ?? new G.Comment[0]).Select(this.MapToComment));
+            if (this.configuration.ShouldIncludeComments)
+            {
+                feature.Comments.AddRange((gherkinDocument.Comments ?? new G.Comment[0]).Select(this.MapToComment));
+            }
 
             feature.Description = gherkinDocument.Feature.Description ?? string.Empty;
 
@@ -256,14 +266,14 @@ namespace PicklesDoc.Pickles.ObjectModel
                 var relatedFeatureElement = feature.FeatureElements.LastOrDefault(x => x.Location.Line < comment.Location.Line);
                 // Find the step to which the comment is related to
                 if (relatedFeatureElement != null)
-        {
+                {
                     var stepAfterComment = relatedFeatureElement.Steps.FirstOrDefault(x => x.Location.Line > comment.Location.Line);
                     if (stepAfterComment != null)
                     {
                         // Comment is before a step
                         comment.Type = CommentType.StepComment;
                         stepAfterComment.Comments.Add(comment);
-        }
+                    }
                     else
                     {
                         // Comment is located after the last step
