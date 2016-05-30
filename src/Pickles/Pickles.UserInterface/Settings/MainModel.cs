@@ -58,5 +58,8 @@ namespace PicklesDoc.Pickles.UserInterface.Settings
 
         [DataMember(Name = "includeExperimentalFeatures", IsRequired = false)]
         public bool IncludeExperimentalFeatures { get; set; }
+
+        [DataMember(Name = "enableComments", IsRequired = false)]
+        public bool EnableComments { get; set; }
     }
 }

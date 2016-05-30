@@ -111,6 +111,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
 
         private bool includeExperimentalFeatures;
 
+        private bool enableComments = true;
+
         public MainViewModel(IMainModelSerializer mainModelSerializer, IFileSystem fileSystem)
         {
             this.documentationFormats =
@@ -299,6 +301,12 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             set { this.Set(nameof(this.IncludeExperimentalFeatures), ref this.includeExperimentalFeatures, value); }
         }
 
+        public bool EnableComments
+        {
+            get { return this.enableComments; }
+            set { this.Set(nameof(this.enableComments), ref this.enableComments, value); }
+        }
+
         public void SaveToSettings()
         {
             MainModel mainModel = new MainModel
@@ -314,7 +322,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                 DocumentationFormats =
                     this.documentationFormats.Where(item => item.IsSelected).Select(item => item.Item).ToArray(),
                 CreateDirectoryForEachOutputFormat = this.createDirectoryForEachOutputFormat,
-                IncludeExperimentalFeatures = this.includeExperimentalFeatures
+                IncludeExperimentalFeatures = this.includeExperimentalFeatures,
+                EnableComments = this.enableComments
             };
 
             this.mainModelSerializer.Write(mainModel);
@@ -349,6 +358,7 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
 
             this.CreateDirectoryForEachOutputFormat = mainModel.CreateDirectoryForEachOutputFormat;
             this.IncludeExperimentalFeatures = mainModel.IncludeExperimentalFeatures;
+            this.enableComments = mainModel.EnableComments;
         }
 
         private void DocumentationFormatsOnCollectionChanged(object sender, EventArgs notifyCollectionChangedEventArgs)
@@ -513,6 +523,15 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                 else
                 {
                     configuration.DisableExperimentalFeatures();
+                }
+
+                if (this.enableComments)
+                {
+                    configuration.EnableComments();
+                }
+                else
+                {
+                    configuration.DisableComments();
                 }
 
                 var runner = container.Resolve<Runner>();

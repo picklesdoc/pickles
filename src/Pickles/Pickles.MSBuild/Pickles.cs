@@ -49,6 +49,8 @@ namespace PicklesDoc.Pickles.MSBuild
 
         public string IncludeExperimentalFeatures { get; set; }
 
+        public string EnableComments { get; set; }
+
         public override bool Execute()
         {
             try
@@ -119,6 +121,16 @@ namespace PicklesDoc.Pickles.MSBuild
                 if (shouldEnableExperimentalFeatures)
                 {
                     configuration.EnableExperimentalFeatures();
+                }
+            }
+
+            bool shouldEnableComments;
+
+            if (bool.TryParse(this.EnableComments, out shouldEnableComments))
+            {
+                if (!shouldEnableComments)
+                {
+                    configuration.DisableComments();
                 }
             }
         }

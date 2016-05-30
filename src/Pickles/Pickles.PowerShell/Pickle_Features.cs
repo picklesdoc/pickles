@@ -58,6 +58,9 @@ namespace PicklesDoc.Pickles.PowerShell
         [Parameter(HelpMessage = CommandLineArgumentParser.HelpIncludeExperimentalFeatures, Mandatory = false)]
         public SwitchParameter IncludeExperimentalFeatures { get; set; }
 
+        [Parameter(HelpMessage = CommandLineArgumentParser.HelpEnableComments, Mandatory = false)]
+        public string EnableComments { get; set; }
+
         protected override void ProcessRecord()
         {
             var builder = new ContainerBuilder();
@@ -110,6 +113,21 @@ namespace PicklesDoc.Pickles.PowerShell
             if (this.IncludeExperimentalFeatures.IsPresent)
             {
                 configuration.EnableExperimentalFeatures();
+            }
+
+            if (this.IncludeExperimentalFeatures.IsPresent)
+            {
+                configuration.EnableExperimentalFeatures();
+            }
+
+            bool shouldEnableComments;
+
+            if (bool.TryParse(this.EnableComments, out shouldEnableComments))
+            {
+                if (!shouldEnableComments)
+                {
+                    configuration.DisableComments();
+                }
             }
         }
 
