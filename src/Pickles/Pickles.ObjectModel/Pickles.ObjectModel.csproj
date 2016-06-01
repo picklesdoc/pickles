@@ -53,6 +53,7 @@
     <Compile Include="ObjectModel\ITestResults.cs" />
     <Compile Include="ObjectModel\Keyword.cs" />
     <Compile Include="ObjectModel\Scenario.cs" />
+    <Compile Include="ObjectModel\ScenarioBase.cs" />
     <Compile Include="ObjectModel\ScenarioOutline.cs" />
     <Compile Include="ObjectModel\Step.cs" />
     <Compile Include="ObjectModel\Comment.cs" />

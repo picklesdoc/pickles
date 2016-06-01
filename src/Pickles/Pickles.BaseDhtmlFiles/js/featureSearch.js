@@ -1,4 +1,64 @@
-﻿function getFeaturesMatching(searchString, features) {
+
+// feature navigation namespace
+(function(window) {
+
+    window.FeatureNavigation = {
+        getCurrent : getCurrentFeature,
+        setCurrent: setCurrentFeature, 
+        getCurrentLink: getCurrentFeatureLink
+    };
+
+    function getCurrentFeature() {
+        var query = window.location.search;
+
+        if (query == null || query == '') {
+            return '';
+        }
+
+        // trim leading question mark
+        query = query.substring(1);
+
+        var queryVars = query.split('&');
+
+        for (var i=0;i<queryVars.length;i++) {
+            var pair = queryVars[i].split('=');
+            if (pair[0] == 'feature') {
+                return pair[1];
+            }
+        }
+
+        return '';
+    }
+
+    function setCurrentFeature(path) {
+        if (window.history == null || typeof(window.history.pushState) !== 'function') {
+            console.error('Current browser does not support HTML5 pushState');
+            return null;
+        }
+
+        // catching instances where pushState will not work (for instance file:// protocol)
+        try {
+            var url = 'Index.html?feature=' + path;
+            window.history.pushState({ path: url }, '', url);
+        }
+        catch (ex) {
+            console.warn(ex);
+        }
+    }
+
+    function getCurrentFeatureLink(scenarioSlug) {
+        var featureUrl = window.location.origin + window.location.pathname + window.location.search;
+
+        if (scenarioSlug != null && scenarioSlug != '') {
+            featureUrl = featureUrl + '#' + scenarioSlug;
+        }
+        
+        return featureUrl;
+    }
+
+})(window);
+
+function getFeaturesMatching(searchString, features) {
     searchString = searchString.toLowerCase();
     var filteredFeatures = ko.utils.arrayFilter(features, function (feature) {
         if (matchesFeatureName(searchString, feature) ||

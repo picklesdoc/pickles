@@ -94,6 +94,18 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         }
 
         [Test]
+        public void Map_WithName_ReturnsSlug()
+        {
+            var scenario = new Scenario { Slug = "i-am-a-slug" };
+
+            var mapper = CreateMapper();
+
+            JsonScenario actual = mapper.Map(scenario);
+
+            Check.That(actual.Slug).IsEqualTo("i-am-a-slug");
+        }
+
+        [Test]
         public void Map_WithDescription_ReturnsDescription()
         {
             var scenario = new Scenario { Description = "Some description" };

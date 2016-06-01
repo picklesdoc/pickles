@@ -28,6 +28,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
         string Name { get; set; }
 
+        string Slug { get; set; }
+
         string Description { get; set; }
 
         List<JsonStep> Steps { get; set; }

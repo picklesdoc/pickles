@@ -50,6 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON.Mapper
                 Steps = (scenarioOutline.Steps ?? new List<Step>()).Select(this.stepMapper.Map).ToList(),
                 Tags = (scenarioOutline.Tags ?? new List<string>()).ToList(),
                 Name = scenarioOutline.Name,
+                Slug = scenarioOutline.Slug,
                 Description = scenarioOutline.Description,
                 Result = this.resultMapper.Map(scenarioOutline.Result),
             };

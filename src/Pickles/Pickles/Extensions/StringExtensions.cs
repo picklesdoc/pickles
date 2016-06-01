@@ -24,6 +24,8 @@ using System.Text;
 
 namespace PicklesDoc.Pickles.Extensions
 {
+    using System.Text.RegularExpressions;
+
     public static class StringExtensions
     {
         public static string ExpandWikiWord(this string word)
@@ -32,8 +34,8 @@ namespace PicklesDoc.Pickles.Extensions
             char previous = char.MinValue;
             foreach (char current in word.Where(x => char.IsLetterOrDigit(x)))
             {
-                if (previous != char.MinValue && sb.Length > 1 &&
-                    ((char.IsUpper(current) || char.IsDigit(current)) && char.IsLower(previous)))
+                if (previous != char.MinValue && sb.Length > 1
+                    && ((char.IsUpper(current) || char.IsDigit(current)) && char.IsLower(previous)))
                 {
                     sb.Append(' ');
                 }
@@ -57,8 +59,32 @@ namespace PicklesDoc.Pickles.Extensions
         public static string ComparisonNormalize(this string text)
         {
             return
-                text.Trim().ToLowerInvariant().Replace("\r", string.Empty).Replace("\n", Environment.NewLine).Replace(
-                    "\t", "    ");
+                text.Trim()
+                    .ToLowerInvariant()
+                    .Replace("\r", string.Empty)
+                    .Replace("\n", Environment.NewLine)
+                    .Replace("\t", "    ");
+        }
+
+        /// <summary>
+        /// Takes a string and returns a url-friendly version of the string (slug) with all special characters
+        /// and extra spaces stripped out, with words seperated by dashes.
+        /// </summary>
+        /// <param name="text">The string that will be used to create the slug.</param>
+        /// <returns>A slug generated from the given string.</returns>
+        public static string ToSlug(this string text)
+        {
+            // remove any accent characters
+            var bytes = Encoding.GetEncoding("Cyrillic").GetBytes(text);
+            var str = Encoding.ASCII.GetString(bytes);
+
+            // modify string to slug format
+            str = str.ToLower();
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", "");
+            str = Regex.Replace(str, @"\s+", " ").Trim();
+            str = Regex.Replace(str, @"\s", "-");
+
+            return str;
         }
     }
 }

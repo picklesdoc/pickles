@@ -33,3 +33,13 @@ function expandToc() {
         collapseToc();
     });
 }
+
+function showImageLink(scenarioSlug) {
+  var url = window.location.origin + window.location.pathname + window.location.search;
+
+  if (scenarioSlug != null && scenarioSlug != '') {
+    url = url + '#' + scenarioSlug;
+  }
+
+  window.prompt("Scenario Link: (Ctrl+C to copy)", url);
+}

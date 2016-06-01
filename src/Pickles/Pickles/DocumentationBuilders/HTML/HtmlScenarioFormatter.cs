@@ -50,6 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             var header = new XElement(
                 this.xmlns + "div",
                 new XAttribute("class", "scenario-heading"),
+                new XAttribute("id", scenario.Slug),
                 new XElement(this.xmlns + "h2", scenario.Name));
 
             var tags = RetrieveTags(scenario);
@@ -72,7 +73,26 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
                     new XAttribute("class", "steps"),
                     new XElement(
                         this.xmlns + "ul",
-                        scenario.Steps.Select(step => this.htmlStepFormatter.Format(step)))));
+                        scenario.Steps.Select(step => this.htmlStepFormatter.Format(step)))), 
+                this.FormatLinkButton(scenario));
+        }
+
+        private XElement FormatLinkButton(Scenario scenarioOutline)
+        {
+            if (string.IsNullOrEmpty(scenarioOutline.Slug))
+            {
+                return null;
+            }
+
+            return new XElement(
+                this.xmlns + "a",
+                new XAttribute("class", "scenario-link"),
+                new XAttribute("href", $"javascript:showImageLink('{scenarioOutline.Slug}')"),
+                new XAttribute("title", "Copy scenario link to clipboard."),
+                new XElement(
+                    this.xmlns + "i",
+                    new XAttribute("class", "icon-link"),
+                    " "));
         }
 
         internal static XNode[] CreateTagElements(string[] tags, XNamespace xNamespace)

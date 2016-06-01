@@ -1,4 +1,4 @@
-﻿function FeatureParent(data) {
+function FeatureParent(data) {
     this.RelativeFolder = data.RelativeFolder;
     this.Feature = new Feature(data.Feature);
 }
@@ -14,6 +14,7 @@ function Feature(data) {
 
 function Scenario(data) {
     this.Name = data.Name || '';
+    this.Slug = data.Slug || '';
     this.Description = data.Description || '';
     this.Steps = $.map(data.Steps, function(step) { return new Step(step); }) || new Array();
     this.Result = data.Result == null ? null : new Result(data.Result);
@@ -75,6 +76,7 @@ function Result(data) {
                         "Keyword": "Given",
                         "NativeKeyword": "Given ",
                         "Name": "I have the following person",
+                        "Slug": "i-have-the-following-person",
                         "TableArgument": {
                             "HeaderRow": [
                               "Field",

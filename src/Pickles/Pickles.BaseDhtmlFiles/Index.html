@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -14,7 +14,7 @@
     <!--[if lt IE 9]>
       <script src="js/html5.js"></script>
     <![endif]-->
-    #### EMBED EXPERIMENTALS ####
+    
 </head>
 
 <body data-bind="style: { overflow: overviewVisible() ? 'hidden' : 'auto' }">
@@ -173,7 +173,7 @@
                                 </em>
                             </div>
 
-                            <div class="scenario">
+                            <div class="scenario" data-bind="attr: { id: Slug }">
                                 <div data-bind="template: { name: 'testResults-template', data: Result }"></div>
 
                                 <div>
@@ -195,6 +195,9 @@
 
                                 </div>
 
+                                <a class="scenario-link clickable" data-bind="ifnot: $root.disableScenarioLinks, click: $root.copyLink" title="Copy link to clipboard">
+                                    <img alt="Copy link to clipboard" src="img/link.png">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -290,11 +293,20 @@
 
             self.ShowAllLinks = ko.observable(false);
             self.overviewVisible = ko.observable(false);
+            self.disableScenarioLinks = ko.observable(window.location.protocol.match(/file/));
 
             self.setCurrentFeature = function () {
-                if (window.location.hash != '') {
-                    var featureFromHashLocation = findFeatureByRelativeFolder(removeBeginningHash(window.location.hash), features);
-                    self.updateCurrentFeature(featureFromHashLocation);
+                var currentFeatureRelativeFolder = FeatureNavigation.getCurrent();
+                if (currentFeatureRelativeFolder != '') {
+                    var currentFeature = findFeatureByRelativeFolder(currentFeatureRelativeFolder, features);
+                    // preserve hash value (incoming request)
+                    var hash = window.location.hash;
+                    self.updateCurrentFeature(currentFeature);
+                    window.location.hash = hash;
+                    // smooth-scroll to hashed slug
+                    setTimeout(function() {
+                        smoothScrollToScenarioAnchor(window.location.hash);
+                    }, 250);
                 } else {
                     self.updateCurrentFeature(self.originalFeaturesList()[0]);
                 }
@@ -317,8 +329,10 @@
                         self.overview.createByRootFolderChart($('#byRootFolderCanvas').get(0).getContext('2d'));
                         self.overview.createNotTestedByRootFolderChart($('#notTestedbyRootFolderCanvas').get(0).getContext('2d'));
                         self.totals(self.overview.getTotalsData());
-                    } else {
-                        $('.modal-overlay').scrollTop(0);
+                    }
+                } else {
+                    if (!smoothScrollToScenarioAnchor(window.location.hash)) {
+                        $('.modal-overlay').scrollTo(0, 0);
                     }
                 }
             };
@@ -357,9 +371,8 @@
 
             self.updateCurrentFeature = function (feature) {
                 self.currentFeature(feature);
-                document.location.hash = feature.RelativeFolder;
                 document.title = feature.Feature.Name;
-                window.scroll(0, 0);
+                FeatureNavigation.setCurrent(feature.RelativeFolder);
                 highlightSearchString(self.whatToSearchFor());
             };
 
@@ -383,12 +396,31 @@
                 expandContractDirectoryLinks(self.featuresByFolder().SubDirectories);
             };
 
+            self.copyLink = function(scenario) {
+                var link = FeatureNavigation.getCurrentLink(scenario.Slug);
+                window.prompt("Scenario Link: (Ctrl+C to copy)", link);
+            };
+
             function expandContractDirectoryLinks(subDirs) {
                 $.each(subDirs, function (key, value) {
                     value.IsExpanded(self.ShowAllLinks());
                     expandContractDirectoryLinks(value.SubDirectories);
                 });
-            };
+            }
+
+            function smoothScrollToScenarioAnchor(anchorId) {
+                var anchor = $(anchorId);
+                var anchorOffset = anchor.offset();
+                if (anchorOffset != null) {
+                    $('html, body').animate({
+                        scrollTop: anchorOffset.top - 75
+                    }, { complete: function() { anchor.addClass('scenario-active') } });
+
+                    return true;
+                }
+
+                return false;
+            }
 
             // Hide / show detailed areas
             self.toggleDetail = function (element) {

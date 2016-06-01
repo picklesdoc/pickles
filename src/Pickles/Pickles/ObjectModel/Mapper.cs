@@ -25,6 +25,8 @@ using G = Gherkin.Ast;
 
 namespace PicklesDoc.Pickles.ObjectModel
 {
+    using PicklesDoc.Pickles.Extensions;
+
     public class Mapper
     {
         private readonly IConfiguration configuration;
@@ -172,6 +174,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 Description = scenario.Description ?? string.Empty,
                 Location = this.MapToLocation(scenario.Location),
                 Name = scenario.Name,
+                Slug = scenario.Name.ToSlug(),
                 Steps = scenario.Steps.Select(this.MapToStep).ToList(),
                 Tags = scenario.Tags.Select(this.MapToString).ToList()
             };
@@ -205,6 +208,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 Examples = (scenarioOutline.Examples ?? new G.Examples[0]).Select(this.MapToExample).ToList(),
                 Location = this.MapToLocation(scenarioOutline.Location),
                 Name = scenarioOutline.Name,
+                Slug = scenarioOutline.Name.ToSlug(),
                 Steps = scenarioOutline.Steps.Select(this.MapToStep).ToList(),
                 Tags = scenarioOutline.Tags.Select(this.MapToString).ToList()
             };

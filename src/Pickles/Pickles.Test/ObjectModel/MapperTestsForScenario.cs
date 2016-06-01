@@ -26,6 +26,8 @@ using G = Gherkin.Ast;
 
 namespace PicklesDoc.Pickles.Test.ObjectModel
 {
+    using System.Linq;
+
     [TestFixture]
     public class MapperTestsForScenario
     {
@@ -74,6 +76,22 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Tags.Count).IsEqualTo(2);
             Check.That(result.Tags[0]).IsEqualTo("myTag1");
             Check.That(result.Tags[1]).IsEqualTo("myTag2");
+        }
+
+        [Test]
+        public void MapToScenario_TitleSpecialCharacters_HasValidSlug()
+        {
+            var scenario = this.factory.CreateScenario(
+                new string[0],
+                "My $super%-crypTIC @(SCENARIO)+= *Title#^!   It's Got \\| Some W1ld?/ Ch<>arac~`ters + Cyrilic Жят ед ыррор", 
+                string.Empty, 
+                new G.Step[0]);
+
+            var mapper = this.factory.CreateMapper();
+
+            Scenario result = mapper.MapToScenario(scenario);
+
+            Check.That(result.Slug).IsEqualTo("my-super-cryptic-scenario-title-its-got-some-w1ld-characters-cyrilic");
         }
 
         [Test]

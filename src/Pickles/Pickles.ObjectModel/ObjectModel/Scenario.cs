@@ -22,26 +22,5 @@ using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    public class Scenario : IFeatureElement
-    {
-        public Scenario()
-        {
-            this.Steps = new List<Step>();
-            this.Tags = new List<string>();
-        }
-
-        public string Name { get; set; }
-
-        public string Description { get; set; }
-
-        public List<Step> Steps { get; set; }
-
-        public List<string> Tags { get; set; }
-
-        public TestResult Result { get; set; }
-
-        public Feature Feature { get; set; }
-
-        public Location Location { get; set; }
-    }
+    public class Scenario : ScenarioBase { }
 }

@@ -61,7 +61,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             var result = new XElement(
                 this.xmlns + "div",
                 new XAttribute("class", "scenario-heading"),
+                new XAttribute("id", scenarioOutline.Slug),
                 new XElement(this.xmlns + "h2", scenarioOutline.Name));
+
             var tags = RetrieveTags(scenarioOutline);
             if (tags.Length > 0)
             {
@@ -91,6 +93,24 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
                         step => this.htmlStepFormatter.Format(step))));
         }
 
+        private XElement FormatLinkButton(ScenarioOutline scenarioOutline)
+        {
+            if (string.IsNullOrEmpty(scenarioOutline.Slug))
+            {
+                return null;
+            }
+
+            return new XElement(
+                this.xmlns + "a",
+                new XAttribute("class", "scenario-link"),
+                new XAttribute("href", $"javascript:showImageLink('{scenarioOutline.Slug}')"),
+                new XAttribute("title", "Copy scenario link to clipboard."),
+                new XElement(
+                    this.xmlns + "i",
+                    new XAttribute("class", "icon-link"),
+                    " "));
+        }
+
         private XElement FormatExamples(ScenarioOutline scenarioOutline)
         {
             var exampleDiv = new XElement(this.xmlns + "div");
@@ -117,6 +137,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
                 this.htmlImageResultFormatter.Format(scenarioOutline),
                 this.FormatHeading(scenarioOutline),
                 this.FormatSteps(scenarioOutline),
+                this.FormatLinkButton(scenarioOutline),
                 (scenarioOutline.Examples == null || !scenarioOutline.Examples.Any())
                     ? null
                     : this.FormatExamples(scenarioOutline));

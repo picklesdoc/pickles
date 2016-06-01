@@ -142,6 +142,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             public string Description { get; set; }
             public Feature Feature { get; set; }
             public string Name { get; set; }
+            public string Slug { get; }
             public List<Step> Steps { get; set; }
             public List<string> Tags { get; set; }
             public TestResult Result { get; set; }

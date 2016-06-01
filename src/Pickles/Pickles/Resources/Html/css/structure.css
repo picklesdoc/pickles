@@ -204,6 +204,13 @@ li.scenario, div.scenario {
     padding: 2px 12px 6px 12px;
 }
 
+a.scenario-link {
+    float: right;
+    margin-top: -5px;
+    font-size: 1.75em;
+    margin-top: -30px;
+}
+
 /*************************************************************************
  * Feature - Formatting the docStrings
  *************************************************************************/

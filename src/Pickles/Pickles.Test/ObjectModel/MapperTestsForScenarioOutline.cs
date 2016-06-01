@@ -97,6 +97,23 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         }
 
         [Test]
+        public void MapToScenarioOutline_TitleSpecialCharacters_HasValidSlug()
+        {
+            var scenarioOutline = this.factory.CreateScenarioOutline(
+                new string[0],
+                "My $super%-crypTIC @(SCENARIO)+= *Title#^!   It's Got \\| Some W1ld?/ Ch<>arac~`ters + Cyrilic Жят ед ыррор",
+                string.Empty,
+                new G.Step[0], 
+                new G.Examples[0]);
+
+            var mapper = this.factory.CreateMapper();
+
+            ScenarioOutline result = mapper.MapToScenarioOutline(scenarioOutline);
+
+            Check.That(result.Slug).IsEqualTo("my-super-cryptic-scenario-title-its-got-some-w1ld-characters-cyrilic");
+        }
+
+        [Test]
         public void MapToScenarioOutline_ScenarioOutlineWithNullDescription_ReturnsScenarioOutlineWithEmptyDescription()
         {
             var scenarioOutline = this.factory.CreateScenarioOutline(

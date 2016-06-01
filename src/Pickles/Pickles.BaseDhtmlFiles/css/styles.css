@@ -1,4 +1,4 @@
-﻿body {
+body {
     padding-top: 60px;
     padding-bottom: 40px;
 }
@@ -60,10 +60,22 @@
 }
 
 .scenario {
+    transition: border-color 1s ease;
     background-color: #F5F5F5;
     border: 1px solid #D0D0D0;
     margin: 6px 0px 28px 0px;
     padding: 6px;
+}
+
+.scenario-active {
+    border-color: #B21515;
+}
+
+.scenario a.scenario-link {
+    float: right;
+    margin-top: -18px;
+    width: 24px;
+    height: 24px;
 }
 
 li.step {
