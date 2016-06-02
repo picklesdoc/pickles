@@ -61,7 +61,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             var result = new XElement(
                 this.xmlns + "div",
                 new XAttribute("class", "scenario-heading"),
-                new XAttribute("id", scenarioOutline.Slug),
+                string.IsNullOrEmpty(scenarioOutline.Slug) ? null : new XAttribute("id", scenarioOutline.Slug),
                 new XElement(this.xmlns + "h2", scenarioOutline.Name));
 
             var tags = RetrieveTags(scenarioOutline);

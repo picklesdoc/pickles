@@ -30,6 +30,7 @@ Scenario: A simple feature
                 "FeatureElements": [
                   {
                     "Name": "Clear the screen",
+                    "Slug": "clear-the-screen",
                     "Description": "",
                     "Steps": [
                       {
@@ -137,6 +138,7 @@ Scenario: A feature with a table
                 "FeatureElements": [
                   {
                     "Name": "Scenario with large data table",
+                    "Slug": "scenario-with-large-data-table",
                     "Description": "",
                     "Steps": [
                       {

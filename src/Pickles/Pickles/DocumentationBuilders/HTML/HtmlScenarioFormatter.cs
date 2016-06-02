@@ -50,7 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             var header = new XElement(
                 this.xmlns + "div",
                 new XAttribute("class", "scenario-heading"),
-                new XAttribute("id", scenario.Slug),
+                string.IsNullOrEmpty(scenario.Slug) ? null : new XAttribute("id", scenario.Slug),
                 new XElement(this.xmlns + "h2", scenario.Name));
 
             var tags = RetrieveTags(scenario);
