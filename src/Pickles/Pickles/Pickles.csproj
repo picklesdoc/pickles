@@ -350,9 +350,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\Pickles.BaseDhtmlFiles\img\link.png">
+    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\link.png">
       <Link>Resources\Dhtml\img\link.png</Link>
-    </Content>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
