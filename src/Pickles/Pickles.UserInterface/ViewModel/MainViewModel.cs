@@ -358,7 +358,7 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
 
             this.CreateDirectoryForEachOutputFormat = mainModel.CreateDirectoryForEachOutputFormat;
             this.IncludeExperimentalFeatures = mainModel.IncludeExperimentalFeatures;
-            this.enableComments = mainModel.EnableComments;
+            this.EnableComments = mainModel.EnableComments;
         }
 
         private void DocumentationFormatsOnCollectionChanged(object sender, EventArgs notifyCollectionChangedEventArgs)
