@@ -12,6 +12,13 @@
         var query = window.location.search;
 
         if (query == null || query == '') {
+            // support previous style relative path in hash ...
+            var hash = window.location.hash;
+            if (hash != null && hash !='') {
+                // trim leading hash
+                return hash.substring(1);
+            }
+
             return '';
         }
 
