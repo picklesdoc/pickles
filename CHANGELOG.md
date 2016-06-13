@@ -14,6 +14,12 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.7.0] - 2016-06-14
+
+### Added
+
+- Make #-style comments configurable - Default to True ([346](https://github.com/picklesdoc/pickles/issues/346)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+
 ## [2.6.3] - 2016-05-24
 
 ### Fixed
