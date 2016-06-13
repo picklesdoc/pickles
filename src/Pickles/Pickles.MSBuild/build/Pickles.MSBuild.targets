@@ -18,6 +18,7 @@
             SystemUnderTestVersion="$(Pickles_SystemUnderTestVersion)"
             DocumentationFormat="$(Pickles_DocumentationFormat)"
             Language="$(Pickles_Language)"
-            IncludeExperimentalFeatures="$(Pickles_IncludeExperimentalFeatures)"/>
+            IncludeExperimentalFeatures="$(Pickles_IncludeExperimentalFeatures)"
+            EnableComments="$(Pickles_EnableComments)" />
     </Target>
 </Project>
