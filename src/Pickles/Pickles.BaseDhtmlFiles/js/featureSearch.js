@@ -14,9 +14,11 @@
         if (query == null || query == '') {
             // support previous style relative path in hash ...
             var hash = window.location.hash;
-            if (hash != null && hash !='') {
-                // trim leading hash
-                return hash.substring(1);
+            if (hash != null && hash != '') {
+                // clear hash from url
+                window.location.hash = '';
+                // trim leading hash before returning
+                return removeBeginningHash(hash);
             }
 
             return '';

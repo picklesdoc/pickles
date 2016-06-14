@@ -47,11 +47,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
     </script>
 ";
 
-                this.WriteTextFile(folder, "Index.html", "#### EMBED EXPERIMENTALS ####", mathScript);
+                this.WriteTextFile(folder, "Index.html", "<!-- #### EMBED EXPERIMENTALS #### -->", mathScript);
             }
             else
             {
-                this.WriteTextFile(folder, "Index.html", "#### EMBED EXPERIMENTALS ####", "");
+                this.WriteTextFile(folder, "Index.html", "<!-- #### EMBED EXPERIMENTALS #### -->", "");
             }
             this.WriteTextFile(folder, "pickledFeatures.js");
 

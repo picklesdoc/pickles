@@ -14,7 +14,7 @@
     <!--[if lt IE 9]>
       <script src="js/html5.js"></script>
     <![endif]-->
-    
+    <!-- #### EMBED EXPERIMENTALS #### -->
 </head>
 
 <body data-bind="style: { overflow: overviewVisible() ? 'hidden' : 'auto' }">
@@ -195,8 +195,8 @@
 
                                 </div>
 
-                                <a class="scenario-link clickable" data-bind="ifnot: $root.disableScenarioLinks, click: $root.copyLink" title="Copy link to clipboard">
-                                    <img alt="Copy link to clipboard" src="img/link.png">
+                                <a class="scenario-link clickable" data-bind="ifnot: $root.disableScenarioLinks, click: $root.getLink" title="Get Link for Scenario">
+                                    <img alt="Get Link for Scenario" src="img/link.png">
                                 </a>
                             </div>
                         </div>
@@ -257,6 +257,25 @@
                 </div>
             </div>
         </div>
+        <div id="scenarioLinkModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" data-bind="with: selectedScenario">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Scenario Link</h4>
+                        <div class="scenario-name" data-bind="text: Name"></div>
+                    </div>
+                    <div class="modal-body">
+                        <textarea id="clipboardText" data-bind="text: link, click: $root.followLink" rows="5" readonly></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <i class="icon-ok" data-bind="visible: $root.linkCopied"></i>
+                        <button type="button" class="btn btn-primary" data-bind="click: $root.copyLinkToClipboard">Copy to Clipboard</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Le javascript
@@ -293,12 +312,14 @@
 
             self.ShowAllLinks = ko.observable(false);
             self.overviewVisible = ko.observable(false);
+            self.selectedScenario = ko.observable(null);
             self.disableScenarioLinks = ko.observable(window.location.protocol.match(/file/));
+            self.linkCopied = ko.observable(false);
 
             self.setCurrentFeature = function () {
                 var currentFeatureRelativeFolder = FeatureNavigation.getCurrent();
                 if (currentFeatureRelativeFolder != '') {
-                    var currentFeature = findFeatureByRelativeFolder(currentFeatureRelativeFolder, features);
+                    var currentFeature = findFeatureByRelativeFolder(currentFeatureRelativeFolder, features) || self.originalFeaturesList()[0];
                     // preserve hash value (incoming request)
                     var hash = window.location.hash;
                     self.updateCurrentFeature(currentFeature);
@@ -331,9 +352,7 @@
                         self.totals(self.overview.getTotalsData());
                     }
                 } else {
-                    if (!smoothScrollToScenarioAnchor(window.location.hash)) {
-                        $('.modal-overlay').scrollTo(0, 0);
-                    }
+                    smoothScrollToScenarioAnchor(window.location.hash);
                 }
             };
 
@@ -396,9 +415,34 @@
                 expandContractDirectoryLinks(self.featuresByFolder().SubDirectories);
             };
 
-            self.copyLink = function(scenario) {
-                var link = FeatureNavigation.getCurrentLink(scenario.Slug);
-                window.prompt("Scenario Link: (Ctrl+C to copy)", link);
+            self.getLink = function(scenario) {
+                self.linkCopied(false);
+                scenario.link = FeatureNavigation.getCurrentLink(scenario.Slug);
+                self.selectedScenario(scenario);
+                $('#scenarioLinkModal').modal('show');
+            };
+
+            self.followLink = function(scenario) {
+                window.open(scenario.link);
+            };
+
+            self.copyLinkToClipboard = function() {
+                self.linkCopied(false);
+
+                $('#clipboardText').select();
+
+                try {
+                    var result = document.execCommand('copy');
+                    if (!result) {
+                        console.error('Copy to clipboard not supported in this browser');
+                    }
+                }
+                catch(ex) {
+                    console.error(ex);
+                }
+
+                document.getSelection().removeAllRanges();
+                self.linkCopied(true);
             };
 
             function expandContractDirectoryLinks(subDirs) {

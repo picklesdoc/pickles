@@ -67,15 +67,31 @@ body {
     padding: 6px;
 }
 
+.scenario-name {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
 .scenario-active {
     border-color: #B21515;
 }
 
+#clipboardText {
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
 .scenario a.scenario-link {
     float: right;
-    margin-top: -18px;
-    width: 24px;
-    height: 24px;
+    margin-top: -25px;
+    width: 32px;
 }
 
 li.step {
@@ -237,6 +253,10 @@ li.step {
     position: relative;
     margin: 1em auto;
     width: 95%;
+}
+
+.modal-dialog .btn {
+    background-image: none !important;
 }
 
 #overallCompleteCanvas-container, #overallCompleteSummary {
