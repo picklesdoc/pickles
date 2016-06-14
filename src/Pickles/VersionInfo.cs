@@ -8,11 +8,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademarkAttribute("")]
 [assembly: AssemblyCultureAttribute("")]
 [assembly: ComVisibleAttribute(false)]
-[assembly: AssemblyVersionAttribute("2.6.3")]
-[assembly: AssemblyFileVersionAttribute("2.6.3")]
+[assembly: AssemblyVersionAttribute("2.7.0")]
+[assembly: AssemblyFileVersionAttribute("2.7.0")]
 namespace System {
     internal static class AssemblyVersionInformation {
-        internal const string Version = "2.6.3";
-        internal const string InformationalVersion = "2.6.3";
+        internal const string Version = "2.7.0";
+        internal const string InformationalVersion = "2.7.0";
     }
 }
