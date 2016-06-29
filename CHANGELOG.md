@@ -14,6 +14,12 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.8.0] - 2016-06-29
+
+### Added
+
+* Hyperlink Feature #1: Automatic Hyperlink Generation for Scenario Titles ([320](https://github.com/picklesdoc/pickles/issues/320)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+
 ## [2.7.0] - 2016-06-14
 
 ### Added
