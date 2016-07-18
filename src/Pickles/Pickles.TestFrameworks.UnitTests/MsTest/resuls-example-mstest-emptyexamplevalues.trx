@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="08369b61-b2dd-4c17-9616-cf9211f858ce" name="arich@MIT-L-U18566 2016-07-15 16:31:59" runUser="US\arich" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="a7e82ba2-7092-4afc-bb1e-1e4e632e9272">
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Deployment runDeploymentRoot="arich_MIT-L-U18566 2016-07-15 16_31_59" />
+    <Properties />
+  </TestSettings>
+  <Times creation="2016-07-15T16:31:59.4517601-05:00" queuing="2016-07-15T16:32:00.3220211-05:00" start="2016-07-15T16:32:00.4390562-05:00" finish="2016-07-15T16:32:01.0882509-05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestingTest_Variant1" storage="c:\users\arich\documents\visual studio 2015\projects\webapplication1\webapplication1.tests\bin\debug\webapplication1.tests.dll" id="69ff7a99-f07d-8115-2f69-8497d521ea9e">
+      <Description>Testing test: Variant 1</Description>
+      <Execution id="42003207-4723-4914-9c7a-513f77eaf15c" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Example With Empty Value</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 1</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result3</Key>
+          <Value>4</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result1</Key>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result2</Key>
+          <Value>
+          </Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Users/arich/Documents/visual studio 2015/Projects/WebApplication1/WebApplication1.Tests/bin/Debug/WebApplication1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WebApplication1.Tests.ExampleWithEmptyValueFeature, WebApplication1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestingTest_Variant1" />
+    </UnitTest>
+    <UnitTest name="TestingTest_Variant0" storage="c:\users\arich\documents\visual studio 2015\projects\webapplication1\webapplication1.tests\bin\debug\webapplication1.tests.dll" id="60c168af-9792-b4e5-db66-67ffc6d6bad4">
+      <Description>Testing test: Variant 0</Description>
+      <Execution id="85c7fcfc-6130-49e6-9b73-d96db45acf62" />
+      <Properties>
+        <Property>
+          <Key>FeatureTitle</Key>
+          <Value>Example With Empty Value</Value>
+        </Property>
+        <Property>
+          <Key>VariantName</Key>
+          <Value>Variant 0</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result3</Key>
+          <Value>3</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result1</Key>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Key>Parameter:result2</Key>
+          <Value>2</Value>
+        </Property>
+      </Properties>
+      <TestMethod codeBase="C:/Users/arich/Documents/visual studio 2015/Projects/WebApplication1/WebApplication1.Tests/bin/Debug/WebApplication1.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="WebApplication1.Tests.ExampleWithEmptyValueFeature, WebApplication1.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestingTest_Variant0" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="60c168af-9792-b4e5-db66-67ffc6d6bad4" executionId="85c7fcfc-6130-49e6-9b73-d96db45acf62" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="69ff7a99-f07d-8115-2f69-8497d521ea9e" executionId="42003207-4723-4914-9c7a-513f77eaf15c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="85c7fcfc-6130-49e6-9b73-d96db45acf62" testId="60c168af-9792-b4e5-db66-67ffc6d6bad4" testName="TestingTest_Variant0" computerName="MIT-L-U18566" duration="00:00:00.0491627" startTime="2016-07-15T16:32:00.5140787-05:00" endTime="2016-07-15T16:32:01.0092272-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85c7fcfc-6130-49e6-9b73-d96db45acf62">
+      <Output>
+        <StdOut>When I do something
+-&gt; done: StepDefinition1.WhenIDoSomething() (0.0s)
+Then the 1 should equal 2 and return 3
+-&gt; done: StepDefinition1.ThenTheShouldEqualAndReturn("1", "2", "3") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="42003207-4723-4914-9c7a-513f77eaf15c" testId="69ff7a99-f07d-8115-2f69-8497d521ea9e" testName="TestingTest_Variant1" computerName="MIT-L-U18566" duration="00:00:00.0003422" startTime="2016-07-15T16:32:01.0232314-05:00" endTime="2016-07-15T16:32:01.0282329-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="42003207-4723-4914-9c7a-513f77eaf15c">
+      <Output>
+        <StdOut>When I do something
+-&gt; done: StepDefinition1.WhenIDoSomething() (0.0s)
+Then the 1 should equal  and return 4
+-&gt; done: StepDefinition1.ThenTheShouldEqualAndReturn("1", "", "4") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

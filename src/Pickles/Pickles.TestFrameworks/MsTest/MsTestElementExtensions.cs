@@ -152,7 +152,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.MsTest
             {
                 if ((property.Descendants(Ns + "Key").FirstOrDefault()?.Value ?? string.Empty).StartsWith("Parameter:"))
                 {
-                    valuesInScenario.Add(property.Descendants(Ns + "Value").FirstOrDefault()?.Value ?? string.Empty);
+                    valuesInScenario.Add(property.Descendants(Ns + "Value").FirstOrDefault()?.Value.Trim() ?? string.Empty);
                 }
             }
 
