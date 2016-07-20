@@ -104,6 +104,7 @@
     <Compile Include="DirectoryCrawler\FolderNode.cs" />
     <Compile Include="DirectoryCrawler\ImageFileDetector.cs" />
     <Compile Include="DirectoryCrawler\ImageNode.cs" />
+    <Compile Include="DocumentationBuilders\Cucumber\CucumberDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceWriter.cs" />
     <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />

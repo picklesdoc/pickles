@@ -21,6 +21,7 @@
 using Autofac;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
+using PicklesDoc.Pickles.DocumentationBuilders.Cucumber;
 using PicklesDoc.Pickles.DocumentationBuilders.DHTML;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 using PicklesDoc.Pickles.DocumentationBuilders.HTML;
@@ -55,6 +56,7 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<JsonDocumentationBuilder>().SingleInstance();
             builder.RegisterType<ExcelDocumentationBuilder>().SingleInstance();
             builder.RegisterType<DhtmlDocumentationBuilder>().SingleInstance();
+            builder.RegisterType<CucumberDocumentationBuilder>().SingleInstance();
 
             builder.Register<IDocumentationBuilder>(c =>
             {
@@ -71,6 +73,8 @@ namespace PicklesDoc.Pickles
                         return c.Resolve<ExcelDocumentationBuilder>();
                     case DocumentationFormat.DHtml:
                         return c.Resolve<DhtmlDocumentationBuilder>();
+                    case DocumentationFormat.Cucumber:
+                        return c.Resolve<CucumberDocumentationBuilder>();
                     default:
                         return c.Resolve<HtmlDocumentationBuilder>();
                 }
