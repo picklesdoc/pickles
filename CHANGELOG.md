@@ -14,6 +14,12 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.8.1] - 2016-07-29
+
+### Fixed
+
+* Blank Example Entries in a Scenario Outline cause Pickles not to Find the matching Scenario Outline ([358](https://github.com/picklesdoc/pickles/pull/358)) (by [@aaronjrich](https://github.com/aaronjrich)).
+
 ## [2.8.0] - 2016-06-29
 
 ### Added
