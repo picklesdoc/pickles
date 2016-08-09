@@ -29,6 +29,7 @@
 
         var queryVars = query.split('&');
 
+        // find feature query param
         for (var i=0;i<queryVars.length;i++) {
             var pair = queryVars[i].split('=');
             if (pair[0] == 'feature') {
@@ -84,6 +85,10 @@ function getFeaturesMatching(searchString, features) {
 }
 
 function findFeatureByRelativeFolder(path, features) {
+    // make sure path is not url encoded, and replace forward-slashes with back-slashes to match JSON
+    path = decodeURIComponent(path);
+    path = path.replace(/\//g, '\\');
+
     var feature = _.find(features, function(featureTesting) {
         return featureTesting.RelativeFolder == path;
     });
