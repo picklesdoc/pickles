@@ -14,6 +14,12 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.8.2] - 2016-08-18
+
+### Fixed
+
+* Handle Encoding or Opposite Slash in Feature Paths ([358](https://github.com/picklesdoc/pickles/pull/362)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+
 ## [2.8.1] - 2016-07-29
 
 ### Fixed
