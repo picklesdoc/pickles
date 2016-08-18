@@ -1,0 +1,10 @@
+div.carousel-caption {
+    background-color: #446280;
+    background-color: rgba(68, 98, 128, 0.7);
+}
+
+@media (max-width: 992px) {
+    a.forkmeongithub {
+        display: none;
+    }
+}
