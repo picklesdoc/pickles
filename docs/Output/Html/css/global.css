@@ -1,0 +1,170 @@
+/***** Global Settings *****/
+
+html, body {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body { font: 100%/1.25 Arial, Helvetica, sans-serif; }
+
+/***** Headings *****/
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: -1px;
+    padding: 30px 0 25px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    letter-spacing: -1px;
+    padding: 20px 0;
+}
+
+h3 {
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/***** Common Formatting *****/
+
+p, ul, ol {
+    margin: 0;
+    padding: 0 0 1.25em 0;
+}
+
+ul, ol { padding: 0 0 1.25em 0; }
+
+blockquote {
+    margin: 1.25em;
+    padding: 1.25em 1.25em 0 1.25em;
+    border:  gray solid thin;
+    border-left: gray solid 0.5em;
+}
+
+small { font-size: 0.85em; }
+
+img { border: 0; }
+
+sup {
+    bottom: 0.3em;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.2em;
+    position: relative;
+    vertical-align: baseline;
+}
+
+acronym, abbr {
+    border-bottom: 1px dashed;
+    cursor: help;
+    letter-spacing: 1px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: oblique;
+}
+
+/***** Links *****/
+
+a,
+a:link,
+a:visited,
+a:hover { text-decoration: underline; }
+
+/***** Forms *****/
+
+form {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+input, select, textarea { font: 1em Arial, Helvetica, sans-serif; }
+
+textarea {
+    line-height: 1.25;
+    width: 100%;
+}
+
+label { cursor: pointer; }
+
+/***** Tables *****/
+
+table {
+    border: 0;
+    margin: 0 0 1.25em 0;
+    padding: 0;
+}
+
+/***** Wrapper *****/
+
+#wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+
+/***** Global Classes *****/
+
+.clear { clear: both; }
+
+.float-left { float: left; }
+
+.float-right { float: right; }
+
+.text-left { text-align: left; }
+
+.text-right { text-align: right; }
+
+.text-center { text-align: center; }
+
+.text-justify { text-align: justify; }
+
+.bold { font-weight: bold; }
+
+.italic { font-style: italic; }
+
+.underline { border-bottom: 1px solid; }
+
+.highlight { background: #ffc; }
+
+.wrap {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.img-left {
+    float: left;
+    margin: 4px 10px 4px 0;
+}
+
+.img-right {
+    float: right;
+    margin: 4px 0 4px 10px;
+}
+
+.nopadding { padding: 0; }
+
+.noindent {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.nobullet {
+    list-style: none;
+    list-style-image: none;
+}

@@ -1,0 +1,295 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+.sidebar-nav {
+    padding: 9px 0;
+}
+
+#featureDetails .description {
+    font-size: larger;
+}
+
+.feature-folder-header {
+    font-size: small;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+    .feature-folder-header span {
+        cursor: pointer;
+    }
+
+.feature-folder-contents {
+    margin-left: 15px;
+}
+
+.navbar .overview {
+    padding-top: 8px;
+    font-weight: bolder;
+}
+
+.navbar-below {
+    margin-top: -1px;
+    margin-left: 10px;
+    border-top: 0;
+    -ms-border-bottom-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -ms-border-bottom-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 180px;
+    background-color: black;
+    color: rgb(173, 173, 173);
+    -webkit-transition: height 400ms;
+    transition: height 400ms;
+    overflow: hidden;
+}
+
+    .navbar-below div {
+        display: inline-block;
+        padding-left: 8px;
+        padding-right: 8px;
+        cursor: pointer;
+    }
+
+#scenarios, .steps {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.scenario {
+    transition: border-color 1s ease;
+    background-color: #F5F5F5;
+    border: 1px solid #D0D0D0;
+    margin: 6px 0px 28px 0px;
+    padding: 6px;
+}
+
+.scenario-name {
+    font-weight: bolder;
+    font-size: 1.1em;
+}
+
+.scenario-active {
+    border-color: #B21515;
+}
+
+#clipboardText {
+    width: 100%;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    color: blue;
+}
+
+.scenario a.scenario-link {
+    float: right;
+    margin-top: -25px;
+    width: 32px;
+}
+
+li.step {
+    list-style-type: none;
+    margin: 6px 0px 6px 0px;
+    padding: 0;
+}
+
+.comment {
+    font-weight: bold;
+    color: #0088CC;
+}
+
+.keyword {
+    font-weight: bold;
+    color: #0000FF;
+}
+
+.steps table {
+    margin-bottom: 0px;
+}
+
+    .steps table td {
+        color: #B21515;
+    }
+
+    .steps table th {
+        font-style: italic;
+    }
+
+#SearchButton {
+    margin-top: 0;
+}
+
+.nav .nav-tabs .nav-stacked .active {
+    background-color: #0088CC;
+    color: white;
+}
+
+#FolderNav {
+    border-right: 1px lightgrey solid;
+}
+
+    #FolderNav a:hover {
+        background-color: #EEEEEE;
+        color: #1A668C;
+        text-decoration: none;
+    }
+
+.feature {
+    padding: 5px;
+}
+
+    .feature:hover {
+        background-color: #EEEEEE;
+        cursor: pointer;
+        color: #1A668C;
+    }
+
+.canHighlight {
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.inconclusive, .failed, .passed {
+    font-size: 300%;
+}
+
+.pre {
+    border-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    white-space: pre-wrap;
+    font-style: italic;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+#Content {
+    margin: 0px 0px 0px 10px;
+}
+
+#HideIt {
+    float: right;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    cursor: pointer;
+}
+
+#ShowIt {
+    float: left;
+    position: absolute;
+    left: 0px;
+    top: 60px;
+    cursor: pointer;
+}
+
+#SutInfo {
+    margin-top: 30px;
+    border-top: 1px lightgrey solid;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.table {
+    width: auto;
+    max-width: 90%;
+}
+
+.table-condensed th,
+.table-condensed td {
+    padding: 5px 8px;
+}
+
+/* Overview Styles */
+.modal-host {
+    display: block;
+    width: 100%;
+}
+
+.modal-overlay {
+    margin-top: 40px;
+    background: white;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    overflow-y: auto;
+}
+
+.modal-overlay-visible {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: 10;
+}
+
+.modal-box {
+    padding: 1em .75em;
+    position: relative;
+    margin: 1em auto;
+    width: 95%;
+}
+
+.modal-dialog .btn {
+    background-image: none !important;
+}
+
+#overallCompleteCanvas-container, #overallCompleteSummary {
+    width: 50%;
+}
+
+#overallCompleteSummary ul {
+    font-size: 1.3em;
+    list-style: none;
+}
+
+#overallCompleteSummary ul * {
+    vertical-align: middle;
+}
+
+#overallCompleteSummary span {
+    display: inline-block;
+    margin: 5px;
+    text-align: center;
+}
+
+#overallCompleteSummary .color-key {
+    background-color: lightyellow;
+    display: inline-block;
+    padding: 0px 10px;
+    min-width: 25px;
+    line-height: 42px;
+}
+
+h3.header {
+    text-align: center;
+    margin: 20px 0px 5px 0px;
+    line-height: 32px;
+}
+
+

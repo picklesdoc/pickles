@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8">
+    <title>Features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/print.css" rel="stylesheet" media="print" />
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5.js"></script>
+    <![endif]-->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(','\\)']]}
+});
+    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
+</head>
+
+<body data-bind="style: { overflow: overviewVisible() ? 'hidden' : 'auto' }">
+    <div id="progress" style="width:100%;height:100%;position: absolute;left:0;top:0;background:#ffffff;z-index:100">
+        <span style="position: absolute;left:50%;top:50%;font-weight:bold">Loading...</span>
+    </div>
+    <script type="text/html" id="features-template">
+        <div class="feature" data-bind="click: $root.showFeature.bind(Path)"><a data-bind="text: Name, click: $root.showFeature.bind(Path), css: { selected: $root.isSelected(Path) }" href="#"></a><span data-bind="template: { name: 'testResults-template', data: Result }"></span></div>
+    </script>
+
+    <script type="text/html" id="featuresByFolder-template">
+        <div class="features-folder">
+            <div class="feature-folder-header" data-bind="click: $root.toggleShowingFolderFeatures">
+                <span data-bind="css: { 'icon-chevron-down': IsExpanded() == true, 'icon-chevron-right': IsExpanded() == false }"></span>
+                <span data-bind="text: Name" style="padding: 5px"></span>
+            </div>
+            <div class="feature-folder-contents" data-bind="visible: IsExpanded">
+                <div data-bind="template: { name: 'features-template', foreach: features }"></div>
+                <div data-bind="template: { name: 'featuresByFolder-template', foreach: SubDirectories }"></div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="testResults-template">
+        <div style="float: right" data-bind="if: WasExecuted">
+            <div data-bind="if: WasSuccessful"><span class="badge badge-success"><i class="icon-ok passed" title="Passed"></i></span></div>
+            <div data-bind="if: !WasSuccessful"><span class="badge badge-important"><i class="icon-minus-sign failed" title="Failed"></i></span></div>
+        </div>
+        <!--<div style="float: right" data-bind="if: !WasExecuted">
+            <span class="badge badge-warning"><i class="icon-warning-sign inconclusive" title="Inconclusive"></i></span>
+        </div>-->
+    </script>
+
+    <script type="text/html" id="steps-template">
+        <li class="step">
+            <!-- ko if: StepComments != null && StepComments.length > 0 -->
+            <span class="comment">
+                <!-- ko foreach: StepComments -->
+                <span data-bind="text: Text"></span>
+                <br data-bind="visible : $index() != ($parent.length-1)" />
+                <!-- /ko -->
+            </span>
+            <!-- /ko -->
+            <span class="keyword" data-bind="text: NativeKeyword"></span><span data-bind="text: Name"></span>
+            <div data-bind="if: DocStringArgument != ''">
+                <div data-bind="text: DocStringArgument" class="pre"></div>
+            </div>
+            <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
+            <!-- ko if: AfterLastStepComments != null && AfterLastStepComments.length > 0 -->
+            <span class="comment">
+                <!-- ko foreach: AfterLastStepComments -->
+                <span data-bind="text: Text"></span>
+                <br data-bind="visible : $index() != ($parent.length-1)" />
+                <!-- /ko -->
+            </span>
+            <!-- /ko -->
+        </li>
+    </script>
+
+    <script type="text/html" id="table-template">
+        <div data-bind="if: $data">
+            <div style="overflow-x: auto">
+                <table class="table table-bordered table-condensed table-striped">
+
+                    <thead data-bind="click: $root.toggleDetail" class="clickable">
+                        <tr data-bind="foreach: HeaderRow">
+                            <th data-bind="text: $data"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody data-bind="foreach: DataRows, visible:IsShown">
+                        <tr data-bind="foreach: $data">
+                            <td data-bind="text: $data"></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="TopNav">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <!-- ko ifnot: overviewVisible -->
+                <a class="brand" href="#" data-bind="text: configuration().SutName != null ? configuration().SutName : 'Features'"></a>
+                <div class="navbar-search pull-left">
+                    <input type="text" id="TypeAheadSearchBox" class="search-query" data-bind="value: whatToSearchFor" style="width: 300px" placeholder="@tag or feature name" />
+                    <a id="SearchButton" data-bind="click: search" class="btn">Search</a>
+                    <a id="ClearSearchButton" data-bind="click: clearSearch" class="btn">Clear</a>
+                </div>
+                <!-- /ko -->
+                <!-- ko if: overviewVisible -->
+                <div class="pull-left">
+                    <span class="brand">Overview and Summary</span>
+                </div>
+                <!-- /ko -->
+                <div class="overview pull-right">
+                    <a id="OverviewButton" class="btn" data-bind="text: overviewVisible() ? 'Hide Overview' : 'Show Overview', click: toggleOverview"></a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-below" data-bind="style: { height: overviewVisible() ? '0px' : '22px' }">
+            <div data-bind="click: $root.hideShowNavigation"><i class="icon-white" data-bind="css: { 'icon-minus-sign': $root.navIsShown(), 'icon-plus-sign': !$root.navIsShown() }"></i> Navigation</div>
+            <div data-bind="click: $root.hideShowNavigationTree"><i class="icon-white" data-bind="css: { 'icon-minus-sign': $root.ShowAllLinks(), 'icon-plus-sign': !$root.ShowAllLinks() }"></i> Links</div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="MainContainer">
+        <div class="row-fluid">
+            <div class="span12">
+                <div class="span3" id="FolderNav" data-bind="visible: navIsShown, css: { span3 : navIsShown(), span0 : !navIsShown() }">
+                    <div id="InnerNav">
+                        <div data-bind="template: { name: 'features-template', foreach: featuresByFolder().features }"></div>
+                        <div data-bind="template: { name: 'featuresByFolder-template', foreach: featuresByFolder().SubDirectories }"></div>
+                        <div id="SutInfo">
+                            <!-- ko if: configuration().SutName != null -->
+                            <div data-bind="text: configuration().SutName"></div>
+                            <!-- /ko -->
+                            <!-- ko if: configuration().GeneratedOn != null -->
+                            <div data-bind="text: configuration().SutVersion"></div>
+                            <!-- /ko -->
+                            <div>Generated on: <span data-bind="text: configuration().GeneratedOn"></span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="Content" data-bind="with: currentFeature, css: { span12 : navIsHidden(), span9 : !navIsHidden() }">
+                    <div data-bind="with: Feature" id="featureDetails">
+                        <div data-bind="template: { name: 'testResults-template', data: Result }"></div>
+                        <div data-bind="if: Tags.length > 0" class="canHighlight inline">
+                            <i class=" icon-tags"></i>
+                            <!-- ko foreach: Tags.sort() -->
+                            <span data-bind="text: $data" class="inline"></span>
+                            <!-- /ko -->
+                        </div>
+                        <h1 data-bind="text: Name, click: $root.toggleDetails" class="canHighlight clickable"></h1>
+                        <div class="description" data-bind="html: renderMarkdownBlock(Description)"></div>
+                    </div>
+
+                    <div class="row-fluid" data-bind="with: Feature">
+                        <div class="row-fluid" data-bind="if: Background">
+                            <div class="scenario">
+                                <h4>Background:</h4>
+                                <div class="description" data-bind="html: renderMarkdownBlock(Background.Description)"></div>
+                                <ul data-bind="template: { name: 'steps-template', foreach: Background.Steps }"></ul>
+                            </div>
+                        </div>
+
+                        <div id="scenarios" data-bind="foreach: FeatureElements">
+                            <div data-bind="if: Tags.length > 0" class="canHighlight inline">
+                                <i class=" icon-tags"></i><em>
+                                    <!-- ko foreach: Tags.sort() -->
+                                    <span data-bind="text: $data" class="inline"></span>
+                                    <!-- /ko -->
+                                </em>
+                            </div>
+
+                            <div class="scenario" data-bind="attr: { id: Slug }">
+                                <div data-bind="template: { name: 'testResults-template', data: Result }"></div>
+
+                                <div>
+                                    <h4 data-bind="text: Name, click: $root.toggleDetail" class="canHighlight, clickable"></h4>
+                                    <div class="description" data-bind="visible:IsShown, html: renderMarkdownBlock(Description)"></div>
+                                </div>
+
+                                <div class="steps" data-bind="visible:IsShown">
+
+                                    <ul data-bind="template: { name: 'steps-template', foreach: Steps }"></ul>
+
+                                    <ul data-bind="foreach: Examples">
+                                        <li class="step">
+                                            <div><strong>Examples:</strong> <span data-bind="text: Name"></span></div>
+                                            <div class="description" data-bind="html: renderMarkdownBlock(Description)"></div>
+                                            <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+
+                                <a class="scenario-link clickable" data-bind="ifnot: $root.disableScenarioLinks, click: $root.getLink" title="Get Link for Scenario">
+                                    <img alt="Get Link for Scenario" src="img/link.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Enable to dump JSON to the screen -->
+                    <!--<div class="row-fluid">
+                        Current originalFeaturesList JSON:
+                        <pre data-bind="text: ko.toJSON($parent.originalFeaturesList())"></pre>
+                    </div>
+                    <br /><br />
+                    <div class="row-fluid">
+                        Current featuresByFolder List JSON:
+                        <pre data-bind="text: ko.toJSON($parent.featuresByFolder())"></pre>
+                    </div>-->
+                </div>
+                <!--/span-->
+
+            </div>
+        </div>
+        <!--/row-->
+        <!--<hr>
+
+        <footer>
+            <p></p>
+        </footer>-->
+
+    </div>
+    <!--/.fluid-container-->
+
+    <div class="modal-host">
+        <div class="modal-overlay" data-bind="css: { 'modal-overlay-visible': overviewVisible }">
+            <div class="modal-box">
+                <div class="clearfix">
+                    <div id="overallCompleteCanvas-container" class="pull-left">
+                        <canvas id="overallCompleteCanvas"></canvas>
+                    </div>
+                    <aside id="overallCompleteSummary" class="pull-right">
+                        <h3>Scenario Summary by Result</h3>
+                        <ul data-bind="foreach: totals">
+                            <li>
+                                <span class="color-key" data-bind="text: value, style: { backgroundColor: color }"></span>
+                                <span data-bind="text: label"></span>
+                            </li>
+                        </ul>
+                    </aside>
+                </div>
+                <div>
+                    <h3 class="header">Scenario Summary by Root Namespace</h3>
+                    <canvas id="byRootFolderCanvas"></canvas>
+                </div>
+                <div>
+                    <h3 class="header">Scenario Summary by Top 20 Tags</h3>
+                    <canvas id="byTagCanvas"></canvas>
+                </div>
+                <div>
+                    <h3 class="header">@NotTested Scenario Summary by Root Namespace</h3>
+                    <canvas id="notTestedbyRootFolderCanvas"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="scenarioLinkModal" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" data-bind="with: selectedScenario">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Scenario Link</h4>
+                        <div class="scenario-name" data-bind="text: Name"></div>
+                    </div>
+                    <div class="modal-body">
+                        <textarea id="clipboardText" data-bind="text: link, click: $root.followLink" rows="5" readonly></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <i class="icon-ok" data-bind="visible: $root.linkCopied"></i>
+                        <button type="button" class="btn btn-primary" data-bind="click: $root.copyLinkToClipboard">Copy to Clipboard</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Le javascript
+                ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/knockout-3.4.0.js" type="text/javascript"></script>
+    <script src="js/knockout.mapping-latest.js" type="text/javascript"></script>
+    <script src="js/underscore-min.js" type="text/javascript"></script>
+    <script src="js/jquery.highlight-4.closure.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/Chart.StackedBar.js"></script>
+    <script src="js/Markdown.Converter.js" type="text/javascript"></script>
+    <script src="js/Markdown.Extra.js" type="text/javascript"></script>
+    <script src="js/featuresModel.js" type="text/javascript"></script>
+    <script src="js/logger.js" type="text/javascript"></script>
+    <script src="js/stringFormatting.js" type="text/javascript"></script>
+    <script src="js/heirarchyBuilder.js" type="text/javascript"></script>
+    <script src="js/typeaheadList.js" type="text/javascript"></script>
+    <script src="js/featureSearch.js" type="text/javascript"></script>
+    <script src="js/picklesOverview.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function ViewModel(features, configuration, summary) {
+            var self = this;
+
+            features = $.map(features, function (el, i) { return new FeatureParent(el); });
+
+            self.originalFeaturesList = ko.observableArray(features);
+            self.featuresByFolder = ko.observable(buildFullHierarchy(getFeaturesFromScenariosList(features)));
+            self.currentFeature = ko.observable();
+            self.configuration = ko.observable(configuration);
+            self.totals = ko.observable([]);
+
+            self.ShowAllLinks = ko.observable(false);
+            self.overviewVisible = ko.observable(false);
+            self.selectedScenario = ko.observable(null);
+            self.disableScenarioLinks = ko.observable(window.location.protocol.match(/file/));
+            self.linkCopied = ko.observable(false);
+
+            self.setCurrentFeature = function () {
+                var currentFeatureRelativeFolder = FeatureNavigation.getCurrent();
+                if (currentFeatureRelativeFolder != '') {
+                    var currentFeature = findFeatureByRelativeFolder(currentFeatureRelativeFolder, features) || self.originalFeaturesList()[0];
+                    // preserve hash value (incoming request)
+                    var hash = window.location.hash;
+                    self.updateCurrentFeature(currentFeature);
+                    window.location.hash = hash;
+                    // smooth-scroll to hashed slug
+                    setTimeout(function() {
+                        smoothScrollToScenarioAnchor(window.location.hash);
+                    }, 250);
+                } else {
+                    self.updateCurrentFeature(self.originalFeaturesList()[0]);
+                }
+            };
+
+            self.toggleOverview = function() {
+                if (!self.overviewVisible()) {
+                    // scroll to top to support fixed overlay
+                    window.scrollTo(0, 0);
+                }
+
+                self.overviewVisible(!self.overviewVisible());
+
+                if (self.overviewVisible()) {
+                    if (!self.overview) {
+                        // build charts first time overview becomes visible
+                        self.overview = PicklesOverview(summary);
+                        self.overview.createOverallTotalsChart($('#overallCompleteCanvas').get(0).getContext('2d'));
+                        self.overview.createByTagChart($('#byTagCanvas').get(0).getContext('2d'));
+                        self.overview.createByRootFolderChart($('#byRootFolderCanvas').get(0).getContext('2d'));
+                        self.overview.createNotTestedByRootFolderChart($('#notTestedbyRootFolderCanvas').get(0).getContext('2d'));
+                        self.totals(self.overview.getTotalsData());
+                    }
+                } else {
+                    smoothScrollToScenarioAnchor(window.location.hash);
+                }
+            };
+
+            self.whatToSearchFor = ko.observable("");
+
+            self.clearSearch = function () {
+                self.whatToSearchFor('');
+                self.search();
+            };
+
+            self.search = function () {
+                var searchString = this.whatToSearchFor().toLowerCase();
+
+                if (searchString == "") {
+                    self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(features)));
+                    self.setCurrentFeature();
+                    return;
+                } else {
+                    var matchingFeatures = getFeaturesMatching(searchString, features);
+
+                    self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(matchingFeatures)));
+
+                    if (matchingFeatures.length > 0) {
+                        self.updateCurrentFeature(matchingFeatures[0]);
+                    }
+
+                    highlightSearchString(self.whatToSearchFor());
+                }
+            };
+
+            self.showFeature = function (data) {
+                var foundFeature = findFeatureByRelativeFolder(data.Path, features);
+                self.updateCurrentFeature(foundFeature);
+            };
+
+            self.updateCurrentFeature = function (feature) {
+                self.currentFeature(feature);
+                document.title = feature.Feature.Name;
+                FeatureNavigation.setCurrent(feature.RelativeFolder);
+                highlightSearchString(self.whatToSearchFor());
+            };
+
+            // Navigation functionality
+            self.navIsShown = ko.observable(true);
+            self.navIsHidden = ko.observable(false);
+            self.hideNav = function () { self.navIsShown(false); self.navIsHidden(true); };
+            self.showNav = function () { self.navIsShown(true); self.navIsHidden(false); };
+            self.isSelected = function (path) {
+                return self.currentFeature().RelativeFolder == path;
+            };
+            self.toggleShowingFolderFeatures = function (dir) {
+                dir.IsExpanded(!dir.IsExpanded());
+            };
+            self.hideShowNavigation = function () {
+                self.navIsShown(!self.navIsShown());
+                self.navIsHidden(!self.navIsHidden());
+            };
+            self.hideShowNavigationTree = function () {
+                self.ShowAllLinks(!self.ShowAllLinks());
+                expandContractDirectoryLinks(self.featuresByFolder().SubDirectories);
+            };
+
+            self.getLink = function(scenario) {
+                self.linkCopied(false);
+                scenario.link = FeatureNavigation.getCurrentLink(scenario.Slug);
+                self.selectedScenario(scenario);
+                $('#scenarioLinkModal').modal('show');
+            };
+
+            self.followLink = function(scenario) {
+                window.open(scenario.link);
+            };
+
+            self.copyLinkToClipboard = function() {
+                self.linkCopied(false);
+
+                $('#clipboardText').select();
+
+                try {
+                    var result = document.execCommand('copy');
+                    if (!result) {
+                        console.error('Copy to clipboard not supported in this browser');
+                    }
+                }
+                catch(ex) {
+                    console.error(ex);
+                }
+
+                document.getSelection().removeAllRanges();
+                self.linkCopied(true);
+            };
+
+            function expandContractDirectoryLinks(subDirs) {
+                $.each(subDirs, function (key, value) {
+                    value.IsExpanded(self.ShowAllLinks());
+                    expandContractDirectoryLinks(value.SubDirectories);
+                });
+            }
+
+            function smoothScrollToScenarioAnchor(anchorId) {
+                var anchor = $(anchorId);
+                var anchorOffset = anchor.offset();
+                if (anchorOffset != null) {
+                    $('html, body').animate({
+                        scrollTop: anchorOffset.top - 75
+                    }, { complete: function() { anchor.addClass('scenario-active') } });
+
+                    return true;
+                }
+
+                return false;
+            }
+
+            // Hide / show detailed areas
+            self.toggleDetail = function (element) {
+                element.IsShown(!element.IsShown());
+            };
+            self.toggleDetails = function (feature) {
+                $.each(feature.FeatureElements, function (key, scenario) {
+                    scenario.IsShown(!scenario.IsShown());
+                });
+            };
+        };
+
+        function highlightSearchString(searchString) {
+            if (searchString != '') {
+                $('.canHighlight').highlight(searchString);
+            }
+        }
+
+        function jsonPWrapper(data) {
+            data.Features.reverse();
+
+            var viewModel = new window.ViewModel(data.Features, data.Configuration, data.Summary);
+            viewModel.setCurrentFeature();
+
+            window.ko.applyBindings(viewModel);
+
+            var searchItems = getTagsAndFeatureAndScenarioNames(data.Features);
+            $('#TypeAheadSearchBox').typeahead({
+                source: searchItems
+            });
+
+            $('#progress').hide();
+            $('#TopNav').show();
+        }
+
+        var navShown = true;
+
+        $(document).ready(function () {
+            $('#TopNav').hide();
+
+            function chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag() {
+                var url = "pickledFeatures.js"; // URL of the external script
+
+                // this shows dynamic script insertion
+                var script = document.createElement('script');
+                script.setAttribute('src', url);
+
+                // load the script
+                document.getElementsByTagName('head')[0].appendChild(script);
+            }
+
+            chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag();
+
+            function setupSubmitSearchWhenEnterKeyPressed() {
+                $("#TypeAheadSearchBox").keyup(function (event) {
+                    if (event.keyCode == 13) {
+                        $("#SearchButton").click();
+                    }
+                });
+            }
+
+            setupSubmitSearchWhenEnterKeyPressed();
+        });
+    </script>
+</body>
+</html>
