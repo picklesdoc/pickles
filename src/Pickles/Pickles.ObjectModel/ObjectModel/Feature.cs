@@ -35,15 +35,15 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public string Description { get; set; }
 
-        public List<IFeatureElement> FeatureElements { get; }
+        public List<IFeatureElement> FeatureElements { get; private set; }
 
-        public List<Comment> Comments { get; }
+        public List<Comment> Comments { get; private set; }
 
         public Scenario Background { get; private set; }
 
         public TestResult Result { get; set; }
 
-        public List<string> Tags { get; }
+        public List<string> Tags { get; private set; }
 
         public void AddTag(string tag)
         {
