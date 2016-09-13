@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
@@ -28,9 +29,11 @@ using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
+using NGenerics.Sorting;
 using NLog;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.Word.TableOfContentsAdder;
+using static System.String;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 {
@@ -65,7 +68,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
         public void Build(GeneralTree<INode> features)
         {
-            string filename = string.IsNullOrEmpty(this.configuration.SystemUnderTestName)
+            string filename = IsNullOrEmpty(this.configuration.SystemUnderTestName)
                 ? "features.docx"
                 : this.configuration.SystemUnderTestName + ".docx";
             string documentFileName = this.fileSystem.Path.Combine(this.configuration.OutputFolder.FullName, filename);
@@ -109,6 +112,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                     }
                 });
 
+                // Can't be bothered to figure out why they're descending in the first place
+                SortDescending(features);
+
                 features.AcceptVisitor(actionVisitor);
 
                 mainDocumentPart.Document = document;
@@ -127,5 +133,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 TocAdder.AddToc(wordProcessingDocument, firstPara, @"TOC \o '1-2' \h \z \u", null, 4);
             }
         }
+
+        private static void SortDescending(GeneralTree<INode> features)
+        {
+            var comparer = Comparer<GeneralTree<INode>>.Create((a, b) => Compare(b.Data.Name, a.Data.Name, StringComparison.Ordinal));
+            features.SortAllDescendants(new BubbleSorter<GeneralTree<INode>>(), comparer);
+        }
+
     }
 }
