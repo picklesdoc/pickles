@@ -175,7 +175,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                             .Where(s => filteredScenarios.Contains(s))
                             .ToList();
 
-                        return new 
+                        return new
                             {
                                 Folder = folder,
                                 Total = scenariosInFolder.Count,
@@ -220,8 +220,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                     NotTestedFolders = topLevelNotTestedFolderSummary,
                     Scenarios = new
                         {
-                            Total = filteredScenarios.Count, 
-                            Passing = filteredScenarios.LongCount(x => x.Result.WasExecuted && x.Result.WasSuccessful), 
+                            Total = filteredScenarios.Count,
+                            Passing = filteredScenarios.LongCount(x => x.Result.WasExecuted && x.Result.WasSuccessful),
                             Failing = filteredScenarios.LongCount(x => x.Result.WasExecuted && !x.Result.WasSuccessful),
                             Inconclusive = filteredScenarios.LongCount(x => !x.Result.WasExecuted)
                         },
