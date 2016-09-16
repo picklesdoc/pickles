@@ -26,6 +26,7 @@ using System.Xml.Linq;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
 using NLog;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.Extensions;
 
@@ -55,7 +56,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
 
         #region IDocumentationBuilder Members
 
-        public void Build(GeneralTree<INode> features)
+        public void Build(Tree features)
         {
             if (Log.IsInfoEnabled)
             {
@@ -68,7 +69,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             features?.AcceptVisitor(actionVisitor);
         }
 
-        private void VisitNodes(GeneralTree<INode> features, INode node)
+        private void VisitNodes(Tree features, INode node)
         {
             if (node.IsIndexMarkDownNode())
             {
@@ -97,7 +98,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             }
         }
 
-        private void WriteContentNode(GeneralTree<INode> features, INode node, string htmlFilePath)
+        private void WriteContentNode(Tree features, INode node, string htmlFilePath)
         {
             using (var writer = new System.IO.StreamWriter(htmlFilePath, false, Encoding.UTF8))
             {

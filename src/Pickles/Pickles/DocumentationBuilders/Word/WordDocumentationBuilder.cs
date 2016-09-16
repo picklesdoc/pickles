@@ -29,6 +29,7 @@ using DocumentFormat.OpenXml.Wordprocessing;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
 using NLog;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.Word.TableOfContentsAdder;
 
@@ -63,7 +64,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             this.fileSystem = fileSystem;
         }
 
-        public void Build(GeneralTree<INode> features)
+        public void Build(Tree features)
         {
             string filename = string.IsNullOrEmpty(this.configuration.SystemUnderTestName)
                 ? "features.docx"

@@ -22,6 +22,7 @@ using System;
 using System.IO.Abstractions;
 using System.Xml.Linq;
 using NGenerics.DataStructures.Trees;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
@@ -60,7 +61,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             this.fileSystem = fileSystem;
         }
 
-        public XDocument Format(INode featureNode, GeneralTree<INode> features, DirectoryInfoBase rootFolder)
+        public XDocument Format(INode featureNode, Tree features, DirectoryInfoBase rootFolder)
         {
             XNamespace xmlns = HtmlNamespace.Xhtml;
             string featureNodeOutputPath = this.fileSystem.Path.Combine(

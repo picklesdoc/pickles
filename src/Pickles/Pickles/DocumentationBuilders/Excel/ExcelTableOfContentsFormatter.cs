@@ -22,6 +22,7 @@ using System;
 using System.Linq;
 using ClosedXML.Excel;
 using NGenerics.DataStructures.Trees;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
@@ -40,7 +41,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             worksheet.Cell(row++, column).Value = directoryName;
         }
 
-        public void BuildTableOfContents(XLWorkbook workbook, IXLWorksheet worksheet, ref int row, int column, GeneralTree<INode> features)
+        public void BuildTableOfContents(XLWorkbook workbook, IXLWorksheet worksheet, ref int row, int column, Tree features)
         {
             foreach (var childNode in features.ChildNodes)
             {
@@ -64,7 +65,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
                 sheet => sheet.Cell("A1").Value.ToString() == featureChildNode.Feature.Name);
         }
 
-        public void Format(XLWorkbook workbook, GeneralTree<INode> features)
+        public void Format(XLWorkbook workbook, Tree features)
         {
             IXLWorksheet tocWorksheet = workbook.AddWorksheet("TOC", 0);
 

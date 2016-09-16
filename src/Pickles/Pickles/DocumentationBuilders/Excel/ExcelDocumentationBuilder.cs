@@ -25,6 +25,7 @@ using ClosedXML.Excel;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
 using NLog;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
@@ -56,7 +57,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             this.fileSystem = fileSystem;
         }
 
-        public void Build(GeneralTree<INode> features)
+        public void Build(Tree features)
         {
             if (Log.IsInfoEnabled)
             {

@@ -22,6 +22,7 @@ using System;
 using System.IO.Abstractions;
 using System.Xml.Linq;
 using NGenerics.DataStructures.Trees;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
@@ -40,7 +41,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             this.fileSystem = fileSystem;
         }
 
-        private XElement BuildListItems(XNamespace xmlns, Uri file, GeneralTree<INode> features)
+        private XElement BuildListItems(XNamespace xmlns, Uri file, Tree features)
         {
             var ul = new XElement(xmlns + "ul", new XAttribute("class", "features"));
 
@@ -64,7 +65,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             return ul;
         }
 
-        private XElement AddNodeForDirectory(XNamespace xmlns, Uri file, GeneralTree<INode> childNode)
+        private XElement AddNodeForDirectory(XNamespace xmlns, Uri file, Tree childNode)
         {
             var xElement = new XElement(
                 xmlns + "li",
@@ -131,7 +132,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             return false;
         }
 
-        private XElement AddNodeForFile(XNamespace xmlns, Uri file, GeneralTree<INode> childNode)
+        private XElement AddNodeForFile(XNamespace xmlns, Uri file, Tree childNode)
         {
             var xElement = new XElement(xmlns + "li", new XAttribute("class", "file"));
 
@@ -170,7 +171,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
                 new XText("«"));
         }
 
-        public XElement Format(Uri file, GeneralTree<INode> features, DirectoryInfoBase outputFolder)
+        public XElement Format(Uri file, Tree features, DirectoryInfoBase outputFolder)
         {
             XNamespace xmlns = HtmlNamespace.Xhtml;
 

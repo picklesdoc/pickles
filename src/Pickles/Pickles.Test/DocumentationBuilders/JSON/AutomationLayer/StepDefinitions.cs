@@ -23,6 +23,7 @@ using System.IO;
 using Autofac;
 using NFluent;
 using NGenerics.DataStructures.Trees;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.JSON;
 using TechTalk.SpecFlow;
@@ -33,7 +34,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.JSON.AutomationLayer
     [Scope(Tag = "json")]
     public sealed class StepDefinitions : BaseFixture /* God object antipattern */
     {
-        private GeneralTree<INode> nodes;
+        private Tree nodes;
 
         [Given("I have this feature description")]
         public void IHaveThisFeatureDescription(string featureDescription)
@@ -43,7 +44,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.JSON.AutomationLayer
 
             var feature = parser.Parse(new StringReader(featureDescription));
 
-            this.nodes = new GeneralTree<INode>(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\"), string.Empty, feature));
+            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\"), string.Empty, feature));
         }
 
         [When(@"I generate the documentation")]

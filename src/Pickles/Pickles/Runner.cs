@@ -25,6 +25,7 @@ using Autofac;
 using NGenerics.DataStructures.Trees;
 using NGenerics.Patterns.Visitor;
 using NLog;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
 using PicklesDoc.Pickles.ObjectModel;
@@ -45,7 +46,7 @@ namespace PicklesDoc.Pickles
             }
 
             var featureCrawler = container.Resolve<DirectoryTreeCrawler>();
-            GeneralTree<INode> features = featureCrawler.Crawl(configuration.FeatureFolder);
+            Tree features = featureCrawler.Crawl(configuration.FeatureFolder);
 
             if (features == null)
             {
@@ -67,7 +68,7 @@ namespace PicklesDoc.Pickles
             }
         }
 
-        private static void ApplyTestResultsToFeatures(IContainer container, IConfiguration configuration, GeneralTree<INode> features)
+        private static void ApplyTestResultsToFeatures(IContainer container, IConfiguration configuration, Tree features)
         {
             var testResults = container.Resolve<ITestResults>();
 

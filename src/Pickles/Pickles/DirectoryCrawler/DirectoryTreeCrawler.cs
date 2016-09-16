@@ -25,6 +25,7 @@ using System.Linq;
 using System.Reflection;
 using NGenerics.DataStructures.Trees;
 using NLog;
+using PicklesDoc.Pickles.DataStructures;
 
 namespace PicklesDoc.Pickles.DirectoryCrawler
 {
@@ -44,17 +45,17 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.fileSystem = fileSystem;
         }
 
-        public GeneralTree<INode> Crawl(string directory)
+        public Tree Crawl(string directory)
         {
             return this.Crawl(this.fileSystem.DirectoryInfo.FromDirectoryName(directory), null);
         }
 
-        public GeneralTree<INode> Crawl(DirectoryInfoBase directory)
+        public Tree Crawl(DirectoryInfoBase directory)
         {
             return this.Crawl(directory, null);
         }
 
-        private GeneralTree<INode> Crawl(DirectoryInfoBase directory, INode rootNode)
+        private Tree Crawl(DirectoryInfoBase directory, INode rootNode)
         {
             INode currentNode =
                 this.featureNodeFactory.Create(rootNode != null ? rootNode.OriginalLocation : null, directory);
@@ -64,7 +65,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
                 rootNode = currentNode;
             }
 
-            var tree = new GeneralTree<INode>(currentNode);
+            var tree = new Tree(currentNode);
 
             var filesAreFound = this.CollectFiles(directory, rootNode, tree);
 
@@ -78,13 +79,13 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             return tree;
         }
 
-        private bool CollectDirectories(DirectoryInfoBase directory, INode rootNode, GeneralTree<INode> tree)
+        private bool CollectDirectories(DirectoryInfoBase directory, INode rootNode, Tree tree)
         {
-            List<GeneralTree<INode>> collectedNodes = new List<GeneralTree<INode>>();
+            List<Tree> collectedNodes = new List<Tree>();
 
             foreach (DirectoryInfoBase subDirectory in directory.GetDirectories().OrderBy(di => di.Name))
             {
-                GeneralTree<INode> subTree = this.Crawl(subDirectory, rootNode);
+                Tree subTree = this.Crawl(subDirectory, rootNode);
                 if (subTree != null)
                 {
                     collectedNodes.Add(subTree);
@@ -99,7 +100,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             return collectedNodes.Count > 0;
         }
 
-        private bool CollectFiles(DirectoryInfoBase directory, INode rootNode, GeneralTree<INode> tree)
+        private bool CollectFiles(DirectoryInfoBase directory, INode rootNode, Tree tree)
         {
             List<INode> collectedNodes = new List<INode>();
 

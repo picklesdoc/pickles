@@ -24,6 +24,7 @@ using System.Linq;
 using System.Reflection;
 using NGenerics.DataStructures.Trees;
 using NLog;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.JSON;
 using PicklesDoc.Pickles.ObjectModel;
@@ -47,7 +48,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
             this.fileSystem = fileSystem;
         }
 
-        public void Build(GeneralTree<INode> features)
+        public void Build(Tree features)
         {
             if (Log.IsInfoEnabled)
             {
@@ -77,7 +78,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
             }
         }
 
-        private void UtilizeJsonBuilderToDumpJsonFeatureFileNextToDthmlResources(GeneralTree<INode> features)
+        private void UtilizeJsonBuilderToDumpJsonFeatureFileNextToDthmlResources(Tree features)
         {
             var jsonBuilder = new JsonDocumentationBuilder(this.configuration, this.testResults, this.fileSystem);
             jsonBuilder.Build(features);

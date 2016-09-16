@@ -20,12 +20,13 @@
 
 using System;
 using NGenerics.DataStructures.Trees;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders
 {
     public interface IDocumentationBuilder
     {
-        void Build(GeneralTree<INode> features);
+        void Build(Tree features);
     }
 }
