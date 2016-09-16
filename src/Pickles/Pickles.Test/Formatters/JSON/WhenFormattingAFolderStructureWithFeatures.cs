@@ -20,7 +20,6 @@
 
 using System;
 using Autofac;
-using NGenerics.DataStructures.Trees;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;

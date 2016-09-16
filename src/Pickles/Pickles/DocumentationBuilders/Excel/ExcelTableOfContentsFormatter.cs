@@ -21,7 +21,6 @@
 using System;
 using System.Linq;
 using ClosedXML.Excel;
-using NGenerics.DataStructures.Trees;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 

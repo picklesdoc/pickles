@@ -22,8 +22,6 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Autofac;
-using NGenerics.DataStructures.Trees;
-using NGenerics.Patterns.Visitor;
 using NLog;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;

@@ -22,8 +22,6 @@ using System;
 using System.IO.Abstractions;
 using System.Reflection;
 using ClosedXML.Excel;
-using NGenerics.DataStructures.Trees;
-using NGenerics.Patterns.Visitor;
 using NLog;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
