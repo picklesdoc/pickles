@@ -65,8 +65,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
 
             if (features != null)
             {
-                var traversor = new Traversor<INode>(node => this.VisitNodes(features, node));
-                traversor.Traverse(features);
+                foreach (var node in features)
+                {
+                    this.VisitNodes(features, node);
+                }
             }
         }
 

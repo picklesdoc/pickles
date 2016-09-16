@@ -98,7 +98,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 var body = new Body();
                 document.Append(body);
 
-                var traversor = new Traversor<INode>(node =>
+                foreach (var node in features)
                 {
                     var featureDirectoryTreeNode =
                         node as FeatureNode;
@@ -106,9 +106,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                     {
                         this.wordFeatureFormatter.Format(body, featureDirectoryTreeNode);
                     }
-                });
-
-                traversor.Traverse(features);
+                }
 
                 mainDocumentPart.Document = document;
                 mainDocumentPart.Document.Save();

@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
 
             var featuresToFormat = new List<JsonFeatureWithMetaInfo>();
 
-            var traversor = new Traversor<INode>(node =>
+            foreach (var node in features)
             {
                 var featureTreeNode =
                     node as FeatureNode;
@@ -88,9 +88,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
                                 featureTreeNode));
                     }
                 }
-            });
-
-            traversor.Traverse(features);
+            }
 
             this.CreateFile(this.OutputFilePath, this.GenerateJson(featuresToFormat));
         }

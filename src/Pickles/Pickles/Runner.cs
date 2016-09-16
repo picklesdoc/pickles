@@ -70,7 +70,7 @@ namespace PicklesDoc.Pickles
         {
             var testResults = container.Resolve<ITestResults>();
 
-            var traversor = new Traversor<INode>(node =>
+            foreach (var node in features)
             {
                 var featureTreeNode = node as FeatureNode;
                 if (featureTreeNode == null)
@@ -87,9 +87,7 @@ namespace PicklesDoc.Pickles
                 {
                     featureTreeNode.Feature.Result = TestResult.Inconclusive;
                 }
-            });
-
-            traversor.Traverse(features);
+            }
         }
 
         private static void SetResultsForIndividualScenariosUnderFeature(FeatureNode featureTreeNode, ITestResults testResults)
