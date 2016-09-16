@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             string spreadsheetPath = this.fileSystem.Path.Combine(this.configuration.OutputFolder.FullName, "features.xlsx");
             using (var workbook = new XLWorkbook())
             {
-                var visitor = new Visitor<INode>(node =>
+                var traversor = new Traversor<INode>(node =>
                 {
                     var featureDirectoryTreeNode =
                         node as FeatureNode;
@@ -85,7 +85,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
                     }
                 });
 
-                visitor.Visit(features);
+                traversor.Traverse(features);
 
                 this.excelTableOfContentsFormatter.Format(workbook, features);
 

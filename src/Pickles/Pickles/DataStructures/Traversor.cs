@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="Visitor.cs" company="PicklesDoc">
+//  <copyright file="Traversor.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -23,25 +23,25 @@ using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DataStructures
 {
-    public class Visitor<T>
+    public class Traversor<T>
     {
         private readonly Action<T> action;
 
-        public Visitor(Action<T> action)
+        public Traversor(Action<T> action)
         {
             this.action = action;
         }
 
-        public void Visit(T visitee)
+        public void Traverse(T item)
         {
-            this.action(visitee);
+            this.action(item);
         }
 
-        public void Visit(IEnumerable<T> visitees)
+        public void Traverse(IEnumerable<T> items)
         {
-            foreach (var visitee in visitees)
+            foreach (var item in items)
             {
-                this.Visit(visitee);
+                this.Traverse(item);
             }
         }
     }

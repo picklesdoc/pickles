@@ -100,7 +100,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 var body = new Body();
                 document.Append(body);
 
-                var visitor = new Visitor<INode>(node =>
+                var traversor = new Traversor<INode>(node =>
                 {
                     var featureDirectoryTreeNode =
                         node as FeatureNode;
@@ -110,7 +110,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                     }
                 });
 
-                visitor.Visit(features);
+                traversor.Traverse(features);
 
                 mainDocumentPart.Document = document;
                 mainDocumentPart.Document.Save();

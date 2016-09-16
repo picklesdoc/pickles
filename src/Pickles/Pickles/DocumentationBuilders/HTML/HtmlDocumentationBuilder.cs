@@ -67,8 +67,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
 
             if (features != null)
             {
-                var visitor = new Visitor<INode>(node => this.VisitNodes(features, node));
-                visitor.Visit(features);
+                var traversor = new Traversor<INode>(node => this.VisitNodes(features, node));
+                traversor.Traverse(features);
             }
         }
 
