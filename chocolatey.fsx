@@ -26,7 +26,6 @@ Target "CreatePackage CMD" (fun _ ->
         cmdDir + "MarkdownDeep.dll";
         cmdDir + "NDesk.Options.dll";
         cmdDir + "Newtonsoft.Json.dll";
-        cmdDir + "NGenerics.dll";
         cmdDir + "NLog.dll";
         cmdDir + "PicklesDoc.Pickles.Library.dll";
         cmdDir + "PicklesDoc.Pickles.ObjectModel.dll";
@@ -63,7 +62,6 @@ Target "CreatePackage GUI" (fun _ ->
         guiDir + "Microsoft.Practices.ServiceLocation.dll";
         guiDir + "NDesk.Options.dll";
         guiDir + "Newtonsoft.Json.dll";
-        guiDir + "NGenerics.dll";
         guiDir + "NLog.dll";
         guiDir + "NlogViewer.dll";
         guiDir + "Ookii.Dialogs.Wpf.dll";

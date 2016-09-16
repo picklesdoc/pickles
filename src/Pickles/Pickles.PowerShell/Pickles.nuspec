@@ -44,7 +44,6 @@
     <file src="MarkdownDeep.dll" target="tools" />
     <file src="NDesk.Options.dll" target="tools" />
     <file src="Newtonsoft.Json.dll" target="tools" />
-    <file src="NGenerics.dll" target="tools" />
     <file src="NLog.dll" target="tools" />
     <file src="PicklesDoc.Pickles.Library.dll" target="tools" />
     <file src="PicklesDoc.Pickles.ObjectModel.dll" target="tools" />

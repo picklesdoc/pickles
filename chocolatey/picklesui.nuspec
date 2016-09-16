@@ -48,7 +48,6 @@ Optionally, *Pickles* can **integrate test results**, so that your stakeholders 
         <file src="Microsoft.Practices.ServiceLocation.dll" target="tools" />
         <file src="NDesk.Options.dll" target="tools" />
         <file src="Newtonsoft.Json.dll" target="tools" />
-        <file src="NGenerics.dll" target="tools" />
         <file src="NLog.dll" target="tools" />
         <file src="NlogViewer.dll" target="tools" />
         <file src="Ookii.Dialogs.Wpf.dll" target="tools" />

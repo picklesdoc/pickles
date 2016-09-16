@@ -28,7 +28,6 @@ Target "CreatePackageCommandLine" (fun _ ->
         cmdDir + "MarkdownDeep.dll";
         cmdDir + "NDesk.Options.dll";
         cmdDir + "Newtonsoft.Json.dll";
-        cmdDir + "NGenerics.dll";
         cmdDir + "NLog.dll";
         cmdDir + "PicklesDoc.Pickles.Library.dll";
         cmdDir + "PicklesDoc.Pickles.ObjectModel.dll";
@@ -59,7 +58,6 @@ Target "CreatePackageMsBuild" (fun _ ->
         msBuildDir + "MarkdownDeep.dll";
         msBuildDir + "NDesk.Options.dll";
         msBuildDir + "Newtonsoft.Json.dll";
-        msBuildDir + "NGenerics.dll";
         msBuildDir + "NLog.dll";
         msBuildDir + "PicklesDoc.Pickles.Library.dll";
         msBuildDir + "PicklesDoc.Pickles.ObjectModel.dll";
@@ -90,7 +88,6 @@ Target "CreatePackagePowerShell" (fun _ ->
         powerShellDir + "MarkdownDeep.dll";
         powerShellDir + "NDesk.Options.dll";
         powerShellDir + "Newtonsoft.Json.dll";
-        powerShellDir + "NGenerics.dll";
         powerShellDir + "NLog.dll";
         powerShellDir + "PicklesDoc.Pickles.Library.dll";
         powerShellDir + "PicklesDoc.Pickles.ObjectModel.dll";
