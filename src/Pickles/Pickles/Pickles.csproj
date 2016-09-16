@@ -101,6 +101,7 @@
     <Compile Include="CommandLineArgumentParser.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
+    <Compile Include="DataStructures\Visitor.cs" />
     <Compile Include="DirectoryCrawler\FolderNode.cs" />
     <Compile Include="DirectoryCrawler\ImageFileDetector.cs" />
     <Compile Include="DirectoryCrawler\ImageNode.cs" />

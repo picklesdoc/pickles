@@ -72,7 +72,7 @@ namespace PicklesDoc.Pickles
         {
             var testResults = container.Resolve<ITestResults>();
 
-            var actionVisitor = new ActionVisitor<INode>(node =>
+            var visitor = new Visitor<INode>(node =>
             {
                 var featureTreeNode = node as FeatureNode;
                 if (featureTreeNode == null)
@@ -91,7 +91,7 @@ namespace PicklesDoc.Pickles
                 }
             });
 
-            features.AcceptVisitor(actionVisitor);
+            visitor.Visit(features);
         }
 
         private static void SetResultsForIndividualScenariosUnderFeature(FeatureNode featureTreeNode, ITestResults testResults)

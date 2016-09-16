@@ -100,7 +100,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 var body = new Body();
                 document.Append(body);
 
-                var actionVisitor = new ActionVisitor<INode>(node =>
+                var visitor = new Visitor<INode>(node =>
                 {
                     var featureDirectoryTreeNode =
                         node as FeatureNode;
@@ -110,7 +110,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                     }
                 });
 
-                features.AcceptVisitor(actionVisitor);
+                visitor.Visit(features);
 
                 mainDocumentPart.Document = document;
                 mainDocumentPart.Document.Save();
