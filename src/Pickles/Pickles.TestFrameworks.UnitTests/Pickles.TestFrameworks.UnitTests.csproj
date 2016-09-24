@@ -63,6 +63,7 @@
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFileWithIndividualResults.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromRubyResultsFileWithIndividualResults.cs" />
     <Compile Include="MsTest\WhenParsingMsTestResultsFileWithEmptyExampleValues.cs" />
+    <Compile Include="NUnit\NUnit3\WhenParsingNunit3ResultsFileForNunit2Tests.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFile.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFileWithIndividualResults.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFileWithMissingTraits.cs" />
@@ -204,6 +205,9 @@
     <EmbeddedResource Include="NUnit\NUnit3\results-example-nunit3-missingTraits.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NUnit\NUnit3\results-example-nunit2-with-nunit3-runner.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
