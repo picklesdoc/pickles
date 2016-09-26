@@ -21,8 +21,6 @@ call %%A.cmd %picklesVersion%
 if errorlevel 1 goto handleerror1orhigher
 )
 
-call DeployOutput.cmd %picklesVersion%
-
 @ECHO all fine
 goto end
 
