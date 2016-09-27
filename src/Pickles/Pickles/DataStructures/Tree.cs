@@ -33,6 +33,8 @@ namespace PicklesDoc.Pickles.DataStructures
 
         public Tree(INode currentNode)
         {
+            if (currentNode == null) throw new ArgumentNullException(nameof(currentNode));
+
             this.currentNode = currentNode;
             this.ChildNodes = new List<Tree>();
         }

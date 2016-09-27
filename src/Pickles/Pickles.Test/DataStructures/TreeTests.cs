@@ -54,6 +54,12 @@ namespace PicklesDoc.Pickles.Test.DataStructures
             Check.That(actualSequence).ContainsExactly("root", "A", "a-a", "a-b", "B", "b-a", "b-b");
         }
 
+        [Test]
+        public void Constructor_NullArgument_ShouldThrowArgumentNullException()
+        {
+            Check.ThatCode(() => new Tree(null)).Throws<ArgumentNullException>();
+        }
+
         private class MyNode : INode
         {
             public MyNode(string name)
