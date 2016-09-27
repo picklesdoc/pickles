@@ -82,6 +82,8 @@ namespace PicklesDoc.Pickles.DataStructures
 
         public Tree Add(INode node)
         {
+            if (node == null) throw new ArgumentNullException(nameof(node));
+
             var tree = new Tree(node);
             this.Add(tree);
             return tree;
