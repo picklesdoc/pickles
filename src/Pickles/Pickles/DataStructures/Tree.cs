@@ -75,9 +75,11 @@ namespace PicklesDoc.Pickles.DataStructures
             this.ChildNodes.Add(node);
         }
 
-        public void Add(INode node)
+        public Tree Add(INode node)
         {
-            this.Add(new Tree(node));
+            var tree = new Tree(node);
+            this.Add(tree);
+            return tree;
         }
     }
 }
