@@ -48,11 +48,16 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Word
 
             builder.Build(features);
 
-            var doc = WordprocessingDocument.Open(Path.Combine(Configuration.OutputFolder.FullName, "features.docx"), false);
-            var body = doc.MainDocumentPart.Document.Body;
-            var headings = body.Where(IsHeading).Select(InnerText);
+            var outputPath = Path.Combine(Configuration.OutputFolder.FullName, "features.docx");
 
-            Assert.That(headings, Is.EquivalentTo(expectedSequence));
+            using (var stream = this.FileSystem.File.OpenRead(outputPath))
+            {
+                var doc = WordprocessingDocument.Open(stream, false);
+                var body = doc.MainDocumentPart.Document.Body;
+                var headings = body.Where(IsHeading).Select(InnerText);
+
+                Assert.That(headings, Is.EquivalentTo(expectedSequence));
+            }
 
         }
 

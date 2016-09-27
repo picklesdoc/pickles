@@ -81,9 +81,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 }
             }
 
+            using (var stream = this.fileSystem.File.Create(documentFileName))
             using (
                 WordprocessingDocument wordProcessingDocument = WordprocessingDocument.Create(
-                    documentFileName,
+                    stream,
                     WordprocessingDocumentType.Document))
             {
                 MainDocumentPart mainDocumentPart = wordProcessingDocument.AddMainDocumentPart();
@@ -113,7 +114,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             }
 
             // HACK - Add the table of contents
-            using (WordprocessingDocument wordProcessingDocument = WordprocessingDocument.Open(documentFileName, true))
+            using (var stream = this.fileSystem.File.Open(documentFileName, System.IO.FileMode.Open))
+            using (WordprocessingDocument wordProcessingDocument = WordprocessingDocument.Open(stream, true))
             {
                 XElement firstPara = wordProcessingDocument
                     .MainDocumentPart
