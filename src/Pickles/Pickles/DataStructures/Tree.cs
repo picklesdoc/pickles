@@ -21,6 +21,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 using PicklesDoc.Pickles.DirectoryCrawler;
 
@@ -51,7 +52,7 @@ namespace PicklesDoc.Pickles.DataStructures
             List<INode> result = new List<INode>();
             result.Add(this.currentNode);
 
-            foreach(var childNode in this.ChildNodes)
+            foreach(var childNode in this.ChildNodes.OrderBy(n => n.Data.Name))
             {
                 using (var enumerator = childNode.GetEnumerator())
                 {
