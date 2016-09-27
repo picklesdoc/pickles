@@ -39,7 +39,7 @@ namespace PicklesDoc.Pickles.Test.DataStructures
         [Test]
         public void ShouldIterateInRightOrder()
         {
-            var tree = new Tree(new MyNode("root"));
+            var tree = CreateTree("root");
 
             Tree treeB = tree.Add(new MyNode("B"));
             treeB.Add(new MyNode("b-b"));
@@ -63,11 +63,16 @@ namespace PicklesDoc.Pickles.Test.DataStructures
         [Test]
         public void Iterator_NodeWithNullName_ShouldNotThrowException()
         {
-            var tree = new Tree(new MyNode("node"));
+            var tree = CreateTree("node");
             tree.Add(new MyNode(null));
             tree.Add(new MyNode("name"));
 
             Check.ThatCode(() => tree.ToList()).DoesNotThrow();
+        }
+
+        private static Tree CreateTree(string name)
+        {
+            return new Tree(new MyNode(name));
         }
 
         private class MyNode : INode
