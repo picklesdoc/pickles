@@ -94,6 +94,7 @@
     </Compile>
     <Compile Include="AssertExtensions.cs" />
     <Compile Include="BaseFixture.cs" />
+    <Compile Include="DataStructures\TreeTests.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
     <Compile Include="DocumentationBuilders\HTML\FormattingAFeatureUsingStrike.feature.cs">
