@@ -75,6 +75,14 @@ namespace PicklesDoc.Pickles.Test.DataStructures
             return new Tree(new MyNode(name));
         }
 
+        [Test]
+        public void Add_NullTree_ThrowArgumentNullException()
+        {
+            var tree = CreateTree("root");
+
+            Check.ThatCode(() => tree.Add((Tree)null)).Throws<ArgumentNullException>();
+        }
+
         private class MyNode : INode
         {
             public MyNode(string name)
