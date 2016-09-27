@@ -38,7 +38,11 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
                 .Replace(")", string.Empty)
                 .Replace(".", "_")
                 .Replace("!", string.Empty)
-                .ToUpperInvariant();
+                .Replace("&", string.Empty)
+                .ToUpperInvariant()
+                .Replace("Ä", "A")
+                .Replace("Ö", "O")
+                .Replace("Ü", "U");
 
             var isMatch = element.Name().ToUpperInvariant()
                 .EndsWith(matchValue);
