@@ -60,6 +60,16 @@ namespace PicklesDoc.Pickles.Test.DataStructures
             Check.ThatCode(() => new Tree(null)).Throws<ArgumentNullException>();
         }
 
+        [Test]
+        public void Iterator_NodeWithNullName_ShouldNotThrowException()
+        {
+            var tree = new Tree(new MyNode("node"));
+            tree.Add(new MyNode(null));
+            tree.Add(new MyNode("name"));
+
+            Check.ThatCode(() => tree.ToList()).DoesNotThrow();
+        }
+
         private class MyNode : INode
         {
             public MyNode(string name)
