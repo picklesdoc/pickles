@@ -167,6 +167,25 @@ this.FeatureBackground();
             this.ThisScenarioContainsExamplesWithRegex_SpecialCharacters("^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$", ((string[])(null)));
         }
         
+        public virtual void ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with german umlauts äöüß ÄÖÜ", exampleTags);
+#line 35
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 36
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline with german umlauts äöüß ÄÖÜ, pass_1", SourceLine=39)]
+        public virtual void ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1()
+        {
+            this.ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU("pass_1", ((string[])(null)));
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {
