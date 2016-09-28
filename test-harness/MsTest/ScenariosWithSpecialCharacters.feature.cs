@@ -205,6 +205,52 @@ this.FeatureBackground();
         {
             this.ThisScenarioContainsExamplesWithRegex_SpecialCharacters("^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$", ((string[])(null)));
         }
+        
+        public virtual void ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with german umlauts äöüß ÄÖÜ", exampleTags);
+#line 35
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 36
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("This is a scenario outline with german umlauts äöüß ÄÖÜ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "pass_1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass_1")]
+        public virtual void ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1()
+        {
+            this.ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU("pass_1", ((string[])(null)));
+        }
+        
+        public virtual void ThisIsAScenarioOutlineWithAmpersand(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with ampersand &", exampleTags);
+#line 42
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 43
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("This is a scenario outline with ampersand &")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "pass_1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass_1")]
+        public virtual void ThisIsAScenarioOutlineWithAmpersand_Pass_1()
+        {
+            this.ThisIsAScenarioOutlineWithAmpersand("pass_1", ((string[])(null)));
+        }
     }
 }
 #pragma warning restore
