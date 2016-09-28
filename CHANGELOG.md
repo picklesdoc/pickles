@@ -4,11 +4,11 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org). We consider the following to be the API of Pickles for the purposes of Semantic Versioning:
 
-  - The arguments of the command line runner
-  - The arguments of the PowerShell runner
-  - The arguments of the MSBuild configuration
-  - The settings file of the GUI runner
-  - The JSON output of the JSON format
+- The arguments of the command line runner
+- The arguments of the PowerShell runner
+- The arguments of the MSBuild configuration
+- The settings file of the GUI runner
+- The JSON output of the JSON format
 
 Features in Experimental are subject to change and removal without being considered breaking.
 
@@ -19,25 +19,25 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 ### Fixed
 
 - Compatibility with nunit.console 3.x and nunit.framework 2.x ([369](https://github.com/picklesdoc/pickles/pull/369)) (by [@lars-erik](https://github.com/lars-erik)).
-- Correct sorting of features in output file (MS Word) ([357](https://github.com/picklesdoc/pickles/issues/357)) (by [@lars-erik](https://github.com/lars-erik) and [@dirkrombauts](https://github.com/dirkrombauts)). 
+- Correct sorting of features in output file (MS Word) ([357](https://github.com/picklesdoc/pickles/issues/357)) (by [@lars-erik](https://github.com/lars-erik) and [@dirkrombauts](https://github.com/dirkrombauts)).
 
 ## [2.8.2] - 2016-08-18
 
 ### Fixed
 
-* Handle Encoding or Opposite Slash in Feature Paths ([358](https://github.com/picklesdoc/pickles/pull/362)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+- Handle Encoding or Opposite Slash in Feature Paths ([358](https://github.com/picklesdoc/pickles/pull/362)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
 
 ## [2.8.1] - 2016-07-29
 
 ### Fixed
 
-* Blank Example Entries in a Scenario Outline cause Pickles not to Find the matching Scenario Outline ([358](https://github.com/picklesdoc/pickles/pull/358)) (by [@aaronjrich](https://github.com/aaronjrich)).
+- Blank Example Entries in a Scenario Outline cause Pickles not to Find the matching Scenario Outline ([358](https://github.com/picklesdoc/pickles/pull/358)) (by [@aaronjrich](https://github.com/aaronjrich)).
 
 ## [2.8.0] - 2016-06-29
 
 ### Added
 
-* Hyperlink Feature #1: Automatic Hyperlink Generation for Scenario Titles ([320](https://github.com/picklesdoc/pickles/issues/320)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+- Hyperlink Feature #1: Automatic Hyperlink Generation for Scenario Titles ([320](https://github.com/picklesdoc/pickles/issues/320)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
 
 ## [2.7.0] - 2016-06-14
 
