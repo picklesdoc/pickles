@@ -14,6 +14,13 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.8.3] - 2016-09-28
+
+### Fixed
+
+- Compatibility with nunit.console 3.x and nunit.framework 2.x ([369](https://github.com/picklesdoc/pickles/pull/369)) (by [@lars-erik](https://github.com/lars-erik)).
+- Correct sorting of features in output file (MS Word) ([357](https://github.com/picklesdoc/pickles/issues/357)) (by [@lars-erik](https://github.com/lars-erik) and [@dirkrombauts](https://github.com/dirkrombauts)). 
+
 ## [2.8.2] - 2016-08-18
 
 ### Fixed
