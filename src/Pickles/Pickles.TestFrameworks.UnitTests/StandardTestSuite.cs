@@ -270,33 +270,33 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(actualResult).IsEqualTo(TestResult.Passed);
         }
 
-    public void ThenCanReadResultOfScenarioOutlineWithUmlauts()
-    {
-      var results = ParseResultsFile();
+        public void ThenCanReadResultOfScenarioOutlineWithUmlauts()
+        {
+          var results = ParseResultsFile();
 
-      var feature = new Feature { Name = "Scenarios With Special Characters" };
+          var feature = new Feature { Name = "Scenarios With Special Characters" };
 
-      var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with german umlauts äöüß ÄÖÜ", Feature = feature };
+          var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with german umlauts äöüß ÄÖÜ", Feature = feature };
 
-      var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "pass_1" });
+          var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "pass_1" });
 
-      Check.That(actualResult).IsEqualTo(TestResult.Passed);
-    }
+          Check.That(actualResult).IsEqualTo(TestResult.Passed);
+        }
 
-    public void ThenCanReadResultOfScenarioOutlineWithAmpersand()
-    {
-      var results = ParseResultsFile();
+        public void ThenCanReadResultOfScenarioOutlineWithAmpersand()
+        {
+          var results = ParseResultsFile();
 
-      var feature = new Feature { Name = "Scenarios With Special Characters" };
+          var feature = new Feature { Name = "Scenarios With Special Characters" };
 
-      var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with ampersand &", Feature = feature };
+          var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with ampersand &", Feature = feature };
 
-      var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "pass_1" });
+          var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "pass_1" });
 
-      Check.That(actualResult).IsEqualTo(TestResult.Passed);
-    }
+          Check.That(actualResult).IsEqualTo(TestResult.Passed);
+        }
 
-    private Feature AdditionFeature()
+        private Feature AdditionFeature()
         {
             return new Feature { Name = "Addition" };
         }

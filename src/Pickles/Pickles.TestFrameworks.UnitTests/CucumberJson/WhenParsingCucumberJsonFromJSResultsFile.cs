@@ -159,5 +159,5 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.CucumberJson
         {
           base.ThenCanReadResultOfScenarioOutlineWithAmpersand();
         }
-  }
+    }
 }
