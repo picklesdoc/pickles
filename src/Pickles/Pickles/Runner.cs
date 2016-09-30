@@ -70,9 +70,8 @@ namespace PicklesDoc.Pickles
         {
             var testResults = container.Resolve<ITestResults>();
 
-            foreach (var node in features)
+            foreach (var featureTreeNode in features.Where(p => p.GetType() == typeof(FeatureNode)).Select(p => (FeatureNode)p))
             {
-                var featureTreeNode = node as FeatureNode;
                 if (featureTreeNode == null)
                 {
                     return;
