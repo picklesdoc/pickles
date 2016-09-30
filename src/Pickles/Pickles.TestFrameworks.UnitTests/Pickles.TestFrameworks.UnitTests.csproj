@@ -62,6 +62,7 @@
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFile.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFileWithIndividualResults.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromRubyResultsFileWithIndividualResults.cs" />
+    <Compile Include="MsTest\WhenParsingMsTestResultsFileWithIgnoredExample.cs" />
     <Compile Include="MsTest\WhenParsingMsTestResultsFileWithEmptyExampleValues.cs" />
     <Compile Include="NUnit\NUnit3\WhenParsingNunit3ResultsFileForNunit2Tests.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFile.cs" />
@@ -162,6 +163,7 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MsTest\resuls-example-mstest-emptyexamplevalues.trx" />
+    <EmbeddedResource Include="MsTest\results-example-mstest-ignoredexample.trx" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
