@@ -105,32 +105,8 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
 
             foreach (FileInfoBase file in directory.GetFiles().Where(file => this.relevantFileDetector.IsRelevant(file)))
             {
-                INode node = null;
-                try
-                {
-                    node = this.featureNodeFactory.Create(rootNode.OriginalLocation, file);
-                }
-                catch (Exception ex)
-                {
-                    if (Log.IsWarnEnabled)
-                    {
-                        // retrieving the name as file.FullName may trigger an exception if the FullName is too long
-                        // so we retreive Name and DirectoryName separately
-                        // https://github.com/picklesdoc/pickles/issues/199
-                        var fullName = file.Name + " in directory " + file.DirectoryName;
-                        Log.Warn("The file {0} will be ignored because it could not be read in properly", fullName);
-                    }
-
-                    if (Log.IsDebugEnabled)
-                    {
-                        Log.Debug(ex, "Exception received");
-                    }
-                }
-
-                if (node != null)
-                {
-                    collectedNodes.Add(node);
-                }
+                INode node = this.featureNodeFactory.Create(rootNode.OriginalLocation, file);
+                collectedNodes.Add(node);
             }
 
             foreach (var node in OrderFileNodes(collectedNodes))
