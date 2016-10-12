@@ -22,5 +22,15 @@ namespace PicklesDoc.Pickles
     public interface ILanguageServices
     {
         string[] BackgroundKeywords { get; }
+
+        string[] WhenStepKeywords { get; }
+
+        string[] GivenStepKeywords { get; }
+
+        string[] ThenStepKeywords { get; }
+
+        string[] AndStepKeywords { get; }
+
+        string[] ButStepKeywords { get; }
     }
 }
