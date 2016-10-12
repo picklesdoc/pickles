@@ -30,8 +30,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Abstractions, Version=2.0.0.124, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.0.0.124\lib\net40\System.IO.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +55,40 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="IJsonFeatureElement.cs" />
+    <Compile Include="JsonComment.cs" />
+    <Compile Include="JSONDocumentationBuilder.cs" />
+    <Compile Include="JsonExample.cs" />
+    <Compile Include="JsonFeature.cs" />
+    <Compile Include="JsonFeatureWithMetaInfo.cs" />
+    <Compile Include="JsonKeyword.cs" />
+    <Compile Include="JsonMapper.cs" />
+    <Compile Include="JsonScenario.cs" />
+    <Compile Include="JsonScenarioOutline.cs" />
+    <Compile Include="JsonStep.cs" />
+    <Compile Include="JsonTable.cs" />
+    <Compile Include="JsonTableRow.cs" />
+    <Compile Include="JsonTestResult.cs" />
+    <Compile Include="Mapper\CommentToJsonCommentMapper.cs" />
+    <Compile Include="Mapper\ExampleToJsonExampleMapper.cs" />
+    <Compile Include="Mapper\FeatureToJsonFeatureMapper.cs" />
+    <Compile Include="Mapper\KeywordToJsonKeywordMapper.cs" />
+    <Compile Include="Mapper\ScenarioOutlineToJsonScenarioOutlineMapper.cs" />
+    <Compile Include="Mapper\ScenarioToJsonScenarioMapper.cs" />
+    <Compile Include="Mapper\StepToJsonStepMapper.cs" />
+    <Compile Include="Mapper\TableRowToJsonTableRowMapper.cs" />
+    <Compile Include="Mapper\TableToJsonTableMapper.cs" />
+    <Compile Include="Mapper\TestResultToJsonTestResultMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
+      <Project>{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}</Project>
+      <Name>Pickles.ObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

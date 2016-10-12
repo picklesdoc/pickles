@@ -123,30 +123,6 @@
     <Compile Include="DocumentationBuilders\HTML\HtmlTableOfContentsFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\IHtmlFeatureFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\ResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\JSON\IJsonFeatureElement.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonExample.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonFeature.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonFeatureWithMetaInfo.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JSONDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonKeyword.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonScenario.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonScenarioOutline.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonComment.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonStep.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonTable.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonTableRow.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonTestResult.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\CommentToJsonCommentMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\ExampleToJsonExampleMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\FeatureToJsonFeatureMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\KeywordToJsonKeywordMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\ScenarioToJsonScenarioMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\ScenarioOutlineToJsonScenarioOutlineMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\StepToJsonStepMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\TableRowToJsonTableRowMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\TableToJsonTableMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\TestResultToJsonTestResultMapper.cs" />
     <Compile Include="Extensions\NamespaceExtensions.cs" />
     <Compile Include="Extensions\PathExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
@@ -282,6 +258,10 @@
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Excel\Pickles.DocumentationBuilders.Excel.csproj">
       <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
       <Name>Pickles.DocumentationBuilders.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Json\Pickles.DocumentationBuilders.Json.csproj">
+      <Project>{836020D1-A309-4367-9654-EBB7C3F60D97}</Project>
+      <Name>Pickles.DocumentationBuilders.Json</Name>
     </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj">
       <Project>{BDD5290E-BF98-436B-ADEE-A7479E22A875}</Project>
