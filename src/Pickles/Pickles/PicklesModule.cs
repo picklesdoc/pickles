@@ -65,7 +65,17 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<WordTableFormatter>().SingleInstance();
 
             builder.RegisterType<JsonDocumentationBuilder>().SingleInstance();
+
             builder.RegisterType<ExcelDocumentationBuilder>().SingleInstance();
+            builder.RegisterType<ExcelFeatureFormatter>().SingleInstance();
+            builder.RegisterType<ExcelSheetNameGenerator>().SingleInstance();
+            builder.RegisterType<ExcelTableOfContentsFormatter>().SingleInstance();
+            builder.RegisterType<ExcelScenarioFormatter>().SingleInstance();
+            builder.RegisterType<ExcelScenarioOutlineFormatter>().SingleInstance();
+            builder.RegisterType<ExcelStepFormatter>().SingleInstance();
+            builder.RegisterType<ExcelTableFormatter>().SingleInstance();
+            builder.RegisterType<ExcelDocumentStringFormatter>().SingleInstance();
+
             builder.RegisterType<DhtmlDocumentationBuilder>().SingleInstance();
 
             builder.Register<IDocumentationBuilder>(c =>

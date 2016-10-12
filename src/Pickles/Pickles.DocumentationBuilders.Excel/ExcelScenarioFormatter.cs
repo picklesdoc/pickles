@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="ExcelScenarioOutlineFormatter.cs" company="PicklesDoc">
+//  <copyright file="ExcelScenarioFormatter.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -22,55 +22,44 @@ using System;
 using ClosedXML.Excel;
 
 using PicklesDoc.Pickles.ObjectModel;
-using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
 {
-    public class ExcelScenarioOutlineFormatter
+    public class ExcelScenarioFormatter
     {
         private readonly ExcelStepFormatter excelStepFormatter;
-        private readonly ExcelTableFormatter excelTableFormatter;
         private readonly IConfiguration configuration;
         private readonly ITestResults testResults;
 
-        public ExcelScenarioOutlineFormatter(
+        public ExcelScenarioFormatter(
             ExcelStepFormatter excelStepFormatter,
-            ExcelTableFormatter excelTableFormatter,
             IConfiguration configuration,
             ITestResults testResults)
         {
             this.excelStepFormatter = excelStepFormatter;
-            this.excelTableFormatter = excelTableFormatter;
             this.configuration = configuration;
             this.testResults = testResults;
         }
 
-        public void Format(IXLWorksheet worksheet, ScenarioOutline scenarioOutline, ref int row)
+        public void Format(IXLWorksheet worksheet, Scenario scenario, ref int row)
         {
             int originalRow = row;
-            worksheet.Cell(row++, "B").Value = scenarioOutline.Name;
-            worksheet.Cell(row++, "C").Value = scenarioOutline.Description;
+            worksheet.Cell(row, "B").Style.Font.SetBold();
+            worksheet.Cell(row++, "B").Value = scenario.Name;
+            worksheet.Cell(row++, "C").Value = scenario.Description;
 
-            var results = this.testResults.GetScenarioOutlineResult(scenarioOutline);
-            if (this.configuration.HasTestResults && (results != TestResult.Inconclusive))
+            var results = this.testResults.GetScenarioResult(scenario);
+            if (this.configuration.HasTestResults && results != TestResult.Inconclusive)
             {
-                worksheet.Cell(originalRow, "B").Style.Fill.SetBackgroundColor(results == TestResult.Passed
-                    ? XLColor.AppleGreen
-                    : XLColor.CandyAppleRed);
+                worksheet.Cell(originalRow, "B").Style.Fill.SetBackgroundColor(
+                    results == TestResult.Passed
+                        ? XLColor.AppleGreen
+                        : XLColor.CandyAppleRed);
             }
 
-            foreach (Step step in scenarioOutline.Steps)
+            foreach (Step step in scenario.Steps)
             {
                 this.excelStepFormatter.Format(worksheet, step, ref row);
-            }
-
-            row++;
-
-            foreach (var example in scenarioOutline.Examples)
-            {
-                worksheet.Cell(row++, "B").Value = "Examples";
-                worksheet.Cell(row, "C").Value = example.Description;
-                this.excelTableFormatter.Format(worksheet, example.TableArgument, ref row);
             }
         }
     }

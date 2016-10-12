@@ -37,18 +37,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
         private readonly ExcelSheetNameGenerator excelSheetNameGenerator;
         private readonly ExcelTableOfContentsFormatter excelTableOfContentsFormatter;
         private readonly IFileSystem fileSystem;
-        private readonly DirectoryTreeCrawler featureCrawler;
 
         public ExcelDocumentationBuilder(
             IConfiguration configuration,
-            DirectoryTreeCrawler featureCrawler,
             ExcelFeatureFormatter excelFeatureFormatter,
             ExcelSheetNameGenerator excelSheetNameGenerator,
             ExcelTableOfContentsFormatter excelTableOfContentsFormatter,
             IFileSystem fileSystem)
         {
             this.configuration = configuration;
-            this.featureCrawler = featureCrawler;
             this.excelFeatureFormatter = excelFeatureFormatter;
             this.excelSheetNameGenerator = excelSheetNameGenerator;
             this.excelTableOfContentsFormatter = excelTableOfContentsFormatter;

@@ -101,15 +101,6 @@
     <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceWriter.cs" />
     <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelDocumentStringFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelScenarioFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelScenarioOutlineFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelSheetNameGenerator.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelStepFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelTableFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelTableOfContentsFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\HtmlContentFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\HtmlDescriptionFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\HtmlDocumentationBuilder.cs" />
@@ -288,6 +279,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Excel\Pickles.DocumentationBuilders.Excel.csproj">
+      <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
+      <Name>Pickles.DocumentationBuilders.Excel</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj">
       <Project>{BDD5290E-BF98-436B-ADEE-A7479E22A875}</Project>
       <Name>Pickles.DocumentationBuilders.Word</Name>

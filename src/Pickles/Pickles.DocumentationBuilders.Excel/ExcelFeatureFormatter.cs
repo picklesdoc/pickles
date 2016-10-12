@@ -23,7 +23,6 @@ using System.Reflection;
 using ClosedXML.Excel;
 using NLog;
 using PicklesDoc.Pickles.ObjectModel;
-using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
 {
