@@ -34,6 +34,7 @@ Target "CreatePackageCommandLine" (fun _ ->
         cmdDir + "PicklesDoc.Pickles.TestFrameworks.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
+        cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
         cmdDir + "System.IO.Abstractions.dll";
         cmdDir + "FeatureSwitcher.dll";
         cmdDir + "Strike.Jint.dll";
@@ -66,6 +67,7 @@ Target "CreatePackageMsBuild" (fun _ ->
         msBuildDir + "PicklesDoc.Pickles.TestFrameworks.dll";
         msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
+        msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
         msBuildDir + "System.IO.Abstractions.dll";
         msBuildDir + "FeatureSwitcher.dll";
         msBuildDir + "Strike.Jint.dll";
@@ -99,6 +101,7 @@ Target "CreatePackagePowerShell" (fun _ ->
         powerShellDir + "PicklesDoc.Pickles.PowerShell.dll";
         powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
+        powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
         powerShellDir + "System.IO.Abstractions.dll";
         powerShellDir + "FeatureSwitcher.dll";
         powerShellDir + "Strike.Jint.dll";
