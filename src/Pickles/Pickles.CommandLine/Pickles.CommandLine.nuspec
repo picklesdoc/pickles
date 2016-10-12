@@ -48,6 +48,7 @@
     <file src="PicklesDoc.Pickles.Library.dll" target="tools" />
     <file src="PicklesDoc.Pickles.ObjectModel.dll" target="tools" />
     <file src="PicklesDoc.Pickles.TestFrameworks.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Word.dll" target="tools" />
     <file src="System.IO.Abstractions.dll" target="tools" />
     <file src="FeatureSwitcher.dll" target="tools" />
     <file src="Strike.Jint.dll" target="tools" />

@@ -97,9 +97,7 @@
     <Compile Include="CommandLineArgumentParser.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
-    <Compile Include="DirectoryCrawler\FolderNode.cs" />
     <Compile Include="DirectoryCrawler\ImageFileDetector.cs" />
-    <Compile Include="DirectoryCrawler\ImageNode.cs" />
     <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceWriter.cs" />
     <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />
@@ -134,7 +132,6 @@
     <Compile Include="DocumentationBuilders\HTML\HtmlTableOfContentsFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\IHtmlFeatureFormatter.cs" />
     <Compile Include="DocumentationBuilders\HTML\ResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\IDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\JSON\IJsonFeatureElement.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonExample.cs" />
     <Compile Include="DocumentationBuilders\JSON\JsonFeature.cs" />
@@ -159,36 +156,11 @@
     <Compile Include="DocumentationBuilders\JSON\Mapper\TableRowToJsonTableRowMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\TableToJsonTableMapper.cs" />
     <Compile Include="DocumentationBuilders\JSON\Mapper\TestResultToJsonTestResultMapper.cs" />
-    <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtOpenXmlUtil.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtUtil.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\TocAdder.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="DocumentationBuilders\Word\WordBackgroundFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordDescriptionFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordFontApplicator.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordHeaderFooterFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordScenarioFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordScenarioOutlineFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordStepFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordStyleApplicator.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordTableFormatter.cs" />
-    <Compile Include="Extensions\BodyExtensions.cs" />
     <Compile Include="Extensions\NamespaceExtensions.cs" />
     <Compile Include="Extensions\PathExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="DirectoryCrawler\FeatureNode.cs" />
     <Compile Include="DirectoryCrawler\FeatureNodeFactory.cs" />
-    <Compile Include="DirectoryCrawler\INode.cs" />
-    <Compile Include="DirectoryCrawler\MarkdownNode.cs" />
     <Compile Include="Extensions\TreeNodeExtensions.cs" />
-    <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="FeatureParseException.cs" />
     <Compile Include="FeatureToggles\AlternateMarkdownProvider.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -209,7 +181,6 @@
     <Compile Include="Runner.cs" />
     <Compile Include="StrikeMarkdownProvider.cs" />
     <Compile Include="TestFrameworks\NullTestResults.cs" />
-    <Compile Include="DataStructures\Tree.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -317,6 +288,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj">
+      <Project>{BDD5290E-BF98-436B-ADEE-A7479E22A875}</Project>
+      <Name>Pickles.DocumentationBuilders.Word</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
       <Project>{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}</Project>
       <Name>Pickles.ObjectModel</Name>
@@ -350,6 +325,9 @@
     <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\link.png">
       <Link>Resources\Dhtml\img\link.png</Link>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DocumentationBuilders\Word\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

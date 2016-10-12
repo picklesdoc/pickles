@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles", "Pickles\Pickles.csproj", "{38BAD6E0-78AB-4AC3-91A8-BF72AF5EE394}"
 EndProject
@@ -64,6 +64,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.TestFrameworks.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.ObjectModel", "Pickles.ObjectModel\Pickles.ObjectModel.csproj", "{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Word", "Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj", "{BDD5290E-BF98-436B-ADEE-A7479E22A875}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -110,6 +112,10 @@ Global
 		{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD5290E-BF98-436B-ADEE-A7479E22A875}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD5290E-BF98-436B-ADEE-A7479E22A875}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD5290E-BF98-436B-ADEE-A7479E22A875}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD5290E-BF98-436B-ADEE-A7479E22A875}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

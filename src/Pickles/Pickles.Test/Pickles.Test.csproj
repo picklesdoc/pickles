@@ -193,6 +193,10 @@
     <Compile Include="WhenWorkingWithHtmlResources.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj">
+      <Project>{BDD5290E-BF98-436B-ADEE-A7479E22A875}</Project>
+      <Name>Pickles.DocumentationBuilders.Word</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
       <Project>{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}</Project>
       <Name>Pickles.ObjectModel</Name>

@@ -30,13 +30,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
     {
         private const string DefaultBackgroundKeyword = "Background";
 
-        private readonly LanguageServices languageSevices;
+        private readonly ILanguageServices languageServices;
         private readonly WordTableFormatter wordTableFormatter;
 
-        public WordBackgroundFormatter(IConfiguration configuration, WordTableFormatter wordTableFormatter)
+        public WordBackgroundFormatter(WordTableFormatter wordTableFormatter, ILanguageServices languageServices)
         {
             this.wordTableFormatter = wordTableFormatter;
-            this.languageSevices = new LanguageServices(configuration);
+            this.languageServices = languageServices;
         }
 
         public void Format(Body body, Scenario background)
@@ -75,7 +75,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
         private string GetLocalizedBackgroundKeyword()
         {
-            return this.languageSevices.BackgroundKeywords.FirstOrDefault() ?? DefaultBackgroundKeyword;
+            return this.languageServices.BackgroundKeywords.FirstOrDefault() ?? DefaultBackgroundKeyword;
         }
 
         private static TableProperties GenerateTableProperties()

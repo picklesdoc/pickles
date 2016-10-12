@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="IDocumentationBuilder.cs" company="PicklesDoc">
+//  <copyright file="ILanguageServices.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -17,15 +17,10 @@
 //  limitations under the License.
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
-
-using System;
-using PicklesDoc.Pickles.DataStructures;
-using PicklesDoc.Pickles.DirectoryCrawler;
-
-namespace PicklesDoc.Pickles.DocumentationBuilders
+namespace PicklesDoc.Pickles
 {
-    public interface IDocumentationBuilder
+    public interface ILanguageServices
     {
-        void Build(Tree features);
+        string[] BackgroundKeywords { get; }
     }
 }
