@@ -51,6 +51,14 @@ namespace PicklesDoc.Pickles
         /// <summary>
         /// Dynamic HTML format with search.
         /// </summary>
-        [Description("HTML with search")] DHtml
+        [Description("HTML with search")] DHtml,
+
+        /// <summary>
+        /// Cucumber output JSON format
+        /// </summary>
+        [Description("Cucumber JSON export format")] Cucumber
+
+
+
     }
 }
