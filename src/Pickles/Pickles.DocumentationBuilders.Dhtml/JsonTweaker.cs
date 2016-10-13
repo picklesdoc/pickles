@@ -21,7 +21,7 @@
 using System;
 using System.IO.Abstractions;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 {
     public class JsonTweaker
     {

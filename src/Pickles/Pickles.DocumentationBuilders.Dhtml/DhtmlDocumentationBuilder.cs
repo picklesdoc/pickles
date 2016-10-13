@@ -18,17 +18,20 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
+
 using NLog;
+
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.JSON;
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 {
     public class DhtmlDocumentationBuilder : IDocumentationBuilder
     {

@@ -23,7 +23,7 @@ using System.IO.Abstractions;
 
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 {
     public class DhtmlResourceWriter : ResourceWriter
     {

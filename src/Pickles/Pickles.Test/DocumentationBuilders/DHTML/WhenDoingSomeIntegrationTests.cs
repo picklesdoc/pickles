@@ -20,7 +20,8 @@
 
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.DHTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Dhtml;
 
 namespace PicklesDoc.Pickles.Test.DocumentationBuilders.DHTML
 {
