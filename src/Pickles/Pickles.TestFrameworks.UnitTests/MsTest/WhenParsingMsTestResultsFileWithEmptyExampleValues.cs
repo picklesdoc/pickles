@@ -35,14 +35,14 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
         }
 
         [Test]
-        public new void ThenMatchWillBeFoundEvenIfACarriageReturnWasFoundInValueField()
+        public void ThenMatchWillBeFoundEvenIfACarriageReturnWasFoundInValueField()
         {
             var results = ParseResultsFile();
-            
+
             var feature = new Feature { Name = "Example With Empty Value" };
             var scenarioOutline = new ScenarioOutline { Name = "Testing test", Feature = feature };
             scenarioOutline.Steps = new List<Step>();
-            
+
             var examples = new Table();
             examples.HeaderRow = new TableRow();
             examples.HeaderRow.Cells.Add("result1");
@@ -63,7 +63,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
             scenarioOutline.Examples = new List<Example>();
             scenarioOutline.Examples.Add(new Example() { TableArgument = examples });
 
-            var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "1", "", "4" });             
+            var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "1", "", "4" });
         }
     }
 }

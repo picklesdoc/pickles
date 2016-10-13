@@ -36,14 +36,14 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
         }
 
         [Test]
-        public new void ThenIgnoredScenarioOutlineIsSetToInconclusive()
+        public void ThenIgnoredScenarioOutlineIsSetToInconclusive()
         {
             var results = ParseResultsFile();
-            
+
             var feature = new Feature { Name = "Example With Ignored Scenario Outline" };
             var scenarioOutline = new ScenarioOutline { Name = "Add two numbers", Feature = feature };
             scenarioOutline.Steps = new List<Step>();
-            
+
             var examples = new Table();
             examples.HeaderRow = new TableRow();
             examples.HeaderRow.Cells.Add("TestCase");
