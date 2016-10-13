@@ -20,7 +20,8 @@
 
 using System;
 using DocumentFormat.OpenXml.Wordprocessing;
-using PicklesDoc.Pickles.Extensions;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Word.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Word

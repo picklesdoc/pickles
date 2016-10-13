@@ -19,9 +19,10 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+
 using DocumentFormat.OpenXml.Wordprocessing;
 
-namespace PicklesDoc.Pickles.Extensions
+namespace PicklesDoc.Pickles.DocumentationBuilders.Word.Extensions
 {
     public static class BodyExtensions
     {
