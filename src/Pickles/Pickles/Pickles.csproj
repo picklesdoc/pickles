@@ -97,6 +97,7 @@
     <Compile Include="CommandLineArgumentParser.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
+    <Compile Include="DescriptionProcessor.cs" />
     <Compile Include="DirectoryCrawler\ImageFileDetector.cs" />
     <Compile Include="Extensions\PathExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />

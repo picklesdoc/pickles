@@ -90,30 +90,29 @@ Scenario: Clear the screen
 #line hidden
 #line 21
     testRunner.Then("the JSON file should contain", "{\r\n  \"Features\": [\r\n    {\r\n      \"RelativeFolder\": \"\",\r\n      \"Feature\": {\r\n     " +
-                    "   \"Name\": \"Clearing Screen\",\r\n        \"Description\": \"    In order to restart a" +
-                    " new set of calculations\\r\\n    As a math idiot\\r\\n    I want to be able to clea" +
-                    "r the screen\",\r\n        \"FeatureElements\": [\r\n          {\r\n            \"Name\": \"" +
-                    "Clear the screen\",\r\n            \"Slug\": \"clear-the-screen\",\r\n            \"Descri" +
-                    "ption\": \"\",\r\n            \"Steps\": [\r\n              {\r\n                \"Keyword\":" +
-                    " \"Given\",\r\n                \"NativeKeyword\": \"Given \",\r\n                \"Name\": \"" +
-                    "I have entered 50 into the calculator\",\r\n                \"StepComments\": [],\r\n  " +
-                    "              \"AfterLastStepComments\": []\r\n              },\r\n              {\r\n  " +
-                    "              \"Keyword\": \"And\",\r\n                \"NativeKeyword\": \"And \",\r\n     " +
-                    "           \"Name\": \"I have entered 70 into the calculator\",\r\n                \"St" +
-                    "epComments\": [],\r\n                \"AfterLastStepComments\": []\r\n              },\r" +
-                    "\n              {\r\n                \"Keyword\": \"When\",\r\n                \"NativeKey" +
-                    "word\": \"When \",\r\n                \"Name\": \"I press C\",\r\n                \"StepComm" +
-                    "ents\": [],\r\n                \"AfterLastStepComments\": []\r\n              },\r\n     " +
-                    "         {\r\n                \"Keyword\": \"Then\",\r\n                \"NativeKeyword\":" +
-                    " \"Then \",\r\n                \"Name\": \"the screen should be empty\",\r\n              " +
-                    "  \"StepComments\": [],\r\n                \"AfterLastStepComments\": []\r\n            " +
-                    "  }\r\n            ],\r\n            \"Tags\": [\r\n              \"@workflow\",\r\n        " +
-                    "      \"@slow\"\r\n            ],\r\n            \"Result\": {\r\n              \"WasExecut" +
-                    "ed\": false,\r\n              \"WasSuccessful\": false\r\n            }\r\n          }\r\n " +
-                    "       ],\r\n        \"Result\": {\r\n          \"WasExecuted\": false,\r\n          \"WasS" +
-                    "uccessful\": false\r\n        },\r\n        \"Tags\": []\r\n      },\r\n      \"Result\": {\r\n" +
-                    "        \"WasExecuted\": false,\r\n        \"WasSuccessful\": false\r\n      }\r\n    }\r\n " +
-                    " ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "   \"Name\": \"Clearing Screen\",\r\n        \"Description\": \"In order to restart a new" +
+                    " set of calculations\\r\\nAs a math idiot\\r\\nI want to be able to clear the screen" +
+                    "\",\r\n        \"FeatureElements\": [\r\n          {\r\n            \"Name\": \"Clear the sc" +
+                    "reen\",\r\n            \"Slug\": \"clear-the-screen\",\r\n            \"Description\": \"\",\r" +
+                    "\n            \"Steps\": [\r\n              {\r\n                \"Keyword\": \"Given\",\r\n " +
+                    "               \"NativeKeyword\": \"Given \",\r\n                \"Name\": \"I have enter" +
+                    "ed 50 into the calculator\",\r\n                \"StepComments\": [],\r\n              " +
+                    "  \"AfterLastStepComments\": []\r\n              },\r\n              {\r\n              " +
+                    "  \"Keyword\": \"And\",\r\n                \"NativeKeyword\": \"And \",\r\n                \"" +
+                    "Name\": \"I have entered 70 into the calculator\",\r\n                \"StepComments\":" +
+                    " [],\r\n                \"AfterLastStepComments\": []\r\n              },\r\n           " +
+                    "   {\r\n                \"Keyword\": \"When\",\r\n                \"NativeKeyword\": \"When" +
+                    " \",\r\n                \"Name\": \"I press C\",\r\n                \"StepComments\": [],\r\n" +
+                    "                \"AfterLastStepComments\": []\r\n              },\r\n              {\r\n" +
+                    "                \"Keyword\": \"Then\",\r\n                \"NativeKeyword\": \"Then \",\r\n " +
+                    "               \"Name\": \"the screen should be empty\",\r\n                \"StepComme" +
+                    "nts\": [],\r\n                \"AfterLastStepComments\": []\r\n              }\r\n       " +
+                    "     ],\r\n            \"Tags\": [\r\n              \"@workflow\",\r\n              \"@slow" +
+                    "\"\r\n            ],\r\n            \"Result\": {\r\n              \"WasExecuted\": false,\r" +
+                    "\n              \"WasSuccessful\": false\r\n            }\r\n          }\r\n        ],\r\n " +
+                    "       \"Result\": {\r\n          \"WasExecuted\": false,\r\n          \"WasSuccessful\": " +
+                    "false\r\n        },\r\n        \"Tags\": []\r\n      },\r\n      \"Result\": {\r\n        \"Was" +
+                    "Executed\": false,\r\n        \"WasSuccessful\": false\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -167,61 +166,61 @@ Scenario: Scenario with large data table
 #line hidden
 #line 129
     testRunner.Then("the JSON file should contain", "{\r\n  \"Features\": [\r\n    {\r\n      \"RelativeFolder\": \"\",\r\n      \"Feature\": {\r\n     " +
-                    "   \"Name\": \"Interactive DHTML View\",\r\n        \"Description\": \"    In order to in" +
-                    "crease stakeholder engagement with pickled specs\\r\\n    As a SpecFlow evangelist" +
-                    "\\r\\n    I want to adjust the level of detail in the DHTML view to suit my audien" +
-                    "ce\\r\\n    So that I do not overwhelm them.\",\r\n        \"FeatureElements\": [\r\n    " +
-                    "      {\r\n            \"Name\": \"Scenario with large data table\",\r\n            \"Slu" +
-                    "g\": \"scenario-with-large-data-table\",\r\n            \"Description\": \"\",\r\n         " +
-                    "   \"Steps\": [\r\n              {\r\n                \"Keyword\": \"Given\",\r\n           " +
-                    "     \"NativeKeyword\": \"Given \",\r\n                \"Name\": \"a feature with a large" +
-                    " table of data:\",\r\n                \"TableArgument\": {\r\n                  \"Header" +
-                    "Row\": [\r\n                    \"heading\",\r\n                    \"page #\"\r\n         " +
-                    "         ],\r\n                  \"DataRows\": [\r\n                    [\r\n           " +
-                    "           \"Chapter 1\",\r\n                      \"1\"\r\n                    ],\r\n    " +
-                    "                [\r\n                      \"Chapter 2\",\r\n                      \"5\"" +
-                    "\r\n                    ],\r\n                    [\r\n                      \"Chapter " +
-                    "3\",\r\n                      \"10\"\r\n                    ],\r\n                    [\r\n" +
-                    "                      \"Chapter 4\",\r\n                      \"15\"\r\n                " +
-                    "    ],\r\n                    [\r\n                      \"Chapter 5\",\r\n             " +
-                    "         \"20\"\r\n                    ],\r\n                    [\r\n                  " +
-                    "    \"Chapter 6\",\r\n                      \"25\"\r\n                    ],\r\n          " +
-                    "          [\r\n                      \"Chapter 7\",\r\n                      \"30\"\r\n   " +
-                    "                 ],\r\n                    [\r\n                      \"Chapter 8\",\r\n" +
-                    "                      \"35\"\r\n                    ],\r\n                    [\r\n     " +
-                    "                 \"Chapter 9\",\r\n                      \"40\"\r\n                    ]" +
-                    ",\r\n                    [\r\n                      \"Chapter 10\",\r\n                 " +
-                    "     \"45\"\r\n                    ],\r\n                    [\r\n                      " +
-                    "\"Chapter 11\",\r\n                      \"50\"\r\n                    ],\r\n             " +
-                    "       [\r\n                      \"Chapter 12\",\r\n                      \"55\"\r\n     " +
-                    "               ],\r\n                    [\r\n                      \"Chapter 13\",\r\n " +
-                    "                     \"60\"\r\n                    ],\r\n                    [\r\n      " +
-                    "                \"Chapter 14\",\r\n                      \"65\"\r\n                    ]" +
-                    ",\r\n                    [\r\n                      \"Chapter 15\",\r\n                 " +
-                    "     \"70\"\r\n                    ],\r\n                    [\r\n                      " +
-                    "\"Chapter 16\",\r\n                      \"75\"\r\n                    ],\r\n             " +
-                    "       [\r\n                      \"Chapter 17\",\r\n                      \"80\"\r\n     " +
-                    "               ],\r\n                    [\r\n                      \"Chapter 18\",\r\n " +
-                    "                     \"85\"\r\n                    ],\r\n                    [\r\n      " +
-                    "                \"Chapter 19\",\r\n                      \"90\"\r\n                    ]" +
-                    ",\r\n                    [\r\n                      \"Chapter 20\",\r\n                 " +
-                    "     \"95\"\r\n                    ],\r\n                    [\r\n                      " +
-                    "\"Chapter 21\",\r\n                      \"100\"\r\n                    ],\r\n            " +
-                    "        [\r\n                      \"Chapter 22\",\r\n                      \"105\"\r\n   " +
-                    "                 ]\r\n                  ]\r\n                },\r\n                \"St" +
-                    "epComments\": [],\r\n                \"AfterLastStepComments\": []\r\n              },\r" +
-                    "\n              {\r\n                \"Keyword\": \"When\",\r\n                \"NativeKey" +
-                    "word\": \"When \",\r\n                \"Name\": \"I click on the table heading\",\r\n      " +
-                    "          \"StepComments\": [],\r\n                \"AfterLastStepComments\": []\r\n    " +
-                    "          },\r\n              {\r\n                \"Keyword\": \"Then\",\r\n             " +
-                    "   \"NativeKeyword\": \"Then \",\r\n                \"Name\": \"the table body should col" +
-                    "lapse\",\r\n                \"StepComments\": [],\r\n                \"AfterLastStepComm" +
-                    "ents\": []\r\n              }\r\n            ],\r\n            \"Tags\": [],\r\n           " +
-                    " \"Result\": {\r\n              \"WasExecuted\": false,\r\n              \"WasSuccessful\"" +
-                    ": false\r\n            }\r\n          }\r\n        ],\r\n        \"Result\": {\r\n          " +
-                    "\"WasExecuted\": false,\r\n          \"WasSuccessful\": false\r\n        },\r\n        \"Ta" +
-                    "gs\": []\r\n      },\r\n      \"Result\": {\r\n        \"WasExecuted\": false,\r\n        \"Wa" +
-                    "sSuccessful\": false\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "   \"Name\": \"Interactive DHTML View\",\r\n        \"Description\": \"In order to increa" +
+                    "se stakeholder engagement with pickled specs\\r\\nAs a SpecFlow evangelist\\r\\nI wa" +
+                    "nt to adjust the level of detail in the DHTML view to suit my audience\\r\\nSo tha" +
+                    "t I do not overwhelm them.\",\r\n        \"FeatureElements\": [\r\n          {\r\n       " +
+                    "     \"Name\": \"Scenario with large data table\",\r\n            \"Slug\": \"scenario-wi" +
+                    "th-large-data-table\",\r\n            \"Description\": \"\",\r\n            \"Steps\": [\r\n " +
+                    "             {\r\n                \"Keyword\": \"Given\",\r\n                \"NativeKeyw" +
+                    "ord\": \"Given \",\r\n                \"Name\": \"a feature with a large table of data:\"" +
+                    ",\r\n                \"TableArgument\": {\r\n                  \"HeaderRow\": [\r\n       " +
+                    "             \"heading\",\r\n                    \"page #\"\r\n                  ],\r\n   " +
+                    "               \"DataRows\": [\r\n                    [\r\n                      \"Chap" +
+                    "ter 1\",\r\n                      \"1\"\r\n                    ],\r\n                    " +
+                    "[\r\n                      \"Chapter 2\",\r\n                      \"5\"\r\n              " +
+                    "      ],\r\n                    [\r\n                      \"Chapter 3\",\r\n           " +
+                    "           \"10\"\r\n                    ],\r\n                    [\r\n                " +
+                    "      \"Chapter 4\",\r\n                      \"15\"\r\n                    ],\r\n        " +
+                    "            [\r\n                      \"Chapter 5\",\r\n                      \"20\"\r\n " +
+                    "                   ],\r\n                    [\r\n                      \"Chapter 6\"," +
+                    "\r\n                      \"25\"\r\n                    ],\r\n                    [\r\n   " +
+                    "                   \"Chapter 7\",\r\n                      \"30\"\r\n                   " +
+                    " ],\r\n                    [\r\n                      \"Chapter 8\",\r\n                " +
+                    "      \"35\"\r\n                    ],\r\n                    [\r\n                     " +
+                    " \"Chapter 9\",\r\n                      \"40\"\r\n                    ],\r\n             " +
+                    "       [\r\n                      \"Chapter 10\",\r\n                      \"45\"\r\n     " +
+                    "               ],\r\n                    [\r\n                      \"Chapter 11\",\r\n " +
+                    "                     \"50\"\r\n                    ],\r\n                    [\r\n      " +
+                    "                \"Chapter 12\",\r\n                      \"55\"\r\n                    ]" +
+                    ",\r\n                    [\r\n                      \"Chapter 13\",\r\n                 " +
+                    "     \"60\"\r\n                    ],\r\n                    [\r\n                      " +
+                    "\"Chapter 14\",\r\n                      \"65\"\r\n                    ],\r\n             " +
+                    "       [\r\n                      \"Chapter 15\",\r\n                      \"70\"\r\n     " +
+                    "               ],\r\n                    [\r\n                      \"Chapter 16\",\r\n " +
+                    "                     \"75\"\r\n                    ],\r\n                    [\r\n      " +
+                    "                \"Chapter 17\",\r\n                      \"80\"\r\n                    ]" +
+                    ",\r\n                    [\r\n                      \"Chapter 18\",\r\n                 " +
+                    "     \"85\"\r\n                    ],\r\n                    [\r\n                      " +
+                    "\"Chapter 19\",\r\n                      \"90\"\r\n                    ],\r\n             " +
+                    "       [\r\n                      \"Chapter 20\",\r\n                      \"95\"\r\n     " +
+                    "               ],\r\n                    [\r\n                      \"Chapter 21\",\r\n " +
+                    "                     \"100\"\r\n                    ],\r\n                    [\r\n     " +
+                    "                 \"Chapter 22\",\r\n                      \"105\"\r\n                   " +
+                    " ]\r\n                  ]\r\n                },\r\n                \"StepComments\": []," +
+                    "\r\n                \"AfterLastStepComments\": []\r\n              },\r\n              {" +
+                    "\r\n                \"Keyword\": \"When\",\r\n                \"NativeKeyword\": \"When \",\r" +
+                    "\n                \"Name\": \"I click on the table heading\",\r\n                \"StepC" +
+                    "omments\": [],\r\n                \"AfterLastStepComments\": []\r\n              },\r\n  " +
+                    "            {\r\n                \"Keyword\": \"Then\",\r\n                \"NativeKeywor" +
+                    "d\": \"Then \",\r\n                \"Name\": \"the table body should collapse\",\r\n       " +
+                    "         \"StepComments\": [],\r\n                \"AfterLastStepComments\": []\r\n     " +
+                    "         }\r\n            ],\r\n            \"Tags\": [],\r\n            \"Result\": {\r\n  " +
+                    "            \"WasExecuted\": false,\r\n              \"WasSuccessful\": false\r\n       " +
+                    "     }\r\n          }\r\n        ],\r\n        \"Result\": {\r\n          \"WasExecuted\": f" +
+                    "alse,\r\n          \"WasSuccessful\": false\r\n        },\r\n        \"Tags\": []\r\n      }" +
+                    ",\r\n      \"Result\": {\r\n        \"WasExecuted\": false,\r\n        \"WasSuccessful\": fa" +
+                    "lse\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

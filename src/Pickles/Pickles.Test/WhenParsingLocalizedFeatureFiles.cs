@@ -57,9 +57,9 @@ Egenskap: Test egenskap
 
             Check.That(feature).IsNotNull();
             Check.That(feature.Name).IsEqualTo("Test egenskap");
-            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"  Som svensk användare
-  Vill jag skriva mina krav på svenska
-  Så att beställaren kan förstå dem".ComparisonNormalize());
+            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"Som svensk användare
+Vill jag skriva mina krav på svenska
+Så att beställaren kan förstå dem".ComparisonNormalize());
             Check.That(feature.FeatureElements.Count).IsEqualTo(1);
             Check.That(feature.Tags.Count).IsEqualTo(0);
 
@@ -112,9 +112,9 @@ Egenskap: Test egenskap
 
             Check.That(feature).IsNotNull();
             Check.That(feature.Name).IsEqualTo("Test egenskap");
-            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"  Som svensk användare
-  Vill jag skriva mina krav på svenska
-  Så att beställaren kan förstå dem".ComparisonNormalize());
+            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"Som svensk användare
+Vill jag skriva mina krav på svenska
+Så att beställaren kan förstå dem".ComparisonNormalize());
             Check.That(feature.FeatureElements.Count).IsEqualTo(1);
             Check.That(feature.Tags.Count).IsEqualTo(0);
 

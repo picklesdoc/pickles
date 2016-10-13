@@ -61,9 +61,9 @@ Feature: Test
 
             Check.That(feature).IsNotNull();
             Check.That(feature.Name).IsEqualTo("Test");
-            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"    In order to do something
-    As a user
-    I want to run this scenario".ComparisonNormalize());
+            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"In order to do something
+As a user
+I want to run this scenario".ComparisonNormalize());
             Check.That(feature.FeatureElements.Count).IsEqualTo(2);
             Check.That(feature.Tags).IsEmpty();
 
@@ -142,9 +142,9 @@ Feature: Test
 
             Check.That(feature).IsNotNull();
             Check.That(feature.Name).IsEqualTo("Test");
-            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"    In order to do something
-    As a user
-    I want to run this scenario".ComparisonNormalize());
+            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"In order to do something
+As a user
+I want to run this scenario".ComparisonNormalize());
             Check.That(feature.FeatureElements.Count).IsEqualTo(1);
             Check.That(feature.Tags).IsEmpty();
 

@@ -26,7 +26,7 @@ Scenario: A simple feature
               "RelativeFolder": "",
               "Feature": {
                 "Name": "Clearing Screen",
-                "Description": "    In order to restart a new set of calculations\r\n    As a math idiot\r\n    I want to be able to clear the screen",
+                "Description": "In order to restart a new set of calculations\r\nAs a math idiot\r\nI want to be able to clear the screen",
                 "FeatureElements": [
                   {
                     "Name": "Clear the screen",
@@ -134,7 +134,7 @@ Scenario: A feature with a table
               "RelativeFolder": "",
               "Feature": {
                 "Name": "Interactive DHTML View",
-                "Description": "    In order to increase stakeholder engagement with pickled specs\r\n    As a SpecFlow evangelist\r\n    I want to adjust the level of detail in the DHTML view to suit my audience\r\n    So that I do not overwhelm them.",
+                "Description": "In order to increase stakeholder engagement with pickled specs\r\nAs a SpecFlow evangelist\r\nI want to adjust the level of detail in the DHTML view to suit my audience\r\nSo that I do not overwhelm them.",
                 "FeatureElements": [
                   {
                     "Name": "Scenario with large data table",
