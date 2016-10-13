@@ -52,6 +52,7 @@
     <file src="PicklesDoc.Pickles.DocumentationBuilders.Excel.dll" target="tools" />
     <file src="PicklesDoc.Pickles.DocumentationBuilders.Json.dll" target="tools" />
     <file src="PicklesDoc.Pickles.DocumentationBuilders.Html.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Dhtml.dll" target="tools" />
     <file src="FeatureSwitcher.dll" target="tools" />
     <file src="Strike.Jint.dll" target="tools" />
     <file src="Jint.dll" target="tools" />
