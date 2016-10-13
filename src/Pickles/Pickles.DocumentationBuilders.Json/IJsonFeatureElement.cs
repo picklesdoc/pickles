@@ -18,10 +18,11 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
-{
-    using System.Collections.Generic;
+using System;
+using System.Collections.Generic;
 
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json
+{
     public interface IJsonFeatureElement
     {
         JsonFeature Feature { get; set; }

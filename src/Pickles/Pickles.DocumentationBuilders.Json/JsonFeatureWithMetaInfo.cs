@@ -19,10 +19,11 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonFeatureWithMetaInfo
     {

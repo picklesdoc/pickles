@@ -19,11 +19,10 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.Linq;
-using System.Collections.Generic;
+
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonMapper
     {

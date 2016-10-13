@@ -21,7 +21,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonFeature
     {

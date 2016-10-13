@@ -23,7 +23,7 @@ using Autofac;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
 using PicklesDoc.Pickles.Test.Helpers;
 
 namespace PicklesDoc.Pickles.Test.Formatters.JSON

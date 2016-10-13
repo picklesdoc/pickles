@@ -24,7 +24,8 @@ using Autofac;
 using NFluent;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
+
 using TechTalk.SpecFlow;
 
 namespace PicklesDoc.Pickles.Test.DocumentationBuilders.JSON.AutomationLayer

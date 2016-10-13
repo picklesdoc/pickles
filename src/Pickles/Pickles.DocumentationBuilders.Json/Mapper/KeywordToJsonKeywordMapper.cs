@@ -19,9 +19,10 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.JSON.Mapper
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
 {
     public class KeywordToJsonKeywordMapper
     {

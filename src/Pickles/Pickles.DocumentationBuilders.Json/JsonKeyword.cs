@@ -20,7 +20,7 @@
 
 using System;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.JSON
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     /// <summary>
     /// The Gherkin Keywords.

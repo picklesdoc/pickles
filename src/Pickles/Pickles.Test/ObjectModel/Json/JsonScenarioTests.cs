@@ -20,12 +20,12 @@
 
 using NFluent;
 using NUnit.Framework;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 {
-    using PicklesDoc.Pickles.DocumentationBuilders.JSON;
-
     [TestFixture]
     public class JsonScenarioTests
     {
