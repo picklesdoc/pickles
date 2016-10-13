@@ -30,7 +30,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
         private readonly IConfiguration configuration;
 
         public DhtmlResourceWriter(IFileSystem fileSystem, IConfiguration configuration)
-            : base(fileSystem, "PicklesDoc.Pickles.Resources.Dhtml.")
+            : base(fileSystem, "PicklesDoc.Pickles.DocumentationBuilders.Dhtml.Resources.")
         {
             this.configuration = configuration;
         }

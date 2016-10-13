@@ -193,6 +193,10 @@
     <Compile Include="WhenWorkingWithHtmlResources.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Dhtml\Pickles.DocumentationBuilders.Dhtml.csproj">
+      <Project>{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}</Project>
+      <Name>Pickles.DocumentationBuilders.Dhtml</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Excel\Pickles.DocumentationBuilders.Excel.csproj">
       <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
       <Name>Pickles.DocumentationBuilders.Excel</Name>

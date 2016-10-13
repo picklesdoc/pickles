@@ -98,9 +98,6 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
     <Compile Include="DirectoryCrawler\ImageFileDetector.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />
     <Compile Include="Extensions\PathExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="DirectoryCrawler\FeatureNodeFactory.cs" />
@@ -133,71 +130,10 @@
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\bootstrap.min.css">
-      <Link>Resources\Dhtml\css\bootstrap.min.css</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\print.css">
-      <Link>Resources\Dhtml\css\print.css</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\styles.css">
-      <Link>Resources\Dhtml\css\styles.css</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\glyphicons-halflings-white.png">
-      <Link>Resources\Dhtml\img\glyphicons-halflings-white.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\glyphicons-halflings.png">
-      <Link>Resources\Dhtml\img\glyphicons-halflings.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\Index.html">
-      <Link>Resources\Dhtml\Index.html</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\bootstrap.min.js">
-      <Link>Resources\Dhtml\js\bootstrap.min.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\featureSearch.js">
-      <Link>Resources\Dhtml\js\featureSearch.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\featuresModel.js">
-      <Link>Resources\Dhtml\js\featuresModel.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\heirarchyBuilder.js">
-      <Link>Resources\Dhtml\js\heirarchyBuilder.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\html5.js">
-      <Link>Resources\Dhtml\js\html5.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\jquery-1.8.3.min.js">
-      <Link>Resources\Dhtml\js\jquery-1.8.3.min.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\jquery.highlight-4.closure.js">
-      <Link>Resources\Dhtml\js\jquery.highlight-4.closure.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout.mapping-latest.js">
-      <Link>Resources\Dhtml\js\knockout.mapping-latest.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\logger.js">
-      <Link>Resources\Dhtml\js\logger.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Markdown.Converter.js">
-      <Link>Resources\Dhtml\js\Markdown.Converter.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Markdown.Extra.js">
-      <Link>Resources\Dhtml\js\Markdown.Extra.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\stringFormatting.js">
-      <Link>Resources\Dhtml\js\stringFormatting.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\typeaheadList.js">
-      <Link>Resources\Dhtml\js\typeaheadList.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\underscore-min.js">
-      <Link>Resources\Dhtml\js\underscore-min.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\pickledFeatures.js">
-      <Link>Resources\Dhtml\pickledFeatures.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Dhtml\Pickles.DocumentationBuilders.Dhtml.csproj">
+      <Project>{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}</Project>
+      <Name>Pickles.DocumentationBuilders.Dhtml</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Excel\Pickles.DocumentationBuilders.Excel.csproj">
       <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
       <Name>Pickles.DocumentationBuilders.Excel</Name>
@@ -222,31 +158,6 @@
       <Project>{599BCF0C-8FB4-4727-A902-160C4E7D8FB0}</Project>
       <Name>Pickles.TestFrameworks</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Chart.min.js">
-      <Link>Resources\Dhtml\js\Chart.min.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Chart.StackedBar.js">
-      <Link>Resources\Dhtml\js\Chart.StackedBar.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\picklesOverview.js">
-      <Link>Resources\Dhtml\js\picklesOverview.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout-3.4.0.js">
-      <Link>Resources\Dhtml\js\knockout-3.4.0.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\link.png">
-      <Link>Resources\Dhtml\img\link.png</Link>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
