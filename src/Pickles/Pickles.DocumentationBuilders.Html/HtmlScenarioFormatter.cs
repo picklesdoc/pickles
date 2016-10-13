@@ -25,7 +25,7 @@ using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlScenarioFormatter
     {
@@ -73,7 +73,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
                     new XAttribute("class", "steps"),
                     new XElement(
                         this.xmlns + "ul",
-                        scenario.Steps.Select(step => this.htmlStepFormatter.Format(step)))), 
+                        scenario.Steps.Select(step => this.htmlStepFormatter.Format(step)))),
                 this.FormatLinkButton(scenario));
         }
 

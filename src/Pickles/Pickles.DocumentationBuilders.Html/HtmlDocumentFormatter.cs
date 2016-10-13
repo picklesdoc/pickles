@@ -21,10 +21,11 @@
 using System;
 using System.IO.Abstractions;
 using System.Xml.Linq;
+
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlDocumentFormatter
     {

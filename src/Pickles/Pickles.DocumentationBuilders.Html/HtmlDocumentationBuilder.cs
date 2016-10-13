@@ -23,12 +23,14 @@ using System.IO.Abstractions;
 using System.Reflection;
 using System.Text;
 using System.Xml.Linq;
+
 using NLog;
+
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.Extensions;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlDocumentationBuilder : IDocumentationBuilder
     {

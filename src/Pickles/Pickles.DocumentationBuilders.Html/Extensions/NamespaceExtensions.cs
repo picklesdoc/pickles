@@ -21,7 +21,7 @@
 using System;
 using System.Xml.Linq;
 
-namespace Pickles.DocumentationBuilders.Html.Extensions
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.Extensions
 {
     /// <summary>
     /// Extension Methods to work with namespaces.

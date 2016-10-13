@@ -21,11 +21,9 @@
 using System;
 using System.Xml.Linq;
 
-using Pickles.DocumentationBuilders.Html.Extensions;
+using PicklesDoc.Pickles.DocumentationBuilders.Html.Extensions;
 
-using PicklesDoc.Pickles.Extensions;
-
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlDescriptionFormatter
     {

@@ -21,7 +21,7 @@
 using System;
 using System.IO.Abstractions;
 
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.DHTML
 {

@@ -23,7 +23,7 @@ using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
 using PicklesDoc.Pickles.DocumentationBuilders.DHTML;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.DocumentationBuilders.JSON;
 using PicklesDoc.Pickles.DocumentationBuilders.Word;
 using PicklesDoc.Pickles.FeatureToggles;

@@ -21,7 +21,7 @@
 using System;
 using System.Xml.Linq;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlHeaderFormatter
     {

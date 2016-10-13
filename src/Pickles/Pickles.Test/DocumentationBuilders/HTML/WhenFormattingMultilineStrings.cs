@@ -22,7 +22,8 @@ using System;
 using Autofac;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 
 namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
 {

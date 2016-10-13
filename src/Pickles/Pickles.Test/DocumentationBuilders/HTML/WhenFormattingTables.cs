@@ -24,7 +24,8 @@ using System.Xml.Linq;
 using Autofac;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML

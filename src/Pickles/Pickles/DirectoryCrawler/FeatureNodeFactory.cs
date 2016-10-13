@@ -21,7 +21,8 @@
 using System;
 using System.IO.Abstractions;
 using System.Xml.Linq;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
 

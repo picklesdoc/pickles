@@ -22,7 +22,8 @@ using System;
 using System.Xml;
 using Autofac;
 using NFluent;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
 using TechTalk.SpecFlow;
 

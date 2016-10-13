@@ -26,7 +26,8 @@ using Autofac;
 using Moq;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.TestFrameworks;
 

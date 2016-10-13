@@ -22,7 +22,8 @@ using System;
 using System.Linq;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 
 namespace PicklesDoc.Pickles.Test
 {

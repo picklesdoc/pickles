@@ -21,9 +21,10 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
+
 using PicklesDoc.Pickles.DirectoryCrawler;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlContentFormatter
     {

@@ -21,7 +21,7 @@
 using System;
 using System.IO.Abstractions;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlResourceWriter : ResourceWriter
     {

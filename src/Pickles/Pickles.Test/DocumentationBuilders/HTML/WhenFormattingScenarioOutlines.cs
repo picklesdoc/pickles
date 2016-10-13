@@ -23,7 +23,8 @@ using System.Collections.Generic;
 using Autofac;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.Test.Extensions;
 

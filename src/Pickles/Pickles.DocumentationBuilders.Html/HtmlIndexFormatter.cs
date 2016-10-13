@@ -23,10 +23,11 @@ using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Xml.Linq;
+
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.Extensions;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlIndexFormatter
     {

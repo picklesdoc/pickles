@@ -21,9 +21,10 @@
 using System;
 using System.Linq;
 using System.Xml.Linq;
+
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
     public class HtmlStepFormatter
     {
