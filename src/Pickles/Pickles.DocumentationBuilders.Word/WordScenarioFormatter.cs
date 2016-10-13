@@ -29,21 +29,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
     public class WordScenarioFormatter
     {
         private readonly IConfiguration configuration;
-        private readonly ITestResults nunitResults;
+        private readonly ITestResults testResults;
         private readonly WordStepFormatter wordStepFormatter;
 
-        public WordScenarioFormatter(WordStepFormatter wordStepFormatter, IConfiguration configuration, ITestResults nunitResults)
+        public WordScenarioFormatter(WordStepFormatter wordStepFormatter, IConfiguration configuration, ITestResults testResults)
         {
             this.wordStepFormatter = wordStepFormatter;
             this.configuration = configuration;
-            this.nunitResults = nunitResults;
+            this.testResults = testResults;
         }
 
         public void Format(Body body, Scenario scenario)
         {
             if (this.configuration.HasTestResults)
             {
-                TestResult testResult = this.nunitResults.GetScenarioResult(scenario);
+                TestResult testResult = this.testResults.GetScenarioResult(scenario);
                 if (testResult == TestResult.Passed)
                 {
                     body.GenerateParagraph("Passed", "Passed");
