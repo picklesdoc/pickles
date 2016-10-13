@@ -91,14 +91,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
             }
         }
 
-        private static StreamReader GetResourceStreamReader(string nameOfResource)
+        private StreamReader GetResourceStreamReader(string nameOfResource)
         {
             return new StreamReader(GetResourceStream(nameOfResource));
         }
 
-        private static Stream GetResourceStream(string nameOfResource)
+        private Stream GetResourceStream(string nameOfResource)
         {
-            return Assembly.GetExecutingAssembly().GetManifestResourceStream(nameOfResource);
+            return this.GetType().Assembly.GetManifestResourceStream(nameOfResource);
         }
 
         protected void WriteImage(string folder, string filename)

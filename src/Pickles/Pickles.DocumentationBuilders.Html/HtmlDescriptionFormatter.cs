@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="HtmlMarkdownFormatter.cs" company="PicklesDoc">
+//  <copyright file="HtmlDescriptionFormatter.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -20,31 +20,39 @@
 
 using System;
 using System.Xml.Linq;
+
+using Pickles.DocumentationBuilders.Html.Extensions;
+
 using PicklesDoc.Pickles.Extensions;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
 {
-    public class HtmlMarkdownFormatter
+    public class HtmlDescriptionFormatter
     {
         private readonly IMarkdownProvider markdown;
 
         private readonly XNamespace xmlns;
 
-        public HtmlMarkdownFormatter(IMarkdownProvider markdown)
+        public HtmlDescriptionFormatter(IMarkdownProvider markdown)
         {
             this.markdown = markdown;
             this.xmlns = HtmlNamespace.Xhtml;
         }
 
-        public XElement Format(string text)
+        public XElement Format(string descriptionText)
         {
-            // HACK - we add the div around the markdown content because XElement requires a single root element from which to parse and Markdown.Transform() returns a series of elements
-            XElement xElement = XElement.Parse("<div>" + this.markdown.Transform(text) + "</div>");
-            xElement.SetAttributeValue("id", "markdown");
+            if (string.IsNullOrEmpty(descriptionText))
+            {
+                return null;
+            }
 
-            xElement.MoveToNamespace(this.xmlns);
+            string markdownResult = "<div>" + this.markdown.Transform(descriptionText) + "</div>";
+            XElement descriptionElements = XElement.Parse(markdownResult);
+            descriptionElements.SetAttributeValue("class", "description");
 
-            return xElement;
+            descriptionElements.MoveToNamespace(this.xmlns);
+
+            return descriptionElements;
         }
     }
 }

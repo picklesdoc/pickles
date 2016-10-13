@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="NamespaceExtensionsTests.cs" company="PicklesDoc">
+//  <copyright file="NamespaceExtensions.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -20,35 +20,24 @@
 
 using System;
 using System.Xml.Linq;
-using NFluent;
-using NUnit.Framework;
 
-using Pickles.DocumentationBuilders.Html.Extensions;
-
-using PicklesDoc.Pickles.Extensions;
-
-namespace PicklesDoc.Pickles.Test
+namespace Pickles.DocumentationBuilders.Html.Extensions
 {
-    [TestFixture]
-    public class NamespaceExtensionsTests
+    /// <summary>
+    /// Extension Methods to work with namespaces.
+    /// </summary>
+    public static class NamespaceExtensions
     {
-        private static readonly XNamespace NewNamespace = XNamespace.Get("http://myNewNamespace/");
-
-        [Test]
-        public void MoveNamespace()
+        /// <summary>
+        /// Moves <paramref name="element"/> into namespace <paramref name="newNamespace"/>.
+        /// </summary>
+        /// <param name="element">The element that will be moved into a new namespace.</param>
+        /// <param name="newNamespace">The new namespace for the element.</param>
+        public static void MoveToNamespace(this XElement element, XNamespace newNamespace)
         {
-            var tree1 = new XElement(
-                "Data",
-                new XElement(
-                    "Child",
-                    "content",
-                    new XAttribute("MyAttr", "content")));
-
-            tree1.MoveToNamespace(NewNamespace);
-
-            foreach (XElement node in tree1.DescendantsAndSelf())
+            foreach (XElement el in element.DescendantsAndSelf())
             {
-                Check.That(node).IsInNamespace(NewNamespace.NamespaceName);
+                el.Name = newNamespace.GetName(el.Name.LocalName);
             }
         }
     }

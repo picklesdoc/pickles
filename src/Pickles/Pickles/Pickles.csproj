@@ -101,37 +101,12 @@
     <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
     <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceWriter.cs" />
     <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlContentFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlDescriptionFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlDocumentFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlFooterFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlHeaderFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlImageResultFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlIndexFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlMarkdownFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlMultilineStringFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlNamespace.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlResource.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlResourceSet.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlScenarioFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlScenarioOutlineFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlStepFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlTableFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlTableOfContentsFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\IHtmlFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\ResourceWriter.cs" />
-    <Compile Include="Extensions\NamespaceExtensions.cs" />
     <Compile Include="Extensions\PathExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="DirectoryCrawler\FeatureNodeFactory.cs" />
-    <Compile Include="Extensions\TreeNodeExtensions.cs" />
     <Compile Include="FeatureParseException.cs" />
     <Compile Include="FeatureToggles\AlternateMarkdownProvider.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IMarkdownProvider.cs" />
     <Compile Include="LanguageServices.cs" />
     <Compile Include="MarkdownProvider.cs" />
     <Compile Include="ObjectModel\Mapper.cs" />
@@ -155,39 +130,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.eot" />
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.ttf" />
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.woff" />
-    <EmbeddedResource Include="Resources\Html\css\fonts\FontAwesome.ttf" />
     <None Include="Settings.StyleCop" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\global.css" />
-    <EmbeddedResource Include="Resources\Html\css\master.css" />
-    <EmbeddedResource Include="Resources\Html\css\reset.css" />
-    <EmbeddedResource Include="Resources\Html\css\structure.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\img\failure.png" />
-    <EmbeddedResource Include="Resources\Html\img\success.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\js\jquery.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\print.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\js\scripts.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\img\inconclusive.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\font-awesome.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.svg" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\bootstrap.min.css">
@@ -258,6 +201,10 @@
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Excel\Pickles.DocumentationBuilders.Excel.csproj">
       <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
       <Name>Pickles.DocumentationBuilders.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Html\Pickles.DocumentationBuilders.Html.csproj">
+      <Project>{2C849AD2-D125-4754-8BBA-7C61FA6251E4}</Project>
+      <Name>Pickles.DocumentationBuilders.Html</Name>
     </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Json\Pickles.DocumentationBuilders.Json.csproj">
       <Project>{836020D1-A309-4367-9654-EBB7C3F60D97}</Project>

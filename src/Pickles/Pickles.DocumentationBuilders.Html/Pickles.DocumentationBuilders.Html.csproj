@@ -7,8 +7,8 @@
     <ProjectGuid>{2C849AD2-D125-4754-8BBA-7C61FA6251E4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pickles.DocumentationBuilders.Html</RootNamespace>
-    <AssemblyName>Pickles.DocumentationBuilders.Html</AssemblyName>
+    <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Html</RootNamespace>
+    <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Html</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.3.3\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Abstractions, Version=2.0.0.124, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.0.0.124\lib\net40\System.IO.Abstractions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,7 +52,79 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Extensions\NamespaceExtensions.cs" />
+    <Compile Include="HtmlContentFormatter.cs" />
+    <Compile Include="HtmlDescriptionFormatter.cs" />
+    <Compile Include="HtmlDocumentationBuilder.cs" />
+    <Compile Include="HtmlDocumentFormatter.cs" />
+    <Compile Include="HtmlFeatureFormatter.cs" />
+    <Compile Include="HtmlFooterFormatter.cs" />
+    <Compile Include="HtmlHeaderFormatter.cs" />
+    <Compile Include="HtmlImageResultFormatter.cs" />
+    <Compile Include="HtmlIndexFormatter.cs" />
+    <Compile Include="HtmlMarkdownFormatter.cs" />
+    <Compile Include="HtmlMultilineStringFormatter.cs" />
+    <Compile Include="HtmlNamespace.cs" />
+    <Compile Include="HtmlResource.cs" />
+    <Compile Include="HtmlResourceSet.cs" />
+    <Compile Include="HtmlResourceWriter.cs" />
+    <Compile Include="HtmlScenarioFormatter.cs" />
+    <Compile Include="HtmlScenarioOutlineFormatter.cs" />
+    <Compile Include="HtmlStepFormatter.cs" />
+    <Compile Include="HtmlTableFormatter.cs" />
+    <Compile Include="HtmlTableOfContentsFormatter.cs" />
+    <Compile Include="IHtmlFeatureFormatter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceWriter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
+      <Project>{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}</Project>
+      <Name>Pickles.ObjectModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <EmbeddedResource Include="Resources\css\fonts\fontawesome-webfont.eot" />
+    <EmbeddedResource Include="Resources\css\fonts\fontawesome-webfont.ttf" />
+    <EmbeddedResource Include="Resources\css\fonts\fontawesome-webfont.woff" />
+    <EmbeddedResource Include="Resources\css\fonts\FontAwesome.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\font-awesome.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\fonts\fontawesome-webfont.svg" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\global.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\master.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\print.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\reset.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\css\structure.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\img\failure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\img\inconclusive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\img\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\js\jquery.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\js\scripts.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

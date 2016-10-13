@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="NamespaceExtensions.cs" company="PicklesDoc">
+//  <copyright file="IMarkdownProvider.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -19,26 +19,11 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.Xml.Linq;
 
-namespace PicklesDoc.Pickles.Extensions
+namespace PicklesDoc.Pickles
 {
-    /// <summary>
-    /// Extension Methods to work with namespaces.
-    /// </summary>
-    public static class NamespaceExtensions
+    public interface IMarkdownProvider
     {
-        /// <summary>
-        /// Moves <paramref name="element"/> into namespace <paramref name="newNamespace"/>.
-        /// </summary>
-        /// <param name="element">The element that will be moved into a new namespace.</param>
-        /// <param name="newNamespace">The new namespace for the element.</param>
-        public static void MoveToNamespace(this XElement element, XNamespace newNamespace)
-        {
-            foreach (XElement el in element.DescendantsAndSelf())
-            {
-                el.Name = newNamespace.GetName(el.Name.LocalName);
-            }
-        }
+        string Transform(string text);
     }
 }

@@ -23,7 +23,6 @@ using System.Text;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
-using PicklesDoc.Pickles.TestFrameworks;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.HTML
 {

@@ -51,6 +51,19 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<FeatureNodeFactory>().SingleInstance();
 
             builder.RegisterType<HtmlDocumentationBuilder>().SingleInstance();
+            builder.RegisterType<HtmlHeaderFormatter>().SingleInstance();
+            builder.RegisterType<HtmlContentFormatter>().SingleInstance();
+            builder.RegisterType<HtmlDocumentFormatter>().SingleInstance();
+            builder.RegisterType<HtmlResourceSet>().SingleInstance();
+            builder.RegisterType<HtmlImageResultFormatter>().SingleInstance();
+            builder.RegisterType<HtmlIndexFormatter>().SingleInstance();
+            builder.RegisterType<HtmlFeatureFormatter>().SingleInstance();
+            builder.RegisterType<HtmlScenarioFormatter>().SingleInstance();
+            builder.RegisterType<HtmlScenarioOutlineFormatter>().SingleInstance();
+            builder.RegisterType<HtmlDescriptionFormatter>().SingleInstance();
+            builder.RegisterType<HtmlStepFormatter>().SingleInstance();
+            builder.RegisterType<HtmlTableFormatter>().SingleInstance();
+            builder.RegisterType<HtmlMultilineStringFormatter>().SingleInstance();
 
             builder.RegisterType<WordDocumentationBuilder>().SingleInstance();
             builder.RegisterType<WordScenarioFormatter>().SingleInstance();

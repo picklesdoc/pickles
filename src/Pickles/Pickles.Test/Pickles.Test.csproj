@@ -197,6 +197,10 @@
       <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
       <Name>Pickles.DocumentationBuilders.Excel</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Html\Pickles.DocumentationBuilders.Html.csproj">
+      <Project>{2C849AD2-D125-4754-8BBA-7C61FA6251E4}</Project>
+      <Name>Pickles.DocumentationBuilders.Html</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Json\Pickles.DocumentationBuilders.Json.csproj">
       <Project>{836020D1-A309-4367-9654-EBB7C3F60D97}</Project>
       <Name>Pickles.DocumentationBuilders.Json</Name>
