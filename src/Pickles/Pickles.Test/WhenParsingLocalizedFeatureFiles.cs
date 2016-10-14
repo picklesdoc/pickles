@@ -142,5 +142,24 @@ Så att beställaren kan förstå dem".ComparisonNormalize());
             Check.That(thenStep.DocStringArgument).IsNull();
             Check.That(thenStep.TableArgument).IsNull();
         }
+        [Test]
+        public void WhenIndicatingTheLanguageAndCultureInTheFeature_ThenCanParseTheFeature()
+        {
+            string featureText =
+       @"# language: nl-BE
+Functionaliteit: Test de Cultuur
+
+Scenario: Het Scenario
+    Stel dat ik 50 ingeef
+    En dat ik 70 ingeef
+    Als ik plus druk
+    Dan moet het resultaat 120 zijn";
+
+            var configuration = this.Configuration;
+            var parser = new FeatureParser(FileSystem, configuration);
+            Feature feature = parser.Parse(new StringReader(featureText));
+
+            Check.That(feature).IsNotNull();
+        }
     }
 }
