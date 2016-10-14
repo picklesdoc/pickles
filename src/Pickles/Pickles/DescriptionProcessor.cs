@@ -69,6 +69,11 @@ namespace PicklesDoc.Pickles
             {
                 featureElement.Description = Process(featureElement.Description);
             }
+
+            if (feature.Background != null)
+            {
+                feature.Background.Description = Process(feature.Background.Description);
+            }
         }
 
         private static void RemoveEmptySpaceFromNonEmptyLines(string[] splitLines, int index)
