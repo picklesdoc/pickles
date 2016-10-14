@@ -51,6 +51,11 @@ namespace PicklesDoc.Pickles
                 }
             }
 
+            for (int index = 0; index < splitLines.Length; index++)
+            {
+                splitLines[index] = splitLines[index].Replace("\\#", "#");
+            }
+
             var result = string.Join(Environment.NewLine, splitLines);
 
             return result;

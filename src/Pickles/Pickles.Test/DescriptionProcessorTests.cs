@@ -163,5 +163,64 @@ namespace PicklesDoc.Pickles.Test
                 "I want to be told the sum of two numbers");
         }
 
+        [Test]
+        public void LineThatStartsWithEscapedHash_Header1_ShouldRemoveEscapeSign()
+        {
+            var preProcessor = CreatePreProcessor();
+
+            string result = preProcessor.Process("    \\# Header 1");
+
+            Check.That(result).IsEqualTo("# Header 1");
+        }
+
+        [Test]
+        public void LineThatStartsWithEscapedHash_Header2_ShouldRemoveEscapeSign()
+        {
+            var preProcessor = CreatePreProcessor();
+
+            string result = preProcessor.Process("    \\#\\# Header 2");
+
+            Check.That(result).IsEqualTo("## Header 2");
+        }
+
+        [Test]
+        public void LineThatStartsWithEscapedHash_Header3_ShouldRemoveEscapeSign()
+        {
+            var preProcessor = CreatePreProcessor();
+
+            string result = preProcessor.Process("    \\#\\#\\# Header 3");
+
+            Check.That(result).IsEqualTo("### Header 3");
+        }
+
+        [Test]
+        public void LineThatStartsWithEscapedHash_Header4_ShouldRemoveEscapeSign()
+        {
+            var preProcessor = CreatePreProcessor();
+
+            string result = preProcessor.Process("    \\#\\#\\#\\# Header 4");
+
+            Check.That(result).IsEqualTo("#### Header 4");
+        }
+
+        [Test]
+        public void LineThatStartsWithEscapedHash_Header5_ShouldRemoveEscapeSign()
+        {
+            var preProcessor = CreatePreProcessor();
+
+            string result = preProcessor.Process("    \\#\\#\\#\\#\\# Header 5");
+
+            Check.That(result).IsEqualTo("##### Header 5");
+        }
+
+        [Test]
+        public void LineThatStartsWithEscapedHash_Header6_ShouldRemoveEscapeSign()
+        {
+            var preProcessor = CreatePreProcessor();
+
+            string result = preProcessor.Process("    \\#\\#\\#\\#\\#\\# Header 6");
+
+            Check.That(result).IsEqualTo("###### Header 6");
+        }
     }
 }

@@ -1,9 +1,15 @@
 Feature: Sample Markdown Feature
-	Header 1
-	========
+	\# Header 1
 
-	Header 2
-	--------
+	\#\# Header 2
+
+	\#\#\# Header 3
+
+	\#\#\#\# Header 4
+
+	\#\#\#\#\# Header 5
+
+	\#\#\#\#\#\# Header 6
 
 	This is a *significant* word
 
