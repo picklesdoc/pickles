@@ -1,6 +1,6 @@
 ﻿Feature: Step Argument Transformations
-	In order to reduce the amount of code and repetitive tasks in my steps
-	As a SpecFlow evanglist
+	In order to reduce the amount of code and repetitive tasks in my steps  
+	As a SpecFlow evanglist  
 	I want to define reusable transformations for my step arguments
 	
 Scenario: Steps with non-string arguments 

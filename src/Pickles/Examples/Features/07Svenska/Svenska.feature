@@ -2,8 +2,8 @@
 # you could also use app.config -> <specflow><language feature="sv" /></specflow> 
 # to get swedish (for example) through all your features
 Egenskap: Summering
-	För att slippa att göra dumma fel
-	Som räknare
+	För att slippa att göra dumma fel  
+	Som räknare  
 	Vill jag kunna lägga summera
  
   Scenario: Summera 5 och 7 ska vara 12

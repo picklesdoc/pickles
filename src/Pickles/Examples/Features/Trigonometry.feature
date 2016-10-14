@@ -1,6 +1,6 @@
 ﻿Feature: Trigonometry
-	In order to avoid perform more advanced calculations
-	As a math idiot
+	In order to avoid perform more advanced calculations  
+	As a math idiot  
 	I want to be able to use trigonometric functions
 
 	@trigonometric @fast

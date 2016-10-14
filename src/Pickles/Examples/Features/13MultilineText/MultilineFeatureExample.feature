@@ -1,6 +1,6 @@
 ﻿Feature: Multiline Feature Example
-	In order capture this particular Gherkin feature
-	As a Pickles contributer
+	In order capture this particular Gherkin feature  
+	As a Pickles contributer  
 	I want to demonstrate an example of using multiline text in a Scenario
 
 @mytag

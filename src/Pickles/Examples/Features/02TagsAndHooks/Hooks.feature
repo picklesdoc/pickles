@@ -1,6 +1,6 @@
 ﻿Feature: Addition
-	In order to explain the order in which hooks are run
-	As a SpecFlow evanglist
+	In order to explain the order in which hooks are run  
+	As a SpecFlow evanglist  
 	I wan to  be able to hook into pre and post conditions in SpecFlow
 
 Scenario: Hooking into pre conditions for Test Runs in SpecFlow

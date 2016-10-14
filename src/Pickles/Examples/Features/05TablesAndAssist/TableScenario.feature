@@ -1,6 +1,6 @@
 ﻿Feature: Showing table usage
-	In order to show how to use tables
-	As a SpecFlow evanglist
+	In order to show how to use tables  
+	As a SpecFlow evanglist  
 	I want to write some simple scenarios that uses tables tables
 
 Scenario: Using tables

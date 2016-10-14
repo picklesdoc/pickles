@@ -1,7 +1,7 @@
 ﻿Feature: Interactive DHTML View
-	In order to increase stakeholder engagement with pickled specs
+	In order to increase stakeholder engagement with pickled specs  
 	As a SpecFlow evangelist  
-	I want to adjust the level of detail in the DHTML view to suit my audience
+	I want to adjust the level of detail in the DHTML view to suite my audience  
 	So that I do not overwhelm them.
 
 Scenario: Scenario with large data table

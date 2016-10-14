@@ -1,7 +1,7 @@
 ﻿@showUpInScenarioInfo @andThisToo
 Feature: FeatureContext features
-	In order to show how to use FeatureContext
-	As a SpecFlow evangelist
+	In order to show how to use FeatureContext  
+	As a SpecFlow evangelist  
 	I want to write some simple scenarios with data in FeatureContext
 	
 Scenario: Store and retrive Person Marcus from FeatureContext Current

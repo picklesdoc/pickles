@@ -1,9 +1,9 @@
 ﻿Feature: Injecting context into step specifications
 	In order to don't have to rely on the global shared state
-		and to be able to define the contexts required for each scenario.
-	As a SpecFlow Evanglist
-	I would like to have the system automatically inject an instance of any class as 
-		defined in the constructor of a step file
+	and to be able to define the contexts required for each scenario.  
+	As a SpecFlow Evanglist  
+	I would like to have the system automatically inject an instance of any class as
+	defined in the constructor of a step file
 
 Scenario: Feature with no context
 	Given a feature which requires no context
