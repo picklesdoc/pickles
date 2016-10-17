@@ -204,7 +204,6 @@
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\SubLevelOne\LevelOneSublevelTwo.feature" />
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\SubLevelOne\SubLevelTwo\IgnoreThisDirectory\IgnoreThisFile.ignore" />
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\SubLevelOne\SubLevelTwo\LevelOneSublevelOneSubLevelTwo.feature" />
-    <EmbeddedResource Include="HtmlFormatterTestFiles\Comment.feature" />
     <EmbeddedResource Include="FakeFolderStructures\OrderingTests\A\a-b.feature">
       <LastGenOutput>a-b.feature.cs</LastGenOutput>
     </EmbeddedResource>
@@ -222,29 +221,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="HtmlFormatterTestFiles\MultilineString.feature">
-      <LastGenOutput>SimplestFile.feature.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\image.png" />
-    <Content Include="HtmlFormatterTestFiles\Comment.html" />
-    <Content Include="HtmlFormatterTestFiles\MultilineString.html" />
-    <EmbeddedResource Include="HtmlFormatterTestFiles\Simple.feature">
-      <LastGenOutput>SimplestFile.feature.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Content Include="HtmlFormatterTestFiles\Simple.html" />
-    <EmbeddedResource Include="HtmlFormatterTestFiles\Table.feature">
-      <LastGenOutput>Table.feature.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="HtmlFormatterTestFiles\ScenarioOutline.feature">
-      <LastGenOutput>ScenarioOutline.feature.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Content Include="HtmlFormatterTestFiles\ScenarioOutline.html" />
-    <Content Include="HtmlFormatterTestFiles\Table.html" />
-    <EmbeddedResource Include="HtmlFormatterTestFiles\Background.feature">
-      <LastGenOutput>Background.feature.cs</LastGenOutput>
-    </EmbeddedResource>
     <None Include="App.config" />
-    <Content Include="HtmlFormatterTestFiles\Background.html" />
     <EmbeddedResource Include="FakeFolderStructures\JSON\Features\OneScenarioTransferingMoneyBetweenAccountsFailing.feature">
       <LastGenOutput>OneScenarioTransferingMoneyBetweenAccountsFailing.feature.cs</LastGenOutput>
     </EmbeddedResource>

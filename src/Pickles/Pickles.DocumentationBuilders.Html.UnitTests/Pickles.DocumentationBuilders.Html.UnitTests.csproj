@@ -93,6 +93,22 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FormattingAFeatureUsingStrike.feature.cs</LastGenOutput>
     </None>
+    <EmbeddedResource Include="TestFiles\Background.feature">
+      <LastGenOutput>Background.feature.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFiles\Comment.feature" />
+    <EmbeddedResource Include="TestFiles\MultilineString.feature">
+      <LastGenOutput>SimplestFile.feature.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFiles\ScenarioOutline.feature">
+      <LastGenOutput>ScenarioOutline.feature.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFiles\Simple.feature">
+      <LastGenOutput>SimplestFile.feature.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestFiles\Table.feature">
+      <LastGenOutput>Table.feature.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -115,6 +131,14 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TestFiles\Background.html" />
+    <Content Include="TestFiles\Comment.html" />
+    <Content Include="TestFiles\MultilineString.html" />
+    <Content Include="TestFiles\ScenarioOutline.html" />
+    <Content Include="TestFiles\Simple.html" />
+    <Content Include="TestFiles\Table.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
