@@ -102,12 +102,6 @@
     <Compile Include="DescriptionProcessorTests.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
-    <Compile Include="DocumentationBuilders\JSON\AutomationLayer\StepDefinitions.cs" />
-    <Compile Include="DocumentationBuilders\JSON\FormattingAFeature.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FormattingAFeature.feature</DependentUpon>
-    </Compile>
     <Compile Include="DocumentationBuilders\Word\WordDescriptionFormatterTests.cs" />
     <Compile Include="DocumentationBuilders\Word\WhenBuildingWordDocuments.cs" />
     <Compile Include="GlobalSuppressions.cs" />
@@ -212,10 +206,6 @@
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\SubLevelOne\LevelOneSublevelTwo.feature" />
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\SubLevelOne\SubLevelTwo\IgnoreThisDirectory\IgnoreThisFile.ignore" />
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\SubLevelOne\SubLevelTwo\LevelOneSublevelOneSubLevelTwo.feature" />
-    <None Include="DocumentationBuilders\JSON\FormattingAFeature.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FormattingAFeature.feature.cs</LastGenOutput>
-    </None>
     <EmbeddedResource Include="HtmlFormatterTestFiles\Comment.feature" />
     <EmbeddedResource Include="FakeFolderStructures\OrderingTests\A\a-b.feature">
       <LastGenOutput>a-b.feature.cs</LastGenOutput>
