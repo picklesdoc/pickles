@@ -156,14 +156,6 @@
     <Compile Include="DocumentationBuilders\HTML\WhenFormattingTables.cs" />
     <Compile Include="Extensions\StringExtensionsTests.cs" />
     <Compile Include="Extensions\PathExtensionsTests.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingADocumentStringToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingAFeatureToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingAScenarioOutlineToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingAScenarioToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingAStepToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingATableOfContentsToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenAddingATableToAWorksheet.cs" />
-    <Compile Include="DocumentationBuilders\Excel\WhenCreatingSheetNamesFromFeatures.cs" />
     <Compile Include="Extensions\UriExtensionsTests.cs" />
     <Compile Include="Extensions\XElementExtensions.cs" />
     <Compile Include="Formatters\HtmlContentFormatterTests.cs" />
