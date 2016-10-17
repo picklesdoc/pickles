@@ -30,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="ClosedXML, Version=0.80.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
       <HintPath>..\packages\ClosedXML.0.80.1\lib\net40-client\ClosedXML.dll</HintPath>
       <Private>True</Private>
@@ -62,6 +66,7 @@
     <Compile Include="ExcelDocumentationBuilder.cs" />
     <Compile Include="ExcelDocumentStringFormatter.cs" />
     <Compile Include="ExcelFeatureFormatter.cs" />
+    <Compile Include="ExcelModule.cs" />
     <Compile Include="ExcelScenarioFormatter.cs" />
     <Compile Include="ExcelScenarioOutlineFormatter.cs" />
     <Compile Include="ExcelSheetNameGenerator.cs" />
