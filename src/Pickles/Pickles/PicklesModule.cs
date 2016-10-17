@@ -50,18 +50,8 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<RelevantFileDetector>().SingleInstance();
             builder.RegisterType<FeatureNodeFactory>().SingleInstance();
 
-            builder.RegisterType<WordDocumentationBuilder>().SingleInstance();
-            builder.RegisterType<WordScenarioFormatter>().SingleInstance();
-            builder.RegisterType<WordScenarioOutlineFormatter>().SingleInstance();
-            builder.RegisterType<WordStyleApplicator>().SingleInstance();
-            builder.RegisterType<WordDescriptionFormatter>().SingleInstance();
-            builder.RegisterType<WordBackgroundFormatter>().SingleInstance();
-            builder.RegisterType<WordFeatureFormatter>().SingleInstance();
-            builder.RegisterType<WordFontApplicator>().SingleInstance();
-            builder.RegisterType<WordHeaderFooterFormatter>().SingleInstance();
-            builder.RegisterType<WordStepFormatter>().SingleInstance();
-            builder.RegisterType<WordTableFormatter>().SingleInstance();
             builder.RegisterModule<HtmlModule>();
+            builder.RegisterModule<WordModule>();
 
             builder.RegisterType<JsonDocumentationBuilder>().SingleInstance();
 

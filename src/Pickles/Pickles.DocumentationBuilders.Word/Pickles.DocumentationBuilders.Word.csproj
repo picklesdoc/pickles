@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.1.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.1.1\lib\net45\Autofac.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DocumentFormat.OpenXml">
       <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
@@ -67,6 +71,7 @@
     <Compile Include="WordFeatureFormatter.cs" />
     <Compile Include="WordFontApplicator.cs" />
     <Compile Include="WordHeaderFooterFormatter.cs" />
+    <Compile Include="WordModule.cs" />
     <Compile Include="WordScenarioFormatter.cs" />
     <Compile Include="WordScenarioOutlineFormatter.cs" />
     <Compile Include="WordStepFormatter.cs" />
