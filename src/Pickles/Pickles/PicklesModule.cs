@@ -52,9 +52,7 @@ namespace PicklesDoc.Pickles
 
             builder.RegisterModule<HtmlModule>();
             builder.RegisterModule<WordModule>();
-
-            builder.RegisterType<JsonDocumentationBuilder>().SingleInstance();
-
+            builder.RegisterModule<JsonModule>();
             builder.RegisterModule<ExcelModule>();
 
             builder.RegisterType<DhtmlDocumentationBuilder>().SingleInstance();
