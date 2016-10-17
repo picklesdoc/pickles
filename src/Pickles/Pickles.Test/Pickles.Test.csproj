@@ -102,12 +102,6 @@
     <Compile Include="DescriptionProcessorTests.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
-    <Compile Include="DocumentationBuilders\HTML\FormattingAFeatureUsingStrike.feature.cs">
-      <DependentUpon>FormattingAFeatureUsingStrike.feature</DependentUpon>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="DocumentationBuilders\HTML\StrikeMarkdownProviderTests.cs" />
     <Compile Include="DocumentationBuilders\JSON\AutomationLayer\StepDefinitions.cs" />
     <Compile Include="DocumentationBuilders\JSON\FormattingAFeature.feature.cs">
       <AutoGen>True</AutoGen>
@@ -142,18 +136,6 @@
     <Compile Include="ObjectModel\MapperTestsForTag.cs" />
     <Compile Include="ObjectModel\MappingTestsForKeyword.cs" />
     <Compile Include="DirectoryCrawlers\FolderDirectoryTreeNodeTests.cs" />
-    <Compile Include="DocumentationBuilders\HTML\AutomationLayer\CurrentScenarioContext.cs" />
-    <Compile Include="DocumentationBuilders\HTML\FormattingAFeature.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FormattingAFeature.feature</DependentUpon>
-    </Compile>
-    <Compile Include="DocumentationBuilders\HTML\AutomationLayer\Hooks.cs" />
-    <Compile Include="DocumentationBuilders\HTML\AutomationLayer\StepDefinitions.cs" />
-    <Compile Include="DocumentationBuilders\HTML\WhenFormattingScenario.cs" />
-    <Compile Include="DocumentationBuilders\HTML\WhenFormattingMultilineStrings.cs" />
-    <Compile Include="DocumentationBuilders\HTML\WhenFormattingScenarioOutlines.cs" />
-    <Compile Include="DocumentationBuilders\HTML\WhenFormattingTables.cs" />
     <Compile Include="Extensions\StringExtensionsTests.cs" />
     <Compile Include="Extensions\PathExtensionsTests.cs" />
     <Compile Include="Extensions\UriExtensionsTests.cs" />
@@ -179,8 +161,6 @@
     <Compile Include="ParserFileFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhenDeterminingRelevantFilesToConsider.cs" />
-    <Compile Include="DocumentationBuilders\HTML\WhenFormattingFeatures.cs" />
-    <Compile Include="DocumentationBuilders\HTML\WhenFormattingStep.cs" />
     <Compile Include="WhenParsingCommandLineArguments.cs" />
     <Compile Include="WhenParsingFeatureFiles.cs" />
     <Compile Include="WhenParsingLocalizedFeatureFiles.cs" />
@@ -223,14 +203,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DocumentationBuilders\HTML\FormattingAFeatureUsingStrike.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FormattingAFeatureUsingStrike.feature.cs</LastGenOutput>
-    </None>
-    <None Include="DocumentationBuilders\HTML\FormattingAFeature.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>FormattingAFeature.feature.cs</LastGenOutput>
-    </None>
     <EmbeddedResource Include="FakeFolderStructures\AcceptanceTest\AdvancedFeature.feature" />
     <EmbeddedResource Include="FakeFolderStructures\AcceptanceTest\LevelOne.feature" />
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\index.md" />
