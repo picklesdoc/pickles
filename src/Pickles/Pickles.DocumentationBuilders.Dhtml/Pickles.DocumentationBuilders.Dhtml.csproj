@@ -56,6 +56,7 @@
       <Link>VersionInfo.cs</Link>
     </Compile>
     <Compile Include="DhtmlDocumentationBuilder.cs" />
+    <Compile Include="DhtmlModule.cs" />
     <Compile Include="DhtmlResourceWriter.cs" />
     <Compile Include="JsonTweaker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
