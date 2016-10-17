@@ -21,14 +21,17 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
+
 using Autofac;
+
 using NFluent;
+
 using NUnit.Framework;
 
-using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
+using PicklesDoc.Pickles.Test;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
 {
     [TestFixture]
     public class WhenFormattingStep : BaseFixture
@@ -52,17 +55,17 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
                 new XText("a simple step"),
                 new XElement(
-                    xmlns + "div",
+                    this.xmlns + "div",
                     new XAttribute("class", "pre"),
                     new XElement(
-                        xmlns + "pre",
+                        this.xmlns + "pre",
                         new XElement(
-                            xmlns + "code",
+                            this.xmlns + "code",
                             new XAttribute("class", "no-highlight"),
                             new XText(
                                 "this is a\nmultiline table\nargument")))));
@@ -86,9 +89,9 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
                 "a simple step");
 
             Check.That(expected).IsDeeplyEqualTo(actual);
@@ -113,9 +116,9 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), "Givet "),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), "Givet "),
                 "ett enkelt steg");
 
             Check.That(expected).IsDeeplyEqualTo(actual);
@@ -143,38 +146,38 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
                 new XText("a simple step"),
                 new XElement(
-                    xmlns + "div",
+                    this.xmlns + "div",
                     new XAttribute("class", "table_container"),
                     new XElement(
-                        xmlns + "table",
+                        this.xmlns + "table",
                         new XAttribute("class", "datatable"),
                         new XElement(
-                            xmlns + "thead",
+                            this.xmlns + "thead",
                             new XElement(
-                                xmlns + "tr",
+                                this.xmlns + "tr",
                                 new XElement(
-                                    xmlns + "th",
+                                    this.xmlns + "th",
                                     "Column 1"),
                                 new XElement(
-                                    xmlns + "th",
+                                    this.xmlns + "th",
                                     "Column 2"),
                                 new XElement(
-                                    xmlns + "th",
+                                    this.xmlns + "th",
                                     " "))),
                         new XElement(
-                            xmlns + "tbody",
+                            this.xmlns + "tbody",
                             new XElement(
-                                xmlns + "tr",
+                                this.xmlns + "tr",
                                 new XElement(
-                                    xmlns + "td",
+                                    this.xmlns + "td",
                                     "Value 1"),
                                 new XElement(
-                                    xmlns + "td",
+                                    this.xmlns + "td",
                                     "Value 2"))))));
 
             Check.That(expected).IsDeeplyEqualTo(actual);
@@ -204,10 +207,10 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "comment"), "# A simple comment"),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                new XElement(this.xmlns + "span", new XAttribute("class", "comment"), "# A simple comment"),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
                 "a simple step");
 
             Check.That(expected).IsDeeplyEqualTo(actual);
@@ -242,12 +245,12 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "comment"), "# A simple comment"),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                new XElement(this.xmlns + "span", new XAttribute("class", "comment"), "# A simple comment"),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
                 "a simple step",
-                new XElement(xmlns + "span", new XAttribute("class", "comment"), "# A comment after the last step"));
+                new XElement(this.xmlns + "span", new XAttribute("class", "comment"), "# A comment after the last step"));
 
             Check.That(expected).IsDeeplyEqualTo(actual);
         }
@@ -281,14 +284,14 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
             XElement actual = formatter.Format(step);
 
             var expected = new XElement(
-                xmlns + "li",
+                this.xmlns + "li",
                 new XAttribute("class", "step"),
-                new XElement(xmlns + "span", new XAttribute("class", "comment"),
+                new XElement(this.xmlns + "span", new XAttribute("class", "comment"),
                     "# A first line",
-                    new XElement(xmlns + "br"),
+                    new XElement(this.xmlns + "br"),
                     "# A second line"
                 ),
-                new XElement(xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), ExpectedGivenHtml),
                 "a simple step");
 
             Check.That(expected).IsDeeplyEqualTo(actual);

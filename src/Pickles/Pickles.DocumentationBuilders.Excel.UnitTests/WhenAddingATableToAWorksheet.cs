@@ -20,14 +20,19 @@
 
 using System;
 using System.Collections.Generic;
-using Autofac;
-using ClosedXML.Excel;
-using NFluent;
-using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.Excel;
-using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
+using Autofac;
+
+using ClosedXML.Excel;
+
+using NFluent;
+
+using NUnit.Framework;
+
+using PicklesDoc.Pickles.ObjectModel;
+using PicklesDoc.Pickles.Test;
+
+namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
 {
     [TestFixture]
     public class WhenAddingATableToAWorksheet : BaseFixture

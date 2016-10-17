@@ -19,13 +19,16 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+
 using Autofac;
+
 using NFluent;
+
 using NUnit.Framework;
 
-using PicklesDoc.Pickles.DocumentationBuilders.Html;
+using PicklesDoc.Pickles.Test;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
 {
     [TestFixture]
     public class WhenFormattingMultilineStrings : BaseFixture

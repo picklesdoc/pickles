@@ -20,10 +20,12 @@
 
 using System;
 using System.Linq;
+
 using Autofac;
+
 using TechTalk.SpecFlow;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.AutomationLayer
 {
     [Binding]
     public class Hooks
@@ -44,11 +46,11 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
             var builder = new ContainerBuilder();
             builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
             builder.RegisterModule<PicklesModule>();
-            CurrentScenarioContext.Container = builder.Build();
+            this.CurrentScenarioContext.Container = builder.Build();
 
             if (this.scenarioContext.ScenarioInfo.Tags.Contains("enableExperimentalFeatures"))
             {
-                var configuration = CurrentScenarioContext.Container.Resolve<IConfiguration>();
+                var configuration = this.CurrentScenarioContext.Container.Resolve<IConfiguration>();
                 configuration.EnableExperimentalFeatures();
             }
         }
@@ -56,11 +58,11 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
         [AfterScenario]
         public void AfterScenario()
         {
-            var container = CurrentScenarioContext.Container;
+            var container = this.CurrentScenarioContext.Container;
 
             container?.Dispose();
 
-            CurrentScenarioContext.Container = null;
+            this.CurrentScenarioContext.Container = null;
         }
     }
 }

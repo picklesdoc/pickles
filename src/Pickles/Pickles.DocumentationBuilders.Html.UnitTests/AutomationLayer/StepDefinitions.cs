@@ -20,14 +20,16 @@
 
 using System;
 using System.Xml;
+
 using Autofac;
+
 using NFluent;
 
-using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
+
 using TechTalk.SpecFlow;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.AutomationLayer
 {
     [Binding]
     public class StepDefinitions
@@ -42,7 +44,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
         [Given(@"I have this feature description")]
         public void GivenIHaveThisFeatureDescription(string multilineText)
         {
-            CurrentScenarioContext.Feature = new Feature
+            this.CurrentScenarioContext.Feature = new Feature
             {
                 Name = "a feature",
                 Description = multilineText
@@ -52,7 +54,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
         [Given(@"I have this feature file")]
         public void GivenIHaveThisFeatureFile(string multilineText)
         {
-            CurrentScenarioContext.Feature = new Feature
+            this.CurrentScenarioContext.Feature = new Feature
             {
                 Name = "a feature",
                 Description = multilineText
@@ -62,16 +64,16 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
         [When(@"I generate the documentation")]
         public void WhenIGenerateTheDocumentation()
         {
-            var configuration = CurrentScenarioContext.Container.Resolve<Configuration>();
-            var htmlFeatureFormatter = CurrentScenarioContext.Container.Resolve<HtmlFeatureFormatter>();
+            var configuration = this.CurrentScenarioContext.Container.Resolve<Configuration>();
+            var htmlFeatureFormatter = this.CurrentScenarioContext.Container.Resolve<HtmlFeatureFormatter>();
 
-            CurrentScenarioContext.Html = htmlFeatureFormatter.Format(CurrentScenarioContext.Feature);
+            this.CurrentScenarioContext.Html = htmlFeatureFormatter.Format(this.CurrentScenarioContext.Feature);
         }
 
         [Then(@"the result should be")]
         public void ThenTheResultShouldBe(string multilineText)
         {
-            var actual = CurrentScenarioContext.Html.ToString();
+            var actual = this.CurrentScenarioContext.Html.ToString();
             actual = actual.Replace(" xmlns=\"http://www.w3.org/1999/xhtml\"", string.Empty);
 
             actual = FormatXml(actual);

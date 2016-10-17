@@ -24,9 +24,7 @@ using NFluent;
 
 using NUnit.Framework;
 
-using PicklesDoc.Pickles.DocumentationBuilders.Word;
-
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Word
+namespace PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests
 {
     [TestFixture]
     public class WordDescriptionFormatterTests

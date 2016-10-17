@@ -21,11 +21,12 @@
 using System;
 using System.Collections;
 using System.Xml.Linq;
+
 using Autofac;
 
 using PicklesDoc.Pickles.ObjectModel;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.AutomationLayer
 {
     public class CurrentScenarioContext
     {
@@ -35,9 +36,9 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
         {
             get
             {
-                if (Current.ContainsKey("Feature"))
+                if (this.Current.ContainsKey("Feature"))
                 {
-                    return Current["Feature"] as Feature;
+                    return this.Current["Feature"] as Feature;
                 }
                 else
                 {
@@ -47,7 +48,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
 
             set
             {
-                Current["Feature"] = value;
+                this.Current["Feature"] = value;
             }
         }
 
@@ -57,9 +58,9 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
         {
             get
             {
-                if (Current.ContainsKey("Html"))
+                if (this.Current.ContainsKey("Html"))
                 {
-                    return Current["Html"] as XElement;
+                    return this.Current["Html"] as XElement;
                 }
                 else
                 {
@@ -69,7 +70,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML.AutomationLayer
 
             set
             {
-                Current["Html"] = value;
+                this.Current["Html"] = value;
             }
         }
     }

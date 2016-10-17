@@ -19,12 +19,16 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using ClosedXML.Excel;
-using NFluent;
-using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
+using ClosedXML.Excel;
+
+using NFluent;
+
+using NUnit.Framework;
+
+using PicklesDoc.Pickles.Test;
+
+namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
 {
     [TestFixture]
     public class WhenAddingADocumentStringToAWorksheet : BaseFixture

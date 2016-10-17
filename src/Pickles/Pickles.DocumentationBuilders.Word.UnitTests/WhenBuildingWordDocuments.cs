@@ -21,16 +21,20 @@
 using System;
 using System.IO;
 using System.Linq;
+
 using Autofac;
+
 using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Wordprocessing;
+
 using NUnit.Framework;
+
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.Word;
+using PicklesDoc.Pickles.Test;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Word
+namespace PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests
 {
     [TestFixture]
     public class WhenBuildingWordDocuments : BaseFixture
@@ -45,8 +49,8 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Word
             AddFakeFolderStructures();
 
             Configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
-            features = Container.Resolve<DirectoryTreeCrawler>().Crawl(RootPath);
-            builder = Container.Resolve<WordDocumentationBuilder>();
+            this.features = Container.Resolve<DirectoryTreeCrawler>().Crawl(RootPath);
+            this.builder = Container.Resolve<WordDocumentationBuilder>();
         }
 
         [Test]
@@ -67,7 +71,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Word
                 "b-b-b",
             };
 
-            builder.Build(features);
+            this.builder.Build(this.features);
 
             var outputPath = Path.Combine(Configuration.OutputFolder.FullName, "features.docx");
 

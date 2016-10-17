@@ -19,11 +19,14 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using ClosedXML.Excel;
-using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Excel
+using ClosedXML.Excel;
+
+using NUnit.Framework;
+
+using PicklesDoc.Pickles.Test;
+
+namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
 {
     // [TestFixture]
     public class WhenAddingATableOfContentsToAWorksheet : BaseFixture

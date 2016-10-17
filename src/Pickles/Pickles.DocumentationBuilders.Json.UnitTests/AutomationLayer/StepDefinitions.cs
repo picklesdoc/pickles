@@ -20,15 +20,18 @@
 
 using System;
 using System.IO;
+
 using Autofac;
+
 using NFluent;
+
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.Json;
+using PicklesDoc.Pickles.Test;
 
 using TechTalk.SpecFlow;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.JSON.AutomationLayer
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.AutomationLayer
 {
     [Binding]
     [Scope(Tag = "json")]

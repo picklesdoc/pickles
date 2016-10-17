@@ -18,11 +18,13 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
+
 using NFluent;
 
 using NUnit.Framework;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.HTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
 {
     [TestFixture]
     public class StrikeMarkdownProviderTests
