@@ -102,8 +102,6 @@
     <Compile Include="DescriptionProcessorTests.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordDescriptionFormatterTests.cs" />
-    <Compile Include="DocumentationBuilders\Word\WhenBuildingWordDocuments.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="ObjectModel\Factory.cs" />
     <Compile Include="ObjectModel\Json\CommentToJsonCommentMapperTests.cs" />

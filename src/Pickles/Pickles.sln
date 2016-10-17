@@ -82,6 +82,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Json.UnitTests", "Pickles.DocumentationBuilders.Json.UnitTests\Pickles.DocumentationBuilders.Json.UnitTests.csproj", "{D2432557-EF5A-45A3-A74F-3C59EF08533A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Word.UnitTests", "Pickles.DocumentationBuilders.Word.UnitTests\Pickles.DocumentationBuilders.Word.UnitTests.csproj", "{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -164,6 +166,10 @@ Global
 		{D2432557-EF5A-45A3-A74F-3C59EF08533A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2432557-EF5A-45A3-A74F-3C59EF08533A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2432557-EF5A-45A3-A74F-3C59EF08533A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
