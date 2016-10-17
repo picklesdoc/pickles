@@ -142,7 +142,6 @@
     <Compile Include="ObjectModel\MapperTestsForTag.cs" />
     <Compile Include="ObjectModel\MappingTestsForKeyword.cs" />
     <Compile Include="DirectoryCrawlers\FolderDirectoryTreeNodeTests.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\WhenDoingSomeIntegrationTests.cs" />
     <Compile Include="DocumentationBuilders\HTML\AutomationLayer\CurrentScenarioContext.cs" />
     <Compile Include="DocumentationBuilders\HTML\FormattingAFeature.feature.cs">
       <AutoGen>True</AutoGen>

@@ -74,6 +74,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Dhtml", "Pickles.DocumentationBuilders.Dhtml\Pickles.DocumentationBuilders.Dhtml.csproj", "{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Dhtml.UnitTests", "Pickles.DocumentationBuilders.Dhtml.UnitTests\Pickles.DocumentationBuilders.Dhtml.UnitTests.csproj", "{C40305BD-2BCE-4E43-8B06-20F48ADD6C49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -140,6 +142,10 @@ Global
 		{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C40305BD-2BCE-4E43-8B06-20F48ADD6C49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C40305BD-2BCE-4E43-8B06-20F48ADD6C49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C40305BD-2BCE-4E43-8B06-20F48ADD6C49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C40305BD-2BCE-4E43-8B06-20F48ADD6C49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

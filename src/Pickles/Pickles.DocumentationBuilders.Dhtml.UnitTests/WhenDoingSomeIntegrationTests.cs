@@ -18,12 +18,15 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
+
 using NFluent;
+
 using NUnit.Framework;
 
-using PicklesDoc.Pickles.DocumentationBuilders.Dhtml;
+using PicklesDoc.Pickles.Test;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.DHTML
+namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests
 {
     [TestFixture]
     public class WhenDoingSomeIntegrationTests : BaseFixture
