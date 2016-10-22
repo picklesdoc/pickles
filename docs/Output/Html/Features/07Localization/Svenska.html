@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"[]>
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <title>FeatureContext features</title>
+    <title>Svenska - Summering</title>
     <link rel="stylesheet" href="../../css/master.css" type="text/css" />
     <link rel="stylesheet" href="../../css/print.css" type="text/css" media="print" />
     <script src="../../js/jquery.js" type="text/javascript"></script>
@@ -82,11 +82,11 @@ $(document).ready(function() {
               </li>
               <li>
                 <div class="directory">
-                  <a href="./index.html">032 Feature Context</a>
+                  <a href="../032FeatureContext/index.html">032 Feature Context</a>
                 </div>
                 <ul class="features">
                   <li class="file">
-                    <span class="current">FeatureContext features</span>
+                    <a href="../032FeatureContext/FeatureContextFeatures.html">FeatureContext features</a>
                   </li>
                 </ul>
               </li>
@@ -132,14 +132,14 @@ $(document).ready(function() {
               </li>
               <li>
                 <div class="directory">
-                  <a href="../07Localization/index.html">07 Localization</a>
+                  <a href="./index.html">07 Localization</a>
                 </div>
                 <ul class="features">
                   <li class="file">
-                    <a href="../07Localization/Svenska.html">Svenska - Summering</a>
+                    <span class="current">Svenska - Summering</span>
                   </li>
                   <li class="file">
-                    <a href="../07Localization/Vlaams.html">Test de Cultuur in het Vlaams</a>
+                    <a href="Vlaams.html">Test de Cultuur in het Vlaams</a>
                   </li>
                 </ul>
               </li>
@@ -252,43 +252,28 @@ $(document).ready(function() {
         </ul>
       </div>
       <div id="feature">
-        <h1>FeatureContext features</h1>
-        <p class="tags">Tags: <span>@andThisToo</span>, <span>@showUpInScenarioInfo</span></p>
+        <h1>Svenska - Summering</h1>
         <div class="description">
-          <p>In order to show how to use FeatureContext<br />As a SpecFlow evangelist<br />I want to write some simple scenarios with data in FeatureContext</p>
+          <p>För att slippa att göra dumma fel<br />Som räknare<br />Vill jag kunna lägga summera</p>
         </div>
         <ul id="scenarios">
           <li class="scenario">
-            <div class="scenario-heading" id="store-and-retrive-person-marcus-from-featurecontext-current">
-              <h2>Store and retrive Person Marcus from FeatureContext Current</h2>
-              <p class="tags">Tags: <span>@andThisToo</span>, <span>@showUpInScenarioInfo</span></p>
+            <div class="scenario-heading" id="summera-5-och-7-ska-vara-12">
+              <h2>Summera 5 och 7 ska vara 12</h2>
             </div>
             <div class="steps">
               <ul>
                 <li class="step">
-                  <span class="keyword">When </span>I store a person called Marcus in the current FeatureContext</li>
+                  <span class="keyword">Givet </span>att jag har knappat in 5</li>
                 <li class="step">
-                  <span class="keyword">Then </span>a person called Marcus can easily be retrieved from the current FeatureContext</li>
+                  <span class="keyword">Och </span>att jag har knappat in 7</li>
+                <li class="step">
+                  <span class="keyword">När </span>jag summerar</li>
+                <li class="step">
+                  <span class="keyword">Så </span>ska resultatet vara 12</li>
               </ul>
             </div>
-            <a class="scenario-link" href="javascript:showImageLink('store-and-retrive-person-marcus-from-featurecontext-current')" title="Copy scenario link to clipboard.">
-              <i class="icon-link"> </i>
-            </a>
-          </li>
-          <li class="scenario">
-            <div class="scenario-heading" id="showing-information-of-the-feature">
-              <h2>Showing information of the feature</h2>
-              <p class="tags">Tags: <span>@andThisToo</span>, <span>@showUpInScenarioInfo</span></p>
-            </div>
-            <div class="steps">
-              <ul>
-                <li class="step">
-                  <span class="keyword">When </span>I execute any scenario in the feature</li>
-                <li class="step">
-                  <span class="keyword">Then </span>the FeatureInfo contains the following information<div class="table_container"><table class="datatable"><thead><tr><th>Field</th><th>Value</th><th> </th></tr></thead><tbody><tr><td>Tags</td><td>showUpInScenarioInfo, andThisToo</td></tr><tr><td>Title</td><td>FeatureContext features</td></tr><tr><td>TargetLanguage</td><td>CSharp</td></tr><tr><td>Language</td><td>en-US</td></tr><tr><td>Description</td><td>In order to</td></tr></tbody></table></div></li>
-              </ul>
-            </div>
-            <a class="scenario-link" href="javascript:showImageLink('showing-information-of-the-feature')" title="Copy scenario link to clipboard.">
+            <a class="scenario-link" href="javascript:showImageLink('summera-5-och-7-ska-vara-12')" title="Copy scenario link to clipboard.">
               <i class="icon-link"> </i>
             </a>
           </li>
