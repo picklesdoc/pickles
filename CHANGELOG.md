@@ -14,6 +14,13 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.10.0] - 2016-10-22
+
+### Changed
+
+- Enable Pickles to with cultures in the language setting ([308](https://github.com/picklesdoc/pickles/pull/308)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Improve Markdown Parsing to Reduce Unintended Block Quotes ([302](https://github.com/picklesdoc/pickles/pull/302)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
 ## [2.9.0] - 2016-10-07
 
 ### Changed
