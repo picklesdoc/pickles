@@ -37,8 +37,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.IO.Abstractions, Version=2.0.0.137, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Abstractions.2.0.0.137\lib\net40\System.IO.Abstractions.dll</HintPath>
+    <Reference Include="System.IO.Abstractions, Version=2.0.0.138, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.0.0.138\lib\net40\System.IO.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml" />
