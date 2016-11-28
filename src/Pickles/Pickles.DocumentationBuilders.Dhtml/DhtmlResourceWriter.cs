@@ -37,6 +37,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 
         public void WriteTo(string folder)
         {
+            if (!this.FileSystem.Directory.Exists(folder))
+            {
+                this.FileSystem.Directory.CreateDirectory(folder);
+            }
+
             if (this.configuration.ShouldIncludeExperimentalFeatures)
             {
                 string mathScript = @"    <script type=""text/x-mathjax-config"">
