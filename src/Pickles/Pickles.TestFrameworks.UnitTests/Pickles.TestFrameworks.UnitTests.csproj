@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFileWithMissingElements.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFile.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFileWithIndividualResults.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromRubyResultsFileWithIndividualResults.cs" />
@@ -168,6 +169,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MsTest\resuls-example-mstest-emptyexamplevalues.trx" />
     <EmbeddedResource Include="MsTest\results-example-mstest-ignoredexample.trx" />
+    <EmbeddedResource Include="CucumberJson\results-example-cucumberjs-missing-elements-array.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
