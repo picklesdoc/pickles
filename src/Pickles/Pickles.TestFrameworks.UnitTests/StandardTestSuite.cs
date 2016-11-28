@@ -264,7 +264,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             var feature = new Feature { Name = "Scenarios With Special Characters" };
 
             var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)", Feature = feature };
-            
+
             var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "pass_1" });
 
             Check.That(actualResult).IsEqualTo(TestResult.Passed);
