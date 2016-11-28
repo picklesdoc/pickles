@@ -44,10 +44,10 @@
                                             </xs:complexType>
                                         </xs:element>
                                     </xs:sequence>
-                                    <xs:attribute name="total" type="xs:unsignedByte" use="required" />
-                                    <xs:attribute name="passed" type="xs:unsignedByte" use="required" />
-                                    <xs:attribute name="failed" type="xs:unsignedByte" use="required" />
-                                    <xs:attribute name="skipped" type="xs:unsignedByte" use="required" />
+                                    <xs:attribute name="total" type="xs:int" use="required" />
+                                    <xs:attribute name="passed" type="xs:int" use="required" />
+                                    <xs:attribute name="failed" type="xs:int" use="required" />
+                                    <xs:attribute name="skipped" type="xs:int" use="required" />
                                     <xs:attribute name="name" type="xs:string" use="required" />
                                     <xs:attribute name="time" type="xs:decimal" use="required" />
                                 </xs:complexType>
@@ -59,12 +59,12 @@
                         <xs:attribute name="run-date" type="xs:date" use="required" />
                         <xs:attribute name="run-time" type="xs:time" use="required" />
                         <xs:attribute name="config-file" type="xs:string" use="required" />
-                        <xs:attribute name="total" type="xs:unsignedByte" use="required" />
-                        <xs:attribute name="passed" type="xs:unsignedByte" use="required" />
-                        <xs:attribute name="failed" type="xs:unsignedByte" use="required" />
-                        <xs:attribute name="skipped" type="xs:unsignedByte" use="required" />
+                        <xs:attribute name="total" type="xs:int" use="required" />
+                        <xs:attribute name="passed" type="xs:int" use="required" />
+                        <xs:attribute name="failed" type="xs:int" use="required" />
+                        <xs:attribute name="skipped" type="xs:int" use="required" />
                         <xs:attribute name="time" type="xs:decimal" use="required" />
-                        <xs:attribute name="errors" type="xs:unsignedByte" use="required" />
+                        <xs:attribute name="errors" type="xs:int" use="required" />
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
