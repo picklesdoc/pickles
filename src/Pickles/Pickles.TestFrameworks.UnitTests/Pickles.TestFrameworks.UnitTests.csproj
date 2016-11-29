@@ -61,12 +61,15 @@
       <HintPath>..\packages\System.IO.Abstractions.TestingHelpers.2.0.0.138\lib\net40\System.IO.Abstractions.TestingHelpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFileWithMissingElements.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFile.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromJSResultsFileWithIndividualResults.cs" />
     <Compile Include="CucumberJson\WhenParsingCucumberJsonFromRubyResultsFileWithIndividualResults.cs" />
+    <Compile Include="MsTest\MsTestElementExtensionsTests.cs" />
     <Compile Include="MsTest\WhenParsingMsTestResultsFileWithIgnoredExample.cs" />
     <Compile Include="MsTest\WhenParsingMsTestResultsFileWithEmptyExampleValues.cs" />
     <Compile Include="NUnit\NUnit3\WhenParsingNunit3ResultsFileForNunit2Tests.cs" />
