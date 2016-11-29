@@ -1,0 +1,18 @@
+﻿<SolutionConfiguration>
+  <Settings>
+    <AllowParallelTestExecution>True</AllowParallelTestExecution>
+    <MetricsExclusionList>
+      <Value>Pickles.Test\Pickles.Test.csproj</Value>
+      <Value>Pickles.TestFrameworks.UnitTests\Pickles.TestFrameworks.UnitTests.csproj</Value>
+    </MetricsExclusionList>
+    <SolutionConfigured>True</SolutionConfigured>
+  </Settings>
+  <EngineModes>
+    <EngineMode>
+      <Name>Run impacted tests automatically, others manually (experimental!)</Name>
+      <Settings>
+        <TestsToExecuteAutomatically>IsImpacted</TestsToExecuteAutomatically>
+      </Settings>
+    </EngineMode>
+  </EngineModes>
+</SolutionConfiguration>
