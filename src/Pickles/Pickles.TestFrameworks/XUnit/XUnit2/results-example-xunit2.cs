@@ -62,17 +62,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         private string configfileField;
 
-        private byte totalField;
+        private int totalField;
 
-        private byte passedField;
+        private int passedField;
 
-        private byte failedField;
+        private int failedField;
 
-        private byte skippedField;
+        private int skippedField;
 
         private decimal timeField;
 
-        private byte errors1Field;
+        private int errors1Field;
 
         /// <remarks/>
         public object errors {
@@ -163,7 +163,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte total {
+        public int total {
             get {
                 return this.totalField;
             }
@@ -174,7 +174,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte passed {
+        public int passed {
             get {
                 return this.passedField;
             }
@@ -185,7 +185,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte failed {
+        public int failed {
             get {
                 return this.failedField;
             }
@@ -196,7 +196,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte skipped {
+        public int skipped {
             get {
                 return this.skippedField;
             }
@@ -218,7 +218,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute("errors")]
-        public byte errors1 {
+        public int errors1 {
             get {
                 return this.errors1Field;
             }
@@ -238,13 +238,13 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         private assembliesAssemblyCollectionTest[] testField;
 
-        private byte totalField;
+        private int totalField;
 
-        private byte passedField;
+        private int passedField;
 
-        private byte failedField;
+        private int failedField;
 
-        private byte skippedField;
+        private int skippedField;
 
         private string nameField;
 
@@ -263,7 +263,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte total {
+        public int total {
             get {
                 return this.totalField;
             }
@@ -274,7 +274,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte passed {
+        public int passed {
             get {
                 return this.passedField;
             }
@@ -285,7 +285,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte failed {
+        public int failed {
             get {
                 return this.failedField;
             }
@@ -296,7 +296,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2 {
 
         /// <remarks/>
         [XmlAttribute()]
-        public byte skipped {
+        public int skipped {
             get {
                 return this.skippedField;
             }
