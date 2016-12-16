@@ -46,6 +46,9 @@ namespace PicklesDoc.Pickles.Test
             "      --lr, --link-results-file=VALUE" + "{0}" +
             "                             the path to the linked test results file (can be " + "{0}" +
             "                               a semicolon-separated list of files)" + "{0}" +
+            "      --ld, --link-results-directory=VALUE" + "{0}" +
+            "                             directory to start scanning recursively for " + "{0}" +
+            "                               results files" + "{0}" +
             "      --sn, --system-under-test-name=VALUE" + "{0}" +
             "                             the name of the system under test" + "{0}" +
             "      --sv, --system-under-test-version=VALUE" + "{0}" +
