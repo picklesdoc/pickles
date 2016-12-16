@@ -73,6 +73,7 @@
     <Compile Include="MsTest\WhenParsingMsTestResultsFileWithIgnoredExample.cs" />
     <Compile Include="MsTest\WhenParsingMsTestResultsFileWithEmptyExampleValues.cs" />
     <Compile Include="NUnit\NUnit3\WhenParsingNunit3ResultsFileForNunit2Tests.cs" />
+    <Compile Include="VsTest\WhenParsingMsTestResultsFileWithIgnoredExample.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFile.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFileWithIndividualResults.cs" />
     <Compile Include="VsTest\WhenParsingVsTestResultsFileWithMissingTraits.cs" />
@@ -174,6 +175,9 @@
     <EmbeddedResource Include="MsTest\results-example-mstest-ignoredexample.trx" />
     <EmbeddedResource Include="CucumberJson\results-example-cucumberjs-missing-elements-array.json" />
     <None Include="packages.config" />
+    <EmbeddedResource Include="VsTest\results-example-vstest-ignoredexample.trx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
