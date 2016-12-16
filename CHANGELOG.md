@@ -14,6 +14,12 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [UNRELEASED]
+
+### Fixed
+
+- Enable Pickles to deal with ignored scenario examples in VsTest Result Provider ([340](https://github.com/picklesdoc/pickles/pull/340)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
 ## [2.11.0] - 2016-12-05
 
 ### Changed
