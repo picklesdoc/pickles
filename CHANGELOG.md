@@ -20,6 +20,10 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 - Enable Pickles to deal with ignored scenario examples in VsTest Result Provider ([340](https://github.com/picklesdoc/pickles/pull/340)) (by [@dirkrombauts](https://github.com/dirkrombauts))
 
+- Enable xUnit Test Result Provider to Deal with more than 255 Scenarios in a File ([405](https://github.com/picklesdoc/pickles/pull/405)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
+  ​
+
 ## [2.11.0] - 2016-12-05
 
 ### Changed
