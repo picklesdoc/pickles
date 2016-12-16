@@ -43,6 +43,9 @@ namespace PicklesDoc.Pickles
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
+        public const string HelpTestResultsDir =
+            "directory to start scanning recursively for results files";
+
 
         private readonly IFileSystem fileSystem;
         private readonly OptionSet options;
@@ -54,6 +57,7 @@ namespace PicklesDoc.Pickles
         private string systemUnderTestName;
         private string systemUnderTestVersion;
         private string testResultsFile;
+        private string testResultsDirectory;
         private string testResultsFormat;
         private bool versionRequested;
         private bool includeExperimentalFeatures;
@@ -68,6 +72,7 @@ namespace PicklesDoc.Pickles
                 { "o|output-directory=", HelpOutputDir, v => this.outputDirectory = v },
                 { "trfmt|test-results-format=", HelpTestResultsFormat, v => this.testResultsFormat = v },
                 { "lr|link-results-file=", HelpTestResultsFile, v => this.testResultsFile = v },
+                { "ld|link-results-directory=", HelpTestResultsDir, v => this.testResultsDirectory = v },
                 { "sn|system-under-test-name=", HelpSutName, v => this.systemUnderTestName = v },
                 { "sv|system-under-test-version=", HelpSutVersion, v => this.systemUnderTestVersion = v },
                 { "l|language=", HelpLanguageFeatureFiles, v => this.language = v },
@@ -120,6 +125,13 @@ namespace PicklesDoc.Pickles
                 var files = this.testResultsFile.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
 
                 configuration.AddTestResultFiles(files.Select(f => this.fileSystem.FileInfo.FromFileName(f)));
+            }
+
+            if (!string.IsNullOrEmpty(this.testResultsDirectory))
+            {
+                configuration.AddTestResultFiles(
+                    this.fileSystem.DirectoryInfo.FromDirectoryName(
+                        this.testResultsDirectory).EnumerateFiles("*.json", System.IO.SearchOption.AllDirectories));
             }
 
             if (!string.IsNullOrEmpty(this.systemUnderTestName))

@@ -39,7 +39,23 @@ namespace PicklesDoc.Pickles
             if (configuration.HasTestResults)
             {
                 writeToLog($"Test Result Format        : {configuration.TestResultsFormat}");
-                writeToLog($"Test Result File          : {configuration.TestResultsFile.FullName}");
+                int result = 0;
+                string fileList = "";
+                using (var enumerator = configuration.TestResultsFiles.GetEnumerator())
+                {
+                    while (enumerator.MoveNext())
+                    {
+                        fileList += enumerator.Current.FullName + "; ";
+                        result++;
+                    } 
+                }
+                if (result == 1) {
+                    writeToLog($"Test Result File          : {configuration.TestResultsFile.FullName}");
+                }
+                else
+                {
+                    writeToLog($"Test Result Files         : {fileList.Substring(0, fileList.Length - 2)}");
+                }
             }
         }
     }
