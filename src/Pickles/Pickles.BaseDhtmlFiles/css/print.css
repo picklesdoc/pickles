@@ -1,1 +1,1 @@
-#FolderNav, #TopNav { display: none; }
+#FolderNav, #TopNav { display: none !important; }
