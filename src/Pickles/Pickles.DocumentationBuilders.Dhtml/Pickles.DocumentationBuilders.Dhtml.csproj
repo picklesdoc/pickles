@@ -62,132 +62,154 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\css\bootstrap.min.css">
-      <Link>Resources\css\bootstrap.min.css</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\css\bootstrap.min.css">
+      <Link>basedhtmlfiles\css\bootstrap.min.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\css\print.css">
-      <Link>Resources\css\print.css</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\css\print.css">
+      <Link>basedhtmlfiles\css\print.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\css\styles.css">
-      <Link>Resources\css\styles.css</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\css\styles.css">
+      <Link>basedhtmlfiles\css\styles.css</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\img\glyphicons-halflings-white.png">
-      <Link>Resources\img\glyphicons-halflings-white.png</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\img\glyphicons-halflings-white.png">
+      <Link>basedhtmlfiles\img\glyphicons-halflings-white.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\img\glyphicons-halflings.png">
-      <Link>Resources\img\glyphicons-halflings.png</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\img\glyphicons-halflings.png">
+      <Link>basedhtmlfiles\img\glyphicons-halflings.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\img\link.png">
-      <Link>Resources\img\link.png</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\img\link.png">
+      <Link>basedhtmlfiles\img\link.png</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\bootstrap.min.js">
-      <Link>Resources\js\bootstrap.min.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\bootstrap.min.js">
+      <Link>basedhtmlfiles\js\bootstrap.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\Chart.min.js">
-      <Link>Resources\js\Chart.min.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\Chart.min.js">
+      <Link>basedhtmlfiles\js\Chart.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\Chart.StackedBar.js">
-      <Link>Resources\js\Chart.StackedBar.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\Chart.StackedBar.js">
+      <Link>basedhtmlfiles\js\Chart.StackedBar.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\featureSearch.js">
-      <Link>Resources\js\featureSearch.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\featureSearch.js">
+      <Link>basedhtmlfiles\js\featureSearch.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\featuresModel.js">
-      <Link>Resources\js\featuresModel.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\featuresModel.js">
+      <Link>basedhtmlfiles\js\featuresModel.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\heirarchyBuilder.js">
-      <Link>Resources\js\heirarchyBuilder.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\heirarchyBuilder.js">
+      <Link>basedhtmlfiles\js\heirarchyBuilder.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\html5.js">
-      <Link>Resources\js\html5.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\html5.js">
+      <Link>basedhtmlfiles\js\html5.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\jquery-1.8.3.min.js">
-      <Link>Resources\js\jquery-1.8.3.min.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\jquery-1.8.3.min.js">
+      <Link>basedhtmlfiles\js\jquery-1.8.3.min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\jquery.highlight-4.closure.js">
-      <Link>Resources\js\jquery.highlight-4.closure.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\jquery.highlight-4.closure.js">
+      <Link>basedhtmlfiles\js\jquery.highlight-4.closure.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\knockout-3.4.0.js">
-      <Link>Resources\js\knockout-3.4.0.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\knockout-3.4.0.js">
+      <Link>basedhtmlfiles\js\knockout-3.4.0.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\knockout.mapping-latest.js">
-      <Link>Resources\js\knockout.mapping-latest.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\knockout.mapping-latest.js">
+      <Link>basedhtmlfiles\js\knockout.mapping-latest.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\logger.js">
-      <Link>Resources\js\logger.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\logger.js">
+      <Link>basedhtmlfiles\js\logger.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\Markdown.Converter.js">
-      <Link>Resources\js\Markdown.Converter.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\Markdown.Converter.js">
+      <Link>basedhtmlfiles\js\Markdown.Converter.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\Markdown.Extra.js">
-      <Link>Resources\js\Markdown.Extra.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\Markdown.Extra.js">
+      <Link>basedhtmlfiles\js\Markdown.Extra.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\picklesOverview.js">
-      <Link>Resources\js\picklesOverview.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\picklesOverview.js">
+      <Link>basedhtmlfiles\js\picklesOverview.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\stringFormatting.js">
-      <Link>Resources\js\stringFormatting.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\stringFormatting.js">
+      <Link>basedhtmlfiles\js\stringFormatting.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\typeaheadList.js">
-      <Link>Resources\js\typeaheadList.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\typeaheadList.js">
+      <Link>basedhtmlfiles\js\typeaheadList.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\pickles.basedhtmlfiles\js\underscore-min.js">
-      <Link>Resources\js\underscore-min.js</Link>
-    </EmbeddedResource>
+    <None Include="..\pickles.basedhtmlfiles\js\underscore-min.js">
+      <Link>basedhtmlfiles\js\underscore-min.js</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\Index.html">
-      <Link>Resources\Index.html</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\pickledFeatures.js">
-      <Link>Resources\pickledFeatures.js</Link>
-    </EmbeddedResource>
+    <None Include="..\Pickles.BaseDhtmlFiles\Index.html">
+      <Link>basedhtmlfiles\Index.html</Link>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Html\Pickles.DocumentationBuilders.Html.csproj">

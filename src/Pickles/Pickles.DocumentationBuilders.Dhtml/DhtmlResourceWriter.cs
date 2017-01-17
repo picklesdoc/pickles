@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using System.IO.Abstractions;
 
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
@@ -27,12 +28,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 {
     public class DhtmlResourceWriter : ResourceWriter
     {
+        private const string ExperimentalPlaceholder = "<!-- #### EMBED EXPERIMENTALS #### -->";
+
+        private readonly string baseDirectory;
         private readonly IConfiguration configuration;
 
         public DhtmlResourceWriter(IFileSystem fileSystem, IConfiguration configuration)
             : base(fileSystem, "PicklesDoc.Pickles.DocumentationBuilders.Dhtml.Resources.")
         {
             this.configuration = configuration;
+            this.baseDirectory = this.FileSystem.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "basedhtmlfiles");
         }
 
         public void WriteTo(string folder)
@@ -42,63 +47,53 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
                 this.FileSystem.Directory.CreateDirectory(folder);
             }
 
+            var indexText = this.FileSystem.File.ReadAllText(this.FileSystem.Path.Combine(this.baseDirectory, "index.html"));
+
             if (this.configuration.ShouldIncludeExperimentalFeatures)
             {
-                string mathScript = @"    <script type=""text/x-mathjax-config"">
-        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(','\\)']]}
-});
-    </script>
-    <script type=""text/javascript"" src=""https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"">
-    </script>
-";
+                string mathScript = @"    
+                    <script type=""text/x-mathjax-config"">
+                        MathJax.Hub.Config({ tex2jax: { inlineMath: [['$', '$'], ['\\(','\\)']]} });
+                    </script>
+                    <script type=""text/javascript"" src=""https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML""></script>
+                    ";
 
-                this.WriteTextFile(folder, "Index.html", "<!-- #### EMBED EXPERIMENTALS #### -->", mathScript);
-            }
+                indexText = indexText.Replace(ExperimentalPlaceholder, mathScript);
+            } 
             else
             {
-                this.WriteTextFile(folder, "Index.html", "<!-- #### EMBED EXPERIMENTALS #### -->", "");
+                indexText = indexText.Replace(ExperimentalPlaceholder, string.Empty);
             }
-            this.WriteTextFile(folder, "pickledFeatures.js");
+
+            this.FileSystem.File.WriteAllText(this.FileSystem.Path.Combine(folder, "index.html"), indexText);
 
             string cssFolder = this.FileSystem.Path.Combine(folder, "css");
             this.EnsureFolder(cssFolder);
-            this.WriteStyleSheet(cssFolder, "bootstrap.min.css");
-            this.WriteStyleSheet(cssFolder, "print.css");
-            this.WriteStyleSheet(cssFolder, "styles.css");
+            this.CopyFolder(this.FileSystem.Path.Combine(this.baseDirectory, "css"), cssFolder);
 
             string imagesFolder = this.FileSystem.Path.Combine(folder, "img");
             this.EnsureFolder(imagesFolder);
-            this.WriteImage(imagesFolder, "glyphicons-halflings-white.png");
-            this.WriteImage(imagesFolder, "glyphicons-halflings.png");
-            this.WriteImage(imagesFolder, "link.png");
+            this.CopyFolder(this.FileSystem.Path.Combine(this.baseDirectory, "img"), imagesFolder);
 
             string scriptsFolder = this.FileSystem.Path.Combine(folder, "js");
             this.EnsureFolder(scriptsFolder);
-            this.WriteScript(scriptsFolder, "bootstrap.min.js");
-            this.WriteScript(scriptsFolder, "featureSearch.js");
-            this.WriteScript(scriptsFolder, "featuresModel.js");
-            this.WriteScript(scriptsFolder, "heirarchyBuilder.js");
-            this.WriteScript(scriptsFolder, "html5.js");
-            this.WriteScript(scriptsFolder, "jquery-1.8.3.min.js");
-            this.WriteScript(scriptsFolder, "jquery.highlight-4.closure.js");
-            this.WriteScript(scriptsFolder, "knockout-3.4.0.js");
-            this.WriteScript(scriptsFolder, "knockout.mapping-latest.js");
-            this.WriteScript(scriptsFolder, "logger.js");
-            this.WriteScript(scriptsFolder, "Markdown.Converter.js");
-            this.WriteScript(scriptsFolder, "Markdown.Extra.js");
-            this.WriteScript(scriptsFolder, "stringFormatting.js");
-            this.WriteScript(scriptsFolder, "typeaheadList.js");
-            this.WriteScript(scriptsFolder, "underscore-min.js");
-            this.WriteScript(scriptsFolder, "Chart.min.js");
-            this.WriteScript(scriptsFolder, "Chart.StackedBar.js");
-            this.WriteScript(scriptsFolder, "picklesOverview.js");
+            this.CopyFolder(this.FileSystem.Path.Combine(this.baseDirectory, "js"), scriptsFolder);
         }
 
-        private void EnsureFolder(string cssFolder)
+        private void CopyFolder(string sourceFolder, string destFolder)
         {
-            if (!this.FileSystem.Directory.Exists(cssFolder))
+            foreach (var file in Directory.EnumerateFiles(sourceFolder, "*.*", SearchOption.TopDirectoryOnly))
             {
-                this.FileSystem.Directory.CreateDirectory(cssFolder);
+                var fileInfo = new FileInfo(file);
+                File.Copy(file, this.FileSystem.Path.Combine(destFolder, fileInfo.Name), true);
+            }
+        }
+
+        private void EnsureFolder(string folder)
+        {
+            if (!this.FileSystem.Directory.Exists(folder))
+            {
+                this.FileSystem.Directory.CreateDirectory(folder);
             }
         }
     }
