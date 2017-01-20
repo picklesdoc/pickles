@@ -36,45 +36,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
 
 	public class CucumberDocumentationBuilder : IDocumentationBuilder
 	{
-		#region Private Constants
 		public const string CucumberFileName = @"cucumberResult.json";
-		#endregion
 
-		#region Private Fields
 		private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType?.Name);
 		private readonly IConfiguration configuration;
 		private readonly IFileSystem fileSystem;
-		#endregion
 
-		#region Public Properties
-		/// <summary>
-		/// Gets the output file path.
-		/// </summary>
-		/// <value>
-		/// The output file path.
-		/// </value>
+
 		public string OutputFilePath => this.fileSystem.Path.Combine(this.configuration.OutputFolder.FullName, CucumberFileName);
-		#endregion
 
-		#region Constructor
-		/// <summary>
-		/// Initializes a new instance of the <see cref="CucumberDocumentationBuilder" /> class.
-		/// </summary>
-		/// <param name="configuration">The configuration.</param>
-		/// <param name="fileSystem">The file system.</param>
 		public CucumberDocumentationBuilder(IConfiguration configuration, IFileSystem fileSystem)
 		{
 			this.configuration = configuration;
 			this.fileSystem = fileSystem;
 		}
-		#endregion
 
-		#region IDocumentationBuilder Members
-
-		/// <summary>
-		/// Builds the specified features.
-		/// </summary>
-		/// <param name="features">The features.</param>
 		public void Build(GeneralTree<INode> features)
 		{
 			if (Log.IsInfoEnabled)
@@ -99,14 +75,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
 			this.CreateFile(this.OutputFilePath, this.GenerateJson(featuresToFormat));
 		}
 
-		#endregion
-
-		#region Private Methods
-		/// <summary>
-		/// Generates the json.
-		/// </summary>
-		/// <param name="features">The features.</param>
-		/// <returns></returns>
 		private string GenerateJson(List<Feature> features)
 		{
 			var toOutPut = features.Select(f => new
@@ -150,11 +118,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
 			return JsonConvert.SerializeObject(toOutPut, Formatting.Indented, settings);
 		}
 
-		/// <summary>
-		/// Creates the file.
-		/// </summary>
-		/// <param name="outputFolderName">Name of the output folder.</param>
-		/// <param name="jsonToWrite">The json to write.</param>
 		private void CreateFile(string outputFolderName, string jsonToWrite)
 		{
 			using (StreamWriter writer = this.fileSystem.File.CreateText(outputFolderName))
@@ -163,6 +126,5 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
 				writer.Close();
 			}
 		}
-		#endregion
 	}
 }

@@ -99,12 +99,18 @@
     <Compile Include="BaseFixture.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
+    <Compile Include="DocumentationBuilders\Cucumber\FormattingAFeature.feature.cs">
+      <DependentUpon>FormattingAFeature.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="DocumentationBuilders\HTML\FormattingAFeatureUsingStrike.feature.cs">
       <DependentUpon>FormattingAFeatureUsingStrike.feature</DependentUpon>
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="DocumentationBuilders\HTML\StrikeMarkdownProviderTests.cs" />
+    <Compile Include="DocumentationBuilders\Cucumber\AutomationLayer\StepDefinitions.cs" />
     <Compile Include="DocumentationBuilders\JSON\AutomationLayer\StepDefinitions.cs" />
     <Compile Include="DocumentationBuilders\JSON\FormattingAFeature.feature.cs">
       <AutoGen>True</AutoGen>
@@ -208,6 +214,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="DocumentationBuilders\Cucumber\FormattingAFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>FormattingAFeature.feature.cs</LastGenOutput>
+    </None>
     <None Include="DocumentationBuilders\HTML\FormattingAFeatureUsingStrike.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>FormattingAFeatureUsingStrike.feature.cs</LastGenOutput>
