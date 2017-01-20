@@ -24,10 +24,10 @@ using System.Linq;
 using Autofac;
 using Newtonsoft.Json.Linq;
 using NFluent;
-using NGenerics.DataStructures.Trees;
 using NUnit.Framework;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
 using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.Test.Helpers;
 using PicklesDoc.Pickles.TestFrameworks;
@@ -59,7 +59,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
             var resultFile = RetrieveContentOfFileFromResources(ResourcePrefix + "JSON.results-example-failing-and-pasing-mstest.trx");
             FileSystem.AddFile(TestResultFilePath, resultFile);
 
-            GeneralTree<INode> features = Container.Resolve<DirectoryTreeCrawler>().Crawl(RootPath);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(RootPath);
 
             var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectoryName);
             if (!outputDirectory.Exists)

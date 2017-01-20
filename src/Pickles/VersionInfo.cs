@@ -8,11 +8,17 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademarkAttribute("")]
 [assembly: AssemblyCultureAttribute("")]
 [assembly: ComVisibleAttribute(false)]
-[assembly: AssemblyVersionAttribute("2.8.0")]
-[assembly: AssemblyFileVersionAttribute("2.8.0")]
+[assembly: AssemblyVersionAttribute("2.11.1")]
+[assembly: AssemblyFileVersionAttribute("2.11.1")]
 namespace System {
     internal static class AssemblyVersionInformation {
-        internal const string Version = "2.8.0";
-        internal const string InformationalVersion = "2.8.0";
+        internal const System.String AssemblyProduct = "Pickles";
+        internal const System.String AssemblyCompany = "Pickles";
+        internal const System.String AssemblyCopyright = "Copyright (c) Jeffrey Cameron 2010-2012, PicklesDoc 2012-present";
+        internal const System.String AssemblyTrademark = "";
+        internal const System.String AssemblyCulture = "";
+        internal const System.Boolean ComVisible = false;
+        internal const System.String AssemblyVersion = "2.11.1";
+        internal const System.String AssemblyFileVersion = "2.11.1";
     }
 }

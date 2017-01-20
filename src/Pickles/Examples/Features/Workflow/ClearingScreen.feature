@@ -1,6 +1,6 @@
 ﻿Feature: Clearing Screen
-	In order to restart a new set of calculations
-	As a math idiot
+	In order to restart a new set of calculations  
+	As a math idiot  
 	I want to be able to clear the screen
 
 	@workflow @slow

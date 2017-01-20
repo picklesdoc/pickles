@@ -23,7 +23,7 @@ using System;
 using Autofac;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 
 namespace PicklesDoc.Pickles.Test.Formatters
 {

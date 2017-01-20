@@ -57,9 +57,9 @@ Egenskap: Test egenskap
 
             Check.That(feature).IsNotNull();
             Check.That(feature.Name).IsEqualTo("Test egenskap");
-            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"  Som svensk användare
-  Vill jag skriva mina krav på svenska
-  Så att beställaren kan förstå dem".ComparisonNormalize());
+            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"Som svensk användare
+Vill jag skriva mina krav på svenska
+Så att beställaren kan förstå dem".ComparisonNormalize());
             Check.That(feature.FeatureElements.Count).IsEqualTo(1);
             Check.That(feature.Tags.Count).IsEqualTo(0);
 
@@ -112,9 +112,9 @@ Egenskap: Test egenskap
 
             Check.That(feature).IsNotNull();
             Check.That(feature.Name).IsEqualTo("Test egenskap");
-            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"  Som svensk användare
-  Vill jag skriva mina krav på svenska
-  Så att beställaren kan förstå dem".ComparisonNormalize());
+            Check.That(feature.Description.ComparisonNormalize()).IsEqualTo(@"Som svensk användare
+Vill jag skriva mina krav på svenska
+Så att beställaren kan förstå dem".ComparisonNormalize());
             Check.That(feature.FeatureElements.Count).IsEqualTo(1);
             Check.That(feature.Tags.Count).IsEqualTo(0);
 
@@ -141,6 +141,25 @@ Egenskap: Test egenskap
             Check.That(thenStep.Name).IsEqualTo("skall jag se att det inträffat");
             Check.That(thenStep.DocStringArgument).IsNull();
             Check.That(thenStep.TableArgument).IsNull();
+        }
+        [Test]
+        public void WhenIndicatingTheLanguageAndCultureInTheFeature_ThenCanParseTheFeature()
+        {
+            string featureText =
+       @"# language: nl-BE
+Functionaliteit: Test de Cultuur
+
+Scenario: Het Scenario
+    Stel dat ik 50 ingeef
+    En dat ik 70 ingeef
+    Als ik plus druk
+    Dan moet het resultaat 120 zijn";
+
+            var configuration = this.Configuration;
+            var parser = new FeatureParser(FileSystem, configuration);
+            Feature feature = parser.Parse(new StringReader(featureText));
+
+            Check.That(feature).IsNotNull();
         }
     }
 }

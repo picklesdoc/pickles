@@ -69,6 +69,36 @@ Target "BuildTest.TestFrameworks" (fun _ ->
       |> Log "AppBuild-Output: "
 )
 
+Target "BuildTest.DocumentationBuilders.Dhtml" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Dhtml.UnitTests/Pickles.DocumentationBuilders.Dhtml.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "BuildTest.DocumentationBuilders.Excel" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Excel.UnitTests/Pickles.DocumentationBuilders.Excel.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "BuildTest.DocumentationBuilders.Html" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/Pickles.DocumentationBuilders.Html.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "BuildTest.DocumentationBuilders.Json" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/Pickles.DocumentationBuilders.Json.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "BuildTest.DocumentationBuilders.Word" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Word.UnitTests/Pickles.DocumentationBuilders.Word.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
 let createZip (packageType : string) =
     !! (buildDir + "/" + packageType + "/*.*") -- "*.zip"
         |> Zip (buildDir + packageType) (deployDir + "Pickles-" + packageType + "-" + version + ".zip")
@@ -94,6 +124,11 @@ Target "Default" (fun _ ->
   ==> "BuildGui"
   ==> "BuildTest"
   ==> "BuildTest.TestFrameworks"
+  ==> "BuildTest.DocumentationBuilders.Dhtml"
+  ==> "BuildTest.DocumentationBuilders.Excel"
+  ==> "BuildTest.DocumentationBuilders.Html"
+  ==> "BuildTest.DocumentationBuilders.Json"
+  ==> "BuildTest.DocumentationBuilders.Word"
   ==> "Zip"
   ==> "Default"
 

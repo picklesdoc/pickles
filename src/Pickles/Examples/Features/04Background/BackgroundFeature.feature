@@ -1,6 +1,6 @@
 ﻿Feature: Show the use of background
-	In order to show how to use the Background keyword of Gherkin
-	As a SpecFlow evanglist
+	In order to show how to use the Background keyword of Gherkin  
+	As a SpecFlow evanglist  
 	I want to show that background steps are called before any scenario step
 
 Background:

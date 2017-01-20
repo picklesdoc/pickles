@@ -23,7 +23,7 @@ using Moq;
 using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.Test.Formatters

@@ -28,29 +28,6 @@ namespace PicklesDoc.Pickles.Extensions
 
     public static class StringExtensions
     {
-        public static string ExpandWikiWord(this string word)
-        {
-            var sb = new StringBuilder();
-            char previous = char.MinValue;
-            foreach (char current in word.Where(x => char.IsLetterOrDigit(x)))
-            {
-                if (previous != char.MinValue && sb.Length > 1
-                    && ((char.IsUpper(current) || char.IsDigit(current)) && char.IsLower(previous)))
-                {
-                    sb.Append(' ');
-                }
-                else if (char.IsNumber(previous) && char.IsUpper(current))
-                {
-                    sb.Append(' ');
-                }
-
-                sb.Append(current);
-                previous = current;
-            }
-
-            return sb.ToString();
-        }
-
         /// <summary>
         /// Takes a string and lowercases it, removing newline characters and replacing tabs with spaces
         /// </summary>

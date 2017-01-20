@@ -21,8 +21,9 @@
 using System.Collections.Generic;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON.Mapper;
+
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
+using PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.Test.ObjectModel.Json

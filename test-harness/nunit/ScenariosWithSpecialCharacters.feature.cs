@@ -132,6 +132,38 @@ this.FeatureBackground();
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("This is a scenario outline with german umlauts äöüß ÄÖÜ")]
+        [NUnit.Framework.TestCaseAttribute("pass_1", null)]
+        public virtual void ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with german umlauts äöüß ÄÖÜ", exampleTags);
+#line 35
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 36
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("This is a scenario outline with ampersand &")]
+        [NUnit.Framework.TestCaseAttribute("pass_1", null)]
+        public virtual void ThisIsAScenarioOutlineWithAmpersand(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with ampersand &", exampleTags);
+#line 42
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 43
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -21,8 +21,8 @@
 using System;
 using Autofac;
 using NFluent;
-using NGenerics.DataStructures.Trees;
 using NUnit.Framework;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 
 namespace PicklesDoc.Pickles.Test
@@ -36,7 +36,7 @@ namespace PicklesDoc.Pickles.Test
             this.AddFakeFolderStructures();
 
             string rootPath = FileSystemPrefix + @"FeatureCrawlerTests";
-            GeneralTree<INode> features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
 
             Check.That(features).IsNotNull();
 
@@ -64,7 +64,7 @@ namespace PicklesDoc.Pickles.Test
             Check.That(subLevelOneDirectory.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\");
             Check.That(subLevelOneDirectory).IsInstanceOf<FolderNode>();
 
-            GeneralTree<INode> subLevelOneNode = features.ChildNodes[3];
+            Tree subLevelOneNode = features.ChildNodes[3];
             Check.That(subLevelOneNode.ChildNodes.Count).IsEqualTo(3);
 
             INode levelOneSublevelOneFeature = subLevelOneNode.ChildNodes[0].Data;
@@ -79,7 +79,7 @@ namespace PicklesDoc.Pickles.Test
             Check.That(levelOneSublevelTwoFeature.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\LevelOneSublevelTwo.feature");
             Check.That(levelOneSublevelTwoFeature).IsInstanceOf<FeatureNode>();
 
-            GeneralTree<INode> subLevelTwoNode = subLevelOneNode.ChildNodes[2];
+            Tree subLevelTwoNode = subLevelOneNode.ChildNodes[2];
             Check.That(subLevelTwoNode.ChildNodes.Count).IsEqualTo(1);
 
             INode subLevelTwoDirectory = subLevelOneNode.ChildNodes[2].Data;

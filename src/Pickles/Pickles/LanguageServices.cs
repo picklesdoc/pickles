@@ -24,7 +24,7 @@ using Gherkin;
 
 namespace PicklesDoc.Pickles
 {
-    public class LanguageServices
+    public class LanguageServices : ILanguageServices
     {
         public const string DefaultLanguage = "en";
 

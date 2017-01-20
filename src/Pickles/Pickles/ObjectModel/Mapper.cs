@@ -31,11 +31,12 @@ namespace PicklesDoc.Pickles.ObjectModel
     {
         private readonly IConfiguration configuration;
 
-        private readonly LanguageServices languageServices;
+        private readonly ILanguageServices languageServices;
 
         public Mapper(string featureLanguage = LanguageServices.DefaultLanguage)
             : this(new Configuration(), featureLanguage)
-        { } 
+        {
+        }
 
         public Mapper(IConfiguration configuration, string featureLanguage = LanguageServices.DefaultLanguage)
         {

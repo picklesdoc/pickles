@@ -147,5 +147,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.CucumberJson
         {
             base.ThenCanReadResultOfScenarioOutlineWithSpecialCharacters();
         }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioOutlineWithUmlauts()
+        {
+          base.ThenCanReadResultOfScenarioOutlineWithUmlauts();
+        }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioOutlineWithAmpersand()
+        {
+          base.ThenCanReadResultOfScenarioOutlineWithAmpersand();
+        }
     }
 }

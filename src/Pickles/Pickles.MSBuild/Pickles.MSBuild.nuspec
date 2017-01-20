@@ -44,11 +44,15 @@
     <file src="MarkdownDeep.dll" target="tools" />
     <file src="NDesk.Options.dll" target="tools" />
     <file src="Newtonsoft.Json.dll" target="tools" />
-    <file src="NGenerics.dll" target="tools" />
     <file src="NLog.dll" target="tools" />
     <file src="PicklesDoc.Pickles.Library.dll" target="tools" />
     <file src="PicklesDoc.Pickles.ObjectModel.dll" target="tools" />
     <file src="PicklesDoc.Pickles.TestFrameworks.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Word.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Excel.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Json.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Html.dll" target="tools" />
+    <file src="PicklesDoc.Pickles.DocumentationBuilders.Dhtml.dll" target="tools" />
     <file src="FeatureSwitcher.dll" target="tools" />
     <file src="Strike.Jint.dll" target="tools" />
     <file src="Jint.dll" target="tools" />

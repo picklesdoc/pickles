@@ -4,21 +4,78 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](http://semver.org). We consider the following to be the API of Pickles for the purposes of Semantic Versioning:
 
-  - The arguments of the command line runner
-  - The arguments of the PowerShell runner
-  - The arguments of the MSBuild configuration
-  - The settings file of the GUI runner
-  - The JSON output of the JSON format
+- The arguments of the command line runner
+- The arguments of the PowerShell runner
+- The arguments of the MSBuild configuration
+- The settings file of the GUI runner
+- The JSON output of the JSON format
 
 Features in Experimental are subject to change and removal without being considered breaking.
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.11.1] - 2016-12-16
+
+### Fixed
+
+- Enable Pickles to deal with ignored scenario examples in VsTest Result Provider ([340](https://github.com/picklesdoc/pickles/pull/340)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Enable xUnit Test Result Provider to Deal with more than 255 Scenarios in a File ([405](https://github.com/picklesdoc/pickles/pull/405)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
+## [2.11.0] - 2016-12-05
+
+### Changed
+
+- Enable xUnit Test Result Provider to Deal with more than 255 Scenarios in a File ([397](https://github.com/picklesdoc/pickles/pull/397)) (by [@eugene-sea](https://github.com/eugene-sea))
+- Several external libraries were update to their newest versions ([394](https://github.com/picklesdoc/pickles/pull/394)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
+### Fixed
+
+- Null reference error when running with MsTest trx results file ([356](https://github.com/picklesdoc/pickles/issues/356)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Test result file is read as null in CucumberJson when elements is missing ([390](https://github.com/picklesdoc/pickles/issues/390)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- DHTML version sorts features and folders in descending order ([383](https://github.com/picklesdoc/pickles/issues/383)) (by [@aquilanl](https://github.com/aquilanl))
+
+## [2.10.0] - 2016-10-22
+
+### Changed
+
+- Enable Pickles to with cultures in the language setting ([308](https://github.com/picklesdoc/pickles/pull/308)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Improve Markdown Parsing to Reduce Unintended Block Quotes ([302](https://github.com/picklesdoc/pickles/pull/302)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
+## [2.9.0] - 2016-10-07
+
+### Changed
+
+- Show parser failures and quit with an error ([379](https://github.com/picklesdoc/pickles/pull/379)) (by [@Sjaaky](https://github.com/Sjaaky)).
+
+### Fixed
+
+- Fix Importing Test Results Failure for MsTest for Ignored Scenarios ([378](https://github.com/picklesdoc/pickles/pull/378)) (by [@wbagit](https://github.com/wbagit)).
+- Better Dealing with Special Characters in Scenario Examples ([375](https://github.com/picklesdoc/pickles/pull/375)) (by [@thopark](https://github.com/thopark)).
+
+## [2.8.3] - 2016-09-28
+
+### Fixed
+
+- Compatibility with nunit.console 3.x and nunit.framework 2.x ([369](https://github.com/picklesdoc/pickles/pull/369)) (by [@lars-erik](https://github.com/lars-erik)).
+- Correct sorting of features in output file (MS Word) ([357](https://github.com/picklesdoc/pickles/issues/357)) (by [@lars-erik](https://github.com/lars-erik) and [@dirkrombauts](https://github.com/dirkrombauts)).
+
+## [2.8.2] - 2016-08-18
+
+### Fixed
+
+- Handle Encoding or Opposite Slash in Feature Paths ([358](https://github.com/picklesdoc/pickles/pull/362)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+
+## [2.8.1] - 2016-07-29
+
+### Fixed
+
+- Blank Example Entries in a Scenario Outline cause Pickles not to Find the matching Scenario Outline ([358](https://github.com/picklesdoc/pickles/pull/358)) (by [@aaronjrich](https://github.com/aaronjrich)).
+
 ## [2.8.0] - 2016-06-29
 
 ### Added
 
-* Hyperlink Feature #1: Automatic Hyperlink Generation for Scenario Titles ([320](https://github.com/picklesdoc/pickles/issues/320)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
+- Hyperlink Feature #1: Automatic Hyperlink Generation for Scenario Titles ([320](https://github.com/picklesdoc/pickles/issues/320)) (by [@ocsurfnut](https://github.com/ocsurfnut)).
 
 ## [2.7.0] - 2016-06-14
 

@@ -1,6 +1,6 @@
 ﻿Feature: Scenario outline
-	In order to not have to type the same scenario over and over
-	As a SpecFlow evangelist
+	In order to not have to type the same scenario over and over  
+	As a SpecFlow evangelist  
 	I want to show how to use ScenarioOutline
 
 

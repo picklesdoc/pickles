@@ -1,6 +1,6 @@
 ﻿Feature: Attribute overloading
-	In order to show that steps can be used with multiple attributes
-	As a SpecFlow Evangelist
+	In order to show that steps can be used with multiple attributes  
+	As a SpecFlow Evangelist  
 	I want to show that similar attributes can be applied to the same step definition
 
 Scenario: Checking number for evenness

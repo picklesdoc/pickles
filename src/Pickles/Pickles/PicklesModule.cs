@@ -21,10 +21,10 @@
 using Autofac;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
-using PicklesDoc.Pickles.DocumentationBuilders.DHTML;
+using PicklesDoc.Pickles.DocumentationBuilders.Dhtml;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
 using PicklesDoc.Pickles.DocumentationBuilders.Word;
 using PicklesDoc.Pickles.FeatureToggles;
 using PicklesDoc.Pickles.ObjectModel;
@@ -50,11 +50,11 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<RelevantFileDetector>().SingleInstance();
             builder.RegisterType<FeatureNodeFactory>().SingleInstance();
 
-            builder.RegisterType<HtmlDocumentationBuilder>().SingleInstance();
-            builder.RegisterType<WordDocumentationBuilder>().SingleInstance();
-            builder.RegisterType<JsonDocumentationBuilder>().SingleInstance();
-            builder.RegisterType<ExcelDocumentationBuilder>().SingleInstance();
-            builder.RegisterType<DhtmlDocumentationBuilder>().SingleInstance();
+            builder.RegisterModule<HtmlModule>();
+            builder.RegisterModule<WordModule>();
+            builder.RegisterModule<JsonModule>();
+            builder.RegisterModule<ExcelModule>();
+            builder.RegisterModule<DhtmlModule>();
 
             builder.Register<IDocumentationBuilder>(c =>
             {
@@ -132,7 +132,7 @@ namespace PicklesDoc.Pickles
                 }
             }).SingleInstance();
 
-            builder.RegisterType<LanguageServices>().UsingConstructor(typeof(IConfiguration)).SingleInstance();
+            builder.RegisterType<LanguageServices>().As<ILanguageServices>().UsingConstructor(typeof(IConfiguration)).SingleInstance();
 
             builder.RegisterType<HtmlMarkdownFormatter>().SingleInstance();
             builder.RegisterType<HtmlResourceWriter>().SingleInstance();

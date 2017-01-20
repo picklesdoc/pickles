@@ -27,7 +27,7 @@ using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.TestFrameworks.MsTest
 {
-    internal static class MsTestElementExtensions
+    public static class MsTestElementExtensions
     {
         private const string Failed = "failed";
 
@@ -98,13 +98,13 @@ namespace PicklesDoc.Pickles.TestFrameworks.MsTest
             return document.Root.Descendants(Ns + "UnitTest").Where(s => s.Element(Ns + "Description") != null);
         }
 
-        internal static Guid ExecutionIdElement(this XElement scenario)
+        public static Guid ExecutionIdElement(this XElement scenario)
         {
             //// <UnitTest>
             ////   <Execution id="   the execution id guid   " />
             //// </UnitTest>
 
-            var xElement = scenario.Element(Ns + "Execution");
+            var xElement = scenario?.Element(Ns + "Execution");
 
             return xElement != null ? new Guid(xElement.Attribute("id").Value) : Guid.Empty;
         }
@@ -152,7 +152,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.MsTest
             {
                 if ((property.Descendants(Ns + "Key").FirstOrDefault()?.Value ?? string.Empty).StartsWith("Parameter:"))
                 {
-                    valuesInScenario.Add(property.Descendants(Ns + "Value").FirstOrDefault()?.Value ?? string.Empty);
+                    valuesInScenario.Add(property.Descendants(Ns + "Value").FirstOrDefault()?.Value.Trim() ?? string.Empty);
                 }
             }
 

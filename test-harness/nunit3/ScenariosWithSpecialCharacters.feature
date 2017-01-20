@@ -31,3 +31,17 @@ Scenario Outline: This scenario contains examples with Regex-special characters
     | {}                             |
     | ()                             |
     | ^.*(?<foo>BAR)\s[^0-9]{3,4}A+$ |
+
+Scenario Outline: This is a scenario outline with german umlauts äöüß ÄÖÜ
+  Then the scenario will '<result>'
+
+  Examples: 
+    | result |
+    | pass_1 |
+
+Scenario Outline: This is a scenario outline with ampersand &
+  Then the scenario will '<result>'
+
+  Examples: 
+    | result |
+    | pass_1 |

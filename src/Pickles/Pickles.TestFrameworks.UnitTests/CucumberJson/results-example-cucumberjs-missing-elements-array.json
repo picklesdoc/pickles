@@ -1,0 +1,10 @@
+[
+    {
+        "line": 1,
+        "name": "Feature That Has No Scenarios In The Test Run",
+        "description": "Pickles should not barf on that.",
+        "id": "feature-that-has-no-scenarios-in-the-test-run",
+        "keyword": "Feature",
+        "uri": "features/FeatureThatHasNoScenariosInTheTestRun.feature"
+    }
+]

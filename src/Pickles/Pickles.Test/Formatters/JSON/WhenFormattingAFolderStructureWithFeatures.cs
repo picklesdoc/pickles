@@ -20,10 +20,10 @@
 
 using System;
 using Autofac;
-using NGenerics.DataStructures.Trees;
 using NUnit.Framework;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
 using PicklesDoc.Pickles.Test.Helpers;
 
 namespace PicklesDoc.Pickles.Test.Formatters.JSON
@@ -37,7 +37,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
         {
             this.AddFakeFolderStructures();
 
-            GeneralTree<INode> features = Container.Resolve<DirectoryTreeCrawler>().Crawl(FileSystemPrefix);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(FileSystemPrefix);
 
             var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectory);
             if (!outputDirectory.Exists)
