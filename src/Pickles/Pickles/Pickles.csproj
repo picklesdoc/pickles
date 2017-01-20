@@ -132,6 +132,10 @@
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Cucumber\Pickles.DocumentationBuilders.Cucumber.csproj">
+      <Project>{f69aac03-a2a6-4b3f-a4ef-accb145c64ad}</Project>
+      <Name>Pickles.DocumentationBuilders.Cucumber</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Dhtml\Pickles.DocumentationBuilders.Dhtml.csproj">
       <Project>{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}</Project>
       <Name>Pickles.DocumentationBuilders.Dhtml</Name>

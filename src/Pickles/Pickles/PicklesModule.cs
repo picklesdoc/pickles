@@ -21,6 +21,7 @@
 using Autofac;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders;
+using PicklesDoc.Pickles.DocumentationBuilders.Cucumber;
 using PicklesDoc.Pickles.DocumentationBuilders.Dhtml;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
@@ -49,6 +50,7 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<FeatureParser>().SingleInstance();
             builder.RegisterType<RelevantFileDetector>().SingleInstance();
             builder.RegisterType<FeatureNodeFactory>().SingleInstance();
+            builder.RegisterType<CucumberDocumentationBuilder>().SingleInstance();
 
             builder.RegisterModule<HtmlModule>();
             builder.RegisterModule<WordModule>();
@@ -71,6 +73,8 @@ namespace PicklesDoc.Pickles
                         return c.Resolve<ExcelDocumentationBuilder>();
                     case DocumentationFormat.DHtml:
                         return c.Resolve<DhtmlDocumentationBuilder>();
+                    case DocumentationFormat.Cucumber:
+                        return c.Resolve<CucumberDocumentationBuilder>();
                     default:
                         return c.Resolve<HtmlDocumentationBuilder>();
                 }

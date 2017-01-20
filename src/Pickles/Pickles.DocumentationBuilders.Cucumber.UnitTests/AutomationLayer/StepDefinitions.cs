@@ -1,6 +1,6 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="StepDefinitions.cs" company="PicklesDoc">
-//  Copyright 2011 Jeffrey Cameron
+//  Copyright 2017 Dmitry Grekov
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
 //
@@ -18,23 +18,28 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TechTalk.SpecFlow;
+using PicklesDoc.Pickles.DocumentationBuilders.Cucumber;
+using PicklesDoc.Pickles.Test;
+using PicklesDoc.Pickles.DataStructures;
+using PicklesDoc.Pickles;
 using System.IO;
+using PicklesDoc.Pickles.DirectoryCrawler;
 using Autofac;
 using NFluent;
-using NGenerics.DataStructures.Trees;
-using PicklesDoc.Pickles.DirectoryCrawler;
-using PicklesDoc.Pickles.DocumentationBuilders.Cucumber;
-using PicklesDoc.Pickles.DocumentationBuilders.JSON;
-using TechTalk.SpecFlow;
 
-namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Cucumber.AutomationLayer
+namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
 {
     [Binding]
     [Scope(Tag = "cucumber")]
     public sealed class StepDefinitions : BaseFixture /* God object antipattern */
     {
-        private GeneralTree<INode> nodes;
+        private Tree nodes;
 
         [Given("I have this feature description")]
         public void IHaveThisFeatureDescription(string featureDescription)
@@ -44,7 +49,7 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Cucumber.AutomationLayer
 
             var feature = parser.Parse(new StringReader(featureDescription));
 
-            this.nodes = new GeneralTree<INode>(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\"), string.Empty, feature));
+            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\"), string.Empty, feature));
         }
 
         [When(@"I generate the documentation")]
