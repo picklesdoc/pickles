@@ -130,6 +130,7 @@ Target "Default" (fun _ ->
   ==> "BuildGui"
   ==> "BuildTest"
   ==> "BuildTest.TestFrameworks"
+  ==> "BuildTest.DocumentationBuilders.Cucumber"
   ==> "BuildTest.DocumentationBuilders.Dhtml"
   ==> "BuildTest.DocumentationBuilders.Excel"
   ==> "BuildTest.DocumentationBuilders.Html"

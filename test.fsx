@@ -80,6 +80,7 @@ Target "Test.DocumentationBuilders.Word" (fun _ ->
 )
 
 "Test"
+    ==> "Test.DocumentationBuilders.Cucumber"
     ==> "Test.DocumentationBuilders.Dhtml"
     ==> "Test.DocumentationBuilders.Excel"
     ==> "Test.DocumentationBuilders.Html"
