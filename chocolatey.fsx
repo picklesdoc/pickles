@@ -30,6 +30,7 @@ Target "CreatePackage CMD" (fun _ ->
         cmdDir + "PicklesDoc.Pickles.Library.dll";
         cmdDir + "PicklesDoc.Pickles.ObjectModel.dll";
         cmdDir + "PicklesDoc.Pickles.TestFrameworks.dll";
+        cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Cucumber.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
@@ -73,6 +74,7 @@ Target "CreatePackage GUI" (fun _ ->
         guiDir + "PicklesDoc.Pickles.Library.dll";
         guiDir + "PicklesDoc.Pickles.ObjectModel.dll";
         guiDir + "PicklesDoc.Pickles.TestFrameworks.dll";
+        guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Cucumber.dll";
         guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
         guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";

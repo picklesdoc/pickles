@@ -32,6 +32,7 @@ Target "CreatePackageCommandLine" (fun _ ->
         cmdDir + "PicklesDoc.Pickles.Library.dll";
         cmdDir + "PicklesDoc.Pickles.ObjectModel.dll";
         cmdDir + "PicklesDoc.Pickles.TestFrameworks.dll";
+        cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Cucumber.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
@@ -67,6 +68,7 @@ Target "CreatePackageMsBuild" (fun _ ->
         msBuildDir + "PicklesDoc.Pickles.Library.dll";
         msBuildDir + "PicklesDoc.Pickles.ObjectModel.dll";
         msBuildDir + "PicklesDoc.Pickles.TestFrameworks.dll";
+        msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Cucumber.dll";
         msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
         msBuildDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
@@ -103,6 +105,7 @@ Target "CreatePackagePowerShell" (fun _ ->
         powerShellDir + "PicklesDoc.Pickles.ObjectModel.dll";
         powerShellDir + "PicklesDoc.Pickles.TestFrameworks.dll";
         powerShellDir + "PicklesDoc.Pickles.PowerShell.dll";
+        powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Cucumber.dll";
         powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Word.dll";
         powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Excel.dll";
         powerShellDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
