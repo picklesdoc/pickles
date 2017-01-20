@@ -56,7 +56,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                                 .Elements("property")
                                 .Any(
                                     p =>
-                                    p.Attribute("name").Value == "Description" && p.Attribute("value").Value == scenario.Name));
+                                    IsDescriptionAttribute(p) && p.Attribute("value").Value == scenario.Name));
             }
 
             return scenarioElement;
@@ -77,7 +77,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                                 .Elements("property")
                                 .Any(
                                     p =>
-                                    p.Attribute("name").Value == "Description"
+                                    IsDescriptionAttribute(p)
                                     && p.Attribute("value").Value == scenarioOutline.Name));
             }
 
@@ -92,7 +92,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                     .FirstOrDefault(
                         ts =>
                         ts.Elements("properties").Elements("property")
-                        .Any(p => p.Attribute("name").Value == "Description" && p.Attribute("value").Value == feature.Name));
+                        .Any(p => IsDescriptionAttribute(p) && p.Attribute("value").Value == feature.Name));
         }
 
         protected override XElement GetExamplesElement(ScenarioOutline scenarioOutline, string[] values)
@@ -109,7 +109,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                                 .Elements("property")
                                 .Any(
                                     p =>
-                                    p.Attribute("name").Value == "Description"
+                                    IsDescriptionAttribute(p)
                                     && p.Attribute("value").Value == scenarioOutline.Name));
 
                 if (parameterizedTestElement != null)
@@ -121,6 +121,14 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
             }
 
             return examplesElement;
+        }
+
+        private static bool IsDescriptionAttribute(XElement p)
+        {
+            return (
+                p.Attribute("name").Value == "Description" ||
+                p.Attribute("name").Value == "_DESCRIPTION"
+                );
         }
     }
 }

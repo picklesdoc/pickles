@@ -4,6 +4,7 @@
 ECHO Remember to build the solution first!
 
 "%~dp0\test-harness\packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" "%~dp0\test-harness\nunit\bin\Debug\nunitHarness.dll" /result="%~dp0\results-example-nunit.xml"
+"%~dp0\test-harness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe" "%~dp0\test-harness\nunit\bin\Debug\nunitHarness.dll" /result="%~dp0\results-example-nunit2-with-nunit3-runner.xml"
 
 "%~dp0\test-harness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe" "%~dp0\test-harness\nunit3\bin\Debug\nunit3Harness.dll" /result="%~dp0\results-example-nunit3.xml"
 
@@ -29,6 +30,7 @@ rmdir /s /q "%~dp0\TestResults\"
 FOR /R "%~dp0\TestResults\" %%G IN (*.trx) DO move "%%G" "%~dp0\results-example-vstest.trx"
 
 move "%~dp0\results-example-nunit.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\NUnit\NUnit2\"
+move "%~dp0\results-example-nunit2-with-nunit3-runner.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\NUnit\NUnit3\"
 move "%~dp0\results-example-nunit3.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\NUnit\NUnit3\"
 move "%~dp0\results-example-xunit.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\XUnit\XUnit1\"
 move "%~dp0\results-example-xunit2.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\XUnit\XUnit2\"

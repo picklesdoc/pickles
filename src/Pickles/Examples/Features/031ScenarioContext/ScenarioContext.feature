@@ -1,6 +1,6 @@
 ﻿Feature: Scenario Context features
-	In order to show how to use ScenarioContext
-	As a SpecFlow evangelist
+	In order to show how to use ScenarioContext  
+	As a SpecFlow evangelist  
 	I want to write some simple scenarios with data in ScenarioContext
 
 Scenario: Store and retrive Person Marcus from ScenarioContext

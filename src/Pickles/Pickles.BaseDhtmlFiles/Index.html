@@ -484,8 +484,6 @@
         }
 
         function jsonPWrapper(data) {
-            data.Features.reverse();
-
             var viewModel = new window.ViewModel(data.Features, data.Configuration, data.Summary);
             viewModel.setCurrentFeature();
 

@@ -65,7 +65,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.CucumberJson
         private FeatureAndBackground GetCucumberFeature(ObjectModel.Feature feature)
         {
             var cucumberFeature = this.resultsDocument.FirstOrDefault(f => f.name == feature.Name);
-            var background = cucumberFeature?.elements.FirstOrDefault(e => e.type == "background");
+            var background = cucumberFeature?.elements?.FirstOrDefault(e => e.type == "background");
             return new FeatureAndBackground(cucumberFeature, background);
         }
 
@@ -142,7 +142,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.CucumberJson
             var cucumberFeature = this.GetCucumberFeature(scenario.Feature);
             if (cucumberFeature?.Feature != null)
             {
-                cucumberScenario = cucumberFeature.Feature.elements.FirstOrDefault(x => x.name == scenario.Name);
+                cucumberScenario = cucumberFeature.Feature.elements?.FirstOrDefault(x => x.name == scenario.Name);
             }
 
             return new ScenarioBaseAndBackground(cucumberScenario, cucumberFeature?.Background);

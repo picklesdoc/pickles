@@ -137,6 +137,10 @@ namespace PicklesDoc.Pickles.TestFrameworks.MsTest
             var scenarioElements = this.GetScenariosForScenarioOutline(scenario);
 
             var theScenario = this.GetScenarioThatMatchesTheExampleValues(scenario, exampleValues, scenarioElements);
+            if (theScenario == null)
+            {
+                return TestResult.Inconclusive;
+            }
 
             Guid executionId = theScenario.ExecutionIdElement();
 

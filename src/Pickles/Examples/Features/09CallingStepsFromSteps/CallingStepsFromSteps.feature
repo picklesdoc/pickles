@@ -1,6 +1,6 @@
 ﻿Feature: Calling Steps from StepDefinitions
-	In order to create steps of a higher abstraction
-	As a SpecFlow evangelist
+	In order to create steps of a higher abstraction  
+	As a SpecFlow evangelist  
 	I want reuse other steps in my step definitions
 
 Scenario: Log in

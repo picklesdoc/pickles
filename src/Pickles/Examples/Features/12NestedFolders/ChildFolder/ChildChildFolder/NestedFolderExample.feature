@@ -1,6 +1,6 @@
 ﻿Feature: Nested Folder Example
-	In order to test nested folder output
-	As a silly contributer
+	In order to test nested folder output  
+	As a silly contributer  
 	I want to create an example of something several folders deep
 
 @nestedFolders

@@ -35,12 +35,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
-      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    <Reference Include="Autofac, Version=4.2.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.2.1\lib\net45\Autofac.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
-      <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
+    <Reference Include="ClosedXML, Version=0.80.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.80.1\lib\net40-client\ClosedXML.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -66,16 +66,12 @@
     <Reference Include="NDesk.Options">
       <HintPath>..\packages\NDesk.Options.0.2.1\lib\NDesk.Options.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NGenerics, Version=1.4.1.0, Culture=neutral, PublicKeyToken=e4b41be133ea7faf, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\NGenerics.1.4.1.0\lib\net35\NGenerics.dll</HintPath>
-    </Reference>
     <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
-      <HintPath>..\packages\NLog.4.3.3\lib\net45\NLog.dll</HintPath>
+      <HintPath>..\packages\NLog.4.3.11\lib\net45\NLog.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Strike.Jint">
@@ -84,8 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.IO.Abstractions, Version=2.0.0.124, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Abstractions.2.0.0.124\lib\net40\System.IO.Abstractions.dll</HintPath>
+    <Reference Include="System.IO.Abstractions, Version=2.0.0.138, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.0.0.138\lib\net40\System.IO.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -101,103 +97,15 @@
     <Compile Include="CommandLineArgumentParser.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
-    <Compile Include="DirectoryCrawler\FolderNode.cs" />
+    <Compile Include="CultureAwareDialectProvider.cs" />
+    <Compile Include="DescriptionProcessor.cs" />
     <Compile Include="DirectoryCrawler\ImageFileDetector.cs" />
-    <Compile Include="DirectoryCrawler\ImageNode.cs" />
-    <Compile Include="DocumentationBuilders\Cucumber\CucumberDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\DhtmlDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\DhtmlResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\DHTML\JsonTweaker.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelDocumentStringFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelScenarioFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelScenarioOutlineFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelSheetNameGenerator.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelStepFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelTableFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Excel\ExcelTableOfContentsFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlContentFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlDescriptionFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlDocumentFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlFooterFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlHeaderFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlImageResultFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlIndexFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlMarkdownFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlMultilineStringFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlNamespace.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlResource.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlResourceSet.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlScenarioFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlScenarioOutlineFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlStepFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlTableFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\HtmlTableOfContentsFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\IHtmlFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\HTML\ResourceWriter.cs" />
-    <Compile Include="DocumentationBuilders\IDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\JSON\IJsonFeatureElement.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonExample.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonFeature.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonFeatureWithMetaInfo.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JSONDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonKeyword.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonScenario.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonScenarioOutline.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonComment.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonStep.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonTable.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonTableRow.cs" />
-    <Compile Include="DocumentationBuilders\JSON\JsonTestResult.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\CommentToJsonCommentMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\ExampleToJsonExampleMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\FeatureToJsonFeatureMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\KeywordToJsonKeywordMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\ScenarioToJsonScenarioMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\ScenarioOutlineToJsonScenarioOutlineMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\StepToJsonStepMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\TableRowToJsonTableRowMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\TableToJsonTableMapper.cs" />
-    <Compile Include="DocumentationBuilders\JSON\Mapper\TestResultToJsonTestResultMapper.cs" />
-    <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtOpenXmlUtil.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\PtUtil.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="DocumentationBuilders\Word\TableOfContentsAdder\TocAdder.cs">
-      <ExcludeFromStyleCop>True</ExcludeFromStyleCop>
-    </Compile>
-    <Compile Include="DocumentationBuilders\Word\WordBackgroundFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordDescriptionFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordDocumentationBuilder.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordFeatureFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordFontApplicator.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordHeaderFooterFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordScenarioFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordScenarioOutlineFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordStepFormatter.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordStyleApplicator.cs" />
-    <Compile Include="DocumentationBuilders\Word\WordTableFormatter.cs" />
-    <Compile Include="Extensions\BodyExtensions.cs" />
-    <Compile Include="Extensions\NamespaceExtensions.cs" />
     <Compile Include="Extensions\PathExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="DirectoryCrawler\FeatureNode.cs" />
     <Compile Include="DirectoryCrawler\FeatureNodeFactory.cs" />
-    <Compile Include="DirectoryCrawler\INode.cs" />
-    <Compile Include="DirectoryCrawler\MarkdownNode.cs" />
-    <Compile Include="Extensions\TreeNodeExtensions.cs" />
-    <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="FeatureParseException.cs" />
     <Compile Include="FeatureToggles\AlternateMarkdownProvider.cs" />
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="IMarkdownProvider.cs" />
     <Compile Include="LanguageServices.cs" />
     <Compile Include="MarkdownProvider.cs" />
     <Compile Include="ObjectModel\Mapper.cs" />
@@ -221,106 +129,29 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.eot" />
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.ttf" />
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.woff" />
-    <EmbeddedResource Include="Resources\Html\css\fonts\FontAwesome.ttf" />
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\global.css" />
-    <EmbeddedResource Include="Resources\Html\css\master.css" />
-    <EmbeddedResource Include="Resources\Html\css\reset.css" />
-    <EmbeddedResource Include="Resources\Html\css\structure.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\img\failure.png" />
-    <EmbeddedResource Include="Resources\Html\img\success.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\js\jquery.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\print.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\js\scripts.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\img\inconclusive.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\font-awesome.css" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Resources\Html\css\fonts\fontawesome-webfont.svg" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\bootstrap.min.css">
-      <Link>Resources\Dhtml\css\bootstrap.min.css</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\print.css">
-      <Link>Resources\Dhtml\css\print.css</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\css\styles.css">
-      <Link>Resources\Dhtml\css\styles.css</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\glyphicons-halflings-white.png">
-      <Link>Resources\Dhtml\img\glyphicons-halflings-white.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\glyphicons-halflings.png">
-      <Link>Resources\Dhtml\img\glyphicons-halflings.png</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\Index.html">
-      <Link>Resources\Dhtml\Index.html</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\bootstrap.min.js">
-      <Link>Resources\Dhtml\js\bootstrap.min.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\featureSearch.js">
-      <Link>Resources\Dhtml\js\featureSearch.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\featuresModel.js">
-      <Link>Resources\Dhtml\js\featuresModel.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\heirarchyBuilder.js">
-      <Link>Resources\Dhtml\js\heirarchyBuilder.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\html5.js">
-      <Link>Resources\Dhtml\js\html5.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\jquery-1.8.3.min.js">
-      <Link>Resources\Dhtml\js\jquery-1.8.3.min.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\jquery.highlight-4.closure.js">
-      <Link>Resources\Dhtml\js\jquery.highlight-4.closure.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout.mapping-latest.js">
-      <Link>Resources\Dhtml\js\knockout.mapping-latest.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\logger.js">
-      <Link>Resources\Dhtml\js\logger.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Markdown.Converter.js">
-      <Link>Resources\Dhtml\js\Markdown.Converter.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Markdown.Extra.js">
-      <Link>Resources\Dhtml\js\Markdown.Extra.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\stringFormatting.js">
-      <Link>Resources\Dhtml\js\stringFormatting.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\typeaheadList.js">
-      <Link>Resources\Dhtml\js\typeaheadList.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\underscore-min.js">
-      <Link>Resources\Dhtml\js\underscore-min.js</Link>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\pickledFeatures.js">
-      <Link>Resources\Dhtml\pickledFeatures.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Dhtml\Pickles.DocumentationBuilders.Dhtml.csproj">
+      <Project>{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}</Project>
+      <Name>Pickles.DocumentationBuilders.Dhtml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Excel\Pickles.DocumentationBuilders.Excel.csproj">
+      <Project>{A875B066-443A-420E-A1F5-7870CFF0A50C}</Project>
+      <Name>Pickles.DocumentationBuilders.Excel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Html\Pickles.DocumentationBuilders.Html.csproj">
+      <Project>{2C849AD2-D125-4754-8BBA-7C61FA6251E4}</Project>
+      <Name>Pickles.DocumentationBuilders.Html</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Json\Pickles.DocumentationBuilders.Json.csproj">
+      <Project>{836020D1-A309-4367-9654-EBB7C3F60D97}</Project>
+      <Name>Pickles.DocumentationBuilders.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj">
+      <Project>{BDD5290E-BF98-436B-ADEE-A7479E22A875}</Project>
+      <Name>Pickles.DocumentationBuilders.Word</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
       <Project>{55382AFC-E050-4DF7-AA4F-0ABA71E2E169}</Project>
       <Name>Pickles.ObjectModel</Name>
@@ -330,31 +161,7 @@
       <Name>Pickles.TestFrameworks</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Chart.min.js">
-      <Link>Resources\Dhtml\js\Chart.min.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\Chart.StackedBar.js">
-      <Link>Resources\Dhtml\js\Chart.StackedBar.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\picklesOverview.js">
-      <Link>Resources\Dhtml\js\picklesOverview.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\js\knockout-3.4.0.js">
-      <Link>Resources\Dhtml\js\knockout-3.4.0.js</Link>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Pickles.BaseDhtmlFiles\img\link.png">
-      <Link>Resources\Dhtml\img\link.png</Link>
-    </EmbeddedResource>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

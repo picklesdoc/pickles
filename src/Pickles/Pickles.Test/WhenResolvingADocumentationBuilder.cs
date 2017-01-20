@@ -24,7 +24,7 @@ using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DocumentationBuilders;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
-using PicklesDoc.Pickles.DocumentationBuilders.HTML;
+using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.DocumentationBuilders.Word;
 
 namespace PicklesDoc.Pickles.Test

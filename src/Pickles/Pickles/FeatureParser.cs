@@ -33,6 +33,8 @@ namespace PicklesDoc.Pickles
 
         private readonly IConfiguration configuration;
 
+        private readonly DescriptionProcessor descriptionProcessor = new DescriptionProcessor();
+
         public FeatureParser(IFileSystem fileSystem, IConfiguration configuration)
         {
             this.fileSystem = fileSystem;
@@ -69,9 +71,11 @@ namespace PicklesDoc.Pickles
 
             Gherkin.Ast.GherkinDocument gherkinDocument = gherkinParser.Parse(
                 new Gherkin.TokenScanner(featureFileReader),
-                new Gherkin.TokenMatcher(language));
+                new Gherkin.TokenMatcher(new CultureAwareDialectProvider(language)));
 
             Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
+
+            this.descriptionProcessor.Process(result);
 
             return result;
         }

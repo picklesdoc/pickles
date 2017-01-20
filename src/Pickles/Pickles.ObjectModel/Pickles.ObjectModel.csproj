@@ -32,8 +32,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.Abstractions, Version=2.0.0.124, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Abstractions.2.0.0.124\lib\net40\System.IO.Abstractions.dll</HintPath>
+    <Reference Include="System.IO.Abstractions, Version=2.0.0.138, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.0.0.138\lib\net40\System.IO.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml.Linq" />
@@ -44,8 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DirectoryCrawler\INode.cs" />
+    <Compile Include="DataStructures\Tree.cs" />
+    <Compile Include="DirectoryCrawler\FeatureNode.cs" />
+    <Compile Include="DirectoryCrawler\FolderNode.cs" />
+    <Compile Include="DirectoryCrawler\ImageNode.cs" />
+    <Compile Include="DirectoryCrawler\MarkdownNode.cs" />
     <Compile Include="DocumentationFormat.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TreeNodeExtensions.cs" />
+    <Compile Include="Extensions\UriExtensions.cs" />
     <Compile Include="IConfiguration.cs" />
+    <Compile Include="DocumentationBuilders\IDocumentationBuilder.cs" />
+    <Compile Include="ILanguageServices.cs" />
+    <Compile Include="IMarkdownProvider.cs" />
     <Compile Include="ObjectModel\Location.cs" />
     <Compile Include="ObjectModel\Example.cs" />
     <Compile Include="ObjectModel\Feature.cs" />

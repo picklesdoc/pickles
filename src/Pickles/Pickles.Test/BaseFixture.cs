@@ -92,6 +92,10 @@ namespace PicklesDoc.Pickles.Test
             this.AddFakeFolderAndFiles(@"FeatureCrawlerTests\SubLevelOne", new[] { "ignorethisfile.ignore", "LevelOneSublevelOne.feature", "LevelOneSublevelTwo.feature" });
             this.AddFakeFolderAndFiles(@"FeatureCrawlerTests\SubLevelOne\SubLevelTwo", new[] { "LevelOneSublevelOneSubLevelTwo.feature" });
             this.AddFakeFolderAndFiles(@"FeatureCrawlerTests\SubLevelOne\SubLevelTwo\IgnoreThisDirectory", new[] { "IgnoreThisFile.ignore" });
+
+            this.AddFakeFolderAndFiles(@"OrderingTests", new string[0]);
+            this.AddFakeFolderAndFiles(@"OrderingTests\A", new [] {"a-a.feature", "a-b.feature"});
+            this.AddFakeFolderAndFiles(@"OrderingTests\B", new [] {"b-a.feature", "b-b.feature"});
         }
 
         protected void AddFakeFolderAndFiles(string directoryName, IEnumerable<string> fileNames)

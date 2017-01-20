@@ -147,5 +147,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit2
         {
             base.ThenCanReadResultOfScenarioOutlineWithSpecialCharacters();
         }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioOutlineWithUmlauts()
+        {
+          base.ThenCanReadResultOfScenarioOutlineWithUmlauts();
+        }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioOutlineWithAmpersand()
+        {
+          base.ThenCanReadResultOfScenarioOutlineWithAmpersand();
+        }
     }
 }

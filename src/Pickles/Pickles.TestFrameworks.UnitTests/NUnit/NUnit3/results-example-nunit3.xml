@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<test-run id="2" testcasecount="43" result="Failed" total="43" passed="27" failed="9" inconclusive="6" skipped="1" asserts="0" engine-version="3.0.5797.27553" clr-version="4.0.30319.42000" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.712681">
-  <command-line><![CDATA["D:\Work\pickles-testresults\\TestHarness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe"  "D:\Work\pickles-testresults\\TestHarness\nunit3\bin\Debug\nunit3Harness.dll" /result="D:\Work\pickles-testresults\\results-example-nunit3.xml"]]></command-line>
-  <test-suite type="Assembly" id="0-1062" name="nunit3Harness.dll" fullname="D:\Work\pickles-testresults\TestHarness\nunit3\bin\Debug\nunit3Harness.dll" runstate="Runnable" testcasecount="43" result="Failed" site="Child" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.566181" total="43" passed="27" failed="9" inconclusive="6" skipped="1" asserts="0">
-    <environment framework-version="3.0.5797.27534" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="D:\Work\pickles-testresults" machine-name="DANIEL-NOTEBOOK" user="Daniel" user-domain="DANIEL-NOTEBOOK" culture="de-DE" uiculture="de-DE" os-architecture="x64" />
+<test-run id="2" testcasecount="45" result="Failed" total="45" passed="29" failed="9" inconclusive="6" skipped="1" asserts="0" engine-version="3.0.5797.27553" clr-version="4.0.30319.42000" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.770723">
+  <command-line><![CDATA["C:\DevProjects\Tools\pickles\\test-harness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe"  "C:\DevProjects\Tools\pickles\\test-harness\nunit3\bin\Debug\nunit3Harness.dll" /result="C:\DevProjects\Tools\pickles\\results-example-nunit3.xml"]]></command-line>
+  <test-suite type="Assembly" id="0-1066" name="nunit3Harness.dll" fullname="C:\DevProjects\Tools\pickles\test-harness\nunit3\bin\Debug\nunit3Harness.dll" runstate="Runnable" testcasecount="45" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.636880" total="45" passed="29" failed="9" inconclusive="6" skipped="1" asserts="0">
+    <environment framework-version="3.0.5797.27534" clr-version="4.0.30319.42000" os-version="Microsoft Windows NT 10.0.10240.0" platform="Win32NT" cwd="C:\DevProjects\Tools\pickles" machine-name="AS0283" user="HKR" user-domain="OEVERMANN" culture="de-DE" uiculture="en-US" os-architecture="x64" />
     <settings>
-      <setting name="WorkDirectory" value="D:\Work\pickles-testresults" />
+      <setting name="WorkDirectory" value="C:\DevProjects\Tools\pickles" />
       <setting name="NumberOfTestWorkers" value="8" />
     </settings>
     <properties>
-      <property name="_PID" value="35728" />
+      <property name="_PID" value="6272" />
       <property name="_APPDOMAIN" value="test-domain-" />
     </properties>
     <failure>
       <message><![CDATA[One or more child tests had errors]]></message>
     </failure>
-    <test-suite type="TestSuite" id="0-1063" name="Pickles" fullname="Pickles" runstate="Runnable" testcasecount="43" result="Failed" site="Child" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.559843" total="43" passed="27" failed="9" inconclusive="6" skipped="1" asserts="0">
+    <test-suite type="TestSuite" id="0-1067" name="Pickles" fullname="Pickles" runstate="Runnable" testcasecount="45" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.629982" total="45" passed="29" failed="9" inconclusive="6" skipped="1" asserts="0">
       <failure>
         <message><![CDATA[One or more child tests had errors]]></message>
       </failure>
-      <test-suite type="TestSuite" id="0-1064" name="TestHarness" fullname="Pickles.TestHarness" runstate="Runnable" testcasecount="43" result="Failed" site="Child" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.559776" total="43" passed="27" failed="9" inconclusive="6" skipped="1" asserts="0">
+      <test-suite type="TestSuite" id="0-1068" name="TestHarness" fullname="Pickles.TestHarness" runstate="Runnable" testcasecount="45" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.629910" total="45" passed="29" failed="9" inconclusive="6" skipped="1" asserts="0">
         <failure>
           <message><![CDATA[One or more child tests had errors]]></message>
         </failure>
-        <test-suite type="TestSuite" id="0-1065" name="nunit3" fullname="Pickles.TestHarness.nunit3" runstate="Runnable" testcasecount="43" result="Failed" site="Child" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.559768" total="43" passed="27" failed="9" inconclusive="6" skipped="1" asserts="0">
+        <test-suite type="TestSuite" id="0-1069" name="nunit3" fullname="Pickles.TestHarness.nunit3" runstate="Runnable" testcasecount="45" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.629906" total="45" passed="29" failed="9" inconclusive="6" skipped="1" asserts="0">
           <failure>
             <message><![CDATA[One or more child tests had errors]]></message>
           </failure>
-          <test-suite type="TestFixture" id="0-1000" name="AdditionFeature" fullname="Pickles.TestHarness.nunit3.AdditionFeature" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.502229" total="6" passed="3" failed="1" inconclusive="1" skipped="1" asserts="0">
+          <test-suite type="TestFixture" id="0-1000" name="AdditionFeature" fullname="Pickles.TestHarness.nunit3.AdditionFeature" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.560098" total="6" passed="3" failed="1" inconclusive="1" skipped="1" asserts="0">
             <properties>
               <property name="Description" value="Addition" />
             </properties>
             <failure>
               <message><![CDATA[One or more child tests had errors]]></message>
             </failure>
-            <test-suite type="ParameterizedMethod" id="0-1003" name="AddingSeveralNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddingSeveralNumbers" runstate="Runnable" testcasecount="2" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.142902" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1003" name="AddingSeveralNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddingSeveralNumbers" runstate="Runnable" testcasecount="2" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.149596" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
-                <property name="Category" value="tag2" />
                 <property name="Description" value="Adding several numbers" />
+                <property name="Category" value="tag2" />
               </properties>
-              <test-case id="0-1001" name="AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="798259755" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.139173" asserts="0">
+              <test-case id="0-1001" name="AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="798259755" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.145978" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Given I have entered 60 into the calculator
@@ -53,7 +53,7 @@ Then the result should be 260 on the screen
 -> done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(260) (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1002" name="AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="1396928079" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000323" asserts="0">
+              <test-case id="0-1002" name="AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="1396928079" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000290" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Given I have entered 40 into the calculator
@@ -69,7 +69,7 @@ Then the result should be 180 on the screen
 ]]></output>
               </test-case>
             </test-suite>
-            <test-case id="0-1004" name="AddTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddTwoNumbers" methodname="AddTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="575529885" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000364" asserts="0">
+            <test-case id="0-1004" name="AddTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.AddTwoNumbers" methodname="AddTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="575529885" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000356" asserts="0">
               <properties>
                 <property name="Description" value="Add two numbers" />
                 <property name="Category" value="tag1" />
@@ -86,25 +86,25 @@ Then the result should be 3 on the screen
 -> done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(3) (0,0s)
 ]]></output>
             </test-case>
-            <test-case id="0-1005" name="FailToAddTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.FailToAddTwoNumbers" methodname="FailToAddTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="332551961" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.013300" asserts="0">
+            <test-case id="0-1005" name="FailToAddTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.FailToAddTwoNumbers" methodname="FailToAddTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="332551961" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.008515" asserts="0">
               <properties>
-                <property name="Category" value="tag1" />
                 <property name="Description" value="Fail to add two numbers" />
+                <property name="Category" value="tag1" />
               </properties>
               <failure>
-                <message><![CDATA[System.FormatException : Die Eingabezeichenfolge hat das falsche Format.]]></message>
-                <stack-trace><![CDATA[   bei System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
-   bei System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
-   bei System.String.System.IConvertible.ToInt32(IFormatProvider provider)
-   bei System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
-   bei System.Linq.Enumerable.<SelectIterator>d__5`2.MoveNext()
-   bei System.Linq.Buffer`1..ctor(IEnumerable`1 source)
-   bei System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.GetExecuteArguments(BindingMatch match)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.AdditionFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\Addition.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.AdditionFeature.FailToAddTwoNumbers() in c:\Development\pickles-testresults\TestHarness\nunit3\Addition.feature:Zeile 34.]]></stack-trace>
+                <message><![CDATA[System.FormatException : Input string was not in a correct format.]]></message>
+                <stack-trace><![CDATA[   at System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   at System.String.System.IConvertible.ToInt32(IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Linq.Enumerable.<SelectIterator>d__5`2.MoveNext()
+   at System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   at System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.GetExecuteArguments(BindingMatch match)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.AdditionFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.AdditionFeature.FailToAddTwoNumbers() in C:\DevProjects\Tools\pickles\test-harness\nunit3\Addition.feature:line 34]]></stack-trace>
               </failure>
               <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -115,10 +115,10 @@ And I have entered 2.2 into the calculator
 When I press add
 -> done: AdditionSteps.WhenIPressAdd() (0,0s)
 Then the result should be 3.2 on the screen
--> error: Die Eingabezeichenfolge hat das falsche Format.
+-> error: Input string was not in a correct format.
 ]]></output>
             </test-case>
-            <test-case id="0-1006" name="IgnoredAddingTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.IgnoredAddingTwoNumbers" methodname="IgnoredAddingTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Ignored" seed="2113917196" result="Skipped" label="Ignored" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000771" asserts="0">
+            <test-case id="0-1006" name="IgnoredAddingTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.IgnoredAddingTwoNumbers" methodname="IgnoredAddingTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Ignored" seed="2113917196" result="Skipped" label="Ignored" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000651" asserts="0">
               <properties>
                 <property name="Description" value="Ignored adding two numbers" />
                 <property name="_SKIPREASON" value="" />
@@ -127,7 +127,7 @@ Then the result should be 3.2 on the screen
                 <message><![CDATA[]]></message>
               </reason>
             </test-case>
-            <test-case id="0-1007" name="NotAutomatedAddingTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.NotAutomatedAddingTwoNumbers" methodname="NotAutomatedAddingTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="1460656856" result="Inconclusive" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.069831" asserts="0">
+            <test-case id="0-1007" name="NotAutomatedAddingTwoNumbers" fullname="Pickles.TestHarness.nunit3.AdditionFeature.NotAutomatedAddingTwoNumbers" methodname="NotAutomatedAddingTwoNumbers" classname="Pickles.TestHarness.nunit3.AdditionFeature" runstate="Runnable" seed="1460656856" result="Inconclusive" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.096381" asserts="0">
               <properties>
                 <property name="Description" value="Not automated adding two numbers" />
               </properties>
@@ -191,21 +191,21 @@ Then unimplemented step
 ]]></output>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="0-1008" name="FailingBackgroundFeature" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.016275" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1008" name="FailingBackgroundFeature" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.020294" total="3" passed="0" failed="3" inconclusive="0" skipped="0" asserts="0">
             <properties>
               <property name="Description" value="Failing Background" />
             </properties>
             <failure>
               <message><![CDATA[One or more child tests had errors]]></message>
             </failure>
-            <test-suite type="ParameterizedMethod" id="0-1012" name="AddingSeveralNumbers" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.014226" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1012" name="AddingSeveralNumbers" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers" runstate="Runnable" testcasecount="2" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.017069" total="2" passed="0" failed="2" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Adding several numbers" />
               </properties>
               <failure>
                 <message><![CDATA[One or more child tests had errors]]></message>
               </failure>
-              <test-case id="0-1010" name="AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" seed="1347475421" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.012462" asserts="0">
+              <test-case id="0-1010" name="AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(&quot;60&quot;,&quot;70&quot;,&quot;130&quot;,&quot;260&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" seed="1347475421" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.014408" asserts="0">
                 <failure>
                   <message><![CDATA[Shouldly.ChuckedAWobbly : 
     1
@@ -213,15 +213,15 @@ Then unimplemented step
     2
         but was
     1]]></message>
-                  <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in c:\Development\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.FailingBackgroundFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\FailingBackground.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in c:\Development\pickles-testresults\TestHarness\nunit3\FailingBackground.feature:Zeile 19.]]></stack-trace>
+                  <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.FailingBackgroundFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\nunit3\FailingBackground.feature:line 19]]></stack-trace>
                 </failure>
                 <output><![CDATA[Given the background step fails
 -> error: 
@@ -244,7 +244,7 @@ Then the result should be 260 on the screen
 -> skipped because of previous errors
 ]]></output>
               </test-case>
-              <test-case id="0-1011" name="AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" seed="211985103" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001635" asserts="0">
+              <test-case id="0-1011" name="AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(&quot;40&quot;,&quot;50&quot;,&quot;90&quot;,&quot;180&quot;,null)" methodname="AddingSeveralNumbers" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" seed="211985103" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.002525" asserts="0">
                 <failure>
                   <message><![CDATA[Shouldly.ChuckedAWobbly : 
     1
@@ -252,15 +252,15 @@ Then the result should be 260 on the screen
     2
         but was
     1]]></message>
-                  <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in c:\Development\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.FailingBackgroundFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\FailingBackground.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in c:\Development\pickles-testresults\TestHarness\nunit3\FailingBackground.feature:Zeile 19.]]></stack-trace>
+                  <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.FailingBackgroundFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\nunit3\FailingBackground.feature:line 19]]></stack-trace>
                 </failure>
                 <output><![CDATA[Given the background step fails
 -> error: 
@@ -284,7 +284,7 @@ Then the result should be 180 on the screen
 ]]></output>
               </test-case>
             </test-suite>
-            <test-case id="0-1009" name="AddTwoNumbers" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddTwoNumbers" methodname="AddTwoNumbers" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" seed="212386315" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001235" asserts="0">
+            <test-case id="0-1009" name="AddTwoNumbers" fullname="Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddTwoNumbers" methodname="AddTwoNumbers" classname="Pickles.TestHarness.nunit3.FailingBackgroundFeature" runstate="Runnable" seed="212386315" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.002391" asserts="0">
               <properties>
                 <property name="Description" value="Add two numbers" />
               </properties>
@@ -295,15 +295,15 @@ Then the result should be 180 on the screen
     2
         but was
     1]]></message>
-                <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in c:\Development\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 25.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.FailingBackgroundFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\FailingBackground.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddTwoNumbers() in c:\Development\pickles-testresults\TestHarness\nunit3\FailingBackground.feature:Zeile 12.]]></stack-trace>
+                <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.FailingBackgroundFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.FailingBackgroundFeature.AddTwoNumbers() in C:\DevProjects\Tools\pickles\test-harness\nunit3\FailingBackground.feature:line 12]]></stack-trace>
               </failure>
               <output><![CDATA[Given the background step fails
 -> error: 
@@ -325,18 +325,18 @@ Then the result should be 120 on the screen
 ]]></output>
             </test-case>
           </test-suite>
-          <test-suite type="TestSuite" id="0-1066" name="MinimalFeatures" fullname="Pickles.TestHarness.nunit3.MinimalFeatures" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-05-11 14:37:37Z" end-time="2016-05-11 14:37:38Z" duration="0.533005" total="6" passed="3" failed="1" inconclusive="2" skipped="0" asserts="0">
+          <test-suite type="TestSuite" id="0-1070" name="MinimalFeatures" fullname="Pickles.TestHarness.nunit3.MinimalFeatures" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.601361" total="6" passed="3" failed="1" inconclusive="2" skipped="0" asserts="0">
             <failure>
               <message><![CDATA[One or more child tests had errors]]></message>
             </failure>
-            <test-suite type="TestFixture" id="0-1013" name="FailingFeature" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.010906" total="3" passed="1" failed="1" inconclusive="1" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="0-1057" name="FailingFeature" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.016653" total="3" passed="1" failed="1" inconclusive="1" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Failing" />
               </properties>
               <failure>
                 <message><![CDATA[One or more child tests had errors]]></message>
               </failure>
-              <test-case id="0-1016" name="FailingFeatureFailingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" methodname="FailingFeatureFailingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" seed="1328488278" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.004960" asserts="0">
+              <test-case id="0-1060" name="FailingFeatureFailingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario" methodname="FailingFeatureFailingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" seed="451452096" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.008863" asserts="0">
                 <properties>
                   <property name="Description" value="Failing Feature Failing Scenario" />
                 </properties>
@@ -347,15 +347,15 @@ Then the result should be 120 on the screen
     False
         but was
     True]]></message>
-                  <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.MinimalFeatures.MinimalSteps.ThenFailingStep() in c:\Development\pickles-testresults\TestHarness\AutomationLayer\MinimalFeatures\MinimalSteps.cs:Zeile 24.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\Minimal Features\Failing.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in c:\Development\pickles-testresults\TestHarness\nunit3\Minimal Features\Failing.feature:Zeile 10.]]></stack-trace>
+                  <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.MinimalFeatures.MinimalSteps.ThenFailingStep() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\MinimalFeatures\MinimalSteps.cs:line 24
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in C:\DevProjects\Tools\pickles\test-harness\nunit3\Minimal Features\Failing.feature:line 10]]></stack-trace>
                 </failure>
                 <output><![CDATA[Then failing step
 -> error: 
@@ -366,7 +366,7 @@ Then the result should be 120 on the screen
     True
 ]]></output>
               </test-case>
-              <test-case id="0-1015" name="FailingFeatureInconclusiveScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" methodname="FailingFeatureInconclusiveScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" seed="1620750620" result="Inconclusive" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.004301" asserts="0">
+              <test-case id="0-1059" name="FailingFeatureInconclusiveScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario" methodname="FailingFeatureInconclusiveScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" seed="1868752976" result="Inconclusive" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.006364" asserts="0">
                 <properties>
                   <property name="Description" value="Failing Feature Inconclusive Scenario" />
                 </properties>
@@ -378,7 +378,7 @@ Then the result should be 120 on the screen
 -> pending: MinimalSteps.ThenInconclusiveStep()
 ]]></output>
               </test-case>
-              <test-case id="0-1014" name="FailingFeaturePassingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" methodname="FailingFeaturePassingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" seed="118089422" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000676" asserts="0">
+              <test-case id="0-1058" name="FailingFeaturePassingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature.FailingFeaturePassingScenario" methodname="FailingFeaturePassingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.FailingFeature" runstate="Runnable" seed="637137152" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000667" asserts="0">
                 <properties>
                   <property name="Description" value="Failing Feature Passing Scenario" />
                 </properties>
@@ -387,11 +387,11 @@ Then the result should be 120 on the screen
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="TestFixture" id="0-1017" name="InconclusiveFeature" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" classname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" runstate="Runnable" testcasecount="2" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.002385" total="2" passed="1" failed="0" inconclusive="1" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="0-1061" name="InconclusiveFeature" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" classname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" runstate="Runnable" testcasecount="2" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.003114" total="2" passed="1" failed="0" inconclusive="1" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Inconclusive" />
               </properties>
-              <test-case id="0-1019" name="InconclusiveFeatureInconclusiveScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario" methodname="InconclusiveFeatureInconclusiveScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" runstate="Runnable" seed="292299438" result="Inconclusive" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001529" asserts="0">
+              <test-case id="0-1063" name="InconclusiveFeatureInconclusiveScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario" methodname="InconclusiveFeatureInconclusiveScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" runstate="Runnable" seed="1362768032" result="Inconclusive" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.002350" asserts="0">
                 <properties>
                   <property name="Description" value="Inconclusive Feature Inconclusive Scenario" />
                 </properties>
@@ -403,7 +403,7 @@ Then the result should be 120 on the screen
 -> pending: MinimalSteps.ThenInconclusiveStep()
 ]]></output>
               </test-case>
-              <test-case id="0-1018" name="InconclusiveFeaturePassingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature.InconclusiveFeaturePassingScenario" methodname="InconclusiveFeaturePassingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" runstate="Runnable" seed="1888940438" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000304" asserts="0">
+              <test-case id="0-1062" name="InconclusiveFeaturePassingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature.InconclusiveFeaturePassingScenario" methodname="InconclusiveFeaturePassingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.InconclusiveFeature" runstate="Runnable" seed="1460000646" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000326" asserts="0">
                 <properties>
                   <property name="Description" value="Inconclusive Feature Passing Scenario" />
                 </properties>
@@ -412,11 +412,11 @@ Then the result should be 120 on the screen
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="TestFixture" id="0-1020" name="PassingFeature" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature" classname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000884" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="TestFixture" id="0-1064" name="PassingFeature" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature" classname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000831" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Passing" />
               </properties>
-              <test-case id="0-1021" name="PassingFeaturePassingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature.PassingFeaturePassingScenario" methodname="PassingFeaturePassingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature" runstate="Runnable" seed="1196887609" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000432" asserts="0">
+              <test-case id="0-1065" name="PassingFeaturePassingScenario" fullname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature.PassingFeaturePassingScenario" methodname="PassingFeaturePassingScenario" classname="Pickles.TestHarness.nunit3.MinimalFeatures.PassingFeature" runstate="Runnable" seed="529523600" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000423" asserts="0">
                 <properties>
                   <property name="Description" value="Passing Feature Passing Scenario" />
                 </properties>
@@ -426,31 +426,31 @@ Then the result should be 120 on the screen
               </test-case>
             </test-suite>
           </test-suite>
-          <test-suite type="TestFixture" id="0-1022" name="NotAutomatedAtAllFeature" fullname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature" classname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001916" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1013" name="NotAutomatedAtAllFeature" fullname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature" classname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature" runstate="Runnable" testcasecount="1" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.003521" total="1" passed="0" failed="1" inconclusive="0" skipped="0" asserts="0">
             <properties>
               <property name="Description" value="NotAutomatedAtAll" />
             </properties>
             <failure>
               <message><![CDATA[One or more child tests had errors]]></message>
             </failure>
-            <test-case id="0-1023" name="AddTwoNumbers" fullname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature.AddTwoNumbers" methodname="AddTwoNumbers" classname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature" runstate="Runnable" seed="787650010" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001540" asserts="0">
+            <test-case id="0-1014" name="AddTwoNumbers" fullname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature.AddTwoNumbers" methodname="AddTwoNumbers" classname="Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature" runstate="Runnable" seed="118089422" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.003153" asserts="0">
               <properties>
                 <property name="Description" value="Add two numbers" />
                 <property name="Category" value="mytag" />
               </properties>
               <failure>
-                <message><![CDATA[System.NullReferenceException : Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.]]></message>
-                <stack-trace><![CDATA[   bei AutomationLayer.AdditionSteps.GivenIHaveEnteredIntoTheCalculator(Decimal p0) in c:\Development\pickles-testresults\TestHarness\AutomationLayer\AdditionSteps.cs:Zeile 31.
-   bei lambda_method(Closure , IContextManager , Decimal )
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\NotAutomatedAtAll.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature.AddTwoNumbers() in c:\Development\pickles-testresults\TestHarness\nunit3\NotAutomatedAtAll.feature:Zeile 11.]]></stack-trace>
+                <message><![CDATA[System.NullReferenceException : Object reference not set to an instance of an object.]]></message>
+                <stack-trace><![CDATA[   at AutomationLayer.AdditionSteps.GivenIHaveEnteredIntoTheCalculator(Decimal p0) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 31
+   at lambda_method(Closure , IContextManager , Decimal )
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.NotAutomatedAtAllFeature.AddTwoNumbers() in C:\DevProjects\Tools\pickles\test-harness\nunit3\NotAutomatedAtAll.feature:line 11]]></stack-trace>
               </failure>
               <output><![CDATA[Given I have entered 50 into the calculator
--> error: Der Objektverweis wurde nicht auf eine Objektinstanz festgelegt.
+-> error: Object reference not set to an instance of an object.
 And I have entered 70 into the calculator
 -> skipped because of previous errors
 When I press add
@@ -460,31 +460,31 @@ Then the result should be 120 on the screen
 ]]></output>
             </test-case>
           </test-suite>
-          <test-suite type="TestFixture" id="0-1024" name="ScenarioOutlinesFeature" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.019467" total="18" passed="12" failed="3" inconclusive="3" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1015" name="ScenarioOutlinesFeature" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" testcasecount="18" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.017604" total="18" passed="12" failed="3" inconclusive="3" skipped="0" asserts="0">
             <properties>
               <property name="Description" value="Scenario Outlines" />
             </properties>
             <failure>
               <message><![CDATA[One or more child tests had errors]]></message>
             </failure>
-            <test-suite type="ParameterizedMethod" id="0-1043" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.011343" total="6" passed="2" failed="2" inconclusive="2" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1034" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_" runstate="Runnable" testcasecount="6" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.009258" total="6" passed="2" failed="2" inconclusive="2" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="And we can go totally bonkers with multiple example sections." />
               </properties>
               <failure>
                 <message><![CDATA[One or more child tests had errors]]></message>
               </failure>
-              <test-case id="0-1037" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_1&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="657009205" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001606" asserts="0">
+              <test-case id="0-1028" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_1&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="193735939" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001794" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_1'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1038" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_2&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="392691004" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000197" asserts="0">
+              <test-case id="0-1029" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;pass_2&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1390597427" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000150" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_2'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1039" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_1&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1072944492" result="Inconclusive" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001509" asserts="0">
+              <test-case id="0-1030" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_1&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="875415367" result="Inconclusive" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.002448" asserts="0">
                 <reason>
                   <message><![CDATA[One or more step definitions are not implemented yet.
   ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")]]></message>
@@ -493,7 +493,7 @@ Then the result should be 120 on the screen
 -> pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")
 ]]></output>
               </test-case>
-              <test-case id="0-1040" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_2&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1548732413" result="Inconclusive" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000945" asserts="0">
+              <test-case id="0-1031" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;inconclusive_2&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1231727827" result="Inconclusive" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001642" asserts="0">
                 <reason>
                   <message><![CDATA[One or more step definitions are not implemented yet.
   ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_2")]]></message>
@@ -502,7 +502,7 @@ Then the result should be 120 on the screen
 -> pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_2")
 ]]></output>
               </test-case>
-              <test-case id="0-1041" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_1&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1958916467" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001094" asserts="0">
+              <test-case id="0-1032" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_1&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="52758991" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001442" asserts="0">
                 <failure>
                   <message><![CDATA[Shouldly.ChuckedAWobbly : 
     true
@@ -510,15 +510,15 @@ Then the result should be 120 on the screen
     False
         but was
     True]]></message>
-                  <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in c:\Development\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:Zeile 21.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\ScenarioOutlines.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in c:\Development\pickles-testresults\TestHarness\nunit3\ScenarioOutlines.feature:Zeile 45.]]></stack-trace>
+                  <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\nunit3\ScenarioOutlines.feature:line 45]]></stack-trace>
                 </failure>
                 <output><![CDATA[Then the scenario will 'fail_1'
 -> error: 
@@ -529,7 +529,7 @@ Then the result should be 120 on the screen
     True
 ]]></output>
               </test-case>
-              <test-case id="0-1042" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_2&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="592696544" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.005536" asserts="0">
+              <test-case id="0-1033" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(&quot;fail_2&quot;,null)" methodname="AndWeCanGoTotallyBonkersWithMultipleExampleSections_" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1923791459" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001108" asserts="0">
                 <failure>
                   <message><![CDATA[Shouldly.ChuckedAWobbly : 
     true
@@ -537,15 +537,15 @@ Then the result should be 120 on the screen
     False
         but was
     True]]></message>
-                  <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in c:\Development\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:Zeile 21.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\ScenarioOutlines.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in c:\Development\pickles-testresults\TestHarness\nunit3\ScenarioOutlines.feature:Zeile 45.]]></stack-trace>
+                  <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\nunit3\ScenarioOutlines.feature:line 45]]></stack-trace>
                 </failure>
                 <output><![CDATA[Then the scenario will 'fail_2'
 -> error: 
@@ -557,21 +557,21 @@ Then the result should be 120 on the screen
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="0-1045" name="DealCorrectlyWithBackslashesInTheExamples" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000911" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1036" name="DealCorrectlyWithBackslashesInTheExamples" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000769" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Deal correctly with backslashes in the examples" />
               </properties>
-              <test-case id="0-1044" name="DealCorrectlyWithBackslashesInTheExamples(&quot;c:\\Temp\\&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples(&quot;c:\\Temp\\&quot;,null)" methodname="DealCorrectlyWithBackslashesInTheExamples" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="125979337" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000822" asserts="0">
+              <test-case id="0-1035" name="DealCorrectlyWithBackslashesInTheExamples(&quot;c:\\Temp\\&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithBackslashesInTheExamples(&quot;c:\\Temp\\&quot;,null)" methodname="DealCorrectlyWithBackslashesInTheExamples" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1069402004" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000687" asserts="0">
                 <output><![CDATA[When I have backslashes in the value, for example a 'c:\Temp\'
 -> done: ScenarioOutlineSteps.WhenIHaveBackslashesInTheValueForExampleAFilePath("c:\Temp\") (0,0s)
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="0-1049" name="DealCorrectlyWithOverlongExampleValues" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithOverlongExampleValues" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000785" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1040" name="DealCorrectlyWithOverlongExampleValues" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithOverlongExampleValues" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001577" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Deal correctly with overlong example values" />
               </properties>
-              <test-case id="0-1048" name="DealCorrectlyWithOverlongExampleValues(&quot;Please enter a valid two letter count...&quot;,&quot;This is just a very very very veery l...&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithOverlongExampleValues(&quot;Please enter a valid two letter count...&quot;,&quot;This is just a very very very veery l...&quot;,null)" methodname="DealCorrectlyWithOverlongExampleValues" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="320302720" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000709" asserts="0">
+              <test-case id="0-1039" name="DealCorrectlyWithOverlongExampleValues(&quot;Please enter a valid two letter count...&quot;,&quot;This is just a very very very veery l...&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithOverlongExampleValues(&quot;Please enter a valid two letter count...&quot;,&quot;This is just a very very very veery l...&quot;,null)" methodname="DealCorrectlyWithOverlongExampleValues" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="392352118" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001443" asserts="0">
                 <output><![CDATA[When I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'
 -> done: ScenarioOutlineSteps.WhenIHaveAFieldWithValue("Please enter a va...") (0,0s)
 And I have a field with value 'This is just a very very very veery long error message!'
@@ -581,54 +581,54 @@ Then the scenario will 'pass_1'
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="0-1047" name="DealCorrectlyWithParenthesisInTheExamples" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000680" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1038" name="DealCorrectlyWithParenthesisInTheExamples" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000719" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="Deal correctly with parenthesis in the examples" />
               </properties>
-              <test-case id="0-1046" name="DealCorrectlyWithParenthesisInTheExamples(&quot;This is a description (and more)&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples(&quot;This is a description (and more)&quot;,null)" methodname="DealCorrectlyWithParenthesisInTheExamples" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1141276088" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000570" asserts="0">
+              <test-case id="0-1037" name="DealCorrectlyWithParenthesisInTheExamples(&quot;This is a description (and more)&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.DealCorrectlyWithParenthesisInTheExamples(&quot;This is a description (and more)&quot;,null)" methodname="DealCorrectlyWithParenthesisInTheExamples" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1448988997" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000608" asserts="0">
                 <output><![CDATA[When I have parenthesis in the value, for example an 'This is a description (and more)'
 -> done: ScenarioOutlineSteps.WhenIHaveParenthesisInTheValueForExampleAnOverlyDescriptiveField("This is a descrip...") (0,0s)
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="0-1028" name="ThisIsAScenarioOutlineWhereAllScenariosPass" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000590" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1019" name="ThisIsAScenarioOutlineWhereAllScenariosPass" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000618" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="This is a scenario outline where all scenarios pass" />
               </properties>
-              <test-case id="0-1025" name="ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_3&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_3&quot;,null)" methodname="ThisIsAScenarioOutlineWhereAllScenariosPass" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="657609446" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000215" asserts="0">
-                <output><![CDATA[Then the scenario will 'pass_3'
--> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_3") (0,0s)
-]]></output>
-              </test-case>
-              <test-case id="0-1026" name="ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereAllScenariosPass" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1899952087" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000081" asserts="0">
+              <test-case id="0-1016" name="ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereAllScenariosPass" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1096460943" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000232" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_1'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1027" name="ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_2&quot;,null)" methodname="ThisIsAScenarioOutlineWhereAllScenariosPass" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="866290569" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000081" asserts="0">
+              <test-case id="0-1017" name="ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_2&quot;,null)" methodname="ThisIsAScenarioOutlineWhereAllScenariosPass" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1554169190" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000076" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_2'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
 ]]></output>
               </test-case>
+              <test-case id="0-1018" name="ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_3&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereAllScenariosPass(&quot;pass_3&quot;,null)" methodname="ThisIsAScenarioOutlineWhereAllScenariosPass" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="703520303" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000063" asserts="0">
+                <output><![CDATA[Then the scenario will 'pass_3'
+-> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_3") (0,0s)
+]]></output>
+              </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="0-1036" name="ThisIsAScenarioOutlineWhereOneScenarioFails" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.002016" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1027" name="ThisIsAScenarioOutlineWhereOneScenarioFails" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails" runstate="Runnable" testcasecount="3" result="Failed" site="Child" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.002080" total="3" passed="2" failed="1" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="This is a scenario outline where one scenario fails" />
               </properties>
               <failure>
                 <message><![CDATA[One or more child tests had errors]]></message>
               </failure>
-              <test-case id="0-1033" name="ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioFails" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="107278582" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000220" asserts="0">
+              <test-case id="0-1024" name="ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioFails" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1002758134" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000208" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_1'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1034" name="ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_2&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioFails" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="692184546" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000077" asserts="0">
+              <test-case id="0-1025" name="ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;pass_2&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioFails" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="596653663" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000063" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_2'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1035" name="ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;fail_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;fail_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioFails" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="129833087" result="Failed" label="Error" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001531" asserts="0">
+              <test-case id="0-1026" name="ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;fail_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(&quot;fail_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioFails" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="79304597" result="Failed" label="Error" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001604" asserts="0">
                 <failure>
                   <message><![CDATA[Shouldly.ChuckedAWobbly : 
     true
@@ -636,15 +636,15 @@ Then the scenario will 'pass_1'
     False
         but was
     True]]></message>
-                  <stack-trace><![CDATA[   bei Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:Zeile 18.
-   bei Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:Zeile 17.
-   bei AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in c:\Development\pickles-testresults\TestHarness\AutomationLayer\ScenarioOutlineSteps.cs:Zeile 21.
-   bei TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-   bei TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-   bei Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ScenarioCleanup() in c:\Development\pickles-testresults\TestHarness\nunit3\ScenarioOutlines.feature.cs:Zeile 0.
-   bei Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in c:\Development\pickles-testresults\TestHarness\nunit3\ScenarioOutlines.feature:Zeile 34.]]></stack-trace>
+                  <stack-trace><![CDATA[   at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
+   at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
+   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
+   at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+   at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+   at Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ScenarioCleanup()
+   at Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\nunit3\ScenarioOutlines.feature:line 34]]></stack-trace>
                 </failure>
                 <output><![CDATA[Then the scenario will 'fail_1'
 -> error: 
@@ -656,21 +656,21 @@ Then the scenario will 'pass_1'
 ]]></output>
               </test-case>
             </test-suite>
-            <test-suite type="ParameterizedMethod" id="0-1032" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.002482" total="3" passed="2" failed="0" inconclusive="1" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1023" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" runstate="Runnable" testcasecount="3" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.002061" total="3" passed="2" failed="0" inconclusive="1" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="This is a scenario outline where one scenario is inconclusive" />
               </properties>
-              <test-case id="0-1029" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1960734727" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000280" asserts="0">
+              <test-case id="0-1020" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1888940438" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000266" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_1'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1030" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_2&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1586204435" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000092" asserts="0">
+              <test-case id="0-1021" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_2&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;pass_2&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1580158007" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000086" asserts="0">
                 <output><![CDATA[Then the scenario will 'pass_2'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1031" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;inconclusive_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;inconclusive_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="1835946489" result="Inconclusive" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.001892" asserts="0">
+              <test-case id="0-1022" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;inconclusive_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(&quot;inconclusive_1&quot;,null)" methodname="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive" classname="Pickles.TestHarness.nunit3.ScenarioOutlinesFeature" runstate="Runnable" seed="292299438" result="Inconclusive" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001491" asserts="0">
                 <reason>
                   <message><![CDATA[One or more step definitions are not implemented yet.
   ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")]]></message>
@@ -681,15 +681,15 @@ Then the scenario will 'pass_1'
               </test-case>
             </test-suite>
           </test-suite>
-          <test-suite type="TestFixture" id="0-1050" name="ScenariosWithSpecialCharactersFeature" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" testcasecount="9" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.004438" total="9" passed="9" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <test-suite type="TestFixture" id="0-1041" name="ScenariosWithSpecialCharactersFeature" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" testcasecount="11" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.006030" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
             <properties>
               <property name="Description" value="Scenarios With Special Characters" />
             </properties>
-            <test-suite type="ParameterizedMethod" id="0-1053" name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000951" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1056" name="ThisIsAScenarioOutlineWithAmpersand" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithAmpersand" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000754" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
-                <property name="Description" value="This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)" />
+                <property name="Description" value="This is a scenario outline with ampersand &amp;" />
               </properties>
-              <test-case id="0-1052" name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1608762882" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000827" asserts="0">
+              <test-case id="0-1055" name="ThisIsAScenarioOutlineWithAmpersand(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithAmpersand(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWithAmpersand" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1061146939" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000670" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 Then the scenario will 'pass_1'
@@ -697,7 +697,31 @@ Then the scenario will 'pass_1'
 ]]></output>
               </test-case>
             </test-suite>
-            <test-case id="0-1051" name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" methodname="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1487151050" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000360" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1054" name="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000482" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Description" value="This is a scenario outline with german umlauts äöüß ÄÖÜ" />
+              </properties>
+              <test-case id="0-1053" name="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1171064073" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000414" asserts="0">
+                <output><![CDATA[Given the calculator has clean memory
+-> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Then the scenario will 'pass_1'
+-> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-suite type="ParameterizedMethod" id="0-1044" name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" runstate="Runnable" testcasecount="1" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000485" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties>
+                <property name="Description" value="This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)" />
+              </properties>
+              <test-case id="0-1043" name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(&quot;pass_1&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40(&quot;pass_1&quot;,null)" methodname="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1072944492" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000362" asserts="0">
+                <output><![CDATA[Given the calculator has clean memory
+-> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+Then the scenario will 'pass_1'
+-> done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)
+]]></output>
+              </test-case>
+            </test-suite>
+            <test-case id="0-1042" name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" methodname="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="657009205" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000588" asserts="0">
               <properties>
                 <property name="Description" value="This is a scenario with parentheses, hyphen and comma (10-20, 30-40)" />
               </properties>
@@ -713,20 +737,11 @@ Then the result should be 120 on the screen
 -> done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(120) (0,0s)
 ]]></output>
             </test-case>
-            <test-suite type="ParameterizedMethod" id="0-1061" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters" runstate="Runnable" testcasecount="7" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.002582" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <test-suite type="ParameterizedMethod" id="0-1052" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters" runstate="Runnable" testcasecount="7" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.003198" total="7" passed="7" failed="0" inconclusive="0" skipped="0" asserts="0">
               <properties>
                 <property name="Description" value="This scenario contains examples with Regex-special characters" />
               </properties>
-              <test-case id="0-1054" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;^.*(?&lt;foo&gt;BAR)\\s[^0-9]{3,4}A+$&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;^.*(?&lt;foo&gt;BAR)\\s[^0-9]{3,4}A+$&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1923017343" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000688" asserts="0">
-                <output><![CDATA[Given the calculator has clean memory
--> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
-When I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\s[^0-9]{3,4}A+$'
--> done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("^.*(?<foo>BAR)\s[...") (0,0s)
-Then the scenario will 'PASS'
--> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
-]]></output>
-              </test-case>
-              <test-case id="0-1055" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;**&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;**&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1868752976" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000125" asserts="0">
+              <test-case id="0-1045" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;**&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;**&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1958916467" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.001010" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 When I have special characters for regexes in the value, for example a '**'
@@ -735,7 +750,7 @@ Then the scenario will 'PASS'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1056" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;++&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;++&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1595902790" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000111" asserts="0">
+              <test-case id="0-1046" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;++&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;++&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="592696544" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000112" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 When I have special characters for regexes in the value, for example a '++'
@@ -744,7 +759,7 @@ Then the scenario will 'PASS'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1057" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;.*&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;.*&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="451452096" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000963" asserts="0">
+              <test-case id="0-1047" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;.*&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;.*&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1548583897" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000100" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 When I have special characters for regexes in the value, for example a '.*'
@@ -753,7 +768,7 @@ Then the scenario will 'PASS'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1058" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;[]&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;[]&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1143024897" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000119" asserts="0">
+              <test-case id="0-1048" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;[]&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;[]&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="125979337" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000096" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 When I have special characters for regexes in the value, for example a '[]'
@@ -762,7 +777,7 @@ Then the scenario will 'PASS'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1059" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;{}&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;{}&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1435497444" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000107" asserts="0">
+              <test-case id="0-1049" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;{}&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;{}&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="589179632" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000863" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 When I have special characters for regexes in the value, for example a '{}'
@@ -771,11 +786,20 @@ Then the scenario will 'PASS'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 ]]></output>
               </test-case>
-              <test-case id="0-1060" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;()&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;()&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="686697671" result="Passed" start-time="2016-05-11 14:37:38Z" end-time="2016-05-11 14:37:38Z" duration="0.000103" asserts="0">
+              <test-case id="0-1050" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;()&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;()&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="1141276088" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000116" asserts="0">
                 <output><![CDATA[Given the calculator has clean memory
 -> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
 When I have special characters for regexes in the value, for example a '()'
 -> done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("()") (0,0s)
+Then the scenario will 'PASS'
+-> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
+]]></output>
+              </test-case>
+              <test-case id="0-1051" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;^.*(?&lt;foo&gt;BAR)\\s[^0-9]{3,4}A+$&quot;,null)" fullname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature.ThisScenarioContainsExamplesWithRegex_SpecialCharacters(&quot;^.*(?&lt;foo&gt;BAR)\\s[^0-9]{3,4}A+$&quot;,null)" methodname="ThisScenarioContainsExamplesWithRegex_SpecialCharacters" classname="Pickles.TestHarness.nunit3.ScenariosWithSpecialCharactersFeature" runstate="Runnable" seed="976149245" result="Passed" start-time="2016-09-28 07:33:25Z" end-time="2016-09-28 07:33:25Z" duration="0.000114" asserts="0">
+                <output><![CDATA[Given the calculator has clean memory
+-> done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
+When I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\s[^0-9]{3,4}A+$'
+-> done: ScenarioOutlineSteps.WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex("^.*(?<foo>BAR)\s[...") (0,0s)
 Then the scenario will 'PASS'
 -> done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)
 ]]></output>

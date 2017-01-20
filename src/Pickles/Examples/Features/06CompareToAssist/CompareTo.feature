@@ -1,6 +1,6 @@
 ﻿Feature: Show the compare to feature
-	In order to show the compare to features of SpecFlow Assist
-	As a SpecFlow evanglist
+	In order to show the compare to features of SpecFlow Assist  
+	As a SpecFlow evanglist  
 	I want to show how the different versions of compareTo works
 
 
