@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Pickles.DocumentationBuilders.Cucumber.UnitTests
+namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests
 {
     using TechTalk.SpecFlow;
     
