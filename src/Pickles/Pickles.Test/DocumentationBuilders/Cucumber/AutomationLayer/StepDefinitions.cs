@@ -62,10 +62,9 @@ namespace PicklesDoc.Pickles.Test.DocumentationBuilders.Cucumber.AutomationLayer
         {
             var actualResult = this.FileSystem.File.ReadAllText(@"c:\output\cucumberResult.json");
 
-            Console.WriteLine("----------------------------------------------------");
-            Console.WriteLine(actualResult);
-            actualResult = actualResult.Replace("{", "{{").Replace("}", "}}");
-            expectedResult = expectedResult.Replace("{", "{{").Replace("}", "}}");
+            //standardize newlines across various environments
+            actualResult = actualResult.Replace("\r\n", "\n");
+            expectedResult = expectedResult.Replace("\r\n", "\n");
             Check.That(actualResult).Contains(expectedResult);
         }
     }
