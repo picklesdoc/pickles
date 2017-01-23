@@ -19,6 +19,9 @@
 		<OutputFormat Include="JSON">
 			<Name>JSON</Name>
 		</OutputFormat>
+		<OutputFormat Include="Cucumber">
+			<Name>Cucumber</Name>
+		</OutputFormat>
 	</ItemGroup>
 	<UsingTask AssemblyFile=".\deploy\nuget\packages\Pickles.MSBuild.$(Version)\tools\PicklesDoc.Pickles.MSBuild.Tasks.dll" TaskName="Pickles" />
 	<Target Name="document">
