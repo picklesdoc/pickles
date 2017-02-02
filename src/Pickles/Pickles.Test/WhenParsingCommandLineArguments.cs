@@ -232,6 +232,63 @@ namespace PicklesDoc.Pickles.Test
         }
 
         [Test]
+        public void ThenCanParseMultipleResultsFilesWithWildCard()
+        {
+            FileSystem.AddFile(@"c:\results1.xml", "<xml />");
+            FileSystem.AddFile(@"c:\results2.xml", "<xml />");
+            var args = new[] { @"-link-results-file=c:\results*.xml" };
+
+            var configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.HasTestResults).IsTrue();
+            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(2);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results1.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results2.xml").Count()).IsEqualTo(1);
+        }
+
+        [Test]
+        public void ThenCanParseMultipleResultsFilesWithWildCardWhereNoMatchIsExcluded()
+        {
+            FileSystem.AddFile(@"c:\results1.xml", "<xml />");
+            FileSystem.AddFile(@"c:\results2.xml", "<xml />");
+            FileSystem.AddFile(@"c:\nomatch_results3.xml", "<xml />");
+            var args = new[] { @"-link-results-file=c:\results*.xml" };
+
+            var configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.HasTestResults).IsTrue();
+            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(2);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results1.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results2.xml").Count()).IsEqualTo(1);
+        }
+
+        [Test]
+        public void ThenCanParseMultipleResultsFilesWithWildCardAndSemicolon()
+        {
+            FileSystem.AddFile(@"c:\results_foo1.xml", "<xml />");
+            FileSystem.AddFile(@"c:\results_foo2.xml", "<xml />");
+            FileSystem.AddFile(@"c:\results_bar.xml", "<xml />");
+            var args = new[] { @"-link-results-file=c:\results_foo*.xml;c:\results_bar.xml" };
+
+            var configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.HasTestResults).IsTrue();
+            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(3);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo1.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo2.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_bar.xml").Count()).IsEqualTo(1);
+        }
+
+        [Test]
         public void ThenCanParseResultsFileWithShortFormSuccessfully()
         {
             FileSystem.AddFile(@"c:\results.xml", "<xml />");
@@ -465,6 +522,7 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void ThenCanFilterOutNonExistingTestResultFiles()
         {
+            FileSystem.AddFile(@"c:\results1.xml", "<xml />");
             var args = new[] { @"-link-results-file=c:\DoesNotExist.xml;" };
 
             var configuration = new Configuration();

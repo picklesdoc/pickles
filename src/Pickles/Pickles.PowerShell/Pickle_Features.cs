@@ -25,6 +25,8 @@ using System.IO.Abstractions;
 using System.Management.Automation;
 using System.Reflection;
 using Autofac;
+using PicklesDoc.Pickles.Extensions;
+using System.Linq;
 
 namespace PicklesDoc.Pickles.PowerShell
 {
@@ -95,7 +97,8 @@ namespace PicklesDoc.Pickles.PowerShell
 
             if (!string.IsNullOrEmpty(this.TestResultsFile))
             {
-                configuration.AddTestResultFile(fileSystem.FileInfo.FromFileName(this.TestResultsFile));
+                var files = PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalWildCards(this.TestResultsFile, fileSystem);
+                configuration.AddTestResultFiles(files.Select(f => fileSystem.FileInfo.FromFileName(f))); 
             }
 
             configuration.SystemUnderTestName = this.SystemUnderTestName;
