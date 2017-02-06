@@ -4,9 +4,9 @@
 ECHO Remember to build the solution first!
 
 "%~dp0\test-harness\packages\NUnit.Runners.2.6.4\tools\nunit-console.exe" "%~dp0\test-harness\nunit\bin\Debug\nunitHarness.dll" /result="%~dp0\results-example-nunit.xml"
-"%~dp0\test-harness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe" "%~dp0\test-harness\nunit\bin\Debug\nunitHarness.dll" /result="%~dp0\results-example-nunit2-with-nunit3-runner.xml"
+"%~dp0\test-harness\packages\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe" "%~dp0\test-harness\nunit\bin\Debug\nunitHarness.dll" /result="%~dp0\results-example-nunit2-with-nunit3-runner.xml"
 
-"%~dp0\test-harness\packages\NUnit.Console.3.0.0\tools\nunit3-console.exe" "%~dp0\test-harness\nunit3\bin\Debug\nunit3Harness.dll" /result="%~dp0\results-example-nunit3.xml"
+"%~dp0\test-harness\packages\NUnit.ConsoleRunner.3.6.0\tools\nunit3-console.exe" "%~dp0\test-harness\nunit3\bin\Debug\nunit3Harness.dll" /result="%~dp0\results-example-nunit3.xml"
 
 "%~dp0\test-harness\packages\SpecRun.Runner.1.2.0\tools\specrun.exe" run default.srprofile "/baseFolder:%~dp0\test-harness\SpecRun\bin\Debug" /log:specrun.log /report:"%~dp0\results-example-specrun.html"
 
