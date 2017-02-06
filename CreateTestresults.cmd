@@ -29,15 +29,25 @@ rmdir /s /q "%~dp0\TestResults\"
 "%ProgramFiles(x86)%\Microsoft Visual Studio 14.0\Common7\IDE\CommonExtensions\Microsoft\TestWindow\vstest.console.exe" "%~dp0\test-harness\mstest\bin\Debug\mstestHarness.dll" /logger:trx
 FOR /R "%~dp0\TestResults\" %%G IN (*.trx) DO move "%%G" "%~dp0\results-example-vstest.trx"
 
+ECHO Moving NUnit 2 results
 move "%~dp0\results-example-nunit.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\NUnit\NUnit2\"
+ECHO Moving NUnit 2 with NUnit3 runner results
 move "%~dp0\results-example-nunit2-with-nunit3-runner.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\NUnit\NUnit3\"
+ECHO Moving NUnit 3 results
 move "%~dp0\results-example-nunit3.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\NUnit\NUnit3\"
+ECHO Moving XUnit 1 results
 move "%~dp0\results-example-xunit.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\XUnit\XUnit1\"
+ECHO Moving XUnit 2 results
 move "%~dp0\results-example-xunit2.xml" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\XUnit\XUnit2\"
+ECHO Moving SpecRun results
 move "%~dp0\results-example-specrun.html" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\SpecRun\"
+ECHO Moving Cucumber JSON results
 move "%~dp0\results-example-json.json" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\CucumberJSON\"
+ECHO Moving MSTest results
 move "%~dp0\results-example-mstest.trx" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\MsTest\"
+ECHO Moving CucumberJS JSON results
 move "%~dp0\results-example-cucumberjs-json.json" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\CucumberJSON\"
+ECHO Moving VSTest results
 move "%~dp0\results-example-vstest.trx" "%~dp0\src\Pickles\Pickles.TestFrameworks.UnitTests\VsTest\"
 
 @popd
