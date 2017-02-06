@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Linq;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 using PicklesDoc.Pickles.DocumentationBuilders.Word.Extensions;
@@ -69,8 +71,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
             foreach (var example in scenarioOutline.Examples)
             {
-                body.GenerateParagraph("Examples: " + example.Description, "Heading3");
-                this.wordTableFormatter.Format(body, example.TableArgument);
+                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }));
+                paragraph.Append( new Run( new RunProperties(), new Text( "Examples: " + example.Description ) ) );
+                if ( example.Tags.Count != 0 )
+                {
+                    paragraph.Append( new Run( new Text( "  " ) {Space = SpaceProcessingModeValues.Preserve} ) );
+                    var tagrunProp = new RunProperties( new Italic(), new Color {ThemeColor = ThemeColorValues.Text2} ) {Bold = new Bold() {Val = false}};
+                    paragraph.Append( new Run( tagrunProp.CloneNode( true ), new Text( " (Tags: " ) ) );
+                    paragraph.Append( new Run( tagrunProp.CloneNode( true ), new Text( string.Join( ", ", example.Tags ) + ")" ) ) );
+                }
+                body.Append( paragraph );
+
+                this.wordTableFormatter.Format( body, example.TableArgument );
             }
         }
     }

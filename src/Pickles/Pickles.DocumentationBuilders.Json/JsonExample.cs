@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
@@ -29,5 +30,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         public string Description { get; set; }
 
         public JsonTable TableArgument { get; set; }
+
+        public List<string> Tags { get; set; }
     }
 }

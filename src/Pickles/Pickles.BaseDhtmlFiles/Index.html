@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -187,7 +187,16 @@
 
                                     <ul data-bind="foreach: Examples">
                                         <li class="step">
-                                            <div><strong>Examples:</strong> <span data-bind="text: Name"></span></div>
+                                            <div>
+                                                <strong>Examples:</strong> <span data-bind="text: Name"></span>
+                                                <span data-bind="if: Tags.length > 0" class="canHighlight inline">
+                                                    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                                                    <i class=" icon-tags"></i>
+                                                    <span data-bind="foreach: Tags">
+                                                        <span data-bind="text: $data" class="inline"></span>
+                                                    </span>
+                                                </span>
+                                            </div>
                                             <div class="description" data-bind="html: renderMarkdownBlock(Description)"></div>
                                             <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
                                         </li>

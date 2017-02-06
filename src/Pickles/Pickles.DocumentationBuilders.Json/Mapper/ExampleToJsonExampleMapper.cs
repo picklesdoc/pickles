@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -44,7 +46,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
             {
                 Name = example.Name,
                 Description = example.Description,
-                TableArgument = this.tableMapper.Map(example.TableArgument)
+                TableArgument = this.tableMapper.Map(example.TableArgument),
+                Tags = (example.Tags ?? new List<string>()).ToList(),
             };
         }
     }
