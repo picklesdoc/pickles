@@ -14,11 +14,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 335566
+              "duration": 2580939
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -27,11 +27,11 @@
             "name": "I have entered 60 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 220099
+              "duration": 880198
             },
             "line": 11,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -40,11 +40,11 @@
             "name": "I have entered 70 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 65003
+              "duration": 133926
             },
             "line": 12,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -53,11 +53,11 @@
             "name": "I have entered 130 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 50179
+              "duration": 130765
             },
             "line": 13,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -66,11 +66,11 @@
             "name": "I press add",
             "result": {
               "status": "passed",
-              "duration": 181325
+              "duration": 360691
             },
             "line": 14,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -79,11 +79,11 @@
             "name": "the result should be 260 on the screen",
             "result": {
               "status": "passed",
-              "duration": 110335
+              "duration": 161185
             },
             "line": 15,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -107,11 +107,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 80114
+              "duration": 138667
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -120,11 +120,11 @@
             "name": "I have entered 40 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 49322
+              "duration": 78618
             },
             "line": 11,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -133,11 +133,11 @@
             "name": "I have entered 50 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 122024
+              "duration": 96395
             },
             "line": 12,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -146,11 +146,11 @@
             "name": "I have entered 90 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 81539
+              "duration": 245333
             },
             "line": 13,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -159,11 +159,11 @@
             "name": "I press add",
             "result": {
               "status": "passed",
-              "duration": 56736
+              "duration": 112593
             },
             "line": 14,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -172,11 +172,11 @@
             "name": "the result should be 180 on the screen",
             "result": {
               "status": "passed",
-              "duration": 72701
+              "duration": 286024
             },
             "line": 15,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -200,11 +200,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 164219
+              "duration": 114568
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -213,11 +213,11 @@
             "name": "I have entered 1 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 69565
+              "duration": 83358
             },
             "line": 24,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -226,11 +226,11 @@
             "name": "I have entered 2 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 130577
+              "duration": 101926
             },
             "line": 25,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -239,11 +239,11 @@
             "name": "I press add",
             "result": {
               "status": "passed",
-              "duration": 63008
+              "duration": 176198
             },
             "line": 26,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -252,11 +252,11 @@
             "name": "the result should be 3 on the screen",
             "result": {
               "status": "passed",
-              "duration": 52459
+              "duration": 140642
             },
             "line": 27,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -280,11 +280,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 59016
+              "duration": 119703
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -293,11 +293,11 @@
             "name": "I have entered 1 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 52174
+              "duration": 108247
             },
             "line": 31,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -318,7 +318,7 @@
             },
             "line": 33,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -330,7 +330,7 @@
             },
             "line": 34,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -354,11 +354,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 70991
+              "duration": 218864
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -398,7 +398,7 @@
     "line": 1,
     "name": "Addition",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/Addition.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/Addition.feature"
   },
   {
     "description": "This feature has a failing background.",
@@ -415,12 +415,12 @@
             "name": "the background step fails",
             "result": {
               "status": "failed",
-              "duration": 716177,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 1048889,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
             }
           },
           {
@@ -432,7 +432,7 @@
             },
             "line": 6,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -444,7 +444,7 @@
             },
             "line": 9,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -456,7 +456,7 @@
             },
             "line": 10,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -468,7 +468,7 @@
             },
             "line": 11,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -480,7 +480,7 @@
             },
             "line": 12,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -499,12 +499,12 @@
             "name": "the background step fails",
             "result": {
               "status": "failed",
-              "duration": 149393,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 264691,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
             }
           },
           {
@@ -516,7 +516,7 @@
             },
             "line": 6,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -528,7 +528,7 @@
             },
             "line": 15,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -540,7 +540,7 @@
             },
             "line": 16,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -552,7 +552,7 @@
             },
             "line": 17,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -564,7 +564,7 @@
             },
             "line": 18,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -576,7 +576,7 @@
             },
             "line": 19,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -595,12 +595,12 @@
             "name": "the background step fails",
             "result": {
               "status": "failed",
-              "duration": 70420,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 162766,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:13)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:35"
             }
           },
           {
@@ -612,7 +612,7 @@
             },
             "line": 6,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -624,7 +624,7 @@
             },
             "line": 15,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -636,7 +636,7 @@
             },
             "line": 16,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -648,7 +648,7 @@
             },
             "line": 17,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -660,7 +660,7 @@
             },
             "line": 18,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -672,7 +672,7 @@
             },
             "line": 19,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -685,7 +685,7 @@
     "line": 1,
     "name": "Failing Background",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/FailingBackground.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/FailingBackground.feature"
   },
   {
     "elements": [
@@ -701,11 +701,11 @@
             "name": "passing step",
             "result": {
               "status": "passed",
-              "duration": 124590
+              "duration": 159210
             },
             "line": 4,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
             }
           }
         ],
@@ -727,7 +727,7 @@
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:12"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:12"
             }
           }
         ],
@@ -746,12 +746,12 @@
             "name": "failing step",
             "result": {
               "status": "failed",
-              "duration": 139130,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 233086,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 10,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:17"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:17"
             }
           }
         ],
@@ -764,7 +764,7 @@
     "line": 1,
     "name": "Failing",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/Minimal Features/Failing.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/Minimal Features/Failing.feature"
   },
   {
     "elements": [
@@ -780,11 +780,11 @@
             "name": "passing step",
             "result": {
               "status": "passed",
-              "duration": 55310
+              "duration": 119704
             },
             "line": 4,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
             }
           }
         ],
@@ -806,7 +806,7 @@
             },
             "line": 7,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:12"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:12"
             }
           }
         ],
@@ -819,7 +819,7 @@
     "line": 1,
     "name": "Inconclusive",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/Minimal Features/Inconclusive.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/Minimal Features/Inconclusive.feature"
   },
   {
     "elements": [
@@ -835,11 +835,11 @@
             "name": "passing step",
             "result": {
               "status": "passed",
-              "duration": 58161
+              "duration": 101531
             },
             "line": 4,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:7"
             }
           }
         ],
@@ -852,7 +852,7 @@
     "line": 1,
     "name": "Passing",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/Minimal Features/Passing.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/Minimal Features/Passing.feature"
   },
   {
     "elements": [
@@ -1000,7 +1000,7 @@
     "line": 1,
     "name": "Not Automated At All",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/NotAutomatedAtAll.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/NotAutomatedAtAll.feature"
   },
   {
     "description": "  Here we demonstrate how we deal with scenario outlines",
@@ -1017,11 +1017,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 89522
+              "duration": 271803
             },
             "line": 8,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1040,11 +1040,11 @@
             "name": "the scenario will 'pass_2'",
             "result": {
               "status": "passed",
-              "duration": 48468
+              "duration": 167111
             },
             "line": 8,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1063,11 +1063,11 @@
             "name": "the scenario will 'pass_3'",
             "result": {
               "status": "passed",
-              "duration": 59301
+              "duration": 86123
             },
             "line": 8,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1086,11 +1086,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 42195
+              "duration": 123654
             },
             "line": 21,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1109,11 +1109,11 @@
             "name": "the scenario will 'pass_2'",
             "result": {
               "status": "passed",
-              "duration": 483819
+              "duration": 78617
             },
             "line": 21,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1135,7 +1135,7 @@
             },
             "line": 21,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
             }
           }
         ],
@@ -1154,11 +1154,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 46757
+              "duration": 102321
             },
             "line": 34,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1177,11 +1177,11 @@
             "name": "the scenario will 'pass_2'",
             "result": {
               "status": "passed",
-              "duration": 41625
+              "duration": 94420
             },
             "line": 34,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1200,12 +1200,12 @@
             "name": "the scenario will 'fail_1'",
             "result": {
               "status": "failed",
-              "duration": 155096,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 227950,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 34,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
             }
           }
         ],
@@ -1224,11 +1224,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 42766
+              "duration": 77432
             },
             "line": 45,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1247,11 +1247,11 @@
             "name": "the scenario will 'pass_2'",
             "result": {
               "status": "passed",
-              "duration": 45901
+              "duration": 133531
             },
             "line": 45,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1273,7 +1273,7 @@
             },
             "line": 45,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
             }
           }
         ],
@@ -1295,7 +1295,7 @@
             },
             "line": 45,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:12"
             }
           }
         ],
@@ -1314,12 +1314,12 @@
             "name": "the scenario will 'fail_1'",
             "result": {
               "status": "failed",
-              "duration": 86671,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 110617,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 45,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
             }
           }
         ],
@@ -1338,12 +1338,12 @@
             "name": "the scenario will 'fail_2'",
             "result": {
               "status": "failed",
-              "duration": 65003,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
+              "duration": 162766,
+              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:18:12)\n    at process._tickCallback (node.js:355:11)\n    at Function.Module.runMain (module.js:503:11)\n    at startup (node.js:129:16)\n    at node.js:814:3"
             },
             "line": 45,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:17"
             }
           }
         ],
@@ -1362,11 +1362,11 @@
             "name": "I have backslashes in the value, for example a 'c:\\Temp\\'",
             "result": {
               "status": "passed",
-              "duration": 622949
+              "duration": 247704
             },
             "line": 65,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:22"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:22"
             }
           }
         ],
@@ -1385,11 +1385,11 @@
             "name": "I have parenthesis in the value, for example an 'This is a description (and more)'",
             "result": {
               "status": "passed",
-              "duration": 74697
+              "duration": 255210
             },
             "line": 74,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:27"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:27"
             }
           }
         ],
@@ -1408,11 +1408,11 @@
             "name": "I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'",
             "result": {
               "status": "passed",
-              "duration": 78974
+              "duration": 239012
             },
             "line": 82,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:37"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:37"
             }
           },
           {
@@ -1421,11 +1421,11 @@
             "name": "I have a field with value 'This is just a very very very veery long error message!'",
             "result": {
               "status": "passed",
-              "duration": 45046
+              "duration": 61630
             },
             "line": 83,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:37"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:37"
             }
           },
           {
@@ -1434,11 +1434,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 46187
+              "duration": 163951
             },
             "line": 84,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1451,7 +1451,7 @@
     "line": 1,
     "name": "Scenario Outlines",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/ScenarioOutlines.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/ScenarioOutlines.feature"
   },
   {
     "description": "  Here we demonstrate usage of special characters in scenario names",
@@ -1468,11 +1468,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 97505
+              "duration": 94025
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1481,11 +1481,11 @@
             "name": "I have entered 50 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 55025
+              "duration": 207012
             },
             "line": 8,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -1494,11 +1494,11 @@
             "name": "I have entered 70 into the calculator",
             "result": {
               "status": "passed",
-              "duration": 70991
+              "duration": 192395
             },
             "line": 9,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:15"
             }
           },
           {
@@ -1507,11 +1507,11 @@
             "name": "I press add",
             "result": {
               "status": "passed",
-              "duration": 45046
+              "duration": 66766
             },
             "line": 10,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:25"
             }
           },
           {
@@ -1520,11 +1520,11 @@
             "name": "the result should be 120 on the screen",
             "result": {
               "status": "passed",
-              "duration": 69280
+              "duration": 69136
             },
             "line": 11,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:30"
             }
           }
         ],
@@ -1543,11 +1543,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 500355
+              "duration": 103901
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1556,11 +1556,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 60156
+              "duration": 90864
             },
             "line": 15,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1579,11 +1579,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 132002
+              "duration": 97186
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1592,11 +1592,11 @@
             "name": "I have special characters for regexes in the value, for example a '**'",
             "result": {
               "status": "passed",
-              "duration": 1900779
+              "duration": 105087
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1605,11 +1605,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 45616
+              "duration": 80987
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1628,11 +1628,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 57021
+              "duration": 146963
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1641,11 +1641,11 @@
             "name": "I have special characters for regexes in the value, for example a '++'",
             "result": {
               "status": "passed",
-              "duration": 41055
+              "duration": 105086
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1654,11 +1654,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 42481
+              "duration": 70716
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1677,11 +1677,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 53600
+              "duration": 84543
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1690,11 +1690,11 @@
             "name": "I have special characters for regexes in the value, for example a '.*'",
             "result": {
               "status": "passed",
-              "duration": 43051
+              "duration": 63605
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1703,11 +1703,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 55880
+              "duration": 64395
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1726,11 +1726,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 58731
+              "duration": 263111
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1739,11 +1739,11 @@
             "name": "I have special characters for regexes in the value, for example a '[]'",
             "result": {
               "status": "passed",
-              "duration": 286813
+              "duration": 71506
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1752,11 +1752,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 49893
+              "duration": 81383
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1775,11 +1775,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 57590
+              "duration": 69136
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1788,11 +1788,11 @@
             "name": "I have special characters for regexes in the value, for example a '{}'",
             "result": {
               "status": "passed",
-              "duration": 42480
+              "duration": 55704
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1801,11 +1801,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 121738
+              "duration": 111803
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1824,11 +1824,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 78973
+              "duration": 74667
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1837,11 +1837,11 @@
             "name": "I have special characters for regexes in the value, for example a '()'",
             "result": {
               "status": "passed",
-              "duration": 51318
+              "duration": 57679
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1850,11 +1850,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 49893
+              "duration": 55309
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1873,11 +1873,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 59302
+              "duration": 67950
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1886,11 +1886,11 @@
             "name": "I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$'",
             "result": {
               "status": "passed",
-              "duration": 51318
+              "duration": 55308
             },
             "line": 22,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:32"
             }
           },
           {
@@ -1899,11 +1899,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 61867
+              "duration": 55703
             },
             "line": 23,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1922,11 +1922,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 57590
+              "duration": 65976
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1935,11 +1935,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 46187
+              "duration": 56099
             },
             "line": 36,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1958,11 +1958,11 @@
             "name": "the calculator has clean memory",
             "result": {
               "status": "passed",
-              "duration": 57876
+              "duration": 125630
             },
             "line": 5,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:10"
             }
           },
           {
@@ -1971,11 +1971,11 @@
             "name": "the scenario will 'pass_1'",
             "result": {
               "status": "passed",
-              "duration": 490377
+              "duration": 64791
             },
             "line": 43,
             "match": {
-              "location": "C:\\DevProjects\\Tools\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
+              "location": "C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:7"
             }
           }
         ],
@@ -1988,6 +1988,6 @@
     "line": 1,
     "name": "Scenarios With Special Characters",
     "tags": [],
-    "uri": "C:/DevProjects/Tools/pickles/test-harness/CucumberJS/features/ScenariosWithSpecialCharacters.feature"
+    "uri": "C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/CucumberJS/features/ScenariosWithSpecialCharacters.feature"
   }
 ]

@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="8b92f3df-38df-4ef7-bf11-219c12f59f95" name="HKR@AS0283 2016-09-28 09:33:43" runUser="OEVERMANN\HKR" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+<TestRun id="60c49509-a48c-407c-9b6e-261cf32df049" name="dirkr@DESKTOP-5DEA222 2017-02-06 17:10:54" runUser="DESKTOP-5DEA222\dirkr" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <TestSettings name="TestSettings" id="3d90c4f8-ccdc-4663-bad3-9f4c55f42318">
     <Description>These are default test settings for a local test run.</Description>
-    <Deployment userDeploymentRoot="C:\DevProjects\Tools\pickles" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="HKR_AS0283 2016-09-28 09_33_43" />
+    <Deployment userDeploymentRoot="C:\Dev\Code\GitHub\DirkRombauts\pickles" useDefaultDeploymentRoot="false" enabled="false" runDeploymentRoot="dirkr_DESKTOP-5DEA222 2017-02-06 17_10_54" />
     <Execution>
       <TestTypeSpecific />
       <AgentRule name="Execution Agents">
@@ -10,14 +10,14 @@
     </Execution>
     <Properties />
   </TestSettings>
-  <Times creation="2016-09-28T09:33:43.1911705+02:00" queuing="2016-09-28T09:33:43.7031465+02:00" start="2016-09-28T09:33:43.7971511+02:00" finish="2016-09-28T09:33:44.4531422+02:00" />
+  <Times creation="2017-02-06T17:10:54.0815346+01:00" queuing="2017-02-06T17:10:54.4897849+01:00" start="2017-02-06T17:10:54.6227591+01:00" finish="2017-02-06T17:10:55.4398814+01:00" />
   <ResultSummary outcome="Failed">
     <Counters total="47" executed="47" passed="30" error="0" failed="8" timeout="0" aborted="0" inconclusive="9" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="7699da71-b819-eb00-3894-2f0be7eec39c">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="7699da71-b819-eb00-3894-2f0be7eec39c">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="fe022d9c-e496-4d25-8ee2-cecdfd7d7cbd" />
+      <Execution id="6d92ba39-2017-4597-9ddc-b66a1dc001b6" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -32,25 +32,25 @@
           <Value>[]</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" />
     </UnitTest>
-    <UnitTest name="NotAutomatedScenario1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="0e090158-43a1-1be8-47c2-13e1b2c9f8c7">
+    <UnitTest name="NotAutomatedScenario1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="0e090158-43a1-1be8-47c2-13e1b2c9f8c7">
       <Description>Not automated scenario 1</Description>
-      <Execution id="0289f165-b539-472e-97da-60133c9753c3" />
+      <Execution id="720f9d5d-974a-4761-b5f0-debba29d809a" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Not Automated At All</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario1" />
     </UnitTest>
-    <UnitTest name="AddingSeveralNumbers_40" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="4d0f7327-ed22-9a43-969a-ac2ea8102d66">
+    <UnitTest name="AddingSeveralNumbers_40" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="4d0f7327-ed22-9a43-969a-ac2ea8102d66">
       <Description>Adding several numbers</Description>
       <TestCategory>
         <TestCategoryItem TestCategory="tag2" />
       </TestCategory>
-      <Execution id="6b7ae4ce-36d5-4d33-b8f0-1bd2c47ce15e" />
+      <Execution id="fda966b5-6328-44c7-b6b7-8fcebdc8535c" />
       <Properties>
         <Property>
           <Key>Parameter:first number</Key>
@@ -77,11 +77,11 @@
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_40" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_40" />
     </UnitTest>
-    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="40304968-0dee-8e41-4f42-20809899a9d0">
+    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="40304968-0dee-8e41-4f42-20809899a9d0">
       <Description>And we can go totally bonkers with multiple example sections.</Description>
-      <Execution id="dc477dc5-8081-4326-a1a3-7f691ef07670" />
+      <Execution id="6240d9de-e95c-4983-8c6f-bb8b564ffe2c" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -96,22 +96,22 @@
           <Value>fail_2</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2" />
     </UnitTest>
-    <UnitTest name="NotAutomatedScenario3" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="64813bea-d79b-d74b-adb5-1302eaf5641f">
+    <UnitTest name="NotAutomatedScenario3" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="64813bea-d79b-d74b-adb5-1302eaf5641f">
       <Description>Not automated scenario 3</Description>
-      <Execution id="08a69590-d4ac-4a25-b0bf-00702dee00bd" />
+      <Execution id="7ea0380a-39a5-4261-8323-034fe8ba5b5d" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Not Automated At All</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario3" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario3" />
     </UnitTest>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="a3bd6f67-daac-1ebc-5894-1d73dbe8d707">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="a3bd6f67-daac-1ebc-5894-1d73dbe8d707">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="f2df90c9-7a83-4804-8286-7e68abdb6acc" />
+      <Execution id="f88d041d-6c5d-4fe7-8853-4dff41a2b1f2" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -126,22 +126,22 @@
           <Value>.*</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="3fe8806f-fabb-1deb-7e27-c59578f16da3">
+    <UnitTest name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="3fe8806f-fabb-1deb-7e27-c59578f16da3">
       <Description>This is a scenario with parentheses, hyphen and comma (10-20, 30-40)</Description>
-      <Execution id="d6156b13-8dea-4855-a0d6-c17e57bc0bf1" />
+      <Execution id="e4913852-5b3e-4a2f-b787-1af56a7446c4" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Scenarios With Special Characters</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" />
     </UnitTest>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="fb3ec8b2-a410-ecc8-265b-29bfd3772553">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="fb3ec8b2-a410-ecc8-265b-29bfd3772553">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="1aa8cc43-19e6-440f-9d36-87f525d47f1b" />
+      <Execution id="c7f4b4f7-734c-41d7-863a-73a058b6684c" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -156,33 +156,33 @@
           <Value>++</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" />
     </UnitTest>
-    <UnitTest name="AddTwoNumbers" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="ca63316a-39e5-9545-3bca-f1839c7b4664">
+    <UnitTest name="AddTwoNumbers" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="ca63316a-39e5-9545-3bca-f1839c7b4664">
       <Description>Add two numbers</Description>
-      <Execution id="e88d9922-5a81-4f06-a73d-fe2ec0f0055b" />
+      <Execution id="d8cb075f-3d81-4e72-b215-b9765db84238" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Failing Background</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.FailingBackgroundFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTwoNumbers" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.FailingBackgroundFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTwoNumbers" />
     </UnitTest>
-    <UnitTest name="FailingFeatureInconclusiveScenario" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="7e6c75c9-5365-7582-f701-20d37d3ff511">
+    <UnitTest name="FailingFeatureInconclusiveScenario" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="7e6c75c9-5365-7582-f701-20d37d3ff511">
       <Description>Failing Feature Inconclusive Scenario</Description>
-      <Execution id="a05975bf-21e1-475a-8743-11ad25a86434" />
+      <Execution id="c8ae12ff-bf8e-4278-9305-2ae42602f7e3" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Failing</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailingFeatureInconclusiveScenario" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailingFeatureInconclusiveScenario" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="f8369e2e-c5ec-dade-ad85-e2c56909c853">
+    <UnitTest name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="f8369e2e-c5ec-dade-ad85-e2c56909c853">
       <Description>This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)</Description>
-      <Execution id="8b1c3c84-7a92-4086-a0b6-570d83a0369b" />
+      <Execution id="421e02cd-b167-4854-aec5-95e59c3b80c5" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -197,33 +197,33 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40_Pass_1" />
     </UnitTest>
-    <UnitTest name="InconclusiveFeatureInconclusiveScenario" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="add44896-9236-510f-750d-eb49b89a7a65">
+    <UnitTest name="InconclusiveFeatureInconclusiveScenario" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="add44896-9236-510f-750d-eb49b89a7a65">
       <Description>Inconclusive Feature Inconclusive Scenario</Description>
-      <Execution id="e624cfd3-c524-4fa1-98d3-9eefc8ed4be0" />
+      <Execution id="423412f5-4855-4a29-8a1a-d87a80d75231" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Inconclusive</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InconclusiveFeatureInconclusiveScenario" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InconclusiveFeatureInconclusiveScenario" />
     </UnitTest>
-    <UnitTest name="FailingFeaturePassingScenario" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="fa1e54c9-cdb0-8bb1-6764-9179c3b61825">
+    <UnitTest name="FailingFeaturePassingScenario" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="fa1e54c9-cdb0-8bb1-6764-9179c3b61825">
       <Description>Failing Feature Passing Scenario</Description>
-      <Execution id="f5f65ec2-fb08-42b7-af73-9396576ce7c2" />
+      <Execution id="5ff42286-24f3-4edd-9434-5363de0dd1c3" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Failing</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailingFeaturePassingScenario" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailingFeaturePassingScenario" />
     </UnitTest>
-    <UnitTest name="DealCorrectlyWithBackslashesInTheExamples_CTemp" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="72d470fa-c19a-1302-1fcf-eb104ea36048">
+    <UnitTest name="DealCorrectlyWithBackslashesInTheExamples_CTemp" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="72d470fa-c19a-1302-1fcf-eb104ea36048">
       <Description>Deal correctly with backslashes in the examples</Description>
-      <Execution id="0db42487-c1e4-4189-a35f-e93bd02705bb" />
+      <Execution id="bd01c6a1-7886-4e91-9d6f-08c7e7cfaa3e" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -238,11 +238,11 @@
           <Value>c:\Temp\</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DealCorrectlyWithBackslashesInTheExamples_CTemp" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DealCorrectlyWithBackslashesInTheExamples_CTemp" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b04f3200-80ca-d47f-0c01-8a37e5c952e6">
+    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b04f3200-80ca-d47f-0c01-8a37e5c952e6">
       <Description>This is a scenario outline where one scenario fails</Description>
-      <Execution id="6d018bfc-866c-4963-9cf2-fea88195981b" />
+      <Execution id="ec265078-a919-473d-aae6-81118b2b602d" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -257,11 +257,11 @@
           <Value>pass_2</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="763d7e52-45c9-3e45-478d-dd6659bc69ba">
+    <UnitTest name="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="763d7e52-45c9-3e45-478d-dd6659bc69ba">
       <Description>This is a scenario outline with german umlauts äöüß ÄÖÜ</Description>
-      <Execution id="aa138266-ab3e-4002-a38e-c8e05c31c8e6" />
+      <Execution id="ce5816d1-1275-43c2-9908-fc8967f16e2c" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -276,11 +276,11 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1" />
     </UnitTest>
-    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="78a6b3a3-679e-ee71-7ff5-c9338e3be6c2">
+    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="78a6b3a3-679e-ee71-7ff5-c9338e3be6c2">
       <Description>And we can go totally bonkers with multiple example sections.</Description>
-      <Execution id="ab1d7239-4539-458b-a7f9-dfab7f9bc5da" />
+      <Execution id="e5a559bf-b05d-4bf4-9ecd-9e1ed69be9a2" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -295,11 +295,11 @@
           <Value>fail_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" />
     </UnitTest>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="22ccdb90-02c8-97c1-e2a1-6bec4f044d99">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="22ccdb90-02c8-97c1-e2a1-6bec4f044d99">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="8861d3d8-946d-4d98-a506-6f0abfeb7d86" />
+      <Execution id="951f42cc-b91f-4935-b6a1-e3666ba2d7b4" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -314,11 +314,11 @@
           <Value>^.*(?&lt;foo&gt;BAR)\s[^0-9]{3,4}A+$</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" />
     </UnitTest>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="cca2404a-911a-a50e-9898-327264f0ea76">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="cca2404a-911a-a50e-9898-327264f0ea76">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="7fa9f127-15ff-45a9-90a0-69b0359e0f64" />
+      <Execution id="197ebfef-0875-417e-9fab-e0030978e3a9" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -333,14 +333,14 @@
           <Value>()</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" />
     </UnitTest>
-    <UnitTest name="AddingSeveralNumbers_60" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="f4b45c2f-fc98-d23c-6179-62d5b5a59825">
+    <UnitTest name="AddingSeveralNumbers_60" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="f4b45c2f-fc98-d23c-6179-62d5b5a59825">
       <Description>Adding several numbers</Description>
       <TestCategory>
         <TestCategoryItem TestCategory="tag2" />
       </TestCategory>
-      <Execution id="80a37d44-11e7-4e5f-a101-252de0b2c2b3" />
+      <Execution id="d45992f2-05ae-4a43-9beb-c90b2a35ad67" />
       <Properties>
         <Property>
           <Key>Parameter:first number</Key>
@@ -367,11 +367,11 @@
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_60" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_60" />
     </UnitTest>
-    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="ee74d71f-f824-19d9-866e-a408a95ffa99">
+    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="ee74d71f-f824-19d9-866e-a408a95ffa99">
       <Description>And we can go totally bonkers with multiple example sections.</Description>
-      <Execution id="e3ae304c-2dae-4ced-8f1e-a967c4dbacd0" />
+      <Execution id="99f3f185-7fde-42ef-876c-93cf8897be94" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -386,22 +386,22 @@
           <Value>pass_2</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_2" />
     </UnitTest>
-    <UnitTest name="FailingFeatureFailingScenario" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="18582dd5-09c7-ce67-9cb7-8e15a9cdffd0">
+    <UnitTest name="FailingFeatureFailingScenario" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="18582dd5-09c7-ce67-9cb7-8e15a9cdffd0">
       <Description>Failing Feature Failing Scenario</Description>
-      <Execution id="5c44dfb5-71bb-431e-9e76-26c2e6475b11" />
+      <Execution id="f1c88008-26fc-4fa6-8d95-3ce9bd32fb19" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Failing</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailingFeatureFailingScenario" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailingFeatureFailingScenario" />
     </UnitTest>
-    <UnitTest name="DealCorrectlyWithParenthesisInTheExamples_ThisIsADescriptionAndMore" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="d09c033d-0065-cbeb-bd7c-ee8b6460688f">
+    <UnitTest name="DealCorrectlyWithParenthesisInTheExamples_ThisIsADescriptionAndMore" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="d09c033d-0065-cbeb-bd7c-ee8b6460688f">
       <Description>Deal correctly with parenthesis in the examples</Description>
-      <Execution id="cb798ff2-ffd4-4096-88aa-ac2565e53858" />
+      <Execution id="6488a267-deec-495b-965d-bd873b6fd994" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -416,11 +416,11 @@
           <Value>This is a description (and more)</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DealCorrectlyWithParenthesisInTheExamples_ThisIsADescriptionAndMore" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DealCorrectlyWithParenthesisInTheExamples_ThisIsADescriptionAndMore" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="6e54c207-a3b1-f181-06be-066795ac26e1">
+    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="6e54c207-a3b1-f181-06be-066795ac26e1">
       <Description>This is a scenario outline where one scenario is inconclusive</Description>
-      <Execution id="37420234-8748-4b85-94dd-c262b1d4acae" />
+      <Execution id="6345903e-4f6b-44e9-b158-743e9679a8e5" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -435,11 +435,11 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="9efc5df4-5f77-a670-8622-976418721b8f">
+    <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="9efc5df4-5f77-a670-8622-976418721b8f">
       <Description>This is a scenario outline where all scenarios pass</Description>
-      <Execution id="807f7b27-c6eb-417f-8733-2d48ea7263c9" />
+      <Execution id="ff531493-ddfc-42d6-b034-f0d5bb0764f2" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -454,22 +454,22 @@
           <Value>pass_2</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2" />
     </UnitTest>
-    <UnitTest name="InconclusiveFeaturePassingScenario" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="41cb0c4f-1c07-4937-29e8-dcc987caf94e">
+    <UnitTest name="InconclusiveFeaturePassingScenario" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="41cb0c4f-1c07-4937-29e8-dcc987caf94e">
       <Description>Inconclusive Feature Passing Scenario</Description>
-      <Execution id="404c51e5-0866-4a9f-8135-e10148b23cab" />
+      <Execution id="eab6df6a-314f-4c53-9627-c7738185a565" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Inconclusive</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InconclusiveFeaturePassingScenario" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="InconclusiveFeaturePassingScenario" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="8c97c958-0c5d-1594-2cc5-02c96df8fc9b">
+    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="8c97c958-0c5d-1594-2cc5-02c96df8fc9b">
       <Description>This is a scenario outline where one scenario is inconclusive</Description>
-      <Execution id="64386890-55a5-4b95-a423-b7712a39b8bf" />
+      <Execution id="b83f21b7-6f17-4b08-8944-dca64a9e4864" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -484,21 +484,21 @@
           <Value>inconclusive_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1" />
     </UnitTest>
-    <UnitTest name="TestMethod" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="aa71fe8a-e5aa-f23d-c632-cfb3c587ca21">
-      <Execution id="cc24508e-638a-4091-b113-e0ef1509435e" />
+    <UnitTest name="TestMethod" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="aa71fe8a-e5aa-f23d-c632-cfb3c587ca21">
+      <Execution id="379df550-33ea-40d6-8493-defadc0271a8" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.OrdinaryUnitTest, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.OrdinaryUnitTest, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWithAmpersand_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="73c03e74-0c0b-5c1d-2193-91dd98f1f95e">
+    <UnitTest name="ThisIsAScenarioOutlineWithAmpersand_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="73c03e74-0c0b-5c1d-2193-91dd98f1f95e">
       <Description>This is a scenario outline with ampersand &amp;</Description>
-      <Execution id="7e500918-0760-421a-83be-4ad63c51d858" />
+      <Execution id="ed45ebe5-d187-4dba-9ff8-c7301500a083" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -513,25 +513,25 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWithAmpersand_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWithAmpersand_Pass_1" />
     </UnitTest>
-    <UnitTest name="AddTwoNumbers" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="6b8581c3-611e-6116-4232-a31382677735">
+    <UnitTest name="AddTwoNumbers" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="6b8581c3-611e-6116-4232-a31382677735">
       <Description>Add two numbers</Description>
       <TestCategory>
         <TestCategoryItem TestCategory="tag1" />
       </TestCategory>
-      <Execution id="556edf09-34cc-473f-9b70-5d231853b07e" />
+      <Execution id="2ea96f13-9a23-4b57-8aeb-923b368c3758" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTwoNumbers" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddTwoNumbers" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="8f2bb160-fa82-a566-570e-51eeb5237e95">
+    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="8f2bb160-fa82-a566-570e-51eeb5237e95">
       <Description>This is a scenario outline where one scenario is inconclusive</Description>
-      <Execution id="2caaf730-6060-459c-a263-4b80a7f424e4" />
+      <Execution id="5503a3d1-c5b4-4116-aaa8-53e6dad5e018" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -546,11 +546,11 @@
           <Value>pass_2</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="05c22c90-eaaa-d3c2-bd2d-36c2df85528e">
+    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="05c22c90-eaaa-d3c2-bd2d-36c2df85528e">
       <Description>This is a scenario outline where one scenario fails</Description>
-      <Execution id="943c71de-e0fb-4491-bee5-a88a58ce5d6f" />
+      <Execution id="436f9511-6345-46b2-8c8b-1f9bc4dae751" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -565,11 +565,11 @@
           <Value>fail_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1" />
     </UnitTest>
-    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="4d5f7893-139c-db00-8823-de561780758d">
+    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="4d5f7893-139c-db00-8823-de561780758d">
       <Description>And we can go totally bonkers with multiple example sections.</Description>
-      <Execution id="b88e3fe2-7142-4844-82fb-c028962cf58c" />
+      <Execution id="24a636a0-e978-444d-915b-a5612c3936d4" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -584,11 +584,11 @@
           <Value>inconclusive_2</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2" />
     </UnitTest>
-    <UnitTest name="AddingSeveralNumbers_60" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="17bb28b8-a770-72be-af08-5a4b0847e4ea">
+    <UnitTest name="AddingSeveralNumbers_60" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="17bb28b8-a770-72be-af08-5a4b0847e4ea">
       <Description>Adding several numbers</Description>
-      <Execution id="4e036648-6c72-4565-b4e8-4952c46022e2" />
+      <Execution id="78f6173e-dbfa-4052-be30-014bd67d09ce" />
       <Properties>
         <Property>
           <Key>Parameter:first number</Key>
@@ -615,22 +615,22 @@
           <Value>Failing Background</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.FailingBackgroundFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_60" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.FailingBackgroundFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_60" />
     </UnitTest>
-    <UnitTest name="NotAutomatedScenario2" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="067e1c92-2860-531b-28dc-c2863e91b7f5">
+    <UnitTest name="NotAutomatedScenario2" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="067e1c92-2860-531b-28dc-c2863e91b7f5">
       <Description>Not automated scenario 2</Description>
-      <Execution id="991a416f-6dc9-43ca-8fd8-49defbb57f07" />
+      <Execution id="85199848-c892-4c48-858f-efba83f45a3a" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Not Automated At All</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario2" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedScenario2" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="2c8f1abb-446c-6683-6327-8ec4ccd46e1a">
+    <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="2c8f1abb-446c-6683-6327-8ec4ccd46e1a">
       <Description>This is a scenario outline where all scenarios pass</Description>
-      <Execution id="12e9883b-8b0c-4deb-a841-759574515567" />
+      <Execution id="d92c0861-ba31-40fc-960c-bc48d2f35daa" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -645,11 +645,11 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1" />
     </UnitTest>
-    <UnitTest name="DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="ce4a9bf6-5fc5-0a40-2cbe-242a59cb1296">
+    <UnitTest name="DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="ce4a9bf6-5fc5-0a40-2cbe-242a59cb1296">
       <Description>Deal correctly with overlong example values</Description>
-      <Execution id="5f84a30c-d6be-43b0-8e3e-9539f2944ba2" />
+      <Execution id="6c8d5514-f328-4a6b-9626-56de18a92994" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -668,11 +668,11 @@
           <Value>This is just a very very very veery long error message!</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE" />
     </UnitTest>
-    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="78aeddd0-4ae5-6103-b7dd-e62b71148721">
+    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="78aeddd0-4ae5-6103-b7dd-e62b71148721">
       <Description>And we can go totally bonkers with multiple example sections.</Description>
-      <Execution id="df0fdf42-4c14-4bde-ba6a-2b06e801f895" />
+      <Execution id="28d3e694-dec4-4fd1-a9d8-4809b133381b" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -687,22 +687,22 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_1" />
     </UnitTest>
-    <UnitTest name="PassingFeaturePassingScenario" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="3af599bd-a8de-95a2-1ecc-194c7f8aceeb">
+    <UnitTest name="PassingFeaturePassingScenario" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="3af599bd-a8de-95a2-1ecc-194c7f8aceeb">
       <Description>Passing Feature Passing Scenario</Description>
-      <Execution id="7c0571c5-7649-47e7-b5a3-d78ccf512327" />
+      <Execution id="a026f702-66be-4336-8d69-9cbc377fec6c" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Passing</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.PassingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PassingFeaturePassingScenario" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.MinimalFeatures.PassingFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="PassingFeaturePassingScenario" />
     </UnitTest>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b891bd24-e5b1-222b-8d70-96a2ba7b0807">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b891bd24-e5b1-222b-8d70-96a2ba7b0807">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="98c888d3-b7f7-4085-8aef-ce81ee21100d" />
+      <Execution id="72b5ae3a-afbb-4fef-8616-618654294f80" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -717,11 +717,11 @@
           <Value>**</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="9bb2410c-d8c6-90b8-75cd-5c93dc903745">
+    <UnitTest name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="9bb2410c-d8c6-90b8-75cd-5c93dc903745">
       <Description>This is a scenario outline where all scenarios pass</Description>
-      <Execution id="5afafeb3-4f9f-4761-aa1c-25437fb913db" />
+      <Execution id="25a9d752-f77c-43b7-b2e2-1dc752d3e7a4" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -736,11 +736,11 @@
           <Value>pass_3</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" />
     </UnitTest>
-    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="e64af447-d4dc-7221-865a-703128db7b90">
+    <UnitTest name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="e64af447-d4dc-7221-865a-703128db7b90">
       <Description>This is a scenario outline where one scenario fails</Description>
-      <Execution id="f48a7003-60ee-4a81-980d-93aa28dcdf4a" />
+      <Execution id="0d0eca73-92d1-458a-ad89-676742029145" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -755,11 +755,11 @@
           <Value>pass_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" />
     </UnitTest>
-    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="d253522e-be41-9b3a-247a-ca440d4ac588">
+    <UnitTest name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="d253522e-be41-9b3a-247a-ca440d4ac588">
       <Description>This scenario contains examples with Regex-special characters</Description>
-      <Execution id="41ec70d9-da3e-4c83-928e-51a61b9d48c3" />
+      <Execution id="cc8a447e-aedf-4f4f-8b90-cf492773712b" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -774,11 +774,11 @@
           <Value>{}</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenariosWithSpecialCharactersFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" />
     </UnitTest>
-    <UnitTest name="AddingSeveralNumbers_40" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b4815779-aba4-cf1b-8df3-4a745af70720">
+    <UnitTest name="AddingSeveralNumbers_40" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b4815779-aba4-cf1b-8df3-4a745af70720">
       <Description>Adding several numbers</Description>
-      <Execution id="fe37892d-8ca6-4fea-a2c9-030ff029b388" />
+      <Execution id="df017bc0-c6be-422b-be0c-c19701e1ad30" />
       <Properties>
         <Property>
           <Key>Parameter:first number</Key>
@@ -805,36 +805,36 @@
           <Value>Failing Background</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.FailingBackgroundFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_40" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.FailingBackgroundFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AddingSeveralNumbers_40" />
     </UnitTest>
-    <UnitTest name="FailToAddTwoNumbers" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b13a186e-33df-348e-f9e2-a18b445d0d6e">
+    <UnitTest name="FailToAddTwoNumbers" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="b13a186e-33df-348e-f9e2-a18b445d0d6e">
       <Description>Fail to add two numbers</Description>
       <TestCategory>
         <TestCategoryItem TestCategory="tag1" />
       </TestCategory>
-      <Execution id="d67a21cd-9867-4f32-9358-2433e6159a0e" />
+      <Execution id="f0f44364-a28f-4c26-b8fb-93aff8e08cf9" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailToAddTwoNumbers" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="FailToAddTwoNumbers" />
     </UnitTest>
-    <UnitTest name="NotAutomatedAddingTwoNumbers" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="2124dd33-7aaa-d4fb-c72f-98ad434251c0">
+    <UnitTest name="NotAutomatedAddingTwoNumbers" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="2124dd33-7aaa-d4fb-c72f-98ad434251c0">
       <Description>Not automated adding two numbers</Description>
-      <Execution id="b6698137-01dc-42cc-9f5e-ae0e310d7af5" />
+      <Execution id="36043178-3758-47ee-b7d8-ae8b5f982bb4" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
           <Value>Addition</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedAddingTwoNumbers" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.AdditionFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="NotAutomatedAddingTwoNumbers" />
     </UnitTest>
-    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1" storage="c:\devprojects\tools\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="e30ef794-1ea7-a76a-356b-1668bca94630">
+    <UnitTest name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1" storage="c:\dev\code\github\dirkrombauts\pickles\\test-harness\mstest\bin\debug\mstestharness.dll" id="e30ef794-1ea7-a76a-356b-1668bca94630">
       <Description>And we can go totally bonkers with multiple example sections.</Description>
-      <Execution id="c2c64da2-f4d5-4797-a119-ff5b2470b978" />
+      <Execution id="e36fd1e1-ff34-45f0-bce6-69ccc8ce70f3" />
       <Properties>
         <Property>
           <Key>FeatureTitle</Key>
@@ -849,7 +849,7 @@
           <Value>inconclusive_1</Value>
         </Property>
       </Properties>
-      <TestMethod codeBase="C:/DevProjects/Tools/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1" />
+      <TestMethod codeBase="C:/Dev/Code/GitHub/DirkRombauts/pickles/test-harness/mstest/bin/Debug/MsTestHarness.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Pickles.TestHarness.MsTest.ScenarioOutlinesFeature, MsTestHarness, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1" />
     </UnitTest>
   </TestDefinitions>
   <TestLists>
@@ -857,56 +857,56 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <TestEntries>
-    <TestEntry testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" executionId="6b7ae4ce-36d5-4d33-b8f0-1bd2c47ce15e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f4b45c2f-fc98-d23c-6179-62d5b5a59825" executionId="80a37d44-11e7-4e5f-a101-252de0b2c2b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="6b8581c3-611e-6116-4232-a31382677735" executionId="556edf09-34cc-473f-9b70-5d231853b07e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b13a186e-33df-348e-f9e2-a18b445d0d6e" executionId="d67a21cd-9867-4f32-9358-2433e6159a0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2124dd33-7aaa-d4fb-c72f-98ad434251c0" executionId="b6698137-01dc-42cc-9f5e-ae0e310d7af5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b4815779-aba4-cf1b-8df3-4a745af70720" executionId="fe37892d-8ca6-4fea-a2c9-030ff029b388" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="17bb28b8-a770-72be-af08-5a4b0847e4ea" executionId="4e036648-6c72-4565-b4e8-4952c46022e2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ca63316a-39e5-9545-3bca-f1839c7b4664" executionId="e88d9922-5a81-4f06-a73d-fe2ec0f0055b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="18582dd5-09c7-ce67-9cb7-8e15a9cdffd0" executionId="5c44dfb5-71bb-431e-9e76-26c2e6475b11" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7e6c75c9-5365-7582-f701-20d37d3ff511" executionId="a05975bf-21e1-475a-8743-11ad25a86434" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fa1e54c9-cdb0-8bb1-6764-9179c3b61825" executionId="f5f65ec2-fb08-42b7-af73-9396576ce7c2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="add44896-9236-510f-750d-eb49b89a7a65" executionId="e624cfd3-c524-4fa1-98d3-9eefc8ed4be0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="41cb0c4f-1c07-4937-29e8-dcc987caf94e" executionId="404c51e5-0866-4a9f-8135-e10148b23cab" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="3af599bd-a8de-95a2-1ecc-194c7f8aceeb" executionId="7c0571c5-7649-47e7-b5a3-d78ccf512327" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0e090158-43a1-1be8-47c2-13e1b2c9f8c7" executionId="0289f165-b539-472e-97da-60133c9753c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="067e1c92-2860-531b-28dc-c2863e91b7f5" executionId="991a416f-6dc9-43ca-8fd8-49defbb57f07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="64813bea-d79b-d74b-adb5-1302eaf5641f" executionId="08a69590-d4ac-4a25-b0bf-00702dee00bd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="aa71fe8a-e5aa-f23d-c632-cfb3c587ca21" executionId="cc24508e-638a-4091-b113-e0ef1509435e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="78aeddd0-4ae5-6103-b7dd-e62b71148721" executionId="df0fdf42-4c14-4bde-ba6a-2b06e801f895" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ee74d71f-f824-19d9-866e-a408a95ffa99" executionId="e3ae304c-2dae-4ced-8f1e-a967c4dbacd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e30ef794-1ea7-a76a-356b-1668bca94630" executionId="c2c64da2-f4d5-4797-a119-ff5b2470b978" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4d5f7893-139c-db00-8823-de561780758d" executionId="b88e3fe2-7142-4844-82fb-c028962cf58c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="78a6b3a3-679e-ee71-7ff5-c9338e3be6c2" executionId="ab1d7239-4539-458b-a7f9-dfab7f9bc5da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="40304968-0dee-8e41-4f42-20809899a9d0" executionId="dc477dc5-8081-4326-a1a3-7f691ef07670" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="72d470fa-c19a-1302-1fcf-eb104ea36048" executionId="0db42487-c1e4-4189-a35f-e93bd02705bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ce4a9bf6-5fc5-0a40-2cbe-242a59cb1296" executionId="5f84a30c-d6be-43b0-8e3e-9539f2944ba2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d09c033d-0065-cbeb-bd7c-ee8b6460688f" executionId="cb798ff2-ffd4-4096-88aa-ac2565e53858" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2c8f1abb-446c-6683-6327-8ec4ccd46e1a" executionId="12e9883b-8b0c-4deb-a841-759574515567" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9efc5df4-5f77-a670-8622-976418721b8f" executionId="807f7b27-c6eb-417f-8733-2d48ea7263c9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9bb2410c-d8c6-90b8-75cd-5c93dc903745" executionId="5afafeb3-4f9f-4761-aa1c-25437fb913db" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="05c22c90-eaaa-d3c2-bd2d-36c2df85528e" executionId="943c71de-e0fb-4491-bee5-a88a58ce5d6f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e64af447-d4dc-7221-865a-703128db7b90" executionId="f48a7003-60ee-4a81-980d-93aa28dcdf4a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b04f3200-80ca-d47f-0c01-8a37e5c952e6" executionId="6d018bfc-866c-4963-9cf2-fea88195981b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8c97c958-0c5d-1594-2cc5-02c96df8fc9b" executionId="64386890-55a5-4b95-a423-b7712a39b8bf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="6e54c207-a3b1-f181-06be-066795ac26e1" executionId="37420234-8748-4b85-94dd-c262b1d4acae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8f2bb160-fa82-a566-570e-51eeb5237e95" executionId="2caaf730-6060-459c-a263-4b80a7f424e4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="73c03e74-0c0b-5c1d-2193-91dd98f1f95e" executionId="7e500918-0760-421a-83be-4ad63c51d858" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="763d7e52-45c9-3e45-478d-dd6659bc69ba" executionId="aa138266-ab3e-4002-a38e-c8e05c31c8e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f8369e2e-c5ec-dade-ad85-e2c56909c853" executionId="8b1c3c84-7a92-4086-a0b6-570d83a0369b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="3fe8806f-fabb-1deb-7e27-c59578f16da3" executionId="d6156b13-8dea-4855-a0d6-c17e57bc0bf1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b891bd24-e5b1-222b-8d70-96a2ba7b0807" executionId="98c888d3-b7f7-4085-8aef-ce81ee21100d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fb3ec8b2-a410-ecc8-265b-29bfd3772553" executionId="1aa8cc43-19e6-440f-9d36-87f525d47f1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a3bd6f67-daac-1ebc-5894-1d73dbe8d707" executionId="f2df90c9-7a83-4804-8286-7e68abdb6acc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7699da71-b819-eb00-3894-2f0be7eec39c" executionId="fe022d9c-e496-4d25-8ee2-cecdfd7d7cbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d253522e-be41-9b3a-247a-ca440d4ac588" executionId="41ec70d9-da3e-4c83-928e-51a61b9d48c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cca2404a-911a-a50e-9898-327264f0ea76" executionId="7fa9f127-15ff-45a9-90a0-69b0359e0f64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="22ccdb90-02c8-97c1-e2a1-6bec4f044d99" executionId="8861d3d8-946d-4d98-a506-6f0abfeb7d86" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" executionId="fda966b5-6328-44c7-b6b7-8fcebdc8535c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f4b45c2f-fc98-d23c-6179-62d5b5a59825" executionId="d45992f2-05ae-4a43-9beb-c90b2a35ad67" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6b8581c3-611e-6116-4232-a31382677735" executionId="2ea96f13-9a23-4b57-8aeb-923b368c3758" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b13a186e-33df-348e-f9e2-a18b445d0d6e" executionId="f0f44364-a28f-4c26-b8fb-93aff8e08cf9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2124dd33-7aaa-d4fb-c72f-98ad434251c0" executionId="36043178-3758-47ee-b7d8-ae8b5f982bb4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4815779-aba4-cf1b-8df3-4a745af70720" executionId="df017bc0-c6be-422b-be0c-c19701e1ad30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17bb28b8-a770-72be-af08-5a4b0847e4ea" executionId="78f6173e-dbfa-4052-be30-014bd67d09ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ca63316a-39e5-9545-3bca-f1839c7b4664" executionId="d8cb075f-3d81-4e72-b215-b9765db84238" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="18582dd5-09c7-ce67-9cb7-8e15a9cdffd0" executionId="f1c88008-26fc-4fa6-8d95-3ce9bd32fb19" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7e6c75c9-5365-7582-f701-20d37d3ff511" executionId="c8ae12ff-bf8e-4278-9305-2ae42602f7e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fa1e54c9-cdb0-8bb1-6764-9179c3b61825" executionId="5ff42286-24f3-4edd-9434-5363de0dd1c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="add44896-9236-510f-750d-eb49b89a7a65" executionId="423412f5-4855-4a29-8a1a-d87a80d75231" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="41cb0c4f-1c07-4937-29e8-dcc987caf94e" executionId="eab6df6a-314f-4c53-9627-c7738185a565" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3af599bd-a8de-95a2-1ecc-194c7f8aceeb" executionId="a026f702-66be-4336-8d69-9cbc377fec6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0e090158-43a1-1be8-47c2-13e1b2c9f8c7" executionId="720f9d5d-974a-4761-b5f0-debba29d809a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="067e1c92-2860-531b-28dc-c2863e91b7f5" executionId="85199848-c892-4c48-858f-efba83f45a3a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="64813bea-d79b-d74b-adb5-1302eaf5641f" executionId="7ea0380a-39a5-4261-8323-034fe8ba5b5d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="aa71fe8a-e5aa-f23d-c632-cfb3c587ca21" executionId="379df550-33ea-40d6-8493-defadc0271a8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="78aeddd0-4ae5-6103-b7dd-e62b71148721" executionId="28d3e694-dec4-4fd1-a9d8-4809b133381b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee74d71f-f824-19d9-866e-a408a95ffa99" executionId="99f3f185-7fde-42ef-876c-93cf8897be94" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e30ef794-1ea7-a76a-356b-1668bca94630" executionId="e36fd1e1-ff34-45f0-bce6-69ccc8ce70f3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4d5f7893-139c-db00-8823-de561780758d" executionId="24a636a0-e978-444d-915b-a5612c3936d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="78a6b3a3-679e-ee71-7ff5-c9338e3be6c2" executionId="e5a559bf-b05d-4bf4-9ecd-9e1ed69be9a2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="40304968-0dee-8e41-4f42-20809899a9d0" executionId="6240d9de-e95c-4983-8c6f-bb8b564ffe2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="72d470fa-c19a-1302-1fcf-eb104ea36048" executionId="bd01c6a1-7886-4e91-9d6f-08c7e7cfaa3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce4a9bf6-5fc5-0a40-2cbe-242a59cb1296" executionId="6c8d5514-f328-4a6b-9626-56de18a92994" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d09c033d-0065-cbeb-bd7c-ee8b6460688f" executionId="6488a267-deec-495b-965d-bd873b6fd994" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2c8f1abb-446c-6683-6327-8ec4ccd46e1a" executionId="d92c0861-ba31-40fc-960c-bc48d2f35daa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9efc5df4-5f77-a670-8622-976418721b8f" executionId="ff531493-ddfc-42d6-b034-f0d5bb0764f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9bb2410c-d8c6-90b8-75cd-5c93dc903745" executionId="25a9d752-f77c-43b7-b2e2-1dc752d3e7a4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="05c22c90-eaaa-d3c2-bd2d-36c2df85528e" executionId="436f9511-6345-46b2-8c8b-1f9bc4dae751" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e64af447-d4dc-7221-865a-703128db7b90" executionId="0d0eca73-92d1-458a-ad89-676742029145" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b04f3200-80ca-d47f-0c01-8a37e5c952e6" executionId="ec265078-a919-473d-aae6-81118b2b602d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8c97c958-0c5d-1594-2cc5-02c96df8fc9b" executionId="b83f21b7-6f17-4b08-8944-dca64a9e4864" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e54c207-a3b1-f181-06be-066795ac26e1" executionId="6345903e-4f6b-44e9-b158-743e9679a8e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8f2bb160-fa82-a566-570e-51eeb5237e95" executionId="5503a3d1-c5b4-4116-aaa8-53e6dad5e018" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="73c03e74-0c0b-5c1d-2193-91dd98f1f95e" executionId="ed45ebe5-d187-4dba-9ff8-c7301500a083" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="763d7e52-45c9-3e45-478d-dd6659bc69ba" executionId="ce5816d1-1275-43c2-9908-fc8967f16e2c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f8369e2e-c5ec-dade-ad85-e2c56909c853" executionId="421e02cd-b167-4854-aec5-95e59c3b80c5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fe8806f-fabb-1deb-7e27-c59578f16da3" executionId="e4913852-5b3e-4a2f-b787-1af56a7446c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b891bd24-e5b1-222b-8d70-96a2ba7b0807" executionId="72b5ae3a-afbb-4fef-8616-618654294f80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb3ec8b2-a410-ecc8-265b-29bfd3772553" executionId="c7f4b4f7-734c-41d7-863a-73a058b6684c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3bd6f67-daac-1ebc-5894-1d73dbe8d707" executionId="f88d041d-6c5d-4fe7-8853-4dff41a2b1f2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7699da71-b819-eb00-3894-2f0be7eec39c" executionId="6d92ba39-2017-4597-9ddc-b66a1dc001b6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d253522e-be41-9b3a-247a-ca440d4ac588" executionId="cc8a447e-aedf-4f4f-8b90-cf492773712b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cca2404a-911a-a50e-9898-327264f0ea76" executionId="197ebfef-0875-417e-9fab-e0030978e3a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="22ccdb90-02c8-97c1-e2a1-6bec4f044d99" executionId="951f42cc-b91f-4935-b6a1-e3666ba2d7b4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
-    <UnitTestResult executionId="6b7ae4ce-36d5-4d33-b8f0-1bd2c47ce15e" testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" testName="AddingSeveralNumbers_40" computerName="AS0283" duration="00:00:00.0473846" startTime="2016-09-28T09:33:43.8291468+02:00" endTime="2016-09-28T09:33:44.1701469+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6b7ae4ce-36d5-4d33-b8f0-1bd2c47ce15e">
+    <UnitTestResult executionId="fda966b5-6328-44c7-b6b7-8fcebdc8535c" testId="4d0f7327-ed22-9a43-969a-ac2ea8102d66" testName="AddingSeveralNumbers_40" computerName="DESKTOP-5DEA222" duration="00:00:00.0526498" startTime="2017-02-06T17:10:54.6607704+01:00" endTime="2017-02-06T17:10:54.9763727+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fda966b5-6328-44c7-b6b7-8fcebdc8535c">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -922,7 +922,7 @@ Then the result should be 180 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(180) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="80a37d44-11e7-4e5f-a101-252de0b2c2b3" testId="f4b45c2f-fc98-d23c-6179-62d5b5a59825" testName="AddingSeveralNumbers_60" computerName="AS0283" duration="00:00:00.0003016" startTime="2016-09-28T09:33:44.1711479+02:00" endTime="2016-09-28T09:33:44.1731476+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="80a37d44-11e7-4e5f-a101-252de0b2c2b3">
+    <UnitTestResult executionId="d45992f2-05ae-4a43-9beb-c90b2a35ad67" testId="f4b45c2f-fc98-d23c-6179-62d5b5a59825" testName="AddingSeveralNumbers_60" computerName="DESKTOP-5DEA222" duration="00:00:00.0003638" startTime="2017-02-06T17:10:54.9804047+01:00" endTime="2017-02-06T17:10:54.9834044+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d45992f2-05ae-4a43-9beb-c90b2a35ad67">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -938,7 +938,7 @@ Then the result should be 260 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(260) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="556edf09-34cc-473f-9b70-5d231853b07e" testId="6b8581c3-611e-6116-4232-a31382677735" testName="AddTwoNumbers" computerName="AS0283" duration="00:00:00.0002879" startTime="2016-09-28T09:33:44.1731476+02:00" endTime="2016-09-28T09:33:44.1751479+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="556edf09-34cc-473f-9b70-5d231853b07e">
+    <UnitTestResult executionId="2ea96f13-9a23-4b57-8aeb-923b368c3758" testId="6b8581c3-611e-6116-4232-a31382677735" testName="AddTwoNumbers" computerName="DESKTOP-5DEA222" duration="00:00:00.0003338" startTime="2017-02-06T17:10:54.9883743+01:00" endTime="2017-02-06T17:10:54.9903757+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2ea96f13-9a23-4b57-8aeb-923b368c3758">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -952,7 +952,7 @@ Then the result should be 3 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(3) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="d67a21cd-9867-4f32-9358-2433e6159a0e" testId="b13a186e-33df-348e-f9e2-a18b445d0d6e" testName="FailToAddTwoNumbers" computerName="AS0283" duration="00:00:00.0245749" startTime="2016-09-28T09:33:44.1761455+02:00" endTime="2016-09-28T09:33:44.2021441+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d67a21cd-9867-4f32-9358-2433e6159a0e">
+    <UnitTestResult executionId="f0f44364-a28f-4c26-b8fb-93aff8e08cf9" testId="b13a186e-33df-348e-f9e2-a18b445d0d6e" testName="FailToAddTwoNumbers" computerName="DESKTOP-5DEA222" duration="00:00:00.0254637" startTime="2017-02-06T17:10:54.9943733+01:00" endTime="2017-02-06T17:10:55.0223986+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f0f44364-a28f-4c26-b8fb-93aff8e08cf9">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -984,12 +984,12 @@ System.FormatException: Input string was not in a correct format.</Message>
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.AdditionFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.AdditionFeature.FailToAddTwoNumbers() in C:\DevProjects\Tools\pickles\test-harness\MsTest\Addition.feature:line 34
+   at Pickles.TestHarness.MsTest.AdditionFeature.FailToAddTwoNumbers() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\Addition.feature:line 34
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="b6698137-01dc-42cc-9f5e-ae0e310d7af5" testId="2124dd33-7aaa-d4fb-c72f-98ad434251c0" testName="NotAutomatedAddingTwoNumbers" computerName="AS0283" duration="00:00:00.0276110" startTime="2016-09-28T09:33:44.2031442+02:00" endTime="2016-09-28T09:33:44.2341461+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6698137-01dc-42cc-9f5e-ae0e310d7af5">
+    <UnitTestResult executionId="36043178-3758-47ee-b7d8-ae8b5f982bb4" testId="2124dd33-7aaa-d4fb-c72f-98ad434251c0" testName="NotAutomatedAddingTwoNumbers" computerName="DESKTOP-5DEA222" duration="00:00:00.0277199" startTime="2017-02-06T17:10:55.0263978+01:00" endTime="2017-02-06T17:10:55.0564332+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36043178-3758-47ee-b7d8-ae8b5f982bb4">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1053,12 +1053,12 @@ namespace MyNamespace
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.AdditionFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.AdditionFeature.NotAutomatedAddingTwoNumbers() in C:\DevProjects\Tools\pickles\test-harness\MsTest\Addition.feature:line 46
+   at Pickles.TestHarness.MsTest.AdditionFeature.NotAutomatedAddingTwoNumbers() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\Addition.feature:line 46
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="fe37892d-8ca6-4fea-a2c9-030ff029b388" testId="b4815779-aba4-cf1b-8df3-4a745af70720" testName="AddingSeveralNumbers_40" computerName="AS0283" duration="00:00:00.0117864" startTime="2016-09-28T09:33:44.2351442+02:00" endTime="2016-09-28T09:33:44.2501582+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe37892d-8ca6-4fea-a2c9-030ff029b388">
+    <UnitTestResult executionId="df017bc0-c6be-422b-be0c-c19701e1ad30" testId="b4815779-aba4-cf1b-8df3-4a745af70720" testName="AddingSeveralNumbers_40" computerName="DESKTOP-5DEA222" duration="00:00:00.0107571" startTime="2017-02-06T17:10:55.0614141+01:00" endTime="2017-02-06T17:10:55.0751078+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df017bc0-c6be-422b-be0c-c19701e1ad30">
       <Output>
         <StdOut>Given the background step fails
 -&gt; error: 
@@ -1089,7 +1089,7 @@ Shouldly.ChuckedAWobbly:
     1</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
+   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
    at lambda_method(Closure , IContextManager )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1097,13 +1097,13 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.FailingBackgroundFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\FailingBackground.feature:line 19
+   at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\FailingBackground.feature:line 19
    at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddingSeveralNumbers_40()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="4e036648-6c72-4565-b4e8-4952c46022e2" testId="17bb28b8-a770-72be-af08-5a4b0847e4ea" testName="AddingSeveralNumbers_60" computerName="AS0283" duration="00:00:00.0030294" startTime="2016-09-28T09:33:44.2511469+02:00" endTime="2016-09-28T09:33:44.2561650+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4e036648-6c72-4565-b4e8-4952c46022e2">
+    <UnitTestResult executionId="78f6173e-dbfa-4052-be30-014bd67d09ce" testId="17bb28b8-a770-72be-af08-5a4b0847e4ea" testName="AddingSeveralNumbers_60" computerName="DESKTOP-5DEA222" duration="00:00:00.0022862" startTime="2017-02-06T17:10:55.0801010+01:00" endTime="2017-02-06T17:10:55.0850791+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="78f6173e-dbfa-4052-be30-014bd67d09ce">
       <Output>
         <StdOut>Given the background step fails
 -&gt; error: 
@@ -1134,7 +1134,7 @@ Shouldly.ChuckedAWobbly:
     1</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
+   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
    at lambda_method(Closure , IContextManager )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1142,13 +1142,13 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.FailingBackgroundFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\FailingBackground.feature:line 19
+   at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddingSeveralNumbers(String firstNumber, String secondNumber, String thirdNumber, String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\FailingBackground.feature:line 19
    at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddingSeveralNumbers_60()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="e88d9922-5a81-4f06-a73d-fe2ec0f0055b" testId="ca63316a-39e5-9545-3bca-f1839c7b4664" testName="AddTwoNumbers" computerName="AS0283" duration="00:00:00.0026212" startTime="2016-09-28T09:33:44.2581447+02:00" endTime="2016-09-28T09:33:44.2621444+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e88d9922-5a81-4f06-a73d-fe2ec0f0055b">
+    <UnitTestResult executionId="d8cb075f-3d81-4e72-b215-b9765db84238" testId="ca63316a-39e5-9545-3bca-f1839c7b4664" testName="AddTwoNumbers" computerName="DESKTOP-5DEA222" duration="00:00:00.0022680" startTime="2017-02-06T17:10:55.0900782+01:00" endTime="2017-02-06T17:10:55.0941181+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d8cb075f-3d81-4e72-b215-b9765db84238">
       <Output>
         <StdOut>Given the background step fails
 -&gt; error: 
@@ -1177,7 +1177,7 @@ Shouldly.ChuckedAWobbly:
     1</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
+   at AutomationLayer.AdditionSteps.GivenTheBackgroundStepFails() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\AdditionSteps.cs:line 25
    at lambda_method(Closure , IContextManager )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1185,12 +1185,12 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.FailingBackgroundFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddTwoNumbers() in C:\DevProjects\Tools\pickles\test-harness\MsTest\FailingBackground.feature:line 12
+   at Pickles.TestHarness.MsTest.FailingBackgroundFeature.AddTwoNumbers() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\FailingBackground.feature:line 12
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="5c44dfb5-71bb-431e-9e76-26c2e6475b11" testId="18582dd5-09c7-ce67-9cb7-8e15a9cdffd0" testName="FailingFeatureFailingScenario" computerName="AS0283" duration="00:00:00.0050990" startTime="2016-09-28T09:33:44.2631448+02:00" endTime="2016-09-28T09:33:44.2701466+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5c44dfb5-71bb-431e-9e76-26c2e6475b11">
+    <UnitTestResult executionId="f1c88008-26fc-4fa6-8d95-3ce9bd32fb19" testId="18582dd5-09c7-ce67-9cb7-8e15a9cdffd0" testName="FailingFeatureFailingScenario" computerName="DESKTOP-5DEA222" duration="00:00:00.0054194" startTime="2017-02-06T17:10:55.0971096+01:00" endTime="2017-02-06T17:10:55.1060759+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1c88008-26fc-4fa6-8d95-3ce9bd32fb19">
       <Output>
         <StdOut>Then failing step
 -&gt; error: 
@@ -1209,7 +1209,7 @@ Shouldly.ChuckedAWobbly:
     True</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.MinimalFeatures.MinimalSteps.ThenFailingStep() in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\MinimalFeatures\MinimalSteps.cs:line 24
+   at AutomationLayer.MinimalFeatures.MinimalSteps.ThenFailingStep() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\MinimalFeatures\MinimalSteps.cs:line 24
    at lambda_method(Closure , IContextManager )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1217,12 +1217,12 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in C:\DevProjects\Tools\pickles\test-harness\MsTest\Minimal Features\Failing.feature:line 10
+   at Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature.FailingFeatureFailingScenario() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\Minimal Features\Failing.feature:line 10
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="a05975bf-21e1-475a-8743-11ad25a86434" testId="7e6c75c9-5365-7582-f701-20d37d3ff511" testName="FailingFeatureInconclusiveScenario" computerName="AS0283" duration="00:00:00.0024849" startTime="2016-09-28T09:33:44.2711453+02:00" endTime="2016-09-28T09:33:44.2751461+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a05975bf-21e1-475a-8743-11ad25a86434">
+    <UnitTestResult executionId="c8ae12ff-bf8e-4278-9305-2ae42602f7e3" testId="7e6c75c9-5365-7582-f701-20d37d3ff511" testName="FailingFeatureInconclusiveScenario" computerName="DESKTOP-5DEA222" duration="00:00:00.0018571" startTime="2017-02-06T17:10:55.1100747+01:00" endTime="2017-02-06T17:10:55.1140763+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c8ae12ff-bf8e-4278-9305-2ae42602f7e3">
       <Output>
         <StdOut>Then inconclusive step
 -&gt; pending: MinimalSteps.ThenInconclusiveStep()</StdOut>
@@ -1236,18 +1236,18 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario() in C:\DevProjects\Tools\pickles\test-harness\MsTest\Minimal Features\Failing.feature:line 7
+   at Pickles.TestHarness.MsTest.MinimalFeatures.FailingFeature.FailingFeatureInconclusiveScenario() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\Minimal Features\Failing.feature:line 7
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f5f65ec2-fb08-42b7-af73-9396576ce7c2" testId="fa1e54c9-cdb0-8bb1-6764-9179c3b61825" testName="FailingFeaturePassingScenario" computerName="AS0283" duration="00:00:00.0004045" startTime="2016-09-28T09:33:44.2771441+02:00" endTime="2016-09-28T09:33:44.2781440+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5f65ec2-fb08-42b7-af73-9396576ce7c2">
+    <UnitTestResult executionId="5ff42286-24f3-4edd-9434-5363de0dd1c3" testId="fa1e54c9-cdb0-8bb1-6764-9179c3b61825" testName="FailingFeaturePassingScenario" computerName="DESKTOP-5DEA222" duration="00:00:00.0004416" startTime="2017-02-06T17:10:55.1190817+01:00" endTime="2017-02-06T17:10:55.1211052+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5ff42286-24f3-4edd-9434-5363de0dd1c3">
       <Output>
         <StdOut>Then passing step
 -&gt; done: MinimalSteps.ThenPassingStep() (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="e624cfd3-c524-4fa1-98d3-9eefc8ed4be0" testId="add44896-9236-510f-750d-eb49b89a7a65" testName="InconclusiveFeatureInconclusiveScenario" computerName="AS0283" duration="00:00:00.0021981" startTime="2016-09-28T09:33:44.2801439+02:00" endTime="2016-09-28T09:33:44.2841567+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e624cfd3-c524-4fa1-98d3-9eefc8ed4be0">
+    <UnitTestResult executionId="423412f5-4855-4a29-8a1a-d87a80d75231" testId="add44896-9236-510f-750d-eb49b89a7a65" testName="InconclusiveFeatureInconclusiveScenario" computerName="DESKTOP-5DEA222" duration="00:00:00.0013839" startTime="2017-02-06T17:10:55.1250791+01:00" endTime="2017-02-06T17:10:55.1291044+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="423412f5-4855-4a29-8a1a-d87a80d75231">
       <Output>
         <StdOut>Then inconclusive step
 -&gt; pending: MinimalSteps.ThenInconclusiveStep()</StdOut>
@@ -1261,24 +1261,24 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario() in C:\DevProjects\Tools\pickles\test-harness\MsTest\Minimal Features\Inconclusive.feature:line 7
+   at Pickles.TestHarness.MsTest.MinimalFeatures.InconclusiveFeature.InconclusiveFeatureInconclusiveScenario() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\Minimal Features\Inconclusive.feature:line 7
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="404c51e5-0866-4a9f-8135-e10148b23cab" testId="41cb0c4f-1c07-4937-29e8-dcc987caf94e" testName="InconclusiveFeaturePassingScenario" computerName="AS0283" duration="00:00:00.0003558" startTime="2016-09-28T09:33:44.2851437+02:00" endTime="2016-09-28T09:33:44.2871540+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="404c51e5-0866-4a9f-8135-e10148b23cab">
+    <UnitTestResult executionId="eab6df6a-314f-4c53-9627-c7738185a565" testId="41cb0c4f-1c07-4937-29e8-dcc987caf94e" testName="InconclusiveFeaturePassingScenario" computerName="DESKTOP-5DEA222" duration="00:00:00.0004258" startTime="2017-02-06T17:10:55.1331048+01:00" endTime="2017-02-06T17:10:55.1361124+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eab6df6a-314f-4c53-9627-c7738185a565">
       <Output>
         <StdOut>Then passing step
 -&gt; done: MinimalSteps.ThenPassingStep() (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="7c0571c5-7649-47e7-b5a3-d78ccf512327" testId="3af599bd-a8de-95a2-1ecc-194c7f8aceeb" testName="PassingFeaturePassingScenario" computerName="AS0283" duration="00:00:00.0004627" startTime="2016-09-28T09:33:44.2881496+02:00" endTime="2016-09-28T09:33:44.2911451+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c0571c5-7649-47e7-b5a3-d78ccf512327">
+    <UnitTestResult executionId="a026f702-66be-4336-8d69-9cbc377fec6c" testId="3af599bd-a8de-95a2-1ecc-194c7f8aceeb" testName="PassingFeaturePassingScenario" computerName="DESKTOP-5DEA222" duration="00:00:00.0004223" startTime="2017-02-06T17:10:55.1401045+01:00" endTime="2017-02-06T17:10:55.1441057+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a026f702-66be-4336-8d69-9cbc377fec6c">
       <Output>
         <StdOut>Then passing step
 -&gt; done: MinimalSteps.ThenPassingStep() (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="0289f165-b539-472e-97da-60133c9753c3" testId="0e090158-43a1-1be8-47c2-13e1b2c9f8c7" testName="NotAutomatedScenario1" computerName="AS0283" duration="00:00:00.0042078" startTime="2016-09-28T09:33:44.2931556+02:00" endTime="2016-09-28T09:33:44.2991430+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0289f165-b539-472e-97da-60133c9753c3">
+    <UnitTestResult executionId="720f9d5d-974a-4761-b5f0-debba29d809a" testId="0e090158-43a1-1be8-47c2-13e1b2c9f8c7" testName="NotAutomatedScenario1" computerName="DESKTOP-5DEA222" duration="00:00:00.0058307" startTime="2017-02-06T17:10:55.1480765+01:00" endTime="2017-02-06T17:10:55.1566130+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="720f9d5d-974a-4761-b5f0-debba29d809a">
       <Output>
         <StdOut>Given unimplemented step
 -&gt; No matching step definition found for the step. Use the following code to create one:
@@ -1348,12 +1348,12 @@ namespace MyNamespace
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario1() in C:\DevProjects\Tools\pickles\test-harness\MsTest\NotAutomatedAtAll.feature:line 9
+   at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario1() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\NotAutomatedAtAll.feature:line 9
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="991a416f-6dc9-43ca-8fd8-49defbb57f07" testId="067e1c92-2860-531b-28dc-c2863e91b7f5" testName="NotAutomatedScenario2" computerName="AS0283" duration="00:00:00.0046255" startTime="2016-09-28T09:33:44.3001457+02:00" endTime="2016-09-28T09:33:44.3071441+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="991a416f-6dc9-43ca-8fd8-49defbb57f07">
+    <UnitTestResult executionId="85199848-c892-4c48-858f-efba83f45a3a" testId="067e1c92-2860-531b-28dc-c2863e91b7f5" testName="NotAutomatedScenario2" computerName="DESKTOP-5DEA222" duration="00:00:00.0037649" startTime="2017-02-06T17:10:55.1601105+01:00" endTime="2017-02-06T17:10:55.1656402+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="85199848-c892-4c48-858f-efba83f45a3a">
       <Output>
         <StdOut>Given unimplemented step
 -&gt; No matching step definition found for the step. Use the following code to create one:
@@ -1423,12 +1423,12 @@ namespace MyNamespace
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario2() in C:\DevProjects\Tools\pickles\test-harness\MsTest\NotAutomatedAtAll.feature:line 14
+   at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario2() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\NotAutomatedAtAll.feature:line 14
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="08a69590-d4ac-4a25-b0bf-00702dee00bd" testId="64813bea-d79b-d74b-adb5-1302eaf5641f" testName="NotAutomatedScenario3" computerName="AS0283" duration="00:00:00.0035657" startTime="2016-09-28T09:33:44.3081437+02:00" endTime="2016-09-28T09:33:44.3131435+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="08a69590-d4ac-4a25-b0bf-00702dee00bd">
+    <UnitTestResult executionId="7ea0380a-39a5-4261-8323-034fe8ba5b5d" testId="64813bea-d79b-d74b-adb5-1302eaf5641f" testName="NotAutomatedScenario3" computerName="DESKTOP-5DEA222" duration="00:00:00.0039928" startTime="2017-02-06T17:10:55.1711110+01:00" endTime="2017-02-06T17:10:55.1772036+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ea0380a-39a5-4261-8323-034fe8ba5b5d">
       <Output>
         <StdOut>Given unimplemented step
 -&gt; No matching step definition found for the step. Use the following code to create one:
@@ -1498,26 +1498,26 @@ namespace MyNamespace
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario3() in C:\DevProjects\Tools\pickles\test-harness\MsTest\NotAutomatedAtAll.feature:line 19
+   at Pickles.TestHarness.MsTest.NotAutomatedAtAllFeature.NotAutomatedScenario3() in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\NotAutomatedAtAll.feature:line 19
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="cc24508e-638a-4091-b113-e0ef1509435e" testId="aa71fe8a-e5aa-f23d-c632-cfb3c587ca21" testName="TestMethod" computerName="AS0283" duration="00:00:00.0001146" startTime="2016-09-28T09:33:44.3141439+02:00" endTime="2016-09-28T09:33:44.3161433+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc24508e-638a-4091-b113-e0ef1509435e">
+    <UnitTestResult executionId="379df550-33ea-40d6-8493-defadc0271a8" testId="aa71fe8a-e5aa-f23d-c632-cfb3c587ca21" testName="TestMethod" computerName="DESKTOP-5DEA222" duration="00:00:00.0003168" startTime="2017-02-06T17:10:55.1812052+01:00" endTime="2017-02-06T17:10:55.1832161+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="379df550-33ea-40d6-8493-defadc0271a8">
     </UnitTestResult>
-    <UnitTestResult executionId="df0fdf42-4c14-4bde-ba6a-2b06e801f895" testId="78aeddd0-4ae5-6103-b7dd-e62b71148721" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_1" computerName="AS0283" duration="00:00:00.0009066" startTime="2016-09-28T09:33:44.3171466+02:00" endTime="2016-09-28T09:33:44.3201570+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df0fdf42-4c14-4bde-ba6a-2b06e801f895">
+    <UnitTestResult executionId="28d3e694-dec4-4fd1-a9d8-4809b133381b" testId="78aeddd0-4ae5-6103-b7dd-e62b71148721" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0009564" startTime="2017-02-06T17:10:55.1882065+01:00" endTime="2017-02-06T17:10:55.1912354+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28d3e694-dec4-4fd1-a9d8-4809b133381b">
       <Output>
         <StdOut>Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="e3ae304c-2dae-4ced-8f1e-a967c4dbacd0" testId="ee74d71f-f824-19d9-866e-a408a95ffa99" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_2" computerName="AS0283" duration="00:00:00.0002620" startTime="2016-09-28T09:33:44.3211463+02:00" endTime="2016-09-28T09:33:44.3221570+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3ae304c-2dae-4ced-8f1e-a967c4dbacd0">
+    <UnitTestResult executionId="99f3f185-7fde-42ef-876c-93cf8897be94" testId="ee74d71f-f824-19d9-866e-a408a95ffa99" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet0_Pass_2" computerName="DESKTOP-5DEA222" duration="00:00:00.0001995" startTime="2017-02-06T17:10:55.1952058+01:00" endTime="2017-02-06T17:10:55.1982051+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="99f3f185-7fde-42ef-876c-93cf8897be94">
       <Output>
         <StdOut>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="c2c64da2-f4d5-4797-a119-ff5b2470b978" testId="e30ef794-1ea7-a76a-356b-1668bca94630" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1" computerName="AS0283" duration="00:00:00.0016034" startTime="2016-09-28T09:33:44.3241575+02:00" endTime="2016-09-28T09:33:44.3271459+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c2c64da2-f4d5-4797-a119-ff5b2470b978">
+    <UnitTestResult executionId="e36fd1e1-ff34-45f0-bce6-69ccc8ce70f3" testId="e30ef794-1ea7-a76a-356b-1668bca94630" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0012408" startTime="2017-02-06T17:10:55.2032042+01:00" endTime="2017-02-06T17:10:55.2062387+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e36fd1e1-ff34-45f0-bce6-69ccc8ce70f3">
       <Output>
         <StdOut>Then the scenario will 'inconclusive_1'
 -&gt; pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")</StdOut>
@@ -1531,13 +1531,13 @@ namespace MyNamespace
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
+   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_1()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="b88e3fe2-7142-4844-82fb-c028962cf58c" testId="4d5f7893-139c-db00-8823-de561780758d" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2" computerName="AS0283" duration="00:00:00.0011649" startTime="2016-09-28T09:33:44.3281435+02:00" endTime="2016-09-28T09:33:44.3311579+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b88e3fe2-7142-4844-82fb-c028962cf58c">
+    <UnitTestResult executionId="24a636a0-e978-444d-915b-a5612c3936d4" testId="4d5f7893-139c-db00-8823-de561780758d" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2" computerName="DESKTOP-5DEA222" duration="00:00:00.0010449" startTime="2017-02-06T17:10:55.2102047+01:00" endTime="2017-02-06T17:10:55.2122033+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24a636a0-e978-444d-915b-a5612c3936d4">
       <Output>
         <StdOut>Then the scenario will 'inconclusive_2'
 -&gt; pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_2")</StdOut>
@@ -1551,13 +1551,13 @@ namespace MyNamespace
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
+   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet1_Inconclusive_2()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="ab1d7239-4539-458b-a7f9-dfab7f9bc5da" testId="78a6b3a3-679e-ee71-7ff5-c9338e3be6c2" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" computerName="AS0283" duration="00:00:00.0027723" startTime="2016-09-28T09:33:44.3321466+02:00" endTime="2016-09-28T09:33:44.3361571+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ab1d7239-4539-458b-a7f9-dfab7f9bc5da">
+    <UnitTestResult executionId="e5a559bf-b05d-4bf4-9ecd-9e1ed69be9a2" testId="78a6b3a3-679e-ee71-7ff5-c9338e3be6c2" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0020973" startTime="2017-02-06T17:10:55.2172325+01:00" endTime="2017-02-06T17:10:55.2222324+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e5a559bf-b05d-4bf4-9ecd-9e1ed69be9a2">
       <Output>
         <StdOut>Then the scenario will 'fail_1'
 -&gt; error: 
@@ -1576,7 +1576,7 @@ Shouldly.ChuckedAWobbly:
     True</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
+   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
    at lambda_method(Closure , IContextManager , String )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1584,13 +1584,13 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
+   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_1()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="dc477dc5-8081-4326-a1a3-7f691ef07670" testId="40304968-0dee-8e41-4f42-20809899a9d0" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2" computerName="AS0283" duration="00:00:00.0025975" startTime="2016-09-28T09:33:44.3371438+02:00" endTime="2016-09-28T09:33:44.3411472+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc477dc5-8081-4326-a1a3-7f691ef07670">
+    <UnitTestResult executionId="6240d9de-e95c-4983-8c6f-bb8b564ffe2c" testId="40304968-0dee-8e41-4f42-20809899a9d0" testName="AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2" computerName="DESKTOP-5DEA222" duration="00:00:00.0019863" startTime="2017-02-06T17:10:55.2262395+01:00" endTime="2017-02-06T17:10:55.2302371+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6240d9de-e95c-4983-8c6f-bb8b564ffe2c">
       <Output>
         <StdOut>Then the scenario will 'fail_2'
 -&gt; error: 
@@ -1609,7 +1609,7 @@ Shouldly.ChuckedAWobbly:
     True</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
+   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
    at lambda_method(Closure , IContextManager , String )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1617,19 +1617,19 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
+   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections_(String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 45
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.AndWeCanGoTotallyBonkersWithMultipleExampleSections__ExampleSet2_Fail_2()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="0db42487-c1e4-4189-a35f-e93bd02705bb" testId="72d470fa-c19a-1302-1fcf-eb104ea36048" testName="DealCorrectlyWithBackslashesInTheExamples_CTemp" computerName="AS0283" duration="00:00:00.0006420" startTime="2016-09-28T09:33:44.3421442+02:00" endTime="2016-09-28T09:33:44.3441462+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0db42487-c1e4-4189-a35f-e93bd02705bb">
+    <UnitTestResult executionId="bd01c6a1-7886-4e91-9d6f-08c7e7cfaa3e" testId="72d470fa-c19a-1302-1fcf-eb104ea36048" testName="DealCorrectlyWithBackslashesInTheExamples_CTemp" computerName="DESKTOP-5DEA222" duration="00:00:00.0005720" startTime="2017-02-06T17:10:55.2352113+01:00" endTime="2017-02-06T17:10:55.2382427+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bd01c6a1-7886-4e91-9d6f-08c7e7cfaa3e">
       <Output>
         <StdOut>When I have backslashes in the value, for example a 'c:\Temp\'
 -&gt; done: ScenarioOutlineSteps.WhenIHaveBackslashesInTheValueForExampleAFilePath("c:\Temp\") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="5f84a30c-d6be-43b0-8e3e-9539f2944ba2" testId="ce4a9bf6-5fc5-0a40-2cbe-242a59cb1296" testName="DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE" computerName="AS0283" duration="00:00:00.0005394" startTime="2016-09-28T09:33:44.3451435+02:00" endTime="2016-09-28T09:33:44.3471463+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f84a30c-d6be-43b0-8e3e-9539f2944ba2">
+    <UnitTestResult executionId="6c8d5514-f328-4a6b-9626-56de18a92994" testId="ce4a9bf6-5fc5-0a40-2cbe-242a59cb1296" testName="DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE" computerName="DESKTOP-5DEA222" duration="00:00:00.0006660" startTime="2017-02-06T17:10:55.2422039+01:00" endTime="2017-02-06T17:10:55.2442353+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6c8d5514-f328-4a6b-9626-56de18a92994">
       <Output>
         <StdOut>When I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'
 -&gt; done: ScenarioOutlineSteps.WhenIHaveAFieldWithValue("Please enter a va...") (0,0s)
@@ -1639,31 +1639,31 @@ Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="cb798ff2-ffd4-4096-88aa-ac2565e53858" testId="d09c033d-0065-cbeb-bd7c-ee8b6460688f" testName="DealCorrectlyWithParenthesisInTheExamples_ThisIsADescriptionAndMore" computerName="AS0283" duration="00:00:00.0004382" startTime="2016-09-28T09:33:44.3481433+02:00" endTime="2016-09-28T09:33:44.3501436+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb798ff2-ffd4-4096-88aa-ac2565e53858">
+    <UnitTestResult executionId="6488a267-deec-495b-965d-bd873b6fd994" testId="d09c033d-0065-cbeb-bd7c-ee8b6460688f" testName="DealCorrectlyWithParenthesisInTheExamples_ThisIsADescriptionAndMore" computerName="DESKTOP-5DEA222" duration="00:00:00.0008284" startTime="2017-02-06T17:10:55.2492048+01:00" endTime="2017-02-06T17:10:55.2522401+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6488a267-deec-495b-965d-bd873b6fd994">
       <Output>
         <StdOut>When I have parenthesis in the value, for example an 'This is a description (and more)'
 -&gt; done: ScenarioOutlineSteps.WhenIHaveParenthesisInTheValueForExampleAnOverlyDescriptiveField("This is a descrip...") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="12e9883b-8b0c-4deb-a841-759574515567" testId="2c8f1abb-446c-6683-6327-8ec4ccd46e1a" testName="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1" computerName="AS0283" duration="00:00:00.0003110" startTime="2016-09-28T09:33:44.3511434+02:00" endTime="2016-09-28T09:33:44.3531460+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12e9883b-8b0c-4deb-a841-759574515567">
+    <UnitTestResult executionId="d92c0861-ba31-40fc-960c-bc48d2f35daa" testId="2c8f1abb-446c-6683-6327-8ec4ccd46e1a" testName="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0003417" startTime="2017-02-06T17:10:55.2562037+01:00" endTime="2017-02-06T17:10:55.2587393+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d92c0861-ba31-40fc-960c-bc48d2f35daa">
       <Output>
         <StdOut>Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="807f7b27-c6eb-417f-8733-2d48ea7263c9" testId="9efc5df4-5f77-a670-8622-976418721b8f" testName="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2" computerName="AS0283" duration="00:00:00.0001924" startTime="2016-09-28T09:33:44.3541430+02:00" endTime="2016-09-28T09:33:44.3561438+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="807f7b27-c6eb-417f-8733-2d48ea7263c9">
+    <UnitTestResult executionId="ff531493-ddfc-42d6-b034-f0d5bb0764f2" testId="9efc5df4-5f77-a670-8622-976418721b8f" testName="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2" computerName="DESKTOP-5DEA222" duration="00:00:00.0001829" startTime="2017-02-06T17:10:55.2622118+01:00" endTime="2017-02-06T17:10:55.2647102+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff531493-ddfc-42d6-b034-f0d5bb0764f2">
       <Output>
         <StdOut>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="5afafeb3-4f9f-4761-aa1c-25437fb913db" testId="9bb2410c-d8c6-90b8-75cd-5c93dc903745" testName="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" computerName="AS0283" duration="00:00:00.0001702" startTime="2016-09-28T09:33:44.3571556+02:00" endTime="2016-09-28T09:33:44.3591434+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5afafeb3-4f9f-4761-aa1c-25437fb913db">
+    <UnitTestResult executionId="25a9d752-f77c-43b7-b2e2-1dc752d3e7a4" testId="9bb2410c-d8c6-90b8-75cd-5c93dc903745" testName="ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3" computerName="DESKTOP-5DEA222" duration="00:00:00.0001829" startTime="2017-02-06T17:10:55.2697279+01:00" endTime="2017-02-06T17:10:55.2712390+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25a9d752-f77c-43b7-b2e2-1dc752d3e7a4">
       <Output>
         <StdOut>Then the scenario will 'pass_3'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_3") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="943c71de-e0fb-4491-bee5-a88a58ce5d6f" testId="05c22c90-eaaa-d3c2-bd2d-36c2df85528e" testName="ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1" computerName="AS0283" duration="00:00:00.0034038" startTime="2016-09-28T09:33:44.3601435+02:00" endTime="2016-09-28T09:33:44.3651570+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="943c71de-e0fb-4491-bee5-a88a58ce5d6f">
+    <UnitTestResult executionId="436f9511-6345-46b2-8c8b-1f9bc4dae751" testId="05c22c90-eaaa-d3c2-bd2d-36c2df85528e" testName="ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0026236" startTime="2017-02-06T17:10:55.2753682+01:00" endTime="2017-02-06T17:10:55.2803594+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="436f9511-6345-46b2-8c8b-1f9bc4dae751">
       <Output>
         <StdOut>Then the scenario will 'fail_1'
 -&gt; error: 
@@ -1682,7 +1682,7 @@ Shouldly.ChuckedAWobbly:
     True</Message>
           <StackTrace>    at Shouldly.ShouldlyCoreExtensions.AssertAwesomely[T](T actual, Func`2 specifiedConstraint, Object originalActual, Object originalExpected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldlyCoreExtensions.cs:line 18
    at Shouldly.ShouldBeTestExtensions.ShouldBe[T](T actual, T expected) in c:\TeamCity\buildAgent\work\10efaabfa8adbd4e\src\Shouldly\ShouldBeTestExtensions.cs:line 17
-   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\DevProjects\Tools\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
+   at AutomationLayer.ScenarioOutlineSteps.ThenTheScenarioWill(String result) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\AutomationLayer\ScenarioOutlineSteps.cs:line 21
    at lambda_method(Closure , IContextManager , String )
    at TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan&amp; duration)
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
@@ -1690,25 +1690,25 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 34
+   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails(String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 34
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f48a7003-60ee-4a81-980d-93aa28dcdf4a" testId="e64af447-d4dc-7221-865a-703128db7b90" testName="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" computerName="AS0283" duration="00:00:00.0001605" startTime="2016-09-28T09:33:44.3661432+02:00" endTime="2016-09-28T09:33:44.3681463+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f48a7003-60ee-4a81-980d-93aa28dcdf4a">
+    <UnitTestResult executionId="0d0eca73-92d1-458a-ad89-676742029145" testId="e64af447-d4dc-7221-865a-703128db7b90" testName="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0001979" startTime="2017-02-06T17:10:55.2843408+01:00" endTime="2017-02-06T17:10:55.2873402+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d0eca73-92d1-458a-ad89-676742029145">
       <Output>
         <StdOut>Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="6d018bfc-866c-4963-9cf2-fea88195981b" testId="b04f3200-80ca-d47f-0c01-8a37e5c952e6" testName="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2" computerName="AS0283" duration="00:00:00.0002360" startTime="2016-09-28T09:33:44.3691436+02:00" endTime="2016-09-28T09:33:44.3711438+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d018bfc-866c-4963-9cf2-fea88195981b">
+    <UnitTestResult executionId="ec265078-a919-473d-aae6-81118b2b602d" testId="b04f3200-80ca-d47f-0c01-8a37e5c952e6" testName="ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2" computerName="DESKTOP-5DEA222" duration="00:00:00.0001675" startTime="2017-02-06T17:10:55.2913556+01:00" endTime="2017-02-06T17:10:55.2933352+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ec265078-a919-473d-aae6-81118b2b602d">
       <Output>
         <StdOut>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="64386890-55a5-4b95-a423-b7712a39b8bf" testId="8c97c958-0c5d-1594-2cc5-02c96df8fc9b" testName="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1" computerName="AS0283" duration="00:00:00.0016638" startTime="2016-09-28T09:33:44.3721448+02:00" endTime="2016-09-28T09:33:44.3751441+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64386890-55a5-4b95-a423-b7712a39b8bf">
+    <UnitTestResult executionId="b83f21b7-6f17-4b08-8944-dca64a9e4864" testId="8c97c958-0c5d-1594-2cc5-02c96df8fc9b" testName="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0012389" startTime="2017-02-06T17:10:55.2963638+01:00" endTime="2017-02-06T17:10:55.3003385+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Inconclusive" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b83f21b7-6f17-4b08-8944-dca64a9e4864">
       <Output>
         <StdOut>Then the scenario will 'inconclusive_1'
 -&gt; pending: ScenarioOutlineSteps.ThenTheScenarioWill("inconclusive_1")</StdOut>
@@ -1722,25 +1722,25 @@ Shouldly.ChuckedAWobbly:
    at TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
    at TechTalk.SpecFlow.TestRunner.CollectScenarioErrors()
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ScenarioCleanup()
-   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(String result, String[] exampleTags) in C:\DevProjects\Tools\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 21
+   at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive(String result, String[] exampleTags) in C:\Dev\Code\GitHub\DirkRombauts\pickles\test-harness\MsTest\ScenarioOutlines.feature:line 21
    at Pickles.TestHarness.MsTest.ScenarioOutlinesFeature.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1()
 </StackTrace>
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="37420234-8748-4b85-94dd-c262b1d4acae" testId="6e54c207-a3b1-f181-06be-066795ac26e1" testName="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1" computerName="AS0283" duration="00:00:00.0001576" startTime="2016-09-28T09:33:44.3761459+02:00" endTime="2016-09-28T09:33:44.3781570+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37420234-8748-4b85-94dd-c262b1d4acae">
+    <UnitTestResult executionId="6345903e-4f6b-44e9-b158-743e9679a8e5" testId="6e54c207-a3b1-f181-06be-066795ac26e1" testName="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0001710" startTime="2017-02-06T17:10:55.3053348+01:00" endTime="2017-02-06T17:10:55.3073346+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6345903e-4f6b-44e9-b158-743e9679a8e5">
       <Output>
         <StdOut>Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="2caaf730-6060-459c-a263-4b80a7f424e4" testId="8f2bb160-fa82-a566-570e-51eeb5237e95" testName="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2" computerName="AS0283" duration="00:00:00.0001345" startTime="2016-09-28T09:33:44.3791432+02:00" endTime="2016-09-28T09:33:44.3801436+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2caaf730-6060-459c-a263-4b80a7f424e4">
+    <UnitTestResult executionId="5503a3d1-c5b4-4116-aaa8-53e6dad5e018" testId="8f2bb160-fa82-a566-570e-51eeb5237e95" testName="ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2" computerName="DESKTOP-5DEA222" duration="00:00:00.0002449" startTime="2017-02-06T17:10:55.3113358+01:00" endTime="2017-02-06T17:10:55.3133372+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5503a3d1-c5b4-4116-aaa8-53e6dad5e018">
       <Output>
         <StdOut>Then the scenario will 'pass_2'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_2") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="7e500918-0760-421a-83be-4ad63c51d858" testId="73c03e74-0c0b-5c1d-2193-91dd98f1f95e" testName="ThisIsAScenarioOutlineWithAmpersand_Pass_1" computerName="AS0283" duration="00:00:00.0005328" startTime="2016-09-28T09:33:44.3811625+02:00" endTime="2016-09-28T09:33:44.3841461+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7e500918-0760-421a-83be-4ad63c51d858">
+    <UnitTestResult executionId="ed45ebe5-d187-4dba-9ff8-c7301500a083" testId="73c03e74-0c0b-5c1d-2193-91dd98f1f95e" testName="ThisIsAScenarioOutlineWithAmpersand_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0005353" startTime="2017-02-06T17:10:55.3183557+01:00" endTime="2017-02-06T17:10:55.3223458+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed45ebe5-d187-4dba-9ff8-c7301500a083">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1748,7 +1748,7 @@ Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="aa138266-ab3e-4002-a38e-c8e05c31c8e6" testId="763d7e52-45c9-3e45-478d-dd6659bc69ba" testName="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1" computerName="AS0283" duration="00:00:00.0003084" startTime="2016-09-28T09:33:44.3851431+02:00" endTime="2016-09-28T09:33:44.3871434+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa138266-ab3e-4002-a38e-c8e05c31c8e6">
+    <UnitTestResult executionId="ce5816d1-1275-43c2-9908-fc8967f16e2c" testId="763d7e52-45c9-3e45-478d-dd6659bc69ba" testName="ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0003409" startTime="2017-02-06T17:10:55.3253364+01:00" endTime="2017-02-06T17:10:55.3313346+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ce5816d1-1275-43c2-9908-fc8967f16e2c">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1756,7 +1756,7 @@ Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="8b1c3c84-7a92-4086-a0b6-570d83a0369b" testId="f8369e2e-c5ec-dade-ad85-e2c56909c853" testName="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40_Pass_1" computerName="AS0283" duration="00:00:00.0003523" startTime="2016-09-28T09:33:44.3881430+02:00" endTime="2016-09-28T09:33:44.3901444+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8b1c3c84-7a92-4086-a0b6-570d83a0369b">
+    <UnitTestResult executionId="421e02cd-b167-4854-aec5-95e59c3b80c5" testId="f8369e2e-c5ec-dade-ad85-e2c56909c853" testName="ThisIsAScenarioOutlineWithParenthesesHyphenAndComma10_2030_40_Pass_1" computerName="DESKTOP-5DEA222" duration="00:00:00.0003563" startTime="2017-02-06T17:10:55.3363409+01:00" endTime="2017-02-06T17:10:55.3383387+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="421e02cd-b167-4854-aec5-95e59c3b80c5">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1764,7 +1764,7 @@ Then the scenario will 'pass_1'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("pass_1") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="d6156b13-8dea-4855-a0d6-c17e57bc0bf1" testId="3fe8806f-fabb-1deb-7e27-c59578f16da3" testName="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" computerName="AS0283" duration="00:00:00.0004102" startTime="2016-09-28T09:33:44.3911431+02:00" endTime="2016-09-28T09:33:44.3931433+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6156b13-8dea-4855-a0d6-c17e57bc0bf1">
+    <UnitTestResult executionId="e4913852-5b3e-4a2f-b787-1af56a7446c4" testId="3fe8806f-fabb-1deb-7e27-c59578f16da3" testName="ThisIsAScenarioWithParenthesesHyphenAndComma10_2030_40" computerName="DESKTOP-5DEA222" duration="00:00:00.0003223" startTime="2017-02-06T17:10:55.3423632+01:00" endTime="2017-02-06T17:10:55.3443345+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4913852-5b3e-4a2f-b787-1af56a7446c4">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1778,7 +1778,7 @@ Then the result should be 120 on the screen
 -&gt; done: AdditionSteps.ThenTheResultShouldBeOnTheScreen(120) (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="98c888d3-b7f7-4085-8aef-ce81ee21100d" testId="b891bd24-e5b1-222b-8d70-96a2ba7b0807" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" computerName="AS0283" duration="00:00:00.0007828" startTime="2016-09-28T09:33:44.3941440+02:00" endTime="2016-09-28T09:33:44.3971430+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98c888d3-b7f7-4085-8aef-ce81ee21100d">
+    <UnitTestResult executionId="72b5ae3a-afbb-4fef-8616-618654294f80" testId="b891bd24-e5b1-222b-8d70-96a2ba7b0807" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant0" computerName="DESKTOP-5DEA222" duration="00:00:00.0014273" startTime="2017-02-06T17:10:55.3483365+01:00" endTime="2017-02-06T17:10:55.3523369+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="72b5ae3a-afbb-4fef-8616-618654294f80">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1788,7 +1788,7 @@ Then the scenario will 'PASS'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="1aa8cc43-19e6-440f-9d36-87f525d47f1b" testId="fb3ec8b2-a410-ecc8-265b-29bfd3772553" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" computerName="AS0283" duration="00:00:00.0003503" startTime="2016-09-28T09:33:44.3981434+02:00" endTime="2016-09-28T09:33:44.4001460+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1aa8cc43-19e6-440f-9d36-87f525d47f1b">
+    <UnitTestResult executionId="c7f4b4f7-734c-41d7-863a-73a058b6684c" testId="fb3ec8b2-a410-ecc8-265b-29bfd3772553" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant1" computerName="DESKTOP-5DEA222" duration="00:00:00.0002125" startTime="2017-02-06T17:10:55.3563373+01:00" endTime="2017-02-06T17:10:55.3583434+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7f4b4f7-734c-41d7-863a-73a058b6684c">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1798,7 +1798,7 @@ Then the scenario will 'PASS'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f2df90c9-7a83-4804-8286-7e68abdb6acc" testId="a3bd6f67-daac-1ebc-5894-1d73dbe8d707" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" computerName="AS0283" duration="00:00:00.0001918" startTime="2016-09-28T09:33:44.4011441+02:00" endTime="2016-09-28T09:33:44.4031564+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2df90c9-7a83-4804-8286-7e68abdb6acc">
+    <UnitTestResult executionId="f88d041d-6c5d-4fe7-8853-4dff41a2b1f2" testId="a3bd6f67-daac-1ebc-5894-1d73dbe8d707" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant2" computerName="DESKTOP-5DEA222" duration="00:00:00.0002176" startTime="2017-02-06T17:10:55.3623434+01:00" endTime="2017-02-06T17:10:55.3648714+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f88d041d-6c5d-4fe7-8853-4dff41a2b1f2">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1808,7 +1808,7 @@ Then the scenario will 'PASS'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="fe022d9c-e496-4d25-8ee2-cecdfd7d7cbd" testId="7699da71-b819-eb00-3894-2f0be7eec39c" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" computerName="AS0283" duration="00:00:00.0001870" startTime="2016-09-28T09:33:44.4041454+02:00" endTime="2016-09-28T09:33:44.4051566+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fe022d9c-e496-4d25-8ee2-cecdfd7d7cbd">
+    <UnitTestResult executionId="6d92ba39-2017-4597-9ddc-b66a1dc001b6" testId="7699da71-b819-eb00-3894-2f0be7eec39c" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant3" computerName="DESKTOP-5DEA222" duration="00:00:00.0002133" startTime="2017-02-06T17:10:55.3708487+01:00" endTime="2017-02-06T17:10:55.3728829+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d92ba39-2017-4597-9ddc-b66a1dc001b6">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1818,7 +1818,7 @@ Then the scenario will 'PASS'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="41ec70d9-da3e-4c83-928e-51a61b9d48c3" testId="d253522e-be41-9b3a-247a-ca440d4ac588" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" computerName="AS0283" duration="00:00:00.0002936" startTime="2016-09-28T09:33:44.4061439+02:00" endTime="2016-09-28T09:33:44.4091569+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="41ec70d9-da3e-4c83-928e-51a61b9d48c3">
+    <UnitTestResult executionId="cc8a447e-aedf-4f4f-8b90-cf492773712b" testId="d253522e-be41-9b3a-247a-ca440d4ac588" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant4" computerName="DESKTOP-5DEA222" duration="00:00:00.0002010" startTime="2017-02-06T17:10:55.3768730+01:00" endTime="2017-02-06T17:10:55.3788527+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc8a447e-aedf-4f4f-8b90-cf492773712b">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1828,7 +1828,7 @@ Then the scenario will 'PASS'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="7fa9f127-15ff-45a9-90a0-69b0359e0f64" testId="cca2404a-911a-a50e-9898-327264f0ea76" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" computerName="AS0283" duration="00:00:00.0002098" startTime="2016-09-28T09:33:44.4101447+02:00" endTime="2016-09-28T09:33:44.4121427+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7fa9f127-15ff-45a9-90a0-69b0359e0f64">
+    <UnitTestResult executionId="197ebfef-0875-417e-9fab-e0030978e3a9" testId="cca2404a-911a-a50e-9898-327264f0ea76" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant5" computerName="DESKTOP-5DEA222" duration="00:00:00.0004009" startTime="2017-02-06T17:10:55.3838621+01:00" endTime="2017-02-06T17:10:55.3868551+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="197ebfef-0875-417e-9fab-e0030978e3a9">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
@@ -1838,7 +1838,7 @@ Then the scenario will 'PASS'
 -&gt; done: ScenarioOutlineSteps.ThenTheScenarioWill("PASS") (0,0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="8861d3d8-946d-4d98-a506-6f0abfeb7d86" testId="22ccdb90-02c8-97c1-e2a1-6bec4f044d99" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" computerName="AS0283" duration="00:00:00.0001895" startTime="2016-09-28T09:33:44.4131440+02:00" endTime="2016-09-28T09:33:44.4141570+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8861d3d8-946d-4d98-a506-6f0abfeb7d86">
+    <UnitTestResult executionId="951f42cc-b91f-4935-b6a1-e3666ba2d7b4" testId="22ccdb90-02c8-97c1-e2a1-6bec4f044d99" testName="ThisScenarioContainsExamplesWithRegex_SpecialCharacters_Variant6" computerName="DESKTOP-5DEA222" duration="00:00:00.0003385" startTime="2017-02-06T17:10:55.3908527+01:00" endTime="2017-02-06T17:10:55.3928537+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="951f42cc-b91f-4935-b6a1-e3666ba2d7b4">
       <Output>
         <StdOut>Given the calculator has clean memory
 -&gt; done: AdditionSteps.GivenTheCalculatorHasCleanMemory() (0,0s)
