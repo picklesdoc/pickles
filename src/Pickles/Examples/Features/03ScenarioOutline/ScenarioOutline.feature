@@ -11,12 +11,14 @@ Scenario Outline: Add two positive numbers with many examples
 	When I perform add
 	Then the result should be <result>
 
+@small @short_test
 Examples: less than 100
 	| number 1 | number 2 | result |
 	| 10       | 20       | 30     |
 	| 20       | 20       | 40     |
 	| 20       | 30       | 50     |
 
+@big
 Examples: more than 100
 	| number 1 | number 2 | result |
 	| 100      | 20       | 120    |
