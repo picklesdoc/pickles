@@ -193,7 +193,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 Description = examples.Description,
                 Name = examples.Name,
                 TableArgument = this.MapToTable(((G.IHasRows) examples).Rows),
-                Tags = examples.Tags.Select(this.MapToString).ToList()
+                Tags = examples.Tags?.Select(this.MapToString).ToList()
             };
         }
 
