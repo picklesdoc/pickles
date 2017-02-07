@@ -48,7 +48,7 @@ function Examples(data) {
     this.Description = data.Description || '';
     this.TableArgument = data.TableArgument == null ? null : new TableArgument(data.TableArgument.HeaderRow, data.TableArgument.DataRows);
     this.Tags = data.Tags || null;
-}
+  }
 
 function Background(data) {
     this.Name = data.Name || '';

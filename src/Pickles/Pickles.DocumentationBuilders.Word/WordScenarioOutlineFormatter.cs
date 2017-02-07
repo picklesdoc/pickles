@@ -59,6 +59,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             }
 
             body.GenerateParagraph(scenarioOutline.Name, "Heading2");
+            if (scenarioOutline.Tags.Count != 0)
+            {
+              var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }));
+              var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
+              paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", scenarioOutline.Tags) + ")")));
+              body.Append(paragraph);
+            }
             if (!string.IsNullOrEmpty(scenarioOutline.Description))
             {
                 body.GenerateParagraph(scenarioOutline.Description, "Normal");
@@ -72,15 +79,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             foreach (var example in scenarioOutline.Examples)
             {
                 var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }));
-                paragraph.Append( new Run( new RunProperties(), new Text( "Examples: " + example.Description ) ) );
+                paragraph.Append(new Run(new RunProperties(), new Text("Examples: " + example.Description)));
                 if ( example.Tags.Count != 0 )
                 {
-                    paragraph.Append( new Run( new Text( "  " ) {Space = SpaceProcessingModeValues.Preserve} ) );
-                    var tagrunProp = new RunProperties( new Italic(), new Color {ThemeColor = ThemeColorValues.Text2} ) {Bold = new Bold() {Val = false}};
-                    paragraph.Append( new Run( tagrunProp.CloneNode( true ), new Text( " (Tags: " ) ) );
-                    paragraph.Append( new Run( tagrunProp.CloneNode( true ), new Text( string.Join( ", ", example.Tags ) + ")" ) ) );
+                    paragraph.Append(new Run(new Text("  ") {Space = SpaceProcessingModeValues.Preserve}));
+                    var tagrunProp = new RunProperties(new Italic(), new Color {ThemeColor = ThemeColorValues.Text2}) {Bold = new Bold() {Val = false}};
+                    paragraph.Append(new Run(tagrunProp.CloneNode(true), new Text(" (Tags: ")));
+                    paragraph.Append(new Run(tagrunProp.CloneNode(true), new Text(string.Join(", ", example.Tags) + ")")));
                 }
-                body.Append( paragraph );
+                body.Append(paragraph);
 
                 this.wordTableFormatter.Format( body, example.TableArgument );
             }

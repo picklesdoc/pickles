@@ -78,10 +78,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
             if ( feature.Tags.Count != 0 )
             {
-                var paragraph = new Paragraph( new ParagraphProperties( new ParagraphStyleId {Val = "Normal"} ) );
-                var tagrunProp = new RunProperties( new Italic(), new Color {ThemeColor = ThemeColorValues.Text2} ) {Bold = new Bold() {Val = false}};
-                paragraph.Append( new Run( tagrunProp, new Text( "(Tags: " + string.Join( ", ", feature.Tags ) + ")" ) ) );
-                body.Append( paragraph );
+                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId {Val = "Normal"}));
+                var tagrunProp = new RunProperties(new Italic(), new Color {ThemeColor = ThemeColorValues.Text2}) {Bold = new Bold() {Val = false}};
+                paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", feature.Tags) + ")")));
+                body.Append(paragraph);
             }
 
             this.wordDescriptionFormatter.Format(body, feature.Description);

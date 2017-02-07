@@ -123,7 +123,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                         new XAttribute("class", "examples"),
                         new XElement(this.xmlns + "h3", "Examples: " + example.Name),
                         this.htmlDescriptionFormatter.Format(example.Description),
-                        (example.Tags == null || example.Tags.Count == 0) ? null : new XElement(this.xmlns + "span", HtmlScenarioFormatter.CreateTagElements(example.Tags.OrderBy(t => t).ToArray(), this.xmlns)),
+                        (example.Tags == null || example.Tags.Count == 0) ? null : new XElement(this.xmlns + "p", new XAttribute("class", "tags"), HtmlScenarioFormatter.CreateTagElements(example.Tags.OrderBy(t => t).ToArray(), this.xmlns)),
                         (example.TableArgument == null) ? null : this.htmlTableFormatter.Format(example.TableArgument, scenarioOutline)));
             }
 
