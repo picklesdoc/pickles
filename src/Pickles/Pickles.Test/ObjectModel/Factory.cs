@@ -118,7 +118,7 @@ My doc string line 2");
         internal G.Examples CreateExamples(string name, string description, string[] headerCells, IEnumerable<string[]> exampleRows, string[] tags = null)
         {
             var examples = new G.Examples(
-                tags.Select(this.CreateTag).ToArray(),
+                tags?.Select(this.CreateTag).ToArray(),
                 AnyLocation,
                 "Examples",
                 name,
