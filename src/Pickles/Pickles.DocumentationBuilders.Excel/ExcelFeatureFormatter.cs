@@ -18,6 +18,7 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using ClosedXML.Excel;
@@ -52,18 +53,26 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             worksheet.Cell("A1").Style.Font.SetBold();
             worksheet.Cell("A1").Value = feature.Name;
 
+            if (feature.Tags != null && feature.Tags.Count != 0)
+            {
+                worksheet.Cell("B2").Value = "Tags:";
+                worksheet.Cell("C2").Value = String.Join(", ", feature.Tags);
+                worksheet.Range("B2:C2").Style.Font.Italic = true;
+                worksheet.Range("B2:C2").Style.Font.FontColor = XLColor.DavysGrey;
+            }
+
             if (feature.Description.Length <= short.MaxValue)
             {
-                worksheet.Cell("B2").Value = feature.Description;
+                worksheet.Cell("B3").Value = feature.Description;
             }
             else
             {
                 var description = feature.Description.Substring(0, short.MaxValue);
                 Log.Warn("The description of feature {0} was truncated because of cell size limitations in Excel.", feature.Name);
-                worksheet.Cell("B2").Value = description;
+                worksheet.Cell("B3").Value = description;
             }
 
-            worksheet.Cell("B2").Style.Alignment.WrapText = false;
+            worksheet.Cell("B3").Style.Alignment.WrapText = false;
 
             var results = this.testResults.GetFeatureResult(feature);
 
@@ -82,7 +91,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
 
             featureElementsToRender.AddRange(feature.FeatureElements);
 
-            var row = 4;
+            var row = 5;
             foreach (var featureElement in featureElementsToRender)
             {
                 var scenario = featureElement as Scenario;

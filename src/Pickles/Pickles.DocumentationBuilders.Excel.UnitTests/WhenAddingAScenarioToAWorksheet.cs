@@ -45,7 +45,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
             {
                 Name = "Test Feature",
                 Description =
-                    "In order to test this feature,\nAs a developer\nI want to test this feature"
+                    "In order to test this feature,\nAs a developer\nI want to test this feature",
+                Tags = { "tag1", "tag2" }
             };
 
             using (var workbook = new XLWorkbook())
@@ -55,8 +56,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 excelScenarioFormatter.Format(worksheet, scenario, ref row);
 
                 Check.That(worksheet.Cell("B3").Value).IsEqualTo(scenario.Name);
-                Check.That(worksheet.Cell("C4").Value).IsEqualTo(scenario.Description);
-                Check.That(row).IsEqualTo(5);
+                Check.That(worksheet.Cell("C4").Value).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C5").Value).IsEqualTo(scenario.Description);
+                Check.That(row).IsEqualTo(6);
             }
         }
 

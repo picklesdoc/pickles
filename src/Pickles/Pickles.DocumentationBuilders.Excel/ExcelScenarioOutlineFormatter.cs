@@ -47,8 +47,22 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
         public void Format(IXLWorksheet worksheet, ScenarioOutline scenarioOutline, ref int row)
         {
             int originalRow = row;
+            worksheet.Cell(row, "B").Style.Font.SetBold();
             worksheet.Cell(row++, "B").Value = scenarioOutline.Name;
-            worksheet.Cell(row++, "C").Value = scenarioOutline.Description;
+
+            if (scenarioOutline.Tags != null && scenarioOutline.Tags.Count != 0)
+            {
+              worksheet.Cell(row, "B").Value = "Tags:";
+              worksheet.Cell(row, "C").Value = String.Join(", ", scenarioOutline.Tags);
+              worksheet.Cell(row, "B").Style.Font.Italic = true;
+              worksheet.Cell(row, "B").Style.Font.FontColor = XLColor.DavysGrey;
+              worksheet.Cell(row, "C").Style.Font.Italic = true;
+              worksheet.Cell(row, "C").Style.Font.FontColor = XLColor.DavysGrey;
+              row++;
+            }
+
+            if (! string.IsNullOrWhiteSpace(scenarioOutline.Description))
+                worksheet.Cell(row++, "C").Value = scenarioOutline.Description;
 
             var results = this.testResults.GetScenarioOutlineResult(scenarioOutline);
             if (this.configuration.HasTestResults && (results != TestResult.Inconclusive))
@@ -68,7 +82,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             foreach (var example in scenarioOutline.Examples)
             {
                 worksheet.Cell(row++, "B").Value = "Examples";
-                worksheet.Cell(row, "C").Value = example.Description;
+
+                if (example.Tags != null && example.Tags.Count != 0)
+                {
+                  worksheet.Cell(row, "C").Value = "Tags:";
+                  worksheet.Cell(row, "D").Value = String.Join(", ", example.Tags);
+                  worksheet.Cell(row, "C").Style.Font.Italic = true;
+                  worksheet.Cell(row, "C").Style.Font.FontColor = XLColor.DavysGrey;
+                  worksheet.Cell(row, "D").Style.Font.Italic = true;
+                  worksheet.Cell(row, "D").Style.Font.FontColor = XLColor.DavysGrey;
+                  row++;
+                }
+
+                if (! string.IsNullOrWhiteSpace(example.Description))
+                    worksheet.Cell(row++, "C").Value = example.Description;
+
                 this.excelTableFormatter.Format(worksheet, example.TableArgument, ref row);
             }
         }
