@@ -85,7 +85,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         [Test]
         public void Map_AnExampleWithTags_ReturnsAJsonExampleWithTags()
         {
-            var example = new Example { Tags = new List<string>() { "tag1", "tag2" }  };
+            var example = new Example { Tags = new List<string>() { "tag1", "tag2" } };
 
             var mapper = CreateMapper();
 
