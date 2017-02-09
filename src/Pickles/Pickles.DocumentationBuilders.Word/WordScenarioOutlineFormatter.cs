@@ -61,10 +61,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             body.GenerateParagraph(scenarioOutline.Name, "Heading2");
             if (scenarioOutline.Tags.Count != 0)
             {
-              var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }));
-              var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
-              paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", scenarioOutline.Tags) + ")")));
-              body.Append(paragraph);
+                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }));
+                var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
+                paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", scenarioOutline.Tags) + ")")));
+                body.Append(paragraph);
             }
             if (!string.IsNullOrEmpty(scenarioOutline.Description))
             {
@@ -78,16 +78,20 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
             foreach (var example in scenarioOutline.Examples)
             {
-                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }));
-                paragraph.Append(new Run(new RunProperties(), new Text("Examples: " + example.Description)));
-                if ( example.Tags.Count != 0 )
+                body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }), new Run(new RunProperties(), new Text("Examples:"))));
+
+                if (example.Tags.Count != 0)
                 {
-                    paragraph.Append(new Run(new Text("  ") {Space = SpaceProcessingModeValues.Preserve}));
-                    var tagrunProp = new RunProperties(new Italic(), new Color {ThemeColor = ThemeColorValues.Text2}) {Bold = new Bold() {Val = false}};
-                    paragraph.Append(new Run(tagrunProp.CloneNode(true), new Text(" (Tags: ")));
-                    paragraph.Append(new Run(tagrunProp.CloneNode(true), new Text(string.Join(", ", example.Tags) + ")")));
+                    var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
+                    body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }),
+                                              new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", example.Tags) + ")"))));
                 }
-                body.Append(paragraph);
+
+                if (!string.IsNullOrWhiteSpace(example.Description))
+                {
+                    body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }),
+                                              new Run(new Text(example.Description))));
+                }
 
                 this.wordTableFormatter.Format( body, example.TableArgument );
             }

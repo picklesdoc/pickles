@@ -110,6 +110,12 @@ li.step {
     color: #0000FF;
 }
 
+.tags {
+    color: #44546a;
+    font-style: italic;
+    font-weight: normal;
+}
+
 .steps table {
     margin-bottom: 0px;
 }

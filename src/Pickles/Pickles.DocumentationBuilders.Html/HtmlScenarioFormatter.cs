@@ -50,8 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             var header = new XElement(
                 this.xmlns + "div",
                 new XAttribute("class", "scenario-heading"),
-                string.IsNullOrEmpty(scenario.Slug) ? null : new XAttribute("id", scenario.Slug),
-                new XElement(this.xmlns + "h2", scenario.Name));
+                string.IsNullOrEmpty(scenario.Slug) ? null : new XAttribute("id", scenario.Slug));
 
             var tags = RetrieveTags(scenario);
             if (tags.Length > 0)
@@ -60,6 +59,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                 paragraph.Add(new XAttribute("class", "tags"));
                 header.Add(paragraph);
             }
+
+            header.Add(new XElement(this.xmlns + "h2", scenario.Name));
 
             header.Add(this.htmlDescriptionFormatter.Format(scenario.Description));
 
