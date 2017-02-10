@@ -77,5 +77,13 @@ namespace PicklesDoc.Pickles.Extensions
 
             return MakeRelativePath(from.FullName, to.FullName, fileSystem);
         }
+
+        public static string[] GetAllFilesFromPathAndFileNameWithOptionalWildCards(string fileFullName, IFileSystem fileSystem)
+        {
+            var path = fileSystem.Path.GetDirectoryName(fileFullName);
+            var wildcardFileName = fileSystem.Path.GetFileName(fileFullName);
+            return fileSystem.Directory.GetFiles(path, wildcardFileName);
+        }
+
     }
 }
