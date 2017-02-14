@@ -487,5 +487,19 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(configuration.Language).IsEqualTo("en");
         }
+
+        [Test]
+        public void ThenCanParseIgnoreTagSuccessfully()
+        {
+            var ignoreTag = "ignore-tag";
+            var args = new[] { $@"-ignoreTag={ignoreTag}" };
+
+            var configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.IgnoreTag).IsEqualTo(ignoreTag);
+        }
     }
 }

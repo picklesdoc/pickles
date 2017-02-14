@@ -40,6 +40,7 @@ namespace PicklesDoc.Pickles
         public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
         public const string HelpEnableComments = "whether to enable comments in the output";
+        public const string HelpIgnoreTag = "tag used for ignore feature or scenario";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
@@ -58,6 +59,7 @@ namespace PicklesDoc.Pickles
         private bool versionRequested;
         private bool includeExperimentalFeatures;
         private string enableCommentsValue;
+        private string ignoreTag;
 
         public CommandLineArgumentParser(IFileSystem fileSystem)
         {
@@ -75,7 +77,8 @@ namespace PicklesDoc.Pickles
                 { "v|version", v => this.versionRequested = v != null },
                 { "h|?|help", v => this.helpRequested = v != null },
                 { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
-                { "cmt|enableComments=", HelpEnableComments, v => this.enableCommentsValue = v }
+                { "cmt|enableComments=", HelpEnableComments, v => this.enableCommentsValue = v },
+                { "it|ignoreTag=", HelpIgnoreTag, v => this.ignoreTag = v }
             };
         }
 
@@ -146,6 +149,11 @@ namespace PicklesDoc.Pickles
             if (this.includeExperimentalFeatures)
             {
                 configuration.EnableExperimentalFeatures();
+            }
+
+            if (!string.IsNullOrEmpty(this.ignoreTag))
+            {
+                configuration.IgnoreTag = this.ignoreTag;
             }
 
             bool enableComments;
