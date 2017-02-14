@@ -93,8 +93,6 @@ namespace PicklesDoc.Pickles
             return language;
         }
 
-
-
         private Feature RemoveFeatureWithIgnoreTag(Feature result)
         {
             if (result.Tags.Any(t => t == $"@{configuration.IgnoreTag}"))

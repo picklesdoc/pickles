@@ -23,6 +23,7 @@ using System.IO.Abstractions;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
+using PicklesDoc.Pickles.DocumentationBuilders.Word.TableOfContentsAdder;
 using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -57,12 +58,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             if (this.relevantFileDetector.IsFeatureFile(file))
             {
                 Feature feature = this.featureParser.Parse(file.FullName);
-                if (feature != null)
-                {
-                    return new FeatureNode(file, relativePathFromRoot, feature);
-                }
-
-                throw new InvalidOperationException("This feature file could not be read and will be excluded");
+                return feature != null ? new FeatureNode(file, relativePathFromRoot, feature) : null;
             }
             else if (this.relevantFileDetector.IsMarkdownFile(file))
             {
