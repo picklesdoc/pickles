@@ -107,6 +107,8 @@ namespace PicklesDoc.Pickles
             }
         }
 
+        public string IgnoreTag { get; set; }
+
         private void AddTestResultFileIfItExists(FileInfoBase fileInfoBase)
         {
             if (fileInfoBase.Exists)
