@@ -216,6 +216,7 @@
     <EmbeddedResource Include="FakeFolderStructures\OrderingTests\B\b-b.feature">
       <LastGenOutput>a-b.feature.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\LevelOneIgnoredFeature.feature" />
     <None Include="Resources\test.jpg" />
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

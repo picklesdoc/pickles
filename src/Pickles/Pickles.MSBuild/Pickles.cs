@@ -51,7 +51,7 @@ namespace PicklesDoc.Pickles.MSBuild
 
         public string EnableComments { get; set; }
 
-        public string IgnoreTag { get; set; }
+        public string ExcludeTags { get; set; }
 
         public override bool Execute()
         {
@@ -116,9 +116,9 @@ namespace PicklesDoc.Pickles.MSBuild
                 configuration.DocumentationFormat = (DocumentationFormat)Enum.Parse(typeof(DocumentationFormat), this.DocumentationFormat, true);
             }
             
-            if (!string.IsNullOrEmpty(this.IgnoreTag))
+            if (!string.IsNullOrEmpty(this.ExcludeTags))
             {
-                configuration.IgnoreTag = this.IgnoreTag;
+                configuration.ExcludeTags = this.ExcludeTags;
             }
 
             bool shouldEnableExperimentalFeatures;

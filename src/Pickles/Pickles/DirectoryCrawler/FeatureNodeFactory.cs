@@ -23,7 +23,6 @@ using System.IO.Abstractions;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
-using PicklesDoc.Pickles.DocumentationBuilders.Word.TableOfContentsAdder;
 using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
 

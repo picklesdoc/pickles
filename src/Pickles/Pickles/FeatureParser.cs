@@ -74,7 +74,7 @@ namespace PicklesDoc.Pickles
                 new Gherkin.TokenMatcher(new CultureAwareDialectProvider(language)));
 
             Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
-            result = this.RemoveFeatureWithIgnoreTag(result);
+            result = this.RemoveFeatureWithExcludeTags(result);
 
             if (result != null)
                 this.descriptionProcessor.Process(result);
@@ -93,12 +93,12 @@ namespace PicklesDoc.Pickles
             return language;
         }
 
-        private Feature RemoveFeatureWithIgnoreTag(Feature result)
+        private Feature RemoveFeatureWithExcludeTags(Feature result)
         {
-            if (result.Tags.Any(t => t == $"@{configuration.IgnoreTag}"))
+            if (result.Tags.Any(t => t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase)))
                 return null;
 
-            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(t => t != $"@{configuration.IgnoreTag}")).ToList();
+            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(t => !t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase))).ToList();
 
             result.FeatureElements.Clear();
             result.FeatureElements.AddRange(wantedFeatures);

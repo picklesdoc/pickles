@@ -18,8 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
-using System.IO.Abstractions;
 using System.Linq;
 
 using Autofac;
@@ -400,10 +398,9 @@ Feature: Test
         [Test]
         public void Then_can_parse_and_ignore_feature_with_tag_in_configuration_ignore_tag()
         {
-            var ignoreTag = "ignore-tag";
-            string featureText =
-                $@"# ignore this comment
-@feature-tag @{ignoreTag}
+            var featureText =
+                @"# ignore this comment
+@feature-tag @ignore-tag
 Feature: Test
     In order to do something
     As a user
@@ -415,18 +412,16 @@ Feature: Test
     When it runs
     Then I should see that this thing happens";
 
-            var parser = new FeatureParser(Container.Resolve<IFileSystem>(), new Configuration { IgnoreTag = ignoreTag });
+            var parser = Container.Resolve<FeatureParser>();
             var feature = parser.Parse(new StringReader(featureText));
-
             Check.That(feature).IsNull();
         }
 
         [Test]
         public void Then_can_parse_and_ignore_scenario_with_tag_in_configuration_ignore_tag()
         {
-            var ignoreTag = "ignore-tag";
-            string featureText =
-                $@"# ignore this comment
+            var featureText =
+                @"# ignore this comment
 @feature-tag
 Feature: Test
     In order to do something
@@ -439,7 +434,7 @@ Feature: Test
     When it runs
     Then I should see that this thing happens
 
-    @scenario-tag-1 @scenario-tag-2 @{ignoreTag}
+    @scenario-tag-1 @scenario-tag-2 @ignore-tag
   Scenario: B scenario
     Given some feature
     When it runs
@@ -450,8 +445,8 @@ Feature: Test
     Given some feature
     When it runs
     Then I should see that this thing happens";
-
-            var parser = new FeatureParser(Container.Resolve<IFileSystem>(), new Configuration { IgnoreTag = ignoreTag });
+ 
+            var parser = Container.Resolve<FeatureParser>();
             var feature = parser.Parse(new StringReader(featureText));
 
             Check.That(feature.FeatureElements.Count).IsEqualTo(2);
@@ -463,28 +458,27 @@ Feature: Test
         [Test]
         public void Then_can_parse_and_ignore_scenario_with_tag_in_configuration_ignore_tag_and_keep_feature()
         {
-            var ignoreTag = "ignore-tag";
-            string featureText =
-                $@"# ignore this comment
+            var featureText =
+                @"# ignore this comment
 @feature-tag
 Feature: Test
     In order to do something
     As a user
     I want to run this scenario
 
-    @scenario-tag-1 @scenario-tag-2 @{ignoreTag}
+    @scenario-tag-1 @scenario-tag-2 @Ignore-Tag
   Scenario: A scenario
     Given some feature
     When it runs
     Then I should see that this thing happens
 
-    @scenario-tag-1 @scenario-tag-2 @{ignoreTag}
+    @scenario-tag-1 @scenario-tag-2 @ignore-tag
   Scenario: B scenario
     Given some feature
     When it runs
     Then I should see that this thing happens";
 
-            var parser = new FeatureParser(Container.Resolve<IFileSystem>(), new Configuration { IgnoreTag = ignoreTag });
+            var parser = Container.Resolve<FeatureParser>();
             var feature = parser.Parse(new StringReader(featureText));
 
             Check.That(feature).IsNotNull();
