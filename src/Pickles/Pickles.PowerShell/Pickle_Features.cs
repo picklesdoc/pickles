@@ -97,8 +97,8 @@ namespace PicklesDoc.Pickles.PowerShell
 
             if (!string.IsNullOrEmpty(this.TestResultsFile))
             {
-                configuration.AddTestResultFiles(
-                    PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(this.TestResultsFile, fileSystem));
+                var files = PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalWildCards(this.TestResultsFile, fileSystem);
+                configuration.AddTestResultFiles(files.Select(f => fileSystem.FileInfo.FromFileName(f))); 
             }
 
             configuration.SystemUnderTestName = this.SystemUnderTestName;

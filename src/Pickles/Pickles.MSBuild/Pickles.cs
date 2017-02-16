@@ -98,8 +98,8 @@ namespace PicklesDoc.Pickles.MSBuild
 
             if (!string.IsNullOrEmpty(this.ResultsFile))
             {
-                configuration.AddTestResultFiles(
-                    PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(this.ResultsFile, fileSystem));
+                var files = PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalWildCards(this.ResultsFile, fileSystem);
+                configuration.AddTestResultFiles(files.Select(f => fileSystem.FileInfo.FromFileName(f)));
             }
 
             if (!string.IsNullOrEmpty(this.SystemUnderTestName))

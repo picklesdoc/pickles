@@ -118,8 +118,10 @@ namespace PicklesDoc.Pickles
 
             if (!string.IsNullOrEmpty(this.testResultsFile))
             {
-                configuration.AddTestResultFiles(
-                    PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(this.testResultsFile, this.fileSystem));
+                var files = this.testResultsFile.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+                configuration.AddTestResultFiles(files
+                    .SelectMany(f => PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalWildCards(f, this.fileSystem))
+                    .Select(f => this.fileSystem.FileInfo.FromFileName(f)));
             }
 
             if (!string.IsNullOrEmpty(this.systemUnderTestName))
