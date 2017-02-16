@@ -19,7 +19,9 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
+using System.Linq;
 
 namespace PicklesDoc.Pickles.Extensions
 {
@@ -77,5 +79,22 @@ namespace PicklesDoc.Pickles.Extensions
 
             return MakeRelativePath(from.FullName, to.FullName, fileSystem);
         }
+
+        private static string[] GetAllFilesFromPathAndFileNameWithOptionalWildCards(string fileFullName, IFileSystem fileSystem)
+        {
+            var path = fileSystem.Path.GetDirectoryName(fileFullName);
+            var wildcardFileName = fileSystem.Path.GetFileName(fileFullName);
+            // GetFiles returns an array with 1 empty string when wildcard match is not found.
+            return fileSystem.Directory.GetFiles(path, wildcardFileName).Where(x => !string.IsNullOrEmpty(x)).ToArray();
+        }
+
+        public static IEnumerable<FileInfoBase> GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(string fileFullName, IFileSystem fileSystem)
+        {
+            var files = fileFullName.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
+            return files.SelectMany(f => GetAllFilesFromPathAndFileNameWithOptionalWildCards(f, fileSystem))
+                    .Distinct()
+                    .Select(f => fileSystem.FileInfo.FromFileName(f));
+        }
+        
     }
 }

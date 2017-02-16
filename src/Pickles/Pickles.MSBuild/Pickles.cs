@@ -24,6 +24,8 @@ using System.Reflection;
 using Autofac;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
+using PicklesDoc.Pickles.Extensions;
+using System.Linq;
 
 namespace PicklesDoc.Pickles.MSBuild
 {
@@ -96,7 +98,8 @@ namespace PicklesDoc.Pickles.MSBuild
 
             if (!string.IsNullOrEmpty(this.ResultsFile))
             {
-                configuration.AddTestResultFile(fileSystem.FileInfo.FromFileName(this.ResultsFile));
+                configuration.AddTestResultFiles(
+                    PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(this.ResultsFile, fileSystem));
             }
 
             if (!string.IsNullOrEmpty(this.SystemUnderTestName))

@@ -26,6 +26,7 @@ using System.Reflection;
 using NDesk.Options;
 
 using TextWriter = System.IO.TextWriter;
+using PicklesDoc.Pickles.Extensions;
 
 namespace PicklesDoc.Pickles
 {
@@ -117,9 +118,8 @@ namespace PicklesDoc.Pickles
 
             if (!string.IsNullOrEmpty(this.testResultsFile))
             {
-                var files = this.testResultsFile.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-
-                configuration.AddTestResultFiles(files.Select(f => this.fileSystem.FileInfo.FromFileName(f)));
+                configuration.AddTestResultFiles(
+                    PathExtensions.GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(this.testResultsFile, this.fileSystem));
             }
 
             if (!string.IsNullOrEmpty(this.systemUnderTestName))
