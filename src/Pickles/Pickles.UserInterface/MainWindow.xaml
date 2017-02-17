@@ -71,6 +71,9 @@
         <Button Command="{Binding BrowseForOutputFolder}" Content="Browse ..." Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Width="62" VerticalAlignment="Top" />
         <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="2" IsChecked="{Binding Path=IsOutputDirectoryValid}" IsEnabled="False" VerticalAlignment="Top"/>
 
+        <Label Content="Exclude Tags" Grid.Column="0" Grid.Row="3" VerticalAlignment="Top" />
+        <TextBox Text="{Binding ExcludeTags}" Grid.Column="1" Grid.Row="3" mahapps:TextBoxHelper.Watermark="Exclude scenarios that match this tag" VerticalAlignment="Top" />
+
         <mahapps:ToggleSwitch Header="Create Directory For Each Output Format" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=CreateDirectoryForEachOutputFormat, Mode=TwoWay}" Margin="0,0,0,5" />
 
 
