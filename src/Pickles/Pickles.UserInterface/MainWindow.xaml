@@ -3,117 +3,121 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                      xmlns:mahapps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                      xmlns:nlogViewer="clr-namespace:NlogViewer;assembly=NlogViewer"
-                     Title="Pickles" Height="700" Width="800" Loaded="MetroWindow_Loaded" Closed="MetroWindow_Closed"  DataContextChanged="MainWindow_OnDataContextChanged"
+                     Title="Pickles" Height="700" Width="1000" Loaded="MetroWindow_Loaded" Closed="MetroWindow_Closed"  DataContextChanged="MainWindow_OnDataContextChanged"
                      DataContext="{Binding Main, Source={StaticResource Locator}}"
                      Icon="Pickles.ico">
-  <Window.TaskbarItemInfo>
-    <TaskbarItemInfo x:Name="taskBarItemInfo" />
-  </Window.TaskbarItemInfo>
-  <Window.Resources>
-    <ResourceDictionary>
-      <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml" />
+    <Window.TaskbarItemInfo>
+        <TaskbarItemInfo x:Name="taskBarItemInfo" />
+    </Window.TaskbarItemInfo>
+    <Window.Resources>
         <ResourceDictionary>
-          <Color x:Key="HighlightDarkColor">#CC2F8200</Color>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Colors.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Green.xaml" />
+                <ResourceDictionary>
+                    <Color x:Key="HighlightDarkColor">#CC2F8200</Color>
 
-          <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
+                    <BooleanToVisibilityConverter x:Key="booleanToVisibilityConverter" />
 
+                </ResourceDictionary>
+
+                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
+                <ResourceDictionary Source="CoolCheckBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-
-        <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
-        <ResourceDictionary Source="CoolCheckBox.xaml" />
-      </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
-  </Window.Resources>
+    </Window.Resources>
     <mahapps:MetroWindow.RightWindowCommands>
         <mahapps:WindowCommands>
             <Button Content="open output folder" Command="{Binding Path=OpenOutputDirectory}" />
         </mahapps:WindowCommands>
     </mahapps:MetroWindow.RightWindowCommands>
     <Grid Margin="0,0,0,20">
-    <Grid.RowDefinitions>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto"/>
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="Auto" />
-      <RowDefinition Height="*" />
-    </Grid.RowDefinitions>
-    <Grid.ColumnDefinitions>
-      <ColumnDefinition Width="Auto" />
-      <ColumnDefinition />
-      <ColumnDefinition Width="Auto"  />
-      <ColumnDefinition Width="Auto" />
-      <ColumnDefinition Width="130" />
-    </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto"  />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="250" />
+        </Grid.ColumnDefinitions>
 
-    <mahapps:MetroProgressBar IsIndeterminate="true"  Height="5" Visibility="Hidden" Grid.Row="0" Grid.ColumnSpan="5" x:Name="progressIndicator" x:FieldModifier="private"/>
+        <mahapps:MetroProgressBar IsIndeterminate="true"  Height="5" Visibility="Hidden" Grid.Row="0" Grid.ColumnSpan="5" x:Name="progressIndicator" x:FieldModifier="private"/>
 
-    <Label Content="Feature Directory" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" />
-    <TextBox Text="{Binding FeatureFolder}" Grid.Column="1" Grid.Row="1" mahapps:TextBoxHelper.Watermark="Browse To The Location Of Your Feature Files" VerticalAlignment="Top" />
-    <Button Command="{Binding BrowseForFeatureFolder}" Content="Browse ..." Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" />
-    <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="1" IsChecked="{Binding Path=IsFeatureDirectoryValid}" IsEnabled="False" VerticalAlignment="Top" />
+        <Label Content="Feature Directory" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" />
+        <TextBox Text="{Binding FeatureFolder}" Grid.Column="1" Grid.Row="1" mahapps:TextBoxHelper.Watermark="Browse To The Location Of Your Feature Files" VerticalAlignment="Top" />
+        <Button Command="{Binding BrowseForFeatureFolder}" Content="Browse ..." Grid.Row="1" Grid.Column="2" VerticalAlignment="Top" />
+        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="1" IsChecked="{Binding Path=IsFeatureDirectoryValid}" IsEnabled="False" VerticalAlignment="Top" />
 
-    <Label Content="Output Directory" Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" />
+        <Label Content="Output Directory" Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" />
         <TextBox Text="{Binding OutputFolder}" Grid.Column="1" Grid.Row="2" mahapps:TextBoxHelper.Watermark="Browse To The Location Of The Living Documentation" VerticalAlignment="Top" />
-    <Button Command="{Binding BrowseForOutputFolder}" Content="Browse ..." Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Width="62" VerticalAlignment="Top" />
+        <Button Command="{Binding BrowseForOutputFolder}" Content="Browse ..." Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left" Width="62" VerticalAlignment="Top" />
         <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="2" IsChecked="{Binding Path=IsOutputDirectoryValid}" IsEnabled="False" VerticalAlignment="Top"/>
 
-    <mahapps:ToggleSwitch Header="Create Directory For Each Output Format" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=CreateDirectoryForEachOutputFormat, Mode=TwoWay}" Margin="0,0,0,5" />
+        <Label Content="Exclude Tags" Grid.Column="0" Grid.Row="3" VerticalAlignment="Top" />
+        <TextBox Text="{Binding ExcludeTags}" Grid.Column="1" Grid.Row="3" mahapps:TextBoxHelper.Watermark="Exclude scenarios that match this tag" VerticalAlignment="Top" />
+
+        <mahapps:ToggleSwitch Header="Create Directory For Each Output Format" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=CreateDirectoryForEachOutputFormat, Mode=TwoWay}" Margin="0,0,0,5" />
 
 
-    <ListBox ItemsSource="{Binding DocumentationFormatValues}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="11">
-      <ListBox.ItemsPanel>
-        <ItemsPanelTemplate>
-          <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" />
-        </ItemsPanelTemplate>
-      </ListBox.ItemsPanel>
-      <ListBox.ItemTemplate>
-        <DataTemplate>
-          <mahapps:ToggleSwitch Header="{Binding Path=Item}" IsChecked="{Binding Path=IsSelected, Mode=TwoWay}" Width="120" />
-        </DataTemplate>
-      </ListBox.ItemTemplate>
-    </ListBox>
+        <ListBox ItemsSource="{Binding DocumentationFormatValues}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="12">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" />
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <mahapps:ToggleSwitch Header="{Binding Path=Item}" IsChecked="{Binding Path=IsSelected, Mode=TwoWay}" Width="120" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
-    <Label Content="Project Name" Grid.Column="0" Grid.Row="4" VerticalAlignment="Top" />
-        <TextBox Text="{Binding ProjectName}" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" mahapps:TextBoxHelper.Watermark="Enter The Name Of Your Project Here" VerticalAlignment="Top" />
-        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="4" IsChecked="{Binding Path=IsProjectNameValid}" IsEnabled="False" VerticalAlignment="Top"/>
+        <Label Content="Project Name" Grid.Column="0" Grid.Row="5" VerticalAlignment="Top" />
+        <TextBox Text="{Binding ProjectName}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" mahapps:TextBoxHelper.Watermark="Enter The Name Of Your Project Here" VerticalAlignment="Top" />
+        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="5" IsChecked="{Binding Path=IsProjectNameValid}" IsEnabled="False" VerticalAlignment="Top"/>
 
-    <Label Content="Project Version" Grid.Column="0" Grid.Row="5" VerticalAlignment="Top" />
-        <TextBox Text="{Binding ProjectVersion}" Grid.Column="1" Grid.Row="5" Grid.ColumnSpan="2" mahapps:TextBoxHelper.Watermark="Enter The Version Of Your Project Here" VerticalAlignment="Top" />
-        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="5" IsChecked="{Binding Path=IsProjectVersionValid}" IsEnabled="False" VerticalAlignment="Top"/>
+        <Label Content="Project Version" Grid.Column="0" Grid.Row="6" VerticalAlignment="Top" />
+        <TextBox Text="{Binding ProjectVersion}" Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="2" mahapps:TextBoxHelper.Watermark="Enter The Version Of Your Project Here" VerticalAlignment="Top" />
+        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="6" IsChecked="{Binding Path=IsProjectVersionValid}" IsEnabled="False" VerticalAlignment="Top"/>
 
-    <Label Content="Include Test Results" Grid.Column="0" Grid.Row="7" Visibility="Hidden" />
-    <mahapps:ToggleSwitch Header="Include Test Results" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=IncludeTests, Mode=TwoWay}" Margin="0,0,0,5" />
+        <Label Content="Include Test Results" Grid.Column="0" Grid.Row="8" Visibility="Hidden" />
+        <mahapps:ToggleSwitch Header="Include Test Results" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=IncludeTests, Mode=TwoWay}" Margin="0,0,0,5" />
 
-    <Label Content="Test Results File" Grid.Column="0" Grid.Row="7" VerticalAlignment="Top" />
-        <TextBox Text="{Binding TestResultsFile}" Grid.Column="1" Grid.Row="7" IsEnabled="{Binding Path=IncludeTests}" mahapps:TextBoxHelper.Watermark="Browse To The Location Of Your Test Results File" VerticalAlignment="Top" />
-    <Button Command="{Binding BrowseForTestResultsFile}" Content="Browse" Grid.Row="7" Grid.Column="2" IsEnabled="{Binding Path=IncludeTests}" VerticalAlignment="Top" />
-        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="7" IsChecked="{Binding Path=IsTestResultsFileValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}" IsEnabled="False" />
+        <Label Content="Test Results File" Grid.Column="0" Grid.Row="8" VerticalAlignment="Top" />
+        <TextBox Text="{Binding TestResultsFile}" Grid.Column="1" Grid.Row="8" IsEnabled="{Binding Path=IncludeTests}" mahapps:TextBoxHelper.Watermark="Browse To The Location Of Your Test Results File" VerticalAlignment="Top" />
+        <Button Command="{Binding BrowseForTestResultsFile}" Content="Browse" Grid.Row="8" Grid.Column="2" IsEnabled="{Binding Path=IncludeTests}" VerticalAlignment="Top" />
+        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="8" IsChecked="{Binding Path=IsTestResultsFileValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}" IsEnabled="False" />
 
-    <Label Content="Test Results Format" Grid.Column="0"  Grid.Row="8" VerticalAlignment="Top"/>
-        <ComboBox ItemsSource="{Binding TestResultsFormatValues}" Grid.Column="1" Grid.Row="8" Grid.ColumnSpan="2" IsEnabled="{Binding Path=IncludeTests}" SelectedItem="{Binding SelectedTestResultsFormat}" VerticalAlignment="Top"></ComboBox>
-        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="8" IsChecked="{Binding Path=IsTestResultsFormatValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}" IsEnabled="False" />
+        <Label Content="Test Results Format" Grid.Column="0"  Grid.Row="9" VerticalAlignment="Top"/>
+        <ComboBox ItemsSource="{Binding TestResultsFormatValues}" Grid.Column="1" Grid.Row="9" Grid.ColumnSpan="2" IsEnabled="{Binding Path=IncludeTests}" SelectedItem="{Binding SelectedTestResultsFormat}" VerticalAlignment="Top"></ComboBox>
+        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="9" IsChecked="{Binding Path=IsTestResultsFormatValid}" Visibility="{Binding Path=IncludeTests, Converter={StaticResource ResourceKey=booleanToVisibilityConverter}}" IsEnabled="False" />
 
-    <Label Content="Gherkin Language" Grid.Column="0" Grid.Row="9" VerticalAlignment="Top" />
-    <ComboBox ItemsSource="{Binding LanguageValues}" Grid.Column="1" SelectedItem="{Binding SelectedLanguage}" Grid.Row="9"  Grid.ColumnSpan="2" DisplayMemberPath="NativeName" VerticalAlignment="Top"/>
-        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="9" IsChecked="{Binding Path=IsLanguageValid}" IsEnabled="False" VerticalAlignment="Top"/>
+        <Label Content="Gherkin Language" Grid.Column="0" Grid.Row="10" VerticalAlignment="Top" />
+        <ComboBox ItemsSource="{Binding LanguageValues}" Grid.Column="1" SelectedItem="{Binding SelectedLanguage}" Grid.Row="10"  Grid.ColumnSpan="2" DisplayMemberPath="NativeName" VerticalAlignment="Top"/>
+        <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="10" IsChecked="{Binding Path=IsLanguageValid}" IsEnabled="False" VerticalAlignment="Top"/>
 
-        <mahapps:ToggleSwitch Header="Enable Comments" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=EnableComments, Mode=TwoWay}" Margin="0,0,0,5" />
-        <mahapps:ToggleSwitch Header="Include Experimental Features" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=IncludeExperimentalFeatures, Mode=TwoWay}" Margin="0,0,0,5" />
+        <mahapps:ToggleSwitch Header="Enable Comments" Grid.Row="1" Grid.RowSpan="2" Grid.Column="5" Grid.ColumnSpan="1" IsChecked="{Binding Path=EnableComments, Mode=TwoWay}" Margin="5,0,0,5" />
+        <mahapps:ToggleSwitch Header="Include Experimental Features" Grid.RowSpan="2" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="1" IsChecked="{Binding Path=IncludeExperimentalFeatures, Mode=TwoWay}" Margin="5,0,0,5" />
 
-        <Button Command="{Binding GeneratePickles}" Content="Generate" Grid.Row="12" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Padding="15" Grid.ColumnSpan="2" Margin="0,20" />
-        <nlogViewer:NlogViewer x:Name="logCtrl" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="13" LevelWidth="auto" ExceptionWidth="auto" MessageWidth="auto" />
-  </Grid>
+        <Button Command="{Binding GeneratePickles}" Content="Generate" Grid.Row="11" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Padding="15" Grid.ColumnSpan="2" Margin="0,0,20,20" />
+        <nlogViewer:NlogViewer x:Name="logCtrl" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="12
+                               " LevelWidth="auto" ExceptionWidth="auto" MessageWidth="auto" />
+    </Grid>
 </mahapps:MetroWindow>

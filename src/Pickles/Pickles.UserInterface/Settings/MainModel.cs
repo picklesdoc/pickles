@@ -61,5 +61,8 @@ namespace PicklesDoc.Pickles.UserInterface.Settings
 
         [DataMember(Name = "enableComments", IsRequired = false)]
         public bool EnableComments { get; set; }
+
+        [DataMember(Name = "excludeTags", IsRequired = false)]
+        public string ExcludeTags { get; set; }
     }
 }

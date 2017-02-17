@@ -87,6 +87,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
 
         private bool includeTests;
 
+        private string excludeTags;
+
         private bool isRunning;
 
         private bool isFeatureDirectoryValid;
@@ -208,6 +210,13 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             set { this.Set(() => this.IncludeTests, ref this.includeTests, value); }
         }
 
+        public string ExcludeTags
+        {
+            get { return this.excludeTags; }
+
+            set { this.Set(nameof(this.ExcludeTags), ref this.excludeTags, value); }
+        }
+
         public ICommand GeneratePickles
         {
             get { return this.generateCommand; }
@@ -323,7 +332,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                     this.documentationFormats.Where(item => item.IsSelected).Select(item => item.Item).ToArray(),
                 CreateDirectoryForEachOutputFormat = this.createDirectoryForEachOutputFormat,
                 IncludeExperimentalFeatures = this.includeExperimentalFeatures,
-                EnableComments = this.enableComments
+                EnableComments = this.enableComments,
+                ExcludeTags = this.excludeTags
             };
 
             this.mainModelSerializer.Write(mainModel);
@@ -359,6 +369,7 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             this.CreateDirectoryForEachOutputFormat = mainModel.CreateDirectoryForEachOutputFormat;
             this.IncludeExperimentalFeatures = mainModel.IncludeExperimentalFeatures;
             this.EnableComments = mainModel.EnableComments;
+            this.ExcludeTags = mainModel.ExcludeTags;
         }
 
         private void DocumentationFormatsOnCollectionChanged(object sender, EventArgs notifyCollectionChangedEventArgs)
@@ -515,6 +526,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                     : CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
                 configuration.DocumentationFormat = documentationFormat;
+
+                configuration.ExcludeTags = this.ExcludeTags;
 
                 if (this.includeExperimentalFeatures)
                 {
