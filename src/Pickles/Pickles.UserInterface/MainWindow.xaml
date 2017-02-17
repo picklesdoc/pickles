@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                      xmlns:mahapps="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                      xmlns:nlogViewer="clr-namespace:NlogViewer;assembly=NlogViewer"
-                     Title="Pickles" Height="700" Width="800" Loaded="MetroWindow_Loaded" Closed="MetroWindow_Closed"  DataContextChanged="MainWindow_OnDataContextChanged"
+                     Title="Pickles" Height="700" Width="1000" Loaded="MetroWindow_Loaded" Closed="MetroWindow_Closed"  DataContextChanged="MainWindow_OnDataContextChanged"
                      DataContext="{Binding Main, Source={StaticResource Locator}}"
                      Icon="Pickles.ico">
     <Window.TaskbarItemInfo>
@@ -47,8 +47,6 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -57,6 +55,7 @@
             <ColumnDefinition Width="Auto"  />
             <ColumnDefinition Width="Auto" />
             <ColumnDefinition Width="130" />
+            <ColumnDefinition Width="250" />
         </Grid.ColumnDefinitions>
 
         <mahapps:MetroProgressBar IsIndeterminate="true"  Height="5" Visibility="Hidden" Grid.Row="0" Grid.ColumnSpan="5" x:Name="progressIndicator" x:FieldModifier="private"/>
@@ -114,11 +113,11 @@
         <ComboBox ItemsSource="{Binding LanguageValues}" Grid.Column="1" SelectedItem="{Binding SelectedLanguage}" Grid.Row="10"  Grid.ColumnSpan="2" DisplayMemberPath="NativeName" VerticalAlignment="Top"/>
         <CheckBox Template="{StaticResource ResourceKey=myCheckBox}" Grid.Column="3" Grid.Row="10" IsChecked="{Binding Path=IsLanguageValid}" IsEnabled="False" VerticalAlignment="Top"/>
 
-        <mahapps:ToggleSwitch Header="Enable Comments" Grid.Row="11" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=EnableComments, Mode=TwoWay}" Margin="0,0,0,5" />
-        <mahapps:ToggleSwitch Header="Include Experimental Features" Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="2" IsChecked="{Binding Path=IncludeExperimentalFeatures, Mode=TwoWay}" Margin="0,0,0,5" />
+        <mahapps:ToggleSwitch Header="Enable Comments" Grid.Row="1" Grid.RowSpan="2" Grid.Column="5" Grid.ColumnSpan="1" IsChecked="{Binding Path=EnableComments, Mode=TwoWay}" Margin="5,0,0,5" />
+        <mahapps:ToggleSwitch Header="Include Experimental Features" Grid.RowSpan="2" Grid.Row="3" Grid.Column="5" Grid.ColumnSpan="1" IsChecked="{Binding Path=IncludeExperimentalFeatures, Mode=TwoWay}" Margin="5,0,0,5" />
 
-        <Button Command="{Binding GeneratePickles}" Content="Generate" Grid.Row="13" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Padding="15" Grid.ColumnSpan="2" Margin="0,20" />
-        <nlogViewer:NlogViewer x:Name="logCtrl" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="14
+        <Button Command="{Binding GeneratePickles}" Content="Generate" Grid.Row="11" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="24" Padding="15" Grid.ColumnSpan="2" Margin="0,0,20,20" />
+        <nlogViewer:NlogViewer x:Name="logCtrl" Grid.Column="0" Grid.ColumnSpan="6" Grid.Row="12
                                " LevelWidth="auto" ExceptionWidth="auto" MessageWidth="auto" />
     </Grid>
 </mahapps:MetroWindow>
