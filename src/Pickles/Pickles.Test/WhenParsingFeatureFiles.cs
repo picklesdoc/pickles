@@ -21,6 +21,7 @@
 using System.Linq;
 
 using Autofac;
+using DocumentFormat.OpenXml.Bibliography;
 using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.Extensions;
@@ -400,7 +401,7 @@ Feature: Test
         {
             var featureText =
                 @"# ignore this comment
-@feature-tag @ignore-tag
+@feature-tag @exclude-tag
 Feature: Test
     In order to do something
     As a user
@@ -434,7 +435,7 @@ Feature: Test
     When it runs
     Then I should see that this thing happens
 
-    @scenario-tag-1 @scenario-tag-2 @ignore-tag
+    @scenario-tag-1 @scenario-tag-2 @exclude-tag
   Scenario: B scenario
     Given some feature
     When it runs
@@ -466,14 +467,51 @@ Feature: Test
     As a user
     I want to run this scenario
 
-    @scenario-tag-1 @scenario-tag-2 @Ignore-Tag
+    @scenario-tag-1 @scenario-tag-2 @Exclude-Tag
   Scenario: A scenario
     Given some feature
     When it runs
     Then I should see that this thing happens
 
-    @scenario-tag-1 @scenario-tag-2 @ignore-tag
+    @scenario-tag-1 @scenario-tag-2 @exclude-tag
   Scenario: B scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens";
+
+            var parser = Container.Resolve<FeatureParser>();
+            var feature = parser.Parse(new StringReader(featureText));
+
+            Check.That(feature).IsNotNull();
+            Check.That(feature.FeatureElements).IsEmpty();
+        }
+
+        [Test]
+        public void Then_can_parse_and_ignore_with_with_tag_without_sensitivity()
+        {
+
+            var featureText =
+                @"# ignore this comment
+@feature-tag
+Feature: Test
+    In order to do something
+    As a user
+    I want to run this scenario
+
+    @scenario-tag-1 @scenario-tag-2 @Exclude-Tag
+  Scenario: A scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens
+
+    @scenario-tag-1 @scenario-tag-2 @exclude-tag
+  Scenario: B scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens
+
+    @scenario-tag-1 @scenario-tag-2 @ExClUdE-tAg
+  Scenario: C scenario
     Given some feature
     When it runs
     Then I should see that this thing happens";

@@ -491,14 +491,14 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void ThenCanParseExcludeTagsSuccessfully()
         {
-            var args = new[] { @"-excludeTags=ignore-tag" };
+            var args = new[] { @"-excludeTags=exclude-tag" };
 
             var configuration = new Configuration();
             var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
             bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
 
             Check.That(shouldContinue).IsTrue();
-            Check.That(configuration.ExcludeTags).IsEqualTo("ignore-tag");
+            Check.That(configuration.ExcludeTags).IsEqualTo("exclude-tag");
         }
     }
 }
