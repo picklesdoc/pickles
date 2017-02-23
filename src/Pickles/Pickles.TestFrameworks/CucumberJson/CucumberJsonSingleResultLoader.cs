@@ -31,7 +31,14 @@ namespace PicklesDoc.Pickles.TestFrameworks.CucumberJson
     {
         public SingleTestRunBase Load(FileInfoBase fileInfo)
         {
-            return new CucumberJsonSingleResults(this.ReadResultsFile(fileInfo));
+            List<Feature> features = this.ReadResultsFile(fileInfo);
+            if (features == null)
+            {
+                Console.WriteLine("There was an issue with the results format for " + fileInfo.Name);
+                features = new List<Feature>();
+            }
+
+            return new CucumberJsonSingleResults(features);
         }
 
         private List<Feature> ReadResultsFile(FileInfoBase testResultsFile)

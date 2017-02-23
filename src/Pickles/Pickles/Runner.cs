@@ -97,7 +97,15 @@ namespace PicklesDoc.Pickles
 
                 if (scenario != null)
                 {
-                    featureElement.Result = testResults.GetScenarioResult(scenario);
+                    try { 
+                        featureElement.Result = testResults.GetScenarioResult(scenario);
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error("An exception occured in aligning results with the feature for : " +
+                            featureTreeNode.Feature.Name +
+                            " Message: " + e.Message);
+                    }
                     continue;
                 }
 
@@ -105,15 +113,22 @@ namespace PicklesDoc.Pickles
 
                 if (scenarioOutline != null)
                 {
-                    foreach (var example in scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows))
+                    try
                     {
-                        example.Result = testResults.GetExampleResult(scenarioOutline, example.Cells.ToArray());
-                    }
+                        foreach (var example in scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows))
+                        {
+                            example.Result = testResults.GetExampleResult(scenarioOutline, example.Cells.ToArray());
+                        }
 
-                    scenarioOutline.Result =
-                        scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows)
-                            .Select(row => row.Result)
-                            .Merge();
+                        scenarioOutline.Result =
+                            scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows)
+                                .Select(row => row.Result)
+                                .Merge();
+                    } catch (Exception e) {
+                        Log.Error("An exception occured in aligning results with the feature for : " +
+                            featureTreeNode.Feature.Name +
+                            " Message: " + e.Message);
+                    }
                 }
             }
         }

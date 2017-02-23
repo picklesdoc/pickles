@@ -153,7 +153,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
         {
             if (this.configuration.HasTestResults)
             {
-                TestResult exampleResult = this.results.GetExampleResult(scenarioOutline, exampleValues);
+                TestResult exampleResult = TestResult.Inconclusive;
+
+                try
+                {
+                    exampleResult = this.results.GetExampleResult(scenarioOutline, exampleValues);
+                }
+                catch (Exception) { }
 
                 return this.BuildImageElement(exampleResult);
             }
