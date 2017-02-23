@@ -541,7 +541,11 @@ jsonPWrapper ({
                       "50"
                     ]
                   ]
-                }
+                },
+                "Tags": [
+                  "@small",
+                  "@short_test"
+                ]
               },
               {
                 "Name": "more than 100",
@@ -563,7 +567,10 @@ jsonPWrapper ({
                       "1020"
                     ]
                   ]
-                }
+                },
+                "Tags": [
+                  "@big"
+                ]
               }
             ],
             "Name": "Add two positive numbers with many examples",
@@ -636,7 +643,8 @@ jsonPWrapper ({
                       "50"
                     ]
                   ]
-                }
+                },
+                "Tags": []
               },
               {
                 "Name": "more than 100",
@@ -658,7 +666,8 @@ jsonPWrapper ({
                       "1020"
                     ]
                   ]
-                }
+                },
+                "Tags": []
               }
             ],
             "Name": "Add two negative numbers with many examples",
@@ -2323,7 +2332,8 @@ jsonPWrapper ({
                       "value2"
                     ]
                   ]
-                }
+                },
+                "Tags": []
               }
             ],
             "Name": "Sample Markdown Scenario Outline Example",
@@ -3074,7 +3084,7 @@ jsonPWrapper ({
   },
   "Configuration": {
     "SutName": "Pickles",
-    "SutVersion": "2.11.0",
-    "GeneratedOn": "5 Dezember 2016 13:55:16"
+    "SutVersion": "2.13.0",
+    "GeneratedOn": "10 Februar 2017 11:00:51"
   }
 });

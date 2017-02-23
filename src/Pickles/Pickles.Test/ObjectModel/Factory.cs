@@ -115,10 +115,10 @@ My doc string line 2");
             return scenario;
         }
 
-        internal G.Examples CreateExamples(string name, string description, string[] headerCells, IEnumerable<string[]> exampleRows)
+        internal G.Examples CreateExamples(string name, string description, string[] headerCells, IEnumerable<string[]> exampleRows, string[] tags = null)
         {
             var examples = new G.Examples(
-                null,
+                tags?.Select(this.CreateTag).ToArray(),
                 AnyLocation,
                 "Examples",
                 name,

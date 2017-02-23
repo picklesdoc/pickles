@@ -55,6 +55,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             }
 
             body.GenerateParagraph(scenario.Name, "Heading2");
+            if (scenario.Tags.Count != 0)
+            {
+                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }));
+                var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
+                paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", scenario.Tags) + ")")));
+                body.Append(paragraph);
+            }
             if (!string.IsNullOrEmpty(scenario.Description))
             {
                 body.GenerateParagraph(scenario.Description, "Normal");

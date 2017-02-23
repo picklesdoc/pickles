@@ -18,6 +18,7 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
 using NFluent;
 using NUnit.Framework;
 
@@ -79,6 +80,18 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             var actual = mapper.Map(example);
 
             Check.That(actual.Description).IsEqualTo("Some description");
+        }
+
+        [Test]
+        public void Map_AnExampleWithTags_ReturnsAJsonExampleWithTags()
+        {
+            var example = new Example { Tags = new List<string>() { "tag1", "tag2" } };
+
+            var mapper = CreateMapper();
+
+            var actual = mapper.Map(example);
+
+            Check.That(actual.Tags).ContainsExactly("tag1", "tag2");
         }
 
         [Test]

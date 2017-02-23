@@ -18,6 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System.Collections.Generic;
+
 namespace PicklesDoc.Pickles.ObjectModel
 {
     public class Example
@@ -27,5 +29,7 @@ namespace PicklesDoc.Pickles.ObjectModel
         public string Description { get; set; }
 
         public Table TableArgument { get; set; }
+
+        public List<string> Tags { get; set; }
     }
 }

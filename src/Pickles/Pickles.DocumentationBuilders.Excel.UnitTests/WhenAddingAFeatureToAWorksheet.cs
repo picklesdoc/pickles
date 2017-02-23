@@ -45,7 +45,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
             {
                 Name = "Test Feature",
                 Description =
-                    "In order to test this feature,\nAs a developer\nI want to test this feature"
+                    "In order to test this feature,\nAs a developer\nI want to test this feature",
+                Tags = { "tag1", "tag2" }
             };
 
             using (var workbook = new XLWorkbook())
@@ -54,7 +55,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 excelFeatureFormatter.Format(worksheet, feature);
 
                 Check.That(worksheet.Cell("A1").Value).IsEqualTo(feature.Name);
-                Check.That(worksheet.Cell("B2").Value).IsEqualTo(feature.Description);
+                Check.That(worksheet.Cell("C2").Value).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("B3").Value).IsEqualTo(feature.Description);
             }
         }
 
@@ -68,12 +70,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 Name = "Test Feature",
                 Description =
                     "In order to test this feature,\nAs a developer\nI want to test this feature",
+                Tags = { "tag1", "tag2" }
             };
             var background = new Scenario
             {
                 Name = "Test Background Scenario",
                 Description =
-                    "In order to test this background,\nAs a developer\nI want to test this background"
+                    "In order to test this background,\nAs a developer\nI want to test this background",
+                Tags = { "tag1", "tag2" }
             };
             var given = new Step { NativeKeyword = "Given", Name = "a precondition" };
             background.Steps = new List<Step>(new[] { given });
@@ -83,10 +87,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
             {
                 IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
                 excelFeatureFormatter.Format(worksheet, feature);
-
-                Check.That(worksheet.Cell("B4").Value).IsEqualTo(background.Name);
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(background.Description);
-                Check.That(worksheet.Cell("D6").Value).IsEqualTo(given.Name);
+                Check.That(worksheet.Cell("B5").Value).IsEqualTo(background.Name);
+                Check.That(worksheet.Cell("C6").Value).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C7").Value).IsEqualTo(background.Description);
+                Check.That(worksheet.Cell("D8").Value).IsEqualTo(given.Name);
             }
         }
 
@@ -100,12 +104,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 Name = "Test Feature",
                 Description =
                     "In order to test this feature,\nAs a developer\nI want to test this feature",
+                Tags = { "tag1", "tag2" }
             };
             var scenario = new Scenario
             {
                 Name = "Test Scenario",
                 Description =
-                    "In order to test this scenario,\nAs a developer\nI want to test this scenario"
+                    "In order to test this scenario,\nAs a developer\nI want to test this scenario",
+                Tags = { "tag1", "tag2" }
             };
             var given = new Step { NativeKeyword = "Given", Name = "a precondition" };
             scenario.Steps = new List<Step>(new[] { given });
@@ -116,9 +122,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
                 excelFeatureFormatter.Format(worksheet, feature);
 
-                Check.That(worksheet.Cell("B4").Value).IsEqualTo(scenario.Name);
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(scenario.Description);
-                Check.That(worksheet.Cell("D6").Value).IsEqualTo(given.Name);
+                Check.That(worksheet.Cell("B5").Value).IsEqualTo(scenario.Name);
+                Check.That(worksheet.Cell("C6").Value).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C7").Value).IsEqualTo(scenario.Description);
+                Check.That(worksheet.Cell("D8").Value).IsEqualTo(given.Name);
             }
         }
     }

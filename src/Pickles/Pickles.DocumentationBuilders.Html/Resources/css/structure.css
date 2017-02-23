@@ -160,6 +160,9 @@ div.description ul {
 
 #feature p.tags {
     font-style: italic;
+    color: #44546a;
+    font-weight: normal;
+    margin-bottom:  -20px;
 }
 
 /*************************************************************************
@@ -243,6 +246,12 @@ a.scenario-link {
     display: block;
     font-weight: normal;
     color: gray;
+}
+
+.tags {
+    font-style: italic;
+    color: #44546a;
+    font-weight: normal;
 }
 
 /*************************************************************************

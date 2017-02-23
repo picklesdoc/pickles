@@ -96,7 +96,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
             ////   <Execution id="   the execution id guid   " />
             //// </UnitTest>
 
-            var xElement = scenario.Element(Ns + "Execution");
+            var xElement = scenario?.Element(Ns + "Execution");
 
             return xElement != null ? new Guid(xElement.Attribute("id").Value) : Guid.Empty;
         }

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4f5eb4bf-4203-4449-8f15-b5de997283e6" name="HKR@AS0283 2016-09-28 09:33:47" runUser="OEVERMANN\HKR" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2016-09-28T09:33:47.3567497+02:00" queuing="2016-09-28T09:33:47.3567497+02:00" start="2016-09-28T09:33:47.1267535+02:00" finish="2016-09-28T09:33:47.5404780+02:00" />
+  <TestSettings name="default" id="99c7383c-f3a5-4d39-a348-a164b3690ccd">
+    <Execution>
+      <TestTypeSpecific />
+    </Execution>
+    <Deployment runDeploymentRoot="HKR_AS0283 2016-09-28 09_33_47" />
+    <Properties />
+  </TestSettings>
+  <Results>
+  </Results>
+  <TestDefinitions>
+  </TestDefinitions>
+  <TestEntries>
+  </TestEntries>
+  <TestLists>
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="48" executed="38" passed="30" failed="8" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut></StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

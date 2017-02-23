@@ -1,9 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles", "Pickles\Pickles.csproj", "{38BAD6E0-78AB-4AC3-91A8-BF72AF5EE394}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BDD5290E-BF98-436B-ADEE-A7479E22A875} = {BDD5290E-BF98-436B-ADEE-A7479E22A875}
+		{A875B066-443A-420E-A1F5-7870CFF0A50C} = {A875B066-443A-420E-A1F5-7870CFF0A50C}
+		{836020D1-A309-4367-9654-EBB7C3F60D97} = {836020D1-A309-4367-9654-EBB7C3F60D97}
+		{2C849AD2-D125-4754-8BBA-7C61FA6251E4} = {2C849AD2-D125-4754-8BBA-7C61FA6251E4}
+		{8AC3AAFA-84DD-4437-962B-E6C5D6078E09} = {8AC3AAFA-84DD-4437-962B-E6C5D6078E09}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.Test", "Pickles.Test\Pickles.Test.csproj", "{8BD9FCD2-7ED5-46B5-B6A4-7FA3775E159F}"
 EndProject
@@ -83,6 +90,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Json.UnitTests", "Pickles.DocumentationBuilders.Json.UnitTests\Pickles.DocumentationBuilders.Json.UnitTests.csproj", "{D2432557-EF5A-45A3-A74F-3C59EF08533A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Word.UnitTests", "Pickles.DocumentationBuilders.Word.UnitTests\Pickles.DocumentationBuilders.Word.UnitTests.csproj", "{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Cucumber", "Pickles.DocumentationBuilders.Cucumber\Pickles.DocumentationBuilders.Cucumber.csproj", "{F69AAC03-A2A6-4B3F-A4EF-ACCB145C64AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Cucumber.UnitTests", "Pickles.DocumentationBuilders.Cucumber.UnitTests\Pickles.DocumentationBuilders.Cucumber.UnitTests.csproj", "{4C0CDA28-8C6A-4F14-B2C6-D1873DE66641}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -170,6 +181,14 @@ Global
 		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF6B5E30-B688-4D31-B97C-BCDFA569D1B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F69AAC03-A2A6-4B3F-A4EF-ACCB145C64AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F69AAC03-A2A6-4B3F-A4EF-ACCB145C64AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F69AAC03-A2A6-4B3F-A4EF-ACCB145C64AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F69AAC03-A2A6-4B3F-A4EF-ACCB145C64AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C0CDA28-8C6A-4F14-B2C6-D1873DE66641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0CDA28-8C6A-4F14-B2C6-D1873DE66641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0CDA28-8C6A-4F14-B2C6-D1873DE66641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0CDA28-8C6A-4F14-B2C6-D1873DE66641}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

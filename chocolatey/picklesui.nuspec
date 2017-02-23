@@ -54,6 +54,7 @@ Optionally, *Pickles* can **integrate test results**, so that your stakeholders 
         <file src="PicklesDoc.Pickles.Library.dll" target="tools" />
         <file src="PicklesDoc.Pickles.ObjectModel.dll" target="tools" />
         <file src="PicklesDoc.Pickles.TestFrameworks.dll" target="tools" />
+        <file src="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.dll" target="tools" />
         <file src="PicklesDoc.Pickles.DocumentationBuilders.Word.dll" target="tools" />
         <file src="PicklesDoc.Pickles.DocumentationBuilders.Excel.dll" target="tools" />
         <file src="PicklesDoc.Pickles.DocumentationBuilders.Json.dll" target="tools" />

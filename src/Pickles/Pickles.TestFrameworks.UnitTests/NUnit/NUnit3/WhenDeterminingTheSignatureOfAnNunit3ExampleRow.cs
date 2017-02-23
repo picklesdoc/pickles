@@ -60,7 +60,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
             var signatureBuilder = new NUnit3ExampleSignatureBuilder();
             var signature = signatureBuilder.Build(scenarioOutline, exampleRow);
 
-            var isMatch = signature.IsMatch("DealCorrectlyWithOverlongExampleValues(\"Please enter a valid two letter count...\",\"This is just a very very very veery l...\",null)".ToLowerInvariant());
+            var isMatch = signature.IsMatch("DealCorrectlyWithOverlongExampleValues(\"Please enter a valid two letter country code (e.g. DE)!\",\"This is just a very very very veery long error message!\",null)".ToLowerInvariant());
             Check.That(isMatch).IsTrue();
         }
 

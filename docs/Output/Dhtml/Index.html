@@ -152,9 +152,9 @@
                     <div data-bind="with: Feature" id="featureDetails">
                         <div data-bind="template: { name: 'testResults-template', data: Result }"></div>
                         <div data-bind="if: Tags.length > 0" class="canHighlight inline">
-                            <i class=" icon-tags"></i>
+                            <i class="icon-tags"></i>
                             <!-- ko foreach: Tags.sort() -->
-                            <span data-bind="text: $data" class="inline"></span>
+                            <span class="tags" data-bind="text: $data" class="inline"></span>
                             <!-- /ko -->
                         </div>
                         <h1 data-bind="text: Name, click: $root.toggleDetails" class="canHighlight clickable"></h1>
@@ -172,10 +172,10 @@
 
                         <div id="scenarios" data-bind="foreach: FeatureElements">
                             <div data-bind="if: Tags.length > 0" class="canHighlight inline">
-                                <i class=" icon-tags"></i><em>
-                                    <!-- ko foreach: Tags.sort() -->
-                                    <span data-bind="text: $data" class="inline"></span>
-                                    <!-- /ko -->
+                                <i class="icon-tags"></i><em>
+                                <!-- ko foreach: Tags.sort() -->
+                                <span class="tags" data-bind="text: $data" class="inline"></span>
+                                <!-- /ko -->
                                 </em>
                             </div>
 
@@ -192,11 +192,21 @@
                                     <ul data-bind="template: { name: 'steps-template', foreach: Steps }"></ul>
 
                                     <ul data-bind="foreach: Examples">
-                                        <li class="step">
-                                            <div><strong>Examples:</strong> <span data-bind="text: Name"></span></div>
-                                            <div class="description" data-bind="html: renderMarkdownBlock(Description)"></div>
-                                            <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
-                                        </li>
+                                      <li class="step">
+                                          <div class="tags">
+                                              <span data-bind="if: Tags.length > 0" class="canHighlight inline">
+                                            <i class="icon-tags"></i>
+                                            <span data-bind="foreach: Tags">
+                                              <span data-bind="text: $data" class="inline"></span>
+                                            </span>
+                                          </span>
+                                          </div>
+                                          <div>
+                                              <strong>Examples:</strong> <span data-bind="text: Name"></span>
+                                          </div>
+                                          <div class="description" data-bind="html: renderMarkdownBlock(Description)"></div>
+                                          <div data-bind="template: { name: 'table-template', data: $data.TableArgument }"></div>
+                                      </li>
                                     </ul>
 
                                 </div>
@@ -305,233 +315,233 @@
     <script src="js/featureSearch.js" type="text/javascript"></script>
     <script src="js/picklesOverview.js" type="text/javascript"></script>
     <script type="text/javascript">
-        function ViewModel(features, configuration, summary) {
-            var self = this;
+  function ViewModel(features, configuration, summary) {
+    var self = this;
 
-            features = $.map(features, function (el, i) { return new FeatureParent(el); });
+    features = $.map(features, function (el, i) { return new FeatureParent(el); });
 
-            self.originalFeaturesList = ko.observableArray(features);
-            self.featuresByFolder = ko.observable(buildFullHierarchy(getFeaturesFromScenariosList(features)));
-            self.currentFeature = ko.observable();
-            self.configuration = ko.observable(configuration);
-            self.totals = ko.observable([]);
+    self.originalFeaturesList = ko.observableArray(features);
+    self.featuresByFolder = ko.observable(buildFullHierarchy(getFeaturesFromScenariosList(features)));
+    self.currentFeature = ko.observable();
+    self.configuration = ko.observable(configuration);
+    self.totals = ko.observable([]);
 
-            self.ShowAllLinks = ko.observable(false);
-            self.overviewVisible = ko.observable(false);
-            self.selectedScenario = ko.observable(null);
-            self.disableScenarioLinks = ko.observable(window.location.protocol.match(/file/));
-            self.linkCopied = ko.observable(false);
+    self.ShowAllLinks = ko.observable(false);
+    self.overviewVisible = ko.observable(false);
+    self.selectedScenario = ko.observable(null);
+    self.disableScenarioLinks = ko.observable(window.location.protocol.match(/file/));
+    self.linkCopied = ko.observable(false);
 
-            self.setCurrentFeature = function () {
-                var currentFeatureRelativeFolder = FeatureNavigation.getCurrent();
-                if (currentFeatureRelativeFolder != '') {
-                    var currentFeature = findFeatureByRelativeFolder(currentFeatureRelativeFolder, features) || self.originalFeaturesList()[0];
-                    // preserve hash value (incoming request)
-                    var hash = window.location.hash;
-                    self.updateCurrentFeature(currentFeature);
-                    window.location.hash = hash;
-                    // smooth-scroll to hashed slug
-                    setTimeout(function() {
-                        smoothScrollToScenarioAnchor(window.location.hash);
-                    }, 250);
-                } else {
-                    self.updateCurrentFeature(self.originalFeaturesList()[0]);
-                }
-            };
+    self.setCurrentFeature = function () {
+      var currentFeatureRelativeFolder = FeatureNavigation.getCurrent();
+      if (currentFeatureRelativeFolder != '') {
+        var currentFeature = findFeatureByRelativeFolder(currentFeatureRelativeFolder, features) || self.originalFeaturesList()[0];
+        // preserve hash value (incoming request)
+        var hash = window.location.hash;
+        self.updateCurrentFeature(currentFeature);
+        window.location.hash = hash;
+        // smooth-scroll to hashed slug
+        setTimeout(function() {
+          smoothScrollToScenarioAnchor(window.location.hash);
+        }, 250);
+      } else {
+        self.updateCurrentFeature(self.originalFeaturesList()[0]);
+      }
+    };
 
-            self.toggleOverview = function() {
-                if (!self.overviewVisible()) {
-                    // scroll to top to support fixed overlay
-                    window.scrollTo(0, 0);
-                }
+    self.toggleOverview = function() {
+      if (!self.overviewVisible()) {
+        // scroll to top to support fixed overlay
+        window.scrollTo(0, 0);
+      }
 
-                self.overviewVisible(!self.overviewVisible());
+      self.overviewVisible(!self.overviewVisible());
 
-                if (self.overviewVisible()) {
-                    if (!self.overview) {
-                        // build charts first time overview becomes visible
-                        self.overview = PicklesOverview(summary);
-                        self.overview.createOverallTotalsChart($('#overallCompleteCanvas').get(0).getContext('2d'));
-                        self.overview.createByTagChart($('#byTagCanvas').get(0).getContext('2d'));
-                        self.overview.createByRootFolderChart($('#byRootFolderCanvas').get(0).getContext('2d'));
-                        self.overview.createNotTestedByRootFolderChart($('#notTestedbyRootFolderCanvas').get(0).getContext('2d'));
-                        self.totals(self.overview.getTotalsData());
-                    }
-                } else {
-                    smoothScrollToScenarioAnchor(window.location.hash);
-                }
-            };
+      if (self.overviewVisible()) {
+        if (!self.overview) {
+          // build charts first time overview becomes visible
+          self.overview = PicklesOverview(summary);
+          self.overview.createOverallTotalsChart($('#overallCompleteCanvas').get(0).getContext('2d'));
+          self.overview.createByTagChart($('#byTagCanvas').get(0).getContext('2d'));
+          self.overview.createByRootFolderChart($('#byRootFolderCanvas').get(0).getContext('2d'));
+          self.overview.createNotTestedByRootFolderChart($('#notTestedbyRootFolderCanvas').get(0).getContext('2d'));
+          self.totals(self.overview.getTotalsData());
+        }
+      } else {
+        smoothScrollToScenarioAnchor(window.location.hash);
+      }
+    };
 
-            self.whatToSearchFor = ko.observable("");
+    self.whatToSearchFor = ko.observable("");
 
-            self.clearSearch = function () {
-                self.whatToSearchFor('');
-                self.search();
-            };
+    self.clearSearch = function () {
+      self.whatToSearchFor('');
+      self.search();
+    };
 
-            self.search = function () {
-                var searchString = this.whatToSearchFor().toLowerCase();
+    self.search = function () {
+      var searchString = this.whatToSearchFor().toLowerCase();
 
-                if (searchString == "") {
-                    self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(features)));
-                    self.setCurrentFeature();
-                    return;
-                } else {
-                    var matchingFeatures = getFeaturesMatching(searchString, features);
+      if (searchString == "") {
+        self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(features)));
+        self.setCurrentFeature();
+        return;
+      } else {
+        var matchingFeatures = getFeaturesMatching(searchString, features);
 
-                    self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(matchingFeatures)));
+        self.featuresByFolder(buildFullHierarchy(getFeaturesFromScenariosList(matchingFeatures)));
 
-                    if (matchingFeatures.length > 0) {
-                        self.updateCurrentFeature(matchingFeatures[0]);
-                    }
-
-                    highlightSearchString(self.whatToSearchFor());
-                }
-            };
-
-            self.showFeature = function (data) {
-                var foundFeature = findFeatureByRelativeFolder(data.Path, features);
-                self.updateCurrentFeature(foundFeature);
-            };
-
-            self.updateCurrentFeature = function (feature) {
-                self.currentFeature(feature);
-                document.title = feature.Feature.Name;
-                FeatureNavigation.setCurrent(feature.RelativeFolder);
-                highlightSearchString(self.whatToSearchFor());
-            };
-
-            // Navigation functionality
-            self.navIsShown = ko.observable(true);
-            self.navIsHidden = ko.observable(false);
-            self.hideNav = function () { self.navIsShown(false); self.navIsHidden(true); };
-            self.showNav = function () { self.navIsShown(true); self.navIsHidden(false); };
-            self.isSelected = function (path) {
-                return self.currentFeature().RelativeFolder == path;
-            };
-            self.toggleShowingFolderFeatures = function (dir) {
-                dir.IsExpanded(!dir.IsExpanded());
-            };
-            self.hideShowNavigation = function () {
-                self.navIsShown(!self.navIsShown());
-                self.navIsHidden(!self.navIsHidden());
-            };
-            self.hideShowNavigationTree = function () {
-                self.ShowAllLinks(!self.ShowAllLinks());
-                expandContractDirectoryLinks(self.featuresByFolder().SubDirectories);
-            };
-
-            self.getLink = function(scenario) {
-                self.linkCopied(false);
-                scenario.link = FeatureNavigation.getCurrentLink(scenario.Slug);
-                self.selectedScenario(scenario);
-                $('#scenarioLinkModal').modal('show');
-            };
-
-            self.followLink = function(scenario) {
-                window.open(scenario.link);
-            };
-
-            self.copyLinkToClipboard = function() {
-                self.linkCopied(false);
-
-                $('#clipboardText').select();
-
-                try {
-                    var result = document.execCommand('copy');
-                    if (!result) {
-                        console.error('Copy to clipboard not supported in this browser');
-                    }
-                }
-                catch(ex) {
-                    console.error(ex);
-                }
-
-                document.getSelection().removeAllRanges();
-                self.linkCopied(true);
-            };
-
-            function expandContractDirectoryLinks(subDirs) {
-                $.each(subDirs, function (key, value) {
-                    value.IsExpanded(self.ShowAllLinks());
-                    expandContractDirectoryLinks(value.SubDirectories);
-                });
-            }
-
-            function smoothScrollToScenarioAnchor(anchorId) {
-                var anchor = $(anchorId);
-                var anchorOffset = anchor.offset();
-                if (anchorOffset != null) {
-                    $('html, body').animate({
-                        scrollTop: anchorOffset.top - 75
-                    }, { complete: function() { anchor.addClass('scenario-active') } });
-
-                    return true;
-                }
-
-                return false;
-            }
-
-            // Hide / show detailed areas
-            self.toggleDetail = function (element) {
-                element.IsShown(!element.IsShown());
-            };
-            self.toggleDetails = function (feature) {
-                $.each(feature.FeatureElements, function (key, scenario) {
-                    scenario.IsShown(!scenario.IsShown());
-                });
-            };
-        };
-
-        function highlightSearchString(searchString) {
-            if (searchString != '') {
-                $('.canHighlight').highlight(searchString);
-            }
+        if (matchingFeatures.length > 0) {
+          self.updateCurrentFeature(matchingFeatures[0]);
         }
 
-        function jsonPWrapper(data) {
-            var viewModel = new window.ViewModel(data.Features, data.Configuration, data.Summary);
-            viewModel.setCurrentFeature();
+        highlightSearchString(self.whatToSearchFor());
+      }
+    };
 
-            window.ko.applyBindings(viewModel);
+    self.showFeature = function (data) {
+      var foundFeature = findFeatureByRelativeFolder(data.Path, features);
+      self.updateCurrentFeature(foundFeature);
+    };
 
-            var searchItems = getTagsAndFeatureAndScenarioNames(data.Features);
-            $('#TypeAheadSearchBox').typeahead({
-                source: searchItems
-            });
+    self.updateCurrentFeature = function (feature) {
+      self.currentFeature(feature);
+      document.title = feature.Feature.Name;
+      FeatureNavigation.setCurrent(feature.RelativeFolder);
+      highlightSearchString(self.whatToSearchFor());
+    };
 
-            $('#progress').hide();
-            $('#TopNav').show();
+    // Navigation functionality
+    self.navIsShown = ko.observable(true);
+    self.navIsHidden = ko.observable(false);
+    self.hideNav = function () { self.navIsShown(false); self.navIsHidden(true); };
+    self.showNav = function () { self.navIsShown(true); self.navIsHidden(false); };
+    self.isSelected = function (path) {
+      return self.currentFeature().RelativeFolder == path;
+    };
+    self.toggleShowingFolderFeatures = function (dir) {
+      dir.IsExpanded(!dir.IsExpanded());
+    };
+    self.hideShowNavigation = function () {
+      self.navIsShown(!self.navIsShown());
+      self.navIsHidden(!self.navIsHidden());
+    };
+    self.hideShowNavigationTree = function () {
+      self.ShowAllLinks(!self.ShowAllLinks());
+      expandContractDirectoryLinks(self.featuresByFolder().SubDirectories);
+    };
+
+    self.getLink = function(scenario) {
+      self.linkCopied(false);
+      scenario.link = FeatureNavigation.getCurrentLink(scenario.Slug);
+      self.selectedScenario(scenario);
+      $('#scenarioLinkModal').modal('show');
+    };
+
+    self.followLink = function(scenario) {
+      window.open(scenario.link);
+    };
+
+    self.copyLinkToClipboard = function() {
+      self.linkCopied(false);
+
+      $('#clipboardText').select();
+
+      try {
+        var result = document.execCommand('copy');
+        if (!result) {
+          console.error('Copy to clipboard not supported in this browser');
         }
+      }
+      catch(ex) {
+        console.error(ex);
+      }
 
-        var navShown = true;
+      document.getSelection().removeAllRanges();
+      self.linkCopied(true);
+    };
 
-        $(document).ready(function () {
-            $('#TopNav').hide();
+    function expandContractDirectoryLinks(subDirs) {
+      $.each(subDirs, function (key, value) {
+        value.IsExpanded(self.ShowAllLinks());
+        expandContractDirectoryLinks(value.SubDirectories);
+      });
+    }
 
-            function chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag() {
-                var url = "pickledFeatures.js"; // URL of the external script
+    function smoothScrollToScenarioAnchor(anchorId) {
+      var anchor = $(anchorId);
+      var anchorOffset = anchor.offset();
+      if (anchorOffset != null) {
+        $('html, body').animate({
+          scrollTop: anchorOffset.top - 75
+        }, { complete: function() { anchor.addClass('scenario-active') } });
 
-                // this shows dynamic script insertion
-                var script = document.createElement('script');
-                script.setAttribute('src', url);
+        return true;
+      }
 
-                // load the script
-                document.getElementsByTagName('head')[0].appendChild(script);
-            }
+      return false;
+    }
 
-            chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag();
+    // Hide / show detailed areas
+    self.toggleDetail = function (element) {
+      element.IsShown(!element.IsShown());
+    };
+    self.toggleDetails = function (feature) {
+      $.each(feature.FeatureElements, function (key, scenario) {
+        scenario.IsShown(!scenario.IsShown());
+      });
+    };
+  };
 
-            function setupSubmitSearchWhenEnterKeyPressed() {
-                $("#TypeAheadSearchBox").keyup(function (event) {
-                    if (event.keyCode == 13) {
-                        $("#SearchButton").click();
-                    }
-                });
-            }
+  function highlightSearchString(searchString) {
+    if (searchString != '') {
+      $('.canHighlight').highlight(searchString);
+    }
+  }
 
-            setupSubmitSearchWhenEnterKeyPressed();
-        });
-    </script>
+  function jsonPWrapper(data) {
+    var viewModel = new window.ViewModel(data.Features, data.Configuration, data.Summary);
+    viewModel.setCurrentFeature();
+
+    window.ko.applyBindings(viewModel);
+
+    var searchItems = getTagsAndFeatureAndScenarioNames(data.Features);
+    $('#TypeAheadSearchBox').typeahead({
+      source: searchItems
+    });
+
+    $('#progress').hide();
+    $('#TopNav').show();
+  }
+
+  var navShown = true;
+
+  $(document).ready(function () {
+    $('#TopNav').hide();
+
+    function chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag() {
+      var url = "pickledFeatures.js"; // URL of the external script
+
+      // this shows dynamic script insertion
+      var script = document.createElement('script');
+      script.setAttribute('src', url);
+
+      // load the script
+      document.getElementsByTagName('head')[0].appendChild(script);
+    }
+
+    chromeSOPHack_LoadJsonPFileAndCreateDynamicScriptTag();
+
+    function setupSubmitSearchWhenEnterKeyPressed() {
+      $("#TypeAheadSearchBox").keyup(function (event) {
+        if (event.keyCode == 13) {
+          $("#SearchButton").click();
+        }
+      });
+    }
+
+    setupSubmitSearchWhenEnterKeyPressed();
+  });
+</script>
 </body>
 </html>

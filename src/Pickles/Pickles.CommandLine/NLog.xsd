@@ -244,41 +244,17 @@
       <xs:minLength value="1" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:complexType name="AspResponse">
-    <xs:complexContent>
-      <xs:extension base="Target">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-          <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="addComments" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-        </xs:choice>
-        <xs:attribute name="name" type="xs:string">
-          <xs:annotation>
-            <xs:documentation>Name of the target.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="layout" type="SimpleLayoutAttribute">
-          <xs:annotation>
-            <xs:documentation>Layout used to format log messages.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="addComments" type="xs:boolean">
-          <xs:annotation>
-            <xs:documentation>Indicates whether to add &lt;!-- --&gt; comments around all written texts.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
   <xs:complexType name="AsyncWrapper">
     <xs:complexContent>
       <xs:extension base="WrapperTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="batchSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="fullBatchSizeWriteLimit" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="overflowAction" minOccurs="0" maxOccurs="1" type="NLog.Targets.Wrappers.AsyncTargetWrapperOverflowAction" />
           <xs:element name="queueLimit" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="timeToSleepBetweenBatches" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -288,6 +264,11 @@
         <xs:attribute name="batchSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Number of log events that should be processed in a batch by the lazy writer thread.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="fullBatchSizeWriteLimit" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation>Limit of full s to write before yielding into  Performance is better when writing many small batches, than writing a single large batch</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="overflowAction" type="NLog.Targets.Wrappers.AsyncTargetWrapperOverflowAction">
@@ -305,6 +286,11 @@
             <xs:documentation>Time in milliseconds to sleep between batches.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -320,10 +306,22 @@
       <xs:extension base="WrapperTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="condition" minOccurs="0" maxOccurs="1" type="Condition" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="condition" type="Condition">
+          <xs:annotation>
+            <xs:documentation>Condition expression. Log events who meet this condition will cause a flush on the wrapped target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -337,6 +335,7 @@
           <xs:element name="bufferSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="flushTimeout" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="slidingTimeout" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -358,6 +357,11 @@
             <xs:documentation>Indicates whether to use sliding timeout.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -373,19 +377,20 @@
           <xs:element name="newLine" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="onConnectionOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetConnectionsOverflowAction" />
           <xs:element name="onOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetOverflowAction" />
+          <xs:element name="maxConnections" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="keepConnection" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="connectionCacheSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
-          <xs:element name="maxConnections" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="address" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="maxQueueSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
-          <xs:element name="includeSourceInfo" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-          <xs:element name="ndcItemSeparator" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.NLogViewerParameterInfo" />
+          <xs:element name="includeMdc" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="includeSourceInfo" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="includeNLogData" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="includeNdc" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="includeCallSite" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="appInfo" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="includeNLogData" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-          <xs:element name="includeMdc" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="ndcItemSeparator" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -427,6 +432,11 @@
             <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="maxConnections" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="keepConnection" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to keep connection open whenever possible.</xs:documentation>
@@ -435,11 +445,6 @@
         <xs:attribute name="connectionCacheSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Size of the connection cache (number of connections which are kept alive).</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="maxConnections" type="xs:integer">
-          <xs:annotation>
-            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="address" type="SimpleLayoutAttribute">
@@ -452,14 +457,19 @@
             <xs:documentation>Maximum queue size.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="includeMdc" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Indicates whether to include  dictionary contents.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="includeSourceInfo" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to include source info (file name and line number) in the information sent over the network.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="ndcItemSeparator" type="xs:string">
+        <xs:attribute name="includeNLogData" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>NDC item separator.</xs:documentation>
+            <xs:documentation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeNdc" type="xs:boolean">
@@ -477,14 +487,14 @@
             <xs:documentation>AppInfo field. By default it's the friendly name of the current AppDomain.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="includeNLogData" type="xs:boolean">
+        <xs:attribute name="ndcItemSeparator" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentation>
+            <xs:documentation>NDC item separator.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="includeMdc" type="xs:boolean">
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include  dictionary contents.</xs:documentation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -534,6 +544,7 @@
           <xs:element name="detectConsoleAvailable" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="errorStream" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -573,6 +584,11 @@
         <xs:attribute name="errorStream" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether the error stream (stderr) should be used instead of the output stream (stdout).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -678,6 +694,7 @@
           <xs:element name="error" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="detectConsoleAvailable" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -714,6 +731,11 @@
             <xs:documentation>The encoding for writing messages to the .</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -722,65 +744,26 @@
       <xs:extension base="Target">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="connectionString" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="connectionStringName" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="dbDatabase" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="dbHost" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="dbPassword" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="dbProvider" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="dbUserName" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="keepConnection" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="useTransactions" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="dbUserName" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="dbProvider" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="dbPassword" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="keepConnection" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="dbDatabase" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="connectionStringName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="connectionString" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="dbHost" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="installConnectionString" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="install-command" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.DatabaseCommandInfo" />
           <xs:element name="uninstall-command" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.DatabaseCommandInfo" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.DatabaseParameterInfo" />
           <xs:element name="commandText" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="commandType" minOccurs="0" maxOccurs="1" type="System.Data.CommandType" />
-          <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.DatabaseParameterInfo" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="connectionString" type="SimpleLayoutAttribute">
-          <xs:annotation>
-            <xs:documentation>Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="connectionStringName" type="xs:string">
-          <xs:annotation>
-            <xs:documentation>Name of the connection string (as specified in &lt;connectionStrings&gt; configuration section.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="dbDatabase" type="SimpleLayoutAttribute">
-          <xs:annotation>
-            <xs:documentation>Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="dbHost" type="SimpleLayoutAttribute">
-          <xs:annotation>
-            <xs:documentation>Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="dbPassword" type="SimpleLayoutAttribute">
-          <xs:annotation>
-            <xs:documentation>Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="dbProvider" type="xs:string">
-          <xs:annotation>
-            <xs:documentation>Name of the database provider.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="dbUserName" type="SimpleLayoutAttribute">
-          <xs:annotation>
-            <xs:documentation>Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string.</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="keepConnection" type="xs:boolean">
-          <xs:annotation>
-            <xs:documentation>Indicates whether to keep the database connection open between the log events.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="useTransactions" type="xs:boolean">
@@ -788,9 +771,54 @@
             <xs:documentation>Obsolete - value will be ignored! The logging code always runs outside of transaction. Gets or sets a value indicating whether to use database transactions. Some data providers require this.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="dbUserName" type="SimpleLayoutAttribute">
+          <xs:annotation>
+            <xs:documentation>Database user name. If the ConnectionString is not provided this value will be used to construct the "User ID=" part of the connection string.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="dbProvider" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Name of the database provider.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="dbPassword" type="SimpleLayoutAttribute">
+          <xs:annotation>
+            <xs:documentation>Database password. If the ConnectionString is not provided this value will be used to construct the "Password=" part of the connection string.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="keepConnection" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Indicates whether to keep the database connection open between the log events.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="dbDatabase" type="SimpleLayoutAttribute">
+          <xs:annotation>
+            <xs:documentation>Database name. If the ConnectionString is not provided this value will be used to construct the "Database=" part of the connection string.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="connectionStringName" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Name of the connection string (as specified in &lt;connectionStrings&gt; configuration section.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="connectionString" type="SimpleLayoutAttribute">
+          <xs:annotation>
+            <xs:documentation>Connection string. When provided, it overrides the values specified in DBHost, DBUserName, DBPassword, DBDatabase.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="dbHost" type="SimpleLayoutAttribute">
+          <xs:annotation>
+            <xs:documentation>Database host name. If the ConnectionString is not provided this value will be used to construct the "Server=" part of the connection string.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="installConnectionString" type="SimpleLayoutAttribute">
           <xs:annotation>
             <xs:documentation>Connection string using for installation and uninstallation. If not provided, regular ConnectionString is being used.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="commandText" type="SimpleLayoutAttribute">
@@ -884,6 +912,7 @@
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="header" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="footer" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -905,6 +934,11 @@
             <xs:documentation>Footer.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -914,6 +948,7 @@
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -923,6 +958,11 @@
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
             <xs:documentation>Layout used to format log messages.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -942,6 +982,7 @@
           <xs:element name="onOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.EventLogTargetOverflowAction" />
           <xs:element name="entryType" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="maxMessageLength" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -993,6 +1034,11 @@
             <xs:documentation>Message length limit to write to the Event Log.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1009,6 +1055,7 @@
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="returnToFirstOnSuccess" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1018,6 +1065,11 @@
         <xs:attribute name="returnToFirstOnSuccess" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to return to the first target after any successful write.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1039,10 +1091,12 @@
           <xs:element name="archiveAboveSize" minOccurs="0" maxOccurs="1" type="xs:long" />
           <xs:element name="enableArchiveFileCompression" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="maxArchiveFiles" minOccurs="0" maxOccurs="1" type="xs:integer" />
-          <xs:element name="fileNameKind" minOccurs="0" maxOccurs="1" type="NLog.Targets.FilePathKind" />
+          <xs:element name="forceManaged" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="archiveFileKind" minOccurs="0" maxOccurs="1" type="NLog.Targets.FilePathKind" />
           <xs:element name="cleanupFileName" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-          <xs:element name="forceManaged" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="discardAll" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="fileNameKind" minOccurs="0" maxOccurs="1" type="NLog.Targets.FilePathKind" />
+          <xs:element name="forceMutexConcurrentWrites" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="writeFooterOnArchivingOnly" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="fileName" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="archiveDateFormat" minOccurs="0" maxOccurs="1" type="xs:string" />
@@ -1058,6 +1112,7 @@
           <xs:element name="networkWrites" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="openFileCacheSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="openFileCacheTimeout" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="bufferSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="autoFlush" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="concurrentWriteAttemptDelay" minOccurs="0" maxOccurs="1" type="xs:integer" />
@@ -1123,9 +1178,9 @@
             <xs:documentation>Maximum number of archive files that should be kept.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="fileNameKind" type="NLog.Targets.FilePathKind">
+        <xs:attribute name="forceManaged" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Is the  an absolute or relative path?</xs:documentation>
+            <xs:documentation>Gets or set a value indicating whether a managed file stream is forced, instead of using the native implementation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="archiveFileKind" type="NLog.Targets.FilePathKind">
@@ -1138,9 +1193,19 @@
             <xs:documentation>Cleanup invalid values in a filename, e.g. slashes in a filename. If set to true, this can impact the performance of massive writes. If set to false, nothing gets written when the filename is wrong.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="forceManaged" type="xs:boolean">
+        <xs:attribute name="discardAll" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Gets or set a value indicating whether a managed file stream is forced, instead of used the native implementation.</xs:documentation>
+            <xs:documentation>Whether or not this target should just discard all data that its asked to write. Mostly used for when testing NLog Stack except final write</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="fileNameKind" type="NLog.Targets.FilePathKind">
+          <xs:annotation>
+            <xs:documentation>Is the  an absolute or relative path?</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="forceMutexConcurrentWrites" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Value indicationg whether file creation calls should be synchronized by a system global mutex.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="writeFooterOnArchivingOnly" type="xs:boolean">
@@ -1218,6 +1283,11 @@
             <xs:documentation>Maximum number of seconds that files are kept open. If this number is negative the files are not automatically closed after a period of inactivity.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="bufferSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Log file buffer size in bytes.</xs:documentation>
@@ -1292,6 +1362,7 @@
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="condition" minOccurs="0" maxOccurs="1" type="Condition" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1301,6 +1372,11 @@
         <xs:attribute name="condition" type="Condition">
           <xs:annotation>
             <xs:documentation>Condition expression. Log events who meet this condition will be forwarded to the wrapped target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1318,6 +1394,7 @@
           <xs:element name="password" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="revertToSelf" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="userName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1359,6 +1436,11 @@
             <xs:documentation>Username to change context to.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1385,6 +1467,38 @@
       <xs:enumeration value="NewCredentials" />
     </xs:restriction>
   </xs:simpleType>
+  <xs:complexType name="LimitingWrapper">
+    <xs:complexContent>
+      <xs:extension base="WrapperTargetBase">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="interval" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="messageLimit" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+        </xs:choice>
+        <xs:attribute name="name" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="interval" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Interval in which messages will be written up to the  number of messages.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="messageLimit" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation>Maximum allowed number of messages written per .</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
   <xs:complexType name="LogReceiverService">
     <xs:complexContent>
       <xs:extension base="Target">
@@ -1397,6 +1511,7 @@
           <xs:element name="includeEventProperties" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.MethodCallParameter" />
           <xs:element name="useBinaryEncoding" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1431,6 +1546,11 @@
         <xs:attribute name="useBinaryEncoding" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to use binary message encoding.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1475,9 +1595,10 @@
           <xs:element name="body" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="subject" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="from" minOccurs="0" maxOccurs="1" type="Layout" />
-          <xs:element name="replaceNewlineWithBrTagInHtml" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-          <xs:element name="priority" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="timeout" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="priority" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="replaceNewlineWithBrTagInHtml" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="smtpServer" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="smtpAuthentication" minOccurs="0" maxOccurs="1" type="NLog.Targets.SmtpAuthenticationMode" />
           <xs:element name="smtpUserName" minOccurs="0" maxOccurs="1" type="Layout" />
@@ -1553,9 +1674,9 @@
             <xs:documentation>Sender's email address (e.g. joe@domain.com).</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="replaceNewlineWithBrTagInHtml" type="xs:boolean">
+        <xs:attribute name="timeout" type="xs:integer">
           <xs:annotation>
-            <xs:documentation>Indicates whether NewLine characters in the body should be replaced with  tags.</xs:documentation>
+            <xs:documentation>Indicates the SMTP client timeout.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="priority" type="SimpleLayoutAttribute">
@@ -1563,9 +1684,14 @@
             <xs:documentation>Priority used for sending mails.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="timeout" type="xs:integer">
+        <xs:attribute name="replaceNewlineWithBrTagInHtml" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates the SMTP client timeout.</xs:documentation>
+            <xs:documentation>Indicates whether NewLine characters in the body should be replaced with  tags.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="smtpServer" type="SimpleLayoutAttribute">
@@ -1636,6 +1762,7 @@
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1645,6 +1772,11 @@
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
             <xs:documentation>Layout used to format log messages.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1659,6 +1791,7 @@
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="useXmlEncoding" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="checkIfQueueExists" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="createQueueIfNotExists" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="label" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="queue" minOccurs="0" maxOccurs="1" type="Layout" />
@@ -1687,6 +1820,11 @@
         <xs:attribute name="checkIfQueueExists" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to check if a queue exists before writing to it.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="createQueueIfNotExists" type="xs:boolean">
@@ -1720,6 +1858,7 @@
           <xs:element name="className" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="methodName" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.MethodCallParameter" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1734,6 +1873,11 @@
         <xs:attribute name="methodName" type="xs:string">
           <xs:annotation>
             <xs:documentation>Method name. The method must be public and static. Use the AssemblyQualifiedName , https://msdn.microsoft.com/en-us/library/system.type.assemblyqualifiedname(v=vs.110).aspx e.g.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1756,6 +1900,7 @@
           <xs:element name="keepConnection" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="maxConnections" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="maxQueueSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1822,6 +1967,11 @@
             <xs:documentation>Maximum queue size.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1837,19 +1987,20 @@
           <xs:element name="newLine" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="onConnectionOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetConnectionsOverflowAction" />
           <xs:element name="onOverflow" minOccurs="0" maxOccurs="1" type="NLog.Targets.NetworkTargetOverflowAction" />
+          <xs:element name="maxConnections" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="keepConnection" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="connectionCacheSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
-          <xs:element name="maxConnections" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="address" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="maxQueueSize" minOccurs="0" maxOccurs="1" type="xs:integer" />
-          <xs:element name="includeSourceInfo" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-          <xs:element name="ndcItemSeparator" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.NLogViewerParameterInfo" />
+          <xs:element name="includeMdc" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="includeSourceInfo" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="includeNLogData" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="includeNdc" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="includeCallSite" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="appInfo" minOccurs="0" maxOccurs="1" type="xs:string" />
-          <xs:element name="includeNLogData" minOccurs="0" maxOccurs="1" type="xs:boolean" />
-          <xs:element name="includeMdc" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="ndcItemSeparator" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1891,6 +2042,11 @@
             <xs:documentation>Action that should be taken if the message is larger than maxMessageSize.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="maxConnections" type="xs:integer">
+          <xs:annotation>
+            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="keepConnection" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to keep connection open whenever possible.</xs:documentation>
@@ -1899,11 +2055,6 @@
         <xs:attribute name="connectionCacheSize" type="xs:integer">
           <xs:annotation>
             <xs:documentation>Size of the connection cache (number of connections which are kept alive).</xs:documentation>
-          </xs:annotation>
-        </xs:attribute>
-        <xs:attribute name="maxConnections" type="xs:integer">
-          <xs:annotation>
-            <xs:documentation>Maximum current connections. 0 = no maximum.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="address" type="SimpleLayoutAttribute">
@@ -1916,14 +2067,19 @@
             <xs:documentation>Maximum queue size.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="includeMdc" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Indicates whether to include  dictionary contents.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="includeSourceInfo" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Indicates whether to include source info (file name and line number) in the information sent over the network.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="ndcItemSeparator" type="xs:string">
+        <xs:attribute name="includeNLogData" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>NDC item separator.</xs:documentation>
+            <xs:documentation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="includeNdc" type="xs:boolean">
@@ -1941,14 +2097,14 @@
             <xs:documentation>AppInfo field. By default it's the friendly name of the current AppDomain.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="includeNLogData" type="xs:boolean">
+        <xs:attribute name="ndcItemSeparator" type="xs:string">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include NLog-specific extensions to log4j schema.</xs:documentation>
+            <xs:documentation>NDC item separator.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
-        <xs:attribute name="includeMdc" type="xs:boolean">
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
           <xs:annotation>
-            <xs:documentation>Indicates whether to include  dictionary contents.</xs:documentation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -1961,6 +2117,7 @@
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="formatMessage" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1977,6 +2134,11 @@
             <xs:documentation>Indicates whether to perform layout calculation.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -1986,6 +2148,7 @@
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -1995,6 +2158,11 @@
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
             <xs:documentation>Layout used to format log messages.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2012,6 +2180,7 @@
           <xs:element name="counterType" minOccurs="0" maxOccurs="1" type="System.Diagnostics.PerformanceCounterType" />
           <xs:element name="incrementValue" minOccurs="0" maxOccurs="1" type="Layout" />
           <xs:element name="instanceName" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -2051,6 +2220,11 @@
         <xs:attribute name="instanceName" type="xs:string">
           <xs:annotation>
             <xs:documentation>Performance counter instance name.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2095,6 +2269,7 @@
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="defaultFilter" minOccurs="0" maxOccurs="1" type="Condition" />
           <xs:element name="when" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.Wrappers.FilteringRule" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -2104,6 +2279,11 @@
         <xs:attribute name="defaultFilter" type="Condition">
           <xs:annotation>
             <xs:documentation>Default filter to be applied when no specific rule matches.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2130,10 +2310,16 @@
       <xs:extension base="CompoundTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2144,11 +2330,17 @@
       <xs:extension base="WrapperTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="repeatCount" minOccurs="0" maxOccurs="1" type="xs:integer" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="repeatCount" type="xs:integer">
@@ -2164,12 +2356,18 @@
       <xs:extension base="WrapperTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="retryCount" minOccurs="0" maxOccurs="1" type="xs:integer" />
           <xs:element name="retryDelayMilliseconds" minOccurs="0" maxOccurs="1" type="xs:integer" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="retryCount" type="xs:integer">
@@ -2190,10 +2388,16 @@
       <xs:extension base="CompoundTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2204,10 +2408,16 @@
       <xs:extension base="CompoundTargetBase">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
             <xs:documentation>Name of the target.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2219,6 +2429,7 @@
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="layout" minOccurs="0" maxOccurs="1" type="Layout" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -2228,6 +2439,11 @@
         <xs:attribute name="layout" type="SimpleLayoutAttribute">
           <xs:annotation>
             <xs:documentation>Layout used to format log messages.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
           </xs:annotation>
         </xs:attribute>
       </xs:extension>
@@ -2240,11 +2456,16 @@
           <xs:element name="name" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="includeBOM" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="parameter" minOccurs="0" maxOccurs="unbounded" type="NLog.Targets.MethodCallParameter" />
+          <xs:element name="optimizeBufferReuse" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="encoding" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="escapeDataNLogLegacy" minOccurs="0" maxOccurs="1" type="xs:boolean" />
+          <xs:element name="escapeDataRfc3986" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="methodName" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="namespace" minOccurs="0" maxOccurs="1" type="xs:string" />
           <xs:element name="protocol" minOccurs="0" maxOccurs="1" type="NLog.Targets.WebServiceProtocol" />
           <xs:element name="url" minOccurs="0" maxOccurs="1" type="xs:anyURI" />
+          <xs:element name="xmlRoot" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="xmlRootNamespace" minOccurs="0" maxOccurs="1" type="xs:string" />
         </xs:choice>
         <xs:attribute name="name" type="xs:string">
           <xs:annotation>
@@ -2256,9 +2477,24 @@
             <xs:documentation>Should we include the BOM (Byte-order-mark) for UTF? Influences the  property. This will only work for UTF-8.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="optimizeBufferReuse" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Target supports reuse of internal buffers, and doesn't have to constantly allocate new buffers Required for legacy NLog-targets, that expects buffers to remain stable after Write-method exit</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="encoding" type="xs:string">
           <xs:annotation>
             <xs:documentation>Encoding.</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="escapeDataNLogLegacy" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Value whether escaping be done according to the old NLog style (Very non-standard)</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="escapeDataRfc3986" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Value whether escaping be done according to Rfc3986 (Supports Internationalized Resource Identifiers - IRIs)</xs:documentation>
           </xs:annotation>
         </xs:attribute>
         <xs:attribute name="methodName" type="xs:string">
@@ -2281,6 +2517,16 @@
             <xs:documentation>Web service URL.</xs:documentation>
           </xs:annotation>
         </xs:attribute>
+        <xs:attribute name="xmlRoot" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>Name of the root XML element, if POST of XML document chosen. If so, this property must not be null. (see  and ).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="xmlRootNamespace" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>(optional) root namespace of the XML document, if POST of XML document chosen. (see  and ).</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -2290,6 +2536,8 @@
       <xs:enumeration value="Soap12" />
       <xs:enumeration value="HttpPost" />
       <xs:enumeration value="HttpGet" />
+      <xs:enumeration value="JsonPost" />
+      <xs:enumeration value="XmlPost" />
     </xs:restriction>
   </xs:simpleType>
   <xs:complexType name="CompoundLayout">
@@ -2400,9 +2648,21 @@
       <xs:extension base="Layout">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
           <xs:element name="attribute" minOccurs="0" maxOccurs="unbounded" type="NLog.Layouts.JsonAttribute" />
+          <xs:element name="excludeProperties" minOccurs="0" maxOccurs="1" type="xs:string" />
+          <xs:element name="includeAllProperties" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="renderEmptyObject" minOccurs="0" maxOccurs="1" type="xs:boolean" />
           <xs:element name="suppressSpaces" minOccurs="0" maxOccurs="1" type="xs:boolean" />
         </xs:choice>
+        <xs:attribute name="excludeProperties" type="xs:string">
+          <xs:annotation>
+            <xs:documentation>List of property names to exclude when  is true</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="includeAllProperties" type="xs:boolean">
+          <xs:annotation>
+            <xs:documentation>Option to include all properties from the log events</xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
         <xs:attribute name="renderEmptyObject" type="xs:boolean">
           <xs:annotation>
             <xs:documentation>Option to render the empty object value {}</xs:documentation>

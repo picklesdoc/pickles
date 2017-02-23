@@ -20,7 +20,7 @@
 
 using System;
 using System.IO.Abstractions;
-
+using System.Linq;
 using PicklesDoc.Pickles.ObjectModel;
 
 using TextReader = System.IO.TextReader;
@@ -74,8 +74,10 @@ namespace PicklesDoc.Pickles
                 new Gherkin.TokenMatcher(new CultureAwareDialectProvider(language)));
 
             Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
+            result = this.RemoveFeatureWithExcludeTags(result);
 
-            this.descriptionProcessor.Process(result);
+            if (result != null)
+                this.descriptionProcessor.Process(result);
 
             return result;
         }
@@ -89,6 +91,19 @@ namespace PicklesDoc.Pickles
                 language = this.configuration.Language;
             }
             return language;
+        }
+
+        private Feature RemoveFeatureWithExcludeTags(Feature result)
+        {
+            if (result.Tags.Any(t => t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase)))
+                return null;
+
+            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(t => !t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase))).ToList();
+
+            result.FeatureElements.Clear();
+            result.FeatureElements.AddRange(wantedFeatures);
+
+            return result;
         }
     }
 }

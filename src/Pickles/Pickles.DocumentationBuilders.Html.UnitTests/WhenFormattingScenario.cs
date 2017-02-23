@@ -58,11 +58,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
             Check.That(header).HasAttribute("class", "scenario-heading");
             Check.That(header.Elements().Count()).IsEqualTo(3);
 
-            Check.That(header.Elements().ElementAt(0)).IsNamed("h2");
-            Check.That(header.Elements().ElementAt(1)).IsNamed("p");
+            Check.That(header.Elements().ElementAt(0)).IsNamed("p");
+            Check.That(header.Elements().ElementAt(1)).IsNamed("h2");
             Check.That(header.Elements().ElementAt(2)).IsNamed("div");
 
-            var tagsParagraph = header.Elements().ElementAt(1);
+            var tagsParagraph = header.Elements().ElementAt(0);
 
             Check.That(tagsParagraph.ToString()).IsEqualTo(
                 @"<p class=""tags"" xmlns=""http://www.w3.org/1999/xhtml"">Tags: <span>tag1</span>, <span>tag2</span></p>");
@@ -121,11 +121,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
 
             Check.That(header.Elements().Count()).IsEqualTo(3);
 
-            Check.That(header.Elements().ElementAt(0)).IsNamed("h2");
-            Check.That(header.Elements().ElementAt(1)).IsNamed("p");
-            Check.That(header.Elements().ElementAt(2)).IsNamed("div");
+            Check.That(header.Elements().ElementAt(0)).IsNamed("p");  // tags
+            Check.That(header.Elements().ElementAt(1)).IsNamed("h2"); // title
+            Check.That(header.Elements().ElementAt(2)).IsNamed("div");// description
 
-            var tagsParagraph = header.Elements().ElementAt(1);
+            var tagsParagraph = header.Elements().ElementAt(0);
 
             Check.That(tagsParagraph.ToString()).IsEqualTo(@"<p class=""tags"" xmlns=""http://www.w3.org/1999/xhtml"">Tags: <span>featureTag1</span>, <span>featureTag2</span>, <span>scenarioTag1</span>, <span>scenarioTag2</span></p>");
         }
@@ -157,11 +157,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
 
             Check.That(header.Elements().Count()).IsEqualTo(3);
 
-            Check.That(header.Elements().ElementAt(0)).IsNamed("h2");
-            Check.That(header.Elements().ElementAt(1)).IsNamed("p");
+            Check.That(header.Elements().ElementAt(0)).IsNamed("p");
+            Check.That(header.Elements().ElementAt(1)).IsNamed("h2");
             Check.That(header.Elements().ElementAt(2)).IsNamed("div");
 
-            var tagsParagraph = header.Elements().ElementAt(1);
+            var tagsParagraph = header.Elements().ElementAt(0);
 
             Check.That(tagsParagraph.ToString()).IsEqualTo(@"<p class=""tags"" xmlns=""http://www.w3.org/1999/xhtml"">Tags: <span>a</span>, <span>b</span>, <span>c</span>, <span>d</span></p>");
         }

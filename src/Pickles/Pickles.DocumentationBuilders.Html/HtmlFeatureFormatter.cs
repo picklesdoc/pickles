@@ -54,8 +54,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             var div = new XElement(
                 this.xmlns + "div",
                 new XAttribute("id", "feature"),
-                this.htmlImageResultFormatter.Format(feature),
-                new XElement(this.xmlns + "h1", feature.Name));
+                this.htmlImageResultFormatter.Format(feature));
 
             var tags = RetrieveTags(feature);
             if (tags.Length > 0)
@@ -64,6 +63,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                 paragraph.Add(new XAttribute("class", "tags"));
                 div.Add(paragraph);
             }
+
+            div.Add(new XElement(this.xmlns + "h1", feature.Name));
 
             div.Add(this.htmlDescriptionFormatter.Format(feature.Description));
 

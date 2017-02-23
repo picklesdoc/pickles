@@ -8,8 +8,8 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademarkAttribute("")]
 [assembly: AssemblyCultureAttribute("")]
 [assembly: ComVisibleAttribute(false)]
-[assembly: AssemblyVersionAttribute("2.11.0")]
-[assembly: AssemblyFileVersionAttribute("2.11.0")]
+[assembly: AssemblyVersionAttribute("2.13.0")]
+[assembly: AssemblyFileVersionAttribute("2.13.0")]
 namespace System {
     internal static class AssemblyVersionInformation {
         internal const System.String AssemblyProduct = "Pickles";
@@ -18,7 +18,7 @@ namespace System {
         internal const System.String AssemblyTrademark = "";
         internal const System.String AssemblyCulture = "";
         internal const System.Boolean ComVisible = false;
-        internal const System.String AssemblyVersion = "2.11.0";
-        internal const System.String AssemblyFileVersion = "2.11.0";
+        internal const System.String AssemblyVersion = "2.13.0";
+        internal const System.String AssemblyFileVersion = "2.13.0";
     }
 }

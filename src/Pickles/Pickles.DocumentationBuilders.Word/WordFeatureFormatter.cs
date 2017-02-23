@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.Word.Extensions;
@@ -74,6 +75,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             }
 
             body.GenerateParagraph(feature.Name, "Heading1");
+
+            if ( feature.Tags.Count != 0 )
+            {
+                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId {Val = "Normal"}));
+                var tagrunProp = new RunProperties(new Italic(), new Color {ThemeColor = ThemeColorValues.Text2}) {Bold = new Bold() {Val = false}};
+                paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", feature.Tags) + ")")));
+                body.Append(paragraph);
+            }
+
             this.wordDescriptionFormatter.Format(body, feature.Description);
 
             if (feature.Background != null)

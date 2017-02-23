@@ -65,5 +65,33 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.TableArgument.DataRows[0].Cells).ContainsExactly("Row 1, Value 1", "Row 2, Value 2");
             Check.That(result.TableArgument.DataRows[1].Cells).ContainsExactly("Row 2, Value 1", "Row 2, Value 2");
         }
+
+        [Test]
+        public void MapToExample_RegularWithTagsExamples_ReturnsCorrectExample()
+        {
+          var examples = this.factory.CreateExamples(
+              "Examples",
+              "My Description",
+              new[] { "Header 1", "Header 2" },
+              new[]
+              {
+                        new[] { "Row 1, Value 1", "Row 2, Value 2" },
+                        new[] { "Row 2, Value 1", "Row 2, Value 2" }
+              },
+              new[] { "tag1", "tag2" }
+              );
+
+          var mapper = this.factory.CreateMapper();
+
+          var result = mapper.MapToExample(examples);
+
+          Check.That(result.Name).IsEqualTo("Examples");
+          Check.That(result.Description).IsEqualTo("My Description");
+          Check.That(result.TableArgument.HeaderRow.Cells).ContainsExactly("Header 1", "Header 2");
+          Check.That(result.TableArgument.DataRows.Count).IsEqualTo(2);
+          Check.That(result.TableArgument.DataRows[0].Cells).ContainsExactly("Row 1, Value 1", "Row 2, Value 2");
+          Check.That(result.TableArgument.DataRows[1].Cells).ContainsExactly("Row 2, Value 1", "Row 2, Value 2");
+          Check.That(result.Tags).ContainsExactly("tag1", "tag2");
+        }
     }
 }

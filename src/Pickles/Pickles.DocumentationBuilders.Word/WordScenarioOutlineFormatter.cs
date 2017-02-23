@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Linq;
+using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Wordprocessing;
 
 using PicklesDoc.Pickles.DocumentationBuilders.Word.Extensions;
@@ -57,6 +59,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             }
 
             body.GenerateParagraph(scenarioOutline.Name, "Heading2");
+            if (scenarioOutline.Tags.Count != 0)
+            {
+                var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }));
+                var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
+                paragraph.Append(new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", scenarioOutline.Tags) + ")")));
+                body.Append(paragraph);
+            }
             if (!string.IsNullOrEmpty(scenarioOutline.Description))
             {
                 body.GenerateParagraph(scenarioOutline.Description, "Normal");
@@ -69,8 +78,22 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
             foreach (var example in scenarioOutline.Examples)
             {
-                body.GenerateParagraph("Examples: " + example.Description, "Heading3");
-                this.wordTableFormatter.Format(body, example.TableArgument);
+                body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }), new Run(new RunProperties(), new Text("Examples:"))));
+
+                if (example.Tags.Count != 0)
+                {
+                    var tagrunProp = new RunProperties(new Italic(), new Color { ThemeColor = ThemeColorValues.Text2 }) { Bold = new Bold() { Val = false } };
+                    body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }),
+                                              new Run(tagrunProp, new Text("(Tags: " + string.Join(", ", example.Tags) + ")"))));
+                }
+
+                if (!string.IsNullOrWhiteSpace(example.Description))
+                {
+                    body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Normal" }),
+                                              new Run(new Text(example.Description))));
+                }
+
+                this.wordTableFormatter.Format( body, example.TableArgument );
             }
         }
     }

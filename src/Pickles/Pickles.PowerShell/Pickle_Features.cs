@@ -61,6 +61,9 @@ namespace PicklesDoc.Pickles.PowerShell
         [Parameter(HelpMessage = CommandLineArgumentParser.HelpEnableComments, Mandatory = false)]
         public string EnableComments { get; set; }
 
+        [Parameter(HelpMessage = CommandLineArgumentParser.HelpExcludeTags, Mandatory = false)]
+        public string ExcludeTags { get; set; }
+
         protected override void ProcessRecord()
         {
             var builder = new ContainerBuilder();
@@ -118,6 +121,11 @@ namespace PicklesDoc.Pickles.PowerShell
             if (this.IncludeExperimentalFeatures.IsPresent)
             {
                 configuration.EnableExperimentalFeatures();
+            }
+
+            if (!string.IsNullOrEmpty(this.ExcludeTags))
+            {
+                configuration.ExcludeTags = this.ExcludeTags;
             }
 
             bool shouldEnableComments;

@@ -53,7 +53,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 Name = "Test Feature",
                 Description =
                     "In order to test this feature,\nAs a developer\nI want to test this feature",
-                Examples = examples
+                Examples = examples,
+                Tags = { "tag1", "tag2" }
             };
 
             using (var workbook = new XLWorkbook())
@@ -63,21 +64,22 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 excelScenarioFormatter.Format(worksheet, scenarioOutline, ref row);
 
                 Check.That(worksheet.Cell("B3").Value).IsEqualTo(scenarioOutline.Name);
-                Check.That(worksheet.Cell("C4").Value).IsEqualTo(scenarioOutline.Description);
-                Check.That(worksheet.Cell("B6").Value).IsEqualTo("Examples");
-                Check.That(worksheet.Cell("D7").Value).IsEqualTo("Var1");
-                Check.That(worksheet.Cell("E7").Value).IsEqualTo("Var2");
-                Check.That(worksheet.Cell("F7").Value).IsEqualTo("Var3");
-                Check.That(worksheet.Cell("G7").Value).IsEqualTo("Var4");
-                Check.That(worksheet.Cell("D8").Value).IsEqualTo(1.0);
-                Check.That(worksheet.Cell("E8").Value).IsEqualTo(2.0);
-                Check.That(worksheet.Cell("F8").Value).IsEqualTo(3.0);
-                Check.That(worksheet.Cell("G8").Value).IsEqualTo(4.0);
-                Check.That(worksheet.Cell("D9").Value).IsEqualTo(5.0);
-                Check.That(worksheet.Cell("E9").Value).IsEqualTo(6.0);
-                Check.That(worksheet.Cell("F9").Value).IsEqualTo(7.0);
-                Check.That(worksheet.Cell("G9").Value).IsEqualTo(8.0);
-                Check.That(row).IsEqualTo(10);
+                Check.That(worksheet.Cell("C4").Value).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C5").Value).IsEqualTo(scenarioOutline.Description);
+                Check.That(worksheet.Cell("B7").Value).IsEqualTo("Examples");
+                Check.That(worksheet.Cell("D8").Value).IsEqualTo("Var1");
+                Check.That(worksheet.Cell("E8").Value).IsEqualTo("Var2");
+                Check.That(worksheet.Cell("F8").Value).IsEqualTo("Var3");
+                Check.That(worksheet.Cell("G8").Value).IsEqualTo("Var4");
+                Check.That(worksheet.Cell("D9").Value).IsEqualTo(1.0);
+                Check.That(worksheet.Cell("E9").Value).IsEqualTo(2.0);
+                Check.That(worksheet.Cell("F9").Value).IsEqualTo(3.0);
+                Check.That(worksheet.Cell("G9").Value).IsEqualTo(4.0);
+                Check.That(worksheet.Cell("D10").Value).IsEqualTo(5.0);
+                Check.That(worksheet.Cell("E10").Value).IsEqualTo(6.0);
+                Check.That(worksheet.Cell("F10").Value).IsEqualTo(7.0);
+                Check.That(worksheet.Cell("G10").Value).IsEqualTo(8.0);
+                Check.That(row).IsEqualTo(11);
             }
         }
 

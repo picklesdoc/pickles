@@ -69,6 +69,12 @@ Target "BuildTest.TestFrameworks" (fun _ ->
       |> Log "AppBuild-Output: "
 )
 
+Target "BuildTest.DocumentationBuilders.Cucumber" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/Pickles.DocumentationBuilders.Cucumber.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
 Target "BuildTest.DocumentationBuilders.Dhtml" (fun _ ->
     !! "src/Pickles/Pickles.DocumentationBuilders.Dhtml.UnitTests/Pickles.DocumentationBuilders.Dhtml.UnitTests.csproj"
       |> MSBuildRelease testDir "Build"
@@ -124,6 +130,7 @@ Target "Default" (fun _ ->
   ==> "BuildGui"
   ==> "BuildTest"
   ==> "BuildTest.TestFrameworks"
+  ==> "BuildTest.DocumentationBuilders.Cucumber"
   ==> "BuildTest.DocumentationBuilders.Dhtml"
   ==> "BuildTest.DocumentationBuilders.Excel"
   ==> "BuildTest.DocumentationBuilders.Html"

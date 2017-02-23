@@ -46,6 +46,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             int originalRow = row;
             worksheet.Cell(row, "B").Style.Font.SetBold();
             worksheet.Cell(row++, "B").Value = scenario.Name;
+
+            if (scenario.Tags != null && scenario.Tags.Count != 0)
+            {
+                worksheet.Cell(row, "B").Value = "Tags:";
+                worksheet.Cell(row, "C").Value = String.Join(", ", scenario.Tags);
+                worksheet.Cell(row, "B").Style.Font.Italic = true;
+                worksheet.Cell(row, "B").Style.Font.FontColor = XLColor.DavysGrey;
+                worksheet.Cell(row, "C").Style.Font.Italic = true;
+                worksheet.Cell(row, "C").Style.Font.FontColor = XLColor.DavysGrey;
+                row++;
+            }
+
             worksheet.Cell(row++, "C").Value = scenario.Description;
 
             var results = this.testResults.GetScenarioResult(scenario);

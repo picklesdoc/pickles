@@ -14,18 +14,45 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.13.0] - 2017-02-10
+
+### Added
+
+- Improved Tag Support: Tags in Excel and Tags for Examples Blocks in Json, Dhtml, Html, and Word formats ([424](https://github.com/picklesdoc/pickles/pull/424)) (by [@pleveill](https://github.com/pleveill))
+
+### Fixed
+
+- Fix problem of NUnit 3.6 and truncation ([425](https://github.com/picklesdoc/pickles/pull/425)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
+## [2.12.0] - 2017-01-26
+
+### Added
+
+- Adding Cucumber JSON Documentation Builder ([413](https://github.com/picklesdoc/pickles/pull/413)) (by [armsteadj1](https://github.com/armsteadj1), [jgrossrieder](https://github.com/jgrossrieder) and [dgrekov](https://github.com/dgrekov))
+
+### Fixed
+
+- Fixes hiding topnav when printing ([411](https://github.com/picklesdoc/pickles/pull/411)) (by [bliles](https://github.com/bliles))
+
+## [2.11.1] - 2016-12-16
+
+### Fixed
+
+- Enable Pickles to deal with ignored scenario examples in VsTest Result Provider ([340](https://github.com/picklesdoc/pickles/pull/340)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Enable xUnit Test Result Provider to Deal with more than 255 Scenarios in a File ([405](https://github.com/picklesdoc/pickles/pull/405)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
 ## [2.11.0] - 2016-12-05
 
 ### Changed
 
-* Enable xUnit Test Result Provider to Deal with more than 255 Scenarios in a File ([397](https://github.com/picklesdoc/pickles/pull/397)) (by [@eugene-sea](https://github.com/eugene-sea))
-* Several external libraries were update to their newest versions ([394](https://github.com/picklesdoc/pickles/pull/394)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Enable xUnit Test Result Provider to Deal with more than 255 Scenarios in a File ([397](https://github.com/picklesdoc/pickles/pull/397)) (by [@eugene-sea](https://github.com/eugene-sea))
+- Several external libraries were update to their newest versions ([394](https://github.com/picklesdoc/pickles/pull/394)) (by [@dirkrombauts](https://github.com/dirkrombauts))
 
 ### Fixed
 
-* Null reference error when running with MsTest trx results file ([356](https://github.com/picklesdoc/pickles/issues/356)) (by [@dirkrombauts](https://github.com/dirkrombauts))
-* Test result file is read as null in CucumberJson when elements is missing ([390](https://github.com/picklesdoc/pickles/issues/390)) (by [@dirkrombauts](https://github.com/dirkrombauts))
-* DHTML version sorts features and folders in descending order ([383](https://github.com/picklesdoc/pickles/issues/383)) (by [@aquilanl](https://github.com/aquilanl))
+- Null reference error when running with MsTest trx results file ([356](https://github.com/picklesdoc/pickles/issues/356)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Test result file is read as null in CucumberJson when elements is missing ([390](https://github.com/picklesdoc/pickles/issues/390)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- DHTML version sorts features and folders in descending order ([383](https://github.com/picklesdoc/pickles/issues/383)) (by [@aquilanl](https://github.com/aquilanl))
 
 ## [2.10.0] - 2016-10-22
 

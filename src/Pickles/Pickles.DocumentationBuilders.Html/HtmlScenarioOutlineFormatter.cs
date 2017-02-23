@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -60,8 +61,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             var result = new XElement(
                 this.xmlns + "div",
                 new XAttribute("class", "scenario-heading"),
-                string.IsNullOrEmpty(scenarioOutline.Slug) ? null : new XAttribute("id", scenarioOutline.Slug),
-                new XElement(this.xmlns + "h2", scenarioOutline.Name));
+                string.IsNullOrEmpty(scenarioOutline.Slug) ? null : new XAttribute("id", scenarioOutline.Slug)
+                );
 
             var tags = RetrieveTags(scenarioOutline);
             if (tags.Length > 0)
@@ -70,6 +71,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                 paragraph.Add(new XAttribute("class", "tags"));
                 result.Add(paragraph);
             }
+
+            result.Add(new XElement(this.xmlns + "h2", scenarioOutline.Name));
 
             result.Add(this.htmlDescriptionFormatter.Format(scenarioOutline.Description));
 
@@ -120,6 +123,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                     new XElement(
                         this.xmlns + "div",
                         new XAttribute("class", "examples"),
+                        (example.Tags == null || example.Tags.Count == 0) ? null : new XElement(this.xmlns + "p", new XAttribute("class", "tags"), HtmlScenarioFormatter.CreateTagElements(example.Tags.OrderBy(t => t).ToArray(), this.xmlns)),
                         new XElement(this.xmlns + "h3", "Examples: " + example.Name),
                         this.htmlDescriptionFormatter.Format(example.Description),
                         (example.TableArgument == null) ? null : this.htmlTableFormatter.Format(example.TableArgument, scenarioOutline)));

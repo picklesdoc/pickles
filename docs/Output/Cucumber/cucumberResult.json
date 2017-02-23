@@ -1,0 +1,2242 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Showing basic gherkin syntax",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Simple GWT",
+        "line": 8,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the initial state of the application is Running",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I ask what the application state is",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "I should see Running as the answer",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Using And and But",
+        "line": 13,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the initial state of the application is Running",
+            "line": 14,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have authorization to ask application state",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I ask what the application state is",
+            "line": 16,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "I should see Running as the answer",
+            "line": 17,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I should see the time of the application",
+            "line": 18,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "But",
+            "name": "the state of the application should not be Stopped",
+            "line": 19,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "The test runner is not (very) important",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "A couple of simple steps",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have step defintions in place",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I call a step",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the step should have been called",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Addition",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Hooking into pre conditions for Test Runs in SpecFlow",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the scenario is running",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the BeforeTestRun hook should have been executed",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Hooking into pre conditions for Features in SpecFlow",
+        "line": 10,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the scenario is running",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the BeforeFeature hook should have been executed",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Hooking into pre conditions for Scenarios in SpecFlow",
+        "line": 14,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the scenario is running",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the BeforeScenario hook should have been executed",
+            "line": 16,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Hooking into pre conditions for ScenarioBlocks in SpecFlow",
+        "line": 18,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the scenario is running",
+            "line": 19,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the BeforeScenarioBlock hook should have been executed",
+            "line": 20,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Hooking into pre conditions for Steps in SpecFlow",
+        "line": 22,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "the scenario is running",
+            "line": 23,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the BeforeStep hook should have been executed",
+            "line": 24,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Tag demonstrator",
+    "tags": [
+      {
+        "name": "@allAboutTags"
+      },
+      {
+        "name": "@important"
+      }
+    ],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Ignored scenario",
+        "line": 8,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@ignore"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "that my scenario has the @ignore tag",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I run the scenario",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the scenario is ignored",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "the missing step definitions are not reported",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "A scenario without tags",
+        "line": 14,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "that my scenario has 0 tags",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I run the scenario",
+            "line": 16,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "before scenario hook with '' is run",
+            "line": 17,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "A scenario with 1 tag",
+        "line": 20,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@testTag1"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "that my scenario has 1 tags",
+            "line": 21,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I run the scenario",
+            "line": 22,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "before scenario hook with 'testTag1' is run",
+            "line": 23,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "A scenario with 3 tags",
+        "line": 26,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@testTag1"
+          },
+          {
+            "name": "@testTag2"
+          },
+          {
+            "name": "@testTag3"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "that my scenario has 3 tags",
+            "line": 27,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I run the scenario",
+            "line": 28,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "before scenario hook with 'testTag1, testTag2, testTag3' is run",
+            "line": 29,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "A scenario with 2 tags",
+        "line": 32,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@testTag1"
+          },
+          {
+            "name": "@testTag3"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "that my scenario has 2 tags",
+            "line": 33,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I run the scenario",
+            "line": 34,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "before scenario hook with 'testTag1, testTag3' is run",
+            "line": 35,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Scenario outline",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario Outline",
+        "name": "Add two positive numbers with many examples",
+        "line": 8,
+        "type": "scenario_outline",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I enter <number 1> into the calculator",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I enter <number 2> into the calculator",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I perform add",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be <result>",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario Outline",
+        "name": "Add two negative numbers with many examples",
+        "line": 28,
+        "type": "scenario_outline",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I enter <number 1> into the calculator",
+            "line": 29,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I enter <number 2> into the calculator",
+            "line": 30,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I perform add",
+            "line": 31,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be <result>",
+            "line": 32,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Scenario Context features",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Store and retrive Person Marcus from ScenarioContext",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I store a person called Marcus in the Current ScenarioContext",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "a person called Marcus can easily be retrieved",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Showing information of the scenario",
+        "line": 11,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@showUpInScenarioInfo"
+          },
+          {
+            "name": "@andThisToo"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I execute any scenario",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the ScenarioInfo contains the following information",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Show the type of step we're currently on",
+        "line": 18,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have a Given step",
+            "line": 19,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have another Given step",
+            "line": 20,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I have a When step",
+            "line": 21,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "I have a Then step",
+            "line": 22,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Display error information in AfterScenario",
+        "line": 27,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@ignore"
+          },
+          {
+            "name": "@showingErrorHandling"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "an error occurs in a step",
+            "line": 28,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Pending step",
+        "line": 30,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I set the ScenarioContext.Current to pending",
+            "line": 31,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "this step will not even be executed",
+            "line": 32,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "FeatureContext features",
+    "tags": [
+      {
+        "name": "@showUpInScenarioInfo"
+      },
+      {
+        "name": "@andThisToo"
+      }
+    ],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Store and retrive Person Marcus from FeatureContext Current",
+        "line": 7,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I store a person called Marcus in the current FeatureContext",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "a person called Marcus can easily be retrieved from the current FeatureContext",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Showing information of the feature",
+        "line": 11,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I execute any scenario in the feature",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the FeatureInfo contains the following information",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Show the use of background",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Add 1 to the sum",
+        "line": 10,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I add 1 to the Sum-variable",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the total sum should be 2",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Add 2 to the sum",
+        "line": 14,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I add 2 to the Sum-variable",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the total sum should be 3",
+            "line": 16,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Showing table usage",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Using tables",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have the following persons",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I search for Jocke",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the following person should be returned",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Using tables with SpecFlow Assist",
+        "line": 17,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have the following persons using assist",
+            "line": 18,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I search for Jocke",
+            "line": 23,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the following person should be returned using assist",
+            "line": 24,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Creating a entity from field value",
+        "line": 28,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "When",
+            "name": "I fill out the form like this",
+            "line": 29,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the following person should be returned using assist",
+            "line": 35,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Example of a wide table",
+        "line": 39,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "this wide table",
+            "line": 40,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Show the compare to feature",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "CompareToInstance",
+        "line": 8,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have the following person",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "CompareToInstance should match this guy",
+            "line": 14,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "CompareToInstance should match this guy",
+            "line": 19,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "But",
+            "name": "CompareToInstance should not match this guy",
+            "line": 23,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "CompareToSet",
+        "line": 31,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have the following persons using assist",
+            "line": 32,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "CompareToSet should match this",
+            "line": 37,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "But",
+            "name": "CompareToSet should not match this",
+            "line": 42,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Svenska - Summering",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Summera 5 och 7 ska vara 12",
+        "line": 9,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "att jag har knappat in 5",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "att jag har knappat in 7",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "jag summerar",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "ska resultatet vara 12",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Test de Cultuur in het Vlaams",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Het Scenario",
+        "line": 4,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "dat ik 50 ingeef",
+            "line": 5,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "dat ik 70 ingeef",
+            "line": 6,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "ik plus druk",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "moet het resultaat 120 zijn",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Attribute overloading",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Checking number for evenness",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have this simple step",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "this simple step",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "also this step",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I do something",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "I could validate that the number 2 is even",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "that the number 4 is even",
+            "line": 12,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "But",
+            "name": "the number 3 is odd",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Calling Steps from StepDefinitions",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Log in",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I am on the index page",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I enter my unsername nad password",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I click the login button",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the welcome page should be displayed",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Do something meaningful",
+        "line": 12,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I am logged in",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I dosomething meaningful",
+            "line": 14,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "I should get rewarded",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Step Argument Transformations",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Steps with non-string arguments",
+        "line": 6,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "Dan has been registered at date 2003/03/13",
+            "line": 7,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "Aslak has been registered at terminal 2",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "I should be able to see Aslak at terminal 2",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Injecting context into step specifications",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Feature with no context",
+        "line": 8,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "a feature which requires no context",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "everything is dandy",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Feature with a single context",
+        "line": 12,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "a feature which requires a single context",
+            "line": 13,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the context is set",
+            "line": 14,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Feature with multiple contexts",
+        "line": 16,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "a feature which requires multiple contexts",
+            "line": 17,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the contexts are set",
+            "line": 18,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Feature with recursive contexts",
+        "line": 20,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "a feature which requires a recursive context",
+            "line": 21,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the context is set",
+            "line": 22,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "its sub-context is set",
+            "line": 23,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Feature with a dependent context",
+        "line": 25,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "a feature which requires a single context",
+            "line": 26,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the context is set",
+            "line": 27,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "the context was created by the feature with a single context scenario",
+            "line": 28,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Nested Folder Example",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Nested - Add two numbers",
+        "line": 7,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@nestedFolders"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 50 into the calculator",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have entered 70 into the calculator",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press add",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 120 on the screen",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Multiline Feature Example",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Mutliline Output",
+        "line": 7,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@mytag"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have read in some text from the user",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I process this input",
+            "line": 14,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result will be saved to the multiline text data store",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Sample Markdown Feature",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Sample Markdown Scenario Example",
+        "line": 44,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "this",
+            "line": 62,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "that",
+            "line": 63,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario Outline",
+        "name": "Sample Markdown Scenario Outline Example",
+        "line": 66,
+        "type": "scenario_outline",
+        "tags": [
+          {
+            "name": "@AddingATag"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "this: <test>",
+            "line": 72,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "that: <test2>",
+            "line": 73,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Interactive DHTML View",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Scenario with large data table",
+        "line": 7,
+        "type": "scenario",
+        "tags": [],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "a feature with a large table of data:",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I click on the table heading",
+            "line": 32,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the table body should collapse",
+            "line": 33,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Arithmetic",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Add two numbers",
+        "line": 10,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@arithmetic"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 50 into the calculator",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have entered 70 into the calculator",
+            "line": 16,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press add",
+            "line": 17,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 120 on the screen",
+            "line": 18,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Subtract two numbers",
+        "line": 21,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@arithmetic"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 50 into the calculator",
+            "line": 22,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have entered 70 into the calculator",
+            "line": 23,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press subtract",
+            "line": 24,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be -20 on the screen",
+            "line": 25,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Multiply two numbers",
+        "line": 28,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@arithmetic"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 50 into the calculator",
+            "line": 29,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have entered 70 into the calculator",
+            "line": 30,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press multiply",
+            "line": 31,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 3500 on the screen",
+            "line": 32,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Divide two numbers",
+        "line": 35,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@arithmetic"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 50 into the calculator",
+            "line": 36,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have entered 2 into the calculator",
+            "line": 37,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press divide",
+            "line": 38,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 25 on the screen",
+            "line": 39,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Trigonometry",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Sine",
+        "line": 7,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@trigonometric"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 90 into the calculator",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press sin",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 1 on the screen",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Cosine",
+        "line": 13,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@trigonometric"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 0 into the calculator",
+            "line": 14,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press cos",
+            "line": 15,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 1 on the screen",
+            "line": 16,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "name": "Tangent",
+        "line": 19,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@trigonometric"
+          },
+          {
+            "name": "@fast"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 45 into the calculator",
+            "line": 20,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press tan",
+            "line": 21,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the result should be 1 on the screen",
+            "line": 22,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Clearing Screen",
+    "tags": [],
+    "line": 1,
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "name": "Clear the screen",
+        "line": 7,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@workflow"
+          },
+          {
+            "name": "@slow"
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Given",
+            "name": "I have entered 50 into the calculator",
+            "line": 8,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "And",
+            "name": "I have entered 70 into the calculator",
+            "line": 9,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "When",
+            "name": "I press C",
+            "line": 10,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          },
+          {
+            "keyword": "Then",
+            "name": "the screen should be empty",
+            "line": 11,
+            "result": {
+              "status": "inconclusive",
+              "duration": 1
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
