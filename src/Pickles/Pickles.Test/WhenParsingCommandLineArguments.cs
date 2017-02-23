@@ -178,8 +178,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.First().FullName).IsEqualTo(@"c:\results1.xml");
-            Check.That(configuration.TestResultsFiles.Skip(1).First().FullName).IsEqualTo(@"c:\results2.xml");
+            Check.That(configuration.TestResultsFiles
+                 .Select(trf => trf.FullName))
+                 .ContainsExactly(@"c:\results1.xml", @"c:\results2.xml");
         }
 
         [Test]
@@ -211,8 +212,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.First().FullName).IsEqualTo(@"c:\results1.xml");
+            Check.That(configuration.TestResultsFiles
+                .Select(trf => trf.FullName))
+                .ContainsExactly(@"c:\results1.xml");
         }
 
         [Test]
@@ -227,8 +229,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.First().FullName).IsEqualTo(@"c:\results1.xml");
+            Check.That(configuration.TestResultsFiles
+                .Select(trf => trf.FullName))
+                .ContainsExactly(@"c:\results1.xml");
         }
 
         [Test]
@@ -244,9 +247,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(2);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results1.xml").Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results2.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles
+                .Select(trf => trf.FullName))
+                .ContainsExactly(@"c:\results1.xml", @"c:\results2.xml");
         }
 
         [Test]
@@ -263,9 +266,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(2);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results1.xml").Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results2.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles
+                 .Select(trf => trf.FullName))
+                 .ContainsExactly(@"c:\results1.xml", @"c:\results2.xml");
         }
 
         [Test]
@@ -282,10 +285,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(3);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo1.xml").Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo2.xml").Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_bar.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles
+                .Select(trf => trf.FullName))
+                .ContainsExactly(@"c:\results_foo1.xml", @"c:\results_foo2.xml", @"c:\results_bar.xml");
         }
 
         [Test]
@@ -301,9 +303,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(2);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo1.xml").Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo2.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles
+                .Select(trf => trf.FullName))
+                .ContainsExactly(@"c:\results_foo1.xml", @"c:\results_foo2.xml");
         }
 
         [Test]
@@ -333,8 +335,9 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.HasTestResults).IsTrue();
-            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(1);
-            Check.That(configuration.TestResultsFiles.Where(trf => trf.FullName == @"c:\results_foo.xml").Count()).IsEqualTo(1);
+            Check.That(configuration.TestResultsFiles
+                .Select(trf => trf.FullName))
+                .ContainsExactly(@"c:\results_foo.xml");
         }
 
         [Test]
