@@ -574,7 +574,7 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void ThenCanFilterOutNonExistingTestResultFiles()
         {
-            FileSystem.AddFile(@"c:\results1.xml", "<xml />");
+            FileSystem.AddDirectory(@"c:\");
             var args = new[] { @"-link-results-file=c:\DoesNotExist.xml;" };
 
             var configuration = new Configuration();
