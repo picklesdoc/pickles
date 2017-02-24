@@ -69,6 +69,7 @@ namespace PicklesDoc.Pickles.CommandLine
                 {
                     if (Log.IsFatalEnabled)
                     {
+                        Log.Info(ex.StackTrace);
                         Log.Fatal(ex, "Pickles did not complete successfully");
                     }
 
