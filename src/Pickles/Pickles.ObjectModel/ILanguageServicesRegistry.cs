@@ -22,5 +22,7 @@ namespace PicklesDoc.Pickles
     public interface ILanguageServicesRegistry
     {
         ILanguageServices GetLanguageServicesForLanguage(string language);
+
+        string DefaultLanguage { get; }
     }
 }
