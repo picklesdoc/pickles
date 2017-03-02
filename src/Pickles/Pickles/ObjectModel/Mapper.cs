@@ -304,6 +304,8 @@ namespace PicklesDoc.Pickles.ObjectModel
                 feature.Background.Feature = feature;
             }
 
+            feature.Language = gherkinDocument.Feature.Language ?? "en";
+
             return feature;
         }
 

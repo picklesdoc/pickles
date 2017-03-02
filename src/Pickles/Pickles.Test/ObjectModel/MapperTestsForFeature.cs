@@ -216,5 +216,29 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(scenario.Steps[2].Comments.Count).IsEqualTo(0);
             Check.That(scenario.Steps[3].Comments.Count).IsEqualTo(0);
         }
+
+        [Test]
+        public void MapToFeature_FeatureWithoutLanguage_ReturnsFeatureWithEnglish()
+        {
+            var gherkinDocument = this.factory.CreateGherkinDocument("My Feature", null);
+
+            var mapper = this.factory.CreateMapper();
+
+            var result = mapper.MapToFeature(gherkinDocument);
+
+            Check.That(result.Language).Equals("en");
+        }
+
+        [Test]
+        public void MapToFeature_FeatureWithDutchLanguage_ReturnsFeatureWithDutch()
+        {
+            var gherkinDocument = this.factory.CreateGherkinDocument("My Feature", null, language: "nl");
+
+            var mapper = this.factory.CreateMapper();
+
+            var result = mapper.MapToFeature(gherkinDocument);
+
+            Check.That(result.Language).Equals("nl");
+        }
     }
 }

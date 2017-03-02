@@ -45,6 +45,8 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public List<string> Tags { get; }
 
+        public string Language { get; set; }
+
         public void AddTag(string tag)
         {
             this.Tags.Add(tag);
