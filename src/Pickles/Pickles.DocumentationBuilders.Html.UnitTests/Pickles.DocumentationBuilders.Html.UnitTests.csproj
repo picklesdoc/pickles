@@ -48,6 +48,10 @@
       <HintPath>..\packages\System.IO.Abstractions.2.0.0.140\lib\net40\System.IO.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.IO.Abstractions.TestingHelpers, Version=2.0.0.140, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.TestingHelpers.2.0.0.140\lib\net40\System.IO.Abstractions.TestingHelpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -78,6 +82,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StrikeMarkdownProviderTests.cs" />
     <Compile Include="WhenFormattingFeatures.cs" />
+    <Compile Include="WhenFormattingLocalizedFeatures.cs" />
     <Compile Include="WhenFormattingMultilineStrings.cs" />
     <Compile Include="WhenFormattingScenario.cs" />
     <Compile Include="WhenFormattingScenarioOutlines.cs" />

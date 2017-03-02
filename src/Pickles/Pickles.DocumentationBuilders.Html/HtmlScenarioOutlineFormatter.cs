@@ -35,19 +35,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
         private readonly HtmlTableFormatter htmlTableFormatter;
         private readonly XNamespace xmlns;
         private readonly ITestResults testResults;
+        private readonly ILanguageServices languageServices;
 
         public HtmlScenarioOutlineFormatter(
             HtmlStepFormatter htmlStepFormatter,
             HtmlDescriptionFormatter htmlDescriptionFormatter,
             HtmlTableFormatter htmlTableFormatter,
             HtmlImageResultFormatter htmlImageResultFormatter,
-            ITestResults testResults)
+            ITestResults testResults, ILanguageServices languageServices)
         {
             this.htmlStepFormatter = htmlStepFormatter;
             this.htmlDescriptionFormatter = htmlDescriptionFormatter;
             this.htmlTableFormatter = htmlTableFormatter;
             this.htmlImageResultFormatter = htmlImageResultFormatter;
             this.testResults = testResults;
+            this.languageServices = languageServices;
             this.xmlns = HtmlNamespace.Xhtml;
         }
 
@@ -124,7 +126,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                         this.xmlns + "div",
                         new XAttribute("class", "examples"),
                         (example.Tags == null || example.Tags.Count == 0) ? null : new XElement(this.xmlns + "p", new XAttribute("class", "tags"), HtmlScenarioFormatter.CreateTagElements(example.Tags.OrderBy(t => t).ToArray(), this.xmlns)),
-                        new XElement(this.xmlns + "h3", "Examples: " + example.Name),
+                        new XElement(this.xmlns + "h3", this.languageServices.ExamplesKeywords[0] + ": " + example.Name),
                         this.htmlDescriptionFormatter.Format(example.Description),
                         (example.TableArgument == null) ? null : this.htmlTableFormatter.Format(example.TableArgument, scenarioOutline)));
             }

@@ -51,6 +51,7 @@ namespace PicklesDoc.Pickles
             this.andStepKeywordsLazy = new Lazy<string[]>(() => this.Language.AndStepKeywords.Select(s => s.Trim()).ToArray());
             this.butStepKeywordsLazy = new Lazy<string[]>(() => this.Language.ButStepKeywords.Select(s => s.Trim()).ToArray());
             this.backgroundKeywordsLazy = new Lazy<string[]>(() => this.Language.BackgroundKeywords.Select(s => s.Trim()).ToArray());
+            this.ExamplesKeywords = this.Language.ExamplesKeywords.Select(s => s.Trim()).ToArray();
         }
 
         public string[] GivenStepKeywords
@@ -87,5 +88,7 @@ namespace PicklesDoc.Pickles
         {
             get { return this.languageLazy.Value; }
         }
+
+        public string[] ExamplesKeywords { get; }
     }
 }

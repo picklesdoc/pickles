@@ -48,7 +48,8 @@ namespace PicklesDoc.Pickles.Test.Formatters
                 Container.Resolve<HtmlDescriptionFormatter>(),
                 Container.Resolve<HtmlTableFormatter>(),
                 Container.Resolve<HtmlImageResultFormatter>(),
-                fakeTestResults.Object);
+                fakeTestResults.Object,
+                Container.Resolve<ILanguageServices>());
         }
 
         #endregion
