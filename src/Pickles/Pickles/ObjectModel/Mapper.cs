@@ -35,11 +35,6 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         private readonly ILanguageServices languageServices;
 
-        public Mapper(string featureLanguage)
-            : this(new Configuration(), featureLanguage)
-        {
-        }
-
         public Mapper(IConfiguration configuration, string featureLanguage)
         {
             this.configuration = configuration;
