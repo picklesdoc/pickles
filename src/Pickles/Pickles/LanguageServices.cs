@@ -27,8 +27,6 @@ namespace PicklesDoc.Pickles
 {
     public class LanguageServices : ILanguageServices
     {
-        public const string DefaultLanguage = "en";
-
         private readonly Lazy<GherkinDialect> gherkinDialectLazy;
 
         private readonly Lazy<string[]> givenStepKeywordsLazy;
