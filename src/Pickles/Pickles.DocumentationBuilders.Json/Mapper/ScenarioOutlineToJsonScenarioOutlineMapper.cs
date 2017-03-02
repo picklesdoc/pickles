@@ -48,6 +48,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 return null;
             }
 
+            var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(scenarioOutline.Feature?.Language);
+
+            var examplesKeyword = languageServices.ExamplesKeywords[0];
+
             return new JsonScenarioOutline
             {
                 Examples = (scenarioOutline.Examples ?? new List<Example>()).Select(this.exampleMapper.Map).ToList(),
@@ -57,6 +61,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 Slug = scenarioOutline.Slug,
                 Description = scenarioOutline.Description,
                 Result = this.resultMapper.Map(scenarioOutline.Result),
+                NativeKeyword = examplesKeyword
             };
         }
     }
