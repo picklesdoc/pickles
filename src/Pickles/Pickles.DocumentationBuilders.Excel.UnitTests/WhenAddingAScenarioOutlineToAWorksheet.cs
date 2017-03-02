@@ -130,5 +130,47 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 Check.That(row).IsEqualTo(13);
             }
         }
+
+        [Test]
+        public void ThenDutchScenarioWithScenarioOutlineContainsVoorbeelden()
+        {
+            var scenarioOutline = SetupScenarioOutline();
+
+            scenarioOutline.Feature = new Feature { Language = "nl" };
+
+            var excelScenarioFormatter = Container.Resolve<ExcelScenarioOutlineFormatter>();
+
+
+            using (var workbook = new XLWorkbook())
+            {
+                IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
+                int row = 3;
+                excelScenarioFormatter.Format(worksheet, scenarioOutline, ref row);
+
+                Check.That(worksheet.Cell("B5").Value).IsEqualTo("Voorbeelden");
+            }
+        }
+
+        private static ScenarioOutline SetupScenarioOutline()
+        {
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "Test Feature",
+                Examples = new List<Example>
+                {
+                    new Example
+                    {
+                        Name = "Examples",
+                        Description = string.Empty,
+                        TableArgument = new Table
+                        {
+                            HeaderRow = new TableRow(),
+                            DataRows = new List<TableRow>()
+                        }
+                    }
+                },
+            };
+            return scenarioOutline;
+        }
     }
 }

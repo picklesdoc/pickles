@@ -31,17 +31,20 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
         private readonly ExcelTableFormatter excelTableFormatter;
         private readonly IConfiguration configuration;
         private readonly ITestResults testResults;
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
         public ExcelScenarioOutlineFormatter(
             ExcelStepFormatter excelStepFormatter,
             ExcelTableFormatter excelTableFormatter,
             IConfiguration configuration,
-            ITestResults testResults)
+            ITestResults testResults,
+            ILanguageServicesRegistry languageServicesRegistry)
         {
             this.excelStepFormatter = excelStepFormatter;
             this.excelTableFormatter = excelTableFormatter;
             this.configuration = configuration;
             this.testResults = testResults;
+            this.languageServicesRegistry = languageServicesRegistry;
         }
 
         public void Format(IXLWorksheet worksheet, ScenarioOutline scenarioOutline, ref int row)
@@ -79,9 +82,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
 
             row++;
 
+            var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(scenarioOutline.Feature?.Language);
+
             foreach (var example in scenarioOutline.Examples)
             {
-                worksheet.Cell(row++, "B").Value = "Examples";
+                worksheet.Cell(row++, "B").Value = languageServices.ExamplesKeywords[0];
 
                 if (example.Tags != null && example.Tags.Count != 0)
                 {
