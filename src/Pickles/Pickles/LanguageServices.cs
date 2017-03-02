@@ -43,7 +43,7 @@ namespace PicklesDoc.Pickles
         {
         }
 
-        public LanguageServices(string language = DefaultLanguage)
+        public LanguageServices(string language)
         {
             this.gherkinDialectLazy = new Lazy<GherkinDialect>(() => new GherkinDialectProvider().GetDialect(language, null));
             this.whenStepKeywordsLazy = new Lazy<string[]>(() => this.GherkinDialect.WhenStepKeywords.Select(s => s.Trim()).ToArray());
