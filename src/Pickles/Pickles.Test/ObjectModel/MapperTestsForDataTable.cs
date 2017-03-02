@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToStringTableCell_NullTableCell_ReturnsNull()
         {
-            var mapper = new Mapper();
+            var mapper = factory.CreateMapper();
 
             string result = mapper.MapToString((G.TableCell)null);
 
@@ -55,7 +55,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToTableRow_NullTableRow_ReturnsNull()
         {
-            var mapper = new Mapper();
+            var mapper = factory.CreateMapper();
 
             TableRow result = mapper.MapToTableRow(null);
 
@@ -72,7 +72,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
                     "second cell"
                 });
 
-            var mapper = new Mapper();
+            var mapper = factory.CreateMapper();
 
             var result = mapper.MapToTableRow(row);
 
@@ -82,7 +82,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         [Test]
         public void MapToTable_NullDataTable_ReturnsNullTable()
         {
-            var mapper = new Mapper();
+            var mapper = factory.CreateMapper();
 
             Table result = mapper.MapToTable((G.DataTable) null);
 
@@ -99,7 +99,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
                 new[] { "Second row, first cell", "Second row, second cell" }
             });
 
-            var mapper = new Mapper();
+            var mapper = factory.CreateMapper();
 
             var result = mapper.MapToTable(dataTable);
 
