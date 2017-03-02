@@ -45,5 +45,15 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(defaultLanguage).IsEqualTo("en");
         }
+
+        [Test]
+        public void GetLanguageServicesForLanguage_WithNullLanguage_ReturnsLanguageServicesForEnglish()
+        {
+            var languageServicesRegistry = new LanguageServicesRegistry();
+
+            ILanguageServices languageServices = languageServicesRegistry.GetLanguageServicesForLanguage(null);
+
+            Check.That(languageServices.Language).IsEqualTo("en");
+        }
     }
 }
