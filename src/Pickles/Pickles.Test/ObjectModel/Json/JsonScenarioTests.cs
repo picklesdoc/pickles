@@ -41,7 +41,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
                                   FeatureElements = { new Scenario { Name = "My Feature" } }
                               };
 
-            var mapper = new JsonMapper();
+            var mapper = new JsonMapper(new LanguageServicesRegistry());
 
             var mappedFeature = mapper.Map(feature);
 

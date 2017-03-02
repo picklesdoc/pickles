@@ -31,10 +31,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
         private readonly ScenarioOutlineToJsonScenarioOutlineMapper scenarioOutlineMapper;
         private readonly TestResultToJsonTestResultMapper resultMapper;
 
-        public FeatureToJsonFeatureMapper()
+        public FeatureToJsonFeatureMapper(ILanguageServicesRegistry languageServicesRegistry)
         {
             this.scenarioMapper = new ScenarioToJsonScenarioMapper();
-            this.scenarioOutlineMapper = new ScenarioOutlineToJsonScenarioOutlineMapper();
+            this.scenarioOutlineMapper = new ScenarioOutlineToJsonScenarioOutlineMapper(languageServicesRegistry);
             this.resultMapper = new TestResultToJsonTestResultMapper();
         }
 

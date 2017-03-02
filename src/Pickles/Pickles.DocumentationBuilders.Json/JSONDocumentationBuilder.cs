@@ -45,12 +45,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         private readonly ITestResults testResults;
 
         private readonly IFileSystem fileSystem;
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
-        public JsonDocumentationBuilder(IConfiguration configuration, ITestResults testResults, IFileSystem fileSystem)
+        public JsonDocumentationBuilder(IConfiguration configuration, ITestResults testResults, IFileSystem fileSystem, ILanguageServicesRegistry languageServicesRegistry)
         {
             this.configuration = configuration;
             this.testResults = testResults;
             this.fileSystem = fileSystem;
+            this.languageServicesRegistry = languageServicesRegistry;
         }
 
         public string OutputFilePath
@@ -80,6 +82,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                         featuresToFormat.Add(
                             new JsonFeatureWithMetaInfo(
                                 featureTreeNode,
+                                this.languageServicesRegistry,
                                 this.testResults.GetFeatureResult(
                                     featureTreeNode.Feature)));
                     }
@@ -87,7 +90,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                     {
                         featuresToFormat.Add(
                             new JsonFeatureWithMetaInfo(
-                                featureTreeNode));
+                                featureTreeNode,
+                                this.languageServicesRegistry));
                     }
                 }
             }

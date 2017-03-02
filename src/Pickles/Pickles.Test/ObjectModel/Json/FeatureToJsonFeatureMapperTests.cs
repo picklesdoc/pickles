@@ -44,7 +44,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
         private static FeatureToJsonFeatureMapper CreateMapper()
         {
-            return new FeatureToJsonFeatureMapper();
+            return new FeatureToJsonFeatureMapper(new LanguageServicesRegistry());
         }
 
         [Test]

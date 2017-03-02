@@ -51,7 +51,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
                 DocumentationFormat = DocumentationFormat.Json
             };
 
-            var jsonDocumentationBuilder = new JsonDocumentationBuilder(configuration, null, FileSystem);
+            var jsonDocumentationBuilder = new JsonDocumentationBuilder(configuration, null, FileSystem, new LanguageServicesRegistry());
             jsonDocumentationBuilder.Build(features);
         }
 

@@ -31,9 +31,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
         private readonly TestResultToJsonTestResultMapper resultMapper;
         private readonly StepToJsonStepMapper stepMapper;
         private readonly ExampleToJsonExampleMapper exampleMapper;
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
-        public ScenarioOutlineToJsonScenarioOutlineMapper()
+        public ScenarioOutlineToJsonScenarioOutlineMapper(ILanguageServicesRegistry languageServicesRegistry)
         {
+            this.languageServicesRegistry = languageServicesRegistry;
             this.resultMapper = new TestResultToJsonTestResultMapper();
             this.stepMapper = new StepToJsonStepMapper();
             this.exampleMapper = new ExampleToJsonExampleMapper();

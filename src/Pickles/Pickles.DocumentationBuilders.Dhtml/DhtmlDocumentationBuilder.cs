@@ -41,12 +41,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
         private readonly ITestResults testResults;
 
         private readonly IFileSystem fileSystem;
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
-        public DhtmlDocumentationBuilder(IConfiguration configuration, ITestResults testResults, IFileSystem fileSystem)
+        public DhtmlDocumentationBuilder(IConfiguration configuration, ITestResults testResults, IFileSystem fileSystem, ILanguageServicesRegistry languageServicesRegistry)
         {
             this.configuration = configuration;
             this.testResults = testResults;
             this.fileSystem = fileSystem;
+            this.languageServicesRegistry = languageServicesRegistry;
         }
 
         public void Build(Tree features)
@@ -81,7 +83,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 
         private void UtilizeJsonBuilderToDumpJsonFeatureFileNextToDthmlResources(Tree features)
         {
-            var jsonBuilder = new JsonDocumentationBuilder(this.configuration, this.testResults, this.fileSystem);
+            var jsonBuilder = new JsonDocumentationBuilder(this.configuration, this.testResults, this.fileSystem, this.languageServicesRegistry);
             jsonBuilder.Build(features);
         }
 
@@ -93,7 +95,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml
 
         private void TweakJsonFile()
         {
-            var jsonBuilder = new JsonDocumentationBuilder(this.configuration, this.testResults, this.fileSystem);
+            var jsonBuilder = new JsonDocumentationBuilder(this.configuration, this.testResults, this.fileSystem, this.languageServicesRegistry);
             var jsonFilePath = jsonBuilder.OutputFilePath;
 
             var tweaker = new JsonTweaker(this.fileSystem);

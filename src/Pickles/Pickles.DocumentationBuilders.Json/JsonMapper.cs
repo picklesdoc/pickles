@@ -26,6 +26,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonMapper
     {
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
+
+        public JsonMapper(ILanguageServicesRegistry languageServicesRegistry)
+        {
+            this.languageServicesRegistry = languageServicesRegistry;
+        }
+
         public JsonFeature Map(Feature feature)
         {
             return this.ToJsonFeature(feature);
@@ -43,7 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 
         private JsonFeature ToJsonFeature(Feature feature)
         {
-            return new Mapper.FeatureToJsonFeatureMapper().Map(feature);
+            return new Mapper.FeatureToJsonFeatureMapper(this.languageServicesRegistry).Map(feature);
         }
     }
 }

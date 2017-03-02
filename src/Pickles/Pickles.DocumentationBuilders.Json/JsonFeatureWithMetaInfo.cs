@@ -27,14 +27,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonFeatureWithMetaInfo
     {
-        public JsonFeatureWithMetaInfo(FeatureNode featureNodeTreeNode)
-            : this(featureNodeTreeNode, default(TestResult))
+        public JsonFeatureWithMetaInfo(FeatureNode featureNodeTreeNode, ILanguageServicesRegistry languageServicesRegistry)
+            : this(featureNodeTreeNode, languageServicesRegistry, default(TestResult))
         {
         }
 
-        public JsonFeatureWithMetaInfo(FeatureNode featureNodeTreeNode, TestResult result)
+        public JsonFeatureWithMetaInfo(FeatureNode featureNodeTreeNode, ILanguageServicesRegistry languageServicesRegistry, TestResult result)
         {
-            var jsonMapper = new JsonMapper();
+            var jsonMapper = new JsonMapper(languageServicesRegistry);
             this.Feature = jsonMapper.Map(featureNodeTreeNode.Feature);
             this.RelativeFolder = featureNodeTreeNode.RelativePathFromRoot;
             this.Result = jsonMapper.Map(result);

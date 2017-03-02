@@ -43,7 +43,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
         private static ScenarioOutlineToJsonScenarioOutlineMapper CreateMapper()
         {
-            return new ScenarioOutlineToJsonScenarioOutlineMapper();
+            return new ScenarioOutlineToJsonScenarioOutlineMapper(new LanguageServicesRegistry());
         }
 
         [Test]
