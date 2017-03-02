@@ -49,9 +49,7 @@ Voorbeelden:
     | 2 |
 ";
 
-            var configuration = this.Configuration;
-            configuration.Language = "nl";
-            var parser = new FeatureParser(FileSystem, configuration);
+            var parser = new FeatureParser(FileSystem, this.Configuration);
             Feature feature = parser.Parse(new StringReader(featureText));
 
             var formatter = Container.Resolve<HtmlFeatureFormatter>();
