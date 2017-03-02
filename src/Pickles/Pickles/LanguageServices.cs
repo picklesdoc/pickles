@@ -21,7 +21,6 @@
 using System;
 using System.Linq;
 using Gherkin;
-using Jint.Parser.Ast;
 
 namespace PicklesDoc.Pickles
 {
