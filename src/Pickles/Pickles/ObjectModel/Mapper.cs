@@ -21,11 +21,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+
+using PicklesDoc.Pickles.Extensions;
+
 using G = Gherkin.Ast;
 
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    using PicklesDoc.Pickles.Extensions;
 
     public class Mapper
     {
