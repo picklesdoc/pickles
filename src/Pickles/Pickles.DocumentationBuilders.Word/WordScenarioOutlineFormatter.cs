@@ -34,13 +34,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
         private readonly ITestResults testResults;
         private readonly WordStepFormatter wordStepFormatter;
         private readonly WordTableFormatter wordTableFormatter;
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
-        public WordScenarioOutlineFormatter(WordStepFormatter wordStepFormatter, WordTableFormatter wordTableFormatter, IConfiguration configuration, ITestResults testResults)
+        public WordScenarioOutlineFormatter(WordStepFormatter wordStepFormatter, WordTableFormatter wordTableFormatter, IConfiguration configuration, ITestResults testResults, ILanguageServicesRegistry languageServicesRegistry)
         {
             this.wordStepFormatter = wordStepFormatter;
             this.wordTableFormatter = wordTableFormatter;
             this.configuration = configuration;
             this.testResults = testResults;
+            this.languageServicesRegistry = languageServicesRegistry;
         }
 
         public void Format(Body body, ScenarioOutline scenarioOutline)
@@ -76,9 +78,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 this.wordStepFormatter.Format(body, step);
             }
 
+            var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(scenarioOutline.Feature?.Language);
+            var examplesKeyword = languageServices.ExamplesKeywords[0];
+
             foreach (var example in scenarioOutline.Examples)
             {
-                body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }), new Run(new RunProperties(), new Text("Examples:"))));
+                body.Append(new Paragraph(new ParagraphProperties(new ParagraphStyleId { Val = "Heading3" }), new Run(new RunProperties(), new Text(examplesKeyword + ":"))));
 
                 if (example.Tags.Count != 0)
                 {
