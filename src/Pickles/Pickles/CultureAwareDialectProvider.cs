@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles
 {
     public class CultureAwareDialectProvider : GherkinDialectProvider
     {
-        public CultureAwareDialectProvider(string defaultLanguage = "en") : base(defaultLanguage)
+        public CultureAwareDialectProvider(string defaultLanguage) : base(defaultLanguage)
         {
         }
 
