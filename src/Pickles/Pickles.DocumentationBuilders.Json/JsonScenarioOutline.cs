@@ -33,8 +33,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 
         public List<JsonExample> Examples { get; set; }
 
-        public string NativeKeyword { get; set; }
-
         #region IFeatureElement Members
 
         public string Name { get; set; }

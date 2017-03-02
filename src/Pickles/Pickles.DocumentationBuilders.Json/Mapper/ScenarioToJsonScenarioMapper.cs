@@ -30,13 +30,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
     {
         private readonly TestResultToJsonTestResultMapper resultMapper;
         private readonly StepToJsonStepMapper stepMapper;
-        private readonly ExampleToJsonExampleMapper exampleMapper;
 
         public ScenarioToJsonScenarioMapper()
         {
             this.resultMapper = new TestResultToJsonTestResultMapper();
             this.stepMapper = new StepToJsonStepMapper();
-            this.exampleMapper = new ExampleToJsonExampleMapper();
         }
 
         public JsonScenario Map(Scenario scenario)

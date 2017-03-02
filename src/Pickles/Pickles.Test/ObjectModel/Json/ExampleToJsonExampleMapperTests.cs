@@ -31,19 +31,21 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
     [TestFixture]
     public class ExampleToJsonExampleMapperTests
     {
+        private const string LanguageDoesNotMatter = "en";
+
         [Test]
         public void Map_Null_ReturnsNull()
         {
             var mapper = CreateMapper();
 
-            JsonExample actual = mapper.Map(null);
+            JsonExample actual = mapper.Map(null, LanguageDoesNotMatter);
 
             Check.That(actual).IsNull();
         }
 
         private static ExampleToJsonExampleMapper CreateMapper()
         {
-            return new ExampleToJsonExampleMapper();
+            return new ExampleToJsonExampleMapper(new LanguageServicesRegistry());
         }
 
         [Test]
@@ -53,7 +55,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             var mapper = CreateMapper();
 
-            var actual = mapper.Map(example);
+            var actual = mapper.Map(example, LanguageDoesNotMatter);
 
             Check.That(actual).IsNotNull();
         }
@@ -65,7 +67,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             var mapper = CreateMapper();
 
-            var actual = mapper.Map(example);
+            var actual = mapper.Map(example, LanguageDoesNotMatter);
 
             Check.That(actual.Name).IsEqualTo("Some name");
         }
@@ -77,7 +79,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             var mapper = CreateMapper();
 
-            var actual = mapper.Map(example);
+            var actual = mapper.Map(example, LanguageDoesNotMatter);
 
             Check.That(actual.Description).IsEqualTo("Some description");
         }
@@ -89,7 +91,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             var mapper = CreateMapper();
 
-            var actual = mapper.Map(example);
+            var actual = mapper.Map(example, LanguageDoesNotMatter);
 
             Check.That(actual.Tags).ContainsExactly("tag1", "tag2");
         }
@@ -104,9 +106,37 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             var mapper = CreateMapper();
 
-            var actual = mapper.Map(example);
+            var actual = mapper.Map(example, LanguageDoesNotMatter);
 
             Check.That(actual.TableArgument.HeaderRow).ContainsExactly("Placeholder 1", "Placeholder 2");
+        }
+
+        [Test]
+        public void Map_EnglishFeature_SetsNativeKeywordToExamples()
+        {
+            var example = new Example
+            {
+                TableArgument = new Table { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
+            };
+
+            var mapper = CreateMapper();
+            var actual = mapper.Map(example, "en");
+
+            Check.That(actual.NativeKeyword).IsEqualTo("Examples");
+        }
+
+        [Test]
+        public void Map_DutchFeature_SetsNativeKeywordToExamples()
+        {
+            var example = new Example
+            {
+                TableArgument = new Table { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
+            };
+
+            var mapper = CreateMapper();
+            var actual = mapper.Map(example, "nl");
+
+            Check.That(actual.NativeKeyword).IsEqualTo("Voorbeelden");
         }
     }
 }

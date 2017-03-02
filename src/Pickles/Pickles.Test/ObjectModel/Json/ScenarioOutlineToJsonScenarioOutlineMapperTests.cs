@@ -212,38 +212,5 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.Examples[0].Name).IsEqualTo("Name of the example");
         }
-        [Test]
-        public void Map_EnglishFeature_SetsNativeKeywordToExamples()
-        {
-            var scenarioOutline = new ScenarioOutline
-            {
-                Feature = new Feature
-                {
-                    Language = "en"
-                }
-            };
-
-            var mapper = CreateMapper();
-            var jsonScenarioOutline = mapper.Map(scenarioOutline);
-
-            Check.That(jsonScenarioOutline.NativeKeyword).IsEqualTo("Examples");
-        }
-
-        [Test]
-        public void Map_DutchFeature_SetsNativeKeywordToExamples()
-        {
-            var scenarioOutline = new ScenarioOutline
-            {
-                Feature = new Feature
-                {
-                    Language = "nl"
-                }
-            };
-
-            var mapper = CreateMapper();
-            var jsonScenarioOutline = mapper.Map(scenarioOutline);
-
-            Check.That(jsonScenarioOutline.NativeKeyword).IsEqualTo("Voorbeelden");
-        }
     }
 }

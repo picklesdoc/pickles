@@ -28,18 +28,24 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
     public class ExampleToJsonExampleMapper
     {
         private readonly TableToJsonTableMapper tableMapper;
+        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
-        public ExampleToJsonExampleMapper()
+        public ExampleToJsonExampleMapper(ILanguageServicesRegistry languageServicesRegistry)
         {
+            this.languageServicesRegistry = languageServicesRegistry;
             this.tableMapper = new TableToJsonTableMapper();
         }
 
-        public JsonExample Map(Example example)
+        public JsonExample Map(Example example, string language)
         {
             if (example == null)
             {
                 return null;
             }
+
+            var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(language);
+
+            var examplesKeyword = languageServices.ExamplesKeywords[0];
 
             return new JsonExample
             {
@@ -47,6 +53,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 Description = example.Description,
                 TableArgument = this.tableMapper.Map(example.TableArgument),
                 Tags = (example.Tags ?? new List<string>()).ToList(),
+                NativeKeyword = examplesKeyword
             };
         }
     }

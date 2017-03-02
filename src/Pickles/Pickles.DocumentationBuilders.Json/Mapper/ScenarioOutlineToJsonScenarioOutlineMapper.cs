@@ -31,14 +31,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
         private readonly TestResultToJsonTestResultMapper resultMapper;
         private readonly StepToJsonStepMapper stepMapper;
         private readonly ExampleToJsonExampleMapper exampleMapper;
-        private readonly ILanguageServicesRegistry languageServicesRegistry;
 
         public ScenarioOutlineToJsonScenarioOutlineMapper(ILanguageServicesRegistry languageServicesRegistry)
         {
-            this.languageServicesRegistry = languageServicesRegistry;
             this.resultMapper = new TestResultToJsonTestResultMapper();
             this.stepMapper = new StepToJsonStepMapper();
-            this.exampleMapper = new ExampleToJsonExampleMapper();
+            this.exampleMapper = new ExampleToJsonExampleMapper(languageServicesRegistry);
         }
 
         public JsonScenarioOutline Map(ScenarioOutline scenarioOutline)
@@ -48,20 +46,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 return null;
             }
 
-            var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(scenarioOutline.Feature?.Language);
-
-            var examplesKeyword = languageServices.ExamplesKeywords[0];
-
             return new JsonScenarioOutline
             {
-                Examples = (scenarioOutline.Examples ?? new List<Example>()).Select(this.exampleMapper.Map).ToList(),
+                Examples = (scenarioOutline.Examples ?? new List<Example>()).Select(example => this.exampleMapper.Map(example, scenarioOutline.Feature?.Language)).ToList(),
                 Steps = (scenarioOutline.Steps ?? new List<Step>()).Select(this.stepMapper.Map).ToList(),
                 Tags = (scenarioOutline.Tags ?? new List<string>()).ToList(),
                 Name = scenarioOutline.Name,
                 Slug = scenarioOutline.Slug,
                 Description = scenarioOutline.Description,
                 Result = this.resultMapper.Map(scenarioOutline.Result),
-                NativeKeyword = examplesKeyword
             };
         }
     }
