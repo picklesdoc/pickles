@@ -142,6 +142,7 @@ Så att beställaren kan förstå dem".ComparisonNormalize());
             Check.That(thenStep.DocStringArgument).IsNull();
             Check.That(thenStep.TableArgument).IsNull();
         }
+
         [Test]
         public void WhenIndicatingTheLanguageAndCultureInTheFeature_ThenCanParseTheFeature()
         {
