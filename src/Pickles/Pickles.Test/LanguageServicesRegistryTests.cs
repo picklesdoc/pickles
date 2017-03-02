@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="ILanguageServices.cs" company="PicklesDoc">
+//  <copyright file="LanguageServicesRegistryTests.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -17,24 +17,33 @@
 //  limitations under the License.
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
-namespace PicklesDoc.Pickles
+
+using NFluent;
+using NUnit.Framework;
+
+namespace PicklesDoc.Pickles.Test
 {
-    public interface ILanguageServices
+    [TestFixture]
+    public class LanguageServicesRegistryTests
     {
-        string[] BackgroundKeywords { get; }
+        [Test]
+        public void GetLanguageServicesForLanguage_WithEnglish_ReturnsLanguageServicesForEnglish()
+        {
+            var languageServicesRegistry = new LanguageServicesRegistry();
 
-        string[] WhenStepKeywords { get; }
+            ILanguageServices languageServices = languageServicesRegistry.GetLanguageServicesForLanguage("en");
 
-        string[] GivenStepKeywords { get; }
+            Check.That(languageServices.Language).IsEqualTo("en");
+        }
 
-        string[] ThenStepKeywords { get; }
+        [Test]
+        public void DefaultLanguage_ReturnsEnglish()
+        {
+            var languageServicesRegistry = new LanguageServicesRegistry();
 
-        string[] AndStepKeywords { get; }
+            string defaultLanguage = languageServicesRegistry.DefaultLanguage;
 
-        string[] ButStepKeywords { get; }
-
-        string[] ExamplesKeywords { get; }
-
-        string Language { get; }
+            Check.That(defaultLanguage).IsEqualTo("en");
+        }
     }
 }

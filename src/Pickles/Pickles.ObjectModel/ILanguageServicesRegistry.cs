@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="ILanguageServices.cs" company="PicklesDoc">
+//  <copyright file="ILanguageServicesRegistry.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -19,22 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 namespace PicklesDoc.Pickles
 {
-    public interface ILanguageServices
+    public interface ILanguageServicesRegistry
     {
-        string[] BackgroundKeywords { get; }
-
-        string[] WhenStepKeywords { get; }
-
-        string[] GivenStepKeywords { get; }
-
-        string[] ThenStepKeywords { get; }
-
-        string[] AndStepKeywords { get; }
-
-        string[] ButStepKeywords { get; }
-
-        string[] ExamplesKeywords { get; }
-
-        string Language { get; }
+        ILanguageServices GetLanguageServicesForLanguage(string language);
     }
 }

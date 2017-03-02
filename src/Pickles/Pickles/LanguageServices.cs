@@ -91,5 +91,10 @@ namespace PicklesDoc.Pickles
         }
 
         public string[] ExamplesKeywords { get; }
+
+        public string Language
+        {
+            get { return this.GherkinDialect.Language; }
+        }
     }
 }

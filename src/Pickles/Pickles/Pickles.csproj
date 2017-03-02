@@ -107,6 +107,7 @@
     <Compile Include="FeatureToggles\AlternateMarkdownProvider.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LanguageServices.cs" />
+    <Compile Include="LanguageServicesRegistry.cs" />
     <Compile Include="MarkdownProvider.cs" />
     <Compile Include="ObjectModel\Mapper.cs" />
     <Compile Include="DirectoryCrawler\DirectoryTreeCrawler.cs" />

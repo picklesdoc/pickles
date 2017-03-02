@@ -57,6 +57,7 @@
     <Compile Include="IConfiguration.cs" />
     <Compile Include="DocumentationBuilders\IDocumentationBuilder.cs" />
     <Compile Include="ILanguageServices.cs" />
+    <Compile Include="ILanguageServicesRegistry.cs" />
     <Compile Include="IMarkdownProvider.cs" />
     <Compile Include="ObjectModel\Location.cs" />
     <Compile Include="ObjectModel\Example.cs" />
