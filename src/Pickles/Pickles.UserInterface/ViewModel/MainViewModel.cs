@@ -527,7 +527,12 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
 
                 configuration.DocumentationFormat = documentationFormat;
 
-                configuration.ExcludeTags = this.ExcludeTags;
+                configuration.ExcludeTags = new List<string>(this.ExcludeTags.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries));
+                for (int i = 0; i < configuration.ExcludeTags.Count; i++)
+                {
+                    if (configuration.ExcludeTags[i][0] != '@')
+                        configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
+                }
 
                 if (this.includeExperimentalFeatures)
                 {

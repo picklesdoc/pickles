@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
@@ -153,7 +154,12 @@ namespace PicklesDoc.Pickles
 
             if (!string.IsNullOrEmpty(this.excludeTags))
             {
-                configuration.ExcludeTags = this.excludeTags;
+                configuration.ExcludeTags = new List<string>(this.excludeTags.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries));
+                for (int i = 0; i < configuration.ExcludeTags.Count; i++)
+                {
+                    if (configuration.ExcludeTags[i][0] != '@')
+                        configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
+                }
             }
 
             bool enableComments;

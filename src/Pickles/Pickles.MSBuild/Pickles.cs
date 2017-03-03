@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Reflection;
 using Autofac;
@@ -121,7 +122,12 @@ namespace PicklesDoc.Pickles.MSBuild
             
             if (!string.IsNullOrEmpty(this.ExcludeTags))
             {
-                configuration.ExcludeTags = this.ExcludeTags;
+                configuration.ExcludeTags = new List<string>(this.ExcludeTags.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries));
+                for (int i = 0; i < configuration.ExcludeTags.Count; i++)
+                {
+                    if (configuration.ExcludeTags[i][0] != '@')
+                        configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
+                }
             }
 
             bool shouldEnableExperimentalFeatures;

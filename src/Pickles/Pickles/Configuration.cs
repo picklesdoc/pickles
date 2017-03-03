@@ -112,7 +112,7 @@ namespace PicklesDoc.Pickles
             }
         }
 
-        public string ExcludeTags { get; set; }
+        public List<string> ExcludeTags { get; set; }
 
         private void AddTestResultFileIfItExists(FileInfoBase fileInfoBase)
         {
