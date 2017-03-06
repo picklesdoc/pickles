@@ -2,8 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Pickles.MSBuild</id>
-    <version>2.14.1</version>
-    <!-- <version>@build.number@</version> -->
+    <version>@build.number@</version>
     <title>MSBuild Task for Pickles - The Open Source Living Documentation Generator</title>
     <authors>PicklesDoc and contributors</authors>
     <owners>Jeffrey Cameron, Dirk Rombauts</owners>

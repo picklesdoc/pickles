@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles
         public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
         public const string HelpEnableComments = "whether to enable comments in the output";
-        public const string HelpExcludeTags = "Exclude scenarios that match at least one tag into tags. Tags can be space (' ') or colon (',') separated list of tags";
+        public const string HelpExcludeTags = "exclude scenarios that match at least one tag into tags. Tags can be space (' ') or colon (',') separated list of tags";
         public const string HelpStopOnParsingError = "stop on error feature file. default is skipping (false)";
 
         public const string HelpTestResultsFile =
