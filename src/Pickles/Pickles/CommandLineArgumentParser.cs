@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
@@ -41,7 +42,8 @@ namespace PicklesDoc.Pickles
         public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
         public const string HelpEnableComments = "whether to enable comments in the output";
-        public const string HelpExcludeTags = "exclude scenarios that match this tag";
+        public const string HelpExcludeTags = "exclude scenarios that match at least one tag into tags. Tags can be space (' ') or colon (',') separated list of tags";
+        public const string HelpStopOnParsingError = "stop on error feature file. default is skipping (false)";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
@@ -61,6 +63,7 @@ namespace PicklesDoc.Pickles
         private bool includeExperimentalFeatures;
         private string enableCommentsValue;
         private string excludeTags;
+        private bool stopOnParsingError = false;
 
         public CommandLineArgumentParser(IFileSystem fileSystem)
         {
@@ -79,7 +82,8 @@ namespace PicklesDoc.Pickles
                 { "h|?|help", v => this.helpRequested = v != null },
                 { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
                 { "cmt|enableComments=", HelpEnableComments, v => this.enableCommentsValue = v },
-                { "et|excludeTags=", HelpExcludeTags, v => this.excludeTags = v }
+                { "et|excludeTags=", HelpExcludeTags, v => this.excludeTags = v },
+                { "st|stopOnParsingError=", HelpStopOnParsingError, v => this.stopOnParsingError = string.Equals(v,"true", StringComparison.OrdinalIgnoreCase) }
             };
         }
 
@@ -153,8 +157,15 @@ namespace PicklesDoc.Pickles
 
             if (!string.IsNullOrEmpty(this.excludeTags))
             {
-                configuration.ExcludeTags = this.excludeTags;
+                configuration.ExcludeTags = new List<string>(this.excludeTags.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries));
+                for (int i = 0; i < configuration.ExcludeTags.Count; i++)
+                {
+                    if (configuration.ExcludeTags[i][0] != '@')
+                        configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
+                }
             }
+
+            configuration.StopOnParsingError = this.stopOnParsingError;
 
             bool enableComments;
 

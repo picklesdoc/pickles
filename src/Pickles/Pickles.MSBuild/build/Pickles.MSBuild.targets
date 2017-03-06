@@ -19,6 +19,8 @@
             DocumentationFormat="$(Pickles_DocumentationFormat)"
             Language="$(Pickles_Language)"
             IncludeExperimentalFeatures="$(Pickles_IncludeExperimentalFeatures)"
-            EnableComments="$(Pickles_EnableComments)" />
+            EnableComments="$(Pickles_EnableComments)"
+            ExcludeTags="$(Pickles_ExcludeTags"
+            StopOnParsingError="$(Pickles_StopOnParsingError"/>
     </Target>
 </Project>

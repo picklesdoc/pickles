@@ -21,6 +21,7 @@
 #if __MonoCS__
 #else
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Management.Automation;
 using System.Reflection;
@@ -65,6 +66,9 @@ namespace PicklesDoc.Pickles.PowerShell
 
         [Parameter(HelpMessage = CommandLineArgumentParser.HelpExcludeTags, Mandatory = false)]
         public string ExcludeTags { get; set; }
+
+        [Parameter(HelpMessage = CommandLineArgumentParser.HelpStopOnParsingError, Mandatory = false)]
+        public string StopOnParsingError { get; set; }
 
         protected override void ProcessRecord()
         {
@@ -128,7 +132,17 @@ namespace PicklesDoc.Pickles.PowerShell
 
             if (!string.IsNullOrEmpty(this.ExcludeTags))
             {
-                configuration.ExcludeTags = this.ExcludeTags;
+                configuration.ExcludeTags = new List<string>(this.ExcludeTags.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries));
+                for (int i = 0; i < configuration.ExcludeTags.Count; i++)
+                {
+                    if (configuration.ExcludeTags[i][0] != '@')
+                        configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
+                }
+            }
+
+            if (!string.IsNullOrEmpty(this.StopOnParsingError))
+            {
+                configuration.StopOnParsingError = string.Equals(this.StopOnParsingError, "true", StringComparison.OrdinalIgnoreCase);
             }
 
             bool shouldEnableComments;

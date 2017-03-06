@@ -44,7 +44,7 @@ namespace PicklesDoc.Pickles.Test
                 {
                     var builder = new ContainerBuilder();
 
-                    var configuration = new Configuration() { ExcludeTags = "exclude-tag" };
+                    var configuration = new Configuration() { ExcludeTags = new List<string>(new []{"@exclude-tag"})  };
                     builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
                     builder.Register<MockFileSystem>(_ => CreateMockFileSystem()).As<IFileSystem>().SingleInstance();
                     builder.RegisterModule<PicklesModule>();

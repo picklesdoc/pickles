@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Reflection;
 using Autofac;
@@ -54,6 +55,8 @@ namespace PicklesDoc.Pickles.MSBuild
         public string EnableComments { get; set; }
 
         public string ExcludeTags { get; set; }
+
+        public string StopOnParsingError { get; set; }
 
         public override bool Execute()
         {
@@ -121,7 +124,17 @@ namespace PicklesDoc.Pickles.MSBuild
             
             if (!string.IsNullOrEmpty(this.ExcludeTags))
             {
-                configuration.ExcludeTags = this.ExcludeTags;
+                configuration.ExcludeTags = new List<string>(this.ExcludeTags.Split(new[] { ' ', ',' }, StringSplitOptions.RemoveEmptyEntries));
+                for (int i = 0; i < configuration.ExcludeTags.Count; i++)
+                {
+                    if (configuration.ExcludeTags[i][0] != '@')
+                        configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
+                }
+            }
+
+            if (!string.IsNullOrEmpty(this.StopOnParsingError))
+            {
+                configuration.StopOnParsingError = string.Equals(this.StopOnParsingError, "true", StringComparison.OrdinalIgnoreCase);
             }
 
             bool shouldEnableExperimentalFeatures;
