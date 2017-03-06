@@ -67,6 +67,9 @@ namespace PicklesDoc.Pickles.PowerShell
         [Parameter(HelpMessage = CommandLineArgumentParser.HelpExcludeTags, Mandatory = false)]
         public string ExcludeTags { get; set; }
 
+        [Parameter(HelpMessage = CommandLineArgumentParser.HelpStopOnParsingError, Mandatory = false)]
+        public string StopOnParsingError { get; set; }
+
         protected override void ProcessRecord()
         {
             var builder = new ContainerBuilder();
@@ -135,6 +138,11 @@ namespace PicklesDoc.Pickles.PowerShell
                     if (configuration.ExcludeTags[i][0] != '@')
                         configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
                 }
+            }
+
+            if (!string.IsNullOrEmpty(this.StopOnParsingError))
+            {
+                configuration.StopOnParsingError = string.Equals(this.StopOnParsingError, "true", StringComparison.OrdinalIgnoreCase);
             }
 
             bool shouldEnableComments;

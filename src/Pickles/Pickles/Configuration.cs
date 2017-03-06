@@ -112,7 +112,10 @@ namespace PicklesDoc.Pickles
             }
         }
 
-        public List<string> ExcludeTags { get; set; }
+        public List<string> ExcludeTags { get; set; } = new List<string>();
+
+        public bool StopOnParsingError { get; set; } = false;
+
 
         private void AddTestResultFileIfItExists(FileInfoBase fileInfoBase)
         {

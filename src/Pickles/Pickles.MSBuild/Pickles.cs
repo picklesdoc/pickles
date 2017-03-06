@@ -56,6 +56,8 @@ namespace PicklesDoc.Pickles.MSBuild
 
         public string ExcludeTags { get; set; }
 
+        public string StopOnParsingError { get; set; }
+
         public override bool Execute()
         {
             try
@@ -128,6 +130,11 @@ namespace PicklesDoc.Pickles.MSBuild
                     if (configuration.ExcludeTags[i][0] != '@')
                         configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
                 }
+            }
+
+            if (!string.IsNullOrEmpty(this.StopOnParsingError))
+            {
+                configuration.StopOnParsingError = string.Equals(this.StopOnParsingError, "true", StringComparison.OrdinalIgnoreCase);
             }
 
             bool shouldEnableExperimentalFeatures;

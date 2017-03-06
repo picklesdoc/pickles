@@ -49,6 +49,8 @@ namespace PicklesDoc.Pickles
 
         List<string> ExcludeTags { get; set; }
 
+        bool StopOnParsingError { get; set; }
+
         void AddTestResultFile(FileInfoBase fileInfoBase);
 
         void AddTestResultFiles(IEnumerable<FileInfoBase> fileInfoBases);

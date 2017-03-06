@@ -21,6 +21,8 @@
 using System;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Reflection;
+using NLog;
 using PicklesDoc.Pickles.ObjectModel;
 
 using TextReader = System.IO.TextReader;
@@ -29,6 +31,8 @@ namespace PicklesDoc.Pickles
 {
     public class FeatureParser
     {
+        private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+
         private readonly IFileSystem fileSystem;
 
         private readonly IConfiguration configuration;
@@ -54,8 +58,11 @@ namespace PicklesDoc.Pickles
                 {
                     string message =
                         $"There was an error parsing the feature file here: {this.fileSystem.Path.GetFullPath(filename)}" + Environment.NewLine +
-                        $"Errormessage was:'{e.Message}'";
-                    throw new FeatureParseException(message, e);
+                        $"Error message was:'{e.Message}'";
+                    if (this.configuration.StopOnParsingError)
+                        throw new FeatureParseException(message, e);
+                    else
+                        Log.Error(message);
                 }
 
                 reader.Close();
@@ -98,7 +105,7 @@ namespace PicklesDoc.Pickles
             if (result.Tags.Any(t => this.configuration.ExcludeTags.Any(s => s.Equals(t, StringComparison.InvariantCultureIgnoreCase))))
                 return null;
 
-            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(t => !t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase))).ToList();
+            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(t => !this.configuration.ExcludeTags.Any(s => s.Equals(t, StringComparison.InvariantCultureIgnoreCase)))).ToList();
 
             result.FeatureElements.Clear();
             result.FeatureElements.AddRange(wantedFeatures);

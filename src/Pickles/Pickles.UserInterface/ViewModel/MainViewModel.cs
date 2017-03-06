@@ -25,12 +25,14 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Input;
 
 using Autofac;
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using NLog;
 using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.UserInterface.Mvvm;
 using PicklesDoc.Pickles.UserInterface.Settings;
@@ -51,6 +53,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+
         private readonly MultiSelectableCollection<DocumentationFormat> documentationFormats;
 
         private readonly TestResultsFormat[] testResultsFormats;
@@ -88,6 +92,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
         private bool includeTests;
 
         private string excludeTags;
+
+        private bool stopOnParsingError;
 
         private bool isRunning;
 
@@ -217,6 +223,13 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             set { this.Set(nameof(this.ExcludeTags), ref this.excludeTags, value); }
         }
 
+        public bool StopOnParsingError
+        {
+            get { return this.stopOnParsingError; }
+
+            set { this.Set(nameof(this.StopOnParsingError), ref this.stopOnParsingError, value); }
+        }
+
         public ICommand GeneratePickles
         {
             get { return this.generateCommand; }
@@ -333,7 +346,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                 CreateDirectoryForEachOutputFormat = this.createDirectoryForEachOutputFormat,
                 IncludeExperimentalFeatures = this.includeExperimentalFeatures,
                 EnableComments = this.enableComments,
-                ExcludeTags = this.excludeTags
+                ExcludeTags = this.excludeTags,
+                StopOnParsingError = this.stopOnParsingError
             };
 
             this.mainModelSerializer.Write(mainModel);
@@ -370,6 +384,7 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             this.IncludeExperimentalFeatures = mainModel.IncludeExperimentalFeatures;
             this.EnableComments = mainModel.EnableComments;
             this.ExcludeTags = mainModel.ExcludeTags;
+            this.StopOnParsingError = mainModel.StopOnParsingError;
         }
 
         private void DocumentationFormatsOnCollectionChanged(object sender, EventArgs notifyCollectionChangedEventArgs)
@@ -534,6 +549,11 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                         configuration.ExcludeTags[i] = configuration.ExcludeTags[i].Insert(0, "@");
                 }
 
+                if (this.StopOnParsingError)
+                {
+                    configuration.StopOnParsingError = this.StopOnParsingError;
+                }
+
                 if (this.includeExperimentalFeatures)
                 {
                     configuration.EnableExperimentalFeatures();
@@ -552,8 +572,15 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                     configuration.DisableComments();
                 }
 
-                var runner = container.Resolve<Runner>();
-                runner.Run(container);
+                try
+                {
+                    var runner = container.Resolve<Runner>();
+                    runner.Run(container);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e.Message);
+                }
             }
         }
 
