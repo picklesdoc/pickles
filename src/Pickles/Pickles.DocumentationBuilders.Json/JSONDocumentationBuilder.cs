@@ -217,11 +217,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                             };
                     });
 
+
+            var testCasesSummary = this.CreateTestCaseSummary(features);
+
             return new
                 {
                     Tags = tagSummary,
                     Folders = topLevelFolderSummary,
                     NotTestedFolders = topLevelNotTestedFolderSummary,
+                    TestCases = testCasesSummary,
                     Scenarios = new
                         {
                             Total = filteredScenarios.Count,
@@ -237,6 +241,79 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                             Inconclusive = filteredFeatures.LongCount(x => !x.Result.WasExecuted)
                         }
                 };
+        }
+
+        private dynamic CreateTestCaseSummary(IReadOnlyCollection<JsonFeatureWithMetaInfo> features)
+        {
+            var notExecutedTests = this.GetInconclusiveTestAmount(features);
+            var failingTests = this.GetFailingTestAmount(features);
+            var successfullTests = this.GetPassingTestAmount(features);
+
+            return new
+            {
+                Total = successfullTests + failingTests + notExecutedTests,
+                Failing = failingTests,
+                Inconclusive = notExecutedTests,
+                Passing = successfullTests
+            };
+        }
+
+        private long GetPassingTestAmount(IReadOnlyCollection<JsonFeatureWithMetaInfo> features)
+        {
+            var scenarioOutlines = this.GetScenarioOutlines(features);
+            var normalScenarios = this.GetScenarios(features);
+
+            var passingTestAmount = scenarioOutlines.Sum(outline => outline.Examples
+                .Sum(example => example.TableArgument.DataRows
+                    .LongCount(x => x.Result.WasSuccessful)));
+
+            passingTestAmount +=
+                normalScenarios.LongCount(x => x.Result.WasSuccessful);
+
+            return passingTestAmount;
+        }
+
+        private long GetFailingTestAmount(IReadOnlyCollection<JsonFeatureWithMetaInfo> features)
+        {
+            var scenarioOutlines = this.GetScenarioOutlines(features);
+            var normalScenarios = this.GetScenarios(features);
+
+            var failingTestAmount = scenarioOutlines.Sum(outline => outline.Examples
+               .Sum(example => example.TableArgument.DataRows
+                   .LongCount(x => !x.Result.WasSuccessful)));
+
+            failingTestAmount +=
+                normalScenarios.LongCount(x => !x.Result.WasSuccessful);
+
+            return failingTestAmount;
+        }
+
+        private long GetInconclusiveTestAmount(IReadOnlyCollection<JsonFeatureWithMetaInfo> features)
+        {
+            var scenarioOutlines = this.GetScenarioOutlines(features);
+            var normalScenarios = this.GetScenarios(features);
+
+            var inconclusiveTestAmount =
+                scenarioOutlines.Sum(outline => outline.Examples
+                    .Sum(example => example.TableArgument.DataRows
+                        .LongCount(row => !row.Result.WasExecuted)));
+
+            inconclusiveTestAmount += 
+                normalScenarios.LongCount(x => !x.Result.WasExecuted);
+
+            return inconclusiveTestAmount;
+        }
+
+        private IEnumerable<JsonScenarioOutline> GetScenarioOutlines(IEnumerable<JsonFeatureWithMetaInfo> features)
+        {
+            return features.SelectMany(
+                feature => feature.Feature.FeatureElements.OfType<JsonScenarioOutline>());
+        }
+
+        private IEnumerable<JsonScenario> GetScenarios(IEnumerable<JsonFeatureWithMetaInfo> features)
+        {
+            return features.SelectMany(
+                feature => feature.Feature.FeatureElements.OfType<JsonScenario>());
         }
     }
 }
