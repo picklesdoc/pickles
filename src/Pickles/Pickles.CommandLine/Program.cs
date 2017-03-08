@@ -60,9 +60,21 @@ namespace PicklesDoc.Pickles.CommandLine
                 {
                     runner.Run(container);
 
-                    if (Log.IsInfoEnabled)
+                    var parser = container.Resolve<FeatureParser>();
+                    if (parser.NbOfError != 0)
                     {
-                        Log.Info("Pickles completed successfully");
+                        if (Log.IsInfoEnabled)
+                        {
+                            Log.Info("Pickles completed with " + parser.NbOfError + " errors");
+                        }
+                        return 1;
+                    }
+                    else
+                    {
+                        if (Log.IsInfoEnabled)
+                        {
+                            Log.Info("Pickles completed successfully");
+                        }
                     }
                 }
                 catch (Exception ex)

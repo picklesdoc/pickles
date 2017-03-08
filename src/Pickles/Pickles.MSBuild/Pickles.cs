@@ -74,6 +74,17 @@ namespace PicklesDoc.Pickles.MSBuild
 
                 var runner = container.Resolve<Runner>();
                 runner.Run(container);
+
+                var parser = container.Resolve<FeatureParser>();
+                if (parser.NbOfError != 0)
+                {
+                    Log.LogError("Pickles completed with " + parser.NbOfError + " errors");
+                    return false;
+                }
+                else
+                {
+                    Log.LogMessage("Pickles completed successfully");
+                }
             }
             catch (Exception e)
             {
@@ -118,7 +129,7 @@ namespace PicklesDoc.Pickles.MSBuild
             {
                 configuration.DocumentationFormat = (DocumentationFormat)Enum.Parse(typeof(DocumentationFormat), this.DocumentationFormat, true);
             }
-            
+
             if (!string.IsNullOrEmpty(this.ExcludeTags))
             {
                 configuration.ExcludeTags = this.ExcludeTags;

@@ -21,6 +21,8 @@
 using System;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Reflection;
+using NLog;
 using PicklesDoc.Pickles.ObjectModel;
 
 using TextReader = System.IO.TextReader;
@@ -29,11 +31,15 @@ namespace PicklesDoc.Pickles
 {
     public class FeatureParser
     {
+        private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+
         private readonly IFileSystem fileSystem;
 
         private readonly IConfiguration configuration;
 
         private readonly DescriptionProcessor descriptionProcessor = new DescriptionProcessor();
+
+        public int NbOfError { get; private set; } = 0;
 
         public FeatureParser(IFileSystem fileSystem, IConfiguration configuration)
         {
@@ -54,8 +60,10 @@ namespace PicklesDoc.Pickles
                 {
                     string message =
                         $"There was an error parsing the feature file here: {this.fileSystem.Path.GetFullPath(filename)}" + Environment.NewLine +
-                        $"Errormessage was:'{e.Message}'";
-                    throw new FeatureParseException(message, e);
+                        $"Error message was:'{e.Message}'";
+                        Log.Error(message);
+                    this.NbOfError++;
+                    // TODO PLV retourner exit 1 en cas d'erreur de syntaxt
                 }
 
                 reader.Close();

@@ -84,7 +84,15 @@ namespace PicklesDoc.Pickles.PowerShell
             var runner = container.Resolve<Runner>();
             runner.Run(container);
 
-            this.WriteObject("Pickles completed successfully");
+            var parser = container.Resolve<FeatureParser>();
+            if (parser.NbOfError != 0)
+            {
+                this.WriteWarning("Pickles completed with " + parser.NbOfError + " errors");
+            }
+            else
+            {
+                this.WriteObject("Pickles completed successfully");
+            }
         }
 
         private void ParseParameters(IConfiguration configuration, IFileSystem fileSystem, PathInfo currentFileSystemLocation)
