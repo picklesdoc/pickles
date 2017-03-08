@@ -63,7 +63,6 @@ namespace PicklesDoc.Pickles
                         $"Error message was:'{e.Message}'";
                         Log.Error(message);
                     this.NbOfError++;
-                    // TODO PLV retourner exit 1 en cas d'erreur de syntaxt
                 }
 
                 reader.Close();
