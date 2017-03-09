@@ -20,7 +20,9 @@
 
 using System;
 using System.IO.Abstractions;
+using System.Reflection;
 using System.Xml.Linq;
+using NLog;
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
@@ -29,6 +31,8 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
 {
     public class FeatureNodeFactory
     {
+        private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+
         private readonly FileSystemBasedFeatureParser featureParser;
         private readonly HtmlMarkdownFormatter htmlMarkdownFormatter;
         private readonly RelevantFileDetector relevantFileDetector;
@@ -66,6 +70,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
                     catch (FeatureParseException exception)
                     {
                         report.Add(exception.Message);
+                        Log.Error(exception.Message);
                         return null;
                     }
                 }
@@ -81,7 +86,9 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
                 }
             }
 
-            report.Add("Cannot create an IItemNode-derived object for " + location.FullName);
+            var message = "Cannot create an IItemNode-derived object for " + location.FullName;
+            report.Add(message);
+            Log.Error(message);
             return null;
         }
     }

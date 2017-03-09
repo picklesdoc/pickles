@@ -50,7 +50,7 @@ namespace PicklesDoc.Pickles
 
             if (parsingReport.Any())
             {
-                var error = $"Some files were not parsed correctly: {string.Join("; ", parsingReport)}";
+                var error = $"Some files ({parsingReport.Count}) were not parsed correctly.";
                 Log.Error(error);
             }
 
