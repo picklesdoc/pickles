@@ -40,7 +40,8 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
         public string Setup()
         {
             const string OutputDirectoryName = FileSystemPrefix + @"JSONFeatureOutput";
-            const string RootPath = FileSystemPrefix + @"JSON\Features";
+            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix + @"JSON\Features");
+
             const string TestResultFilePath = FileSystemPrefix + @"JSON\results-example-failing-and-pasing-mstest.trx";
 
             string filePath = FileSystem.Path.Combine(OutputDirectoryName, JsonDocumentationBuilder.JsonFileName);
@@ -59,7 +60,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
             var resultFile = RetrieveContentOfFileFromResources(ResourcePrefix + "JSON.results-example-failing-and-pasing-mstest.trx");
             FileSystem.AddFile(TestResultFilePath, resultFile);
 
-            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(RootPath);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
 
             var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectoryName);
             if (!outputDirectory.Exists)

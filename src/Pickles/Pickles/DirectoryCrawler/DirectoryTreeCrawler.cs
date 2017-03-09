@@ -44,11 +44,6 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.fileSystem = fileSystem;
         }
 
-        public Tree Crawl(string directory)
-        {
-            return this.Crawl(this.fileSystem.DirectoryInfo.FromDirectoryName(directory), null);
-        }
-
         public Tree Crawl(DirectoryInfoBase directory)
         {
             return this.Crawl(directory, null);

@@ -35,7 +35,7 @@ namespace PicklesDoc.Pickles.Test
         {
             this.AddFakeFolderStructures();
 
-            string rootPath = FileSystemPrefix + @"FeatureCrawlerTests";
+            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix + @"FeatureCrawlerTests");
             Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
 
             Check.That(features).IsNotNull();

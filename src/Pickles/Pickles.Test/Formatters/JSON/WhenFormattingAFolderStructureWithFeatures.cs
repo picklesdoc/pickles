@@ -35,9 +35,11 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
 
         public void Setup()
         {
+            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
+
             this.AddFakeFolderStructures();
 
-            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(FileSystemPrefix);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
 
             var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectory);
             if (!outputDirectory.Exists)
