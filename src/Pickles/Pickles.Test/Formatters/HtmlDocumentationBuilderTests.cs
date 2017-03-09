@@ -41,7 +41,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
 
             var configuration = this.Configuration;
             configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
-            var features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
+            var features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
             var builder = Container.Resolve<HtmlDocumentationBuilder>();
 
             builder.Build(features);

@@ -51,7 +51,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests
             AddFakeFolderStructures();
 
             Configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
-            this.features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
+            this.features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
             this.builder = Container.Resolve<WordDocumentationBuilder>();
         }
 

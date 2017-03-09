@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
 
             this.AddFakeFolderStructures();
 
-            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
 
             var formatter = new HtmlTableOfContentsFormatter(null, this.FileSystem);
             this.toc = formatter.Format(

@@ -21,7 +21,6 @@
 using System;
 using System.IO.Abstractions;
 using System.Xml.Linq;
-
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
@@ -43,7 +42,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.fileSystem = fileSystem;
         }
 
-        public INode Create(FileSystemInfoBase root, FileSystemInfoBase location)
+        public INode Create(FileSystemInfoBase root, FileSystemInfoBase location, ParsingReport report)
         {
             string relativePathFromRoot = root == null ? @".\" : PathExtensions.MakeRelativePath(root, location, this.fileSystem);
 
@@ -54,22 +53,36 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             }
 
             var file = location as FileInfoBase;
-            if (this.relevantFileDetector.IsFeatureFile(file))
+
+            if (file != null)
             {
-                Feature feature = this.featureParser.Parse(file.FullName);
-                return feature != null ? new FeatureNode(file, relativePathFromRoot, feature) : null;
-            }
-            else if (this.relevantFileDetector.IsMarkdownFile(file))
-            {
-                XElement markdownContent = this.htmlMarkdownFormatter.Format(this.fileSystem.File.ReadAllText(file.FullName));
-                return new MarkdownNode(file, relativePathFromRoot, markdownContent);
-            }
-            else if (this.relevantFileDetector.IsImageFile(file))
-            {
-                return new ImageNode(file, relativePathFromRoot);
+                if (this.relevantFileDetector.IsFeatureFile(file))
+                {
+                    try
+                    {
+                        Feature feature = this.featureParser.Parse(file.FullName);
+                        return feature != null ? new FeatureNode(file, relativePathFromRoot, feature) : null;
+                    }
+                    catch (FeatureParseException exception)
+                    {
+                        report.Add(exception.Message);
+                        return null;
+                    }
+                }
+                else if (this.relevantFileDetector.IsMarkdownFile(file))
+                {
+                    XElement markdownContent =
+                        this.htmlMarkdownFormatter.Format(this.fileSystem.File.ReadAllText(file.FullName));
+                    return new MarkdownNode(file, relativePathFromRoot, markdownContent);
+                }
+                else if (this.relevantFileDetector.IsImageFile(file))
+                {
+                    return new ImageNode(file, relativePathFromRoot);
+                }
             }
 
-            throw new InvalidOperationException("Cannot create an IItemNode-derived object for " + file.FullName);
+            report.Add("Cannot create an IItemNode-derived object for " + location.FullName);
+            return null;
         }
     }
 }

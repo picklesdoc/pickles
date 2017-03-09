@@ -60,7 +60,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
             var resultFile = RetrieveContentOfFileFromResources(ResourcePrefix + "JSON.results-example-failing-and-pasing-mstest.trx");
             FileSystem.AddFile(TestResultFilePath, resultFile);
 
-            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath);
+            Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
 
             var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectoryName);
             if (!outputDirectory.Exists)

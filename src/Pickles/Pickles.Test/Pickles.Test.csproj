@@ -103,6 +103,7 @@
     <Compile Include="DescriptionProcessorTests.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
+    <Compile Include="FeatureNodeFactoryTests.cs" />
     <Compile Include="FeatureParserTests.cs" />
     <Compile Include="FileSystemBasedFeatureParserTests.cs" />
     <Compile Include="GlobalSuppressions.cs" />

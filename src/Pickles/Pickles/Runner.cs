@@ -44,7 +44,15 @@ namespace PicklesDoc.Pickles
             }
 
             var featureCrawler = container.Resolve<DirectoryTreeCrawler>();
-            Tree features = featureCrawler.Crawl(configuration.FeatureFolder);
+            var parsingReport = new ParsingReport();
+
+            Tree features = featureCrawler.Crawl(configuration.FeatureFolder, parsingReport);
+
+            if (parsingReport.Any())
+            {
+                var error = $"Some files were not parsed correctly: {string.Join("; ", parsingReport)}";
+                Log.Error(error);
+            }
 
             if (features == null)
             {
@@ -63,6 +71,11 @@ namespace PicklesDoc.Pickles
             {
                 Log.Error(ex, "Something went wrong during generation: {0}", ex);
                 throw;
+            }
+
+            if (parsingReport.Any())
+            {
+                throw new ApplicationException("Some files were not parsed correctly.");
             }
         }
 
