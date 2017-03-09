@@ -50,11 +50,11 @@ namespace PicklesDoc.Pickles
                 {
                     feature = this.Parse(reader);
                 }
-                catch (Exception e)
+                catch (FeatureParseException e)
                 {
                     string message =
                         $"There was an error parsing the feature file here: {this.fileSystem.Path.GetFullPath(filename)}" + Environment.NewLine +
-                        $"Errormessage was:'{e.Message}'";
+                        $"Errormessage was: '{e.Message}'";
                     throw new FeatureParseException(message, e);
                 }
 
@@ -69,17 +69,24 @@ namespace PicklesDoc.Pickles
             var language = this.DetermineLanguage();
             var gherkinParser = new Gherkin.Parser();
 
-            Gherkin.Ast.GherkinDocument gherkinDocument = gherkinParser.Parse(
-                new Gherkin.TokenScanner(featureFileReader),
-                new Gherkin.TokenMatcher(new CultureAwareDialectProvider(language)));
+            try
+            {
+                Gherkin.Ast.GherkinDocument gherkinDocument = gherkinParser.Parse(
+                    new Gherkin.TokenScanner(featureFileReader),
+                    new Gherkin.TokenMatcher(new CultureAwareDialectProvider(language)));
 
-            Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
-            result = this.RemoveFeatureWithExcludeTags(result);
+                Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
+                result = this.RemoveFeatureWithExcludeTags(result);
 
-            if (result != null)
-                this.descriptionProcessor.Process(result);
+                if (result != null)
+                    this.descriptionProcessor.Process(result);
 
-            return result;
+                return result;
+            }
+            catch (Gherkin.CompositeParserException exception)
+            {
+                throw new FeatureParseException("Unable to parse feature", exception);
+            }
         }
 
         private string DetermineLanguage()
