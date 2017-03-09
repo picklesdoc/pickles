@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="WhenFormattingLocalizedFeatures.cs" company="PicklesDoc">
+//  <copyright file="FileSystemBasedFeatureParserTests.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -18,46 +18,26 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System.IO;
-using Autofac;
+using System;
+using System.IO.Abstractions.TestingHelpers;
 using NFluent;
 using NUnit.Framework;
-using PicklesDoc.Pickles.ObjectModel;
-using PicklesDoc.Pickles.Test;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
+namespace PicklesDoc.Pickles.Test
 {
     [TestFixture]
-    public class WhenFormattingLocalizedFeatures : BaseFixture
+    public class FileSystemBasedFeatureParserTests : BaseFixture
     {
         [Test]
-        public void ThenShouldLocalizeExamplesKeyword()
+        public void Parse_InvalidFeatureFile_ThrowsFeatureParseExceptionWithFilename()
         {
-            string featureText =
-@"# language: nl-NL
-Functionaliteit: Test het abstract scenario
+            FileSystem.AddFile(@"c:\temp\featurefile.feature", new MockFileData("Invalid feature file"));
+            var parser = new FileSystemBasedFeatureParser(new FeatureParser(Configuration), FileSystem);
 
-Abstract Scenario: Het Scenario
-    Stel dat ik 50 ingeef
-    En dat ik 70 ingeef
-    Als ik plus druk
-    Dan moet het resultaat 120 zijn
-
-Voorbeelden:
-    | a |
-    | 1 |
-    | 2 |
-";
-
-            var parser = new FeatureParser(this.Configuration);
-            Feature feature = parser.Parse(new StringReader(featureText));
-
-            var formatter = Container.Resolve<HtmlFeatureFormatter>();
-            var output = formatter.Format(feature);
-
-            var value = output.ToString();
-            Check.That(value).Contains("Voorbeelden");
-
+            Check.ThatCode(() => parser.Parse(@"c:\temp\featurefile.feature")).Throws<FeatureParseException>()
+                .WithMessage(@"There was an error parsing the feature file here: c:\temp\featurefile.feature" +
+                             Environment.NewLine + @"Errormessage was: 'Unable to parse feature'");
         }
+
     }
 }

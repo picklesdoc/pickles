@@ -19,7 +19,6 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.IO.Abstractions.TestingHelpers;
 using NFluent;
 using NUnit.Framework;
 
@@ -31,23 +30,12 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void Parse_InvalidFeatureContent_ThrowsFeatureParseException()
         {
-            var parser = new FeatureParser(FileSystem, Configuration);
+            var parser = new FeatureParser(Configuration);
 
             var reader = new System.IO.StringReader("Invalid feature file");
 
             Check.ThatCode(() => parser.Parse(reader)).Throws<FeatureParseException>()
                 .WithMessage("Unable to parse feature");
-        }
-
-        [Test]
-        public void Parse_InvalidFeatureFile_ThrowsFeatureParseExceptionWithFilename()
-        {
-            FileSystem.AddFile(@"c:\temp\featurefile.feature", new MockFileData("Invalid feature file"));
-            var parser = new FeatureParser(FileSystem, Configuration);
-
-            Check.ThatCode(() => parser.Parse(@"c:\temp\featurefile.feature")).Throws<FeatureParseException>()
-                .WithMessage(@"There was an error parsing the feature file here: c:\temp\featurefile.feature" +
-                             Environment.NewLine + @"Errormessage was: 'Unable to parse feature'");
         }
     }
 }

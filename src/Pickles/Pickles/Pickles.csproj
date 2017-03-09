@@ -105,6 +105,7 @@
     <Compile Include="DirectoryCrawler\FeatureNodeFactory.cs" />
     <Compile Include="FeatureParseException.cs" />
     <Compile Include="FeatureToggles\AlternateMarkdownProvider.cs" />
+    <Compile Include="FileSystemBasedFeatureParser.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LanguageServices.cs" />
     <Compile Include="LanguageServicesRegistry.cs" />

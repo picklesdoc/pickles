@@ -19,7 +19,6 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.IO.Abstractions;
 using System.Linq;
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -29,39 +28,13 @@ namespace PicklesDoc.Pickles
 {
     public class FeatureParser
     {
-        private readonly IFileSystem fileSystem;
-
         private readonly IConfiguration configuration;
 
         private readonly DescriptionProcessor descriptionProcessor = new DescriptionProcessor();
 
-        public FeatureParser(IFileSystem fileSystem, IConfiguration configuration)
+        public FeatureParser(IConfiguration configuration)
         {
-            this.fileSystem = fileSystem;
             this.configuration = configuration;
-        }
-
-        public Feature Parse(string filename)
-        {
-            Feature feature = null;
-            using (var reader = this.fileSystem.FileInfo.FromFileName(filename).OpenText())
-            {
-                try
-                {
-                    feature = this.Parse(reader);
-                }
-                catch (FeatureParseException e)
-                {
-                    string message =
-                        $"There was an error parsing the feature file here: {this.fileSystem.Path.GetFullPath(filename)}" + Environment.NewLine +
-                        $"Errormessage was: '{e.Message}'";
-                    throw new FeatureParseException(message, e);
-                }
-
-                reader.Close();
-            }
-
-            return feature;
         }
 
         public Feature Parse(TextReader featureFileReader)

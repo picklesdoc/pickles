@@ -43,7 +43,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.AutomationLaye
         public void IHaveThisFeatureDescription(string featureDescription)
         {
             var configuration = this.Configuration;
-            FeatureParser parser = new FeatureParser(this.FileSystem, configuration);
+            FeatureParser parser = new FeatureParser(configuration);
 
             var feature = parser.Parse(new StringReader(featureDescription));
 

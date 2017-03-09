@@ -104,6 +104,7 @@
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
     <Compile Include="DirectoryCrawlers\RelevantFileDetectorTests.cs" />
     <Compile Include="FeatureParserTests.cs" />
+    <Compile Include="FileSystemBasedFeatureParserTests.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="LanguageServicesRegistryTests.cs" />
     <Compile Include="ObjectModel\Factory.cs" />
