@@ -39,5 +39,16 @@ namespace PicklesDoc.Pickles.Test
                              Environment.NewLine + @"Errormessage was: 'Unable to parse feature'");
         }
 
+
+        [Test]
+        public void Parse_WesternEuropeanEncoding()
+        {
+            var parser = new FileSystemBasedFeatureParser(new FeatureParser(Configuration), FileSystem);
+            AddFakeFolderAndFiles(@"Encodings", new string[0]);
+            //AddFakeFolderAndFiles(@"Encodings\UTF8", new[] { "UTF8WithBOM.feature", "UTF8WithoutBOM.feature" });
+            AddFakeFolderAndFiles(@"Encodings\WesternEuropean", new[] { "WesternEuropean1252.feature" });
+
+            parser.Parse(@"c:\temp\FakeFolderStructures\Encodings\WesternEuropean\WesternEuropean1252.feature");
+        }
     }
 }

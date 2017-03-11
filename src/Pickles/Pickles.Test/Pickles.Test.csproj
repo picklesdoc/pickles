@@ -222,6 +222,15 @@
       <LastGenOutput>a-b.feature.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FakeFolderStructures\FeatureCrawlerTests\LevelOneIgnoredFeature.feature" />
+    <EmbeddedResource Include="FakeFolderStructures\Encodings\WesternEuropean\WesternEuropean1252.feature">
+      <LastGenOutput>ISO-8859-1 CP 1252 Norwegian.feature.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakeFolderStructures\Encodings\UTF8\UTF8WithBOM.feature">
+      <LastGenOutput>CharsetUTF8CodePage65001WithBOMNorwegian.feature.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FakeFolderStructures\Encodings\UTF8\UTF8WithoutBOM.feature">
+      <LastGenOutput>CharsetUTF8CodePage65001WithoutBOMNorwegian.feature.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="Resources\test.jpg" />
     <EmbeddedResource Include="Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
