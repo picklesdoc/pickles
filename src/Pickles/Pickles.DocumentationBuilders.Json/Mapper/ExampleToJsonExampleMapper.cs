@@ -29,11 +29,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
     {
         private readonly TableToJsonTableMapper tableMapper;
         private readonly ILanguageServicesRegistry languageServicesRegistry;
+        private readonly TestResultToJsonTestResultMapper testResultMapper;
 
         public ExampleToJsonExampleMapper(ILanguageServicesRegistry languageServicesRegistry)
         {
             this.languageServicesRegistry = languageServicesRegistry;
             this.tableMapper = new TableToJsonTableMapper();
+            this.testResultMapper = new TestResultToJsonTestResultMapper();
         }
 
         public JsonExample Map(Example example, string language)
@@ -46,15 +48,31 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
             var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(language);
 
             var examplesKeyword = languageServices.ExamplesKeywords[0];
+            var testResults = this.CreateResultRows(example);
 
             return new JsonExample
             {
                 Name = example.Name,
                 Description = example.Description,
+                Results = testResults,
                 TableArgument = this.tableMapper.Map(example.TableArgument),
                 Tags = (example.Tags ?? new List<string>()).ToList(),
                 NativeKeyword = examplesKeyword
             };
+        }
+
+        private List<JsonTestResult> CreateResultRows(Example example)
+        {
+            var resultRows = new List<JsonTestResult>();
+
+            if (example.TableArgument?.DataRows != null)
+            {
+                resultRows = example.TableArgument.DataRows.Select(
+                    entry => this.testResultMapper.Map(entry.Result))
+                        .ToList();
+            }
+
+            return resultRows;
         }
     }
 }

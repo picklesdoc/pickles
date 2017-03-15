@@ -34,5 +34,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         public List<string> Tags { get; set; }
 
         public string NativeKeyword { get; set; }
+
+        public List<JsonTestResult> Results { get; set; }
     }
 }

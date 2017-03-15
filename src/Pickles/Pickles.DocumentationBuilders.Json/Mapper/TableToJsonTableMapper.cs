@@ -29,12 +29,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
     public class TableToJsonTableMapper
     {
         private readonly TableRowToJsonTableRowMapper tableRowMapper;
-        private readonly TestResultToJsonTestResultMapper testResultMapper;
 
         public TableToJsonTableMapper()
         {
             this.tableRowMapper = new TableRowToJsonTableRowMapper();
-            this.testResultMapper = new TestResultToJsonTestResultMapper();
         }
 
         public JsonTable Map(Table table)
@@ -44,14 +42,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 return null;
             }
 
-            var resultRows = table.DataRows.Select(
-                entry => this.testResultMapper.Map(entry.Result))
-                    .ToList();
-
             return new JsonTable
             {
                 HeaderRow = this.tableRowMapper.Map(table.HeaderRow),
-                ResultRows = resultRows,
                 DataRows = (table.DataRows ?? new List<TableRow>()).Select(this.tableRowMapper.Map).ToList()
             };
         }
