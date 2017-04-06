@@ -1,6 +1,6 @@
 ﻿using System;
 
-using Shouldly;
+using NFluent;
 
 using TechTalk.SpecFlow;
 
@@ -18,7 +18,7 @@ namespace AutomationLayer
         }
         else if (result.ToUpperInvariant().StartsWith("FAIL"))
         {
-        true.ShouldBe(false);
+        Check.That(true).IsEqualTo(false);
         }
         else
         {

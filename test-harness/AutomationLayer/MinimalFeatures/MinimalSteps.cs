@@ -1,5 +1,5 @@
 ﻿using System;
-using Shouldly;
+using NFluent;
 using TechTalk.SpecFlow;
 
 namespace AutomationLayer.MinimalFeatures
@@ -21,7 +21,7 @@ namespace AutomationLayer.MinimalFeatures
         [Then(@"failing step")]
         public void ThenFailingStep()
         {
-            true.ShouldBe(false);
+            Check.That(true).IsEqualTo(false);
         }
     }
 }
