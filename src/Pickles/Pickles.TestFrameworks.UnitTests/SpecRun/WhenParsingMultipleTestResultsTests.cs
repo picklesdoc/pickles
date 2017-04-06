@@ -22,9 +22,9 @@ using System;
 using System.Collections.Generic;
 using System.IO.Abstractions;
 
-using Moq;
-
 using NFluent;
+
+using NSubstitute;
 
 using NUnit.Framework;
 
@@ -43,7 +43,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetFeatureResult(feature, TestResult.Passed);
             var testResults2 = SetupStubForGetFeatureResult(feature, TestResult.Inconclusive);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetFeatureResult(feature);
 
@@ -63,10 +63,10 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             }
         }
 
-        private static Mock<SingleTestRunBase> SetupStubForGetFeatureResult(Feature feature, TestResult resultOfGetFeatureResult)
+        private static SingleTestRunBase SetupStubForGetFeatureResult(Feature feature, TestResult resultOfGetFeatureResult)
         {
-            var testResults1 = new Mock<SingleTestRunBase>();
-            testResults1.Setup(ti => ti.GetFeatureResult(feature)).Returns(resultOfGetFeatureResult);
+            var testResults1 = Substitute.For<SingleTestRunBase>();
+            testResults1.GetFeatureResult(feature).Returns(resultOfGetFeatureResult);
             return testResults1;
         }
 
@@ -78,7 +78,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetFeatureResult(feature, TestResult.Passed);
             var testResults2 = SetupStubForGetFeatureResult(feature, TestResult.Failed);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetFeatureResult(feature);
 
@@ -93,7 +93,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetFeatureResult(feature, TestResult.Inconclusive);
             var testResults2 = SetupStubForGetFeatureResult(feature, TestResult.Inconclusive);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetFeatureResult(feature);
 
@@ -108,17 +108,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetScenarioOutlineResult(TestResult.Passed);
             var testResults2 = SetupStubForGetScenarioOutlineResult(TestResult.Inconclusive);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetScenarioOutlineResult(scenarioOutline);
 
             Check.That(result).IsEqualTo(TestResult.Passed);
         }
 
-        private static Mock<SingleTestRunBase> SetupStubForGetScenarioOutlineResult(TestResult resultOfGetFeatureResult)
+        private static SingleTestRunBase SetupStubForGetScenarioOutlineResult(TestResult resultOfGetFeatureResult)
         {
-            var testResults1 = new Mock<SingleTestRunBase>();
-            testResults1.Setup(ti => ti.GetScenarioOutlineResult(It.IsAny<ScenarioOutline>())).Returns(resultOfGetFeatureResult);
+            var testResults1 = Substitute.For<SingleTestRunBase>();
+            testResults1.GetScenarioOutlineResult(Arg.Any<ScenarioOutline>()).Returns(resultOfGetFeatureResult);
             return testResults1;
         }
 
@@ -130,7 +130,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetScenarioOutlineResult(TestResult.Passed);
             var testResults2 = SetupStubForGetScenarioOutlineResult(TestResult.Failed);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetScenarioOutlineResult(scenarioOutline);
 
@@ -145,7 +145,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetScenarioOutlineResult(TestResult.Inconclusive);
             var testResults2 = SetupStubForGetScenarioOutlineResult(TestResult.Inconclusive);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetScenarioOutlineResult(scenarioOutline);
 
@@ -160,17 +160,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetScenarioResult(TestResult.Passed);
             var testResults2 = SetupStubForGetScenarioResult(TestResult.Inconclusive);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetScenarioResult(scenario);
 
             Check.That(result).IsEqualTo(TestResult.Passed);
         }
 
-        private static Mock<SingleTestRunBase> SetupStubForGetScenarioResult(TestResult resultOfGetFeatureResult)
+        private static SingleTestRunBase SetupStubForGetScenarioResult(TestResult resultOfGetFeatureResult)
         {
-            var testResults1 = new Mock<SingleTestRunBase>();
-            testResults1.Setup(ti => ti.GetScenarioResult(It.IsAny<Scenario>())).Returns(resultOfGetFeatureResult);
+            var testResults1 = Substitute.For<SingleTestRunBase>();
+            testResults1.GetScenarioResult(Arg.Any<Scenario>()).Returns(resultOfGetFeatureResult);
             return testResults1;
         }
 
@@ -182,7 +182,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetScenarioResult(TestResult.Passed);
             var testResults2 = SetupStubForGetScenarioResult(TestResult.Failed);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetScenarioResult(scenario);
 
@@ -197,7 +197,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.SpecRun
             var testResults1 = SetupStubForGetScenarioResult(TestResult.Inconclusive);
             var testResults2 = SetupStubForGetScenarioResult(TestResult.Inconclusive);
 
-            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1.Object, testResults2.Object);
+            ITestResults multipleTestResults = CreateMultipleTestResults(testResults1, testResults2);
 
             var result = multipleTestResults.GetScenarioResult(scenario);
 

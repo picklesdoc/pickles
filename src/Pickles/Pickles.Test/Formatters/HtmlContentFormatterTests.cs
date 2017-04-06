@@ -19,8 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using Moq;
 using NFluent;
+using NSubstitute;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
         [Test]
         public void Constructor_NullHtmlIndexFormatter_ThrowsArgumentNullException()
         {
-            Check.ThatCode(() => new HtmlContentFormatter(new Mock<IHtmlFeatureFormatter>().Object, null))
+            Check.ThatCode(() => new HtmlContentFormatter(Substitute.For<IHtmlFeatureFormatter>(), null))
                 .Throws<ArgumentNullException>()
                 .WithProperty("ParamName", "htmlIndexFormatter");
         }
@@ -50,8 +50,8 @@ namespace PicklesDoc.Pickles.Test.Formatters
         [Test]
         public void Format_ContentIsFeatureNode_UsesHtmlFeatureFormatterWithCorrectArgument()
         {
-            var fakeHtmlFeatureFormatter = new Mock<IHtmlFeatureFormatter>();
-            var formatter = new HtmlContentFormatter(fakeHtmlFeatureFormatter.Object, new HtmlIndexFormatter());
+            var fakeHtmlFeatureFormatter = Substitute.For<IHtmlFeatureFormatter>();
+            var formatter = new HtmlContentFormatter(fakeHtmlFeatureFormatter, new HtmlIndexFormatter());
 
             var featureNode = new FeatureNode(
                 FileSystem.FileInfo.FromFileName(@"c:\temp\test.feature"),
@@ -60,7 +60,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
 
             formatter.Format(featureNode, new INode[0]);
 
-            fakeHtmlFeatureFormatter.Verify(f => f.Format(featureNode.Feature));
+            fakeHtmlFeatureFormatter.Received().Format(featureNode.Feature);
         }
     }
 }
