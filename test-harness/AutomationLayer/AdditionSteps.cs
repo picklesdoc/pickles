@@ -26,7 +26,7 @@ namespace AutomationLayer
         }
 
         [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(Decimal operand)
+        public void GivenIHaveEnteredIntoTheCalculator(decimal operand)
         {
             this.numbersList.Add((int)operand);
         }
