@@ -26,9 +26,9 @@ namespace AutomationLayer
         }
 
         [Given(@"I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredIntoTheCalculator(Decimal p0)
+        public void GivenIHaveEnteredIntoTheCalculator(Decimal operand)
         {
-            this.numbersList.Add((int)p0);
+            this.numbersList.Add((int)operand);
         }
 
         [When(@"I press add")]
@@ -41,9 +41,9 @@ namespace AutomationLayer
         }
 
         [Then(@"the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBeOnTheScreen(int p0)
+        public void ThenTheResultShouldBeOnTheScreen(int expectedResult)
         {
-            Check.That(this.result).IsEqualTo(p0);
+            Check.That(this.result).IsEqualTo(expectedResult);
         }
     }
 }
