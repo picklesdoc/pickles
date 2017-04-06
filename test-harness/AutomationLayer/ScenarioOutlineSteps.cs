@@ -30,7 +30,7 @@ namespace AutomationLayer
     public void WhenIHaveSpecialCharactersForRegexesInTheValueForExampleARegex(string regex)
     {
         // nothing to be done
-    }    
+    }
 
     [When(@"I have backslashes in the value, for example a '(.*)'")]
     public void WhenIHaveBackslashesInTheValueForExampleAFilePath(string filePath)
@@ -43,7 +43,7 @@ namespace AutomationLayer
     {
         // nothing to be done - test case requires pass
     }
-    
+
     [When(@"I have a field with value '(.*)'")]
     public void WhenIHaveAFieldWithValue(string value)
     {

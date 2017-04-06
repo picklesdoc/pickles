@@ -11,13 +11,13 @@ namespace AutomationLayer.MinimalFeatures
         public void ThenPassingStep()
         {
         }
-        
+
         [Then(@"inconclusive step")]
         public void ThenInconclusiveStep()
         {
             ScenarioContext.Current.Pending();
         }
-        
+
         [Then(@"failing step")]
         public void ThenFailingStep()
         {
