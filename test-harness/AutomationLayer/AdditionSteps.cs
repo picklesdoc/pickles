@@ -22,7 +22,7 @@ namespace AutomationLayer
         [Given(@"the background step fails")]
         public void GivenTheBackgroundStepFails()
         {
-            Check.That(1).IsEqualTo(2);
+            MarkTestAs.Failing();
         }
 
         [Given(@"I have entered (.*) into the calculator")]

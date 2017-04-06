@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AdditionSteps.cs" />
+    <Compile Include="MarkTestAs.cs" />
     <Compile Include="MinimalFeatures\MinimalSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScenarioOutlineSteps.cs" />

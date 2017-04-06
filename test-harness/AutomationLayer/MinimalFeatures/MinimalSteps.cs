@@ -1,5 +1,4 @@
 ﻿using System;
-using NFluent;
 using TechTalk.SpecFlow;
 
 namespace AutomationLayer.MinimalFeatures
@@ -10,18 +9,19 @@ namespace AutomationLayer.MinimalFeatures
         [Then(@"passing step")]
         public void ThenPassingStep()
         {
+            MarkTestAs.Passing();
         }
 
         [Then(@"inconclusive step")]
         public void ThenInconclusiveStep()
         {
-            ScenarioContext.Current.Pending();
+            MarkTestAs.Inconclusive();
         }
 
         [Then(@"failing step")]
         public void ThenFailingStep()
         {
-            Check.That(true).IsEqualTo(false);
+            MarkTestAs.Failing();
         }
     }
 }

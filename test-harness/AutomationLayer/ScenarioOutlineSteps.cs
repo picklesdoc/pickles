@@ -1,7 +1,5 @@
 ﻿using System;
 
-using NFluent;
-
 using TechTalk.SpecFlow;
 
 namespace AutomationLayer
@@ -14,15 +12,15 @@ namespace AutomationLayer
         {
             if (result.ToUpperInvariant().StartsWith("PASS"))
             {
-                // nothing to be done
+                MarkTestAs.Passing();
             }
             else if (result.ToUpperInvariant().StartsWith("FAIL"))
             {
-                Check.That(true).IsEqualTo(false);
+                MarkTestAs.Failing();
             }
             else
             {
-                ScenarioContext.Current.Pending();
+                MarkTestAs.Inconclusive();
             }
         }
 
