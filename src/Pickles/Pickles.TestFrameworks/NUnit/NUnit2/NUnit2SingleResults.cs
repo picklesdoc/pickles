@@ -49,7 +49,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
             if (featureElement != null)
             {
                 scenarioElement =
-                    featureElement.Descendants("test-case")
+                    featureElement.Descendants("test-suite")
                         .Where(x => x.Attribute("description") != null)
                         .FirstOrDefault(x => x.Attribute("description").Value == scenario.Name);
             }
