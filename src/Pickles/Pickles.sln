@@ -97,6 +97,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.CommandLine.UnitTests", "Pickles.CommandLine.UnitTests\Pickles.CommandLine.UnitTests.csproj", "{C708FB0D-E2E0-4BE4-BB64-4373E4A0C8AA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Scripts", "Build Scripts", "{59EDA435-AA15-496C-A0B3-82749BB652E2}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\build.fsx = ..\..\build.fsx
+		..\..\chocolatey.fsx = ..\..\chocolatey.fsx
+		..\..\nuget.fsx = ..\..\nuget.fsx
+		..\..\test.fsx = ..\..\test.fsx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
