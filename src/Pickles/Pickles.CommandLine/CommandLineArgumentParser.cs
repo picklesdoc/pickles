@@ -20,15 +20,13 @@
 
 using System;
 using System.IO.Abstractions;
-using System.Linq;
 using System.Reflection;
-
 using NDesk.Options;
-
-using TextWriter = System.IO.TextWriter;
 using PicklesDoc.Pickles.Extensions;
 
-namespace PicklesDoc.Pickles
+using TextWriter = System.IO.TextWriter;
+
+namespace PicklesDoc.Pickles.CommandLine
 {
     public class CommandLineArgumentParser
     {

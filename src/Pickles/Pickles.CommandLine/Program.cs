@@ -36,6 +36,7 @@ namespace PicklesDoc.Pickles.CommandLine
             builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
             builder.Register<FileSystem>(_ => new FileSystem()).As<IFileSystem>().SingleInstance();
             builder.RegisterModule<PicklesModule>();
+            builder.RegisterType<CommandLineArgumentParser>();
             var container = builder.Build();
 
             var configuration = container.Resolve<IConfiguration>();

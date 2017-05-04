@@ -35,6 +35,17 @@ namespace PicklesDoc.Pickles.Test
         protected const string FileSystemPrefix = @"c:\temp\FakeFolderStructures\";
         protected const string ResourcePrefix = "PicklesDoc.Pickles.Test.FakeFolderStructures.";
         private IContainer container;
+        private readonly string currentDirectory;
+
+        public BaseFixture(string currentDirectory)
+        {
+            this.currentDirectory = currentDirectory;
+        }
+
+        public BaseFixture()
+            : this(Assembly.GetExecutingAssembly().Location)
+        {
+        }
 
         protected IContainer Container
         {
@@ -56,10 +67,10 @@ namespace PicklesDoc.Pickles.Test
             }
         }
 
-        private static MockFileSystem CreateMockFileSystem()
+        private MockFileSystem CreateMockFileSystem()
         {
             var mockFileSystem = new MockFileSystem();
-            mockFileSystem.Directory.SetCurrentDirectory(Assembly.GetExecutingAssembly().Location);
+            mockFileSystem.Directory.SetCurrentDirectory(this.currentDirectory);
             return mockFileSystem;
         }
 

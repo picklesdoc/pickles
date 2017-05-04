@@ -24,11 +24,11 @@ using System.Reflection;
 using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.Extensions;
-
+using PicklesDoc.Pickles.Test;
 using StringWriter = System.IO.StringWriter;
 using TextWriter = System.IO.TextWriter;
 
-namespace PicklesDoc.Pickles.Test
+namespace PicklesDoc.Pickles.CommandLine.UnitTests
 {
     [TestFixture]
     public class WhenParsingCommandLineArguments : BaseFixture
@@ -58,6 +58,11 @@ namespace PicklesDoc.Pickles.Test
             Environment.NewLine);
 
         private static readonly string ExpectedVersionString = string.Format(@"Pickles version {0}", Assembly.GetExecutingAssembly().GetName().Version);
+
+        public WhenParsingCommandLineArguments()
+            : base(Assembly.GetExecutingAssembly().Location)
+        {
+        }
 
         [Test]
         public void ThenCanParseExcelDocumentationFormatWithLongFormSuccessfully()
@@ -609,6 +614,12 @@ namespace PicklesDoc.Pickles.Test
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.ExcludeTags).IsEqualTo("exclude-tag");
+        }
+
+        [Test]
+        public void Two_Plus_Two_Equals_Five()
+        {
+            //Check.That(2 + 2).Equals(5);
         }
     }
 }

@@ -33,37 +33,37 @@ namespace PicklesDoc.Pickles.PowerShell
     [Cmdlet("Pickle", "Features")]
     public class Pickle_Features : PSCmdlet
     {
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpFeatureDir, Mandatory = true)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpFeatureDir, Mandatory = true)]
         public string FeatureDirectory { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpOutputDir, Mandatory = true)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpOutputDir, Mandatory = true)]
         public string OutputDirectory { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpLanguageFeatureFiles, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpLanguageFeatureFiles, Mandatory = false)]
         public string Language { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpTestResultsFormat, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpTestResultsFormat, Mandatory = false)]
         public string TestResultsFormat { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpTestResultsFile, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpTestResultsFile, Mandatory = false)]
         public string TestResultsFile { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpSutName, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpSutName, Mandatory = false)]
         public string SystemUnderTestName { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpSutVersion, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpSutVersion, Mandatory = false)]
         public string SystemUnderTestVersion { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpDocumentationFormat, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpDocumentationFormat, Mandatory = false)]
         public string DocumentationFormat { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpIncludeExperimentalFeatures, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpIncludeExperimentalFeatures, Mandatory = false)]
         public SwitchParameter IncludeExperimentalFeatures { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpEnableComments, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpEnableComments, Mandatory = false)]
         public string EnableComments { get; set; }
 
-        [Parameter(HelpMessage = CommandLineArgumentParser.HelpExcludeTags, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpExcludeTags, Mandatory = false)]
         public string ExcludeTags { get; set; }
 
         protected override void ProcessRecord()

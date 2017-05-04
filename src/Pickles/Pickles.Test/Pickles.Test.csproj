@@ -158,7 +158,6 @@
     <Compile Include="ParserFileFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhenDeterminingRelevantFilesToConsider.cs" />
-    <Compile Include="WhenParsingCommandLineArguments.cs" />
     <Compile Include="WhenParsingFeatureFiles.cs" />
     <Compile Include="WhenParsingLocalizedFeatureFiles.cs" />
     <Compile Include="WhenResolvingADocumentationBuilder.cs" />
