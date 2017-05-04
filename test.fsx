@@ -79,6 +79,16 @@ Target "Test.DocumentationBuilders.Word" (fun _ ->
              ToolPath = "packages/NUnit.ConsoleRunner/tools/nunit3-console.exe" })
 )
 
+
+Target "Test.Runners.CommandLine" (fun _ ->
+    !! (testDir + "PicklesDoc.Pickles.CommandLine.UnitTests.dll")
+      |> NUnit3 (fun p ->
+          {p with
+             ShadowCopy = false;
+             OutputDir = testDir + "PicklesDoc.Pickles.CommandLine.UnitTests.TestResults.xml";
+             ToolPath = "packages/NUnit.ConsoleRunner/tools/nunit3-console.exe" })
+)
+
 "Test"
     ==> "Test.DocumentationBuilders.Cucumber"
     ==> "Test.DocumentationBuilders.Dhtml"
@@ -86,6 +96,7 @@ Target "Test.DocumentationBuilders.Word" (fun _ ->
     ==> "Test.DocumentationBuilders.Html"
     ==> "Test.DocumentationBuilders.Json"
     ==> "Test.DocumentationBuilders.Word"
+    ==> "Test.Runners.CommandLine"
     ==> "Test.TestFrameworks"
 
 // start build
