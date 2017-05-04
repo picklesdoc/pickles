@@ -62,7 +62,6 @@ Target "CreatePackageMsBuild" (fun _ ->
         msBuildDir + "DocumentFormat.OpenXml.dll";
         msBuildDir + "Gherkin.dll";
         msBuildDir + "MarkdownDeep.dll";
-        msBuildDir + "NDesk.Options.dll";
         msBuildDir + "Newtonsoft.Json.dll";
         msBuildDir + "NLog.dll";
         msBuildDir + "PicklesDoc.Pickles.Library.dll";
@@ -98,7 +97,6 @@ Target "CreatePackagePowerShell" (fun _ ->
         powerShellDir + "DocumentFormat.OpenXml.dll";
         powerShellDir + "Gherkin.dll";
         powerShellDir + "MarkdownDeep.dll";
-        powerShellDir + "NDesk.Options.dll";
         powerShellDir + "Newtonsoft.Json.dll";
         powerShellDir + "NLog.dll";
         powerShellDir + "PicklesDoc.Pickles.Library.dll";

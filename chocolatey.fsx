@@ -66,7 +66,6 @@ Target "CreatePackage GUI" (fun _ ->
         guiDir + "MahApps.Metro.dll";
         guiDir + "MarkdownDeep.dll";
         guiDir + "Microsoft.Practices.ServiceLocation.dll";
-        guiDir + "NDesk.Options.dll";
         guiDir + "Newtonsoft.Json.dll";
         guiDir + "NLog.dll";
         guiDir + "NlogViewer.dll";
