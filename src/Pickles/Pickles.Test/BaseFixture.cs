@@ -23,7 +23,7 @@ using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using System.Reflection;
-
+using System.Text;
 using Autofac;
 
 using NUnit.Framework;
@@ -134,8 +134,9 @@ namespace PicklesDoc.Pickles.Test
             System.IO.Stream manifestResourceStream =
                 Assembly.GetCallingAssembly().GetManifestResourceStream(resourceName);
 
-            using (var reader = new System.IO.StreamReader(manifestResourceStream))
+            using (var reader = new System.IO.StreamReader(manifestResourceStream, Encoding.Default, true))
             {
+                //reader.Peek();
                 resultFile = reader.ReadToEnd();
             }
 
