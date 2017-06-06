@@ -16,7 +16,7 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ## [2.15.0] - 2017-03-09
 
-## Added
+### Added
 
 - Continue loading feature files after parsing errors ([445](https://github.com/picklesdoc/pickles/pull/445)) (by [@dirkrombauts](https://github.com/dirkrombauts), based on an idea by [@pleveill](https://github.com/pleveill))
 
