@@ -14,6 +14,21 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.16.0] - 2017-06-06
+
+### Added
+
+- Add handling to guess some encodings ([457](https://github.com/picklesdoc/pickles/pull/457)) (by [@s991116](https://github.com/s991116) and [@dirkrombauts](https://github.com/dirkrombauts))
+
+### Fixed
+
+- Show inconclusive results in DHTML output ([463](https://github.com/picklesdoc/pickles/pull/463)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
+### Changed
+
+- Under the hood: Move NDesk.Options dependency to command line runner ([459](https://github.com/picklesdoc/pickles/pull/459)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Under the hood: update several third party packages ([462](https://github.com/picklesdoc/pickles/pull/462)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
 ## [2.15.0] - 2017-03-09
 
 ### Added
