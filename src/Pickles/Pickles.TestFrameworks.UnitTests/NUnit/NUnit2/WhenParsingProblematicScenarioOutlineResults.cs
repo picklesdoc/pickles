@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit2
         {
             var results = ParseResultsFile();
 
-            var feature = new Feature { Name = "ExampleWebFeature" };
+            var feature = new Feature { Name = "ExampleWebFeature" , Tags = { "@web" }};
 
             var scenarioOutline = new ScenarioOutline { Name = "Login", Feature = feature };
 

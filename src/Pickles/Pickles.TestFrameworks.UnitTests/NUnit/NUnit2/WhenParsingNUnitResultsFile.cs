@@ -71,6 +71,24 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit2
         }
 
         [Test]
+        public new void ThenCanReadFeatureWithMatchingNameAndNoCategoriesCorrectly()
+        {
+            base.ThenCanReadFeatureWithMatchingNameAndNoCategoriesCorrectly();
+        }
+    
+        [Test]
+        public new void ThenCanReadFeatureWithMatchingNameAndCategoryCorrectly()
+        {
+            base.ThenCanReadFeatureWithMatchingNameAndCategoryCorrectly();
+        }
+    
+        [Test]
+        public new void ThenCanReadFeatureWithMatchingNameAndUnknownCategoryCorrectly()
+        {
+            base.ThenCanReadFeatureWithMatchingNameAndUnknownCategoryCorrectly();
+        }
+
+        [Test]
         public new void ThenCanReadInconclusiveFeatureResultSuccessfully()
         {
             base.ThenCanReadInconclusiveFeatureResultSuccessfully();

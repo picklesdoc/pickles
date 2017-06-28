@@ -19,8 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
@@ -75,10 +75,22 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
 
         protected override XElement GetFeatureElement(Feature feature)
         {
-            return this.resultsDocument
-                .Descendants("test-suite")
-                .Where(x => x.Attribute("description") != null)
-                .FirstOrDefault(x => x.Attribute("description").Value == feature.Name);
+          var suites = this.resultsDocument
+                           .Descendants("test-suite")
+                           .Where(x => x.Attribute("description") != null)
+                           .ToList();
+          return suites.FirstOrDefault(x => x.Attribute("description").Value == feature.Name
+                                              && FeatureHasSameCategoriesAsElement(feature, x))
+                 ?? suites.FirstOrDefault(x => x.Attribute("description").Value == feature.Name);
+        }
+
+        private static bool FeatureHasSameCategoriesAsElement(Feature feature, XElement element)
+        {
+            var customFeatureTags = feature.Tags.Except(new[] { "@ignore" }).Select(t => t.TrimStart('@'));
+            var elementCategories = element.Elements("categories").FirstOrDefault()?.Elements("category")
+                                           .Where(c => c.Attribute("name")?.Value != null)
+                                           .Select(c => c.Attribute("name").Value) ?? new List<string>();
+            return new HashSet<string>(customFeatureTags).SetEquals(elementCategories);
         }
 
         protected override XElement GetExamplesElement(ScenarioOutline scenarioOutline, string[] values)

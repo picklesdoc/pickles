@@ -164,6 +164,31 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             Check.That(result).IsEqualTo(TestResult.Inconclusive);
         }
+    
+
+        public void ThenCanReadFeatureWithMatchingNameAndNoCategoriesCorrectly()
+        {
+            var results = ParseResultsFile();
+            var result = results.GetFeatureResult(new Feature { Name = "Adding several numbers" });
+
+            Check.That(result).IsEqualTo(TestResult.Failed);
+        }
+
+        public void ThenCanReadFeatureWithMatchingNameAndCategoryCorrectly()
+        {
+            var results = ParseResultsFile();
+            var result = results.GetFeatureResult(new Feature { Name = "Adding several numbers", Tags = { "@tag2" }});
+
+            Check.That(result).IsEqualTo(TestResult.Passed);
+        }
+
+        public void ThenCanReadFeatureWithMatchingNameAndUnknownCategoryCorrectly()
+        {
+            var results = ParseResultsFile();
+            var result = results.GetFeatureResult(new Feature { Name = "Adding several numbers", Tags = { "@tag2", "@unknown" }});
+
+            Check.That(result).IsEqualTo(TestResult.Passed);
+        }
 
         public void ThenCanReadResultsWithBackslashes()
         {
