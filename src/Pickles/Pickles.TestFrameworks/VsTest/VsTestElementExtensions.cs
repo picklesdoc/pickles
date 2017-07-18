@@ -47,7 +47,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
             }
 
             var attributes = propertiesElement.Attributes("className");
-            bool b = attributes.Any(a => a.Value.ToUpperInvariant().Contains(TransformName(featureTitle) + "FEATURE"));
+            var b = attributes.Any(attr => attr.Value.Split('.').Last()
+                .Equals(TransformName(featureTitle) + "FEATURE", StringComparison.InvariantCultureIgnoreCase));
             return b;
         }
 
