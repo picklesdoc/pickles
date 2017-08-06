@@ -99,6 +99,7 @@
     <Compile Include="AssertExtensions.cs" />
     <Compile Include="BaseFixture.cs" />
     <Compile Include="ConfigurationTests.cs" />
+    <Compile Include="CultureAwareDialectProviderTests.cs" />
     <Compile Include="DataStructures\TreeTests.cs" />
     <Compile Include="DescriptionProcessorTests.cs" />
     <Compile Include="DirectoryCrawlers\ImageFileDetectorTests.cs" />
