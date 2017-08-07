@@ -36,11 +36,14 @@ namespace PicklesDoc.Pickles
         protected override GherkinDialect GetDialect(string language,
             Dictionary<string, GherkinLanguageSetting> gherkinLanguageSettings, Location location)
         {
-            var result = base.GetDialect(language, gherkinLanguageSettings, location);
+            GherkinDialect result;
 
-            if (result == null)
+            try
             {
-
+                result = base.GetDialect(language, gherkinLanguageSettings, location);
+            }
+            catch (NoSuchLanguageException)
+            {
                 string languageOnly = StripCulture(language);
 
                 result = base.GetDialect(languageOnly, gherkinLanguageSettings, location);
