@@ -20,6 +20,6 @@
             Language="$(Pickles_Language)"
             IncludeExperimentalFeatures="$(Pickles_IncludeExperimentalFeatures)"
             EnableComments="$(Pickles_EnableComments)"
-            ExcludeTags="$(Pickles_ExcludeTags" />
+            ExcludeTags="$(Pickles_ExcludeTags)" />
     </Target>
 </Project>
