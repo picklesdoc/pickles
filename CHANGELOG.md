@@ -26,6 +26,8 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 
+- Fixed ExcludeTags Typo In MSBuild targets ([478](https://github.com/picklesdoc/pickles/pull/478)) (by [@nachereshata](https://github.com/nachereshata)) 
+
 ### Security
 
 ## [2.16.2] - 2017-08-13
