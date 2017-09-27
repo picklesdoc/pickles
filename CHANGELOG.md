@@ -26,6 +26,7 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 
+- PowerShell Runner Shows Only First Test Result File ([485](https://github.com/picklesdoc/pickles/pull/485)) (by [@dirkrombauts](https://github.com/dirkrombauts))
 - Fixed ExcludeTags Typo In MSBuild targets ([478](https://github.com/picklesdoc/pickles/pull/478)) (by [@nachereshata](https://github.com/nachereshata)) 
 
 ### Security
