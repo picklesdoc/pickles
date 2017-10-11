@@ -26,16 +26,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests
         
 #line 1 "FormattingAFeature.feature"
 #line hidden
-        
-        [NUnit.Framework.TestFixtureSetUpAttribute()]
+
+        [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Formatting A Feature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
-        
-        [NUnit.Framework.TestFixtureTearDownAttribute()]
+
+        [NUnit.Framework.OneTimeTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();

@@ -29,7 +29,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests
 #line 1 "FormattingAFeature.feature"
 #line hidden
 
-        [NUnit.Framework.TestFixtureSetUpAttribute()]
+        [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             this.testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
@@ -37,7 +37,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests
             this.testRunner.OnFeatureStart(featureInfo);
         }
 
-        [NUnit.Framework.TestFixtureTearDownAttribute()]
+        [NUnit.Framework.OneTimeTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             this.testRunner.OnFeatureEnd();
