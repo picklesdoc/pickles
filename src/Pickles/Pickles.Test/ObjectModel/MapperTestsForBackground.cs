@@ -112,7 +112,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
             var mappedBackground = mappedFeature.Background;
 
-            Check.That(mappedBackground.Feature).IsSameReferenceThan(mappedFeature);
+            Check.That(mappedBackground.Feature).IsSameReferenceAs(mappedFeature);
         }
     }
 }

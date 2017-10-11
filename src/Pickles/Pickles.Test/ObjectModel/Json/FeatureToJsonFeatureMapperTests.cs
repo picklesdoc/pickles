@@ -99,7 +99,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             var actual = mapper.Map(feature);
 
             Check.That(actual.FeatureElements[0].Name).IsEqualTo("Name of the Scenario");
-            Check.That(actual.FeatureElements[0].Feature).IsSameReferenceThan(actual);
+            Check.That(actual.FeatureElements[0].Feature).IsSameReferenceAs(actual);
         }
 
         [Test]
@@ -119,7 +119,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.FeatureElements[0]).IsInstanceOf<JsonScenarioOutline>();
             Check.That(actual.FeatureElements[0].Name).IsEqualTo("Name of the Scenario Outline");
-            Check.That(actual.FeatureElements[0].Feature).IsSameReferenceThan(actual);
+            Check.That(actual.FeatureElements[0].Feature).IsSameReferenceAs(actual);
         }
 
         [Test]
@@ -177,7 +177,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             var actual = mapper.Map(feature);
 
             Check.That(actual.Background.Description).IsEqualTo("The description of the background");
-            Check.That(actual.Background.Feature).IsSameReferenceThan(actual);
+            Check.That(actual.Background.Feature).IsSameReferenceAs(actual);
         }
 
         [Test]

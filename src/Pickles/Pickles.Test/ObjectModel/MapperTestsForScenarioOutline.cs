@@ -153,7 +153,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
             var mappedScenarioOutline = mappedFeature.FeatureElements[0] as ScenarioOutline;
 
-            Check.That(mappedScenarioOutline.Feature).IsSameReferenceThan(mappedFeature);
+            Check.That(mappedScenarioOutline.Feature).IsSameReferenceAs(mappedFeature);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             var mappedScenario = mappedFeature.FeatureElements[0] as JsonScenario;
 
-            Check.That(mappedScenario.Feature).IsSameReferenceThan(mappedFeature);
+            Check.That(mappedScenario.Feature).IsSameReferenceAs(mappedFeature);
         }
 
     }

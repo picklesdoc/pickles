@@ -44,7 +44,7 @@ namespace PicklesDoc.Pickles.Test
             Check.That(item1).IsInstanceOf<HtmlDocumentationBuilder>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<HtmlDocumentationBuilder>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -72,7 +72,7 @@ namespace PicklesDoc.Pickles.Test
             Check.That(item1).IsInstanceOf<WordDocumentationBuilder>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<WordDocumentationBuilder>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -100,7 +100,7 @@ namespace PicklesDoc.Pickles.Test
             Check.That(item1).IsInstanceOf<ExcelDocumentationBuilder>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<ExcelDocumentationBuilder>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
     }
 }

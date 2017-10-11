@@ -54,7 +54,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<NullTestResults>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<NullTestResults>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -73,7 +73,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<MsTestResults>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<MsTestResults>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -92,7 +92,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<NUnit2Results>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<NUnit2Results>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -111,7 +111,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<NUnit3Results>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<NUnit3Results>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -130,7 +130,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<XUnit1Results>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<XUnit1Results>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -149,7 +149,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<XUnit2Results>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<XUnit2Results>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -168,7 +168,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<CucumberJsonResults>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<CucumberJsonResults>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -187,7 +187,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<SpecRunResults>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<SpecRunResults>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
@@ -206,7 +206,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
             Check.That(item1).IsInstanceOf<VsTestResults>();
             Check.That(item2).IsNotNull();
             Check.That(item2).IsInstanceOf<VsTestResults>();
-            Check.That(item1).IsSameReferenceThan(item2);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
         [Test]
