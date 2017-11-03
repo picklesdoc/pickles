@@ -46,7 +46,27 @@ namespace PicklesDoc.Pickles.Test
             Check.That(report.First()).Contains(@"c:\test.feature");
         }
 
+        [Test]
+        public void Create_MarkdownParsingError_AddsEntryToReport()
+        {
+            FileSystem.AddFile(@"c:\test.md", new MockFileData("* Some Markdown text"));
+
+            var featureNodeFactory = this.CreateFeatureNodeFactory(new MockMarkdownProvider());
+
+            var report = new ParsingReport();
+
+            featureNodeFactory.Create(null, FileSystem.FileInfo.FromFileName(@"c:\test.md"), report);
+
+            Check.That(report.Count).Equals(1);
+            Check.That(report.First()).Equals(@"Error parsing the Markdown file located at c:\test.md. Error: Error parsing text.");
+        }
+
         private FeatureNodeFactory CreateFeatureNodeFactory()
+        {
+            return this.CreateFeatureNodeFactory(new MarkdownProvider());
+        }
+
+        private FeatureNodeFactory CreateFeatureNodeFactory(IMarkdownProvider markdownProvider)
         {
             return new FeatureNodeFactory(
                 new RelevantFileDetector(),
@@ -54,7 +74,7 @@ namespace PicklesDoc.Pickles.Test
                     new FeatureParser(Configuration),
                     FileSystem),
                 new HtmlMarkdownFormatter(
-                    new MarkdownProvider()),
+                    markdownProvider),
                 FileSystem);
         }
 
@@ -114,6 +134,14 @@ namespace PicklesDoc.Pickles.Test
             public override DateTime LastWriteTime { get; set; }
             public override DateTime LastWriteTimeUtc { get; set; }
             public override string Name { get; }
+        }
+
+        private class MockMarkdownProvider : IMarkdownProvider
+        {
+            public string Transform(string text)
+            {
+                throw new Exception("Error parsing text.");
+            }
         }
     }
 }

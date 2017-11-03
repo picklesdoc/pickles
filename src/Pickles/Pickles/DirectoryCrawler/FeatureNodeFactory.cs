@@ -76,9 +76,19 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
                 }
                 else if (this.relevantFileDetector.IsMarkdownFile(file))
                 {
-                    XElement markdownContent =
-                        this.htmlMarkdownFormatter.Format(this.fileSystem.File.ReadAllText(file.FullName));
-                    return new MarkdownNode(file, relativePathFromRoot, markdownContent);
+                    try
+                    {
+                        XElement markdownContent =
+                            this.htmlMarkdownFormatter.Format(this.fileSystem.File.ReadAllText(file.FullName));
+                        return new MarkdownNode(file, relativePathFromRoot, markdownContent);
+                    }
+                    catch (Exception exception)
+                    {
+                        string description = "Error parsing the Markdown file located at " + file.FullName + ". Error: " + exception.Message;
+                        report.Add(description);
+                        Log.Error(description);
+                        return null;
+                    }
                 }
                 else if (this.relevantFileDetector.IsImageFile(file))
                 {
