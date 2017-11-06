@@ -26,8 +26,24 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 
+### Security
+
+## [2.17.0] - 2017-11-06
+
+### Added
+
+- Added error handling for Markdown parsing exceptions ([497](https://github.com/picklesdoc/pickles/pull/497)) (by [@joebuschmann](https://github.com/joebuschmann)) 
+
+### Changed
+
+### Deprecated
+
+### Removed
+
+### Fixed
+
 - PowerShell Runner Shows Only First Test Result File ([485](https://github.com/picklesdoc/pickles/pull/485)) (by [@dirkrombauts](https://github.com/dirkrombauts))
-- Fixed ExcludeTags Typo In MSBuild targets ([478](https://github.com/picklesdoc/pickles/pull/478)) (by [@nachereshata](https://github.com/nachereshata)) 
+- Fixed ExcludeTags Typo In MSBuild targets ([478](https://github.com/picklesdoc/pickles/pull/478)) (by [@nachereshata](https://github.com/nachereshata))
 
 ### Security
 
