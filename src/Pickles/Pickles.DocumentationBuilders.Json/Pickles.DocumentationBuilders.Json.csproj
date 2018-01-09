@@ -73,6 +73,7 @@
     <Compile Include="JsonStep.cs" />
     <Compile Include="JsonTable.cs" />
     <Compile Include="JsonTableRow.cs" />
+    <Compile Include="JsonTableHeader.cs" />
     <Compile Include="JsonTestResult.cs" />
     <Compile Include="Mapper\CommentToJsonCommentMapper.cs" />
     <Compile Include="Mapper\ExampleToJsonExampleMapper.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Mapper\ScenarioOutlineToJsonScenarioOutlineMapper.cs" />
     <Compile Include="Mapper\ScenarioToJsonScenarioMapper.cs" />
     <Compile Include="Mapper\StepToJsonStepMapper.cs" />
+    <Compile Include="Mapper\TableRowToJsonTableHeaderMapper.cs" />
     <Compile Include="Mapper\TableRowToJsonTableRowMapper.cs" />
     <Compile Include="Mapper\TableToJsonTableMapper.cs" />
     <Compile Include="Mapper\TestResultToJsonTestResultMapper.cs" />

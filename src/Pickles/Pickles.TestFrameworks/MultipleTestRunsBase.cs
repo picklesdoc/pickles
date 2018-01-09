@@ -57,14 +57,12 @@ namespace PicklesDoc.Pickles.TestFrameworks
         public TestResult GetExampleResult(ScenarioOutline scenarioOutline, string[] arguments)
         {
             var results = TestResults.Select(tr => tr.GetExampleResult(scenarioOutline, arguments)).ToArray();
-
             return EvaluateTestResults(results);
         }
 
         public TestResult GetFeatureResult(Feature feature)
         {
             var results = this.TestResults.Select(tr => tr.GetFeatureResult(feature)).ToArray();
-
             return EvaluateTestResults(results);
         }
 
@@ -78,7 +76,6 @@ namespace PicklesDoc.Pickles.TestFrameworks
         public TestResult GetScenarioResult(Scenario scenario)
         {
             var results = this.TestResults.Select(tr => tr.GetScenarioResult(scenario)).ToArray();
-
             return EvaluateTestResults(results);
         }
 

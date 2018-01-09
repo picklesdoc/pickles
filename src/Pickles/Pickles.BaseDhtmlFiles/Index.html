@@ -87,7 +87,14 @@
 
                     <tbody data-bind="foreach: DataRows, visible:IsShown">
                         <tr data-bind="foreach: $data">
-                            <td data-bind="text: $data"></td>
+                            <td>
+                                <div data-bind="if: typeof($data) === 'string'">
+                                    <div data-bind="text: $data"></div>
+                                </div>
+                                <div data-bind="if: typeof($data) === 'object'">
+                                    <div data-bind="template: { name: 'testResults-template', if: $data, data: $data }"></div>
+                                </div>						
+                            </td>
                         </tr>
                     </tbody>
 

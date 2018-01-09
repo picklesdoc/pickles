@@ -40,10 +40,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 return null;
             }
 
-            return new JsonTableRow(tableRow.Cells.ToArray())
+           var jsonTableRow =  new JsonTableRow(tableRow.Cells.ToArray())
             {
                 Result = this.testResultMapper.Map(tableRow.Result)
             };
+
+            jsonTableRow.AddResultToJsonTableRow();
+            return jsonTableRow;
         }
     }
 }

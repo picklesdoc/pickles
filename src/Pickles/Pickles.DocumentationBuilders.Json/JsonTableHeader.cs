@@ -22,22 +22,15 @@ using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
-    public class JsonTableRow : List<object>
+    public class JsonTableHeader : List<string>
     {
-        public JsonTableRow()
+        public JsonTableHeader()
         {
         }
 
-        public JsonTableRow(IEnumerable<string> cells)
+        public JsonTableHeader(IEnumerable<string> cells)
         {
             AddRange(cells);
         }
-
-        public void AddResultToJsonTableRow()
-        {
-            Add(this.Result);
-        }
-
-        public JsonTestResult Result { get; set; }
     }
 }
