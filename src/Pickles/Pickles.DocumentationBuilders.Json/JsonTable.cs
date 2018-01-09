@@ -18,14 +18,13 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonTable
     {
-        public JsonTableRow HeaderRow { get; set; }
+        public JsonTableHeader HeaderRow { get; set; }
 
         public List<JsonTableRow> DataRows { get; set; }
     }

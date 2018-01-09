@@ -31,7 +31,6 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
         public bool IsMatch(ScenarioOutline scenarioOutline, string[] exampleValues, object scenarioElement)
         {
             var build = this.signatureBuilder.Build(scenarioOutline, exampleValues);
-
             return ScenarioOutlineExampleIsMatch((assembliesAssemblyCollectionTest)scenarioElement, build);
         }
 
@@ -40,7 +39,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
             var testNameWithExample = exampleElement.name;
             var testNameOnly = testNameWithExample.Split('(')[0];
             testNameWithExample = testNameWithExample.Replace(testNameOnly, Regex.Replace(testNameOnly, @"\s+", "")).ToLowerInvariant();
-            return signature.IsMatch(testNameWithExample);
+            return signature.IsMatch(exampleElement.name.ToLowerInvariant()) || signature.IsMatch(testNameWithExample);
         }
     }
 }

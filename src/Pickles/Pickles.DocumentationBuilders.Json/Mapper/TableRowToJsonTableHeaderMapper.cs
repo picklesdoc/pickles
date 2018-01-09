@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="JsonTableRow.cs" company="PicklesDoc">
+//  <copyright file="TableRowToJsonTableRowMapper.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -18,26 +18,29 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
+using System;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.Json
+using PicklesDoc.Pickles.ObjectModel;
+
+namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
 {
-    public class JsonTableRow : List<object>
+    public class TableRowToJsonTableHeaderMapper
     {
-        public JsonTableRow()
+        private readonly TestResultToJsonTestResultMapper testResultMapper;
+
+        public TableRowToJsonTableHeaderMapper()
         {
+            this.testResultMapper = new TestResultToJsonTestResultMapper();
         }
 
-        public JsonTableRow(IEnumerable<string> cells)
+        public JsonTableHeader Map(TableRow tableRow)
         {
-            AddRange(cells);
-        }
+            if (tableRow == null)
+            {
+                return null;
+            }
 
-        public void AddResultToJsonTableRow()
-        {
-            Add(this.Result);
+            return new JsonTableHeader(tableRow.Cells.ToArray());
         }
-
-        public JsonTestResult Result { get; set; }
     }
 }
