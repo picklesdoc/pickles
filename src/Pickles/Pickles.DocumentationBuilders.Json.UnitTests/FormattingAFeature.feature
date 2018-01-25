@@ -155,19 +155,17 @@ Scenario: A feature with a table
                               "Chapter 1",
                               "1",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 2",
                               "5",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 3",
@@ -182,172 +180,153 @@ Scenario: A feature with a table
                               "Chapter 4",
                               "15",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 5",
                               "20",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 6",
                               "25",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 7",
                               "30",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 8",
                               "35",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 9",
                               "40",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 10",
                               "45",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 11",
                               "50",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 12",
                               "55",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 13",
                               "60",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 14",
                               "65",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 15",
                               "70",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 16",
                               "75",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 17",
                               "80",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 18",
                               "85",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 19",
                               "90",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 20",
                               "95",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 21",
                               "100",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ],
                             [
                               "Chapter 22",
                               "105",
                               {
-
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                                "WasExecuted": false,
+                                "WasSuccessful": false
+                              }
                             ]
                           ]
                         },
