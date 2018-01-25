@@ -35,18 +35,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
 
         public JsonTableRow Map(TableRow tableRow)
         {
-            if (tableRow == null)
-            {
-                return null;
-            }
-
-           var jsonTableRow =  new JsonTableRow(tableRow.Cells.ToArray())
-            {
-                Result = this.testResultMapper.Map(tableRow.Result)
-            };
-
-            jsonTableRow.AddResultToJsonTableRow();
-            return jsonTableRow;
+            return tableRow == null ? null : new JsonTableRow(tableRow.Cells.ToArray(), this.testResultMapper.Map(tableRow.Result));
         }
     }
 }

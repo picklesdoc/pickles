@@ -26,13 +26,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
 {
     public class TableRowToJsonTableHeaderMapper
     {
-        private readonly TestResultToJsonTestResultMapper testResultMapper;
-
-        public TableRowToJsonTableHeaderMapper()
-        {
-            this.testResultMapper = new TestResultToJsonTestResultMapper();
-        }
-
         public JsonTableHeader Map(TableRow tableRow)
         {
             if (tableRow == null)
