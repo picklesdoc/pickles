@@ -31,6 +31,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
             Add(result);
         }
 
-        public JsonTestResult Result { get; set; }
+        public JsonTestResult Result { get; private set; }
     }
 }
