@@ -28,12 +28,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
     {
         public JsonTableHeader Map(TableRow tableRow)
         {
-            if (tableRow == null)
-            {
-                return null;
-            }
-
-            return new JsonTableHeader(tableRow.Cells.ToArray());
+            return tableRow == null ? null : new JsonTableHeader(tableRow.Cells.ToArray());
         }
     }
 }

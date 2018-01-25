@@ -24,10 +24,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonTableHeader : List<string>
     {
-        public JsonTableHeader()
-        {
-        }
-
         public JsonTableHeader(IEnumerable<string> cells)
         {
             AddRange(cells);
