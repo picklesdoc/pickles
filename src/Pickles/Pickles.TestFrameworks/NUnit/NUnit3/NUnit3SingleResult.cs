@@ -18,9 +18,7 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
@@ -29,6 +27,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
 {
     public class NUnit3SingleResult : NUnitSingleResultsBase
     {
+        private readonly ILookup<string, XElement> featureElements;
+
         public NUnit3SingleResult(XDocument resultsDocument)
             : base(
                 resultsDocument,
@@ -40,6 +40,18 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                         new TestResultAndName(TestResult.Passed, "Passed"),
                     })
         {
+            this.featureElements = resultsDocument
+                .Descendants("test-suite")
+                .Select(x => new
+                {
+                    DescriptionAttribute = x.Elements("properties").Elements("property")
+                        .FirstOrDefault(p => IsDescriptionAttribute(p)),
+                    Element = x
+                })
+                .Where(x => x.DescriptionAttribute != null)
+                .ToLookup(
+                    x => x.DescriptionAttribute.Attribute("value").Value,
+                    x => x.Element);
         }
 
         protected override XElement GetScenarioElement(Scenario scenario)
@@ -86,13 +98,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
 
         protected override XElement GetFeatureElement(Feature feature)
         {
-            return
-                this.resultsDocument
-                    .Descendants("test-suite")
-                    .FirstOrDefault(
-                        ts =>
-                        ts.Elements("properties").Elements("property")
-                        .Any(p => IsDescriptionAttribute(p) && p.Attribute("value").Value == feature.Name));
+            return this.featureElements[feature.Name].FirstOrDefault();
         }
 
         protected override XElement GetExamplesElement(ScenarioOutline scenarioOutline, string[] values)
