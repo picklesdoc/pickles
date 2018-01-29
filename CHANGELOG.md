@@ -28,6 +28,7 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 - Cache the NUnit feature scan results to improve performance on large solutions ([503](https://github.com/picklesdoc/pickles/pull/503)) (by [@tlecomte](https://github.com/tlecomte))
+- Use lookups in JSONDocumentation Builder to improve performance on large solutions ([504](https://github.com/picklesdoc/pickles/pull/504)) (by [@tlecomte](https://github.com/tlecomte))
 
 ### Security
 

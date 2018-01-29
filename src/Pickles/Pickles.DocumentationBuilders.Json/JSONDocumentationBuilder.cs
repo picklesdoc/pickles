@@ -142,18 +142,30 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
             var scenarios = features.SelectMany(x => x.Feature.FeatureElements).ToList();
             var filteredScenarios = scenarios;
 
-            // calculate tag summary - total scenarios (combining features and scenarios with tags)
-            var tagSummary = features
-                .SelectMany(x => x.Feature.Tags)
-                .Union(scenarios.SelectMany(x => x.Tags))
+            var scenariosByTag = features
+                .SelectMany(
+                    x => x.Feature.FeatureElements.SelectMany(
+                        e => e.Tags.Select(t => new { Tag = t, FeatureElement = e })));
+
+            var featuresByTag = features
+                .SelectMany(
+                    f => f.Feature.Tags.SelectMany(
+                        t => f.Feature.FeatureElements.Select(
+                            e => new { Tag = t, FeatureElement = e })));
+
+            var tagLookup = featuresByTag
+                .Union(scenariosByTag)
                 .Distinct()
+                .ToLookup(
+                    x => x.Tag,
+                    x => x.FeatureElement);
+
+            // calculate tag summary - total scenarios (combining features and scenarios with tags)
+            var tagSummary = tagLookup
+                .Select(g => g.Key)
                 .Select(tag =>
                     {
-                        var scenariosWithTag = features
-                            .Where(f => f.Feature.Tags.Contains(tag)).SelectMany(f => f.Feature.FeatureElements)
-                            .Union(scenarios.Where(s => s.Tags.Contains(tag)))
-                            .Distinct()
-                            .ToList();
+                        var scenariosWithTag = tagLookup[tag].ToList();
 
                         return new
                             {
@@ -168,16 +180,20 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
             // calculate top-level folder summary - total scenarios (excluding filtered scenarios)
             var topLevelFolderName = new Regex(@"^(.*?)\\\\?.*$", RegexOptions.Compiled);
 
-            var topLevelFolderSummary = filteredFeatures
-                .Select(x => topLevelFolderName.Replace(x.RelativeFolder, "$1"))
-                .Distinct()
+            var featuresByFolder = filteredFeatures
+                .SelectMany(f => f.Feature.FeatureElements.Select(
+                    e => new
+                    {
+                        Folder = topLevelFolderName.Replace(f.RelativeFolder, "$1"),
+                        Element = e
+                    }))
+                .ToLookup(x => x.Folder, x => x.Element);
+
+            var topLevelFolderSummary = featuresByFolder
+                .Select(x => x.Key)
                 .Select(folder =>
                     {
-                        var scenariosInFolder = filteredFeatures
-                            .Where(f => f.RelativeFolder.StartsWith(folder))
-                            .SelectMany(f => f.Feature.FeatureElements)
-                            .Where(s => filteredScenarios.Contains(s))
-                            .ToList();
+                        var scenariosInFolder = featuresByFolder[folder].ToList();
 
                         return new
                             {
@@ -189,23 +205,29 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                             };
                     });
 
-            var notTestedScenarios = features
-                .Where(f => f.Feature.Tags.Contains("@NotTested")).SelectMany(f => f.Feature.FeatureElements)
-                .Union(scenarios.Where(s => s.Tags.Contains("@NotTested")))
-                .Distinct()
-                .ToList();
+            var notTestedScenarios = new HashSet<IJsonFeatureElement>(
+                    features
+                        .Where(f => f.Feature.Tags.Contains("@NotTested"))
+                        .SelectMany(f => f.Feature.FeatureElements)
+                        .Union(scenarios.Where(s => s.Tags.Contains("@NotTested")))
+                        .Distinct());
+
+            var notTestedScenarioByFolder = filteredFeatures
+                .SelectMany(f => f.Feature.FeatureElements.Select(
+                    e => new
+                    {
+                        Folder = topLevelFolderName.Replace(f.RelativeFolder, "$1"),
+                        Element = e
+                    }))
+                .Where(x => notTestedScenarios.Contains(x.Element))
+                .ToLookup(x => x.Folder, x => x.Element);
 
             // calculate top-level folder summary - @NotTested scenarios only
-            var topLevelNotTestedFolderSummary = features
-                .Select(x => topLevelFolderName.Replace(x.RelativeFolder, "$1"))
-                .Distinct()
+            var topLevelNotTestedFolderSummary = featuresByFolder
+                .Select(x => x.Key)
                 .Select(folder =>
                     {
-                        var notTestedScenariosInFolder = filteredFeatures
-                            .Where(f => f.RelativeFolder.StartsWith(folder))
-                            .SelectMany(f => f.Feature.FeatureElements)
-                            .Where(s => notTestedScenarios.Contains(s))
-                            .ToList();
+                        var notTestedScenariosInFolder = notTestedScenarioByFolder[folder].ToList();
 
                         return new
                             {
