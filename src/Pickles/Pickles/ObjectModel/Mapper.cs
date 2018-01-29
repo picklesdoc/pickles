@@ -35,10 +35,10 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         private readonly ILanguageServices languageServices;
 
-        public Mapper(IConfiguration configuration, string featureLanguage)
+        public Mapper(IConfiguration configuration, ILanguageServices languageServices)
         {
             this.configuration = configuration;
-            this.languageServices = new LanguageServices(featureLanguage);
+            this.languageServices = languageServices;
         }
 
         public string MapToString(G.TableCell cell)

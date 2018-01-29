@@ -19,7 +19,9 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Gherkin;
 using PicklesDoc.Pickles.ObjectModel;
 
 using TextReader = System.IO.TextReader;
@@ -32,6 +34,10 @@ namespace PicklesDoc.Pickles
 
         private readonly DescriptionProcessor descriptionProcessor = new DescriptionProcessor();
 
+        private readonly LanguageServicesRegistry languageServicesRegistry = new LanguageServicesRegistry();
+
+        private readonly IDictionary<string, IGherkinDialectProvider> dialectProviderCache = new Dictionary<string, IGherkinDialectProvider>();
+
         public FeatureParser(IConfiguration configuration)
         {
             this.configuration = configuration;
@@ -41,14 +47,16 @@ namespace PicklesDoc.Pickles
         {
             var language = this.DetermineLanguage();
             var gherkinParser = new Gherkin.Parser();
+            var dialectProvider = this.GetDialectProvider(language);
 
             try
             {
                 Gherkin.Ast.GherkinDocument gherkinDocument = gherkinParser.Parse(
                     new Gherkin.TokenScanner(featureFileReader),
-                    new Gherkin.TokenMatcher(new CultureAwareDialectProvider(language)));
+                    new Gherkin.TokenMatcher(dialectProvider));
 
-                Feature result = new Mapper(this.configuration, gherkinDocument.Feature.Language).MapToFeature(gherkinDocument);
+                var languageServices = this.languageServicesRegistry.GetLanguageServicesForLanguage(gherkinDocument.Feature.Language);
+                Feature result = new Mapper(this.configuration, languageServices).MapToFeature(gherkinDocument);
                 result = this.RemoveFeatureWithExcludeTags(result);
 
                 if (result != null)
@@ -60,6 +68,22 @@ namespace PicklesDoc.Pickles
             {
                 throw new FeatureParseException("Unable to parse feature", exception);
             }
+        }
+
+        private IGherkinDialectProvider GetDialectProvider(string language)
+        {
+            IGherkinDialectProvider dialectProvider;
+            if (this.dialectProviderCache.ContainsKey(language))
+            {
+                dialectProvider = this.dialectProviderCache[language];
+            }
+            else
+            {
+                dialectProvider = new CultureAwareDialectProvider(language);
+                this.dialectProviderCache[language] = dialectProvider;
+            }
+
+            return dialectProvider;
         }
 
         private string DetermineLanguage()

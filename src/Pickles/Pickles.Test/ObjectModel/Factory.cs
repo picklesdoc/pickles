@@ -38,7 +38,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
 
         internal Mapper CreateMapper(IConfiguration configuration, string defaultLanguage = "en")
         {
-            var mapper = new Mapper(configuration, defaultLanguage);
+            var languageServices = new LanguageServices(defaultLanguage);
+            var mapper = new Mapper(configuration, languageServices);
             return mapper;
         }
 
