@@ -30,11 +30,23 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Security
 
+## [2.18.0] - 2018-02-02
+
+### Added
+
+- Dhtml reports and Scenario outline support (includes extension of the JSON output) ([502](https://github.com/picklesdoc/pickles/pull/502)) (by [@DominikBaran](https://github.com/DominikBaran))
+
+### Fixed
+
+- Cache the NUnit feature scan results to improve performance on large solutions ([503](https://github.com/picklesdoc/pickles/pull/503)) (by [@tlecomte](https://github.com/tlecomte))
+- Use lookups in JSONDocumentation Builder to improve performance on large solutions ([504](https://github.com/picklesdoc/pickles/pull/504)) (by [@tlecomte](https://github.com/tlecomte))
+- Cache LanguageServices and GherkinDialectProvider in FeatureParser to improve performance on large solutions ([505](https://github.com/picklesdoc/pickles/pull/505)) (by [@tlecomte](https://github.com/tlecomte))
+
 ## [2.17.0] - 2017-11-06
 
 ### Added
 
-- Added error handling for Markdown parsing exceptions ([497](https://github.com/picklesdoc/pickles/pull/497)) (by [@joebuschmann](https://github.com/joebuschmann)) 
+- Added error handling for Markdown parsing exceptions ([497](https://github.com/picklesdoc/pickles/pull/497)) (by [@joebuschmann](https://github.com/joebuschmann))
 
 ### Changed
 

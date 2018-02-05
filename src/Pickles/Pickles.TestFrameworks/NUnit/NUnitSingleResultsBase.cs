@@ -32,11 +32,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit
 
         protected NUnitSingleResultsBase(XDocument resultsDocument, TestResultAndName[] testResultAndNames)
         {
-            this.resultsDocument = resultsDocument;
             this.testResultAndNames = testResultAndNames;
         }
-
-        protected XDocument resultsDocument { get; }
 
         public override TestResult GetFeatureResult(Feature feature)
         {

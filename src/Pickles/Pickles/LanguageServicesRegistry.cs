@@ -17,13 +17,26 @@
 //  limitations under the License.
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
+using System.Collections.Generic;
+
 namespace PicklesDoc.Pickles
 {
     public class LanguageServicesRegistry : ILanguageServicesRegistry
     {
+        private static readonly IDictionary<string, ILanguageServices> LanguageServices = new Dictionary<string, ILanguageServices>();
+
         public ILanguageServices GetLanguageServicesForLanguage(string language)
         {
-            return new LanguageServices(language ?? DefaultLanguage);
+            language = language ?? DefaultLanguage;
+
+            if (LanguageServices.ContainsKey(language))
+            {
+                return LanguageServices[language];
+            }
+
+            var services = new LanguageServices(language);
+            LanguageServices[language] = services;
+            return services;
         }
 
         public string DefaultLanguage

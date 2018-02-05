@@ -20,7 +20,6 @@
 
 using System;
 using System.Linq;
-using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
@@ -29,6 +28,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
 {
     public class NUnit2SingleResults : NUnitSingleResultsBase
     {
+        private readonly ILookup<string, XElement> featureElements;
+
         public NUnit2SingleResults(XDocument resultsDocument)
             : base(
                 resultsDocument,
@@ -40,6 +41,10 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
                         new TestResultAndName(TestResult.Passed, "Success"),
                     })
         {
+            this.featureElements = resultsDocument
+                .Descendants("test-suite")
+                .Where(x => x.Attribute("description") != null)
+                .ToLookup(x => x.Attribute("description").Value);
         }
 
         protected override XElement GetScenarioElement(Scenario scenario)
@@ -75,10 +80,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
 
         protected override XElement GetFeatureElement(Feature feature)
         {
-            return this.resultsDocument
-                .Descendants("test-suite")
-                .Where(x => x.Attribute("description") != null)
-                .FirstOrDefault(x => x.Attribute("description").Value == feature.Name);
+            return this.featureElements[feature.Name].FirstOrDefault();
         }
 
         protected override XElement GetExamplesElement(ScenarioOutline scenarioOutline, string[] values)
