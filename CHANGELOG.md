@@ -18,6 +18,8 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Added
 
+- Dhtml reports and Scenario outline support (includes extension of the JSON output) ([502](https://github.com/picklesdoc/pickles/pull/502)) (by [@DominikBaran](https://github.com/DominikBaran))
+
 ### Changed
 
 ### Deprecated
