@@ -67,7 +67,7 @@ Target "CreatePackage GUI" (fun _ ->
         guiDir + "Gherkin.dll";
         guiDir + "MahApps.Metro.dll";
         guiDir + "MarkdownDeep.dll";
-        guiDir + "Microsoft.Practices.ServiceLocation.dll";
+        guiDir + "CommonServiceLocator.dll";
         guiDir + "Newtonsoft.Json.dll";
         guiDir + "NLog.dll";
         guiDir + "NlogViewer.dll";
