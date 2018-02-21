@@ -35,6 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="NFluent, Version=2.2.0.125, Culture=neutral, PublicKeyToken=18828b37b84b1437, processorArchitecture=MSIL">
       <HintPath>..\packages\NFluent.2.2.0\lib\net45\NFluent.dll</HintPath>
     </Reference>
@@ -42,12 +43,11 @@
       <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.IO.Abstractions, Version=2.0.0.144, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Abstractions.2.0.0.144\lib\net40\System.IO.Abstractions.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.IO.Abstractions, Version=2.1.0.178, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.1.0.178\lib\net40\System.IO.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Abstractions.TestingHelpers">
-      <HintPath>..\packages\System.IO.Abstractions.TestingHelpers.2.0.0.143\lib\net40\System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    <Reference Include="TestingHelpers, Version=2.1.0.178, Culture=neutral, PublicKeyToken=96bf224d23c43e59, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.TestingHelpers.2.1.0.178\lib\net40\TestingHelpers.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
