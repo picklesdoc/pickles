@@ -62,5 +62,7 @@ namespace PicklesDoc.Pickles
         void EnableComments();
 
         void DisableComments();
+
+        bool SplitOutline { get; set; }
     }
 }

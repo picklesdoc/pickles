@@ -97,6 +97,8 @@ namespace PicklesDoc.Pickles
             this.ShouldEnableComments = false;
         }
 
+        public bool SplitOutline { get; set; }
+
         public bool ShouldIncludeExperimentalFeatures { get; private set; }
 
         public void AddTestResultFile(FileInfoBase fileInfoBase)
