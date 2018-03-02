@@ -36,6 +36,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
         private readonly XNamespace xmlns;
         private readonly ITestResults testResults;
         private readonly ILanguageServicesRegistry languageServicesRegistry;
+        private readonly IConfiguration configuration;
 
         public HtmlScenarioOutlineFormatter(
             HtmlStepFormatter htmlStepFormatter,
@@ -43,7 +44,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             HtmlTableFormatter htmlTableFormatter,
             HtmlImageResultFormatter htmlImageResultFormatter,
             ITestResults testResults,
-            ILanguageServicesRegistry languageServicesRegistry)
+            ILanguageServicesRegistry languageServicesRegistry,
+            IConfiguration configuration)
         {
             this.htmlStepFormatter = htmlStepFormatter;
             this.htmlDescriptionFormatter = htmlDescriptionFormatter;
@@ -51,6 +53,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             this.htmlImageResultFormatter = htmlImageResultFormatter;
             this.testResults = testResults;
             this.languageServicesRegistry = languageServicesRegistry;
+            this.configuration = configuration;
             this.xmlns = HtmlNamespace.Xhtml;
         }
 
@@ -82,7 +85,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             return result;
         }
 
-        private XElement FormatSteps(ScenarioOutline scenarioOutline)
+        private XElement FormatSteps(ScenarioOutline scenarioOutline, IList<Cell> dataRow = null)
         {
             if (scenarioOutline.Steps == null)
             {
@@ -95,7 +98,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                 new XElement(
                     this.xmlns + "ul",
                     scenarioOutline.Steps.Select(
-                        step => this.htmlStepFormatter.Format(step))));
+                        step => this.htmlStepFormatter.Format(step, dataRow))));
         }
 
         private XElement FormatLinkButton(ScenarioOutline scenarioOutline)
@@ -137,18 +140,34 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             return exampleDiv;
         }
 
-        public XElement Format(ScenarioOutline scenarioOutline, int id)
+        private IList<XElement> FormatSplitScenario(ScenarioOutline scenarioOutline, int id)
+        {
+            return scenarioOutline.Examples
+                                  .Select(table => new ExamplesTable(table.TableArgument))
+                                  .SelectMany(example =>
+                                        example.DataRows.Select(dataRow => this.FormatScenario(scenarioOutline, id, dataRow)).ToList())
+                                  .ToList();
+        }
+
+        private XElement FormatScenario(ScenarioOutline scenarioOutline, int id, IList<Cell> dataRow = null)
         {
             return new XElement(
                 this.xmlns + "li",
                 new XAttribute("class", "scenario"),
                 this.htmlImageResultFormatter.Format(scenarioOutline),
                 this.FormatHeading(scenarioOutline),
-                this.FormatSteps(scenarioOutline),
+                this.FormatSteps(scenarioOutline, dataRow),
                 this.FormatLinkButton(scenarioOutline),
-                (scenarioOutline.Examples == null || !scenarioOutline.Examples.Any())
+                this.configuration.SplitOutline || (scenarioOutline.Examples == null || !scenarioOutline.Examples.Any())
                     ? null
                     : this.FormatExamples(scenarioOutline));
+        }
+
+        public IList<XElement> Format(ScenarioOutline scenarioOutline, int id)
+        {
+            return this.configuration.SplitOutline
+                            ? this.FormatSplitScenario(scenarioOutline, id)
+                            : new List<XElement> { this.FormatScenario(scenarioOutline, id) };
         }
 
         private static string[] RetrieveTags(ScenarioOutline scenarioOutline)

@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using Autofac;
 
@@ -62,7 +63,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
             };
 
             var htmlScenarioOutlineFormatter = Container.Resolve<HtmlScenarioOutlineFormatter>();
-            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0);
+            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0).First();
 
             Check.That(output).ContainsGherkinScenario();
             Check.That(output).ContainsGherkinTable();
@@ -93,7 +94,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
             };
 
             var htmlScenarioOutlineFormatter = Container.Resolve<HtmlScenarioOutlineFormatter>();
-            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0);
+            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0).First();
 
             Check.That(output).ContainsGherkinScenario();
             Check.That(output).ContainsGherkinTable();
@@ -124,7 +125,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
             };
 
             var htmlScenarioOutlineFormatter = Container.Resolve<HtmlScenarioOutlineFormatter>();
-            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0);
+            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0).First();
 
             Check.That(output).ContainsGherkinScenario();
             Check.That(output).ContainsGherkinTable();
@@ -141,7 +142,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
             };
 
             var htmlScenarioOutlineFormatter = Container.Resolve<HtmlScenarioOutlineFormatter>();
-            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0);
+            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0).First();
 
             Check.That(output).ContainsGherkinScenario();
             Check.That(output).Not.ContainsGherkinTable();
@@ -162,7 +163,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
             };
 
             var htmlScenarioOutlineFormatter = Container.Resolve<HtmlScenarioOutlineFormatter>();
-            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0);
+            var output = htmlScenarioOutlineFormatter.Format(scenarioOutline, 0).First();
 
             Check.That(output).ContainsGherkinScenario();
             Check.That(output).Not.ContainsGherkinTable();

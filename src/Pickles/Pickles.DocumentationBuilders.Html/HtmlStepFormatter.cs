@@ -2,14 +2,14 @@
 //  <copyright file="HtmlStepFormatter.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
-//
-//
+//  
+//  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
-//
+//  
 //      http://www.apache.org/licenses/LICENSE-2.0
-//
+//  
 //  Unless required by applicable law or agreed to in writing, software
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -56,7 +57,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             return comment;
         }
 
-        public XElement Format(Step step)
+        public XElement Format(Step step, IList<Cell> dataRow = null)
         {
             XElement li;
 
@@ -71,13 +72,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                 afterStepComments = this.FormatComments(step, CommentType.AfterLastStepComment);
             }
 
+            if(dataRow != null)
+            {
+                step = this.ModifyStepWithDataRow(step, dataRow);
+            }
+
             li = new XElement(
-                    this.xmlns + "li",
-                    new XAttribute("class", "step"),
-                    beforeStepComments,
-                    new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
-                    step.Name,
-                    afterStepComments);
+                this.xmlns + "li",
+                new XAttribute("class", "step"),
+                beforeStepComments,
+                new XElement(this.xmlns + "span", new XAttribute("class", "keyword"), step.NativeKeyword),
+                step.Name,
+                afterStepComments);
 
             if (step.TableArgument != null)
             {
@@ -90,6 +96,30 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             }
 
             return li;
+        }
+
+        private Step ModifyStepWithDataRow(Step step, IList<Cell> dataRow)
+        {
+            var clone = step.Clone();
+
+            if (!dataRow.Any(c => c.Value.Contains(',')))
+            {
+                clone.Name = dataRow.Aggregate(step.Name,
+                    (current, cell) => current.Replace($"<{cell.ColumnName}>", cell.Value));
+                return clone;
+            }
+
+            foreach(var cell in dataRow.Where(cell => step.Name.Contains($"<{cell.ColumnName}>")))
+            {
+                clone.Name = clone.Name.Replace($"<{cell.ColumnName}>", string.Empty);
+                clone.TableArgument = new Table
+                {
+                    HeaderRow = new TableRow(cell.ColumnName),
+                    DataRows = cell.Value.Split(',').Select(s => new TableRow(s.Trim())).ToList()
+                };
+            }
+
+            return clone;
         }
     }
 }
