@@ -59,6 +59,8 @@
     <Compile Include="ILanguageServices.cs" />
     <Compile Include="ILanguageServicesRegistry.cs" />
     <Compile Include="IMarkdownProvider.cs" />
+    <Compile Include="ObjectModel\Cell.cs" />
+    <Compile Include="ObjectModel\ExamplesTable.cs" />
     <Compile Include="ObjectModel\Location.cs" />
     <Compile Include="ObjectModel\Example.cs" />
     <Compile Include="ObjectModel\Feature.cs" />

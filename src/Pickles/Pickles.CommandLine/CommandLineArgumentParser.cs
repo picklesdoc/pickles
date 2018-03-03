@@ -40,6 +40,7 @@ namespace PicklesDoc.Pickles.CommandLine
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
         public const string HelpEnableComments = "whether to enable comments in the output";
         public const string HelpExcludeTags = "exclude scenarios that match this tag";
+        public const string HelpSplitOutlines = "Instead of generating an examples table in a scenario outline, it generates a scenario for each example";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
@@ -59,6 +60,7 @@ namespace PicklesDoc.Pickles.CommandLine
         private bool includeExperimentalFeatures;
         private string enableCommentsValue;
         private string excludeTags;
+        private bool splitOutlines;
 
         public CommandLineArgumentParser(IFileSystem fileSystem)
         {
@@ -77,7 +79,8 @@ namespace PicklesDoc.Pickles.CommandLine
                 { "h|?|help", v => this.helpRequested = v != null },
                 { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
                 { "cmt|enableComments=", HelpEnableComments, v => this.enableCommentsValue = v },
-                { "et|excludeTags=", HelpExcludeTags, v => this.excludeTags = v }
+                { "et|excludeTags=", HelpExcludeTags, v => this.excludeTags = v },
+                { "so|split-outline=", HelpSplitOutlines, v => this.splitOutlines = v != null}
             };
         }
 
@@ -159,6 +162,11 @@ namespace PicklesDoc.Pickles.CommandLine
             if (bool.TryParse(this.enableCommentsValue, out enableComments) && enableComments == false)
             {
                 configuration.DisableComments();
+            }
+
+            if(this.splitOutlines)
+            {
+                configuration.SplitOutline = true;
             }
 
             return true;

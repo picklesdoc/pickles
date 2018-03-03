@@ -1,15 +1,15 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="Step.cs" company="PicklesDoc">
+//  <copyright file="ExamplesTable.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
-//
-//
+//  
+//  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
-//
+//  
 //      http://www.apache.org/licenses/LICENSE-2.0
-//
+//  
 //  Unless required by applicable law or agreed to in writing, software
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -19,42 +19,34 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    public class Step
+    public class ExamplesTable
     {
-        public Step()
+        public IReadOnlyCollection<List<Cell>> DataRows { get; }
+        private readonly IReadOnlyCollection<Cell> cells;
+
+        public ExamplesTable(Table table)
         {
-            this.Comments = new List<Comment>();
+            this.cells = this.ExtractCellsFromTable(table).ToList();
+            this.DataRows = this.cells
+                                .GroupBy(c => c.Row)
+                                .OrderBy(g => g.Key)
+                                .Select(g => g.OrderBy(c => c.Column).ToList())
+                                .ToList();
         }
 
-        public Keyword Keyword { get; set; }
-
-        public string NativeKeyword { get; set; }
-
-        public string Name { get; set; }
-
-        public Table TableArgument { get; set; }
-
-        public string DocStringArgument { get; set; }
-
-        public Location Location { get; set; }
-
-        public List<Comment> Comments { get; set; }
-
-        public Step Clone()
+        private IEnumerable<Cell> ExtractCellsFromTable(Table table)
         {
-            return new Step
-            {
-                TableArgument = this.TableArgument,
-                Name = this.Name,
-                Comments = this.Comments,
-                DocStringArgument = this.DocStringArgument,
-                Keyword = this.Keyword,
-                Location = this.Location,
-                NativeKeyword = this.NativeKeyword
-            };
+            return table.HeaderRow.Cells.SelectMany((value, index) =>
+                table.DataRows.Select((tableRow, row) =>
+                    new Cell(
+                        column:index,
+                        columnName:table.HeaderRow.Cells[index],
+                        row:row,
+                        value:tableRow.Cells[index])));
         }
     }
 }

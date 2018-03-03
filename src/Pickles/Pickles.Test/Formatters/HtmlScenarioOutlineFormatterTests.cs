@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Linq;
 
 using Autofac;
@@ -48,7 +49,8 @@ namespace PicklesDoc.Pickles.Test.Formatters
                 Container.Resolve<HtmlTableFormatter>(),
                 Container.Resolve<HtmlImageResultFormatter>(),
                 fakeTestResults,
-                Container.Resolve<ILanguageServicesRegistry>());
+                Container.Resolve<ILanguageServicesRegistry>(),
+                Container.Resolve<IConfiguration>());
         }
 
         #endregion
@@ -104,9 +106,9 @@ namespace PicklesDoc.Pickles.Test.Formatters
         {
             ScenarioOutline scenarioOutline = BuildMinimalScenarioOutline();
 
-            XElement li = this.formatter.Format(scenarioOutline, 1);
+            var lis = this.formatter.Format(scenarioOutline, 1);
 
-            XAttribute idAttribute = li.Attribute("id");
+            XAttribute idAttribute = lis.First().Attribute("id");
 
             Check.That(idAttribute).IsNull();
         }

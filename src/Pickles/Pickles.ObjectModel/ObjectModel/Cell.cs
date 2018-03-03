@@ -1,15 +1,15 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="Step.cs" company="PicklesDoc">
+//  <copyright file="Cell.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
-//
-//
+//  
+//  
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at
-//
+//  
 //      http://www.apache.org/licenses/LICENSE-2.0
-//
+//  
 //  Unless required by applicable law or agreed to in writing, software
 //  distributed under the License is distributed on an "AS IS" BASIS,
 //  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -18,43 +18,21 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System.Collections.Generic;
-
 namespace PicklesDoc.Pickles.ObjectModel
 {
-    public class Step
+    public class Cell
     {
-        public Step()
+        public int Row { get; }
+        public int Column { get; }
+        public string ColumnName { get; }
+        public string Value { get; }
+
+        public Cell(int column, string columnName, int row, string value)
         {
-            this.Comments = new List<Comment>();
-        }
-
-        public Keyword Keyword { get; set; }
-
-        public string NativeKeyword { get; set; }
-
-        public string Name { get; set; }
-
-        public Table TableArgument { get; set; }
-
-        public string DocStringArgument { get; set; }
-
-        public Location Location { get; set; }
-
-        public List<Comment> Comments { get; set; }
-
-        public Step Clone()
-        {
-            return new Step
-            {
-                TableArgument = this.TableArgument,
-                Name = this.Name,
-                Comments = this.Comments,
-                DocStringArgument = this.DocStringArgument,
-                Keyword = this.Keyword,
-                Location = this.Location,
-                NativeKeyword = this.NativeKeyword
-            };
+            this.Column = column;
+            this.ColumnName = columnName;
+            this.Row = row;
+            this.Value = value;
         }
     }
 }
