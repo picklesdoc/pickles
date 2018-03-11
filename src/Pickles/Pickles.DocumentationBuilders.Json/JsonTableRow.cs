@@ -27,8 +27,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         public JsonTableRow(IEnumerable<string> cells, JsonTestResult result)
         {
             AddRange(cells);
-            this.Result = result;
-            Add(result);
+            if (result != null)
+            {
+                this.Result = result;
+                Add(result);
+            }
         }
 
         public JsonTestResult Result { get; private set; }

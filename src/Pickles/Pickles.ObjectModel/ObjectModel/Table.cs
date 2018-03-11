@@ -28,4 +28,8 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public List<TableRow> DataRows { get; set; }
     }
+
+    public class ExampleTable : Table
+    {
+    }
 }

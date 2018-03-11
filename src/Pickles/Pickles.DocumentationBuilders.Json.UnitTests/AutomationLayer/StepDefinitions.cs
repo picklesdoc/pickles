@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using Autofac;
@@ -69,7 +70,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.AutomationLaye
 
             actualResult = Regex.Replace(actualResult, @"\s+", string.Empty);
             expectedResult = Regex.Replace(expectedResult, @"\s+", string.Empty);
-
+            Debug.Print(actualResult);
             Check.That(actualResult).Contains(expectedResult);
         }
     }

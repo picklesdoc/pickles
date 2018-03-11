@@ -46,17 +46,22 @@ namespace PicklesDoc.Pickles.ObjectModel
             return cell?.Value;
         }
 
-        public TableRow MapToTableRow(G.TableRow tableRow)
+        public TableRow MapToTableRow(G.TableRow tableRow, bool isForExample=false)
         {
             if (tableRow == null)
             {
                 return null;
             }
 
+            if(isForExample)
+            {
+                return new TestTableRow(tableRow.Cells.Select(this.MapToString));
+            }
+
             return new TableRow(tableRow.Cells.Select(this.MapToString));
         }
 
-        public Table MapToTable(G.DataTable dataTable)
+        public Table MapToTable(G.DataTable dataTable, bool isForExample=false)
         {
             if (dataTable == null)
             {
@@ -64,15 +69,23 @@ namespace PicklesDoc.Pickles.ObjectModel
             }
 
             var tableRows = dataTable.Rows;
-            return this.MapToTable(tableRows);
+            return this.MapToTable(tableRows, isForExample);
         }
 
-        public Table MapToTable(IEnumerable<G.TableRow> tableRows)
+        public Table MapToTable(IEnumerable<G.TableRow> tableRows, bool isForExample=false)
         {
+
+            if (isForExample)
+                return new ExampleTable
+                {
+                    HeaderRow = this.MapToTableRow(tableRows.First(), isForExample),
+                    DataRows = tableRows.Skip(1).Select(x => this.MapToTableRow(x, isForExample)).ToList()
+                };
+
             return new Table
             {
-                HeaderRow = this.MapToTableRow(tableRows.First()),
-                DataRows = tableRows.Skip(1).Select(this.MapToTableRow).ToList()
+                HeaderRow = this.MapToTableRow(tableRows.First(), isForExample),
+                DataRows = tableRows.Skip(1).Select(x => this.MapToTableRow(x, isForExample)).ToList()
             };
         }
 
@@ -95,7 +108,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 Keyword = this.MapToKeyword(step.Keyword),
                 NativeKeyword = step.Keyword,
                 Name = step.Text,
-                TableArgument = step.Argument is G.DataTable ? this.MapToTable((G.DataTable) step.Argument) : null,
+                TableArgument = step.Argument is G.DataTable ? this.MapToTable((G.DataTable) step.Argument, false) : null,
             };
         }
 
@@ -189,7 +202,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             {
                 Description = examples.Description,
                 Name = examples.Name,
-                TableArgument = this.MapToTable(((G.IHasRows) examples).Rows),
+                TableArgument = this.MapToTable(((G.IHasRows) examples).Rows,true) as ExampleTable,
                 Tags = examples.Tags?.Select(this.MapToString).ToList()
             };
         }

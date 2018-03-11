@@ -177,90 +177,50 @@ Scenario: Scenario with large data table
                     ",\r\n                \"TableArgument\": {\r\n                  \"HeaderRow\": [\r\n       " +
                     "             \"heading\",\r\n                    \"page #\"\r\n                  ],\r\n   " +
                     "               \"DataRows\": [\r\n                    [\r\n                      \"Chap" +
-                    "ter 1\",\r\n                      \"1\",\r\n                      {\r\n                  " +
-                    "      \"WasExecuted\": false,\r\n                        \"WasSuccessful\": false\r\n   " +
-                    "                   }\r\n                    ],\r\n                    [\r\n           " +
-                    "           \"Chapter 2\",\r\n                      \"5\",\r\n                      {\r\n  " +
-                    "                      \"WasExecuted\": false,\r\n                        \"WasSuccess" +
-                    "ful\": false\r\n                      }\r\n                    ],\r\n                  " +
-                    "  [\r\n                      \"Chapter 3\",\r\n                      \"10\",\r\n          " +
-                    "            {\r\n\r\n                \"WasExecuted\": false,\r\n                \"WasSucc" +
-                    "essful\": false\r\n              }\r\n                    ],\r\n                    [\r\n" +
-                    "                      \"Chapter 4\",\r\n                      \"15\",\r\n               " +
-                    "       {\r\n                        \"WasExecuted\": false,\r\n                       " +
-                    " \"WasSuccessful\": false\r\n                      }\r\n                    ],\r\n      " +
-                    "              [\r\n                      \"Chapter 5\",\r\n                      \"20\"," +
-                    "\r\n                      {\r\n                        \"WasExecuted\": false,\r\n      " +
-                    "                  \"WasSuccessful\": false\r\n                      }\r\n             " +
-                    "       ],\r\n                    [\r\n                      \"Chapter 6\",\r\n          " +
-                    "            \"25\",\r\n                      {\r\n                        \"WasExecuted" +
-                    "\": false,\r\n                        \"WasSuccessful\": false\r\n                     " +
-                    " }\r\n                    ],\r\n                    [\r\n                      \"Chapte" +
-                    "r 7\",\r\n                      \"30\",\r\n                      {\r\n                   " +
-                    "     \"WasExecuted\": false,\r\n                        \"WasSuccessful\": false\r\n    " +
-                    "                  }\r\n                    ],\r\n                    [\r\n            " +
-                    "          \"Chapter 8\",\r\n                      \"35\",\r\n                      {\r\n  " +
-                    "                      \"WasExecuted\": false,\r\n                        \"WasSuccess" +
-                    "ful\": false\r\n                      }\r\n                    ],\r\n                  " +
-                    "  [\r\n                      \"Chapter 9\",\r\n                      \"40\",\r\n          " +
-                    "            {\r\n                        \"WasExecuted\": false,\r\n                  " +
-                    "      \"WasSuccessful\": false\r\n                      }\r\n                    ],\r\n " +
-                    "                   [\r\n                      \"Chapter 10\",\r\n                     " +
-                    " \"45\",\r\n                      {\r\n                        \"WasExecuted\": false,\r\n" +
-                    "                        \"WasSuccessful\": false\r\n                      }\r\n       " +
-                    "             ],\r\n                    [\r\n                      \"Chapter 11\",\r\n   " +
-                    "                   \"50\",\r\n                      {\r\n                        \"WasE" +
-                    "xecuted\": false,\r\n                        \"WasSuccessful\": false\r\n              " +
-                    "        }\r\n                    ],\r\n                    [\r\n                      " +
-                    "\"Chapter 12\",\r\n                      \"55\",\r\n                      {\r\n           " +
-                    "             \"WasExecuted\": false,\r\n                        \"WasSuccessful\": fal" +
-                    "se\r\n                      }\r\n                    ],\r\n                    [\r\n    " +
-                    "                  \"Chapter 13\",\r\n                      \"60\",\r\n                  " +
-                    "    {\r\n                        \"WasExecuted\": false,\r\n                        \"W" +
-                    "asSuccessful\": false\r\n                      }\r\n                    ],\r\n         " +
-                    "           [\r\n                      \"Chapter 14\",\r\n                      \"65\",\r\n" +
-                    "                      {\r\n                        \"WasExecuted\": false,\r\n        " +
-                    "                \"WasSuccessful\": false\r\n                      }\r\n               " +
-                    "     ],\r\n                    [\r\n                      \"Chapter 15\",\r\n           " +
-                    "           \"70\",\r\n                      {\r\n                        \"WasExecuted\"" +
-                    ": false,\r\n                        \"WasSuccessful\": false\r\n                      " +
-                    "}\r\n                    ],\r\n                    [\r\n                      \"Chapter" +
-                    " 16\",\r\n                      \"75\",\r\n                      {\r\n                   " +
-                    "     \"WasExecuted\": false,\r\n                        \"WasSuccessful\": false\r\n    " +
-                    "                  }\r\n                    ],\r\n                    [\r\n            " +
-                    "          \"Chapter 17\",\r\n                      \"80\",\r\n                      {\r\n " +
-                    "                       \"WasExecuted\": false,\r\n                        \"WasSucces" +
-                    "sful\": false\r\n                      }\r\n                    ],\r\n                 " +
-                    "   [\r\n                      \"Chapter 18\",\r\n                      \"85\",\r\n        " +
-                    "              {\r\n                        \"WasExecuted\": false,\r\n                " +
-                    "        \"WasSuccessful\": false\r\n                      }\r\n                    ],\r" +
-                    "\n                    [\r\n                      \"Chapter 19\",\r\n                   " +
-                    "   \"90\",\r\n                      {\r\n                        \"WasExecuted\": false," +
-                    "\r\n                        \"WasSuccessful\": false\r\n                      }\r\n     " +
-                    "               ],\r\n                    [\r\n                      \"Chapter 20\",\r\n " +
-                    "                     \"95\",\r\n                      {\r\n                        \"Wa" +
-                    "sExecuted\": false,\r\n                        \"WasSuccessful\": false\r\n            " +
-                    "          }\r\n                    ],\r\n                    [\r\n                    " +
-                    "  \"Chapter 21\",\r\n                      \"100\",\r\n                      {\r\n        " +
-                    "                \"WasExecuted\": false,\r\n                        \"WasSuccessful\": " +
-                    "false\r\n                      }\r\n                    ],\r\n                    [\r\n " +
-                    "                     \"Chapter 22\",\r\n                      \"105\",\r\n              " +
-                    "        {\r\n                        \"WasExecuted\": false,\r\n                      " +
-                    "  \"WasSuccessful\": false\r\n                      }\r\n                    ]\r\n      " +
-                    "            ]\r\n                },\r\n                \"StepComments\": [],\r\n        " +
-                    "        \"AfterLastStepComments\": []\r\n              },\r\n              {\r\n        " +
-                    "        \"Keyword\": \"When\",\r\n                \"NativeKeyword\": \"When \",\r\n         " +
-                    "       \"Name\": \"I click on the table heading\",\r\n                \"StepComments\": " +
-                    "[],\r\n                \"AfterLastStepComments\": []\r\n              },\r\n            " +
-                    "  {\r\n                \"Keyword\": \"Then\",\r\n                \"NativeKeyword\": \"Then " +
-                    "\",\r\n                \"Name\": \"the table body should collapse\",\r\n                \"" +
-                    "StepComments\": [],\r\n                \"AfterLastStepComments\": []\r\n              }" +
-                    "\r\n            ],\r\n            \"Tags\": [],\r\n            \"Result\": {\r\n            " +
-                    "  \"WasExecuted\": false,\r\n              \"WasSuccessful\": false\r\n            }\r\n  " +
-                    "        }\r\n        ],\r\n        \"Result\": {\r\n          \"WasExecuted\": false,\r\n   " +
-                    "       \"WasSuccessful\": false\r\n        },\r\n        \"Tags\": []\r\n      },\r\n      \"" +
-                    "Result\": {\r\n        \"WasExecuted\": false,\r\n        \"WasSuccessful\": false\r\n     " +
-                    " }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                    "ter 1\",\r\n                      \"1\"\r\n                    ],\r\n                    " +
+                    "[\r\n                      \"Chapter 2\",\r\n                      \"5\"\r\n              " +
+                    "      ],\r\n                    [\r\n                      \"Chapter 3\",\r\n           " +
+                    "           \"10\"\r\n                    ],\r\n                    [\r\n                " +
+                    "      \"Chapter 4\",\r\n                      \"15\"\r\n                    ],\r\n        " +
+                    "            [\r\n                      \"Chapter 5\",\r\n                      \"20\"\r\n " +
+                    "                   ],\r\n                    [\r\n                      \"Chapter 6\"," +
+                    "\r\n                      \"25\"\r\n                    ],\r\n                    [\r\n   " +
+                    "                   \"Chapter 7\",\r\n                      \"30\"\r\n                   " +
+                    " ],\r\n                    [\r\n                      \"Chapter 8\",\r\n                " +
+                    "      \"35\"\r\n                    ],\r\n                    [\r\n                     " +
+                    " \"Chapter 9\",\r\n                      \"40\"\r\n                    ],\r\n             " +
+                    "       [\r\n                      \"Chapter 10\",\r\n                      \"45\"\r\n     " +
+                    "               ],\r\n                    [\r\n                      \"Chapter 11\",\r\n " +
+                    "                     \"50\"\r\n                    ],\r\n                    [\r\n      " +
+                    "                \"Chapter 12\",\r\n                      \"55\"\r\n                    ]" +
+                    ",\r\n                    [\r\n                      \"Chapter 13\",\r\n                 " +
+                    "     \"60\"\r\n                    ],\r\n                    [\r\n                      " +
+                    "\"Chapter 14\",\r\n                      \"65\"\r\n                    ],\r\n             " +
+                    "       [\r\n                      \"Chapter 15\",\r\n                      \"70\"\r\n     " +
+                    "               ],\r\n                    [\r\n                      \"Chapter 16\",\r\n " +
+                    "                     \"75\"\r\n                    ],\r\n                    [\r\n      " +
+                    "                \"Chapter 17\",\r\n                      \"80\"\r\n                    ]" +
+                    ",\r\n                    [\r\n                      \"Chapter 18\",\r\n                 " +
+                    "     \"85\"\r\n                    ],\r\n                    [\r\n                      " +
+                    "\"Chapter 19\",\r\n                      \"90\"\r\n                    ],\r\n             " +
+                    "       [\r\n                      \"Chapter 20\",\r\n                      \"95\"\r\n     " +
+                    "               ],\r\n                    [\r\n                      \"Chapter 21\",\r\n " +
+                    "                     \"100\"\r\n                    ],\r\n                    [\r\n     " +
+                    "                 \"Chapter 22\",\r\n                      \"105\"\r\n                   " +
+                    " ]\r\n                  ]\r\n                },\r\n                \"StepComments\": []," +
+                    "\r\n                \"AfterLastStepComments\": []\r\n              },\r\n              {" +
+                    "\r\n                \"Keyword\": \"When\",\r\n                \"NativeKeyword\": \"When \",\r" +
+                    "\n                \"Name\": \"I click on the table heading\",\r\n                \"StepC" +
+                    "omments\": [],\r\n                \"AfterLastStepComments\": []\r\n              },\r\n  " +
+                    "            {\r\n                \"Keyword\": \"Then\",\r\n                \"NativeKeywor" +
+                    "d\": \"Then \",\r\n                \"Name\": \"the table body should collapse\",\r\n       " +
+                    "         \"StepComments\": [],\r\n                \"AfterLastStepComments\": []\r\n     " +
+                    "         }\r\n            ],\r\n            \"Tags\": [],\r\n            \"Result\": {\r\n  " +
+                    "            \"WasExecuted\": false,\r\n              \"WasSuccessful\": false\r\n       " +
+                    "     }\r\n          }\r\n        ],\r\n        \"Result\": {\r\n          \"WasExecuted\": f" +
+                    "alse,\r\n          \"WasSuccessful\": false\r\n        },\r\n        \"Tags\": []\r\n      }" +
+                    ",\r\n      \"Result\": {\r\n        \"WasExecuted\": false,\r\n        \"WasSuccessful\": fa" +
+                    "lse\r\n      }\r\n    }\r\n  ],", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
