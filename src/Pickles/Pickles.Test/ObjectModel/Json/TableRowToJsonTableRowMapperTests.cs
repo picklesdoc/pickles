@@ -52,12 +52,24 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         [Test]
         public void Map_TableRowWithResult_ReturnsObjectWithResult()
         {
-            var tableRow = new TestTableRow { Result = TestResult.Passed };
+            var tableRow = new TableRowWithTestResult { Result = TestResult.Passed };
             var mapper = CreateTableRowMapper();
-            var actual = mapper.Map(tableRow);
+            var actual = mapper.Map(tableRow) as JsonTableRowWithTestResult;
 
+            Check.That(actual != null);
             Check.That(actual.Result.WasExecuted).IsTrue();
             Check.That(actual.Result.WasSuccessful).IsTrue();
+        }
+
+        [Test]
+        public void Map_TableRow_ReturnsObject()
+        {
+            var tableRow = new TableRowWithTestResult { Result = TestResult.Passed };
+            var mapper = CreateTableRowMapper();
+
+            var actual = mapper.Map(tableRow) as JsonTableRowWithTestResult;
+
+            Check.That(actual == null);
         }
 
         [Test]
@@ -67,6 +79,18 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             var mapper = CreateTableRowMapper();
             var actual = mapper.Map(tableRow);
 
+            Check.That(actual).Contains("first string", "second string", "third string");
+            Check.That(actual != null);
+        }
+
+        [Test]
+        public void Map_TableRowWithTestResultsWithRows_ReturnsObjectWithStrings()
+        {
+            var tableRow = new TableRowWithTestResult("first string", "second string", "third string");
+            var mapper = CreateTableRowMapper();
+            var actual = mapper.Map(tableRow) as JsonTableRowWithTestResult;
+
+            Check.That(actual != null);
             Check.That(actual).Contains("first string", "second string", "third string");
             Check.That(actual.Result).Equals(null);
         }
@@ -79,7 +103,9 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             var jsonTableRow = mapper.Map(tableRow);
 
             Check.That(jsonTableRow).Contains("cell 1", "cell 2");
-            Check.That(jsonTableRow.Result).Equals(null);
+
+            var actual = jsonTableRow as JsonTableRowWithTestResult;
+            Check.That(actual == null);
         }
 
         [Test]
@@ -95,9 +121,10 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         [Test]
         public void Map_TableRowWithTestResult_ConvertsToJsonTableRowWithTestResult()
         {
-            var tableRow = new TestTableRow { Result = TestResult.Passed };
+            var tableRow = new TableRowWithTestResult { Result = TestResult.Passed };
             var mapper = CreateTableRowMapper();
-            var jsonTableRow = mapper.Map(tableRow);
+            var jsonTableRow = mapper.Map(tableRow) as JsonTableRowWithTestResult;
+            Check.That(jsonTableRow != null);
 
             Check.That(jsonTableRow.Result.WasExecuted).IsEqualTo(true);
             Check.That(jsonTableRow.Result.WasSuccessful).IsEqualTo(true);

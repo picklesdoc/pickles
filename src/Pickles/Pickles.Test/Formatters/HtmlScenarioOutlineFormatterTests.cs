@@ -68,7 +68,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
                         new List<TableRow>(
                             new[]
                             {
-                                new TestTableRow("Value1")
+                                new TableRowWithTestResult("Value1")
                             })
                 },
             });

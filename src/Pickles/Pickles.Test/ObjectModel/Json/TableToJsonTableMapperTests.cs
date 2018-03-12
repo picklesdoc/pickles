@@ -97,11 +97,9 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.DataRows[0].Count).IsEqualTo(2);
             Check.That(actual.DataRows[0].OfType<string>()).ContainsExactly("cell 1-1", "cell 1-2");
-            Check.That(actual.DataRows[0].Result==null);
 
             Check.That(actual.DataRows[1].Count).IsEqualTo(2);
             Check.That(actual.DataRows[1].OfType<string>()).ContainsExactly("cell 2-1", "cell 2-2");
-            Check.That(actual.DataRows[1].Result==null);
         }
 
         [Test]
@@ -111,8 +109,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             {
                 DataRows = new List<TableRow>
                 {
-                    new TestTableRow("cell 1-1", "cell 1-2"),
-                    new TestTableRow("cell 2-1", "cell 2-2")
+                    new TableRowWithTestResult("cell 1-1", "cell 1-2"),
+                    new TableRowWithTestResult("cell 2-1", "cell 2-2")
                 }
             };
 
@@ -129,13 +127,13 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.DataRows[0].Count).IsEqualTo(3);
             Check.That(actual.DataRows[0].OfType<string>()).ContainsExactly("cell 1-1", "cell 1-2");
-            Check.That(actual.DataRows[1].Result.WasSuccessful).Equals(false);
-            Check.That(actual.DataRows[1].Result.WasExecuted).Equals(false);
+            Check.That((actual.DataRows[0] as JsonTableRowWithTestResult).Result.WasSuccessful).Equals(false);
+            Check.That((actual.DataRows[0] as JsonTableRowWithTestResult).Result.WasExecuted).Equals(false);
 
             Check.That(actual.DataRows[1].Count).IsEqualTo(3);
             Check.That(actual.DataRows[1].OfType<string>()).ContainsExactly("cell 2-1", "cell 2-2");
-            Check.That(actual.DataRows[1].Result.WasSuccessful).Equals(false);
-            Check.That(actual.DataRows[1].Result.WasExecuted).Equals(false);
+            Check.That((actual.DataRows[1] as JsonTableRowWithTestResult).Result.WasSuccessful).Equals(false);
+            Check.That((actual.DataRows[1] as JsonTableRowWithTestResult).Result.WasExecuted).Equals(false);
 
         }
 
