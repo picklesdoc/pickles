@@ -48,13 +48,13 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
             examples.HeaderRow.Cells.Add("result1");
             examples.HeaderRow.Cells.Add("result2");
             examples.HeaderRow.Cells.Add("result3");
-            var row = new TestTableRow();
+            var row = new TableRowWithTestResult();
             row.Cells.Add("1");
             row.Cells.Add("2");
             row.Cells.Add("3");
             examples.DataRows = new List<TableRow>();
             examples.DataRows.Add(row);
-            row = new TestTableRow();
+            row = new TableRowWithTestResult();
             row.Cells.Add("1");
             row.Cells.Add("");
             row.Cells.Add("4");

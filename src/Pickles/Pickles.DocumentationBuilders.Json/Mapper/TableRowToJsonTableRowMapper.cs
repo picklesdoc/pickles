@@ -38,14 +38,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
             if (tableRow == null)
                 return null;
 
-            var testTableRow = tableRow as TestTableRow;
+            return new JsonTableRow(tableRow.Cells.ToArray());
+        }
 
-            if(testTableRow!=null)
-            {
-                return new JsonTableRow(tableRow.Cells.ToArray(), this.testResultMapper.Map(testTableRow.Result));
-            }
+        public JsonTableRow Map(TableRowWithTestResult tableRow)
+        {
+            if (tableRow == null)
+                return null;
 
-            return new JsonTableRow(tableRow.Cells.ToArray(), null);
+            return new JsonTableRowWithTestResult(tableRow.Cells.ToArray(), this.testResultMapper.Map(tableRow.Result));
         }
     }
 }

@@ -117,7 +117,7 @@ namespace PicklesDoc.Pickles
 
                 if (scenarioOutline != null)
                 {
-                    foreach (var example in scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows).Cast<TestTableRow>())
+                    foreach (var example in scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows).Cast<TableRowWithTestResult>())
                     {
                         if(example!=null)
                             example.Result = testResults.GetExampleResult(scenarioOutline, example.Cells.ToArray());
@@ -125,7 +125,7 @@ namespace PicklesDoc.Pickles
 
                     scenarioOutline.Result =
                         scenarioOutline.Examples.SelectMany(e => e.TableArgument.DataRows)
-                        .Cast<TestTableRow>()
+                        .Cast<TableRowWithTestResult>()
                             .Select(row => row.Result)
                             .Merge();
                 }

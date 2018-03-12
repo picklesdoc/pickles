@@ -48,7 +48,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.VsTest
             var examples = new ExampleTable();
             examples.HeaderRow = new TableRow();
             examples.HeaderRow.Cells.Add("TestCase");
-            var row = new TestTableRow();
+            var row = new TableRowWithTestResult();
             row.Cells.Add("1");
             examples.DataRows = new List<TableRow>();
             examples.DataRows.Add(row);

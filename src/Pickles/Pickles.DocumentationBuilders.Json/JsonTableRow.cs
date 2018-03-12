@@ -24,9 +24,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
     public class JsonTableRow : List<object>
     {
-        public JsonTableRow(IEnumerable<string> cells, JsonTestResult result)
+        public JsonTableRow(IEnumerable<string> cells)
         {
             AddRange(cells);
+        }
+    }
+
+    public class JsonTableRowWithTestResult : JsonTableRow
+    {
+        public JsonTableRowWithTestResult(IEnumerable<string> cells, JsonTestResult result) : base(cells)
+        {
             if (result != null)
             {
                 this.Result = result;
@@ -36,4 +43,5 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 
         public JsonTestResult Result { get; private set; }
     }
+
 }

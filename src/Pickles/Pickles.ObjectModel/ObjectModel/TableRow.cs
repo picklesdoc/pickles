@@ -47,17 +47,17 @@ namespace PicklesDoc.Pickles.ObjectModel
 
     }
 
-    public class TestTableRow : TableRow
+    public class TableRowWithTestResult : TableRow
     {
-        public TestTableRow()
+        public TableRowWithTestResult()
         {
         }
 
-        public TestTableRow(params string[] cells):base(cells)
+        public TableRowWithTestResult(params string[] cells):base(cells)
         {
         }
 
-        public TestTableRow(IEnumerable<string> cells):base(cells)
+        public TableRowWithTestResult(IEnumerable<string> cells):base(cells)
         {
         }
 
