@@ -54,7 +54,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         {
             var tableRow = new TableRowWithTestResult { Result = TestResult.Passed };
             var mapper = CreateTableRowMapper();
-            var actual = mapper.Map(tableRow) as JsonTableRowWithTestResult;
+            var actual = mapper.MapwWithTestResult(tableRow) as JsonTableRowWithTestResult;
 
             Check.That(actual != null);
             Check.That(actual.Result.WasExecuted).IsTrue();
@@ -88,11 +88,12 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         {
             var tableRow = new TableRowWithTestResult("first string", "second string", "third string");
             var mapper = CreateTableRowMapper();
-            var actual = mapper.Map(tableRow) as JsonTableRowWithTestResult;
+            var actual = mapper.MapwWithTestResult(tableRow) as JsonTableRowWithTestResult;
 
             Check.That(actual != null);
             Check.That(actual).Contains("first string", "second string", "third string");
-            Check.That(actual.Result).Equals(null);
+            Check.That(actual.Result.WasExecuted).IsFalse();
+            Check.That(actual.Result.WasSuccessful).IsFalse();
         }
 
         [Test]
@@ -123,7 +124,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         {
             var tableRow = new TableRowWithTestResult { Result = TestResult.Passed };
             var mapper = CreateTableRowMapper();
-            var jsonTableRow = mapper.Map(tableRow) as JsonTableRowWithTestResult;
+            var jsonTableRow = mapper.MapwWithTestResult(tableRow) as JsonTableRowWithTestResult;
             Check.That(jsonTableRow != null);
 
             Check.That(jsonTableRow.Result.WasExecuted).IsEqualTo(true);

@@ -121,7 +121,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
             };
 
             var mapper = CreateMapper();
-            var actual = mapper.Map(table);
+            var actual = mapper.MapWithTestResults(table);
 
             Check.That(actual.DataRows.Count).IsEqualTo(2);
 

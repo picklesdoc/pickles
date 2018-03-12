@@ -51,7 +51,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
             };
         }
 
-        public JsonTable Map(ExampleTable table)
+        public JsonTable MapWithTestResults(ExampleTable table)
         {
             if (table == null)
             {
@@ -61,7 +61,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
             return new JsonTable
             {
                 HeaderRow = this.tableHeaderMapper.Map(table.HeaderRow),
-                DataRows = (table.DataRows ?? new List<TableRow>()).Select(this.tableRowMapper.Map).ToList()
+                DataRows = (table.DataRows ?? new List<TableRow>()).Select(x=>this.tableRowMapper.MapwWithTestResult(x as TableRowWithTestResult)).ToList()
             };
         }
     }
