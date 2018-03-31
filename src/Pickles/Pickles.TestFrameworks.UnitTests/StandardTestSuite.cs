@@ -276,7 +276,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
           var feature = new Feature { Name = "Scenarios With Special Characters" };
 
-          var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with german umlauts äöüß ÄÖÜ", Feature = feature };
+          var scenarioOutline = new ScenarioOutline { Name = "This is a scenario outline with german umlauts Ã¤Ã¶Ã¼ÃŸ Ã„Ã–Ãœ", Feature = feature };
 
           var actualResult = results.GetExampleResult(scenarioOutline, new string[] { "pass_1" });
 
@@ -289,7 +289,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             var feature = new Feature { Name = "Scenarios With Special Characters" };
 
-            var scenario = new Scenario {Name = "This is a scenario with danish characters æøå ÆØÅ", Feature = feature };
+            var scenario = new Scenario {Name = "This is a scenario with danish characters Ã¦Ã¸Ã¥ Ã†Ã˜Ã…", Feature = feature };
 
             var actualResult = results.GetScenarioResult(scenario);
 
