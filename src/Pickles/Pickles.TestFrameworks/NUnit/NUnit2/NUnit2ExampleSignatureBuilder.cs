@@ -31,17 +31,17 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
         {
             var stringBuilder = new StringBuilder();
 
-            var name = SpecFlowNameMapping.Build(scenarioOutline.Name.ToLowerInvariant());
+            var name = SpecFlowNameMapping.Build(scenarioOutline.Name);
             stringBuilder.Append(name).Append("\\(");
 
             foreach (var value in row)
             {
-                stringBuilder.AppendFormat("\"{0}\",", Regex.Escape(value.ToLowerInvariant()));
+                stringBuilder.AppendFormat("\"{0}\",", Regex.Escape(value));
             }
 
             stringBuilder.Remove(stringBuilder.Length - 1, 1);
 
-            return new Regex(stringBuilder.ToString());
+            return new Regex(stringBuilder.ToString(), RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
         }
     }
 }
