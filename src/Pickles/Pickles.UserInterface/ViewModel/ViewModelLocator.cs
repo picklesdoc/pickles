@@ -33,9 +33,8 @@
 */
 
 using System.IO.Abstractions;
-
+using CommonServiceLocator;
 using GalaSoft.MvvmLight.Ioc;
-using Microsoft.Practices.ServiceLocation;
 
 using PicklesDoc.Pickles.UserInterface.Settings;
 
