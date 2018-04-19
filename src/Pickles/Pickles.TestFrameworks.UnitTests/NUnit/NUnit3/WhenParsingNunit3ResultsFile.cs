@@ -135,5 +135,11 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.NUnit.NUnit3
         {
           base.ThenCanReadResultOfScenarioOutlineWithAmpersand();
         }
+
+        [Test]
+        public new void ThenCanReadResultOfScenarioWithSpanishCharacters()
+        {
+            base.ThenCanReadResultOfScenarioWithSpanishCharacters();
+        }
     }
 }

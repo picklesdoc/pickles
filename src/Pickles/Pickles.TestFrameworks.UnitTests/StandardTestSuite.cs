@@ -289,7 +289,20 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             var feature = new Feature { Name = "Scenarios With Special Characters" };
 
-            var scenario = new Scenario {Name = "This is a scenario with danish characters זרו ֶ״ֵ", Feature = feature };
+            var scenario = new Scenario { Name = "This is a scenario with danish characters זרו ֶ״ֵ", Feature = feature };
+
+            var actualResult = results.GetScenarioResult(scenario);
+
+            Check.That(actualResult).IsEqualTo(TestResult.Passed);
+        }
+
+        public void ThenCanReadResultOfScenarioWithSpanishCharacters()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenarios With Special Characters" };
+
+            var scenario = new Scenario { Name = "This is a scenario with spanish characters סביםףת", Feature = feature };
 
             var actualResult = results.GetScenarioResult(scenario);
 
