@@ -26,7 +26,7 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 
-- More robust scenario outline example mapping by using code from SpecFlow ([?](https://github.com/picklesdoc/pickles/pull/?)) (by [@dirkrombauts](https://github.com/dirkrombauts), based on an idea by [@janosmagyar](https://github.com/janosmagyar))
+- More robust scenario outline example mapping by using code from SpecFlow ([519](https://github.com/picklesdoc/pickles/pull/519)) (by [@dirkrombauts](https://github.com/dirkrombauts), based on an idea by [@janosmagyar](https://github.com/janosmagyar))
 
 ### Security
 
