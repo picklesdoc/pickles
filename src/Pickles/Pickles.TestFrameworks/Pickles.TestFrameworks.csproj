@@ -45,6 +45,7 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CodeFormattingExtensions.cs" />
     <Compile Include="CucumberJson\CucumberJsonResults.cs" />
     <Compile Include="CucumberJson\CucumberJsonSingleResults.cs" />
     <Compile Include="CucumberJson\Element.cs" />

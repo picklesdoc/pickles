@@ -38,8 +38,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
         {
             var testNameWithExample = exampleElement.name;
             var testNameOnly = testNameWithExample.Split('(')[0];
-            testNameWithExample = testNameWithExample.Replace(testNameOnly, Regex.Replace(testNameOnly, @"\s+", string.Empty)).ToLowerInvariant();
-            return signature.IsMatch(exampleElement.name.ToLowerInvariant()) || signature.IsMatch(testNameWithExample);
+            testNameWithExample = testNameWithExample.Replace(testNameOnly, Regex.Replace(testNameOnly, @"\s+", string.Empty));
+            return signature.IsMatch(exampleElement.name) || signature.IsMatch(testNameWithExample);
         }
     }
 }
