@@ -26,10 +26,14 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 
+### Security
+
+## [2.18.1] - 2018-04-20
+
+### Fixed
+
 - More robust scenario outline example mapping by using code from SpecFlow ([519](https://github.com/picklesdoc/pickles/pull/519)) (by [@dirkrombauts](https://github.com/dirkrombauts), based on an idea by [@janosmagyar](https://github.com/janosmagyar))
 - Only the table of the examples in a scenario outline should have test results ([515](https://github.com/picklesdoc/pickles/pull/515)) (by [@spacehole1](https://github.com/spacehole1))
-
-### Security
 
 ## [2.18.0] - 2018-02-02
 
