@@ -821,19 +821,11 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Tags",
-                      "showUpInScenarioInfo, andThisToo",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "showUpInScenarioInfo, andThisToo"
                     ],
                     [
                       "Title",
-                      "Showing information of the scenario",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Showing information of the scenario"
                     ]
                   ]
                 },
@@ -1013,43 +1005,23 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Tags",
-                      "showUpInScenarioInfo, andThisToo",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "showUpInScenarioInfo, andThisToo"
                     ],
                     [
                       "Title",
-                      "FeatureContext features",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "FeatureContext features"
                     ],
                     [
                       "TargetLanguage",
-                      "CSharp",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "CSharp"
                     ],
                     [
                       "Language",
-                      "en-US",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "en-US"
                     ],
                     [
                       "Description",
-                      "In order to",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "In order to"
                     ]
                   ]
                 },
@@ -1200,31 +1172,19 @@ jsonPWrapper ({
                       "Marcus",
                       "Cool",
                       "1972-10-09",
-                      "50",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "50"
                     ],
                     [
                       "Anders",
                       "Butch",
                       "1977-01-01",
-                      "500",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "500"
                     ],
                     [
                       "Jocke",
                       "Soft",
                       "1974-04-04",
-                      "1000",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1000"
                     ]
                   ]
                 },
@@ -1254,11 +1214,7 @@ jsonPWrapper ({
                       "Jocke",
                       "Soft",
                       "1974-04-04",
-                      "1000",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1000"
                     ]
                   ]
                 },
@@ -1293,31 +1249,19 @@ jsonPWrapper ({
                       "Marcus",
                       "Very cool",
                       "1972-10-09",
-                      "50",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "50"
                     ],
                     [
                       "Anders",
                       "Butch",
                       "1977-01-01",
-                      "500",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "500"
                     ],
                     [
                       "Jocke",
                       "Soft",
                       "1974-04-04",
-                      "1000",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1000"
                     ]
                   ]
                 },
@@ -1347,11 +1291,7 @@ jsonPWrapper ({
                       "Jocke",
                       "Soft",
                       "1974-04-04",
-                      "1000",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1000"
                     ]
                   ]
                 },
@@ -1382,35 +1322,19 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Name",
-                      "Marcus",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Marcus"
                     ],
                     [
                       "Style",
-                      "very cool",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "very cool"
                     ],
                     [
                       "Birth date",
-                      "1972-10-09",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1972-10-09"
                     ],
                     [
                       "Cred",
-                      "100",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "100"
                     ]
                   ]
                 },
@@ -1433,11 +1357,7 @@ jsonPWrapper ({
                       "Marcus",
                       "Very cool",
                       "1972-10-09",
-                      "1000",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1000"
                     ]
                   ]
                 },
@@ -1528,11 +1448,7 @@ jsonPWrapper ({
                       "Marcus",
                       "Very cool",
                       "10/9/1972",
-                      "1000",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1000"
                     ]
                   ]
                 },
@@ -1581,27 +1497,15 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Name",
-                      "Marcus",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Marcus"
                     ],
                     [
                       "Style",
-                      "Butch",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Butch"
                     ],
                     [
                       "Birth date",
-                      "1972-10-09",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1972-10-09"
                     ]
                   ]
                 },
@@ -1620,27 +1524,15 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Name",
-                      "Marcus",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Marcus"
                     ],
                     [
                       "Style",
-                      "Butch",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Butch"
                     ],
                     [
                       "BirthDate",
-                      "10/9/1972 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "10/9/1972 12:00:00 AM"
                     ]
                   ]
                 },
@@ -1659,19 +1551,11 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Name",
-                      "Marcus",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Marcus"
                     ],
                     [
                       "BirthDate",
-                      "10/9/1972 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "10/9/1972 12:00:00 AM"
                     ]
                   ]
                 },
@@ -1690,27 +1574,15 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Name",
-                      "Anders",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "Anders"
                     ],
                     [
                       "Style",
-                      "very cool",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "very cool"
                     ],
                     [
                       "BirthDate",
-                      "10/9/1974 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "10/9/1974 12:00:00 AM"
                     ]
                   ]
                 },
@@ -1750,29 +1622,17 @@ jsonPWrapper ({
                     [
                       "Marcus",
                       "Cool",
-                      "1972-10-09",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1972-10-09"
                     ],
                     [
                       "Anders",
                       "Butch",
-                      "1977-01-01",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1977-01-01"
                     ],
                     [
                       "Jocke",
                       "Soft",
-                      "1974-04-04",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1974-04-04"
                     ]
                   ]
                 },
@@ -1793,29 +1653,17 @@ jsonPWrapper ({
                     [
                       "Marcus",
                       "Cool",
-                      "10/9/1972 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "10/9/1972 12:00:00 AM"
                     ],
                     [
                       "Anders",
                       "Butch",
-                      "1/1/1977 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1/1/1977 12:00:00 AM"
                     ],
                     [
                       "Jocke",
                       "Soft",
-                      "4/4/1974 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "4/4/1974 12:00:00 AM"
                     ]
                   ]
                 },
@@ -1836,20 +1684,12 @@ jsonPWrapper ({
                     [
                       "Marcus",
                       "Cool",
-                      "10/9/1972 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "10/9/1972 12:00:00 AM"
                     ],
                     [
                       "Anders",
                       "Butch",
-                      "1/1/1977 12:00:00 AM",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1/1/1977 12:00:00 AM"
                     ]
                   ]
                 },
@@ -2632,179 +2472,91 @@ jsonPWrapper ({
                   "DataRows": [
                     [
                       "Chapter 1",
-                      "1",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "1"
                     ],
                     [
                       "Chapter 2",
-                      "5",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "5"
                     ],
                     [
                       "Chapter 3",
-                      "10",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "10"
                     ],
                     [
                       "Chapter 4",
-                      "15",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "15"
                     ],
                     [
                       "Chapter 5",
-                      "20",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "20"
                     ],
                     [
                       "Chapter 6",
-                      "25",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "25"
                     ],
                     [
                       "Chapter 7",
-                      "30",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "30"
                     ],
                     [
                       "Chapter 8",
-                      "35",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "35"
                     ],
                     [
                       "Chapter 9",
-                      "40",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "40"
                     ],
                     [
                       "Chapter 10",
-                      "45",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "45"
                     ],
                     [
                       "Chapter 11",
-                      "50",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "50"
                     ],
                     [
                       "Chapter 12",
-                      "55",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "55"
                     ],
                     [
                       "Chapter 13",
-                      "60",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "60"
                     ],
                     [
                       "Chapter 14",
-                      "65",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "65"
                     ],
                     [
                       "Chapter 15",
-                      "70",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "70"
                     ],
                     [
                       "Chapter 16",
-                      "75",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "75"
                     ],
                     [
                       "Chapter 17",
-                      "80",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "80"
                     ],
                     [
                       "Chapter 18",
-                      "85",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "85"
                     ],
                     [
                       "Chapter 19",
-                      "90",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "90"
                     ],
                     [
                       "Chapter 20",
-                      "95",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "95"
                     ],
                     [
                       "Chapter 21",
-                      "100",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "100"
                     ],
                     [
                       "Chapter 22",
-                      "105",
-                      {
-                        "WasExecuted": false,
-                        "WasSuccessful": false
-                      }
+                      "105"
                     ]
                   ]
                 },
@@ -3381,7 +3133,7 @@ jsonPWrapper ({
   },
   "Configuration": {
     "SutName": "Pickles",
-    "SutVersion": "2.18.0",
-    "GeneratedOn": "2 Februar 2018 15:09:08"
+    "SutVersion": "2.18.1",
+    "GeneratedOn": "20 April 2018 22:33:00"
   }
 });
