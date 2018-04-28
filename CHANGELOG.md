@@ -28,6 +28,16 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Security
 
+## [2.18.2] - 2018-04-28
+
+### Changed
+
+- Updated several external libraries
+
+### Fixed
+
+- Problem with Chocolatey Deployment
+
 ## [2.18.1] - 2018-04-20
 
 ### Fixed
