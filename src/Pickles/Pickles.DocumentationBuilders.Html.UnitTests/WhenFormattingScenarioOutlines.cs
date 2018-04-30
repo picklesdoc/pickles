@@ -39,7 +39,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
         [Test]
         public void ThenCanFormatCompleteScenarioOutlineCorrectly()
         {
-            var table = new Table
+            var table = new ExampleTable
             {
                 HeaderRow = new TableRow("Var1", "Var2", "Var3", "Var4"),
                 DataRows =
@@ -71,7 +71,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
         [Test]
         public void ThenCanFormatScenarioOutlineWithMissingNameCorrectly()
         {
-            var table = new Table
+            var table = new ExampleTable
             {
                 HeaderRow = new TableRow("Var1", "Var2", "Var3", "Var4"),
                 DataRows =
@@ -102,7 +102,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests
         [Test]
         public void ThenCanFormatScenarioOutlineWithMissingDescriptionCorrectly()
         {
-            var table = new Table
+            var table = new ExampleTable
             {
                 HeaderRow = new TableRow("Var1", "Var2", "Var3", "Var4"),
                 DataRows =

@@ -39,7 +39,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit2
         internal static bool IsMatchingTestCase(XElement x, Regex exampleSignature)
         {
             var name = x.Attribute("name");
-            return name != null && exampleSignature.IsMatch(name.Value.ToLowerInvariant().Replace(@"\\", @"\"));
+            return name != null && exampleSignature.IsMatch(name.Value.Replace(@"\\", @"\"));
         }
     }
 }

@@ -144,6 +144,72 @@ this.FeatureBackground();
             this.ScenarioCleanup();
         }
         
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Xunit.TraitAttribute("Description", "This is a scenario outline with german umlauts äöüß ÄÖÜ")]
+        [Xunit.InlineDataAttribute("pass_1", new string[0])]
+        public virtual void ThisIsAScenarioOutlineWithGermanUmlautsAouBAOU(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with german umlauts äöüß ÄÖÜ", exampleTags);
+#line 36
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 37
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Xunit.TraitAttribute("Description", "This is a scenario outline with ampersand &")]
+        [Xunit.InlineDataAttribute("pass_1", new string[0])]
+        public virtual void ThisIsAScenarioOutlineWithAmpersand(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario outline with ampersand &", exampleTags);
+#line 43
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 44
+  testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Xunit.TraitAttribute("Description", "This is a scenario with danish characters æøå ÆØÅ")]
+        public virtual void ThisIsAScenarioWithDanishCharactersAEoaAEOA()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario with danish characters æøå ÆØÅ", ((string[])(null)));
+#line 50
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 51
+  testRunner.Then("passing step", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Xunit.TraitAttribute("Description", "This is a scenario with spanish characters ñáéíóú")]
+        public virtual void ThisIsAScenarioWithSpanishCharactersNaeiou()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario with spanish characters ñáéíóú", ((string[])(null)));
+#line 53
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 54
+  testRunner.Then("passing step", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

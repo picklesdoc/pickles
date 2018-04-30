@@ -5,12 +5,6 @@ var {defineSupportCode} = require('cucumber');
 
 defineSupportCode(function({Then}) {
 
-    Then('the step with danish characters like æøå and ÆØÅ shall pass',
-        function(callback) {
-            // nothing to be done here
-            callback();
-        });
-
     Then(/^passing step$/,
         function(callback) {
             // nothing to be done here
@@ -29,4 +23,3 @@ defineSupportCode(function({Then}) {
             callback();
         });
 });
-

@@ -36,12 +36,10 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
 
         private bool ScenarioOutlineExampleIsMatch(assembliesAssemblyCollectionTest exampleElement, Regex signature)
         {
-            // split scenario outline title to name + parameters
-            var nameAndArgumentsSplitter = new Regex(@"^(?<name>(.*))(\(.*\))$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
-            var groups = nameAndArgumentsSplitter.Match(exampleElement.name).Groups;
-            var scenarioName = groups["name"].Value;
-            var scenariotNameWithNoSpacesAndSpecialCharacters = exampleElement.name.Replace(scenarioName, exampleElement.method);
-            return signature.IsMatch(exampleElement.name.ToLowerInvariant().Replace("\\", string.Empty)) || signature.IsMatch(scenariotNameWithNoSpacesAndSpecialCharacters.ToLowerInvariant().Replace("\\", string.Empty));
+            var testNameWithExample = exampleElement.name;
+            var testNameOnly = testNameWithExample.Split('(')[0];
+            testNameWithExample = testNameWithExample.Replace(testNameOnly, Regex.Replace(testNameOnly, @"\s+", string.Empty));
+            return signature.IsMatch(exampleElement.name) || signature.IsMatch(testNameWithExample);
         }
     }
 }

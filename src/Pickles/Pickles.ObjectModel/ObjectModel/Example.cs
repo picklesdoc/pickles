@@ -28,7 +28,7 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public string Description { get; set; }
 
-        public Table TableArgument { get; set; }
+        public ExampleTable TableArgument { get; set; }
 
         public List<string> Tags { get; set; }
     }

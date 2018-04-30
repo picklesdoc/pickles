@@ -43,18 +43,18 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.MsTest
             var scenarioOutline = new ScenarioOutline { Name = "Testing test", Feature = feature };
             scenarioOutline.Steps = new List<Step>();
 
-            var examples = new Table();
+            var examples = new ExampleTable();
             examples.HeaderRow = new TableRow();
             examples.HeaderRow.Cells.Add("result1");
             examples.HeaderRow.Cells.Add("result2");
             examples.HeaderRow.Cells.Add("result3");
-            var row = new TableRow();
+            var row = new TableRowWithTestResult();
             row.Cells.Add("1");
             row.Cells.Add("2");
             row.Cells.Add("3");
             examples.DataRows = new List<TableRow>();
             examples.DataRows.Add(row);
-            row = new TableRow();
+            row = new TableRowWithTestResult();
             row.Cells.Add("1");
             row.Cells.Add("");
             row.Cells.Add("4");

@@ -36,25 +36,33 @@ Target "AssemblyInfo" (fun _ ->
 Target "BuildCmd" (fun _ ->
     !! "src/Pickles/Pickles.CommandLine/Pickles.CommandLine.csproj"
       |> MSBuildRelease cmdDir "Build"
-      |> Log "AppBuild-Output: "
+      |> Log "AppBuild-Output: ";
+
+      CopyFiles cmdDir [ "./LICENSE.txt"; ];
 )
 
 Target "BuildMsBuild" (fun _ ->
     !! "src/Pickles/Pickles.MsBuild/Pickles.MsBuild.csproj"
       |> MSBuildRelease msBuildDir "Build"
-      |> Log "AppBuild-Output: "
+      |> Log "AppBuild-Output: ";
+
+      CopyFiles msBuildDir [ "./LICENSE.txt"; ];
 )
 
 Target "BuildPowerShell" (fun _ ->
     !! "src/Pickles/Pickles.PowerShell/Pickles.PowerShell.csproj"
       |> MSBuildRelease powerShellDir "Build"
-      |> Log "AppBuild-Output: "
+      |> Log "AppBuild-Output: ";
+
+      CopyFiles powerShellDir [ "./LICENSE.txt"; ];
 )
 
 Target "BuildGui" (fun _ ->
     !! "src/Pickles/Pickles.UserInterface/Pickles.UserInterface.csproj"
       |> MSBuildRelease guiDir "Build"
-      |> Log "AppBuild-Output: "
+      |> Log "AppBuild-Output: ";
+
+      CopyFiles guiDir [ "./LICENSE.txt"; ];
 )
 
 Target "BuildTest" (fun _ ->

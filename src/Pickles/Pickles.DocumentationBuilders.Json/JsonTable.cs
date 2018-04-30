@@ -28,4 +28,5 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 
         public List<JsonTableRow> DataRows { get; set; }
     }
+
 }

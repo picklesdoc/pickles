@@ -19,6 +19,7 @@
             "line": 9
           }
         ],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -30,7 +31,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3
+              "duration": 2000000
             }
           },
           {
@@ -43,7 +44,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1
+              "duration": 1000000
             }
           },
           {
@@ -55,8 +56,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           },
           {
@@ -68,7 +68,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -80,7 +81,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -108,6 +110,7 @@
             "line": 9
           }
         ],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -130,7 +133,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -143,7 +147,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1
+              "duration": 1000000
             }
           },
           {
@@ -168,7 +172,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1
+              "duration": 1000000
             }
           },
           {
@@ -196,6 +200,7 @@
             "line": 22
           }
         ],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -254,7 +259,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:30"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -270,6 +276,7 @@
             "line": 29
           }
         ],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -292,8 +299,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           },
           {
@@ -337,6 +343,7 @@
         "line": 43,
         "name": "Not automated adding two numbers",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -396,6 +403,7 @@
         "line": 8,
         "name": "Add two numbers",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -407,8 +415,8 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
+              "duration": 2000000,
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
             }
           },
           {
@@ -479,6 +487,7 @@
         "line": 23,
         "name": "Adding several numbers",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -490,8 +499,7 @@
             },
             "result": {
               "status": "failed",
-              "duration": 1,
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
             }
           },
           {
@@ -574,6 +582,7 @@
         "line": 24,
         "name": "Adding several numbers",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -585,7 +594,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
             }
           },
           {
@@ -678,6 +687,7 @@
         "line": 3,
         "name": "Failing Feature Passing Scenario",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -685,10 +695,11 @@
             "line": 4,
             "name": "passing step",
             "match": {
-              "location": "features\\stepdefinitions\\MinimalSteps.js:14"
+              "location": "features\\stepdefinitions\\MinimalSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -699,6 +710,7 @@
         "line": 6,
         "name": "Failing Feature Inconclusive Scenario",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -706,11 +718,10 @@
             "line": 7,
             "name": "inconclusive step",
             "match": {
-              "location": "features\\stepdefinitions\\MinimalSteps.js:20"
+              "location": "features\\stepdefinitions\\MinimalSteps.js:14"
             },
             "result": {
-              "status": "pending",
-              "duration": 1
+              "status": "pending"
             }
           }
         ]
@@ -721,6 +732,7 @@
         "line": 9,
         "name": "Failing Feature Failing Scenario",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -728,11 +740,11 @@
             "line": 10,
             "name": "failing step",
             "match": {
-              "location": "features\\stepdefinitions\\MinimalSteps.js:26"
+              "location": "features\\stepdefinitions\\MinimalSteps.js:20"
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:28:20)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:22:20)"
             }
           }
         ]
@@ -753,6 +765,7 @@
         "line": 3,
         "name": "Inconclusive Feature Passing Scenario",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -760,7 +773,7 @@
             "line": 4,
             "name": "passing step",
             "match": {
-              "location": "features\\stepdefinitions\\MinimalSteps.js:14"
+              "location": "features\\stepdefinitions\\MinimalSteps.js:8"
             },
             "result": {
               "status": "passed"
@@ -774,6 +787,7 @@
         "line": 6,
         "name": "Inconclusive Feature Inconclusive Scenario",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -781,10 +795,11 @@
             "line": 7,
             "name": "inconclusive step",
             "match": {
-              "location": "features\\stepdefinitions\\MinimalSteps.js:20"
+              "location": "features\\stepdefinitions\\MinimalSteps.js:14"
             },
             "result": {
-              "status": "pending"
+              "status": "pending",
+              "duration": 1000000
             }
           }
         ]
@@ -805,6 +820,7 @@
         "line": 3,
         "name": "Passing Feature Passing Scenario",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -812,7 +828,7 @@
             "line": 4,
             "name": "passing step",
             "match": {
-              "location": "features\\stepdefinitions\\MinimalSteps.js:14"
+              "location": "features\\stepdefinitions\\MinimalSteps.js:8"
             },
             "result": {
               "status": "passed"
@@ -836,6 +852,7 @@
         "line": 6,
         "name": "Not automated scenario 1",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -881,6 +898,7 @@
         "line": 11,
         "name": "Not automated scenario 2",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -926,6 +944,7 @@
         "line": 16,
         "name": "Not automated scenario 3",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -983,6 +1002,7 @@
         "line": 12,
         "name": "This is a scenario outline where all scenarios pass",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1005,6 +1025,7 @@
         "line": 13,
         "name": "This is a scenario outline where all scenarios pass",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1027,6 +1048,7 @@
         "line": 14,
         "name": "This is a scenario outline where all scenarios pass",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1049,6 +1071,7 @@
         "line": 25,
         "name": "This is a scenario outline where one scenario is inconclusive",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1071,6 +1094,7 @@
         "line": 26,
         "name": "This is a scenario outline where one scenario is inconclusive",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1081,7 +1105,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1093,6 +1118,7 @@
         "line": 27,
         "name": "This is a scenario outline where one scenario is inconclusive",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1115,6 +1141,7 @@
         "line": 38,
         "name": "This is a scenario outline where one scenario fails",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1137,6 +1164,7 @@
         "line": 39,
         "name": "This is a scenario outline where one scenario fails",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1159,6 +1187,7 @@
         "line": 40,
         "name": "This is a scenario outline where one scenario fails",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1170,7 +1199,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
             }
           }
         ]
@@ -1181,6 +1210,7 @@
         "line": 49,
         "name": "And we can go totally bonkers with multiple example sections.",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1202,6 +1232,7 @@
         "line": 50,
         "name": "And we can go totally bonkers with multiple example sections.",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1212,8 +1243,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           }
         ]
@@ -1224,6 +1254,7 @@
         "line": 54,
         "name": "And we can go totally bonkers with multiple example sections.",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1245,6 +1276,7 @@
         "line": 55,
         "name": "And we can go totally bonkers with multiple example sections.",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1266,6 +1298,7 @@
         "line": 59,
         "name": "And we can go totally bonkers with multiple example sections.",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1277,7 +1310,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
             }
           }
         ]
@@ -1288,6 +1321,7 @@
         "line": 60,
         "name": "And we can go totally bonkers with multiple example sections.",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1299,7 +1333,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\Others\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
             }
           }
         ]
@@ -1310,6 +1344,7 @@
         "line": 69,
         "name": "Deal correctly with backslashes in the examples",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1320,8 +1355,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           }
         ]
@@ -1332,6 +1366,7 @@
         "line": 78,
         "name": "Deal correctly with parenthesis in the examples",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1342,8 +1377,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:28"
             },
             "result": {
-              "status": "passed",
-              "duration": 2
+              "status": "passed"
             }
           }
         ]
@@ -1354,6 +1388,7 @@
         "line": 88,
         "name": "Deal correctly with overlong example values",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1365,7 +1400,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1
+              "duration": 1000000
             }
           },
           {
@@ -1377,8 +1412,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:38"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           },
           {
@@ -1390,8 +1424,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           }
         ]
@@ -1413,6 +1446,7 @@
         "line": 7,
         "name": "This is a scenario with parentheses, hyphen and comma (10-20, 30-40)",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1448,7 +1482,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1
+              "duration": 2000000
             }
           },
           {
@@ -1483,6 +1517,7 @@
         "line": 19,
         "name": "This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1516,6 +1551,7 @@
         "line": 27,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1538,7 +1574,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1561,6 +1598,7 @@
         "line": 28,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1606,6 +1644,7 @@
         "line": 29,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1651,6 +1690,7 @@
         "line": 30,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1696,6 +1736,7 @@
         "line": 31,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1730,7 +1771,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1741,6 +1783,7 @@
         "line": 32,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1775,7 +1818,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1786,6 +1830,7 @@
         "line": 33,
         "name": "This scenario contains examples with Regex-special characters",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1796,7 +1841,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:10"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1820,8 +1866,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           }
         ]
@@ -1832,6 +1877,7 @@
         "line": 40,
         "name": "This is a scenario outline with german umlauts äöüß ÄÖÜ",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1865,6 +1911,7 @@
         "line": 47,
         "name": "This is a scenario outline with ampersand &",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1875,8 +1922,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:10"
             },
             "result": {
-              "status": "passed",
-              "duration": 1
+              "status": "passed"
             }
           },
           {
@@ -1899,6 +1945,7 @@
         "line": 49,
         "name": "This is a scenario with danish characters æøå ÆØÅ",
         "tags": [],
+        "type": "scenario",
         "steps": [
           {
             "arguments": [],
@@ -1916,12 +1963,48 @@
             "arguments": [],
             "keyword": "Then ",
             "line": 50,
-            "name": "the step with danish characters like æøå and ÆØÅ shall pass",
+            "name": "passing step",
             "match": {
               "location": "features\\stepdefinitions\\MinimalSteps.js:8"
             },
             "result": {
               "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-is-a-scenario-with-spanish-characters-ñáéíóú",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "This is a scenario with spanish characters ñáéíóú",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "the calculator has clean memory",
+            "match": {
+              "location": "features\\stepdefinitions\\AdditionSteps.js:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 53,
+            "name": "passing step",
+            "match": {
+              "location": "features\\stepdefinitions\\MinimalSteps.js:8"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]

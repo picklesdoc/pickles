@@ -101,7 +101,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         {
             var example = new Example
             {
-                TableArgument = new Table { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
+                TableArgument = new ExampleTable { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
             };
 
             var mapper = CreateMapper();
@@ -116,7 +116,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         {
             var example = new Example
             {
-                TableArgument = new Table { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
+                TableArgument = new ExampleTable { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
             };
 
             var mapper = CreateMapper();
@@ -130,7 +130,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
         {
             var example = new Example
             {
-                TableArgument = new Table { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
+                TableArgument = new ExampleTable { HeaderRow = new TableRow("Placeholder 1", "Placeholder 2") }
             };
 
             var mapper = CreateMapper();

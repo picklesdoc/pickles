@@ -50,5 +50,19 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
                 DataRows = (table.DataRows ?? new List<TableRow>()).Select(this.tableRowMapper.Map).ToList()
             };
         }
+
+        public JsonTable MapWithTestResults(ExampleTable table)
+        {
+            if (table == null)
+            {
+                return null;
+            }
+
+            return new JsonTable
+            {
+                HeaderRow = this.tableHeaderMapper.Map(table.HeaderRow),
+                DataRows = (table.DataRows ?? new List<TableRow>()).Select(x=>this.tableRowMapper.MapwWithTestResult(x as TableRowWithTestResult)).ToList()
+            };
+        }
     }
 }

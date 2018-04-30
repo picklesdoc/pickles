@@ -66,5 +66,45 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
             worksheet.Range(startRow, TableStartColumn, lastRow, lastColumn).Style.Border.RightBorder =
                 XLBorderStyleValues.Thin;
         }
+
+
+        public void Format(IXLWorksheet worksheet, ExampleTable table, ref int row)
+        {
+            int startRow = row;
+            int headerColumn = TableStartColumn;
+            foreach (string cell in table.HeaderRow.Cells)
+            {
+                worksheet.Cell(row, headerColumn).Style.Font.SetBold();
+                worksheet.Cell(row, headerColumn).Style.Font.SetItalic();
+                worksheet.Cell(row, headerColumn).Style.Fill.SetBackgroundColor(XLColor.AliceBlue);
+                worksheet.Cell(row, headerColumn++).Value = cell;
+            }
+
+            row++;
+
+            foreach (TableRow dataRow in table.DataRows)
+            {
+                int dataColumn = TableStartColumn;
+                foreach (string cell in dataRow.Cells)
+                {
+                    worksheet.Cell(row, dataColumn++).Value = cell;
+                }
+
+                row++;
+            }
+
+            int lastRow = row - 1;
+            int lastColumn = headerColumn - 1;
+
+            worksheet.Range(startRow, TableStartColumn, lastRow, lastColumn).Style.Border.TopBorder =
+                XLBorderStyleValues.Thin;
+            worksheet.Range(startRow, TableStartColumn, lastRow, lastColumn).Style.Border.LeftBorder =
+                XLBorderStyleValues.Thin;
+            worksheet.Range(startRow, TableStartColumn, lastRow, lastColumn).Style.Border.BottomBorder =
+                XLBorderStyleValues.Thin;
+            worksheet.Range(startRow, TableStartColumn, lastRow, lastColumn).Style.Border.RightBorder =
+                XLBorderStyleValues.Thin;
+        }
     }
+
 }

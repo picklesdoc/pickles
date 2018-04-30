@@ -61,14 +61,14 @@ namespace PicklesDoc.Pickles.Test.Formatters
             examples.Add(new Example
             {
                 Description = "My Example Description",
-                TableArgument = new Table
+                TableArgument = new ExampleTable
                 {
                     HeaderRow = new TableRow("Cell1"),
                     DataRows =
                         new List<TableRow>(
                             new[]
                             {
-                                new TableRow("Value1")
+                                new TableRowWithTestResult("Value1")
                             })
                 },
             });

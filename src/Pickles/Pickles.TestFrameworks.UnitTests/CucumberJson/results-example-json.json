@@ -23,7 +23,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 73481
             }
           }
         ]
@@ -51,7 +51,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 43062
             }
           },
           {
@@ -63,7 +63,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 68741
             }
           },
           {
@@ -75,7 +75,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 21729
             }
           },
           {
@@ -87,7 +87,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 23704
             }
           },
           {
@@ -99,7 +99,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1049000
+              "duration": 1881680
             }
           }
         ]
@@ -120,7 +120,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 34370
             }
           }
         ]
@@ -148,7 +148,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 32395
             }
           },
           {
@@ -160,7 +160,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 18963
             }
           },
           {
@@ -172,7 +172,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 19358
             }
           },
           {
@@ -184,7 +184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 14222
             }
           },
           {
@@ -196,7 +196,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 52543
             }
           }
         ]
@@ -217,7 +217,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 32790
             }
           }
         ]
@@ -245,7 +245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 30420
             }
           },
           {
@@ -257,7 +257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 18963
             }
           },
           {
@@ -269,7 +269,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 14223
             }
           },
           {
@@ -281,7 +281,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 43852
             }
           }
         ]
@@ -302,7 +302,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 29630
             }
           }
         ]
@@ -330,7 +330,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 35555
             }
           },
           {
@@ -343,7 +343,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"fail\"\n     got: \"this is a hacky way of making the scenario with a non-integer number\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:11:in `/^I have entered (\\d+)\\.(\\d+) into the calculator$/'\nfeatures/Addition.feature:32:in `And I have entered 2.2 into the calculator'",
-              "duration": 16043000
+              "duration": 34923076
             }
           },
           {
@@ -386,7 +386,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 47013
             }
           }
         ]
@@ -461,7 +461,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:29:in `/^the background step fails$/'\nfeatures/FailingBackground.feature:5:in `Given the background step fails'",
-              "duration": 0
+              "duration": 413234
             }
           },
           {
@@ -548,7 +548,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:29:in `/^the background step fails$/'\nfeatures/FailingBackground.feature:5:in `Given the background step fails'",
-              "duration": 0
+              "duration": 352395
             }
           },
           {
@@ -646,7 +646,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:29:in `/^the background step fails$/'\nfeatures/FailingBackground.feature:5:in `Given the background step fails'",
-              "duration": 0
+              "duration": 298272
             }
           },
           {
@@ -754,7 +754,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 37530
             }
           }
         ]
@@ -772,12 +772,12 @@
             "name": "inconclusive step",
             "line": 7,
             "match": {
-              "location": "features/step_definitions/MinimalSteps.rb:9"
+              "location": "features/step_definitions/MinimalSteps.rb:5"
             },
             "result": {
               "status": "pending",
-              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/MinimalSteps.rb:10:in `/^inconclusive step$/'\nfeatures/Minimal Features/Failing.feature:7:in `Then inconclusive step'",
-              "duration": 0
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/MinimalSteps.rb:6:in `/^inconclusive step$/'\nfeatures/Minimal Features/Failing.feature:7:in `Then inconclusive step'",
+              "duration": 212543
             }
           }
         ]
@@ -795,12 +795,12 @@
             "name": "failing step",
             "line": 10,
             "match": {
-              "location": "features/step_definitions/MinimalSteps.rb:13"
+              "location": "features/step_definitions/MinimalSteps.rb:9"
             },
             "result": {
               "status": "failed",
-              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/MinimalSteps.rb:14:in `/^failing step$/'\nfeatures/Minimal Features/Failing.feature:10:in `Then failing step'",
-              "duration": 0
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/MinimalSteps.rb:10:in `/^failing step$/'\nfeatures/Minimal Features/Failing.feature:10:in `Then failing step'",
+              "duration": 378470
             }
           }
         ]
@@ -832,7 +832,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 39507
             }
           }
         ]
@@ -850,12 +850,12 @@
             "name": "inconclusive step",
             "line": 7,
             "match": {
-              "location": "features/step_definitions/MinimalSteps.rb:9"
+              "location": "features/step_definitions/MinimalSteps.rb:5"
             },
             "result": {
               "status": "pending",
-              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/MinimalSteps.rb:10:in `/^inconclusive step$/'\nfeatures/Minimal Features/Inconclusive.feature:7:in `Then inconclusive step'",
-              "duration": 0
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/MinimalSteps.rb:6:in `/^inconclusive step$/'\nfeatures/Minimal Features/Inconclusive.feature:7:in `Then inconclusive step'",
+              "duration": 249284
             }
           }
         ]
@@ -887,7 +887,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 32790
             }
           }
         ]
@@ -1118,7 +1118,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 43457
             }
           }
         ]
@@ -1140,7 +1140,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 40691
             }
           }
         ]
@@ -1162,7 +1162,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 28444
             }
           }
         ]
@@ -1184,7 +1184,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 45828
             }
           }
         ]
@@ -1206,7 +1206,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 30420
             }
           }
         ]
@@ -1229,7 +1229,7 @@
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:27:in `Then the scenario will 'inconclusive_1''\nfeatures/ScenarioOutlines.feature:21:in `Then the scenario will '<result>''",
-              "duration": 0
+              "duration": 254420
             }
           }
         ]
@@ -1251,7 +1251,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 41876
             }
           }
         ]
@@ -1273,7 +1273,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 29629
             }
           }
         ]
@@ -1296,7 +1296,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:40:in `Then the scenario will 'fail_1''\nfeatures/ScenarioOutlines.feature:34:in `Then the scenario will '<result>''",
-              "duration": 1003000
+              "duration": 285234
             }
           }
         ]
@@ -1318,7 +1318,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 55308
             }
           }
         ]
@@ -1340,7 +1340,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 77432
             }
           }
         ]
@@ -1363,7 +1363,7 @@
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:54:in `Then the scenario will 'inconclusive_1''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 0
+              "duration": 151308
             }
           }
         ]
@@ -1386,7 +1386,7 @@
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:55:in `Then the scenario will 'inconclusive_2''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 0
+              "duration": 121679
             }
           }
         ]
@@ -1409,7 +1409,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:59:in `Then the scenario will 'fail_1''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 0
+              "duration": 235061
             }
           }
         ]
@@ -1432,7 +1432,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:60:in `Then the scenario will 'fail_2''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 1000000
+              "duration": 193580
             }
           }
         ]
@@ -1454,7 +1454,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 19358
             }
           }
         ]
@@ -1476,7 +1476,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 52544
             }
           }
         ]
@@ -1498,7 +1498,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 39507
             }
           },
           {
@@ -1510,7 +1510,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 14618
             }
           },
           {
@@ -1522,7 +1522,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 13037
             }
           }
         ]
@@ -1553,7 +1553,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 28050
             }
           }
         ]
@@ -1575,7 +1575,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 41877
             }
           },
           {
@@ -1587,7 +1587,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 11062
             }
           },
           {
@@ -1599,7 +1599,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 13432
             }
           },
           {
@@ -1611,7 +1611,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 37926
             }
           }
         ]
@@ -1632,7 +1632,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 33580
             }
           }
         ]
@@ -1654,7 +1654,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 46617
             }
           }
         ]
@@ -1675,7 +1675,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 23703
             }
           }
         ]
@@ -1697,7 +1697,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1032000
+              "duration": 18963
             }
           },
           {
@@ -1709,7 +1709,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 11852
             }
           }
         ]
@@ -1730,7 +1730,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 17383
             }
           }
         ]
@@ -1752,7 +1752,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 15408
             }
           },
           {
@@ -1764,7 +1764,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 10271
             }
           }
         ]
@@ -1785,7 +1785,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 13827
             }
           }
         ]
@@ -1807,7 +1807,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 15407
             }
           },
           {
@@ -1819,7 +1819,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 10272
             }
           }
         ]
@@ -1840,7 +1840,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 14222
             }
           }
         ]
@@ -1862,7 +1862,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 14617
             }
           },
           {
@@ -1874,7 +1874,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 10272
             }
           }
         ]
@@ -1895,7 +1895,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 108642
             }
           }
         ]
@@ -1917,7 +1917,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 66370
             }
           },
           {
@@ -1929,7 +1929,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 34371
             }
           }
         ]
@@ -1950,7 +1950,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 24889
             }
           }
         ]
@@ -1972,7 +1972,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 18963
             }
           },
           {
@@ -1984,7 +1984,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 12642
             }
           }
         ]
@@ -2005,7 +2005,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 13432
             }
           }
         ]
@@ -2027,7 +2027,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 24493
             }
           },
           {
@@ -2039,7 +2039,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 11061
             }
           }
         ]
@@ -2060,7 +2060,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 17383
             }
           }
         ]
@@ -2082,7 +2082,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 13432
             }
           }
         ]
@@ -2103,7 +2103,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 38321
             }
           }
         ]
@@ -2125,7 +2125,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 15012
             }
           }
         ]
@@ -2146,7 +2146,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 40296
             }
           }
         ]
@@ -2161,14 +2161,57 @@
         "steps": [
           {
             "keyword": "Then ",
-            "name": "the scenario with danish characters like æøå and ÆØÅ shall pass",
+            "name": "passing step",
             "line": 50,
             "match": {
-              "location": "features/step_definitions/MinimalSteps.rb:5"
+              "location": "features/step_definitions/MinimalSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 32000
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Background",
+        "name": "",
+        "description": "",
+        "line": 4,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Given ",
+            "name": "the calculator has clean memory",
+            "line": 5,
+            "match": {
+              "location": "features/step_definitions/AdditionSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 39111
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenarios-with-special-characters;this-is-a-scenario-with-spanish-characters-ñáéíóú",
+        "keyword": "Scenario",
+        "name": "This is a scenario with spanish characters ñáéíóú",
+        "description": "",
+        "line": 52,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "passing step",
+            "line": 53,
+            "match": {
+              "location": "features/step_definitions/MinimalSteps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12247
             }
           }
         ]

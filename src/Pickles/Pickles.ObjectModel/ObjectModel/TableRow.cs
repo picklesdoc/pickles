@@ -45,6 +45,22 @@ namespace PicklesDoc.Pickles.ObjectModel
             get { return this.tableCells; }
         }
 
+    }
+
+    public class TableRowWithTestResult : TableRow
+    {
+        public TableRowWithTestResult()
+        {
+        }
+
+        public TableRowWithTestResult(params string[] cells):base(cells)
+        {
+        }
+
+        public TableRowWithTestResult(IEnumerable<string> cells):base(cells)
+        {
+        }
+
         public TestResult Result { get; set; }
     }
 }

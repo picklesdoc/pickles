@@ -189,7 +189,23 @@ this.ScenarioSetup(scenarioInfo);
 #line 4
 this.FeatureBackground();
 #line 51
-  testRunner.Then("the step with danish characters like æøå and ÆØÅ shall pass", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+  testRunner.Then("passing step", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.FactAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenarios With Special Characters")]
+        [Xunit.TraitAttribute("Description", "This is a scenario with spanish characters ñáéíóú")]
+        public virtual void ThisIsAScenarioWithSpanishCharactersNaeiou()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("This is a scenario with spanish characters ñáéíóú", ((string[])(null)));
+#line 53
+this.ScenarioSetup(scenarioInfo);
+#line 4
+this.FeatureBackground();
+#line 54
+  testRunner.Then("passing step", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

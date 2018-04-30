@@ -14,14 +14,14 @@ Scenario: This is a scenario with parentheses, hyphen and comma (10-20, 30-40)
 Scenario Outline: This is a scenario outline with parentheses, hyphen and comma (10-20, 30-40)
   Then the scenario will '<result>'
 
-  Examples: 
+  Examples:
     | result |
     | pass_1 |
 
 Scenario Outline: This scenario contains examples with Regex-special characters
   When I have special characters for regexes in the value, for example a '<regex>'
   Then the scenario will 'pass_1'
-  
+
   Examples:
     | regex                          |
     | **                             |
@@ -31,20 +31,23 @@ Scenario Outline: This scenario contains examples with Regex-special characters
     | {}                             |
     | ()                             |
     | ^.*(?<foo>BAR)\s[^0-9]{3,4}A+$ |
-	
+
 Scenario Outline: This is a scenario outline with german umlauts äöüß ÄÖÜ
   Then the scenario will '<result>'
 
-  Examples: 
+  Examples:
     | result |
     | pass_1 |
 
 Scenario Outline: This is a scenario outline with ampersand &
   Then the scenario will '<result>'
 
-  Examples: 
+  Examples:
     | result |
     | pass_1 |
-	
+
 Scenario: This is a scenario with danish characters æøå ÆØÅ
-  Then the step with danish characters like æøå and ÆØÅ shall pass
+  Then passing step
+
+Scenario: This is a scenario with spanish characters ñáéíóú
+  Then passing step

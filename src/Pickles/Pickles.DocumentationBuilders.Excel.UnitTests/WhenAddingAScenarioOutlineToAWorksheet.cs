@@ -41,10 +41,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
         public void ThenSingleScenarioOutlineAddedSuccessfully()
         {
             var excelScenarioFormatter = Container.Resolve<ExcelScenarioOutlineFormatter>();
-            var exampleTable = new Table();
+            var exampleTable = new ExampleTable();
             exampleTable.HeaderRow = new TableRow("Var1", "Var2", "Var3", "Var4");
             exampleTable.DataRows =
-                new List<TableRow>(new[] { new TableRow("1", "2", "3", "4"), new TableRow("5", "6", "7", "8") });
+                new List<TableRow>(new[] { new TableRowWithTestResult("1", "2", "3", "4"), new TableRowWithTestResult("5", "6", "7", "8") });
             var example = new Example { Name = "Examples", Description = string.Empty, TableArgument = exampleTable };
             var examples = new List<Example>();
             examples.Add(example);
@@ -87,10 +87,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
         public void ThenSingleScenarioOutlineWithStepsAddedSuccessfully()
         {
             var excelScenarioFormatter = Container.Resolve<ExcelScenarioOutlineFormatter>();
-            var exampleTable = new Table();
+            var exampleTable = new ExampleTable();
             exampleTable.HeaderRow = new TableRow("Var1", "Var2", "Var3", "Var4");
             exampleTable.DataRows =
-                new List<TableRow>(new[] { new TableRow("1", "2", "3", "4"), new TableRow("5", "6", "7", "8") });
+                new List<TableRow>(new[] { new TableRowWithTestResult("1", "2", "3", "4"), new TableRowWithTestResult("5", "6", "7", "8") });
             var example = new Example { Name = "Examples", Description = string.Empty, TableArgument = exampleTable };
             var examples = new List<Example>();
             examples.Add(example);
@@ -162,7 +162,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                     {
                         Name = "Examples",
                         Description = string.Empty,
-                        TableArgument = new Table
+                        TableArgument = new ExampleTable
                         {
                             HeaderRow = new TableRow(),
                             DataRows = new List<TableRow>()

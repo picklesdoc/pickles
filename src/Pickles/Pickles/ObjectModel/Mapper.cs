@@ -72,7 +72,37 @@ namespace PicklesDoc.Pickles.ObjectModel
             return new Table
             {
                 HeaderRow = this.MapToTableRow(tableRows.First()),
-                DataRows = tableRows.Skip(1).Select(this.MapToTableRow).ToList()
+                DataRows = tableRows.Skip(1).Select(MapToTableRow).ToList()
+            };
+        }
+
+        public TableRow MapToTableRowWithTestResult(G.TableRow tableRow)
+        {
+            if (tableRow == null)
+            {
+                return null;
+            }
+
+            return new TableRowWithTestResult(tableRow.Cells.Select(this.MapToString));
+        }
+
+        public Table MapToExampleTable(G.DataTable dataTable)
+        {
+            if (dataTable == null)
+            {
+                return null;
+            }
+
+            var tableRows = dataTable.Rows;
+            return this.MapToExampleTable(tableRows);
+        }
+
+        public ExampleTable MapToExampleTable(IEnumerable<G.TableRow> tableRows)
+        {
+            return new ExampleTable
+            {
+                HeaderRow = this.MapToTableRow(tableRows.First()),
+                DataRows = tableRows.Skip(1).Select(MapToTableRowWithTestResult).ToList()
             };
         }
 
@@ -189,7 +219,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             {
                 Description = examples.Description,
                 Name = examples.Name,
-                TableArgument = this.MapToTable(((G.IHasRows) examples).Rows),
+                TableArgument = this.MapToExampleTable(((G.IHasRows) examples).Rows),
                 Tags = examples.Tags?.Select(this.MapToString).ToList()
             };
         }

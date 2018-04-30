@@ -34,15 +34,15 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit
         {
             var stringBuilder = new StringBuilder();
 
-            var name = SpecFlowNameMapping.Build(scenarioOutline.Name.ToLowerInvariant());
+            var name = SpecFlowNameMapping.Build(scenarioOutline.Name);
             stringBuilder.Append(name).Append("\\(");
 
             foreach (var value in row.Select(v => v.Length > MaxExampleValueLength ? new { Value = v.Substring(0, MaxExampleValueLength), Ellipsis = "..." } : new { Value = v, Ellipsis = "" }))
-                stringBuilder.AppendFormat("(.*): \"{0}\"{1}, ", Regex.Escape(value.Value.ToLowerInvariant()), value.Ellipsis);
+                stringBuilder.AppendFormat("(.*): \"{0}\"{1}, ", Regex.Escape(value.Value), value.Ellipsis);
 
             stringBuilder.Remove(stringBuilder.Length - 2, 2);
 
-            return new Regex(stringBuilder.ToString());
+            return new Regex(stringBuilder.ToString(), RegexOptions.CultureInvariant | RegexOptions.IgnoreCase);
         }
     }
 }

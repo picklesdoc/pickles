@@ -45,7 +45,8 @@ Optionally, *Pickles* can **integrate test results**, so that your stakeholders 
         <file src="Gherkin.dll" target="tools" />
         <file src="MahApps.Metro.dll" target="tools" />
         <file src="MarkdownDeep.dll" target="tools" />
-        <file src="Microsoft.Practices.ServiceLocation.dll" target="tools" />
+        <file src="CommonServiceLocator.dll" target="tools" />
+        <file src="ControlzEx.dll" target="tools" />
         <file src="Newtonsoft.Json.dll" target="tools" />
         <file src="NLog.dll" target="tools" />
         <file src="NlogViewer.dll" target="tools" />
