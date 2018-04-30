@@ -41,7 +41,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
             var groups = nameAndArgumentsSplitter.Match(exampleElement.name).Groups;
             var scenarioName = groups["name"].Value;
             var scenariotNameWithNoSpacesAndSpecialCharacters = exampleElement.name.Replace(scenarioName, exampleElement.method);
-            return signature.IsMatch(exampleElement.name.ToLowerInvariant()) || signature.IsMatch(scenariotNameWithNoSpacesAndSpecialCharacters.ToLowerInvariant());
+             return signature.IsMatch(exampleElement.name.ToLowerInvariant().Replace("\\", string.Empty)) || signature.IsMatch(scenariotNameWithNoSpacesAndSpecialCharacters.ToLowerInvariant().Replace("\\", string.Empty));
         }
     }
 }
