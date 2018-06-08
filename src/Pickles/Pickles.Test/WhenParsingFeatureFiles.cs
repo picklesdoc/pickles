@@ -513,13 +513,22 @@ Feature: Test
   Scenario: C scenario
     Given some feature
     When it runs
+    Then I should see that this thing happens
+
+    @scenario-tag-1 @scenario-tag-2
+  Scenario: D scenario
+    Given some feature
+    When it runs
     Then I should see that this thing happens";
 
             var parser = Container.Resolve<FeatureParser>();
             var feature = parser.Parse(new StringReader(featureText));
 
-            Check.That(feature).IsNotNull();
-            Check.That(feature.FeatureElements).IsEmpty();
+            Check.That(feature.FeatureElements.Count).IsEqualTo(1);
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "A scenario")).IsNull();
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "B scenario")).IsNull();
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "C scenario")).IsNull();
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "D scenario")).IsNotNull();
         }
     }
 }
