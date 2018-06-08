@@ -457,7 +457,7 @@ Feature: Test
         }
 
         [Test]
-        public void Then_can_parse_and_ignore_scenario_with_tag_in_configuration_ignore_tag_and_keep_feature()
+        public void Then_can_parse_and_ignore_scenario_with_tag_in_configuration_ignore_tag_and_do_not_keep_feature()
         {
             var featureText =
                 @"# ignore this comment
@@ -482,8 +482,7 @@ Feature: Test
             var parser = Container.Resolve<FeatureParser>();
             var feature = parser.Parse(new StringReader(featureText));
 
-            Check.That(feature).IsNotNull();
-            Check.That(feature.FeatureElements).IsEmpty();
+            Check.That(feature).IsNull();
         }
 
         [Test]
