@@ -17,8 +17,8 @@ namespace PicklesDoc.Pickles
 
         public Feature ExcludeScenariosByTags()
         {
-            if (this.feature.Tags.Any(tag => this.IsExcludedTag(tag))
-                || this.feature.FeatureElements.All(fe => fe.Tags.Any(tag => this.IsExcludedTag(tag))))
+            if (this.FeatureShouldBeExcuded()
+                || this.AllFeatureElementsShouldBeExcluded())
                 return null;
 
             var wantedFeatures = this.feature.FeatureElements.Where(fe => fe.Tags.All(tag => !this.IsExcludedTag(tag))).ToList();
@@ -28,6 +28,17 @@ namespace PicklesDoc.Pickles
 
             return this.feature;
         }
+
+        private bool FeatureShouldBeExcuded()
+        {
+            return this.feature.Tags.Any(tag => this.IsExcludedTag(tag));
+        }
+
+        private bool AllFeatureElementsShouldBeExcluded()
+        {
+            return this.feature.FeatureElements.All(fe => fe.Tags.Any(tag => this.IsExcludedTag(tag)));
+        }
+
         private bool IsExcludedTag(string tag)
         {
             return tag.Equals($"@{this.excludeTags}", StringComparison.InvariantCultureIgnoreCase);
