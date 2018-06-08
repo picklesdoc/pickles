@@ -31,12 +31,12 @@ namespace PicklesDoc.Pickles
 
         private bool FeatureShouldBeExcuded()
         {
-            return this.feature.Tags.Any(tag => this.IsExcludedTag(tag));
+            return this.feature.Tags.Any(this.IsExcludedTag);
         }
 
         private bool AllFeatureElementsShouldBeExcluded()
         {
-            return this.feature.FeatureElements.All(fe => fe.Tags.Any(tag => this.IsExcludedTag(tag)));
+            return this.feature.FeatureElements.All(fe => fe.Tags.Any(this.IsExcludedTag));
         }
 
         private bool IsExcludedTag(string tag)
