@@ -97,18 +97,18 @@ namespace PicklesDoc.Pickles
             return language;
         }
 
-        private Feature RemoveFeatureWithExcludeTags(Feature result)
+        private Feature RemoveFeatureWithExcludeTags(Feature feature)
         {
-            if (result.Tags.Any(tag => this.IsExcludedTag(tag))
-                || result.FeatureElements.All(fe=>fe.Tags.Any(tag => this.IsExcludedTag(tag))))
+            if (feature.Tags.Any(tag => this.IsExcludedTag(tag))
+                || feature.FeatureElements.All(fe=>fe.Tags.Any(tag => this.IsExcludedTag(tag))))
                 return null;
 
-            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(tag => !this.IsExcludedTag(tag))).ToList();
+            var wantedFeatures = feature.FeatureElements.Where(fe => fe.Tags.All(tag => !this.IsExcludedTag(tag))).ToList();
 
-            result.FeatureElements.Clear();
-            result.FeatureElements.AddRange(wantedFeatures);
+            feature.FeatureElements.Clear();
+            feature.FeatureElements.AddRange(wantedFeatures);
 
-            return result;
+            return feature;
         }
 
         private bool IsExcludedTag(string tag)
