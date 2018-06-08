@@ -99,16 +99,21 @@ namespace PicklesDoc.Pickles
 
         private Feature RemoveFeatureWithExcludeTags(Feature result)
         {
-            if (result.Tags.Any(t => t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase))
-                || result.FeatureElements.All(fe=>fe.Tags.Any(t => t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase))))
+            if (result.Tags.Any(tag => this.IsExcludedTag(tag))
+                || result.FeatureElements.All(fe=>fe.Tags.Any(tag => this.IsExcludedTag(tag))))
                 return null;
 
-            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(t => !t.Equals($"@{configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase))).ToList();
+            var wantedFeatures = result.FeatureElements.Where(fe => fe.Tags.All(tag => !this.IsExcludedTag(tag))).ToList();
 
             result.FeatureElements.Clear();
             result.FeatureElements.AddRange(wantedFeatures);
 
             return result;
+        }
+
+        private bool IsExcludedTag(string tag)
+        {
+            return tag.Equals($"@{this.configuration.ExcludeTags}", StringComparison.InvariantCultureIgnoreCase);
         }
     }
 }
