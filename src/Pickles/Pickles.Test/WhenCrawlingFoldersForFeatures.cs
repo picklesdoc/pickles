@@ -58,13 +58,19 @@ namespace PicklesDoc.Pickles.Test
             Check.That(image.RelativePathFromRoot).IsEqualTo("image.png");
             Check.That(image).IsInstanceOf<ImageNode>();
 
-            INode subLevelOneDirectory = features.ChildNodes[3].Data;
+            INode levelOneRemoveTagsToHide = features.ChildNodes[3].Data;
+            Check.That(levelOneRemoveTagsToHide).IsNotNull();
+            Check.That(levelOneRemoveTagsToHide.Name).IsEqualTo("LevelOneRemoveTagsToHide");
+            Check.That(levelOneRemoveTagsToHide.RelativePathFromRoot).IsEqualTo("LevelOneRemoveTagsToHide.feature");
+            Check.That(levelOneRemoveTagsToHide).IsInstanceOf<FeatureNode>();
+
+            INode subLevelOneDirectory = features.ChildNodes[4].Data;
             Check.That(subLevelOneDirectory).IsNotNull();
             Check.That(subLevelOneDirectory.Name).IsEqualTo("Sub Level One");
             Check.That(subLevelOneDirectory.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\");
             Check.That(subLevelOneDirectory).IsInstanceOf<FolderNode>();
 
-            Tree subLevelOneNode = features.ChildNodes[3];
+            Tree subLevelOneNode = features.ChildNodes[4];
             Check.That(subLevelOneNode.ChildNodes.Count).IsEqualTo(3);
 
             INode levelOneSublevelOneFeature = subLevelOneNode.ChildNodes[0].Data;

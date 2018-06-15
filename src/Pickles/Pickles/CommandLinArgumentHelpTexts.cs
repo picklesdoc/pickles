@@ -31,6 +31,7 @@ namespace PicklesDoc.Pickles
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
         public const string HelpEnableComments = "whether to enable comments in the output";
         public const string HelpExcludeTags = "exclude scenarios that match this tag";
+        public const string HelpHideTags = "Technical tags that shouldn't be displayed (separated by ;)";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";

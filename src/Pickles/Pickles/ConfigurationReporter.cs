@@ -36,6 +36,7 @@ namespace PicklesDoc.Pickles
             writeToLog($"Incorporate Test Results?      : {(configuration.HasTestResults ? "Yes" : "No")}");
             writeToLog($"Include Experimental Features? : {(configuration.ShouldIncludeExperimentalFeatures ? "Yes" : "No")}");
             writeToLog($"Exclude Tag                    : {configuration.ExcludeTags}");
+            writeToLog($"Technical Tag                    : {configuration.HideTags}");
 
             if (configuration.HasTestResults)
             {

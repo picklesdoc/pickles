@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 
+using System.Collections.Generic;
 using NFluent;
 
 
@@ -136,7 +137,30 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             var feature = new Feature { Name = "Scenarios With Special Characters" };
 
-            var scenarioOutline = new ScenarioOutline { Name = "This scenario contains examples with Regex-special characters", Feature = feature };
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "This scenario contains examples with Regex-special characters",
+                Feature = feature,
+                Examples = new List<Example>
+                {
+                    new Example
+                    {
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("**"),
+                                new TableRow("++"),
+                                new TableRow(".*"),
+                                new TableRow("[]"),
+                                new TableRow("{}"),
+                                new TableRow("()"),
+                                new TableRow(@"^.*(?<foo>BAR)\s[^0-9]{3,4}A+$"),
+                            }
+                        }
+                    }
+                }
+            };
 
             TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
             Check.That(exampleResultOutline).IsEqualTo(TestResult.Passed);

@@ -36,10 +36,18 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
 
         private bool ScenarioOutlineExampleIsMatch(assembliesAssemblyCollectionTest exampleElement, Regex signature)
         {
-            var testNameWithExample = exampleElement.name;
-            var testNameOnly = testNameWithExample.Split('(')[0];
-            testNameWithExample = testNameWithExample.Replace(testNameOnly, Regex.Replace(testNameOnly, @"\s+", string.Empty));
-            return signature.IsMatch(exampleElement.name) || signature.IsMatch(testNameWithExample);
+            // split scenario outline title to name + parameters
+            var nameAndArgumentsSplitter = new Regex(@"^(?<name>(.*))(\(.*\))$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
+            var groups = nameAndArgumentsSplitter.Match(exampleElement.name).Groups;
+            var scenarioName = groups["name"].Value;
+            var scenariotNameWithNoSpacesAndSpecialCharacters = exampleElement.name.Replace(scenarioName, exampleElement.method);
+
+            var esc = Regex.Escape("\"");
+            var escapedScenariotNameWithNoSpacesAndSpecialCharacters = scenariotNameWithNoSpacesAndSpecialCharacters.Replace(@"\\""", "\"").Replace(@"\""", esc);
+            var escapedExampleElementName = exampleElement.name.Replace(@"\\""", "\"").Replace(@"\""", esc);
+            var escapedSignature = signature.ToString().Replace(@"\""", esc);
+
+            return Regex.IsMatch(escapedExampleElementName, escapedSignature, RegexOptions.IgnoreCase) || Regex.IsMatch(escapedScenariotNameWithNoSpacesAndSpecialCharacters, escapedSignature, RegexOptions.IgnoreCase);
         }
     }
 }

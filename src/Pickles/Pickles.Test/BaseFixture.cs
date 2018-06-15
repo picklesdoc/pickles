@@ -55,7 +55,7 @@ namespace PicklesDoc.Pickles.Test
                 {
                     var builder = new ContainerBuilder();
 
-                    var configuration = new Configuration() { ExcludeTags = "exclude-tag" };
+                    var configuration = new Configuration() { ExcludeTags = "exclude-tag", HideTags = "TagsToHideFeature;TagsToHideScenario" };
                     builder.RegisterAssemblyTypes(typeof(Runner).Assembly);
                     builder.Register<MockFileSystem>(_ => CreateMockFileSystem()).As<IFileSystem>().SingleInstance();
                     builder.RegisterModule<PicklesModule>();
@@ -102,7 +102,7 @@ namespace PicklesDoc.Pickles.Test
             this.AddFakeFolderAndFiles("AcceptanceTest", new[] { "AdvancedFeature.feature", "LevelOne.feature" });
             this.AddFakeFolderAndFiles("EmptyFolderTests", new string[0]);
 
-            this.AddFakeFolderAndFiles("FeatureCrawlerTests", new[] { "index.md", "LevelOne.feature", "image.png", "LevelOneIgnoredFeature.feature" });
+            this.AddFakeFolderAndFiles("FeatureCrawlerTests", new[] { "index.md", "LevelOne.feature", "image.png", "LevelOneIgnoredFeature.feature", "LevelOneRemoveTagsToHide.feature" });
             this.AddFakeFolderAndFiles(@"FeatureCrawlerTests\SubLevelOne", new[] { "ignorethisfile.ignore", "LevelOneSublevelOne.feature", "LevelOneSublevelTwo.feature" });
             this.AddFakeFolderAndFiles(@"FeatureCrawlerTests\SubLevelOne\SubLevelTwo", new[] { "LevelOneSublevelOneSubLevelTwo.feature" });
             this.AddFakeFolderAndFiles(@"FeatureCrawlerTests\SubLevelOne\SubLevelTwo\IgnoreThisDirectory", new[] { "IgnoreThisFile.ignore" });

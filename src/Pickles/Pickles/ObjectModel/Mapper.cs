@@ -190,12 +190,14 @@ namespace PicklesDoc.Pickles.ObjectModel
             return location != null ? new Location { Column = location.Column, Line = location.Line } : null;
         }
 
-        public Scenario MapToScenario(G.Scenario scenario)
+        public Scenario MapToScenario(G.Scenario scenario, params string[] tagsToHide)
         {
             if (scenario == null)
             {
                 return null;
             }
+
+            var visibleTags = RetrieveOnlyVisibleTags(scenario.Tags, tagsToHide);
 
             return new Scenario
             {
@@ -204,7 +206,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 Name = scenario.Name,
                 Slug = scenario.Name.ToSlug(),
                 Steps = scenario.Steps.Select(this.MapToStep).ToList(),
-                Tags = scenario.Tags.Select(this.MapToString).ToList()
+                Tags = visibleTags
             };
         }
 
@@ -224,12 +226,14 @@ namespace PicklesDoc.Pickles.ObjectModel
             };
         }
 
-        public ScenarioOutline MapToScenarioOutline(G.ScenarioOutline scenarioOutline)
+        public ScenarioOutline MapToScenarioOutline(G.ScenarioOutline scenarioOutline, params string[] tagsToHide)
         {
             if (scenarioOutline == null)
             {
                 return null;
             }
+
+            var visibleTags = RetrieveOnlyVisibleTags(scenarioOutline.Tags, tagsToHide);
 
             return new ScenarioOutline
             {
@@ -239,7 +243,7 @@ namespace PicklesDoc.Pickles.ObjectModel
                 Name = scenarioOutline.Name,
                 Slug = scenarioOutline.Name.ToSlug(),
                 Steps = scenarioOutline.Steps.Select(this.MapToStep).ToList(),
-                Tags = scenarioOutline.Tags.Select(this.MapToString).ToList()
+                Tags = visibleTags
             };
         }
 
@@ -266,6 +270,8 @@ namespace PicklesDoc.Pickles.ObjectModel
                 return null;
             }
 
+            var tagsToHide = string.IsNullOrEmpty(configuration.HideTags) ? null : configuration.HideTags.Split(';');
+
             var feature = new Feature();
 
             var background = gherkinDocument.Feature.Children.SingleOrDefault(c => c is G.Background) as G.Background;
@@ -283,15 +289,14 @@ namespace PicklesDoc.Pickles.ObjectModel
 
             foreach (var featureElement in gherkinDocument.Feature.Children.Where(c => !(c is G.Background)))
             {
-                feature.AddFeatureElement(this.MapToFeatureElement(featureElement));
+                feature.AddFeatureElement(this.MapToFeatureElement(featureElement, tagsToHide));
             }
 
             feature.Name = gherkinDocument.Feature.Name;
 
-            foreach (var tag in gherkinDocument.Feature.Tags)
-            {
-                feature.AddTag(this.MapToString(tag));
-            }
+
+            List<string> tags = RetrieveOnlyVisibleTags(gherkinDocument.Feature.Tags, tagsToHide);
+            feature.Tags.AddRange(tags);
 
             foreach (var comment in feature.Comments.ToArray())
             {
@@ -336,7 +341,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             return feature;
         }
 
-        private IFeatureElement MapToFeatureElement(G.ScenarioDefinition sd)
+        private IFeatureElement MapToFeatureElement(G.ScenarioDefinition sd,params string[] tagsToHide)
         {
             if (sd == null)
             {
@@ -346,13 +351,13 @@ namespace PicklesDoc.Pickles.ObjectModel
             var scenario = sd as G.Scenario;
             if (scenario != null)
             {
-                return this.MapToScenario(scenario);
+                return this.MapToScenario(scenario, tagsToHide);
             }
 
             var scenarioOutline = sd as G.ScenarioOutline;
             if (scenarioOutline != null)
             {
-                return this.MapToScenarioOutline(scenarioOutline);
+                return this.MapToScenarioOutline(scenarioOutline, tagsToHide);
             }
 
             var background = sd as G.Background;
@@ -362,6 +367,23 @@ namespace PicklesDoc.Pickles.ObjectModel
             }
 
             throw new ArgumentException("Only arguments of type Scenario, ScenarioOutline and Background are supported.");
+        }
+
+        private List<string> RetrieveOnlyVisibleTags(IEnumerable<G.Tag> originalTags,params string[] tagsToHide)
+        {
+            var usableTags = new List<string>();
+            foreach (var tag in originalTags)
+            {
+                var stringTag = this.MapToString(tag);
+
+                if (tagsToHide != null && tagsToHide.Any(t => stringTag.Equals($"@{t}", StringComparison.InvariantCultureIgnoreCase)))
+                {
+                    continue;
+                }
+
+                usableTags.Add(stringTag);
+            }
+            return usableTags;
         }
     }
 }

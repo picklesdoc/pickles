@@ -18,6 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System.Linq;
+using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
 using PicklesDoc.Pickles.ObjectModel;
@@ -26,6 +28,9 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
 {
     public class VsTestScenarioOutlineExampleMatcher : IScenarioOutlineExampleMatcher
     {
+        private static readonly Regex VariantRegex = new Regex(@"(.*)_Variant([\d*])", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private const int VariantNumberGroup = 2;
+
         public bool IsMatch(ScenarioOutline scenarioOutline, string[] exampleValues, object scenarioElement)
         {
             var element = (XElement)scenarioElement;
@@ -51,7 +56,23 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
                 .Replace('Ø', 'O')
                 .Replace('Å', 'A');
 
-      var isMatch = element.Name().ToUpperInvariant()
+            var variantMatch = VariantRegex.Match(element.Name().ToUpperInvariant());
+            if (variantMatch.Success)
+            {
+                int variantNumber;
+                if (int.TryParse(variantMatch.Groups[VariantNumberGroup].Value, out variantNumber))
+                {
+                    if (scenarioOutline.Examples?.Count > 0)
+                    {
+                        var allExamples = scenarioOutline.Examples.SelectMany(x => x.TableArgument.DataRows);
+                        var example = allExamples.ElementAt(variantNumber);
+
+                        return example.Cells.SequenceEqual(exampleValues);
+                    }
+                }
+            }
+
+            var isMatch = element.Name().ToUpperInvariant()
                 .EndsWith(matchValue);
 
             return isMatch;

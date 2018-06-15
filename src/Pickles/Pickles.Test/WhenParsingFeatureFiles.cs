@@ -419,6 +419,30 @@ Feature: Test
         }
 
         [Test]
+        public void Then_can_parse_and_remove_technical_tag_in_configuration_remove_technical_tag()
+        {
+            var featureText =
+                @"# ignore this comment
+@feature-tag @TagsToHideFeature
+Feature: Test
+    In order to do something
+    As a user
+    I want to run this scenario
+
+    @scenario-tag-1 @scenario-tag-2
+  Scenario: A scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens";
+
+            var parser = Container.Resolve<FeatureParser>();
+            var feature = parser.Parse(new StringReader(featureText));
+            Check.That(feature).IsNotNull();
+
+            Check.That(feature.Tags).ContainsExactly("@feature-tag");
+        }
+
+        [Test]
         public void Then_can_parse_and_ignore_scenario_with_tag_in_configuration_ignore_tag()
         {
             var featureText =
@@ -453,6 +477,45 @@ Feature: Test
             Check.That(feature.FeatureElements.Count).IsEqualTo(2);
             Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "A scenario")).IsNotNull();
             Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "B scenario")).IsNull();
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "C scenario")).IsNotNull();
+        }
+
+        [Test]
+        public void Then_can_parse_and_remove_tag_in_configuration_remove_technical_tag_from_scenario()
+        {
+            var featureText =
+                @"# ignore this comment
+@feature-tag
+Feature: Test
+    In order to do something
+    As a user
+    I want to run this scenario
+
+    @scenario-tag-1 @scenario-tag-2
+  Scenario: A scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens
+
+    @scenario-tag-1 @scenario-tag-2 @TagsToHideScenario
+  Scenario: B scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens
+
+    @scenario-tag-1 @scenario-tag-2
+  Scenario: C scenario
+    Given some feature
+    When it runs
+    Then I should see that this thing happens";
+
+            var parser = Container.Resolve<FeatureParser>();
+            var feature = parser.Parse(new StringReader(featureText));
+
+            Check.That(feature.FeatureElements.Count).IsEqualTo(3);
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "A scenario")).IsNotNull();
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "B scenario")).IsNotNull();
+            Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "B scenario").Tags).ContainsExactly("@scenario-tag-1", "@scenario-tag-2");
             Check.That(feature.FeatureElements.FirstOrDefault(fe => fe.Name == "C scenario")).IsNotNull();
         }
 
