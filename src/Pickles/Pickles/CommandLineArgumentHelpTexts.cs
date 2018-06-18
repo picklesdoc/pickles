@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="CommandLinArgumentHelpTexts.cs" company="PicklesDoc">
+//  <copyright file="CommandLineArgumentHelpTexts.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
 //
@@ -19,7 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 namespace PicklesDoc.Pickles
 {
-    public static class CommandLinArgumentHelpTexts
+    public static class CommandLineArgumentHelpTexts
     {
         public const string HelpFeatureDir = "directory to start scanning recursively for features";
         public const string HelpOutputDir = "directory where output files will be placed";

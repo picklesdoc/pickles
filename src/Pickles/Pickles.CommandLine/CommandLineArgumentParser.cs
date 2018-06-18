@@ -52,20 +52,20 @@ namespace PicklesDoc.Pickles.CommandLine
             this.fileSystem = fileSystem;
             this.options = new OptionSet
             {
-                { "f|feature-directory=", CommandLinArgumentHelpTexts.HelpFeatureDir, v => this.featureDirectory = v },
-                { "o|output-directory=", CommandLinArgumentHelpTexts.HelpOutputDir, v => this.outputDirectory = v },
-                { "trfmt|test-results-format=", CommandLinArgumentHelpTexts.HelpTestResultsFormat, v => this.testResultsFormat = v },
-                { "lr|link-results-file=", CommandLinArgumentHelpTexts.HelpTestResultsFile, v => this.testResultsFile = v },
-                { "sn|system-under-test-name=", CommandLinArgumentHelpTexts.HelpSutName, v => this.systemUnderTestName = v },
-                { "sv|system-under-test-version=", CommandLinArgumentHelpTexts.HelpSutVersion, v => this.systemUnderTestVersion = v },
-                { "l|language=", CommandLinArgumentHelpTexts.HelpLanguageFeatureFiles, v => this.language = v },
-                { "df|documentation-format=", CommandLinArgumentHelpTexts.HelpDocumentationFormat, v => this.documentationFormat = v },
+                { "f|feature-directory=", CommandLineArgumentHelpTexts.HelpFeatureDir, v => this.featureDirectory = v },
+                { "o|output-directory=", CommandLineArgumentHelpTexts.HelpOutputDir, v => this.outputDirectory = v },
+                { "trfmt|test-results-format=", CommandLineArgumentHelpTexts.HelpTestResultsFormat, v => this.testResultsFormat = v },
+                { "lr|link-results-file=", CommandLineArgumentHelpTexts.HelpTestResultsFile, v => this.testResultsFile = v },
+                { "sn|system-under-test-name=", CommandLineArgumentHelpTexts.HelpSutName, v => this.systemUnderTestName = v },
+                { "sv|system-under-test-version=", CommandLineArgumentHelpTexts.HelpSutVersion, v => this.systemUnderTestVersion = v },
+                { "l|language=", CommandLineArgumentHelpTexts.HelpLanguageFeatureFiles, v => this.language = v },
+                { "df|documentation-format=", CommandLineArgumentHelpTexts.HelpDocumentationFormat, v => this.documentationFormat = v },
                 { "v|version", v => this.versionRequested = v != null },
                 { "h|?|help", v => this.helpRequested = v != null },
-                { "exp|include-experimental-features", CommandLinArgumentHelpTexts.HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
-                { "cmt|enableComments=", CommandLinArgumentHelpTexts.HelpEnableComments, v => this.enableCommentsValue = v },
-                { "et|excludeTags=", CommandLinArgumentHelpTexts.HelpExcludeTags, v => this.excludeTags = v },
-                { "ht|hideTags=", CommandLinArgumentHelpTexts.HelpHideTags, v => this.hideTags = v }
+                { "exp|include-experimental-features", CommandLineArgumentHelpTexts.HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
+                { "cmt|enableComments=", CommandLineArgumentHelpTexts.HelpEnableComments, v => this.enableCommentsValue = v },
+                { "et|excludeTags=", CommandLineArgumentHelpTexts.HelpExcludeTags, v => this.excludeTags = v },
+                { "ht|hideTags=", CommandLineArgumentHelpTexts.HelpHideTags, v => this.hideTags = v }
             };
         }
 

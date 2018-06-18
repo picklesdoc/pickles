@@ -33,40 +33,40 @@ namespace PicklesDoc.Pickles.PowerShell
     [Cmdlet("Pickle", "Features")]
     public class Pickle_Features : PSCmdlet
     {
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpFeatureDir, Mandatory = true)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpFeatureDir, Mandatory = true)]
         public string FeatureDirectory { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpOutputDir, Mandatory = true)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpOutputDir, Mandatory = true)]
         public string OutputDirectory { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpLanguageFeatureFiles, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpLanguageFeatureFiles, Mandatory = false)]
         public string Language { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpTestResultsFormat, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpTestResultsFormat, Mandatory = false)]
         public string TestResultsFormat { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpTestResultsFile, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpTestResultsFile, Mandatory = false)]
         public string TestResultsFile { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpSutName, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpSutName, Mandatory = false)]
         public string SystemUnderTestName { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpSutVersion, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpSutVersion, Mandatory = false)]
         public string SystemUnderTestVersion { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpDocumentationFormat, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpDocumentationFormat, Mandatory = false)]
         public string DocumentationFormat { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpIncludeExperimentalFeatures, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpIncludeExperimentalFeatures, Mandatory = false)]
         public SwitchParameter IncludeExperimentalFeatures { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpEnableComments, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpEnableComments, Mandatory = false)]
         public string EnableComments { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpExcludeTags, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpExcludeTags, Mandatory = false)]
         public string ExcludeTags { get; set; }
 
-        [Parameter(HelpMessage = CommandLinArgumentHelpTexts.HelpHideTags, Mandatory = false)]
+        [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpHideTags, Mandatory = false)]
         public string HideTags { get; set; }
         
 

@@ -94,7 +94,7 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
-    <Compile Include="CommandLinArgumentHelpTexts.cs" />
+    <Compile Include="CommandLineArgumentHelpTexts.cs" />
     <Compile Include="Configuration.cs" />
     <Compile Include="ConfigurationReporter.cs" />
     <Compile Include="CultureAwareDialectProvider.cs" />
