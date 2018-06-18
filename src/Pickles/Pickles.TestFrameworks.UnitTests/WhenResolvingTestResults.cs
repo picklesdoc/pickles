@@ -42,300 +42,63 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
     [TestFixture]
     public class WhenResolvingTestResults : BaseFixture
     {
-        private const string TestResultsResourcePrefix = "PicklesDoc.Pickles.TestFrameworks.UnitTests.";
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenNoTestResultsSelected()
+        private static readonly object[] TestFormatCases =
         {
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
+            new object[] { null, null, null, typeof(NullTestResults)},
+            new object[] { "results-example-mstest.trx", "MsTest.results-example-mstest.trx", TestResultsFormat.MsTest, typeof(MsTestResults)},
+            new object[] { "results-example-nunit.xml", "NUnit.NUnit2.results-example-nunit.xml", TestResultsFormat.NUnit, typeof(NUnit2Results)},
+            new object[] { "results-example-nunit3.xml", "NUnit.NUnit3.results-example-nunit3.xml", TestResultsFormat.NUnit3, typeof(NUnit3Results)},
+            new object[] { "results-example-xunit.xml", "XUnit.XUnit1.results-example-xunit.xml", TestResultsFormat.XUnit1, typeof(XUnit1Results)},
+            new object[] { "results-example-xunit2.xml", "XUnit.XUnit2.results-example-xunit2.xml", TestResultsFormat.xUnit2, typeof(XUnit2Results)},
+            new object[] { "results-example-json.json", "CucumberJson.results-example-json.json", TestResultsFormat.CucumberJson, typeof(CucumberJsonResults)},
+            new object[] { "results-example-specrun.html", "SpecRun.results-example-specrun.html", TestResultsFormat.SpecRun, typeof(SpecRunResults)},
+            new object[] { "results-example-vstest.trx", "VsTest.results-example-vstest.trx", TestResultsFormat.VsTest, typeof(VsTestResults)},
+        };
 
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<NullTestResults>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<NullTestResults>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsAreMsTest()
+        [Test, TestCaseSource(nameof(TestFormatCases))]
+        public void ThenCanResolve(string exampleFilename, string resourceName, TestResultsFormat resultFormat, Type resultType)
         {
-            FileSystem.AddFile("results-example-mstest.trx", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "MsTest.results-example-mstest.trx"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.MsTest;
-            configuration.AddTestResultFiles(new[] { FileSystem.FileInfo.FromFileName("results-example-mstest.trx") });
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<MsTestResults>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<MsTestResults>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsAreNUnit()
-        {
-            FileSystem.AddFile("results-example-nunit.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "NUnit.NUnit2.results-example-nunit.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.NUnit;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-nunit.xml"));
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<NUnit2Results>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<NUnit2Results>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsAreNUnit3()
-        {
-            FileSystem.AddFile("results-example-nunit3.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "NUnit.NUnit3.results-example-nunit3.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.NUnit3;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-nunit3.xml"));
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<NUnit3Results>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<NUnit3Results>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsArexUnit()
-        {
-            FileSystem.AddFile("results-example-xunit.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "XUnit.XUnit1.results-example-xunit.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.XUnit1;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-xunit.xml"));
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<XUnit1Results>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<XUnit1Results>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsArexUnit2()
-        {
-            FileSystem.AddFile("results-example-xunit2.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "XUnit.XUnit2.results-example-xunit2.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.xUnit2;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-xunit2.xml"));
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<XUnit2Results>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<XUnit2Results>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsAreCucumberJson()
-        {
-            FileSystem.AddFile("results-example-json.json", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "CucumberJson.results-example-json.json"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.CucumberJson;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-json.json"));
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<CucumberJsonResults>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<CucumberJsonResults>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsAreSpecrun()
-        {
-            FileSystem.AddFile("results-example-specrun.html", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "SpecRun.results-example-specrun.html"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.SpecRun;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-specrun.html"));
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<SpecRunResults>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<SpecRunResults>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveAsSingletonWhenTestResultsAreVsTest()
-        {
-            FileSystem.AddFile("results-example-vstest.trx", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "VsTest.results-example-vstest.trx"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.VsTest;
-            configuration.AddTestResultFiles(new[] { FileSystem.FileInfo.FromFileName("results-example-vstest.trx") });
-
-            var item1 = Container.Resolve<ITestResults>();
-            var item2 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<VsTestResults>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<VsTestResults>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
-
-        [Test]
-        public void ThenCanResolveWhenNoTestResultsSelected()
-        {
-            var item = Container.Resolve<ITestResults>();
-
-            Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<NullTestResults>();
-        }
-
-        [Test]
-        public void ThenCanResolveWhenTestResultsAreMsTest()
-        {
-            FileSystem.AddFile("results-example-mstest.trx", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "MsTest.results-example-mstest.trx"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.MsTest;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-mstest.trx"));
+            if (exampleFilename != null)
+            {
+                this.SetFileSystem(exampleFilename, resourceName);
+                this.SetConfiguration(exampleFilename, resultFormat);
+            }
 
             var item = Container.Resolve<ITestResults>();
 
             Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<MsTestResults>();
+            Check.That(item).IsInstanceOfType(resultType);
         }
 
-        [Test]
-        public void ThenCanResolveWhenTestResultsAreNUnit()
+        [Test, TestCaseSource(nameof(TestFormatCases))]
+        public void ThenCanResolveAsSingleton(string exampleFilename, string resourceName, TestResultsFormat resultFormat, Type resultType)
         {
-            FileSystem.AddFile("results-example-nunit.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "NUnit.NUnit2.results-example-nunit.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.NUnit;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-nunit.xml"));
-
-            var item = Container.Resolve<ITestResults>();
-
-            Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<NUnit2Results>();
-        }
-
-        [Test]
-        public void ThenCanResolveWhenTestResultsAreNUnit3()
-        {
-            FileSystem.AddFile("results-example-nunit3.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "NUnit.NUnit3.results-example-nunit3.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.NUnit3;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-nunit3.xml"));
+            if (exampleFilename != null)
+            {
+                this.SetFileSystem(exampleFilename, resourceName);
+                this.SetConfiguration(exampleFilename, resultFormat);
+            }
 
             var item1 = Container.Resolve<ITestResults>();
+            var item2 = Container.Resolve<ITestResults>();
 
             Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<NUnit3Results>();
+            Check.That(item1).IsInstanceOfType(resultType);
+            Check.That(item2).IsNotNull();
+            Check.That(item2).IsInstanceOfType(resultType);
+            Check.That(item1).IsSameReferenceAs(item2);
         }
 
-        [Test]
-        public void ThenCanResolveWhenTestResultsArexUnit()
+        private void SetFileSystem(string example, string resource)
         {
-            FileSystem.AddFile("results-example-xunit.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "XUnit.XUnit1.results-example-xunit.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.XUnit1;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-xunit.xml"));
-
-            var item = Container.Resolve<ITestResults>();
-
-            Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<XUnit1Results>();
+            FileSystem.AddFile(example, RetrieveContentOfFileFromResources("PicklesDoc.Pickles.TestFrameworks.UnitTests." + resource));
         }
 
-        [Test]
-        public void ThenCanResolveWhenTestResultsArexUnit2()
+        private void SetConfiguration(string example, TestResultsFormat format)
         {
-            FileSystem.AddFile("results-example-xunit2.xml", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "XUnit.XUnit2.results-example-xunit2.xml"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.xUnit2;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-xunit2.xml"));
-
-            var item1 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<XUnit2Results>();
-        }
-
-        [Test]
-        public void ThenCanResolveWhenTestResultsAreCucumberJson()
-        {
-            FileSystem.AddFile("results-example-json.json", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "CucumberJson.results-example-json.json"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.CucumberJson;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-json.json"));
-
-            var item = Container.Resolve<ITestResults>();
-
-            Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<CucumberJsonResults>();
-        }
-
-        [Test]
-        public void ThenCanResolveWhenTestResultsAreSpecrun()
-        {
-            FileSystem.AddFile("results-example-specrun.html", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "SpecRun.results-example-specrun.html"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.SpecRun;
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName("results-example-specrun.html"));
-
-            var item = Container.Resolve<ITestResults>();
-
-            Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<SpecRunResults>();
-        }
-
-        [Test]
-        public void ThenCanResolveWhenTestResultsAreVsTest()
-        {
-            FileSystem.AddFile("results-example-vstest.trx", RetrieveContentOfFileFromResources(TestResultsResourcePrefix + "VsTest.results-example-vstest.trx"));
-
-            var configuration = Container.Resolve<IConfiguration>();
-            configuration.TestResultsFormat = TestResultsFormat.VsTest;
-            configuration.AddTestResultFiles(new[] { FileSystem.FileInfo.FromFileName("results-example-vstest.trx") });
-
-            var item1 = Container.Resolve<ITestResults>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<VsTestResults>();
+            var configuration = this.Container.Resolve<IConfiguration>();
+            configuration.TestResultsFormat = format;
+            configuration.AddTestResultFiles(new[] { this.FileSystem.FileInfo.FromFileName(example) });
         }
     }
 }
