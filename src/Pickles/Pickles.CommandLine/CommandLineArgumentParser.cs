@@ -30,21 +30,6 @@ namespace PicklesDoc.Pickles.CommandLine
 {
     public class CommandLineArgumentParser
     {
-        public const string HelpFeatureDir = "directory to start scanning recursively for features";
-        public const string HelpOutputDir = "directory where output files will be placed";
-        public const string HelpSutName = "the name of the system under test";
-        public const string HelpSutVersion = "the version of the system under test";
-        public const string HelpLanguageFeatureFiles = "the language of the feature files";
-        public const string HelpDocumentationFormat = "the format of the output documentation";
-        public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
-        public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
-        public const string HelpEnableComments = "whether to enable comments in the output";
-        public const string HelpExcludeTags = "exclude scenarios that match this tag";
-        public const string HelpHideTags = "Technical tags that shouldn't be displayed";
-
-        public const string HelpTestResultsFile =
-            "the path to the linked test results file (can be a semicolon-separated list of files)";
-
         private readonly IFileSystem fileSystem;
         private readonly OptionSet options;
         private string documentationFormat;
@@ -67,20 +52,20 @@ namespace PicklesDoc.Pickles.CommandLine
             this.fileSystem = fileSystem;
             this.options = new OptionSet
             {
-                { "f|feature-directory=", HelpFeatureDir, v => this.featureDirectory = v },
-                { "o|output-directory=", HelpOutputDir, v => this.outputDirectory = v },
-                { "trfmt|test-results-format=", HelpTestResultsFormat, v => this.testResultsFormat = v },
-                { "lr|link-results-file=", HelpTestResultsFile, v => this.testResultsFile = v },
-                { "sn|system-under-test-name=", HelpSutName, v => this.systemUnderTestName = v },
-                { "sv|system-under-test-version=", HelpSutVersion, v => this.systemUnderTestVersion = v },
-                { "l|language=", HelpLanguageFeatureFiles, v => this.language = v },
-                { "df|documentation-format=", HelpDocumentationFormat, v => this.documentationFormat = v },
+                { "f|feature-directory=", CommandLinArgumentHelpTexts.HelpFeatureDir, v => this.featureDirectory = v },
+                { "o|output-directory=", CommandLinArgumentHelpTexts.HelpOutputDir, v => this.outputDirectory = v },
+                { "trfmt|test-results-format=", CommandLinArgumentHelpTexts.HelpTestResultsFormat, v => this.testResultsFormat = v },
+                { "lr|link-results-file=", CommandLinArgumentHelpTexts.HelpTestResultsFile, v => this.testResultsFile = v },
+                { "sn|system-under-test-name=", CommandLinArgumentHelpTexts.HelpSutName, v => this.systemUnderTestName = v },
+                { "sv|system-under-test-version=", CommandLinArgumentHelpTexts.HelpSutVersion, v => this.systemUnderTestVersion = v },
+                { "l|language=", CommandLinArgumentHelpTexts.HelpLanguageFeatureFiles, v => this.language = v },
+                { "df|documentation-format=", CommandLinArgumentHelpTexts.HelpDocumentationFormat, v => this.documentationFormat = v },
                 { "v|version", v => this.versionRequested = v != null },
                 { "h|?|help", v => this.helpRequested = v != null },
-                { "exp|include-experimental-features", HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
-                { "cmt|enableComments=", HelpEnableComments, v => this.enableCommentsValue = v },
-                { "et|excludeTags=", HelpExcludeTags, v => this.excludeTags = v },
-                { "ht|hideTags=", HelpHideTags, v => this.hideTags = v }
+                { "exp|include-experimental-features", CommandLinArgumentHelpTexts.HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
+                { "cmt|enableComments=", CommandLinArgumentHelpTexts.HelpEnableComments, v => this.enableCommentsValue = v },
+                { "et|excludeTags=", CommandLinArgumentHelpTexts.HelpExcludeTags, v => this.excludeTags = v },
+                { "ht|hideTags=", CommandLinArgumentHelpTexts.HelpHideTags, v => this.hideTags = v }
             };
         }
 
