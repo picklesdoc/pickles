@@ -464,10 +464,13 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         {
             new object[] { @"mstest", TestResultsFormat.MsTest },
             new object[] { @"nunit", TestResultsFormat.NUnit },
+            new object[] { @"nunit3", TestResultsFormat.NUnit3 },
             new object[] { @"xunit", TestResultsFormat.XUnit },
             new object[] { @"xunit1", TestResultsFormat.XUnit1 },
+            new object[] { @"xunit2", TestResultsFormat.xUnit2 },
             new object[] { @"cucumberjson", TestResultsFormat.CucumberJson },
             new object[] { @"specrun", TestResultsFormat.SpecRun },
+            new object[] { @"vstest", TestResultsFormat.VsTest },
         };
 
         [Test, TestCaseSource(nameof(TestResultsFormatCases))]
