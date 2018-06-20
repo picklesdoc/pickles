@@ -493,11 +493,5 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.TestResultsFormat).IsEqualTo(expectedResultsFormat);
         }
-
-        [Test]
-        public void Two_Plus_Two_Equals_Five()
-        {
-            //Check.That(2 + 2).Equals(5);
-        }
     }
 }
