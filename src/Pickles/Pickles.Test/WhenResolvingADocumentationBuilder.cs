@@ -31,76 +31,45 @@ namespace PicklesDoc.Pickles.Test
 {
     public class WhenResolvingADocumentationBuilder : BaseFixture
     {
-        [Test]
-        public void ThenCanResolveIDocumentationBuilderAsHtmlDocumentationBuilderAsSingletonIfTheUserSelectsHtmlOutput()
+        private static readonly object[] DocumentationFormatCases =
         {
-            var configuration = this.Configuration;
-            configuration.DocumentationFormat = DocumentationFormat.Html;
-
-            var item1 = Container.Resolve<IDocumentationBuilder>();
-            var item2 = Container.Resolve<IDocumentationBuilder>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<HtmlDocumentationBuilder>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<HtmlDocumentationBuilder>();
-            Check.That(item1).IsSameReferenceAs(item2);
-        }
+            new object[] { DocumentationFormat.Html, typeof(HtmlDocumentationBuilder) },
+            new object[] { DocumentationFormat.Word, typeof(WordDocumentationBuilder) },
+            new object[] { DocumentationFormat.Excel, typeof(ExcelDocumentationBuilder) },
+        };
 
         [Test]
-        public void ThenCanResolveIDocumentationBuilderAsWordDocumentationBuilderIfTheUserSelectsWordOutput()
+        [TestCaseSource(nameof(DocumentationFormatCases))]
+        public void ThenCanResolveTheSelectedIDocumentationBuilder(DocumentationFormat documentationFormat, Type builderType)
         {
-            var configuration = this.Configuration;
-            configuration.DocumentationFormat = DocumentationFormat.Word;
+            this.SetDocumentationFormat(documentationFormat);
 
             var item = Container.Resolve<IDocumentationBuilder>();
 
             Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<WordDocumentationBuilder>();
+            Check.That(item).IsInstanceOfType(builderType);
         }
 
         [Test]
-        public void ThenCanResolveIDocumentationBuilderAsWordDocumentationBuilderAsSingletonIfTheUserSelectsWordOutput()
+        [TestCaseSource(nameof(DocumentationFormatCases))]
+        public void ThenCanResolveTheSelectedIDocumentationBuilderAsSingleton(DocumentationFormat documentationFormat, Type builderType)
         {
-            var configuration = this.Configuration;
-            configuration.DocumentationFormat = DocumentationFormat.Word;
+            this.SetDocumentationFormat(documentationFormat);
 
             var item1 = Container.Resolve<IDocumentationBuilder>();
             var item2 = Container.Resolve<IDocumentationBuilder>();
 
             Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<WordDocumentationBuilder>();
+            Check.That(item1).IsInstanceOfType(builderType);
             Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<WordDocumentationBuilder>();
+            Check.That(item2).IsInstanceOfType(builderType);
             Check.That(item1).IsSameReferenceAs(item2);
         }
 
-        [Test]
-        public void ThenCanResolveIDocumentationBuilderAsExcelDocumentationBuilderIfTheUserSelectsExcelOutput()
+        private void SetDocumentationFormat(DocumentationFormat documentationFormat)
         {
             var configuration = this.Configuration;
-            configuration.DocumentationFormat = DocumentationFormat.Excel;
-
-            var item = Container.Resolve<IDocumentationBuilder>();
-
-            Check.That(item).IsNotNull();
-            Check.That(item).IsInstanceOf<ExcelDocumentationBuilder>();
-        }
-
-        [Test]
-        public void ThenCanResolveIDocumentationBuilderAsExcelDocumentationBuilderAsSingletonIfTheUserSelectsExcelOutput()
-        {
-            var configuration = this.Configuration;
-            configuration.DocumentationFormat = DocumentationFormat.Excel;
-
-            var item1 = Container.Resolve<IDocumentationBuilder>();
-            var item2 = Container.Resolve<IDocumentationBuilder>();
-
-            Check.That(item1).IsNotNull();
-            Check.That(item1).IsInstanceOf<ExcelDocumentationBuilder>();
-            Check.That(item2).IsNotNull();
-            Check.That(item2).IsInstanceOf<ExcelDocumentationBuilder>();
-            Check.That(item1).IsSameReferenceAs(item2);
+            configuration.DocumentationFormat = documentationFormat;
         }
     }
 }
