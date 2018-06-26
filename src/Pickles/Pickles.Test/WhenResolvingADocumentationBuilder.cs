@@ -23,9 +23,12 @@ using Autofac;
 using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DocumentationBuilders;
+using PicklesDoc.Pickles.DocumentationBuilders.Dhtml;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
+using PicklesDoc.Pickles.DocumentationBuilders.Json;
 using PicklesDoc.Pickles.DocumentationBuilders.Word;
+using PicklesDoc.Pickles.DocumentationBuilders.Cucumber;
 
 namespace PicklesDoc.Pickles.Test
 {
@@ -36,6 +39,9 @@ namespace PicklesDoc.Pickles.Test
             new object[] { DocumentationFormat.Html, typeof(HtmlDocumentationBuilder) },
             new object[] { DocumentationFormat.Word, typeof(WordDocumentationBuilder) },
             new object[] { DocumentationFormat.Excel, typeof(ExcelDocumentationBuilder) },
+            new object[] { DocumentationFormat.DHtml, typeof(DhtmlDocumentationBuilder) },
+            new object[] { DocumentationFormat.Json, typeof(JsonDocumentationBuilder) },
+            new object[] { DocumentationFormat.Cucumber, typeof(CucumberDocumentationBuilder) },
         };
 
         [Test]

@@ -169,6 +169,10 @@
     <Compile Include="WhenWorkingWithHtmlResources.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Cucumber\Pickles.DocumentationBuilders.Cucumber.csproj">
+      <Project>{F69AAC03-A2A6-4B3F-A4EF-ACCB145C64AD}</Project>
+      <Name>Pickles.DocumentationBuilders.Cucumber</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Dhtml\Pickles.DocumentationBuilders.Dhtml.csproj">
       <Project>{8AC3AAFA-84DD-4437-962B-E6C5D6078E09}</Project>
       <Name>Pickles.DocumentationBuilders.Dhtml</Name>
