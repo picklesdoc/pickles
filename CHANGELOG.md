@@ -28,6 +28,18 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Security
 
+## [2.19.0] - 2018-07-20
+
+### Added
+
+- Hide Tags from Living Documentation ([516](https://github.com/picklesdoc/pickles/pull/516)) (by [@spacehole1](https://github.com/spacehole1))
+- Exclude Feature Files that have no included scenarios ([453](https://github.com/picklesdoc/pickles/issues/453)) (by [@janosmagyar](https://github.com/janosmagyar))
+
+### Fixed
+
+- Scenario Outline special characters workaround ([509](https://github.com/picklesdoc/pickles/pull/509)) (by [@DominikBaran](https://github.com/DominikBaran))
+- Fix example matching for VSTest ([528](https://github.com/picklesdoc/pickles/pull/528)) (by [@jvandertil](https://github.com/jvandertil))
+
 ## [2.18.2] - 2018-04-28
 
 ### Changed
