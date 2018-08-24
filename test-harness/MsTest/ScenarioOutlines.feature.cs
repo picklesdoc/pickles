@@ -265,9 +265,9 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DealCorrectlyWithBackslashesInTheExamples(string filePath, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal correctly with backslashes in the examples", exampleTags);
-#line 63
+#line 62
 this.ScenarioSetup(scenarioInfo);
-#line 65
+#line 64
   testRunner.When(string.Format("I have backslashes in the value, for example a \'{0}\'", filePath), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -286,9 +286,9 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DealCorrectlyWithParenthesisInTheExamples(string overlyDescriptiveField, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal correctly with parenthesis in the examples", exampleTags);
-#line 72
+#line 71
 this.ScenarioSetup(scenarioInfo);
-#line 74
+#line 73
   testRunner.When(string.Format("I have parenthesis in the value, for example an \'{0}\'", overlyDescriptiveField), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
@@ -307,13 +307,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DealCorrectlyWithOverlongExampleValues(string value1, string value2, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal correctly with overlong example values", exampleTags);
-#line 80
+#line 79
 this.ScenarioSetup(scenarioInfo);
-#line 82
+#line 81
   testRunner.When(string.Format("I have a field with value \'{0}\'", value1), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line 83
+#line 82
   testRunner.And(string.Format("I have a field with value \'{0}\'", value2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 84
+#line 83
   testRunner.Then("the scenario will \'pass_1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
@@ -328,6 +328,280 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE()
         {
             this.DealCorrectlyWithOverlongExampleValues("Please enter a valid two letter country code (e.g. DE)!", "This is just a very very very veery long error message!", ((string[])(null)));
+        }
+        
+        public virtual void DealWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with duplicate values", exampleTags);
+#line 89
+this.ScenarioSetup(scenarioInfo);
+#line 90
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithDuplicateValues_Variant0()
+        {
+            this.DealWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithDuplicateValues_Variant1()
+        {
+            this.DealWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "inconclusive")]
+        public virtual void DealWithDuplicateValues_Variant2()
+        {
+            this.DealWithDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 3")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithDuplicateValues_Variant3()
+        {
+            this.DealWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 4")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithDuplicateValues_Variant4()
+        {
+            this.DealWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple example sections with duplicate values", exampleTags);
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line 101
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet0_Variant0()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet0_Variant1()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet0_Variant2()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant0()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "inconclusive")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant1()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant2()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 3")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant3()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections without duplicate values", exampleTags);
+#line 116
+this.ScenarioSetup(scenarioInfo);
+#line 117
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections without duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "First set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "pass")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues_FirstSet_Pass()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithoutDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections without duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "First set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "fail")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues_FirstSet_Fail()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithoutDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections without duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "Second set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "inconclusive")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "inconclusive")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues_SecondSet_Inconclusive()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithoutDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections with duplicate values", exampleTags);
+#line 128
+this.ScenarioSetup(scenarioInfo);
+#line 129
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "First set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_FirstSet_Variant0()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "First set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_FirstSet_Variant1()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "First set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_FirstSet_Variant2()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "Second set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 0")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant0()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "Second set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 1")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "inconclusive")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant1()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "Second set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 2")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "fail")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant2()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Scenario Outlines")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("ExampleSetName", "Second set")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Variant 3")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:result", "pass")]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant3()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
         }
     }
 }

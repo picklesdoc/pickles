@@ -18,10 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-
 using System.Collections.Generic;
 using NFluent;
-
 
 using PicklesDoc.Pickles.ObjectModel;
 
@@ -200,6 +198,237 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
 
             TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "Please enter a valid two letter country code (e.g. DE)!", "This is just a very very very veery long error message!" });
             Check.That(exampleResult1).IsEqualTo(TestResult.Passed);
+        }
+
+        public void ThenCanReadIndividualResultsFromScenarioOutline_ExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenario Outlines" };
+
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "Deal with duplicate values",
+                Feature = feature,
+                Examples = new List<Example>
+                {
+                    new Example
+                    {
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("pass"),
+                                new TableRow("fail"),
+                                new TableRow("inconclusive"),
+                                new TableRow("pass"),
+                                new TableRow("fail")
+                            }
+                        }
+                    }
+                }
+            };
+
+            TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
+            Check.That(exampleResultOutline).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult0 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult0).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult1).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult2 = results.GetExampleResult(scenarioOutline, new[] { "inconclusive" });
+            Check.That(exampleResult2).IsEqualTo(TestResult.Inconclusive);
+
+            TestResult exampleResult3 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult3).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult4 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult4).IsEqualTo(TestResult.Failed);
+        }
+
+        public void ThenCanReadIndividualResultsFromScenarioOutline_MultipleExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenario Outlines" };
+
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "Deal with multiple example sections with duplicate values",
+                Feature = feature,
+                Examples = new List<Example>
+                {
+                    new Example
+                    {
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("pass"),
+                                new TableRow("fail"),
+                                new TableRow("pass"),
+                            }
+                        }
+                    },
+                    new Example
+                    {
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("fail"),
+                                new TableRow("inconclusive"),
+                                new TableRow("fail"),
+                                new TableRow("pass")
+                            }
+                        }
+                    }
+                }
+            };
+
+            TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
+            Check.That(exampleResultOutline).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult0 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult0).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult1).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult3 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult3).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult4 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult4).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult5 = results.GetExampleResult(scenarioOutline, new[] { "inconclusive" });
+            Check.That(exampleResult5).IsEqualTo(TestResult.Inconclusive);
+
+            TestResult exampleResult6 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult6).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult7 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult7).IsEqualTo(TestResult.Passed);
+        }
+
+        public void ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamples_ShouldMatchExamples()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenario Outlines" };
+
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "Deal with multiple named example sections without duplicate values",
+                Feature = feature,
+                Examples = new List<Example>
+                {
+                    new Example
+                    {
+                        Name = "First set",
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("pass"),
+                                new TableRow("fail"),
+                            },
+                        }
+                    },
+                    new Example
+                    {
+                        Name = "Second set",
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("inconclusive"),
+                            }
+                        }
+                    }
+                }
+            };
+
+            TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
+            Check.That(exampleResultOutline).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult0 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult0).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult1).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult2 = results.GetExampleResult(scenarioOutline, new[] { "inconclusive" });
+            Check.That(exampleResult2).IsEqualTo(TestResult.Inconclusive);
+        }
+
+        public void ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            var results = ParseResultsFile();
+
+            var feature = new Feature { Name = "Scenario Outlines" };
+
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "Deal with multiple named example sections with duplicate values",
+                Feature = feature,
+                Examples = new List<Example>
+                {
+                    new Example
+                    {
+                        Name = "First set",
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("pass"),
+                                new TableRow("fail"),
+                                new TableRow("pass"),
+                            },
+                        }
+                    },
+                    new Example
+                    {
+                        Name = "Second set",
+                        TableArgument = new ExampleTable
+                        {
+                            DataRows = new List<TableRow>
+                            {
+                                new TableRow("fail"),
+                                new TableRow("inconclusive"),
+                                new TableRow("fail"),
+                                new TableRow("pass")
+                            }
+                        }
+                    }
+                }
+            };
+
+            TestResult exampleResultOutline = results.GetScenarioOutlineResult(scenarioOutline);
+            Check.That(exampleResultOutline).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult0 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult0).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult1 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult1).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult3 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult3).IsEqualTo(TestResult.Passed);
+
+            TestResult exampleResult4 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult4).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult5 = results.GetExampleResult(scenarioOutline, new[] { "inconclusive" });
+            Check.That(exampleResult5).IsEqualTo(TestResult.Inconclusive);
+
+            TestResult exampleResult6 = results.GetExampleResult(scenarioOutline, new[] { "fail" });
+            Check.That(exampleResult6).IsEqualTo(TestResult.Failed);
+
+            TestResult exampleResult7 = results.GetExampleResult(scenarioOutline, new[] { "pass" });
+            Check.That(exampleResult7).IsEqualTo(TestResult.Passed);
         }
     }
 }
