@@ -192,6 +192,84 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
+        [Xunit.Extensions.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with duplicate values")]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("inconclusive", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        public virtual void DealWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with duplicate values", exampleTags);
+#line 90
+this.ScenarioSetup(scenarioInfo);
+#line 91
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.Extensions.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with multiple example sections with duplicate values")]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("inconclusive", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple example sections with duplicate values", exampleTags);
+#line 101
+this.ScenarioSetup(scenarioInfo);
+#line 102
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.Extensions.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with multiple named example sections without duplicate values")]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("inconclusive", new string[0])]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections without duplicate values", exampleTags);
+#line 117
+this.ScenarioSetup(scenarioInfo);
+#line 118
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.Extensions.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with multiple named example sections with duplicate values")]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("inconclusive", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("fail", new string[0])]
+        [Xunit.Extensions.InlineDataAttribute("pass", new string[0])]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections with duplicate values", exampleTags);
+#line 129
+this.ScenarioSetup(scenarioInfo);
+#line 130
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
         [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
         [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         public class FixtureData : System.IDisposable

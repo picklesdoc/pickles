@@ -18,8 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-
-
 using NUnit.Framework;
 
 using PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2;
@@ -33,7 +31,6 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.XUnit.XUnit2
             : base("XUnit.XUnit2." + "results-example-xunit2.xml", true)
         {
         }
-
 
         [Test]
         public new void ThenCanReadIndividualResultsFromScenarioOutline_AllPass_ShouldBeTestResultPassed()
@@ -69,6 +66,30 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.XUnit.XUnit2
         public new void ThenCanReadExamplesWithLongExampleValues()
         {
             base.ThenCanReadExamplesWithLongExampleValues();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_ExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_ExamplesWithDuplicateValues_ShouldMatchExamples();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleExamplesWithDuplicateValues_ShouldMatchExamples();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamples_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamples_ShouldMatchExamples();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamplesWithDuplicateValues_ShouldMatchExamples();
         }
     }
 }

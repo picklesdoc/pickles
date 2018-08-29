@@ -157,18 +157,18 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
-
+        
         [Xunit.TheoryAttribute()]
         [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
         [Xunit.TraitAttribute("Description", "Deal correctly with parenthesis in the examples")]
         [Xunit.InlineDataAttribute("This is a description (and more)", new string[0])]
-        public virtual void DealCorrectlyWithParenthesisInTheExamples(string description, string[] exampleTags)
+        public virtual void DealCorrectlyWithParenthesisInTheExamples(string overlyDescriptiveField, string[] exampleTags)
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal correctly with parenthesis in the examples", exampleTags);
-#line 63
-            this.ScenarioSetup(scenarioInfo);
-#line 65
-            testRunner.When(string.Format("I have parenthesis in the value, for example an \'{0}\'", description), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 72
+this.ScenarioSetup(scenarioInfo);
+#line 74
+  testRunner.When(string.Format("I have parenthesis in the value, for example an \'{0}\'", overlyDescriptiveField), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -188,6 +188,84 @@ this.ScenarioSetup(scenarioInfo);
   testRunner.And(string.Format("I have a field with value \'{0}\'", value2), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 84
   testRunner.Then("the scenario will \'pass_1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with duplicate values")]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("inconclusive", new string[0])]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        public virtual void DealWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with duplicate values", exampleTags);
+#line 90
+this.ScenarioSetup(scenarioInfo);
+#line 91
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with multiple example sections with duplicate values")]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("inconclusive", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple example sections with duplicate values", exampleTags);
+#line 101
+this.ScenarioSetup(scenarioInfo);
+#line 102
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with multiple named example sections without duplicate values")]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("inconclusive", new string[0])]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections without duplicate values", exampleTags);
+#line 117
+this.ScenarioSetup(scenarioInfo);
+#line 118
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Xunit.TheoryAttribute()]
+        [Xunit.TraitAttribute("FeatureTitle", "Scenario Outlines")]
+        [Xunit.TraitAttribute("Description", "Deal with multiple named example sections with duplicate values")]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("inconclusive", new string[0])]
+        [Xunit.InlineDataAttribute("fail", new string[0])]
+        [Xunit.InlineDataAttribute("pass", new string[0])]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections with duplicate values", exampleTags);
+#line 129
+this.ScenarioSetup(scenarioInfo);
+#line 130
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

@@ -86,3 +86,58 @@ Scenario Outline: Deal correctly with overlong example values
   Examples:
     | value1                                                  | value2                                                  |
     | Please enter a valid two letter country code (e.g. DE)! | This is just a very very very veery long error message! |
+
+Scenario Outline: Deal with duplicate values
+    Then the scenario will '<result>'
+
+    Examples:
+    | result       |
+    | pass         |
+    | fail         |
+    | inconclusive |
+    | pass         |
+    | fail         | 
+
+Scenario Outline: Deal with multiple example sections with duplicate values
+    Then the scenario will '<result>'
+
+    Examples:
+    | result |
+    | pass   |
+    | fail   | 
+    | pass   |
+
+    Examples:
+    | result       |
+    | fail         |
+    | inconclusive |
+    | fail         | 
+    | pass         |
+
+Scenario Outline: Deal with multiple named example sections without duplicate values
+    Then the scenario will '<result>'
+
+    Examples: First set
+    | result |
+    | pass   |
+    | fail   |
+
+    Examples: Second set
+    | result       |
+    | inconclusive | 
+
+Scenario Outline: Deal with multiple named example sections with duplicate values
+    Then the scenario will '<result>'
+
+    Examples: First set
+    | result |
+    | pass   |
+    | fail   | 
+    | pass   |
+
+    Examples: Second set
+    | result       |
+    | fail         |
+    | inconclusive |
+    | fail         | 
+    | pass         |

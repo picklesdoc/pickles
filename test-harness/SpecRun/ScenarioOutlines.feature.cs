@@ -73,19 +73,19 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where all scenarios pass, pass_1", Description="\nThis means the entire scenario outline passes.", SourceLine=11)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where all scenarios pass, pass_1", Description="\r\nThis means the entire scenario outline passes.", SourceLine=11)]
         public virtual void ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_1()
         {
             this.ThisIsAScenarioOutlineWhereAllScenariosPass("pass_1", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where all scenarios pass, pass_2", Description="\nThis means the entire scenario outline passes.", SourceLine=12)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where all scenarios pass, pass_2", Description="\r\nThis means the entire scenario outline passes.", SourceLine=12)]
         public virtual void ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_2()
         {
             this.ThisIsAScenarioOutlineWhereAllScenariosPass("pass_2", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where all scenarios pass, pass_3", Description="\nThis means the entire scenario outline passes.", SourceLine=13)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where all scenarios pass, pass_3", Description="\r\nThis means the entire scenario outline passes.", SourceLine=13)]
         public virtual void ThisIsAScenarioOutlineWhereAllScenariosPass_Pass_3()
         {
             this.ThisIsAScenarioOutlineWhereAllScenariosPass("pass_3", ((string[])(null)));
@@ -102,19 +102,19 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario is inconclusive, pass_1", Description="\nThis means the entire scenario outline is inconclusive.", SourceLine=24)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario is inconclusive, pass_1", Description="\r\nThis means the entire scenario outline is inconclusive.", SourceLine=24)]
         public virtual void ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_1()
         {
             this.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive("pass_1", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario is inconclusive, pass_2", Description="\nThis means the entire scenario outline is inconclusive.", SourceLine=25)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario is inconclusive, pass_2", Description="\r\nThis means the entire scenario outline is inconclusive.", SourceLine=25)]
         public virtual void ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Pass_2()
         {
             this.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive("pass_2", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario is inconclusive, inconclusive_1", Description="\nThis means the entire scenario outline is inconclusive.", SourceLine=26)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario is inconclusive, inconclusive_1", Description="\r\nThis means the entire scenario outline is inconclusive.", SourceLine=26)]
         public virtual void ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive_Inconclusive_1()
         {
             this.ThisIsAScenarioOutlineWhereOneScenarioIsInconclusive("inconclusive_1", ((string[])(null)));
@@ -131,19 +131,19 @@ this.ScenarioSetup(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario fails, pass_1", Description="\nThis means the entire scenario outline fails.", SourceLine=37)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario fails, pass_1", Description="\r\nThis means the entire scenario outline fails.", SourceLine=37)]
         public virtual void ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_1()
         {
             this.ThisIsAScenarioOutlineWhereOneScenarioFails("pass_1", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario fails, pass_2", Description="\nThis means the entire scenario outline fails.", SourceLine=38)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario fails, pass_2", Description="\r\nThis means the entire scenario outline fails.", SourceLine=38)]
         public virtual void ThisIsAScenarioOutlineWhereOneScenarioFails_Pass_2()
         {
             this.ThisIsAScenarioOutlineWhereOneScenarioFails("pass_2", ((string[])(null)));
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario fails, fail_1", Description="\nThis means the entire scenario outline fails.", SourceLine=39)]
+        [TechTalk.SpecRun.ScenarioAttribute("This is a scenario outline where one scenario fails, fail_1", Description="\r\nThis means the entire scenario outline fails.", SourceLine=39)]
         public virtual void ThisIsAScenarioOutlineWhereOneScenarioFails_Fail_1()
         {
             this.ThisIsAScenarioOutlineWhereOneScenarioFails("fail_1", ((string[])(null)));
@@ -255,6 +255,192 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void DealCorrectlyWithOverlongExampleValues_PleaseEnterAValidTwoLetterCountryCodeE_G_DE()
         {
             this.DealCorrectlyWithOverlongExampleValues("Please enter a valid two letter country code (e.g. DE)!", "This is just a very very very veery long error message!", ((string[])(null)));
+        }
+        
+        public virtual void DealWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with duplicate values", exampleTags);
+#line 89
+this.ScenarioSetup(scenarioInfo);
+#line 90
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with duplicate values, Variant 0", SourceLine=93)]
+        public virtual void DealWithDuplicateValues_Variant0()
+        {
+            this.DealWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with duplicate values, Variant 1", SourceLine=94)]
+        public virtual void DealWithDuplicateValues_Variant1()
+        {
+            this.DealWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with duplicate values, Variant 2", SourceLine=95)]
+        public virtual void DealWithDuplicateValues_Variant2()
+        {
+            this.DealWithDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with duplicate values, Variant 3", SourceLine=96)]
+        public virtual void DealWithDuplicateValues_Variant3()
+        {
+            this.DealWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with duplicate values, Variant 4", SourceLine=97)]
+        public virtual void DealWithDuplicateValues_Variant4()
+        {
+            this.DealWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple example sections with duplicate values", exampleTags);
+#line 100
+this.ScenarioSetup(scenarioInfo);
+#line 101
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 1, Variant 0", SourceLine=104)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet0_Variant0()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 1, Variant 1", SourceLine=105)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet0_Variant1()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 1, Variant 2", SourceLine=106)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet0_Variant2()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 2, Variant 0", SourceLine=110)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant0()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 2, Variant 1", SourceLine=111)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant1()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 2, Variant 2", SourceLine=112)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant2()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple example sections with duplicate values, Examples 2, Variant 3", SourceLine=113)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues_ExampleSet1_Variant3()
+        {
+            this.DealWithMultipleExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections without duplicate values", exampleTags);
+#line 116
+this.ScenarioSetup(scenarioInfo);
+#line 117
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections without duplicate values, First set, pa" +
+            "ss", SourceLine=120)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues_FirstSet_Pass()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithoutDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections without duplicate values, First set, fa" +
+            "il", SourceLine=121)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues_FirstSet_Fail()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithoutDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections without duplicate values, Second set, i" +
+            "nconclusive", SourceLine=125)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues_SecondSet_Inconclusive()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithoutDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections with duplicate values", exampleTags);
+#line 128
+this.ScenarioSetup(scenarioInfo);
+#line 129
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, First set, Varia" +
+            "nt 0", SourceLine=132)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_FirstSet_Variant0()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, First set, Varia" +
+            "nt 1", SourceLine=133)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_FirstSet_Variant1()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, First set, Varia" +
+            "nt 2", SourceLine=134)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_FirstSet_Variant2()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, Second set, Vari" +
+            "ant 0", SourceLine=138)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant0()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, Second set, Vari" +
+            "ant 1", SourceLine=139)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant1()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("inconclusive", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, Second set, Vari" +
+            "ant 2", SourceLine=140)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant2()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("fail", ((string[])(null)));
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Deal with multiple named example sections with duplicate values, Second set, Vari" +
+            "ant 3", SourceLine=141)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues_SecondSet_Variant3()
+        {
+            this.DealWithMultipleNamedExampleSectionsWithDuplicateValues("pass", ((string[])(null)));
         }
         
         [TechTalk.SpecRun.TestRunCleanup()]

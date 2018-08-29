@@ -176,6 +176,80 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Deal with duplicate values")]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("inconclusive", null)]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        public virtual void DealWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with duplicate values", exampleTags);
+#line 90
+this.ScenarioSetup(scenarioInfo);
+#line 91
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Deal with multiple example sections with duplicate values")]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("inconclusive", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        public virtual void DealWithMultipleExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple example sections with duplicate values", exampleTags);
+#line 101
+this.ScenarioSetup(scenarioInfo);
+#line 102
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Deal with multiple named example sections without duplicate values")]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("inconclusive", null)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithoutDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections without duplicate values", exampleTags);
+#line 117
+this.ScenarioSetup(scenarioInfo);
+#line 118
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Deal with multiple named example sections with duplicate values")]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("inconclusive", null)]
+        [NUnit.Framework.TestCaseAttribute("fail", null)]
+        [NUnit.Framework.TestCaseAttribute("pass", null)]
+        public virtual void DealWithMultipleNamedExampleSectionsWithDuplicateValues(string result, string[] exampleTags)
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Deal with multiple named example sections with duplicate values", exampleTags);
+#line 129
+this.ScenarioSetup(scenarioInfo);
+#line 130
+    testRunner.Then(string.Format("the scenario will \'{0}\'", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore
