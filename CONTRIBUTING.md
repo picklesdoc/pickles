@@ -16,7 +16,7 @@ If you find a bug in a Test Result Provider and want to contribute towards fixin
 
 Implement the automation layer in .NET, Ruby and JS if you are able. If you create your scenarios so that they use only steps from the other feature files, then you will most likely not need this step.
 
-Use the `CreateTestresults.cmd` script to create test result files and to deploy them to the source code of Pickles. Please remember to build the `TestHarness.sln` solution first!
+Use the `CreateTestResults.ps1` script to create test result files and to deploy them to the source code of Pickles. Please remember to build the `TestHarness.sln` solution first!
 
 Extend the set of unit tests for the unit test providers. Your best bet is to add test scenarios to the [Standard Test Suite](https://github.com/picklesdoc/pickles/blob/develop/src/Pickles/Pickles.TestFrameworks.UnitTests/StandardTestSuite.cs). Now comes the boring part: for each class that derives from `StandardTestSuite`, add methods in that class that call the test scenarios that you added in `StandardTestSuite`.
 
@@ -30,7 +30,7 @@ the `test-harness` directory contains the scenarios from which test results are 
 
 ##### .NET Code
 
-The .NET code is found in `./TestHarness/TestHarness.sln` solution. You will need [Visual Studio 2015](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx) in order to open the solution; the free Community version is fine. Remember to restore the NuGet packages before you compile.
+The .NET code is found in `./TestHarness/TestHarness.sln` solution. You will need [Visual Studio 2017](https://visualstudio.microsoft.com/downloads/) in order to open the solution; the free Community version is fine. Remember to restore the NuGet packages before you compile.
 
 ##### Cucumber/Ruby Code
 
