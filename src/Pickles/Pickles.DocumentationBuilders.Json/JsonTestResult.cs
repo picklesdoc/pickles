@@ -27,5 +27,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         public bool WasExecuted { get; set; }
 
         public bool WasSuccessful { get; set; }
+
+        public bool WasProvided { get; set; }
     }
 }

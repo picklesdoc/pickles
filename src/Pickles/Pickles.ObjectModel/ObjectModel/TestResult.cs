@@ -28,7 +28,8 @@ namespace PicklesDoc.Pickles.ObjectModel
     {
         Inconclusive,
         Failed,
-        Passed
+        Passed,
+        NotProvided
     }
 
     public static class TestResultExtensions

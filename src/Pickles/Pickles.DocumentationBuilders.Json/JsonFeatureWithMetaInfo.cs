@@ -28,7 +28,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
     public class JsonFeatureWithMetaInfo
     {
         public JsonFeatureWithMetaInfo(FeatureNode featureNodeTreeNode, ILanguageServicesRegistry languageServicesRegistry)
-            : this(featureNodeTreeNode, languageServicesRegistry, default(TestResult))
+            : this(featureNodeTreeNode, languageServicesRegistry, TestResult.NotProvided)
         {
         }
 
