@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles", "Pickles\Pickles.csproj", "{38BAD6E0-78AB-4AC3-91A8-BF72AF5EE394}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -105,6 +105,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Scripts", "Build Scri
 		..\..\test.fsx = ..\..\test.fsx
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.UserInterface.UnitTests", "Pickles.UserInterface.UnitTests\Pickles.UserInterface.UnitTests.csproj", "{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,6 +205,10 @@ Global
 		{C708FB0D-E2E0-4BE4-BB64-4373E4A0C8AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C708FB0D-E2E0-4BE4-BB64-4373E4A0C8AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C708FB0D-E2E0-4BE4-BB64-4373E4A0C8AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -215,6 +221,10 @@ Global
 		{52414CCC-E080-4FBF-AA3B-7E0117AE3673} = {E1DDC21E-D21E-4B2C-8561-17F630EC8F36}
 		{632BD477-03C9-4CC6-8840-6723DE75652E} = {E1DDC21E-D21E-4B2C-8561-17F630EC8F36}
 		{C708FB0D-E2E0-4BE4-BB64-4373E4A0C8AA} = {4E977674-6919-4F15-A6E3-37BFAC18C7E5}
+		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0} = {4E977674-6919-4F15-A6E3-37BFAC18C7E5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {611A2C36-6DED-4ACB-AEA4-D2DDE16A4841}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Pickles.CommandLine\Pickles.CommandLine.csproj

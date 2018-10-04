@@ -113,6 +113,10 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="CommandGeneration\CLICommandGenerator.cs" />
+    <Compile Include="CommandGeneration\CommandGeneratorBase.cs" />
+    <Compile Include="CommandGeneration\PowerShellCommandGenerator.cs" />
+    <Compile Include="CommandGeneration\StringBuilderExtensions.cs" />
     <Compile Include="Mvvm\NotifySelectionChangedCollection.cs" />
     <Compile Include="Settings\DataDirectoryDeriver.cs" />
     <Compile Include="Settings\IMainModelSerializer.cs" />
