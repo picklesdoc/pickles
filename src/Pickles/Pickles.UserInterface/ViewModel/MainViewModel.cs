@@ -25,6 +25,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Input;
 
@@ -32,6 +33,9 @@ using Autofac;
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+
+using NLog;
+
 using PicklesDoc.Pickles.ObjectModel;
 using PicklesDoc.Pickles.UserInterface.CommandGeneration;
 using PicklesDoc.Pickles.UserInterface.Mvvm;
@@ -53,6 +57,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+
         private readonly MultiSelectableCollection<DocumentationFormat> documentationFormats;
 
         private readonly TestResultsFormat[] testResultsFormats;
@@ -511,7 +517,7 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             var language = this.selectedLanguage.TwoLetterISOLanguageName;
             var commands = generator.Generate(model, language);
             Clipboard.SetText(commands);
-            MessageBox.Show("Copied the following commands into the clipboard:\n\n" + commands, "Info", MessageBoxButton.OK, MessageBoxImage.Information);
+            Log.Info(CultureInfo.InvariantCulture, "Copied the following commands into the clipboard:\n\n" + commands);
         }
 
         private void DoGeneratePowerShellCommand()
