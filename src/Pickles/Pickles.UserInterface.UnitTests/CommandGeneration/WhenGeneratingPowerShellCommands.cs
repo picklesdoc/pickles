@@ -18,19 +18,16 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-
+using System;
 using NFluent;
-
 using NUnit.Framework;
-
-using PicklesDoc.Pickles;
 using PicklesDoc.Pickles.UserInterface.CommandGeneration;
 using PicklesDoc.Pickles.UserInterface.Settings;
 
-namespace System.CommandGeneration
+namespace PicklesDoc.Pickles.UserInterface.UnitTests
 {
     [TestFixture]
-    public class WhenGeneratingPowerShellCommands : PicklesDoc.Pickles.Test.BaseFixture
+    public class WhenGeneratingPowerShellCommands : Test.BaseFixture
     {
         private const string MinimalCommandLine = @"Pickle-Features -FeatureDirectory ""C:\Specs"" ";
 
