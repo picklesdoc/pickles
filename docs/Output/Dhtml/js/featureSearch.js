@@ -48,7 +48,7 @@
 
         // catching instances where pushState will not work (for instance file:// protocol)
         try {
-            var url = 'Index.html?feature=' + path;
+            var url = '?feature=' + path;
             window.history.pushState({ path: url }, '', url);
         }
         catch (ex) {
