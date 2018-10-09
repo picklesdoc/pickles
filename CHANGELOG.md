@@ -28,6 +28,18 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Security
 
+## [2.20.0] - 2018-10-09
+
+### Added
+
+- Pickles GUI: Generate equivalent PowerShell or Windows Console command line ([90](https://github.com/picklesdoc/pickles/issues/90)) (by [@magicmonty](https://github.com/magicmonty))
+
+### Fixed
+
+- Inconclusive marker shown when generating doc without test results ([545](https://github.com/picklesdoc/pickles/issues/545)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+- Remove requirement for hardcoded 'Index.html' in featureSearch.js ([541](https://github.com/picklesdoc/pickles/pull/541)) (by [@szaliszali](https://github.com/szaliszali))
+- Exception in XUnit2ScenarioOutlineExampleMatcher ([548](https://github.com/picklesdoc/pickles/issues/548)) (by [@magicmonty](https://github.com/magicmonty))
+
 ## [2.19.0] - 2018-07-20
 
 ### Added
