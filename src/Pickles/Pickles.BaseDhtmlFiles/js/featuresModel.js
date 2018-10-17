@@ -61,6 +61,7 @@ function Background(data) {
 function Result(data) {
     this.WasExecuted = data.WasExecuted || false;
     this.WasSuccessful = data.WasSuccessful || false;
+    this.WasProvided = data.WasProvided || false;
 }
 
 /* JSON Sample

@@ -28,6 +28,12 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Security
 
+## [2.20.1] - 2018-10-17
+
+### Fixed
+
+- Pickles GUI: Generate equivalent PowerShell or Windows Console command line ([553](https://github.com/picklesdoc/pickles/issues/553)) (by [@dirkrombauts](https://github.com/dirkrombauts))
+
 ## [2.20.0] - 2018-10-09
 
 ### Added
