@@ -35,6 +35,8 @@ Set-Location $PSScriptRoot
 # CucumberJS
 Set-Location -Path "$PSScriptRoot\test-harness\CucumberJS"
 & "$PSScriptRoot\node_modules\.bin\cucumber-js" --format json:"$PSScriptRoot\results-example-cucumberjs-json.json"
+Write-Host "Waiting for CucumberJS to finish. You might need to increase the sleep time as the test suite increases."
+Start-Sleep -s 2
 Set-Location $PSScriptRoot
 
 # VSTest
