@@ -96,7 +96,7 @@ namespace PicklesDoc.Pickles
                 }
                 else
                 {
-                    featureTreeNode.Feature.Result = TestResult.Inconclusive;
+                    featureTreeNode.Feature.Result = TestResult.NotProvided;
                 }
             }
         }

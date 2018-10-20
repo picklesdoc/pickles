@@ -30,12 +30,17 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.Mapper
         {
             if (testResult == TestResult.Failed)
             {
-                return new JsonTestResult { WasExecuted = true, WasSuccessful = false };
+                return new JsonTestResult { WasExecuted = true, WasSuccessful = false, WasProvided = true };
             }
 
             if (testResult == TestResult.Passed)
             {
-                return new JsonTestResult { WasExecuted = true, WasSuccessful = true };
+                return new JsonTestResult { WasExecuted = true, WasSuccessful = true, WasProvided = true };
+            }
+
+            if (testResult == TestResult.Inconclusive)
+            {
+                return new JsonTestResult { WasExecuted = false, WasSuccessful = false, WasProvided = true };
             }
 
             return new JsonTestResult();

@@ -30,6 +30,7 @@ namespace PicklesDoc.Pickles.ObjectModel
         {
             this.Steps = new List<Step>();
             this.Tags = new List<string>();
+            this.Result = TestResult.NotProvided;
         }
 
         public List<Example> Examples { get; set; }

@@ -51,6 +51,7 @@ namespace PicklesDoc.Pickles.ObjectModel
     {
         public TableRowWithTestResult()
         {
+            this.Result = TestResult.NotProvided;
         }
 
         public TableRowWithTestResult(params string[] cells):base(cells)

@@ -68,19 +68,22 @@ Scenario: A simple feature
                     ],
                     "Result": {
                       "WasExecuted": false,
-                      "WasSuccessful": false
+                      "WasSuccessful": false,
+                      "WasProvided": false
                     }
                   }
                 ],
                 "Result": {
                   "WasExecuted": false,
-                  "WasSuccessful": false
+                  "WasSuccessful": false,
+                  "WasProvided": false
                 },
                 "Tags": []
               },
               "Result": {
                 "WasExecuted": false,
-                "WasSuccessful": false
+                "WasSuccessful": false,
+                "WasProvided": false
               }
             }
           ],
@@ -262,19 +265,22 @@ Scenario: A feature with a table
                     "Tags": [],
                     "Result": {
                       "WasExecuted": false,
-                      "WasSuccessful": false
+                      "WasSuccessful": false,
+                      "WasProvided": false
                     }
                   }
                 ],
                 "Result": {
                   "WasExecuted": false,
-                  "WasSuccessful": false
+                  "WasSuccessful": false,
+                  "WasProvided": false
                 },
                 "Tags": []
               },
               "Result": {
                 "WasExecuted": false,
-                "WasSuccessful": false
+                "WasSuccessful": false,
+                "WasProvided": false
               }
             }
           ],

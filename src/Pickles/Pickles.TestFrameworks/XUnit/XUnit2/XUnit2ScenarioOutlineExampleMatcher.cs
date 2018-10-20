@@ -39,7 +39,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
             // split scenario outline title to name + parameters
             var nameAndArgumentsSplitter = new Regex(@"^(?<name>(.*))(\(.*\))$", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
             var groups = nameAndArgumentsSplitter.Match(exampleElement.name).Groups;
-            var scenarioName = groups["name"].Value;
+            var scenarioName = groups["name"].Success ? groups["name"].Value : exampleElement.name;
             var scenariotNameWithNoSpacesAndSpecialCharacters = exampleElement.name.Replace(scenarioName, exampleElement.method);
 
             var esc = Regex.Escape("\"");

@@ -14,6 +14,7 @@ function NavigationFeature(name, path, result) {
 function Result(data) {
     this.WasExecuted = data.WasExecuted || false;
     this.WasSuccessful = data.WasSuccessful || false;
+    this.WasProvided = data.WasProvided || false;
 }
 
 function getFeaturesFromScenariosList(scenarios) {

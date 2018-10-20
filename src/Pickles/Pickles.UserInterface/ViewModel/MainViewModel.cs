@@ -25,13 +25,19 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO.Abstractions;
 using System.Linq;
+using System.Reflection;
+using System.Windows;
 using System.Windows.Input;
 
 using Autofac;
 
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+
+using NLog;
+
 using PicklesDoc.Pickles.ObjectModel;
+using PicklesDoc.Pickles.UserInterface.CommandGeneration;
 using PicklesDoc.Pickles.UserInterface.Mvvm;
 using PicklesDoc.Pickles.UserInterface.Settings;
 
@@ -51,6 +57,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
     /// </summary>
     public class MainViewModel : ViewModelBase
     {
+        private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
+
         private readonly MultiSelectableCollection<DocumentationFormat> documentationFormats;
 
         private readonly TestResultsFormat[] testResultsFormats;
@@ -62,6 +70,10 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
         private readonly RelayCommand browseForTestResultsFileCommand;
 
         private readonly RelayCommand generateCommand;
+
+        private readonly RelayCommand generatePowerShellCommandCommand;
+
+        private readonly RelayCommand generateCLICommandCommand;
 
         private readonly RelayCommand openOutputDirectory;
 
@@ -132,6 +144,8 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             this.browseForOutputFolderCommand = new RelayCommand(this.DoBrowseForOutputFolder);
             this.browseForTestResultsFileCommand = new RelayCommand(this.DoBrowseForTestResultsFile);
             this.generateCommand = new RelayCommand(this.DoGenerate, this.CanGenerate);
+            this.generatePowerShellCommandCommand = new RelayCommand(this.DoGeneratePowerShellCommand, this.CanGenerate);
+            this.generateCLICommandCommand = new RelayCommand(this.DoGenerateCLICommand, this.CanGenerate);
             this.openOutputDirectory = new RelayCommand(this.DoOpenOutputDirectory, this.CanOpenOutputDirectory);
 
             this.PropertyChanged += this.MainWindowViewModelPropertyChanged;
@@ -229,6 +243,16 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
         public ICommand GeneratePickles
         {
             get { return this.generateCommand; }
+        }
+
+        public ICommand GeneratePowerShellCommand
+        {
+            get { return this.generatePowerShellCommandCommand; }
+        }
+
+        public ICommand GenerateCLICommand
+        {
+            get { return this.generateCLICommandCommand; }
         }
 
         public ICommand BrowseForFeatureFolder
@@ -393,67 +417,67 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
             switch (e.PropertyName)
             {
                 case "FeatureFolder":
-                {
-                    if (this.fileSystem.Directory.Exists(this.featureFolder))
                     {
-                        this.IsFeatureDirectoryValid = true;
-                    }
-                    else
-                    {
-                        this.IsFeatureDirectoryValid = false;
-                    }
+                        if (this.fileSystem.Directory.Exists(this.featureFolder))
+                        {
+                            this.IsFeatureDirectoryValid = true;
+                        }
+                        else
+                        {
+                            this.IsFeatureDirectoryValid = false;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case "OutputFolder":
-                {
-                    if (this.fileSystem.Directory.Exists(this.outputFolder))
                     {
-                        this.IsOutputDirectoryValid = true;
-                    }
-                    else
-                    {
-                        this.IsOutputDirectoryValid = false;
-                    }
+                        if (this.fileSystem.Directory.Exists(this.outputFolder))
+                        {
+                            this.IsOutputDirectoryValid = true;
+                        }
+                        else
+                        {
+                            this.IsOutputDirectoryValid = false;
+                        }
 
-                    this.openOutputDirectory.RaiseCanExecuteChanged();
+                        this.openOutputDirectory.RaiseCanExecuteChanged();
 
-                    break;
-                }
+                        break;
+                    }
 
                 case "TestResultsFile":
-                {
-                    if (this.testResultsFile == null ||
-                        this.testResultsFile.Split(';').All(trf => this.fileSystem.File.Exists(trf)))
                     {
-                        this.IsTestResultsFileValid = true;
-                    }
-                    else
-                    {
-                        this.IsTestResultsFileValid = false;
-                    }
+                        if (this.testResultsFile == null ||
+                            this.testResultsFile.Split(';').All(trf => this.fileSystem.File.Exists(trf)))
+                        {
+                            this.IsTestResultsFileValid = true;
+                        }
+                        else
+                        {
+                            this.IsTestResultsFileValid = false;
+                        }
 
-                    break;
-                }
+                        break;
+                    }
 
                 case "ProjectName":
-                {
-                    this.IsProjectNameValid = !string.IsNullOrWhiteSpace(this.projectName);
-                    break;
-                }
+                    {
+                        this.IsProjectNameValid = !string.IsNullOrWhiteSpace(this.projectName);
+                        break;
+                    }
 
                 case "ProjectVersion":
-                {
-                    this.IsProjectVersionValid = !string.IsNullOrWhiteSpace(this.projectVersion);
-                    break;
-                }
+                    {
+                        this.IsProjectVersionValid = !string.IsNullOrWhiteSpace(this.projectVersion);
+                        break;
+                    }
 
                 case "SelectedTestResultsFormat":
-                {
-                    this.IsTestResultsFormatValid = Enum.IsDefined(typeof(TestResultsFormat), this.selectedTestResultsFormat);
-                    break;
-                }
+                    {
+                        this.IsTestResultsFormatValid = Enum.IsDefined(typeof(TestResultsFormat), this.selectedTestResultsFormat);
+                        break;
+                    }
 
                 case "IsRunning":
                 case "IsFeatureDirectoryValid":
@@ -465,10 +489,12 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                 case "IsLanguageValid":
                 case "IncludeTests":
                 case "IsDocumentationFormatValid":
-                {
-                    this.generateCommand.RaiseCanExecuteChanged();
-                    break;
-                }
+                    {
+                        this.generateCommand.RaiseCanExecuteChanged();
+                        this.generatePowerShellCommandCommand.RaiseCanExecuteChanged();
+                        this.generateCLICommandCommand.RaiseCanExecuteChanged();
+                        break;
+                    }
             }
         }
 
@@ -484,6 +510,44 @@ namespace PicklesDoc.Pickles.UserInterface.ViewModel
                    && this.isDocumentationFormatValid
                    && this.isLanguageValid;
         }
+
+        private void DoGenerateCommandLine(CommandGeneratorBase generator)
+        {
+            var model = this.CreateMainModel();
+            var language = this.selectedLanguage.TwoLetterISOLanguageName;
+            var commands = generator.Generate(model, language);
+            Clipboard.SetText(commands);
+            Log.Info(CultureInfo.InvariantCulture, "Copied the following commands into the clipboard:\n\n" + commands);
+        }
+
+        private void DoGeneratePowerShellCommand()
+        {
+            DoGenerateCommandLine(new PowerShellCommandGenerator());
+        }
+
+        private void DoGenerateCLICommand()
+        {
+            DoGenerateCommandLine(new CLICommandGenerator());
+        }
+
+        private MainModel CreateMainModel() =>
+            new MainModel
+            {
+                FeatureDirectory = this.featureFolder,
+                OutputDirectory = this.outputFolder,
+                ExcludeTags = this.excludeTags,
+                HideTags = this.HideTags,
+                CreateDirectoryForEachOutputFormat = this.createDirectoryForEachOutputFormat,
+                DocumentationFormats = this.documentationFormats.Selected.ToArray(),
+                ProjectName = this.projectName,
+                ProjectVersion = this.projectVersion,
+                IncludeTestResults = this.includeTests,
+                TestResultsFile = this.testResultsFile,
+                TestResultsFormat = this.selectedTestResultsFormat,
+                SelectedLanguageLcid = this.selectedLanguage.LCID,
+                EnableComments = this.enableComments,
+                IncludeExperimentalFeatures = this.includeExperimentalFeatures
+            };
 
         private void DoGenerate()
         {

@@ -41,6 +41,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.WasExecuted).IsFalse();
             Check.That(actual.WasSuccessful).IsFalse();
+            Check.That(actual.WasProvided).IsTrue();
         }
 
         private static TestResultToJsonTestResultMapper CreateMapper()
@@ -59,6 +60,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.WasExecuted).IsTrue();
             Check.That(actual.WasSuccessful).IsFalse();
+            Check.That(actual.WasProvided).IsTrue();
         }
 
         [Test]
@@ -72,6 +74,21 @@ namespace PicklesDoc.Pickles.Test.ObjectModel.Json
 
             Check.That(actual.WasExecuted).IsTrue();
             Check.That(actual.WasSuccessful).IsTrue();
+            Check.That(actual.WasProvided).IsTrue();
+        }
+
+        [Test]
+        public void Map_NotProvided_ReturnsExecutedFalseSuccessfulFalseProvidedFalse()
+        {
+            var testResult = TestResult.NotProvided;
+
+            var mapper = CreateMapper();
+
+            var actual = mapper.Map(testResult);
+
+            Check.That(actual.WasExecuted).IsFalse();
+            Check.That(actual.WasSuccessful).IsFalse();
+            Check.That(actual.WasProvided).IsFalse();
         }
     }
 }

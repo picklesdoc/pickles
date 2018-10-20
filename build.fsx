@@ -119,6 +119,12 @@ Target "BuildTest.Runners.CommandLine" (fun _ ->
       |> Log "AppBuild-Output: "
 )
 
+Target "BuildTest.Runners.UI" (fun _ ->
+    !! "src/Pickles/Pickles.UserInterface.UnitTests/Pickles.UserInterface.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
 let createZip (packageType : string) =
     !! (buildDir + "/" + packageType + "/*.*") -- "*.zip"
         |> Zip (buildDir + packageType) (deployDir + "Pickles-" + packageType + "-" + version + ".zip")
@@ -151,6 +157,7 @@ Target "Default" (fun _ ->
   ==> "BuildTest.DocumentationBuilders.Json"
   ==> "BuildTest.DocumentationBuilders.Word"
   ==> "BuildTest.Runners.CommandLine"
+  ==> "BuildTest.Runners.UI"
   ==> "Zip"
   ==> "Default"
 

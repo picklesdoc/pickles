@@ -96,7 +96,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
                             line = s.Location.Line,
                             result = new
                             {
-                                status = fe.Result.ToString().ToLowerInvariant(),
+                                status = DetermineStatus(fe),
                                 duration = 1
                             }
                         })
@@ -114,6 +114,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
             };
 
             return JsonConvert.SerializeObject(toOutPut, Formatting.Indented, settings);
+        }
+
+        private static string DetermineStatus(IFeatureElement fe)
+        {
+            var testResult = fe.Result;
+
+            if (testResult == TestResult.NotProvided)
+            {
+                testResult = TestResult.Inconclusive;
+            }
+
+            return testResult.ToString().ToLowerInvariant();
         }
 
         private void CreateFile(string outputFolderName, string jsonToWrite)

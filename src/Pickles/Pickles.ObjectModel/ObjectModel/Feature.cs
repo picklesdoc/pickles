@@ -29,6 +29,7 @@ namespace PicklesDoc.Pickles.ObjectModel
             this.FeatureElements = new List<IFeatureElement>();
             this.Comments = new List<Comment>();
             this.Tags = new List<string>();
+            this.Result = TestResult.NotProvided;
         }
 
         public string Name { get; set; }

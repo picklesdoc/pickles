@@ -109,6 +109,7 @@
     <Compile Include="XUnit\XUnit1\WhenParsingXUnitResultsFileWithIndividualResults.cs" />
     <Compile Include="XUnit\XUnit1\WhenParsingxUnitResultsFileWithMissingTraits.cs" />
     <Compile Include="XUnit\XUnit2\WhenDeterminingTheSignatureOfAnXUnit2ExampleRow.cs" />
+    <Compile Include="XUnit\XUnit2\WhenMatchingAnXunit2ScenarioOutlineExample.cs" />
     <Compile Include="XUnit\XUnit2\WhenParsingxUnit2ResultsFileWithMissingTraits.cs" />
     <Compile Include="XUnit\XUnit2\WhenParsingxUnit2ResultsFile.cs" />
     <Compile Include="XUnit\XUnit1\WhenParsingxUnitResultsFile.cs" />
