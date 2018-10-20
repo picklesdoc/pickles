@@ -20,6 +20,21 @@ defineSupportCode(function({Then, When}) {
     callback();
   });
 
+  Then(/^the scenario will 'pass'$/, function (callback) {
+    // nothing to be done here
+    callback();
+  });
+
+  Then(/^the scenario will 'inconclusive'$/, function (callback) {
+    // we want pending here
+    callback(null, 'pending');
+  });
+
+  Then(/^the scenario will 'fail'$/, function (callback) {
+    assert.equal("true", "false");
+    callback();
+  });
+
   When(/^I have backslashes in the value, for example a '(.*)'$/, function (filePath, callback) {
     // nothing to be done here
     callback();

@@ -31,7 +31,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2000000
+              "duration": 4000000
             }
           },
           {
@@ -43,8 +43,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -56,7 +55,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -133,8 +133,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -159,7 +158,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -171,8 +171,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:25"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -247,7 +246,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:25"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -259,8 +259,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:30"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -299,7 +298,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -416,7 +416,7 @@
             "result": {
               "status": "failed",
               "duration": 2000000,
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
             }
           },
           {
@@ -499,7 +499,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
             }
           },
           {
@@ -594,7 +594,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\AdditionSteps.js:36:12)"
             }
           },
           {
@@ -698,8 +698,7 @@
               "location": "features\\stepdefinitions\\MinimalSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -744,7 +743,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:22:20)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\MinimalSteps.js:22:20)"
             }
           }
         ]
@@ -798,8 +797,7 @@
               "location": "features\\stepdefinitions\\MinimalSteps.js:14"
             },
             "result": {
-              "status": "pending",
-              "duration": 1000000
+              "status": "pending"
             }
           }
         ]
@@ -1082,7 +1080,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1105,8 +1104,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -1175,7 +1173,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1199,7 +1198,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
             }
           }
         ]
@@ -1310,7 +1309,7 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
             }
           }
         ]
@@ -1333,7 +1332,8 @@
             },
             "result": {
               "status": "failed",
-              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\DirkRombauts\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
+              "duration": 1000000,
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:19:12)"
             }
           }
         ]
@@ -1352,7 +1352,7 @@
             "line": 65,
             "name": "I have backslashes in the value, for example a 'c:\\Temp\\'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:38"
             },
             "result": {
               "status": "passed"
@@ -1374,7 +1374,7 @@
             "line": 74,
             "name": "I have parenthesis in the value, for example an 'This is a description (and more)'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:28"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:43"
             },
             "result": {
               "status": "passed"
@@ -1396,11 +1396,10 @@
             "line": 82,
             "name": "I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:38"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:53"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1409,10 +1408,11 @@
             "line": 83,
             "name": "I have a field with value 'This is just a very very very veery long error message!'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:38"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:53"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1422,6 +1422,502 @@
             "name": "the scenario will 'pass_1'",
             "match": {
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 95,
+        "name": "Deal with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 96,
+        "name": "Deal with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 97,
+        "name": "Deal with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "the scenario will 'inconclusive'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:28"
+            },
+            "result": {
+              "status": "pending"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 98,
+        "name": "Deal with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 99,
+        "name": "Deal with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 91,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 106,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 107,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 108,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 112,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 113,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'inconclusive'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:28"
+            },
+            "result": {
+              "status": "pending"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 114,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 115,
+        "name": "Deal with multiple example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 102,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-without-duplicate-values",
+        "keyword": "Scenario",
+        "line": 122,
+        "name": "Deal with multiple named example sections without duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-without-duplicate-values",
+        "keyword": "Scenario",
+        "line": 123,
+        "name": "Deal with multiple named example sections without duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-without-duplicate-values",
+        "keyword": "Scenario",
+        "line": 127,
+        "name": "Deal with multiple named example sections without duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 118,
+            "name": "the scenario will 'inconclusive'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:28"
+            },
+            "result": {
+              "status": "pending"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 134,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 135,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 136,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
+            },
+            "result": {
+              "status": "passed"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 140,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 141,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'inconclusive'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:28"
+            },
+            "result": {
+              "status": "pending",
+              "duration": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 142,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'fail'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 1000000,
+              "error_message": "AssertionError: 'true' == 'false'\n    + expected - actual\n\n    -true\n    +false\n\n    at World.<anonymous> (C:\\Dev\\Code\\GitHub\\PicklesContributors\\rik-smeets\\pickles\\test-harness\\CucumberJS\\features\\stepdefinitions\\ScenarioOutlineSteps.js:34:12)"
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values",
+        "keyword": "Scenario",
+        "line": 143,
+        "name": "Deal with multiple named example sections with duplicate values",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 130,
+            "name": "the scenario will 'pass'",
+            "match": {
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:23"
             },
             "result": {
               "status": "passed"
@@ -1481,8 +1977,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:15"
             },
             "result": {
-              "status": "passed",
-              "duration": 2000000
+              "status": "passed"
             }
           },
           {
@@ -1571,11 +2066,10 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '**'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1618,7 +2112,7 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '++'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
               "status": "passed"
@@ -1664,7 +2158,7 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '.*'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
               "status": "passed"
@@ -1710,7 +2204,7 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '[]'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
               "status": "passed"
@@ -1756,7 +2250,7 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '{}'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
               "status": "passed"
@@ -1771,8 +2265,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -1803,10 +2296,11 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '()'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1818,8 +2312,7 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
@@ -1841,8 +2334,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:10"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -1851,7 +2343,7 @@
             "line": 22,
             "name": "I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$'",
             "match": {
-              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:33"
+              "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:48"
             },
             "result": {
               "status": "passed"
@@ -1922,7 +2414,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:10"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1934,7 +2427,8 @@
               "location": "features\\stepdefinitions\\ScenarioOutlineSteps.js:8"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           }
         ]
@@ -1956,7 +2450,8 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:10"
             },
             "result": {
-              "status": "passed"
+              "status": "passed",
+              "duration": 1000000
             }
           },
           {
@@ -1990,8 +2485,7 @@
               "location": "features\\stepdefinitions\\AdditionSteps.js:10"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           },
           {
@@ -2003,8 +2497,7 @@
               "location": "features\\stepdefinitions\\MinimalSteps.js:8"
             },
             "result": {
-              "status": "passed",
-              "duration": 1000000
+              "status": "passed"
             }
           }
         ]
