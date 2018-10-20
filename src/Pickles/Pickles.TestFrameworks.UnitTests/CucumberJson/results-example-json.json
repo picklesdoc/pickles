@@ -23,7 +23,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 73481
+              "duration": 62300
             }
           }
         ]
@@ -45,61 +45,61 @@
           {
             "keyword": "Given ",
             "name": "I have entered 60 into the calculator",
-            "line": 19,
+            "line": 11,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
             "result": {
               "status": "passed",
-              "duration": 43062
+              "duration": 38800
             }
           },
           {
             "keyword": "And ",
             "name": "I have entered 70 into the calculator",
-            "line": 19,
+            "line": 12,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
             "result": {
               "status": "passed",
-              "duration": 68741
+              "duration": 20700
             }
           },
           {
             "keyword": "And ",
             "name": "I have entered 130 into the calculator",
-            "line": 19,
+            "line": 13,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
             "result": {
               "status": "passed",
-              "duration": 21729
+              "duration": 17700
             }
           },
           {
             "keyword": "When ",
             "name": "I press add",
-            "line": 19,
+            "line": 14,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:14"
             },
             "result": {
               "status": "passed",
-              "duration": 23704
+              "duration": 18600
             }
           },
           {
             "keyword": "Then ",
             "name": "the result should be 260 on the screen",
-            "line": 19,
+            "line": 15,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:20"
             },
             "result": {
               "status": "passed",
-              "duration": 1881680
+              "duration": 2114200
             }
           }
         ]
@@ -120,7 +120,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 34370
+              "duration": 32300
             }
           }
         ]
@@ -142,61 +142,61 @@
           {
             "keyword": "Given ",
             "name": "I have entered 40 into the calculator",
-            "line": 20,
+            "line": 11,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
             "result": {
               "status": "passed",
-              "duration": 32395
+              "duration": 45600
             }
           },
           {
             "keyword": "And ",
             "name": "I have entered 50 into the calculator",
-            "line": 20,
+            "line": 12,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
             "result": {
               "status": "passed",
-              "duration": 18963
+              "duration": 71200
             }
           },
           {
             "keyword": "And ",
             "name": "I have entered 90 into the calculator",
-            "line": 20,
+            "line": 13,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
             "result": {
               "status": "passed",
-              "duration": 19358
+              "duration": 19400
             }
           },
           {
             "keyword": "When ",
             "name": "I press add",
-            "line": 20,
+            "line": 14,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:14"
             },
             "result": {
               "status": "passed",
-              "duration": 14222
+              "duration": 14500
             }
           },
           {
             "keyword": "Then ",
             "name": "the result should be 180 on the screen",
-            "line": 20,
+            "line": 15,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:20"
             },
             "result": {
               "status": "passed",
-              "duration": 52543
+              "duration": 47300
             }
           }
         ]
@@ -217,7 +217,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32790
+              "duration": 29300
             }
           }
         ]
@@ -245,7 +245,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 30420
+              "duration": 27600
             }
           },
           {
@@ -257,7 +257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 18963
+              "duration": 18000
             }
           },
           {
@@ -269,7 +269,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14223
+              "duration": 15200
             }
           },
           {
@@ -281,7 +281,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 43852
+              "duration": 43400
             }
           }
         ]
@@ -302,7 +302,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 29630
+              "duration": 41900
             }
           }
         ]
@@ -330,7 +330,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 35555
+              "duration": 22900
             }
           },
           {
@@ -343,7 +343,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"fail\"\n     got: \"this is a hacky way of making the scenario with a non-integer number\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:11:in `/^I have entered (\\d+)\\.(\\d+) into the calculator$/'\nfeatures/Addition.feature:32:in `And I have entered 2.2 into the calculator'",
-              "duration": 34923076
+              "duration": 24496300
             }
           },
           {
@@ -386,7 +386,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 47013
+              "duration": 53500
             }
           }
         ]
@@ -461,7 +461,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:29:in `/^the background step fails$/'\nfeatures/FailingBackground.feature:5:in `Given the background step fails'",
-              "duration": 413234
+              "duration": 250600
             }
           },
           {
@@ -548,7 +548,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:29:in `/^the background step fails$/'\nfeatures/FailingBackground.feature:5:in `Given the background step fails'",
-              "duration": 352395
+              "duration": 308900
             }
           },
           {
@@ -575,7 +575,7 @@
           {
             "keyword": "Given ",
             "name": "I have entered 60 into the calculator",
-            "line": 23,
+            "line": 15,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
@@ -586,7 +586,7 @@
           {
             "keyword": "And ",
             "name": "I have entered 70 into the calculator",
-            "line": 23,
+            "line": 16,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
@@ -597,7 +597,7 @@
           {
             "keyword": "And ",
             "name": "I have entered 130 into the calculator",
-            "line": 23,
+            "line": 17,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
@@ -608,7 +608,7 @@
           {
             "keyword": "When ",
             "name": "I press add",
-            "line": 23,
+            "line": 18,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:14"
             },
@@ -619,7 +619,7 @@
           {
             "keyword": "Then ",
             "name": "the result should be 260 on the screen",
-            "line": 23,
+            "line": 19,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:20"
             },
@@ -646,7 +646,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/AdditionSteps.rb:29:in `/^the background step fails$/'\nfeatures/FailingBackground.feature:5:in `Given the background step fails'",
-              "duration": 298272
+              "duration": 229900
             }
           },
           {
@@ -673,7 +673,7 @@
           {
             "keyword": "Given ",
             "name": "I have entered 40 into the calculator",
-            "line": 24,
+            "line": 15,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
@@ -684,7 +684,7 @@
           {
             "keyword": "And ",
             "name": "I have entered 50 into the calculator",
-            "line": 24,
+            "line": 16,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
@@ -695,7 +695,7 @@
           {
             "keyword": "And ",
             "name": "I have entered 90 into the calculator",
-            "line": 24,
+            "line": 17,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:6"
             },
@@ -706,7 +706,7 @@
           {
             "keyword": "When ",
             "name": "I press add",
-            "line": 24,
+            "line": 18,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:14"
             },
@@ -717,7 +717,7 @@
           {
             "keyword": "Then ",
             "name": "the result should be 180 on the screen",
-            "line": 24,
+            "line": 19,
             "match": {
               "location": "features/step_definitions/AdditionSteps.rb:20"
             },
@@ -754,7 +754,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37530
+              "duration": 32400
             }
           }
         ]
@@ -777,7 +777,7 @@
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/MinimalSteps.rb:6:in `/^inconclusive step$/'\nfeatures/Minimal Features/Failing.feature:7:in `Then inconclusive step'",
-              "duration": 212543
+              "duration": 246400
             }
           }
         ]
@@ -800,7 +800,7 @@
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/MinimalSteps.rb:10:in `/^failing step$/'\nfeatures/Minimal Features/Failing.feature:10:in `Then failing step'",
-              "duration": 378470
+              "duration": 440400
             }
           }
         ]
@@ -832,7 +832,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39507
+              "duration": 21000
             }
           }
         ]
@@ -855,7 +855,7 @@
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/MinimalSteps.rb:6:in `/^inconclusive step$/'\nfeatures/Minimal Features/Inconclusive.feature:7:in `Then inconclusive step'",
-              "duration": 249284
+              "duration": 129200
             }
           }
         ]
@@ -887,7 +887,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32790
+              "duration": 17400
             }
           }
         ]
@@ -1112,13 +1112,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 12,
+            "line": 8,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 43457
+              "duration": 51100
             }
           }
         ]
@@ -1134,13 +1134,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_2'",
-            "line": 13,
+            "line": 8,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 40691
+              "duration": 23400
             }
           }
         ]
@@ -1156,13 +1156,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_3'",
-            "line": 14,
+            "line": 8,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 28444
+              "duration": 29700
             }
           }
         ]
@@ -1178,13 +1178,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 25,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 45828
+              "duration": 32800
             }
           }
         ]
@@ -1200,13 +1200,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_2'",
-            "line": 26,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 30420
+              "duration": 22600
             }
           }
         ]
@@ -1222,14 +1222,14 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'inconclusive_1'",
-            "line": 27,
+            "line": 21,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:5"
             },
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:27:in `Then the scenario will 'inconclusive_1''\nfeatures/ScenarioOutlines.feature:21:in `Then the scenario will '<result>''",
-              "duration": 254420
+              "duration": 429000
             }
           }
         ]
@@ -1245,13 +1245,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 38,
+            "line": 34,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 41876
+              "duration": 29100
             }
           }
         ]
@@ -1267,13 +1267,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_2'",
-            "line": 39,
+            "line": 34,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 29629
+              "duration": 63400
             }
           }
         ]
@@ -1289,14 +1289,14 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'fail_1'",
-            "line": 40,
+            "line": 34,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:9"
             },
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:40:in `Then the scenario will 'fail_1''\nfeatures/ScenarioOutlines.feature:34:in `Then the scenario will '<result>''",
-              "duration": 285234
+              "duration": 303100
             }
           }
         ]
@@ -1312,13 +1312,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 49,
+            "line": 45,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 55308
+              "duration": 25100
             }
           }
         ]
@@ -1334,13 +1334,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_2'",
-            "line": 50,
+            "line": 45,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 77432
+              "duration": 23700
             }
           }
         ]
@@ -1356,14 +1356,14 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'inconclusive_1'",
-            "line": 54,
+            "line": 45,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:5"
             },
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:54:in `Then the scenario will 'inconclusive_1''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 151308
+              "duration": 163700
             }
           }
         ]
@@ -1379,14 +1379,14 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'inconclusive_2'",
-            "line": 55,
+            "line": 45,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:5"
             },
             "result": {
               "status": "pending",
               "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:6:in `/^the scenario will 'inconclusive_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:55:in `Then the scenario will 'inconclusive_2''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 121679
+              "duration": 162500
             }
           }
         ]
@@ -1402,14 +1402,14 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'fail_1'",
-            "line": 59,
+            "line": 45,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:9"
             },
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:59:in `Then the scenario will 'fail_1''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 235061
+              "duration": 411400
             }
           }
         ]
@@ -1425,14 +1425,14 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'fail_2'",
-            "line": 60,
+            "line": 45,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:9"
             },
             "result": {
               "status": "failed",
               "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:10:in `/^the scenario will 'fail_(\\d+)'$/'\nfeatures/ScenarioOutlines.feature:60:in `Then the scenario will 'fail_2''\nfeatures/ScenarioOutlines.feature:45:in `Then the scenario will '<result>''",
-              "duration": 193580
+              "duration": 287800
             }
           }
         ]
@@ -1448,13 +1448,13 @@
           {
             "keyword": "When ",
             "name": "I have backslashes in the value, for example a 'c:\\Temp\\'",
-            "line": 69,
+            "line": 65,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:25"
             },
             "result": {
               "status": "passed",
-              "duration": 19358
+              "duration": 31000
             }
           }
         ]
@@ -1470,13 +1470,13 @@
           {
             "keyword": "When ",
             "name": "I have parenthesis in the value, for example an 'This is a description (and more)'",
-            "line": 78,
+            "line": 74,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:17"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:29"
             },
             "result": {
               "status": "passed",
-              "duration": 52544
+              "duration": 65700
             }
           }
         ]
@@ -1492,37 +1492,534 @@
           {
             "keyword": "When ",
             "name": "I have a field with value 'Please enter a valid two letter country code (e.g. DE)!'",
-            "line": 88,
+            "line": 82,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:25"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:37"
             },
             "result": {
               "status": "passed",
-              "duration": 39507
+              "duration": 46600
             }
           },
           {
             "keyword": "And ",
             "name": "I have a field with value 'This is just a very very very veery long error message!'",
-            "line": 88,
+            "line": 83,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:25"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:37"
             },
             "result": {
               "status": "passed",
-              "duration": 14618
+              "duration": 20100
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 88,
+            "line": 84,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 13037
+              "duration": 18200
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values;;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with duplicate values",
+        "description": "",
+        "line": 95,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 91,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 46400
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values;;3",
+        "keyword": "Scenario Outline",
+        "name": "Deal with duplicate values",
+        "description": "",
+        "line": 96,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 91,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:96:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:91:in `Then the scenario will '<result>''",
+              "duration": 245500
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values;;4",
+        "keyword": "Scenario Outline",
+        "name": "Deal with duplicate values",
+        "description": "",
+        "line": 97,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'inconclusive'",
+            "line": 91,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:17"
+            },
+            "result": {
+              "status": "pending",
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:18:in `/^the scenario will 'inconclusive'$/'\nfeatures/ScenarioOutlines.feature:97:in `Then the scenario will 'inconclusive''\nfeatures/ScenarioOutlines.feature:91:in `Then the scenario will '<result>''",
+              "duration": 120000
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values;;5",
+        "keyword": "Scenario Outline",
+        "name": "Deal with duplicate values",
+        "description": "",
+        "line": 98,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 91,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18500
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-duplicate-values;;6",
+        "keyword": "Scenario Outline",
+        "name": "Deal with duplicate values",
+        "description": "",
+        "line": 99,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 91,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:99:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:91:in `Then the scenario will '<result>''",
+              "duration": 400500
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 106,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21400
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;3",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 107,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:107:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:102:in `Then the scenario will '<result>''",
+              "duration": 200600
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;4",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 108,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14400
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 112,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:112:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:102:in `Then the scenario will '<result>''",
+              "duration": 179300
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;3",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 113,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'inconclusive'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:17"
+            },
+            "result": {
+              "status": "pending",
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:18:in `/^the scenario will 'inconclusive'$/'\nfeatures/ScenarioOutlines.feature:113:in `Then the scenario will 'inconclusive''\nfeatures/ScenarioOutlines.feature:102:in `Then the scenario will '<result>''",
+              "duration": 100200
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;4",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 114,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:114:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:102:in `Then the scenario will '<result>''",
+              "duration": 177600
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-example-sections-with-duplicate-values;;5",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple example sections with duplicate values",
+        "description": "",
+        "line": 115,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 102,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18300
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-without-duplicate-values;first-set;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections without duplicate values",
+        "description": "",
+        "line": 122,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 118,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 23100
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-without-duplicate-values;first-set;3",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections without duplicate values",
+        "description": "",
+        "line": 123,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 118,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:123:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:118:in `Then the scenario will '<result>''",
+              "duration": 193300
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-without-duplicate-values;second-set;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections without duplicate values",
+        "description": "",
+        "line": 127,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'inconclusive'",
+            "line": 118,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:17"
+            },
+            "result": {
+              "status": "pending",
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:18:in `/^the scenario will 'inconclusive'$/'\nfeatures/ScenarioOutlines.feature:127:in `Then the scenario will 'inconclusive''\nfeatures/ScenarioOutlines.feature:118:in `Then the scenario will '<result>''",
+              "duration": 104500
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;first-set;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 134,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14200
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;first-set;3",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 135,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:135:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:130:in `Then the scenario will '<result>''",
+              "duration": 351300
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;first-set;4",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 136,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16700
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;second-set;2",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 140,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:140:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:130:in `Then the scenario will '<result>''",
+              "duration": 244100
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;second-set;3",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 141,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'inconclusive'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:17"
+            },
+            "result": {
+              "status": "pending",
+              "error_message": "TODO (Cucumber::Pending)\n./features/step_definitions/ScenarioOutlineSteps.rb:18:in `/^the scenario will 'inconclusive'$/'\nfeatures/ScenarioOutlines.feature:141:in `Then the scenario will 'inconclusive''\nfeatures/ScenarioOutlines.feature:130:in `Then the scenario will '<result>''",
+              "duration": 121900
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;second-set;4",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 142,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'fail'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "\nexpected: \"false\"\n     got: \"true\"\n\n(compared using eql?)\n (RSpec::Expectations::ExpectationNotMetError)\n./features/step_definitions/ScenarioOutlineSteps.rb:22:in `/^the scenario will 'fail'$/'\nfeatures/ScenarioOutlines.feature:142:in `Then the scenario will 'fail''\nfeatures/ScenarioOutlines.feature:130:in `Then the scenario will '<result>''",
+              "duration": 177300
+            }
+          }
+        ]
+      },
+      {
+        "id": "scenario-outlines;deal-with-multiple-named-example-sections-with-duplicate-values;second-set;5",
+        "keyword": "Scenario Outline",
+        "name": "Deal with multiple named example sections with duplicate values",
+        "description": "",
+        "line": 143,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Then ",
+            "name": "the scenario will 'pass'",
+            "line": 130,
+            "match": {
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14800
             }
           }
         ]
@@ -1553,7 +2050,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 28050
+              "duration": 22000
             }
           }
         ]
@@ -1575,7 +2072,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 41877
+              "duration": 24500
             }
           },
           {
@@ -1587,7 +2084,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 11062
+              "duration": 15500
             }
           },
           {
@@ -1599,7 +2096,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13432
+              "duration": 12000
             }
           },
           {
@@ -1611,7 +2108,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 37926
+              "duration": 62100
             }
           }
         ]
@@ -1632,7 +2129,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 33580
+              "duration": 16400
             }
           }
         ]
@@ -1648,13 +2145,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 19,
+            "line": 15,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 46617
+              "duration": 18500
             }
           }
         ]
@@ -1675,7 +2172,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 23703
+              "duration": 17200
             }
           }
         ]
@@ -1691,25 +2188,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '**'",
-            "line": 27,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 18963
+              "duration": 18000
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 27,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 11852
+              "duration": 11800
             }
           }
         ]
@@ -1730,7 +2227,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17383
+              "duration": 13600
             }
           }
         ]
@@ -1746,25 +2243,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '++'",
-            "line": 28,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 15408
+              "duration": 15400
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 28,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 10271
+              "duration": 12300
             }
           }
         ]
@@ -1785,7 +2282,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13827
+              "duration": 15800
             }
           }
         ]
@@ -1801,25 +2298,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '.*'",
-            "line": 29,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 15407
+              "duration": 15700
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 29,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 10272
+              "duration": 11800
             }
           }
         ]
@@ -1840,7 +2337,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 14222
+              "duration": 17800
             }
           }
         ]
@@ -1856,25 +2353,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '[]'",
-            "line": 30,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 14617
+              "duration": 15500
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 30,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 10272
+              "duration": 11700
             }
           }
         ]
@@ -1895,7 +2392,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 108642
+              "duration": 16100
             }
           }
         ]
@@ -1911,25 +2408,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '{}'",
-            "line": 31,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 66370
+              "duration": 15100
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 31,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 34371
+              "duration": 10800
             }
           }
         ]
@@ -1950,7 +2447,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 24889
+              "duration": 14200
             }
           }
         ]
@@ -1966,25 +2463,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '()'",
-            "line": 32,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 18963
+              "duration": 41100
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 32,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 12642
+              "duration": 11700
             }
           }
         ]
@@ -2005,7 +2502,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 13432
+              "duration": 13900
             }
           }
         ]
@@ -2021,25 +2518,25 @@
           {
             "keyword": "When ",
             "name": "I have special characters for regexes in the value, for example a '^.*(?<foo>BAR)\\s[^0-9]{3,4}A+$'",
-            "line": 33,
+            "line": 22,
             "match": {
-              "location": "features/step_definitions/ScenarioOutlineSteps.rb:21"
+              "location": "features/step_definitions/ScenarioOutlineSteps.rb:33"
             },
             "result": {
               "status": "passed",
-              "duration": 24493
+              "duration": 14800
             }
           },
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 33,
+            "line": 23,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 11061
+              "duration": 10300
             }
           }
         ]
@@ -2060,7 +2557,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 17383
+              "duration": 12500
             }
           }
         ]
@@ -2076,13 +2573,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 40,
+            "line": 36,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 13432
+              "duration": 11800
             }
           }
         ]
@@ -2103,7 +2600,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 38321
+              "duration": 12300
             }
           }
         ]
@@ -2119,13 +2616,13 @@
           {
             "keyword": "Then ",
             "name": "the scenario will 'pass_1'",
-            "line": 47,
+            "line": 43,
             "match": {
               "location": "features/step_definitions/ScenarioOutlineSteps.rb:1"
             },
             "result": {
               "status": "passed",
-              "duration": 15012
+              "duration": 11500
             }
           }
         ]
@@ -2146,7 +2643,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 40296
+              "duration": 12800
             }
           }
         ]
@@ -2168,7 +2665,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 32000
+              "duration": 7500
             }
           }
         ]
@@ -2189,7 +2686,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39111
+              "duration": 13000
             }
           }
         ]
@@ -2211,7 +2708,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 12247
+              "duration": 7700
             }
           }
         ]

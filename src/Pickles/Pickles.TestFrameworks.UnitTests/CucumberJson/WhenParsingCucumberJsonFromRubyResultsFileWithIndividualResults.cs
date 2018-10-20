@@ -68,5 +68,29 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.CucumberJson
         {
             base.ThenCanReadExamplesWithLongExampleValues();
         }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_ExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_ExamplesWithDuplicateValues_ShouldMatchExamples();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleExamplesWithDuplicateValues_ShouldMatchExamples();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamples_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamples_ShouldMatchExamples();
+        }
+
+        [Test]
+        public new void ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamplesWithDuplicateValues_ShouldMatchExamples()
+        {
+            base.ThenCanReadIndividualResultsFromScenarioOutline_MultipleNamedExamplesWithDuplicateValues_ShouldMatchExamples();
+        }
     }
 }
