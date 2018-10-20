@@ -28,7 +28,7 @@ namespace Pickles.TestHarness.nunit3
 #line 1 "ScenariosWithSpecialCharacters.feature"
 #line hidden
         
-        [NUnit.Framework.TestFixtureSetUpAttribute()]
+        [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
@@ -36,7 +36,7 @@ namespace Pickles.TestHarness.nunit3
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.TestFixtureTearDownAttribute()]
+        [NUnit.Framework.OneTimeTearDownAttribute()]
         public virtual void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
