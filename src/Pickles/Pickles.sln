@@ -107,6 +107,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build Scripts", "Build Scri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.UserInterface.UnitTests", "Pickles.UserInterface.UnitTests\Pickles.UserInterface.UnitTests.csproj", "{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.DocumentationBuilders.Markdown.UnitTests", "Pickles.DocumentationBuilders.Markdown.UnitTests\Pickles.DocumentationBuilders.Markdown.UnitTests.csproj", "{AC207FEA-CE9B-4C03-8A29-659E95C17BEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +211,10 @@ Global
 		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF20B6BD-8712-4102-A05D-1CCB37BD6CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC207FEA-CE9B-4C03-8A29-659E95C17BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC207FEA-CE9B-4C03-8A29-659E95C17BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC207FEA-CE9B-4C03-8A29-659E95C17BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC207FEA-CE9B-4C03-8A29-659E95C17BEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
