@@ -8,11 +8,11 @@ Pickles is a volunteer effort. We encourage you to pitch in!
 
 - Fork the `Pickles` repository
 - Create your code
-- Send a pull request.
+- Send a pull request
 
-### To Contribute to the Test Results Providers
+### To Contribute to the Test Result Providers
 
-If you find a bug in a Test Result Provider and want to contribute towards fixing it, start of by adding a scenario or feature file that shows off the bug to the test harness solution in the `test-harness` directory.. Add the scenario to the projects of each test result provider: it is quite likely that the same bug will occur across several test result providers. Don't forget the Cucumber and CucumberJS providers: it's easy to overlook them because they are not in the visual studio solution.
+If you find a bug in a test result provider and want to contribute towards fixing it, start of by adding a scenario or feature file that shows off the bug to the test harness solution in the `test-harness` directory. Add the scenario to the projects of each test result provider: it is quite likely that the same bug will occur across several test result providers. Don't forget the Cucumber and CucumberJS providers: it's easy to overlook them because they are not in the visual studio solution.
 
 Implement the automation layer in .NET, Ruby and JS if you are able. If you create your scenarios so that they use only steps from the other feature files, then you will most likely not need this step.
 
@@ -26,7 +26,7 @@ Once you're done, send a pull request.
 
 #### Setting up the Test Harness
 
-the `test-harness` directory contains the scenarios from which test results are derived to test the parsing of test results in Pickles
+The `test-harness` directory contains the scenarios from which test results are derived to test the parsing of test results in Pickles.
 
 ##### .NET Code
 
@@ -34,7 +34,7 @@ The .NET code is found in `./TestHarness/TestHarness.sln` solution. You will nee
 
 ##### Cucumber/Ruby Code
 
-In order to generate the thest output of the Cucumber features, you need to install the following software:
+In order to generate the test output of the Cucumber features, you need to install the following software:
 
 - [Ruby](http://rubyinstaller.org/downloads): use the stable 2.2.x version
 - Install Cucumber by opening an admin-enabled command line window in the directory where you cloned this repository, and running these gem commands:
@@ -61,14 +61,14 @@ In order to generate the test output of the CucumberJS features, you need to ins
 
 ## To Request a Feature
 
-- Create an issue.
+- Create an issue
 
 ## To Ask a Question
 
-- Create an issue.
+- Create an issue
 
 ## To Report a Bug
 
 - Create an issue
 - Describe steps to reproduce the bug
-- If at all possible, attach feature file(s) that cause the bug. In most cases you can remove the steps from the scenarios in order to protect your intellectual property.
+- If at all possible, attach feature file(s) that cause the bug. In most cases you can remove the steps from the scenarios in order to protect your intellectual property
