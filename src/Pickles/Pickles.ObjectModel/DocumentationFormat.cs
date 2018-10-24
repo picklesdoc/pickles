@@ -18,7 +18,6 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using System;
 using System.ComponentModel;
 
 namespace PicklesDoc.Pickles
@@ -56,7 +55,12 @@ namespace PicklesDoc.Pickles
         /// <summary>
         /// Cucumber output JSON format
         /// </summary>
-        [Description("Cucumber JSON export format")] Cucumber
+        [Description("Cucumber JSON export format")] Cucumber,
+
+        /// <summary>
+        /// Markdown output format
+        /// </summary>
+        [Description("Markdown output format")] Markdown
 
 
 

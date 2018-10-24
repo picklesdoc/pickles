@@ -77,6 +77,8 @@ namespace PicklesDoc.Pickles
                         return c.Resolve<DhtmlDocumentationBuilder>();
                     case DocumentationFormat.Cucumber:
                         return c.Resolve<CucumberDocumentationBuilder>();
+                    case DocumentationFormat.Markdown:
+                        return c.Resolve<MarkdownDocumentationBuilder>();
                     default:
                         return c.Resolve<HtmlDocumentationBuilder>();
                 }
