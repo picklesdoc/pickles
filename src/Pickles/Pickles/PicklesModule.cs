@@ -26,6 +26,7 @@ using PicklesDoc.Pickles.DocumentationBuilders.Dhtml;
 using PicklesDoc.Pickles.DocumentationBuilders.Excel;
 using PicklesDoc.Pickles.DocumentationBuilders.Html;
 using PicklesDoc.Pickles.DocumentationBuilders.Json;
+using PicklesDoc.Pickles.DocumentationBuilders.Markdown;
 using PicklesDoc.Pickles.DocumentationBuilders.Word;
 using PicklesDoc.Pickles.FeatureToggles;
 using PicklesDoc.Pickles.ObjectModel;
@@ -51,6 +52,7 @@ namespace PicklesDoc.Pickles
             builder.RegisterType<RelevantFileDetector>().SingleInstance();
             builder.RegisterType<FeatureNodeFactory>().SingleInstance();
             builder.RegisterType<CucumberDocumentationBuilder>().SingleInstance();
+            builder.RegisterType<MarkdownDocumentationBuilder>().SingleInstance();
 
             builder.RegisterModule<HtmlModule>();
             builder.RegisterModule<WordModule>();

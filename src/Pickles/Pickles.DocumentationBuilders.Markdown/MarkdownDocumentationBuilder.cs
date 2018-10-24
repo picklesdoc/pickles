@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="UnitTest1.cs" company="PicklesDoc">
+//  <copyright file="MarkdownDocumentationBuilder.cs" company="PicklesDoc">
 //  Copyright 2018 Darren Comeau
 //  Copyright 2018-present PicklesDoc team and community contributors
 //
@@ -18,17 +18,27 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using NUnit.Framework;
+using PicklesDoc.Pickles.DataStructures;
+using System.IO.Abstractions;
 
-namespace Pickles.DocumentationBuilders.Markdown.UnitTests
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 {
-    [TestFixture]
-    public class UnitTest1
+    public class MarkdownDocumentationBuilder : IDocumentationBuilder
     {
-        [Test]
-        public void TestMethod1()
+        private readonly IFileSystem fileSystem;
+
+        public MarkdownDocumentationBuilder(IFileSystem fileSystem)
         {
-            Assert.Inconclusive();
+            this.fileSystem = fileSystem;
+        }
+
+        public void Build(Tree features)
+        {
+            var defaultOutputFile = @"c:\output\pickledFeatures.md";
+
+            fileSystem.File.Create(defaultOutputFile);
+
+            fileSystem.File.AppendAllText(defaultOutputFile, "# Features");
         }
     }
 }

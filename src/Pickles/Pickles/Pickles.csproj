@@ -157,6 +157,10 @@
       <Project>{836020D1-A309-4367-9654-EBB7C3F60D97}</Project>
       <Name>Pickles.DocumentationBuilders.Json</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Pickles.DocumentationBuilders.Markdown\Pickles.DocumentationBuilders.Markdown.csproj">
+      <Project>{732039f2-cad8-44bc-9647-ec0acaf59632}</Project>
+      <Name>Pickles.DocumentationBuilders.Markdown</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Pickles.DocumentationBuilders.Word\Pickles.DocumentationBuilders.Word.csproj">
       <Project>{BDD5290E-BF98-436B-ADEE-A7479E22A875}</Project>
       <Name>Pickles.DocumentationBuilders.Word</Name>
