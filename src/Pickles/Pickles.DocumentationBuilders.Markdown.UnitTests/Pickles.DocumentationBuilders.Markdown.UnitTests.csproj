@@ -53,6 +53,10 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Localization_Tests.cs" />
+    <Compile Include="MockStylist.cs" />
+    <Compile Include="Stylist_Tests.cs" />
+    <Compile Include="TitleBlock_Tests.cs" />
     <Compile Include="MarkdownDocumentationBuilder_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

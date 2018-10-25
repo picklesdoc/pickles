@@ -25,6 +25,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 {
     public class MarkdownDocumentationBuilder : IDocumentationBuilder
     {
+        private readonly Stylist style = new Stylist();
         private readonly IFileSystem fileSystem;
 
         public MarkdownDocumentationBuilder(IFileSystem fileSystem)
@@ -36,9 +37,25 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
         {
             var defaultOutputFile = @"c:\output\pickledFeatures.md";
 
-            fileSystem.File.Create(defaultOutputFile);
+            var content = MarkdownContent();
 
-            fileSystem.File.AppendAllText(defaultOutputFile, "# Features");
+            WriteContentToFile(defaultOutputFile, content);
+        }
+
+        // TODO: new class handles file system interaction
+        private void WriteContentToFile(string filePath, string content)
+        {
+            fileSystem.File.Create(filePath);
+
+            fileSystem.File.AppendAllText(filePath, content);
+        }
+
+        // TODO: New class handles content, structure etc.
+        private string MarkdownContent()
+        {
+            var content = (new TitleBlock(style)).Text;
+
+            return content;
         }
     }
 }
