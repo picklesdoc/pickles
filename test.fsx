@@ -79,6 +79,24 @@ Target "Test.DocumentationBuilders.Word" (fun _ ->
              ToolPath = "packages/NUnit.ConsoleRunner/tools/nunit3-console.exe" })
 )
 
+Target "Test.DocumentationBuilders.Markdown.UnitTests" (fun _ ->
+    !! (testDir + "PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests.dll")
+      |> NUnit3 (fun p ->
+          {p with
+             ShadowCopy = false;
+             OutputDir = testDir + "PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests.TestResults.xml";
+             ToolPath = "packages/NUnit.ConsoleRunner/tools/nunit3-console.exe" })
+)
+
+Target "Test.DocumentationBuilders.Markdown.AcceptanceTests" (fun _ ->
+    !! (testDir + "PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll")
+      |> NUnit3 (fun p ->
+          {p with
+             ShadowCopy = false;
+             OutputDir = testDir + "PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.TestResults.xml";
+             ToolPath = "packages/NUnit.ConsoleRunner/tools/nunit3-console.exe" })
+)
+
 
 Target "Test.Runners.CommandLine" (fun _ ->
     !! (testDir + "PicklesDoc.Pickles.CommandLine.UnitTests.dll")
@@ -105,6 +123,8 @@ Target "Test.Runners.UI" (fun _ ->
     ==> "Test.DocumentationBuilders.Html"
     ==> "Test.DocumentationBuilders.Json"
     ==> "Test.DocumentationBuilders.Word"
+    ==> "Test.DocumentationBuilders.Markdown.UnitTest"
+    ==> "Test.DocumentationBuilders.Markdown.AcceptanceTests"
     ==> "Test.Runners.CommandLine"
     ==> "Test.Runners.UI"
     ==> "Test.TestFrameworks"

@@ -113,6 +113,18 @@ Target "BuildTest.DocumentationBuilders.Word" (fun _ ->
       |> Log "AppBuild-Output: "
 )
 
+Target "BuildTest.DocumentationBuilders.Markdown.UnitTests" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Markdown.UnitTests/Pickles.DocumentationBuilders.Markdown.UnitTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
+Target "BuildTest.DocumentationBuilders.Markdown.AcceptanceTests" (fun _ ->
+    !! "src/Pickles/Pickles.DocumentationBuilders.Markdown.AcceptanceTests/Pickles.DocumentationBuilders.Markdown.AcceptanceTests.csproj"
+      |> MSBuildRelease testDir "Build"
+      |> Log "AppBuild-Output: "
+)
+
 Target "BuildTest.Runners.CommandLine" (fun _ ->
     !! "src/Pickles/Pickles.CommandLine.UnitTests/Pickles.CommandLine.UnitTests.csproj"
       |> MSBuildRelease testDir "Build"
@@ -156,6 +168,8 @@ Target "Default" (fun _ ->
   ==> "BuildTest.DocumentationBuilders.Html"
   ==> "BuildTest.DocumentationBuilders.Json"
   ==> "BuildTest.DocumentationBuilders.Word"
+  ==> "BuildTest.DocumentationBuilders.Markdown.UnitTests"
+  ==> "BuildTest.DocumentationBuilders.Markdown.AcceptanceTests"
   ==> "BuildTest.Runners.CommandLine"
   ==> "BuildTest.Runners.UI"
   ==> "Zip"

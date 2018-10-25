@@ -18,6 +18,7 @@
 - Word: Microsoft Word
 - Excel: Microsoft Excel
 - JSON: a custom JSON format
+- Markdown: a simple output format
 
 Optionally, *Pickles* can **integrate test results**, so that your stakeholders know which scenarios pass validation. *Pickles* supports these test formats:
 
@@ -53,6 +54,7 @@ Optionally, *Pickles* can **integrate test results**, so that your stakeholders 
         <file src="PicklesDoc.Pickles.DocumentationBuilders.Json.dll" target="tools" />
         <file src="PicklesDoc.Pickles.DocumentationBuilders.Html.dll" target="tools" />
         <file src="PicklesDoc.Pickles.DocumentationBuilders.Dhtml.dll" target="tools" />
+        <file src="PicklesDoc.Pickles.DocumentationBuilders.Markdown.dll" target="tools" />
         <file src="System.IO.Abstractions.dll" target="tools" />
         <file src="FeatureSwitcher.dll" target="tools" />
         <file src="Strike.Jint.dll" target="tools" />

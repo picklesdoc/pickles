@@ -36,6 +36,7 @@ Target "CreatePackage CMD" (fun _ ->
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Html.dll";
         cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Dhtml.dll";
+        cmdDir + "PicklesDoc.Pickles.DocumentationBuilders.Markdown.dll";
         cmdDir + "System.IO.Abstractions.dll";
         cmdDir + "FeatureSwitcher.dll";
         cmdDir + "Strike.Jint.dll";
@@ -82,6 +83,7 @@ Target "CreatePackage GUI" (fun _ ->
         guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Json.dll";
         guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Html.dll";
         guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Dhtml.dll";
+        guiDir + "PicklesDoc.Pickles.DocumentationBuilders.Markdown.dll";
         guiDir + "System.IO.Abstractions.dll";
         guiDir + "FeatureSwitcher.dll";
         guiDir + "Strike.Jint.dll";
