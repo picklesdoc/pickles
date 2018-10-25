@@ -123,7 +123,7 @@ Target "Test.Runners.UI" (fun _ ->
     ==> "Test.DocumentationBuilders.Html"
     ==> "Test.DocumentationBuilders.Json"
     ==> "Test.DocumentationBuilders.Word"
-    ==> "Test.DocumentationBuilders.Markdown.UnitTest"
+    ==> "Test.DocumentationBuilders.Markdown.UnitTests"
     ==> "Test.DocumentationBuilders.Markdown.AcceptanceTests"
     ==> "Test.Runners.CommandLine"
     ==> "Test.Runners.UI"
