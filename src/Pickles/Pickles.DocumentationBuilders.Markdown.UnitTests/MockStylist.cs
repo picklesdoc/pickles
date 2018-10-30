@@ -18,9 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-using PicklesDoc.Pickles.DocumentationBuilders.Markdown;
 
-namespace Pickles.DocumentationBuilders.Markdown.UnitTests
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
     class MockStylist : Stylist
     {

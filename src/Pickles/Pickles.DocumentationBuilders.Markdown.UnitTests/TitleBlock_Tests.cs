@@ -19,9 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using NUnit.Framework;
-using PicklesDoc.Pickles.DocumentationBuilders.Markdown;
 
-namespace Pickles.DocumentationBuilders.Markdown.UnitTests
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
     [TestFixture]
     public class TitleBlock_Tests

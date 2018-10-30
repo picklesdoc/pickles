@@ -20,14 +20,11 @@
 
 using Autofac;
 using NUnit.Framework;
-using PicklesDoc.Pickles;
-using PicklesDoc.Pickles.DocumentationBuilders;
-using PicklesDoc.Pickles.DocumentationBuilders.Markdown;
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using System.Reflection;
 
-namespace Pickles.DocumentationBuilders.Markdown.UnitTests
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
     [TestFixture]
     public class MarkdownDocumentationBuilder_Tests
