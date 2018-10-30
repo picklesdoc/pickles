@@ -39,8 +39,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             var content = MarkdownContent();
 
+            var generatedDateTime = TestableDateTime.Instance.Now;
+
             content = content + "\r\n\r\n" +
-                "Generated on: 25 October 2018 at 18:53:00";
+                string.Format("Generated on: {0:dd MMMM yyyy} at {0:H:mm:ss}", generatedDateTime);
 
             WriteContentToFile(defaultOutputFile, content);
         }

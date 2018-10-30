@@ -36,7 +36,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\");
             var markdownDocumentationBuilder = this.Container.Resolve<MarkdownDocumentationBuilder>();
 
-            markdownDocumentationBuilder.Build(null);
+            DateTime executionTime;
+
+            if (ScenarioContext.Current.ContainsKey("DateTime.Now"))
+            {
+                executionTime = (DateTime)ScenarioContext.Current["DateTime.Now"];
+            }
+            else
+            {
+                executionTime = DateTime.Now;
+            }
+
+            using (var DateTimeContext = new DisposableTestDateTime(executionTime))
+            {
+                markdownDocumentationBuilder.Build(null);
+            }
         }
 
         [Then(@"the Markdown output has the line")]

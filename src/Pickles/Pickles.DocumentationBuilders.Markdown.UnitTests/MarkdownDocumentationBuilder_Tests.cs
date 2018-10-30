@@ -20,6 +20,7 @@
 
 using Autofac;
 using NUnit.Framework;
+using System;
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using System.Reflection;
@@ -76,11 +77,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
 
-            markdownDocumentationBuilder.Build(null);
+            var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
+            using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
+            {
+                markdownDocumentationBuilder.Build(null);
 
-            var actualfile = fileSystem.File.ReadAllLines(defaultOutputFile);
+                var actualfile = fileSystem.File.ReadAllLines(defaultOutputFile);
 
-            Assert.AreEqual(expectedFile, actualfile);
+                Assert.AreEqual(expectedFile, actualfile);
+            }
         }
 
         private IContainer BuildContainer()
