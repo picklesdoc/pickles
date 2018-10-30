@@ -39,6 +39,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             var content = MarkdownContent();
 
+            content = content + "\r\n\r\n" +
+                "Generated on: 25 October 2018 at 18:53:00";
+
             WriteContentToFile(defaultOutputFile, content);
         }
 

@@ -21,6 +21,7 @@
 using Autofac;
 using NUnit.Framework;
 using PicklesDoc.Pickles.Test;
+using System;
 using TechTalk.SpecFlow;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Steps
@@ -43,7 +44,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         {
             var actualResult = this.FileSystem.File.ReadAllText(@"c:\output\pickledFeatures.md");
 
-            var resultArray = actualResult.Split(new[] { '\r', '\n' });
+            var resultArray = actualResult.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             foreach (var check in table.Rows)
             {

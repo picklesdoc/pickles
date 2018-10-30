@@ -68,7 +68,12 @@ namespace Pickles.DocumentationBuilders.Markdown.UnitTests
         public void With_A_Null_Tree_The_Output_Has_Default_Content()
         {
             var defaultOutputFile = @"c:\output\pickledFeatures.md";
-            var expectedFile = new string[] { "# Features" };
+            var expectedFile = new string[]
+            {
+                "# Features",
+                "",
+                "Generated on: 25 October 2018 at 18:53:00"
+            };
 
             var container = BuildContainer();
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();

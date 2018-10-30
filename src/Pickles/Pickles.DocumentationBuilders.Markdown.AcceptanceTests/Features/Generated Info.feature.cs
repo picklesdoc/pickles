@@ -18,21 +18,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.2.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Title")]
-    public partial class TitleFeature
+    [NUnit.Framework.DescriptionAttribute("Generated Info")]
+    public partial class GeneratedInfoFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Title.feature"
+#line 1 "Generated Info.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Title", "    In order to easily tell that this file is a Gherkin output file\r\n    As a doc" +
-                    "ument reader\r\n    I want a title in the document as the first line", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Generated Info", "    In order to see when the document was created\r\n    As a document reader\r\n    " +
+                    "I want a date and timestamp for when the output was generated", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -64,23 +64,33 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Output has title on first line")]
-        public virtual void OutputHasTitleOnFirstLine()
+        public virtual void FeatureBackground()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Output has title on first line", ((string[])(null)));
 #line 6
-this.ScenarioSetup(scenarioInfo);
 #line 8
+    testRunner.Given("the date is 2018-10-25 and the time is 18:53:00", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Output has timestamp on third line")]
+        public virtual void OutputHasTimestampOnThirdLine()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Output has timestamp on third line", ((string[])(null)));
+#line 11
+this.ScenarioSetup(scenarioInfo);
+#line 6
+this.FeatureBackground();
+#line 13
     testRunner.When("I generate Markdown output", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Line No.",
                         "Content"});
             table1.AddRow(new string[] {
-                        "1",
-                        "# Features"});
-#line 10
+                        "3",
+                        "Generated on: 25 October 2018 at 18:53:00"});
+#line 15
     testRunner.Then("the Markdown output has the line", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
