@@ -34,5 +34,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.IsNotEmpty(title);
             Assert.AreEqual("Features", title);
         }
+
+        [Test]
+        public void Localization_Has_String_For_GenerationDateTime()
+        {
+            var generationDateTime = Localization.GenerationDateTime;
+
+            Assert.IsNotNull(generationDateTime);
+            Assert.IsNotEmpty(generationDateTime);
+            Assert.AreEqual("Generated on: {0:dd MMMM yyyy} at {0:H:mm:ss}", generationDateTime);
+        }
     }
 }

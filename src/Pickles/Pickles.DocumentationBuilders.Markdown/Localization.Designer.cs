@@ -61,6 +61,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Generated on: {0:dd MMMM yyyy} at {0:H:mm:ss}.
+        /// </summary>
+        internal static string GenerationDateTime {
+            get {
+                return ResourceManager.GetString("GenerationDateTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Features.
         /// </summary>
         internal static string Title {

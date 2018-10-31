@@ -18,6 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
+
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 {
     class TitleBlock
@@ -33,8 +35,44 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
         {
             get
             {
-                return style.AsTitle(Localization.Title);
+                return RenderedTitleBlock();
             }
+        }
+
+        private string RenderedTitleBlock()
+        {
+            var lines = new string[]
+                {
+                    Title(),
+                    string.Empty,
+                    GenerationInfo()
+                };
+
+            return LineArrayToString(lines);
+        }
+
+        private string LineArrayToString(string[] lines)
+        {
+            string result = string.Empty;
+
+            foreach (var line in lines)
+            {
+                result = string.Concat(result, line, Environment.NewLine);
+            }
+
+            return result;
+        }
+
+        private string Title()
+        {
+            return style.AsTitle(Localization.Title);
+        }
+
+        private string GenerationInfo()
+        {
+            var generatedDateTime = TestableDateTime.Instance.Now;
+
+            return string.Format(Localization.GenerationDateTime, generatedDateTime);
         }
     }
 }

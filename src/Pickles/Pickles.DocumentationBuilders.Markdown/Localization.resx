@@ -117,6 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="GenerationDateTime" xml:space="preserve">
+    <value>Generated on: {0:dd MMMM yyyy} at {0:H:mm:ss}</value>
+    <comment>The date and time when document was generated, parameter {0} is this date/time.</comment>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Features</value>
     <comment>Title for the complete document containing all features and scenarions.</comment>

@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using NUnit.Framework;
+using System;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
@@ -26,14 +27,27 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
     public class TitleBlock_Tests
     {
         [Test]
-        public void A_New_TitleBlock_Has_Complete_Title_Text()
+        public void A_New_TitleBlock_Has_Title_Line()
         {
             var mockStyle = new MockStylist();
+
             var titleBlock = new TitleBlock(mockStyle);
 
-            var actualTitle = titleBlock.Text;
+            Assert.IsTrue(titleBlock.Text.Contains("Mocked Title Style: Features"));
+        }
 
-            Assert.AreEqual("Mocked Title Style: Features", actualTitle);
+        [Test]
+        public void A_New_TitleBlock_Has_Generation_Line()
+        {
+            var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
+            using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
+            {
+                var mockStyle = new MockStylist();
+
+                var titleBlock = new TitleBlock(mockStyle);
+
+                Assert.IsTrue(titleBlock.Text.Contains("Generated on: 25 October 2018 at 18:53:00"));
+            }
         }
     }
 }
