@@ -32,7 +32,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "File Location", "    In order to control where the document is created\r\n    As a document reader\r\n" +
-                    "    I want a to be able to specify a folder for the file", ProgrammingLanguage.CSharp, ((string[])(null)));
+                    "    I want a to be able to specify an output folder for the document", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

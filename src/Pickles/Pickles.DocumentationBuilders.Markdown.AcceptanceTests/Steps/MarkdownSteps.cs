@@ -62,7 +62,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         [Then(@"the Markdown output has the line")]
         public void Then_The_Markdown_Output_Has_The_Line(Table table)
         {
-
             var actualResult = this.FileSystem.File.ReadAllText(TargetFile(this.Configuration));
 
             var resultArray = actualResult.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
