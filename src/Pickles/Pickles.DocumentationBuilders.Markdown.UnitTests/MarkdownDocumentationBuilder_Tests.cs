@@ -33,7 +33,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         [Test]
         public void New_MarkdownDocumentationBuilder_Is_An_Implementation_Of_IDocumentationBuilder()
         {
-            var documentationBuilder = new MarkdownDocumentationBuilder(null);
+            IFileSystem filesystem = new MockFileSystem();
+            IConfiguration configuration = new Configuration();
+
+            var documentationBuilder = new MarkdownDocumentationBuilder(filesystem, configuration);
 
             Assert.IsInstanceOf<IDocumentationBuilder>(documentationBuilder);
         }
@@ -51,11 +54,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         [Test]
         public void When_I_Build_Documentation_A_File_Is_Created()
         {
-            var defaultOutputFile = @"c:\output\pickledFeatures.md";
+            var outputFolder = @"c:\output";
+            var defaultOutputFile = @"c:\output\features.md";
 
             var container = BuildContainer();
-            var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
+            var configuration = container.Resolve<IConfiguration>();
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
+            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
             markdownDocumentationBuilder.Build(null);
 
@@ -65,7 +71,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         [Test]
         public void With_A_Null_Tree_The_Output_Has_Default_Content()
         {
-            var defaultOutputFile = @"c:\output\pickledFeatures.md";
+            var outputFolder = @"c:\output";
+            var defaultOutputFile = @"c:\output\features.md";
             var expectedFile = new string[]
             {
                 "# Features",
@@ -74,8 +81,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             };
 
             var container = BuildContainer();
-            var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
+            var configuration = container.Resolve<IConfiguration>();
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
+            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
             var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
             using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))

@@ -67,6 +67,11 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Features\File Location.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>File Location.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Generated Info.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,6 +89,10 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\File Location.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>File Location.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Generated Info.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using PicklesDoc.Pickles.DataStructures;
+using System.IO;
 using System.IO.Abstractions;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
@@ -27,19 +28,17 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
     {
         private readonly Stylist style = new Stylist();
         private readonly IFileSystem fileSystem;
+        private readonly IConfiguration configuration;
 
-        public MarkdownDocumentationBuilder(IFileSystem fileSystem)
+        public MarkdownDocumentationBuilder(IFileSystem fileSystem, IConfiguration configuration)
         {
             this.fileSystem = fileSystem;
+            this.configuration = configuration;
         }
 
         public void Build(Tree features)
         {
-            var defaultOutputFile = @"c:\output\pickledFeatures.md";
-
-            var content = MarkdownContent();
-
-            WriteContentToFile(defaultOutputFile, content);
+            WriteContentToFile(TargetFile(), MarkdownContent());
         }
 
         // TODO: new class handles file system interaction
@@ -48,6 +47,23 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             fileSystem.File.Create(filePath);
 
             fileSystem.File.AppendAllText(filePath, content);
+        }
+
+        private string TargetFile()
+        {
+            var fileName = "features.md";
+
+            string defaultOutputFile = string.Empty;
+            if (configuration.OutputFolder == null)
+            {
+                defaultOutputFile = Path.Combine(@"C:\testing", fileName);
+            }
+            else
+            {
+                defaultOutputFile = Path.Combine(configuration.OutputFolder.FullName, fileName);
+            }
+
+            return defaultOutputFile;
         }
 
         // TODO: New class handles content, structure etc.
