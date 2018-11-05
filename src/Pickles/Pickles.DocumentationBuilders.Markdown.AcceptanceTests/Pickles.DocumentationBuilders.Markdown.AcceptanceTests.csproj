@@ -67,6 +67,11 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Features\Feature Description.feature.cs">
+      <DependentUpon>Feature Description.feature</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Features\Feature Heading.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -95,6 +100,10 @@
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\Feature Description.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Feature Description.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Feature Heading.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

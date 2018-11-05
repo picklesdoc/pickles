@@ -20,6 +20,7 @@
 
 using PicklesDoc.Pickles.ObjectModel;
 using System;
+using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
@@ -41,10 +42,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         private string RenderedBlock()
         {
-            var lines = new string[]
-                {
-                    FeatureHeading()
-                };
+            var lines = new List<string>();
+
+            lines.Add(FeatureHeading());
+
+            lines = AddDescriptionIfAvailable(lines);
 
             return LineArrayToString(lines);
         }
@@ -54,7 +56,17 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             return style.AsFeatureHeading(feature.Name);
         }
 
-        private string LineArrayToString(string[] lines)
+        private List<string> AddDescriptionIfAvailable(List<string> lines)
+        {
+            if (feature.Description != null)
+            {
+                lines.Add(feature.Description);
+            }
+
+            return lines;
+        }
+
+        private string LineArrayToString(List<string> lines)
         {
             string result = string.Empty;
 

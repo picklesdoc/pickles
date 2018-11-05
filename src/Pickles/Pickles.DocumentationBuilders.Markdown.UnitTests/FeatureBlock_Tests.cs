@@ -21,6 +21,7 @@
 using NUnit.Framework;
 using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
 using PicklesDoc.Pickles.ObjectModel;
+using System;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
@@ -28,7 +29,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
     public class FeatureBlock_Tests
     {
         [Test]
-        public void A_New_FeatureBlock_Has_Title_From_Feature()
+        public void A_New_FeatureBlock_Has_Feature_Heading_On_First_Line()
         {
             var expectedString = "FHF: Hello, World";
             var mockStyle = new MockStylist
@@ -41,12 +42,34 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             };
 
             var featureBlock = new FeatureBlock(feature,mockStyle);
-            string actualString = featureBlock.ToString();
+            var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.IsTrue(
-                actualString.Contains(expectedString),
-                string.Format("String \"{0}\" not found in \"{1}\"", expectedString, actualString)
-                );
+            Assert.AreEqual(expectedString, actualString[0]);
+        }
+
+        [Test]
+        public void When_Feature_Description_Available_It_Is_Placed_Below_Feature_Heading()
+        {
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FeatureHeading: {0}"
+            };
+            var feature = new Feature
+            {
+                Name = "Feature with description",
+                Description = String.Concat(
+                    "In order to determine that world is flat", Environment.NewLine,
+                    "As a captain of a ship", Environment.NewLine,
+                    "I want to sail beyond the horizion")
+            };
+
+            var featureBlock = new FeatureBlock(feature, mockStyle);
+            var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("FeatureHeading: Feature with description", actualString[0]);
+            Assert.AreEqual("In order to determine that world is flat", actualString[1]);
+            Assert.AreEqual("As a captain of a ship", actualString[2]);
+            Assert.AreEqual("I want to sail beyond the horizion", actualString[3]);
         }
     }
 }
