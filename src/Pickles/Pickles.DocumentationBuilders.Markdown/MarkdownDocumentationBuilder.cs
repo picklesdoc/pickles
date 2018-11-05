@@ -36,9 +36,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             this.configuration = configuration;
         }
 
-        public void Build(Tree features)
+        public void Build(Tree featureTree)
         {
-            WriteContentToFile(TargetFile(), MarkdownContent());
+            var documentation = new Documentation(featureTree);
+
+            WriteContentToFile(TargetFile(), documentation.CurrentPage);
         }
 
         // TODO: new class handles file system interaction
@@ -64,14 +66,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             }
 
             return defaultOutputFile;
-        }
-
-        // TODO: New class handles content, structure etc.
-        private string MarkdownContent()
-        {
-            var content = (new TitleBlock(style)).Text;
-
-            return content;
         }
     }
 }

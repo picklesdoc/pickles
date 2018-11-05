@@ -20,6 +20,9 @@
 
 using Autofac;
 using NUnit.Framework;
+using PicklesDoc.Pickles.DataStructures;
+using PicklesDoc.Pickles.DirectoryCrawler;
+using PicklesDoc.Pickles.ObjectModel;
 using System;
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
@@ -90,6 +93,45 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
             {
                 markdownDocumentationBuilder.Build(null);
+
+                var actualfile = fileSystem.File.ReadAllLines(defaultOutputFile);
+
+                Assert.AreEqual(expectedFile, actualfile);
+            }
+        }
+
+        [Test]
+        public void With_A_Simple_Feature_The_Output_Has_Default_Content()
+        {
+            var outputFolder = @"c:\output";
+            var defaultOutputFile = @"c:\output\features.md";
+            var expectedFile = new string[]
+            {
+                "# Features",
+                "",
+                "Generated on: 25 October 2018 at 18:53:00",
+                "",
+                "### Simple Feature"
+            };
+
+            var container = BuildContainer();
+            var configuration = container.Resolve<IConfiguration>();
+            var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
+            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
+
+            var simpleFeature = new Feature();
+            simpleFeature.Name = "Simple Feature";
+            var relPath = "fakedir";
+            var location = fileSystem.FileInfo.FromFileName(@"c:\");
+            var newNode = new FeatureNode(location, relPath, simpleFeature);
+            var featureTree = new Tree(new FolderNode(location, relPath));
+            featureTree.Add(newNode);
+
+            var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
+            using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
+            {
+                markdownDocumentationBuilder.Build(featureTree);
 
                 var actualfile = fileSystem.File.ReadAllLines(defaultOutputFile);
 

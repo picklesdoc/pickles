@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="MockStylist.cs" company="PicklesDoc">
+//  <copyright file="FeatureBlock_Tests.cs" company="PicklesDoc">
 //  Copyright 2018 Darren Comeau
 //  Copyright 2018-present PicklesDoc team and community contributors
 //
@@ -18,21 +18,35 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using NUnit.Framework;
+using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
+using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
-    class MockStylist : Stylist
+    [TestFixture]
+    public class FeatureBlock_Tests
     {
-        internal override string AsTitle(string title)
+        [Test]
+        public void A_New_FeatureBlock_Has_Title_From_Feature()
         {
-            return "Mocked Title Style: " + title;
-        }
+            var expectedString = "FHF: Hello, World";
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FHF: {0}"
+            };
+            var feature = new Feature
+            {
+                Name = "Hello, World"
+            };
 
-        public string FeatureHeadingFormat { get; set; }
+            var featureBlock = new FeatureBlock(feature,mockStyle);
+            string actualString = featureBlock.ToString();
 
-        internal override string AsFeatureHeading(string featureName)
-        {
-            return string.Format(FeatureHeadingFormat, featureName);
+            Assert.IsTrue(
+                actualString.Contains(expectedString),
+                string.Format("String \"{0}\" not found in \"{1}\"", expectedString, actualString)
+                );
         }
     }
 }

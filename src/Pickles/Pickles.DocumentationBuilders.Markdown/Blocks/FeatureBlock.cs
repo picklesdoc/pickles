@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="TitleBlock.cs" company="PicklesDoc">
+//  <copyright file="FeatureBlock.cs" company="PicklesDoc">
 //  Copyright 2018 Darren Comeau
 //  Copyright 2018-present PicklesDoc team and community contributors
 //
@@ -18,37 +18,40 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using PicklesDoc.Pickles.ObjectModel;
 using System;
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
-    class TitleBlock
+    class FeatureBlock
     {
+        readonly Feature feature;
         readonly Stylist style;
 
-        public TitleBlock(Stylist style)
+        public FeatureBlock(Feature feature, Stylist style)
         {
+            this.feature = feature;
             this.style = style;
         }
 
-        internal string Text
+        public new string ToString()
         {
-            get
-            {
-                return RenderedTitleBlock();
-            }
+            return RenderedBlock();
         }
 
-        private string RenderedTitleBlock()
+        private string RenderedBlock()
         {
             var lines = new string[]
                 {
-                    Title(),
-                    string.Empty,
-                    GenerationInfo()
+                    FeatureHeading()
                 };
 
             return LineArrayToString(lines);
+        }
+
+        private string FeatureHeading()
+        {
+            return style.AsFeatureHeading(feature.Name);
         }
 
         private string LineArrayToString(string[] lines)
@@ -61,18 +64,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             }
 
             return result;
-        }
-
-        private string Title()
-        {
-            return style.AsTitle(Localization.Title);
-        }
-
-        private string GenerationInfo()
-        {
-            var generatedDateTime = TestableDateTime.Instance.Now;
-
-            return string.Format(Localization.GenerationDateTime, generatedDateTime);
         }
     }
 }

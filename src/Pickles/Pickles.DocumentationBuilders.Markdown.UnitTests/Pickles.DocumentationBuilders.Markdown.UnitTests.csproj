@@ -53,6 +53,8 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Documentation_Tests.cs" />
+    <Compile Include="FeatureBlock_Tests.cs" />
     <Compile Include="TestableDateTime_Tests.cs" />
     <Compile Include="Localization_Tests.cs" />
     <Compile Include="MockStylist.cs" />

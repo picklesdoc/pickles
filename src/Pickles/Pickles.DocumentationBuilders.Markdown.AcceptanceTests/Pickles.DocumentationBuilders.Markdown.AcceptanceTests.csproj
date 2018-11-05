@@ -67,6 +67,11 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Features\Feature Heading.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Feature Heading.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\File Location.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -84,11 +89,16 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\DateTimeSteps.cs" />
+    <Compile Include="Steps\GherkinTreeSteps.cs" />
     <Compile Include="Steps\MarkdownSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Features\Feature Heading.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Feature Heading.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\File Location.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -30,5 +30,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             return styledTitle;
         }
+
+        internal virtual string AsFeatureHeading(string featureName)
+        {
+            var featureHeadingTemplate = "### {0}";
+
+            var styledFeatureHeading = string.Format(featureHeadingTemplate, featureName);
+
+            return styledFeatureHeading;
+        }
     }
 }

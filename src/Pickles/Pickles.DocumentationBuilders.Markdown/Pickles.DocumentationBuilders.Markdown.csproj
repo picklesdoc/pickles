@@ -47,6 +47,8 @@
       <Link>VersionInfo.cs</Link>
     </Compile>
     <Compile Include="DisposableTestDateTime.cs" />
+    <Compile Include="Blocks\FeatureBlock.cs" />
+    <Compile Include="Documentation.cs" />
     <Compile Include="Localization.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -56,7 +58,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stylist.cs" />
     <Compile Include="TestableDateTime.cs" />
-    <Compile Include="TitleBlock.cs" />
+    <Compile Include="Blocks\TitleBlock.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">

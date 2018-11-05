@@ -20,6 +20,7 @@
 
 using Autofac;
 using NUnit.Framework;
+using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.Test;
 using System;
 using System.IO;
@@ -39,6 +40,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         [When(@"I generate Markdown output")]
         public void When_I_Generate_Markdown_Output()
         {
+            Tree featureTree = null;
+
+            if (ScenarioContext.Current.ContainsKey("Feature Tree"))
+            {
+                featureTree = (Tree)ScenarioContext.Current["Feature Tree"];
+            }
+
             var configuration = this.Configuration;
             var markdownDocumentationBuilder = this.Container.Resolve<MarkdownDocumentationBuilder>();
 
@@ -55,7 +63,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
 
             using (var DateTimeContext = new DisposableTestDateTime(executionTime))
             {
-                markdownDocumentationBuilder.Build(null);
+                markdownDocumentationBuilder.Build(featureTree);
             }
         }
 
@@ -73,6 +81,32 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
 
                 Assert.IsTrue(resultArray.Length >= expectedRow, "Not enough lines in output");
                 Assert.AreEqual(expectedValue, resultArray[expectedRow-1]);
+            }
+        }
+
+        [Then(@"the Markdown output has the lines")]
+        public void ThenTheMarkdownOutputHasTheLines(Table table)
+        {
+            var actualResult = this.FileSystem.File.ReadAllText(TargetFile(this.Configuration));
+
+            var resultArray = actualResult.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.IsTrue(resultArray.Length >= table.RowCount, "Not enough lines in output");
+
+            foreach (var check in table.Rows)
+            {
+                var expectedValue = check["Content"];
+                var found = false;
+                foreach (var result in resultArray)
+                {
+                    if (result == expectedValue)
+                    {
+                        found = true;
+                        break;
+                    }
+                }
+
+                Assert.IsTrue(found, string.Format("Line \"{0}\" not found in output", expectedValue));
             }
         }
 
