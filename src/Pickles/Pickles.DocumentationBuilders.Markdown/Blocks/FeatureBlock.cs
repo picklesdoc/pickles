@@ -50,6 +50,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
             lines = AddDescriptionIfAvailable(lines);
 
+            lines = AddScenariosIfAvailable(lines);
+
             return LineCollectionToString(lines);
         }
 
@@ -88,6 +90,27 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
                     lines.Add(string.Empty);
                 }
             }
+
+            return lines;
+        }
+
+        private List<string> AddScenariosIfAvailable(List<string> lines)
+        {
+            if (feature.FeatureElements.Count > 0)
+            {
+                foreach (var element in feature.FeatureElements)
+                {
+                    lines = AddScenario(lines, element as Scenario);
+                }
+            }
+
+            return lines;
+        }
+
+        private List<string> AddScenario(List<string> lines, Scenario scenario)
+        {
+            lines.Add(style.AsScenarioHeading(scenario.Name));
+            lines.Add(string.Empty);
 
             return lines;
         }

@@ -62,35 +62,56 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         [Given(@"I have the description")]
         public void GivenIHaveTheDescription(TechTalk.SpecFlow.Table table)
         {
+            var lastFeature = TryToGetLastFeature();
+
             var featureTree = TryToGetTheTree();
 
             var lastNodeIndexLocation = featureTree.ChildNodes.Count - 1;
             foreach (var row in table.Rows)
             {
-                ((FeatureNode)featureTree.ChildNodes[lastNodeIndexLocation].Data).Feature.Description = string.Concat(
-                    ((FeatureNode)featureTree.ChildNodes[lastNodeIndexLocation].Data).Feature.Description,
+                lastFeature.Description = string.Concat(
+                    lastFeature.Description,
                     row["Description"],
                     Environment.NewLine
                     );
             }
+        }
 
-            ScenarioContext.Current["Feature Tree"] = featureTree;
+        [Given(@"I have a scenario called '(.*)'")]
+        public void GivenIHaveAScenarioCalled(string scenarioName)
+        {
+            var lastFeature = TryToGetLastFeature();
+
+            var scenario = new Scenario
+            {
+                Name = scenarioName
+            };
+
+            lastFeature.AddFeatureElement(scenario);
         }
 
         [Given(@"I have the tags")]
         public void GivenIHaveTheTags(TechTalk.SpecFlow.Table table)
         {
-            var featureTree = TryToGetTheTree();
+            var lastFeature = TryToGetLastFeature();
 
-            var lastNodeIndexLocation = featureTree.ChildNodes.Count - 1;
             foreach (var row in table.Rows)
             {
-                ((FeatureNode)featureTree.ChildNodes[lastNodeIndexLocation].Data).Feature.Tags.Add(
+                lastFeature.Tags.Add(
                     row["Tag"]
                     );
             }
+        }
 
-            ScenarioContext.Current["Feature Tree"] = featureTree;
+        private Feature TryToGetLastFeature()
+        {
+            var featureTree = TryToGetTheTree();
+
+            var lastNodeIndexLocation = featureTree.ChildNodes.Count - 1;
+
+            var lastFeature = ((FeatureNode)featureTree.ChildNodes[lastNodeIndexLocation].Data).Feature;
+
+            return lastFeature;
         }
 
         private Tree TryToGetTheTree()

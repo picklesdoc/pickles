@@ -23,6 +23,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
     class MockStylist : Stylist
     {
+        public MockStylist()
+        {
+            FeatureHeadingFormat = ">>{0}<<";
+            TagFormat = ">>{0}<<";
+            ScenarioHeadingFormat = ">>{0}<<";
+        }
+
         internal override string AsTitle(string title)
         {
             return "Mocked Title Style: " + title;
@@ -33,6 +40,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         internal override string AsFeatureHeading(string featureName)
         {
             return string.Format(FeatureHeadingFormat, featureName);
+        }
+
+        public string ScenarioHeadingFormat { get; set; }
+
+        internal override string AsScenarioHeading(string scenarioName)
+        {
+            return string.Format(ScenarioHeadingFormat, scenarioName);
         }
 
         public string TagFormat { get; set; }

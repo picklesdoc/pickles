@@ -96,5 +96,51 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual("FeatureHeading: Feature with Tags", actualString[2]);
             Assert.AreEqual(5, actualString.Length);
         }
+
+        [Test]
+        public void When_Scenario_Is_Available_It_Is_Included_After_Heading()
+        {
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FeatureHeading: {0}",
+                ScenarioHeadingFormat = "ScenarioHeading: {0}"
+            };
+            var feature = new Feature
+            {
+                Name = "Feature with Scenario"
+            };
+            feature.AddFeatureElement(new Scenario() { Name = "My Scenario" });
+
+            var featureBlock = new FeatureBlock(feature, mockStyle);
+            var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("FeatureHeading: Feature with Scenario", actualString[0]);
+            Assert.AreEqual("ScenarioHeading: My Scenario", actualString[2]);
+            Assert.AreEqual(5, actualString.Length);
+        }
+
+        [Test]
+        public void When_Mutiple_Scenarios_Are_Available_They_Are_Included_After_Heading()
+        {
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FeatureHeading: {0}",
+                ScenarioHeadingFormat = "ScenarioHeading: {0}"
+            };
+            var feature = new Feature
+            {
+                Name = "Feature with Scenario"
+            };
+            feature.AddFeatureElement(new Scenario() { Name = "My Scenario one" });
+            feature.AddFeatureElement(new Scenario() { Name = "My Scenario two" });
+
+            var featureBlock = new FeatureBlock(feature, mockStyle);
+            var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("FeatureHeading: Feature with Scenario", actualString[0]);
+            Assert.AreEqual("ScenarioHeading: My Scenario one", actualString[2]);
+            Assert.AreEqual("ScenarioHeading: My Scenario two", actualString[4]);
+            Assert.AreEqual(7, actualString.Length);
+        }
     }
 }
