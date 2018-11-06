@@ -12,6 +12,8 @@ Scenario: Output has tags for scenario
         | tagtwo |
 
     When I generate Markdown output
-    Then the Markdown output has the lines
-        | Content                 |
-        | *`@ignore`* *`@tagtwo`* |
+    
+    Then the Markdown output has the lines in the following order
+        | Content                           |
+        | *`@ignore`* *`@tagtwo`*           |
+        | #### Scenario: Scenario With Tags |

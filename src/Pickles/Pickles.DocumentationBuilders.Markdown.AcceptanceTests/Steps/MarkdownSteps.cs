@@ -110,6 +110,35 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             }
         }
 
+        [Then(@"the Markdown output has the lines in the following order")]
+        public void Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(Table table)
+        {
+            var actualResult = this.FileSystem.File.ReadAllText(TargetFile(this.Configuration));
+
+            var resultArray = actualResult.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.IsTrue(resultArray.Length >= table.RowCount, "Not enough lines in output");
+
+            var currentIndexPosition = 0;
+
+            foreach (var check in table.Rows)
+            {
+                var expectedValue = check["Content"];
+                var found = false;
+                while (found == false && currentIndexPosition < resultArray.Length)
+                {
+                    if (resultArray[currentIndexPosition] == expectedValue)
+                    {
+                        found = true;
+                    }
+
+                    currentIndexPosition++;
+                }
+
+                Assert.IsTrue(found, string.Format("Line \"{0}\" not found or not later than expected", expectedValue));
+            }
+        }
+
         [Then(@"the file '(.*)\\features.md' exists")]
         public void Then_The_Features_Markdown_File_Exists(string outputFolder)
         {

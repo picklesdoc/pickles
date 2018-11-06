@@ -86,7 +86,7 @@ this.ScenarioSetup(scenarioInfo);
             table1.AddRow(new string[] {
                         "### My Second Feature"});
 #line 13
-    testRunner.Then("the Markdown output has the lines", ((string)(null)), table1, "Then ");
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table1, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

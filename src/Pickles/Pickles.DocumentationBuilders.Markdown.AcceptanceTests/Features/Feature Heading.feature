@@ -9,8 +9,8 @@ Scenario: Output has feature section for each feature
     And I have a feature called 'My Second Feature'
 
     When I generate Markdown output
-
-    Then the Markdown output has the lines
+    
+    Then the Markdown output has the lines in the following order
         | Content               |
         | ### My First Feature  |
         | ### My Second Feature |

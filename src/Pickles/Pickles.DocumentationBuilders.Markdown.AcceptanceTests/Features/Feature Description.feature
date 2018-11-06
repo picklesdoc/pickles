@@ -14,8 +14,9 @@ Scenario: Output has feature description for feature
 
     When I generate Markdown output
 
-    Then the Markdown output has the lines
+    Then the Markdown output has the lines in the following order
         | Content                                                                       |
+        | ### My Described Feature                                                      |
         | In order to include the description (In order, As a, I want) for each feature |
         | As a reader of the generated documentation                                    |
         | I want the feature description included below the feature heading.            |

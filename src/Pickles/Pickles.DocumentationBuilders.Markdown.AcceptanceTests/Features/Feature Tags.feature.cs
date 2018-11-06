@@ -90,8 +90,10 @@ this.ScenarioSetup(scenarioInfo);
                         "Content"});
             table2.AddRow(new string[] {
                         "*`@ignore`* *`@tagtwo`*"});
-#line 14
-    testRunner.Then("the Markdown output has the lines", ((string)(null)), table2, "Then ");
+            table2.AddRow(new string[] {
+                        "### My Tagged Feature"});
+#line 15
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

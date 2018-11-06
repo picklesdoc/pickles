@@ -91,13 +91,15 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Content"});
             table2.AddRow(new string[] {
+                        "### My Described Feature"});
+            table2.AddRow(new string[] {
                         "In order to include the description (In order, As a, I want) for each feature"});
             table2.AddRow(new string[] {
                         "As a reader of the generated documentation"});
             table2.AddRow(new string[] {
                         "I want the feature description included below the feature heading."});
 #line 17
-    testRunner.Then("the Markdown output has the lines", ((string)(null)), table2, "Then ");
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

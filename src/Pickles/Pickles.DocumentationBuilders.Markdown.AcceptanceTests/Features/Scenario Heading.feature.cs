@@ -109,11 +109,15 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Content"});
             table2.AddRow(new string[] {
+                        "### My Scenario Heading A"});
+            table2.AddRow(new string[] {
                         "#### Scenario: Scenario heading included in output - A"});
+            table2.AddRow(new string[] {
+                        "### My Scenario Heading B"});
             table2.AddRow(new string[] {
                         "#### Scenario: Scenario heading included in output - B"});
 #line 29
-    testRunner.Then("the Markdown output has the lines", ((string)(null)), table2, "Then ");
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
@@ -123,25 +127,27 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void OutputHasScenarioHeadingForEachScenarioInSameFeature()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Output has scenario heading for each scenario in same feature", ((string[])(null)));
-#line 35
-this.ScenarioSetup(scenarioInfo);
 #line 37
-    testRunner.Given("I have a feature called \'My Scenario Heading\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 38
-    testRunner.And("I have a scenario called \'Scenario heading included in output - 1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+this.ScenarioSetup(scenarioInfo);
 #line 39
-    testRunner.And("I have a scenario called \'Scenario heading included in output - 2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.Given("I have a feature called \'My Scenario Heading\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 40
+    testRunner.And("I have a scenario called \'Scenario heading included in output - 1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 41
+    testRunner.And("I have a scenario called \'Scenario heading included in output - 2\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 43
     testRunner.When("I generate Markdown output", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Content"});
             table3.AddRow(new string[] {
+                        "### My Scenario Heading"});
+            table3.AddRow(new string[] {
                         "#### Scenario: Scenario heading included in output - 1"});
             table3.AddRow(new string[] {
                         "#### Scenario: Scenario heading included in output - 2"});
-#line 43
-    testRunner.Then("the Markdown output has the lines", ((string)(null)), table3, "Then ");
+#line 45
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table3, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

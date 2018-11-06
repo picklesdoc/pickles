@@ -25,10 +25,12 @@ Scenario: Output has scenario heading for each scenario in different features
     And I have a scenario called 'Scenario heading included in output - B'
 
     When I generate Markdown output
-
-    Then the Markdown output has the lines
+    
+    Then the Markdown output has the lines in the following order
         | Content                                                |
+        | ### My Scenario Heading A                              |
         | #### Scenario: Scenario heading included in output - A |
+        | ### My Scenario Heading B                              |
         | #### Scenario: Scenario heading included in output - B |
 
 
@@ -39,8 +41,9 @@ Scenario: Output has scenario heading for each scenario in same feature
     And I have a scenario called 'Scenario heading included in output - 2'
 
     When I generate Markdown output
-
-    Then the Markdown output has the lines
+    
+    Then the Markdown output has the lines in the following order
         | Content                                                |
+        | ### My Scenario Heading                                |
         | #### Scenario: Scenario heading included in output - 1 |
         | #### Scenario: Scenario heading included in output - 2 |
