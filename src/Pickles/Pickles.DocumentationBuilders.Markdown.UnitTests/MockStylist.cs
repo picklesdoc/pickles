@@ -34,5 +34,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             return string.Format(FeatureHeadingFormat, featureName);
         }
+
+        public string TagFormat { get; set; }
+
+        internal override string AsTag(string tagName)
+        {
+            return string.Format(TagFormat, tagName);
+        }
     }
 }

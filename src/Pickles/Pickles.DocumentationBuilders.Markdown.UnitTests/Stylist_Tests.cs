@@ -35,5 +35,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             Assert.AreEqual(expectedStyle, actualStyle);
         }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Tag()
+        {
+            var expectedStyle = "*`@Tag`*";
+            var style = new Stylist();
+
+            var actualStyle = style.AsTag("Tag");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
     }
 }

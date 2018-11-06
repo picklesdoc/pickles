@@ -62,16 +62,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         [Given(@"I have the description")]
         public void GivenIHaveTheDescription(TechTalk.SpecFlow.Table table)
         {
-            Tree featureTree = null;
-
-            try
-            {
-                featureTree = (Tree)ScenarioContext.Current["Feature Tree"];
-            }
-            catch (Exception e)
-            {
-                throw new SpecFlowException("Failed to load the Feature Tree context, ensure you called the step \"I have a feature called '<p0>'\" first", e);
-            }
+            var featureTree = TryToGetTheTree();
 
             var lastNodeIndexLocation = featureTree.ChildNodes.Count - 1;
             foreach (var row in table.Rows)
@@ -84,6 +75,38 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             }
 
             ScenarioContext.Current["Feature Tree"] = featureTree;
+        }
+
+        [Given(@"I have the tags")]
+        public void GivenIHaveTheTags(TechTalk.SpecFlow.Table table)
+        {
+            var featureTree = TryToGetTheTree();
+
+            var lastNodeIndexLocation = featureTree.ChildNodes.Count - 1;
+            foreach (var row in table.Rows)
+            {
+                ((FeatureNode)featureTree.ChildNodes[lastNodeIndexLocation].Data).Feature.Tags.Add(
+                    row["Tag"]
+                    );
+            }
+
+            ScenarioContext.Current["Feature Tree"] = featureTree;
+        }
+
+        private Tree TryToGetTheTree()
+        {
+            Tree featureTree = null;
+
+            try
+            {
+                featureTree = (Tree)ScenarioContext.Current["Feature Tree"];
+            }
+            catch (Exception e)
+            {
+                throw new SpecFlowException("Failed to load the Feature Tree context, ensure you called the step \"I have a feature called '<p0>'\" first", e);
+            }
+
+            return featureTree;
         }
     }
 }

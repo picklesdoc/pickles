@@ -39,5 +39,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             return styledFeatureHeading;
         }
+
+        internal virtual string AsTag(string tag)
+        {
+            var tagTemplate = "*`@{0}`*";
+
+            var styledFeatureHeading = string.Format(tagTemplate, tag);
+
+            return styledFeatureHeading;
+        }
     }
 }

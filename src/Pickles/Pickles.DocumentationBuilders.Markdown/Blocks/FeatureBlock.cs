@@ -44,11 +44,30 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
         {
             var lines = new List<string>();
 
+            lines = AddFeatureTagsIfAvailable(lines);
+
             lines = AddHeading(lines);
 
             lines = AddDescriptionIfAvailable(lines);
 
             return LineCollectionToString(lines);
+        }
+
+        private List<string> AddFeatureTagsIfAvailable(List<string> lines)
+        {
+            if (feature.Tags.Count > 0)
+            {
+                var tagline = String.Empty;
+
+                foreach (var tag in feature.Tags)
+                {
+                    tagline = string.Concat(tagline, style.AsTag(tag), " ");
+                }
+
+                lines.Add(tagline.TrimEnd());
+                lines.Add(string.Empty);
+            }
+            return lines;
         }
 
         private List<string> AddHeading(List<string> lines)

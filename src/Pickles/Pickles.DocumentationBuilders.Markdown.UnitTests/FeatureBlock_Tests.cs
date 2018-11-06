@@ -73,5 +73,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual("I want to sail beyond the horizion", actualString[6]);
             Assert.AreEqual(9, actualString.Length);
         }
+
+        [Test]
+        public void When_Feature_Tags_Available_They_Are_Placed_On_Single_Line_Before_Heading()
+        {
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FeatureHeading: {0}",
+                TagFormat = ">>>{0}<<<"
+            };
+            var feature = new Feature
+            {
+                Name = "Feature with Tags"
+            };
+            feature.AddTag("tagone");
+            feature.AddTag("tagtwo");
+
+            var featureBlock = new FeatureBlock(feature, mockStyle);
+            var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual(">>>tagone<<< >>>tagtwo<<<", actualString[0]);
+            Assert.AreEqual("FeatureHeading: Feature with Tags", actualString[2]);
+            Assert.AreEqual(5, actualString.Length);
+        }
     }
 }
