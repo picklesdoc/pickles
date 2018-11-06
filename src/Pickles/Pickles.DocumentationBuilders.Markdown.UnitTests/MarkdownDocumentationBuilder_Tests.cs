@@ -111,7 +111,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
                 "",
                 "Generated on: 25 October 2018 at 18:53:00",
                 "",
-                "### Simple Feature"
+                "### Simple Feature",
+                ""
             };
 
             var container = BuildContainer();

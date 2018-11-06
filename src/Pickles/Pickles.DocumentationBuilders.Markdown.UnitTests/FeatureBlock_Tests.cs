@@ -45,6 +45,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             Assert.AreEqual(expectedString, actualString[0]);
+            Assert.AreEqual(3, actualString.Length);
         }
 
         [Test]
@@ -67,9 +68,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             Assert.AreEqual("FeatureHeading: Feature with description", actualString[0]);
-            Assert.AreEqual("In order to determine that world is flat", actualString[1]);
-            Assert.AreEqual("As a captain of a ship", actualString[2]);
-            Assert.AreEqual("I want to sail beyond the horizion", actualString[3]);
+            Assert.AreEqual("In order to determine that world is flat", actualString[2]);
+            Assert.AreEqual("As a captain of a ship", actualString[4]);
+            Assert.AreEqual("I want to sail beyond the horizion", actualString[6]);
+            Assert.AreEqual(9, actualString.Length);
         }
     }
 }

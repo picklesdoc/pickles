@@ -44,29 +44,36 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
         {
             var lines = new List<string>();
 
-            lines.Add(FeatureHeading());
+            lines = AddHeading(lines);
 
             lines = AddDescriptionIfAvailable(lines);
 
-            return LineArrayToString(lines);
+            return LineCollectionToString(lines);
         }
 
-        private string FeatureHeading()
+        private List<string> AddHeading(List<string> lines)
         {
-            return style.AsFeatureHeading(feature.Name);
+            lines.Add(style.AsFeatureHeading(feature.Name));
+            lines.Add(string.Empty);
+
+            return lines;
         }
 
         private List<string> AddDescriptionIfAvailable(List<string> lines)
         {
             if (feature.Description != null)
             {
-                lines.Add(feature.Description);
+                foreach (var descriptionLine in feature.Description.Split(new string[] { Environment.NewLine }, StringSplitOptions.None))
+                {
+                    lines.Add(descriptionLine);
+                    lines.Add(string.Empty);
+                }
             }
 
             return lines;
         }
 
-        private string LineArrayToString(List<string> lines)
+        private string LineCollectionToString(List<string> lines)
         {
             string result = string.Empty;
 
