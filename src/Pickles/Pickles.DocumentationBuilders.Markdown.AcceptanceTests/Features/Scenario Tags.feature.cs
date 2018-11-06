@@ -18,22 +18,22 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.3.2.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Feature Tags")]
-    public partial class FeatureTagsFeature
+    [NUnit.Framework.DescriptionAttribute("Scenario Tags")]
+    public partial class ScenarioTagsFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "FeatureTags.feature"
+#line 1 "Scenario Tags.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature Tags", "    In order to include the tags for each feature\r\n    As a reader of the generat" +
-                    "ed documentation\r\n    I want the feature tags included in single line above the " +
-                    "feature heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Scenario Tags", "    In order to include the tags for each scenario\r\n    As a reader of the genera" +
+                    "ted documentation\r\n    I want the scenario tags included in single line above th" +
+                    "e scenario heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,14 +66,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Output has tags for feature")]
-        public virtual void OutputHasTagsForFeature()
+        [NUnit.Framework.DescriptionAttribute("Output has tags for scenario")]
+        public virtual void OutputHasTagsForScenario()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Output has tags for feature", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Output has tags for scenario", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
     testRunner.Given("I have a feature called \'My Tagged Feature\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 8
+    testRunner.And("I have a scenario called \'Scenario With Tags\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Tag"});
@@ -81,16 +83,16 @@ this.ScenarioSetup(scenarioInfo);
                         "ignore"});
             table1.AddRow(new string[] {
                         "tagtwo"});
-#line 8
-    testRunner.And("I have the tags", ((string)(null)), table1, "And ");
-#line 13
+#line 9
+    testRunner.And("I have the scenario tags", ((string)(null)), table1, "And ");
+#line 14
     testRunner.When("I generate Markdown output", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Content"});
             table2.AddRow(new string[] {
                         "*`@ignore`* *`@tagtwo`*"});
-#line 14
+#line 15
     testRunner.Then("the Markdown output has the lines", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();

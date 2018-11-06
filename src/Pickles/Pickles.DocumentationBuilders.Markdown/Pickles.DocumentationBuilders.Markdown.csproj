@@ -46,6 +46,7 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Blocks\ScenarioBlock.cs" />
     <Compile Include="DisposableTestDateTime.cs" />
     <Compile Include="Blocks\FeatureBlock.cs" />
     <Compile Include="Documentation.cs" />

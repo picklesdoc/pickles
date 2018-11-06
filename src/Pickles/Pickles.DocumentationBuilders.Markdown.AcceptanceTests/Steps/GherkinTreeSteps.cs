@@ -91,6 +91,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         }
 
         [Given(@"I have the tags")]
+        [Given(@"I have the feature tags")]
         public void GivenIHaveTheTags(TechTalk.SpecFlow.Table table)
         {
             var lastFeature = TryToGetLastFeature();
@@ -102,6 +103,22 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                     );
             }
         }
+
+        [Given(@"I have the scenario tags")]
+        public void GivenIHaveTheScenarioTags(TechTalk.SpecFlow.Table table)
+        {
+            var lastFeature = TryToGetLastFeature();
+
+            var lastScenario = lastFeature.FeatureElements[lastFeature.FeatureElements.Count - 1];
+
+            foreach (var row in table.Rows)
+            {
+                lastScenario.Tags.Add(
+                    row["Tag"]
+                    );
+            }
+        }
+
 
         private Feature TryToGetLastFeature()
         {

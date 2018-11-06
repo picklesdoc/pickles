@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="FeatureBlock.cs" company="PicklesDoc">
+//  <copyright file="ScenarioBlock.cs" company="PicklesDoc">
 //  Copyright 2018 Darren Comeau
 //  Copyright 2018-present PicklesDoc team and community contributors
 //
@@ -24,14 +24,14 @@ using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
-    class FeatureBlock
+    class ScenarioBlock
     {
-        readonly Feature feature;
+        readonly Scenario scenario;
         readonly Stylist style;
 
-        public FeatureBlock(Feature feature, Stylist style)
+        public ScenarioBlock(Scenario scenario, Stylist style)
         {
-            this.feature = feature;
+            this.scenario = scenario;
             this.style = style;
         }
 
@@ -44,24 +44,20 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
         {
             var lines = new List<string>();
 
-            lines = AddFeatureTagsIfAvailable(lines);
+            lines = AddTagsIfAvailable(lines);
 
             lines = AddHeading(lines);
-
-            lines = AddDescriptionIfAvailable(lines);
-
-            lines = AddScenariosIfAvailable(lines);
 
             return LineCollectionToString(lines);
         }
 
-        private List<string> AddFeatureTagsIfAvailable(List<string> lines)
+        private List<string> AddTagsIfAvailable(List<string> lines)
         {
-            if (feature.Tags.Count > 0)
+            if (scenario.Tags.Count > 0)
             {
                 var tagline = String.Empty;
 
-                foreach (var tag in feature.Tags)
+                foreach (var tag in scenario.Tags)
                 {
                     tagline = string.Concat(tagline, style.AsTag(tag), " ");
                 }
@@ -74,44 +70,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         private List<string> AddHeading(List<string> lines)
         {
-            lines.Add(style.AsFeatureHeading(feature.Name));
-            lines.Add(string.Empty);
-
-            return lines;
-        }
-
-        private List<string> AddDescriptionIfAvailable(List<string> lines)
-        {
-            if (feature.Description != null)
-            {
-                foreach (var descriptionLine in feature.Description.Split(new string[] { Environment.NewLine }, StringSplitOptions.None))
-                {
-                    lines.Add(descriptionLine);
-                    lines.Add(string.Empty);
-                }
-            }
-
-            return lines;
-        }
-
-        private List<string> AddScenariosIfAvailable(List<string> lines)
-        {
-            if (feature.FeatureElements.Count > 0)
-            {
-                foreach (var element in feature.FeatureElements)
-                {
-                    lines = AddScenario(lines, element as Scenario);
-                }
-            }
-
-            return lines;
-        }
-
-        private List<string> AddScenario(List<string> lines, Scenario scenario)
-        {
-            var scenarioBlock = new ScenarioBlock(scenario, style);
-
-            lines.Add(scenarioBlock.ToString());
+            lines.Add(style.AsScenarioHeading(scenario.Name));
 
             return lines;
         }
