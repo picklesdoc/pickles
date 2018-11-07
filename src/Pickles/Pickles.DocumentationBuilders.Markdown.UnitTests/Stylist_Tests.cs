@@ -68,5 +68,36 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             Assert.AreEqual(expectedStyle, actualStyle);
         }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Step()
+        {
+            var expectedStyle = "> **Keyword** Step";
+            var style = new Stylist();
+
+            var actualStyle = style.AsStep("Keyword", "Step");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Step_Table()
+        {
+            var expectedStyle = "> | HeadingOne | HeadingTwo |";
+            var style = new Stylist();
+
+            var actualStyle = style.AsStepTable("{0}HeadingOne{0}HeadingTwo{0}");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_StepLine()
+        {
+            var style = new Stylist();
+
+            Assert.AreEqual(">", style.AsStepLine(string.Empty));
+            Assert.AreEqual("> Text", style.AsStepLine("Text"));
+        }
     }
 }

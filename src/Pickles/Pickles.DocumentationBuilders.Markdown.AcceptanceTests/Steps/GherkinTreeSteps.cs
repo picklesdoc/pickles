@@ -107,9 +107,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         [Given(@"I have the scenario tags")]
         public void GivenIHaveTheScenarioTags(TechTalk.SpecFlow.Table table)
         {
-            var lastFeature = TryToGetLastFeature();
-
-            var lastScenario = lastFeature.FeatureElements[lastFeature.FeatureElements.Count - 1];
+            var lastScenario = TryToGetLastScenario();
 
             foreach (var row in table.Rows)
             {
@@ -119,7 +117,55 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             }
         }
 
+        [Given(@"I have the scenario steps")]
+        public void GivenIHaveTheScenarioSteps(TechTalk.SpecFlow.Table table)
+        {
+            var lastScenario = TryToGetLastScenario();
 
+            foreach (var row in table.Rows)
+            {
+                var step = new Step()
+                {
+                    NativeKeyword = row["Keyword"],
+                    Name = row["step"]
+                };
+                lastScenario.Steps.Add(step);
+            }
+        }
+
+        [Given(@"I have the scenario step with table '(Given )(.*)'")]
+        public void Given_I_Have_The_Scenario_Step_With_Table(string keyword, string stepName, TechTalk.SpecFlow.Table table)
+        {
+            var lastScenario = TryToGetLastScenario();
+
+            var step = new Step()
+            {
+                NativeKeyword = keyword,
+                Name = stepName
+            };
+            
+            var stepTable = new ObjectModel.Table();
+
+            stepTable.HeaderRow = new ObjectModel.TableRow(table.Header);
+            stepTable.DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>();
+            foreach (var row in table.Rows)
+            {
+                stepTable.DataRows.Add(new ObjectModel.TableRow(row.Values));
+            }
+
+            step.TableArgument = stepTable;
+
+            lastScenario.Steps.Add(step);
+        }
+
+        private Scenario TryToGetLastScenario()
+        {
+            var lastFeature = TryToGetLastFeature();
+
+            var lastScenario = lastFeature.FeatureElements[lastFeature.FeatureElements.Count - 1];
+
+            return lastScenario as Scenario;
+        }
         private Feature TryToGetLastFeature()
         {
             var featureTree = TryToGetTheTree();

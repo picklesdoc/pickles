@@ -48,6 +48,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
             lines = AddHeading(lines);
 
+            lines = AddStepsIfAvailable(lines);
+
             return LineCollectionToString(lines);
         }
 
@@ -71,6 +73,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
         private List<string> AddHeading(List<string> lines)
         {
             lines.Add(style.AsScenarioHeading(scenario.Name));
+
+            return lines;
+        }
+
+        private List<string> AddStepsIfAvailable(List<string> lines)
+        {
+            if (scenario.Steps.Count > 0)
+            {
+                foreach (var step in scenario.Steps)
+                {
+                    lines.Add(style.AsStepLine(string.Empty));
+                    lines = AddStep(lines, step);
+                }
+            }
+            return lines;
+        }
+
+        private List<string> AddStep(List<string> lines, Step step)
+        {
+            var stepBlock = new StepBlock(step, style);
+
+            lines.Add(stepBlock.ToString());
 
             return lines;
         }

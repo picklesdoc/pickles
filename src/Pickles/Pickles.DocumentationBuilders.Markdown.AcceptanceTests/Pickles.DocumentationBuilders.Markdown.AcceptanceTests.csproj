@@ -77,6 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Feature Heading.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Scenario Steps.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scenario Steps.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Scenario Tags.feature.cs">
       <DependentUpon>Scenario Tags.feature</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -123,6 +128,10 @@
     <None Include="Features\Feature Heading.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Feature Heading.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Scenario Steps.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Scenario Steps.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Scenario Tags.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -57,5 +57,32 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             return styledFeatureHeading;
         }
+
+        internal virtual string AsStep(string keyword, string step)
+        {
+            var stepTemplate = "**{0}** {1}";
+
+            var styledStep = string.Format(stepTemplate, keyword.Trim(), step.Trim());
+
+            return AsStepLine(styledStep);
+        }
+
+        internal virtual string AsStepTable(string tableLine)
+        {
+            var line = string.Empty;
+            line = string.Concat(line, string.Format(tableLine, " | ", "---"))
+                .Trim();
+            return AsStepLine(line);
+        }
+
+        internal virtual string AsStepLine(string stepLine)
+        {
+            var stepLineTemplate = "> {0}";
+
+            var styledStepLine = string.Format(stepLineTemplate,stepLine)
+                .TrimEnd();
+
+            return styledStepLine;
+        }
     }
 }

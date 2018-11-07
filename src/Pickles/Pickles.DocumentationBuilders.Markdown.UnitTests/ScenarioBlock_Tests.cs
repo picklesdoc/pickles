@@ -70,5 +70,27 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual("ScenarioHeading: Scenario with Tags", actualString[2]);
             Assert.AreEqual(4, actualString.Length);
         }
+
+        [Test]
+        public void When_A_Scenario_Step_Is_Available_It_Is_Placed_On_Single_Line_After_Heading()
+        {
+            var mockStyle = new MockStylist
+            {
+                ScenarioHeadingFormat = "ScenarioHeading: {0}",
+                StepFormat = "Keyword: {0} Step: {1}"
+            };
+            var scenario = new Scenario
+            {
+                Name = "Scenario with Step"
+            };
+            scenario.Steps.Add(new Step() { NativeKeyword = "Natkey ", Name = "I am a step" });
+
+            var scenarioBlock = new ScenarioBlock(scenario, mockStyle);
+            var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("ScenarioHeading: Scenario with Step", actualString[0]);
+            Assert.AreEqual("Keyword: Natkey Step: I am a step", actualString[2]);
+            Assert.AreEqual(4, actualString.Length);
+        }
     }
 }

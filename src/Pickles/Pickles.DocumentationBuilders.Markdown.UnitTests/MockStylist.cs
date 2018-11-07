@@ -23,11 +23,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
     class MockStylist : Stylist
     {
+        private const string oneParamDefaultFormat = ">>{0}<<";
+        private const string twoParamDefaultFormat = oneParamDefaultFormat + ">>{1}<<";
         public MockStylist()
         {
-            FeatureHeadingFormat = ">>{0}<<";
-            TagFormat = ">>{0}<<";
-            ScenarioHeadingFormat = ">>{0}<<";
+            FeatureHeadingFormat = oneParamDefaultFormat;
+            TagFormat = oneParamDefaultFormat;
+            ScenarioHeadingFormat = oneParamDefaultFormat;
+            StepFormat = twoParamDefaultFormat;
         }
 
         internal override string AsTitle(string title)
@@ -54,6 +57,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         internal override string AsTag(string tagName)
         {
             return string.Format(TagFormat, tagName);
+        }
+
+        public string StepFormat { get; set; }
+
+        internal override string AsStep(string keyword, string step)
+        {
+            return string.Format(StepFormat, keyword.Trim(), step.Trim());
         }
     }
 }
