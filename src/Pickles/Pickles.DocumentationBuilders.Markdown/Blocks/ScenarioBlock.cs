@@ -19,45 +19,41 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using PicklesDoc.Pickles.ObjectModel;
-using System;
-using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
-    class ScenarioBlock
+    class ScenarioBlock : Block
     {
         readonly Scenario scenario;
-        readonly Stylist style;
 
-        public ScenarioBlock(Scenario scenario, Stylist style)
+        public ScenarioBlock(Scenario scenario, Stylist style) : base(style)
         {
             this.scenario = scenario;
-            this.style = style;
+
+            this.lines = RenderedBlock();
         }
 
-        public new string ToString()
+        private Lines RenderedBlock()
         {
-            return RenderedBlock();
+            var lines = new Lines
+            {
+                AvailableTags(),
+
+                Heading(),
+
+                AvailableSteps()
+            };
+
+            return lines;
         }
 
-        private string RenderedBlock()
+        private Lines AvailableTags()
         {
-            var lines = new List<string>();
+            var lines = new Lines();
 
-            lines = AddTagsIfAvailable(lines);
-
-            lines = AddHeading(lines);
-
-            lines = AddStepsIfAvailable(lines);
-
-            return LineCollectionToString(lines);
-        }
-
-        private List<string> AddTagsIfAvailable(List<string> lines)
-        {
             if (scenario.Tags.Count > 0)
             {
-                var tagline = String.Empty;
+                var tagline = string.Empty;
 
                 foreach (var tag in scenario.Tags)
                 {
@@ -67,48 +63,41 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
                 lines.Add(tagline.TrimEnd());
                 lines.Add(string.Empty);
             }
-            return lines;
-        }
-
-        private List<string> AddHeading(List<string> lines)
-        {
-            lines.Add(style.AsScenarioHeading(scenario.Name));
 
             return lines;
         }
 
-        private List<string> AddStepsIfAvailable(List<string> lines)
+        private Lines Heading()
         {
+            var lines = new Lines
+            {
+                style.AsScenarioHeading(scenario.Name)
+            };
+
+            return lines;
+        }
+
+        private Lines AvailableSteps()
+        {
+            var lines = new Lines();
+
             if (scenario.Steps.Count > 0)
             {
                 foreach (var step in scenario.Steps)
                 {
                     lines.Add(style.AsStepLine(string.Empty));
-                    lines = AddStep(lines, step);
+                    lines.Add(Step(step));
                 }
             }
+
             return lines;
         }
 
-        private List<string> AddStep(List<string> lines, Step step)
+        private Lines Step(Step step)
         {
             var stepBlock = new StepBlock(step, style);
 
-            lines.Add(stepBlock.ToString());
-
-            return lines;
-        }
-
-        private string LineCollectionToString(List<string> lines)
-        {
-            string result = string.Empty;
-
-            foreach (var line in lines)
-            {
-                result = string.Concat(result, line, Environment.NewLine);
-            }
-
-            return result;
+            return stepBlock.Lines;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="TitleBlock.cs" company="PicklesDoc">
+//  <copyright file="Block_Tests.cs" company="PicklesDoc">
 //  Copyright 2018 Darren Comeau
 //  Copyright 2018-present PicklesDoc team and community contributors
 //
@@ -18,37 +18,34 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
+using NUnit.Framework;
+using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
+
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests.Blocks_Tests
 {
-    class TitleBlock : Block
+    [TestFixture]
+    public class Block_Tests
     {
-        public TitleBlock(Stylist style) : base(style)
+        [Test]
+        public void ToString_Returns_Blocks_Markdown_Content()
         {
-            this.lines = RenderedBlock();
+            var stylist = new MockStylist();
+            Block mockBlock = new MockBlock(stylist);
+
+            (mockBlock as MockBlock).Add("Hello, World");
+
+            Assert.AreEqual("Hello, World\r\n", mockBlock.ToString());
         }
 
-        private Lines RenderedBlock()
+        [Test]
+        public void Lines_Returns_A_Collection_Of_All_Block_Lines()
         {
-            var lines = new Lines
-                {
-                    Title(),
-                    string.Empty,
-                    GenerationInfo()
-                };
+            var stylist = new MockStylist();
+            Block mockBlock = new MockBlock(stylist);
 
-            return lines;
-        }
+            (mockBlock as MockBlock).Add("Hello, World");
 
-        private string Title()
-        {
-            return style.AsTitle(Localization.Title);
-        }
-
-        private string GenerationInfo()
-        {
-            var generatedDateTime = TestableDateTime.Instance.Now;
-
-            return string.Format(Localization.GenerationDateTime, generatedDateTime);
+            Assert.AreEqual(1, mockBlock.Lines.Count);
         }
     }
 }

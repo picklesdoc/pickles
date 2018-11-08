@@ -21,7 +21,6 @@
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
-using System;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 {
@@ -42,32 +41,40 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
         private string Document(Tree featureTree)
         {
-            var content = TitleBlock();
+            var documentLines = new Lines
+            {
+                TitleBlock(),
 
-            content = AddTreeContent(content,featureTree);
+                TreeContent(featureTree)
+            };
 
-            return content;
+            return documentLines.ToString();
         }
 
-        private string TitleBlock()
+        private Lines TitleBlock()
         {
-            return (new TitleBlock(style)).ToString();
+            var titleBlock = new TitleBlock(style);
+
+            return titleBlock.Lines;
         }
 
-        private string AddTreeContent(string content, Tree featureTree)
+        private Lines TreeContent(Tree featureTree)
         {
+            var lines = new Lines();
+
             if (featureTree != null)
             {
                 foreach (var node in featureTree)
                 {
                     if (IsFeatureNode(node))
                     {
-                        content = ConcatFeatureNode(content, (FeatureNode)node);
+                        lines.Add(string.Empty);
+                        lines.Add(Feature((FeatureNode)node));
                     }
                 }
             }
 
-            return content;
+            return lines;
         }
 
         private bool IsFeatureNode(INode node)
@@ -75,15 +82,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             return node.GetType() == typeof(FeatureNode);
         }
 
-        private string ConcatFeatureNode(string content, FeatureNode node)
+        private Lines Feature(FeatureNode node)
         {
             var feature = node.Feature;
 
-            var featureBlock = (new FeatureBlock(feature, style)).ToString();
+            var featureBlock = new FeatureBlock(feature, style);
 
-            content = string.Concat(content, string.Empty, Environment.NewLine, featureBlock);
-
-            return content;
+            return featureBlock.Lines;
         }
     }
 }

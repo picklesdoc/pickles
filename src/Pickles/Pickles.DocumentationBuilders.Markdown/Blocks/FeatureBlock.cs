@@ -20,46 +20,42 @@
 
 using PicklesDoc.Pickles.ObjectModel;
 using System;
-using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
-    class FeatureBlock
+    class FeatureBlock : Block
     {
         readonly Feature feature;
-        readonly Stylist style;
 
-        public FeatureBlock(Feature feature, Stylist style)
+        public FeatureBlock(Feature feature, Stylist style) : base(style)
         {
             this.feature = feature;
-            this.style = style;
+            this.lines = RenderedBlock();
         }
 
-        public new string ToString()
+        private Lines RenderedBlock()
         {
-            return RenderedBlock();
+            var lines = new Lines
+            {
+                AvailableFeatureTags(),
+
+                Heading(),
+
+                AvailableDescription(),
+
+                AvailableScenarios()
+            };
+
+            return lines;
         }
 
-        private string RenderedBlock()
+        private Lines AvailableFeatureTags()
         {
-            var lines = new List<string>();
+            var lines = new Lines();
 
-            lines = AddFeatureTagsIfAvailable(lines);
-
-            lines = AddHeading(lines);
-
-            lines = AddDescriptionIfAvailable(lines);
-
-            lines = AddScenariosIfAvailable(lines);
-
-            return LineCollectionToString(lines);
-        }
-
-        private List<string> AddFeatureTagsIfAvailable(List<string> lines)
-        {
             if (feature.Tags.Count > 0)
             {
-                var tagline = String.Empty;
+                var tagline = string.Empty;
 
                 foreach (var tag in feature.Tags)
                 {
@@ -72,16 +68,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             return lines;
         }
 
-        private List<string> AddHeading(List<string> lines)
+        private Lines Heading()
         {
-            lines.Add(style.AsFeatureHeading(feature.Name));
-            lines.Add(string.Empty);
+            var lines = new Lines
+            {
+                style.AsFeatureHeading(feature.Name),
+                string.Empty
+            };
 
             return lines;
         }
 
-        private List<string> AddDescriptionIfAvailable(List<string> lines)
+        private Lines AvailableDescription()
         {
+            var lines = new Lines();
+
             if (feature.Description != null)
             {
                 foreach (var descriptionLine in feature.Description.Split(new string[] { Environment.NewLine }, StringSplitOptions.None))
@@ -94,38 +95,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             return lines;
         }
 
-        private List<string> AddScenariosIfAvailable(List<string> lines)
+        private Lines AvailableScenarios()
         {
+            var lines = new Lines();
+
             if (feature.FeatureElements.Count > 0)
             {
                 foreach (var element in feature.FeatureElements)
                 {
-                    lines = AddScenario(lines, element as Scenario);
+                    lines.Add(Scenario(element as Scenario));
+
+                    lines.Add(style.AsStepLine(string.Empty));
                 }
             }
 
             return lines;
         }
 
-        private List<string> AddScenario(List<string> lines, Scenario scenario)
+        private Lines Scenario(Scenario scenario)
         {
             var scenarioBlock = new ScenarioBlock(scenario, style);
 
-            lines.Add(scenarioBlock.ToString());
-
-            return lines;
-        }
-
-        private string LineCollectionToString(List<string> lines)
-        {
-            string result = string.Empty;
-
-            foreach (var line in lines)
-            {
-                result = string.Concat(result, line, Environment.NewLine);
-            }
-
-            return result;
+            return scenarioBlock.Lines;
         }
     }
 }

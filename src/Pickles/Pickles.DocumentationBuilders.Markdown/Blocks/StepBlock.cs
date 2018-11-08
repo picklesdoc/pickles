@@ -19,82 +19,88 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using PicklesDoc.Pickles.ObjectModel;
-using System;
 using System.Collections.Generic;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
-    class StepBlock
+    class StepBlock : Block
     {
         readonly Step step;
-        readonly Stylist style;
 
-        public StepBlock(Step step, Stylist style)
+        public StepBlock(Step step, Stylist style) : base(style)
         {
             this.step = step;
-            this.style = style;
+            this.lines = RenderedBlock();
         }
 
-        public new string ToString()
+        private Lines RenderedBlock()
         {
-            return RemoveLastNewLine(RenderedBlock());
+            var lines = new Lines
+            {
+                Heading(),
+
+                AvailableTable()
+            };
+
+            return lines;
         }
 
-        private string RenderedBlock()
+        private Lines Heading()
         {
-            var lines = new List<string>();
+            var lines = new Lines();
 
-            lines = AddHeading(lines);
-
-            lines = AddTableIfAvailable(lines);
-
-            return LineCollectionToString(lines);
-        }
-
-        private List<string> AddHeading(List<string> lines)
-        {
             var stepLine = style.AsStep(step.NativeKeyword, step.Name);
             lines.Add(stepLine);
 
             return lines;
         }
 
-        private List<string> AddTableIfAvailable(List<string> lines)
+        private Lines AvailableTable()
         {
+            var lines = new Lines();
+
             if (step.TableArgument != null)
             {
                 lines.Add(style.AsStepLine(string.Empty));
 
-                lines = AddTableHeader(lines, step.TableArgument.HeaderRow);
+                lines.Add(TableHeader(step.TableArgument.HeaderRow));
 
-                lines = AddTableRows(lines, step.TableArgument.DataRows);
+                lines.Add(TableRows(step.TableArgument.DataRows));
             }
 
             return lines;
         }
 
-        private List<string> AddTableHeader(List<string> lines, TableRow headerRow)
+        private Lines TableHeader(TableRow headerRow)
         {
-            lines.Add(style.AsStepTable(TableLine(headerRow)));
+            var lines = new Lines
+            {
+                style.AsStepTable(TableLine(headerRow)),
 
-            lines.Add(style.AsStepTable(TableSeperatorLine(headerRow)));
+                style.AsStepTable(TableSeperatorLine(headerRow))
+            };
 
             return lines;
         }
 
-        private List<string> AddTableRows(List<string> lines, List<TableRow> dataRows)
+        private Lines TableRows(List<TableRow> dataRows)
         {
+            var lines = new Lines();
+
             foreach (var row in dataRows)
             {
-                lines = AddTableRow(lines, row);
+                lines.Add(TableRow(row));
             }
 
             return lines;
         }
 
-        private List<string> AddTableRow(List<string> lines, TableRow row)
+        private Lines TableRow(TableRow row)
         {
-            lines.Add(style.AsStepTable(TableLine(row)));
+            var lines = new Lines
+            {
+                style.AsStepTable(TableLine(row))
+            };
 
             return lines;
         }
@@ -125,23 +131,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             line = string.Concat(line, "{0}");
 
             return line;
-        }
-
-        private string LineCollectionToString(List<string> lines)
-        {
-            string result = string.Empty;
-
-            foreach (var line in lines)
-            {
-                result = string.Concat(result, line, Environment.NewLine);
-            }
-
-            return result;
-        }
-
-        private string RemoveLastNewLine(string text)
-        {
-            return text.TrimEnd( Environment.NewLine.ToCharArray());
         }
     }
 }

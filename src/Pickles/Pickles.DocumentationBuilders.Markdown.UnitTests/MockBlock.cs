@@ -1,5 +1,5 @@
 ﻿//  --------------------------------------------------------------------------------------------------------------------
-//  <copyright file="TitleBlock.cs" company="PicklesDoc">
+//  <copyright file="MockBlock.cs" company="PicklesDoc">
 //  Copyright 2018 Darren Comeau
 //  Copyright 2018-present PicklesDoc team and community contributors
 //
@@ -18,37 +18,20 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
-namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
+using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
+
+namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
-    class TitleBlock : Block
+    class MockBlock : Block
     {
-        public TitleBlock(Stylist style) : base(style)
+
+        public MockBlock(Stylist style) : base(style)
         {
-            this.lines = RenderedBlock();
         }
 
-        private Lines RenderedBlock()
+        public void Add(string line)
         {
-            var lines = new Lines
-                {
-                    Title(),
-                    string.Empty,
-                    GenerationInfo()
-                };
-
-            return lines;
-        }
-
-        private string Title()
-        {
-            return style.AsTitle(Localization.Title);
-        }
-
-        private string GenerationInfo()
-        {
-            var generatedDateTime = TestableDateTime.Instance.Now;
-
-            return string.Format(Localization.GenerationDateTime, generatedDateTime);
+            lines.Add(line);
         }
     }
 }

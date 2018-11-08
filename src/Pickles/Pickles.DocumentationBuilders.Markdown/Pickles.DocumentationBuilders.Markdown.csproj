@@ -46,11 +46,13 @@
     <Compile Include="..\VersionInfo.cs">
       <Link>VersionInfo.cs</Link>
     </Compile>
+    <Compile Include="Blocks\Block.cs" />
     <Compile Include="Blocks\StepBlock.cs" />
     <Compile Include="Blocks\ScenarioBlock.cs" />
     <Compile Include="DisposableTestDateTime.cs" />
     <Compile Include="Blocks\FeatureBlock.cs" />
     <Compile Include="Documentation.cs" />
+    <Compile Include="Lines.cs" />
     <Compile Include="Localization.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
