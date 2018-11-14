@@ -175,6 +175,7 @@ li.step {
     overflow: auto;
     white-space: pre-wrap;
     font-style: italic;
+    font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
 }
 
 .selected {
