@@ -142,5 +142,33 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual("ScenarioHeading: My Scenario two", actualString[4]);
             Assert.AreEqual(7, actualString.Length);
         }
+
+        [Test]
+        public void When_A_Background_Is_Present_Its_Included_In_Markdown_Output()
+        {
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FeatureHeading: {0}",
+                BackgroundHeadingFormat = "BackgroundHeading: {0}"
+            };
+            var feature = new Feature
+            {
+                Name = "Feature with Background"
+            };
+            feature.AddBackground(new Scenario());
+
+            var featureBlock = new FeatureBlock(feature, mockStyle);
+            var results = new string[featureBlock.Lines.Count];
+            var i = 0;
+            foreach (var line in featureBlock.Lines)
+            {
+                results[i] = line;
+                i++;
+            }
+
+            Assert.AreEqual("FeatureHeading: Feature with Background", results[0]);
+            Assert.AreEqual("BackgroundHeading:", results[2]);
+            Assert.AreEqual(3, results.Length);
+        }
     }
 }

@@ -48,6 +48,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         }
 
         [Test]
+        public void A_Stylist_Can_Style_A_Background_Heading()
+        {
+            var expectedStyle = "#### Background: My Styled Background";
+            var style = new Stylist();
+
+            var actualStyle = style.AsBackgroundHeading("My Styled Background");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Background_Heading_Without_A_Name()
+        {
+            var expectedStyle = "#### Background:";
+            var style = new Stylist();
+
+            var actualStyle = style.AsBackgroundHeading(null);
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
         public void A_Stylist_Can_Style_A_Scenario_Heading()
         {
             var expectedStyle = "#### Scenario: My Styled Scenario";

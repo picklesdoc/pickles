@@ -24,7 +24,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
     class ScenarioBlock : Block
     {
-        readonly Scenario scenario;
+        protected readonly Scenario scenario;
 
         public ScenarioBlock(Scenario scenario, Stylist style) : base(style)
         {
@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             return lines;
         }
 
-        private Lines Heading()
+        protected virtual Lines Heading()
         {
             var lines = new Lines
             {

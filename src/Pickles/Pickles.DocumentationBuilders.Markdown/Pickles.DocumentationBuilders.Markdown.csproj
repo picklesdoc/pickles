@@ -47,6 +47,7 @@
       <Link>VersionInfo.cs</Link>
     </Compile>
     <Compile Include="Blocks\Block.cs" />
+    <Compile Include="Blocks\BackgroundBlock.cs" />
     <Compile Include="Blocks\StepBlock.cs" />
     <Compile Include="Blocks\ScenarioBlock.cs" />
     <Compile Include="DisposableTestDateTime.cs" />

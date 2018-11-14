@@ -90,6 +90,32 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             lastFeature.AddFeatureElement(scenario);
         }
 
+        [Given(@"I have a background section")]
+        public void GivenIHaveABackgroundSection()
+        {
+            var lastFeature = TryToGetLastFeature();
+
+            var background = new Scenario();
+
+            lastFeature.AddBackground(background);
+        }
+
+        [Given(@"I have the background steps")]
+        public void GivenIHaveTheBackgroundSteps(TechTalk.SpecFlow.Table table)
+        {
+            var lastFeature = TryToGetLastFeature();
+
+            foreach (var row in table.Rows)
+            {
+                var step = new Step()
+                {
+                    NativeKeyword = row["Keyword"],
+                    Name = row["Step"]
+                };
+                lastFeature.Background.Steps.Add(step);
+            }
+        }
+
         [Given(@"I have the tags")]
         [Given(@"I have the feature tags")]
         public void GivenIHaveTheTags(TechTalk.SpecFlow.Table table)
@@ -127,7 +153,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                 var step = new Step()
                 {
                     NativeKeyword = row["Keyword"],
-                    Name = row["step"]
+                    Name = row["Step"]
                 };
                 lastScenario.Steps.Add(step);
             }

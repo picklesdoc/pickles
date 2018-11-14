@@ -43,6 +43,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
                 AvailableDescription(),
 
+                AvailableBackground(),
+
                 AvailableScenarios()
             };
 
@@ -93,6 +95,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             }
 
             return lines;
+        }
+
+        private Lines AvailableBackground()
+        {
+            if (feature.Background != null)
+            {
+                var backgroundBlock = new BackgroundBlock(feature.Background, style);
+
+                return backgroundBlock.Lines;
+            }
+
+            return new Lines();
         }
 
         private Lines AvailableScenarios()

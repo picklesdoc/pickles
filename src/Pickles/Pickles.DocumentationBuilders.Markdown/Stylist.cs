@@ -40,6 +40,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             return styledFeatureHeading;
         }
 
+        internal virtual string AsBackgroundHeading(string scenarioName)
+        {
+            var backgroundHeadingTemplate = "#### Background: {0}";
+
+            var styledBackgroundHeading = string.Format(backgroundHeadingTemplate, scenarioName).Trim();
+
+            return styledBackgroundHeading;
+        }
+
         internal virtual string AsScenarioHeading(string scenarioName)
         {
             var scenarioHeadingTemplate = "#### Scenario: {0}";

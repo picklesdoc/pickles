@@ -79,7 +79,7 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Keyword",
-                        "step"});
+                        "Step"});
             table1.AddRow(new string[] {
                         "Given",
                         "I have a simple given step"});
@@ -116,7 +116,7 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Keyword",
-                        "step"});
+                        "Step"});
             table3.AddRow(new string[] {
                         "Given",
                         "I have a simple given step"});

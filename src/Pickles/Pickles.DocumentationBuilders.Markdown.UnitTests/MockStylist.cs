@@ -29,6 +29,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             FeatureHeadingFormat = oneParamDefaultFormat;
             TagFormat = oneParamDefaultFormat;
+            BackgroundHeadingFormat = oneParamDefaultFormat;
             ScenarioHeadingFormat = oneParamDefaultFormat;
             StepFormat = twoParamDefaultFormat;
         }
@@ -43,6 +44,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         internal override string AsFeatureHeading(string featureName)
         {
             return string.Format(FeatureHeadingFormat, featureName);
+        }
+
+        public string BackgroundHeadingFormat { get; set; }
+
+        internal override string AsBackgroundHeading(string scenarioName)
+        {
+            return string.Format(BackgroundHeadingFormat, scenarioName).Trim();
         }
 
         public string ScenarioHeadingFormat { get; set; }

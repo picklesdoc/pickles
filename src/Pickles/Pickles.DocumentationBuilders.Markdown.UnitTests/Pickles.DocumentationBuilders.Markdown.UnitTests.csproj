@@ -54,6 +54,7 @@
       <Link>VersionInfo.cs</Link>
     </Compile>
     <Compile Include="Blocks_Tests\Block_Tests.cs" />
+    <Compile Include="Blocks_Tests\BackgroundBlock_Tests.cs" />
     <Compile Include="Documentation_Tests.cs" />
     <Compile Include="Blocks_Tests\StepBlock_Tests.cs" />
     <Compile Include="Blocks_Tests\ScenarioBlock_Tests.cs" />

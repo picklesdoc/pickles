@@ -7,7 +7,7 @@ Scenario: Output has simple given step for scenario
     Given I have a feature called 'My Scenario Steps Feature'
     And I have a scenario called 'Simple Given Step'
     And I have the scenario steps
-        | Keyword | step                       |
+        | Keyword | Step                       |
         | Given   | I have a simple given step |
 
     When I generate Markdown output
@@ -23,7 +23,7 @@ Scenario: Output has simple given & and step for scenario
     Given I have a feature called 'My Scenario Steps Feature'
     And I have a scenario called 'Multiple Given Steps'
     And I have the scenario steps
-        | Keyword | step                       |
+        | Keyword | Step                       |
         | Given   | I have a simple given step |
         | And     | I have second given        |
 
