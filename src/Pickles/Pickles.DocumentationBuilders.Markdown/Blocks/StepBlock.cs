@@ -63,74 +63,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             {
                 lines.Add(style.AsStepLine(string.Empty));
 
-                lines.Add(TableHeader(step.TableArgument.HeaderRow));
+                var tableBlock = new TableBlock(step.TableArgument, style);
 
-                lines.Add(TableRows(step.TableArgument.DataRows));
+                lines.Add(tableBlock.Lines);
             }
 
             return lines;
-        }
-
-        private Lines TableHeader(TableRow headerRow)
-        {
-            var lines = new Lines
-            {
-                style.AsStepTable(TableLine(headerRow)),
-
-                style.AsStepTable(TableSeperatorLine(headerRow))
-            };
-
-            return lines;
-        }
-
-        private Lines TableRows(List<TableRow> dataRows)
-        {
-            var lines = new Lines();
-
-            foreach (var row in dataRows)
-            {
-                lines.Add(TableRow(row));
-            }
-
-            return lines;
-        }
-
-        private Lines TableRow(TableRow row)
-        {
-            var lines = new Lines
-            {
-                style.AsStepTable(TableLine(row))
-            };
-
-            return lines;
-        }
-
-        private string TableLine(TableRow row)
-        {
-            var line = string.Empty;
-            foreach (var column in row.Cells)
-            {
-                line = string.Concat(line, "{0}", column);
-            }
-            line = string.Concat(line, "{0}");
-
-            return line;
-        }
-
-        private string TableSeperatorLine(TableRow row)
-        {
-            var line = string.Empty;
-            var cellIndex = 0;
-
-            while (cellIndex < row.Cells.Count)
-            {
-                line = string.Concat(line, "{0}", "{1}");
-                cellIndex++;
-            }
-
-            line = string.Concat(line, "{0}");
-
-            return line;
         }
     }
 }

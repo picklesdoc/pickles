@@ -31,6 +31,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             TagFormat = oneParamDefaultFormat;
             BackgroundHeadingFormat = oneParamDefaultFormat;
             ScenarioHeadingFormat = oneParamDefaultFormat;
+            ScenarioOutlineHeadingFormat = oneParamDefaultFormat;
             StepFormat = twoParamDefaultFormat;
         }
 
@@ -58,6 +59,20 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         internal override string AsScenarioHeading(string scenarioName)
         {
             return string.Format(ScenarioHeadingFormat, scenarioName);
+        }
+
+        public string ScenarioOutlineHeadingFormat { get; set; }
+
+        internal override string AsScenarioOutlineHeading(string scenarioName)
+        {
+            return string.Format(ScenarioOutlineHeadingFormat, scenarioName);
+        }
+
+        public string ExampleHeadingFormat { get; set; }
+
+        internal override string AsExampleHeading(string exampleName)
+        {
+            return string.Format(ExampleHeadingFormat, exampleName);
         }
 
         public string TagFormat { get; set; }

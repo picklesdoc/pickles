@@ -58,6 +58,25 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             return styledScenarioHeading;
         }
 
+        internal virtual string AsScenarioOutlineHeading(string scenarioOutlineName)
+        {
+            var scenarioOutlineHeadingTemplate = "#### Scenario Outline: {0}";
+
+            var styledScenarioOutlineHeading = string.Format(scenarioOutlineHeadingTemplate, scenarioOutlineName);
+
+            return styledScenarioOutlineHeading;
+        }
+
+        internal virtual string AsExampleHeading(string exampleName)
+        {
+            var exampleHeadingTemplate = "> Examples: {0}";
+
+            var styledExampleHeading = string.Format(exampleHeadingTemplate, exampleName)
+                .TrimEnd();
+
+            return styledExampleHeading;
+        }
+
         internal virtual string AsTag(string tag)
         {
             var tagTemplate = "*`@{0}`*";

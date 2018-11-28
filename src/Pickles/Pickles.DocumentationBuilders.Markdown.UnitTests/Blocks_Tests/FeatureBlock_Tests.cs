@@ -120,6 +120,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         }
 
         [Test]
+        public void When_ScenarioOutline_Is_Available_It_Is_Included_After_Heading()
+        {
+            var mockStyle = new MockStylist
+            {
+                FeatureHeadingFormat = "FeatureHeading: {0}",
+                ScenarioOutlineHeadingFormat = "ScenarioOutlineHeading: {0}"
+            };
+            var feature = new Feature
+            {
+                Name = "Feature with Scenario Outline"
+            };
+            feature.AddFeatureElement(new ScenarioOutline() { Name = "My Scenario Outline" });
+
+            var featureBlock = new FeatureBlock(feature, mockStyle);
+            var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("FeatureHeading: Feature with Scenario Outline", actualString[0]);
+            Assert.AreEqual("ScenarioOutlineHeading: My Scenario Outline", actualString[2]);
+            Assert.AreEqual(5, actualString.Length);
+        }
+
+        [Test]
         public void When_Mutiple_Scenarios_Are_Available_They_Are_Included_After_Heading()
         {
             var mockStyle = new MockStylist

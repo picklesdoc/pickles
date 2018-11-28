@@ -170,27 +170,53 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                 Name = stepName
             };
             
-            var stepTable = new ObjectModel.Table();
-
-            stepTable.HeaderRow = new ObjectModel.TableRow(table.Header);
-            stepTable.DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>();
-            foreach (var row in table.Rows)
-            {
-                stepTable.DataRows.Add(new ObjectModel.TableRow(row.Values));
-            }
+            var stepTable = ConvertSpecflowTableToPicklesTable(table);
 
             step.TableArgument = stepTable;
 
             lastScenario.Steps.Add(step);
         }
 
-        private Scenario TryToGetLastScenario()
+        [Given(@"I have a scenario outline called '(.*)'")]
+        public void GivenIHaveAScenarioOutlineCalled(string outlineName)
+        {
+            var lastFeature = TryToGetLastFeature();
+
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = outlineName
+            };
+
+            lastFeature.AddFeatureElement(scenarioOutline);
+        }
+
+        [Given(@"I have an examples table")]
+        public void GivenIHaveAnExamplesTable(TechTalk.SpecFlow.Table table)
+        {
+            ScenarioOutline lastScenario = TryToGetLastScenario() as ScenarioOutline;
+
+            var examplesTable = ConvertSpecflowTableToExamplesTable(table);
+
+            var example = new Example()
+            {
+                TableArgument = examplesTable
+            };
+
+            lastScenario.Examples = new System.Collections.Generic.List<Example>
+            {
+                example
+            };
+        }
+
+
+
+        private ScenarioBase TryToGetLastScenario()
         {
             var lastFeature = TryToGetLastFeature();
 
             var lastScenario = lastFeature.FeatureElements[lastFeature.FeatureElements.Count - 1];
 
-            return lastScenario as Scenario;
+            return lastScenario as ScenarioBase;
         }
         private Feature TryToGetLastFeature()
         {
@@ -217,6 +243,40 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             }
 
             return featureTree;
+        }
+
+        private ObjectModel.Table ConvertSpecflowTableToPicklesTable(TechTalk.SpecFlow.Table specflowTable)
+        {
+            var stepTable = new ObjectModel.Table
+            {
+                HeaderRow = new ObjectModel.TableRow(specflowTable.Header),
+
+                DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>()
+            };
+
+            foreach (var row in specflowTable.Rows)
+            {
+                stepTable.DataRows.Add(new ObjectModel.TableRow(row.Values));
+            }
+
+            return stepTable;
+        }
+
+        private ObjectModel.ExampleTable ConvertSpecflowTableToExamplesTable(TechTalk.SpecFlow.Table specflowTable)
+        {
+            var exampleTable = new ObjectModel.ExampleTable
+            {
+                HeaderRow = new ObjectModel.TableRow(specflowTable.Header),
+
+                DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>()
+            };
+
+            foreach (var row in specflowTable.Rows)
+            {
+                exampleTable.DataRows.Add(new ObjectModel.TableRow(row.Values));
+            }
+
+            return exampleTable;
         }
     }
 }

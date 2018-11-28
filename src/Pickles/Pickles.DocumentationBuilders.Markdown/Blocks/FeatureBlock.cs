@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
                 AvailableBackground(),
 
-                AvailableScenarios()
+                AvailableFeatureElements()
             };
 
             return lines;
@@ -109,7 +109,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             return new Lines();
         }
 
-        private Lines AvailableScenarios()
+        private Lines AvailableFeatureElements()
         {
             var lines = new Lines();
 
@@ -117,9 +117,18 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             {
                 foreach (var element in feature.FeatureElements)
                 {
-                    lines.Add(Scenario(element as Scenario));
+                    if (element.GetType() == typeof(Scenario))
+                    {
+                        lines.Add(Scenario(element as Scenario));
 
-                    lines.Add(style.AsStepLine(string.Empty));
+                        lines.Add(style.AsStepLine(string.Empty));
+                    }
+                    else if (element.GetType() == typeof(ScenarioOutline))
+                    {
+                        lines.Add(ScenarioOutline(element as ScenarioOutline));
+
+                        lines.Add(style.AsStepLine(string.Empty));
+                    }
                 }
             }
 
@@ -131,6 +140,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
             var scenarioBlock = new ScenarioBlock(scenario, style);
 
             return scenarioBlock.Lines;
+        }
+
+        private Lines ScenarioOutline(ScenarioOutline scenarioOutline)
+        {
+            var scenarioOutlineBlock = new ScenarioOutlineBlock(scenarioOutline, style);
+
+            return scenarioOutlineBlock.Lines;       
         }
     }
 }

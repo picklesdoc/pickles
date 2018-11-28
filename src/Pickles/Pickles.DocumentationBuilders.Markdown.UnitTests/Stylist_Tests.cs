@@ -81,6 +81,39 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         }
 
         [Test]
+        public void A_Stylist_Can_Style_A_ScenarioOutline_Heading()
+        {
+            var expectedStyle = "#### Scenario Outline: My Styled Scenario Outline";
+            var style = new Stylist();
+
+            var actualStyle = style.AsScenarioOutlineHeading("My Styled Scenario Outline");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_An_Example_Heading()
+        {
+            var expectedStyle = "> Examples: My Styled Example";
+            var style = new Stylist();
+
+            var actualStyle = style.AsExampleHeading("My Styled Example");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_An_Example_Heading_Without_A_Name()
+        {
+            var expectedStyle = "> Examples:";
+            var style = new Stylist();
+
+            var actualStyle = style.AsExampleHeading(string.Empty);
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
         public void A_Stylist_Can_Style_A_Tag()
         {
             var expectedStyle = "*`@Tag`*";
