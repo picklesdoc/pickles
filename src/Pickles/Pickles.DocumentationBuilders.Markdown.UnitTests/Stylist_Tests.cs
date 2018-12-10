@@ -119,7 +119,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var expectedStyle = "*`@Tag`*";
             var style = new Stylist();
 
-            var actualStyle = style.AsTag("Tag");
+            var actualStyle = style.AsTag("@Tag");
 
             Assert.AreEqual(expectedStyle, actualStyle);
         }

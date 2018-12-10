@@ -78,9 +78,9 @@ this.ScenarioSetup(scenarioInfo);
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Tag"});
             table1.AddRow(new string[] {
-                        "ignore"});
+                        "@ignore"});
             table1.AddRow(new string[] {
-                        "tagtwo"});
+                        "@tagtwo"});
 #line 8
     testRunner.And("I have the tags", ((string)(null)), table1, "And ");
 #line 13

@@ -79,7 +79,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
         internal virtual string AsTag(string tag)
         {
-            var tagTemplate = "*`@{0}`*";
+            var tagTemplate = "*`{0}`*";
 
             var styledFeatureHeading = string.Format(tagTemplate, tag);
 

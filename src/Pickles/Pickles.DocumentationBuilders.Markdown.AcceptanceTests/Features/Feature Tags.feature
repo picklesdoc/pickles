@@ -6,9 +6,9 @@
 Scenario: Output has tags for feature
     Given I have a feature called 'My Tagged Feature'
     And I have the tags
-        | Tag    |
-        | ignore |
-        | tagtwo |
+        | Tag     |
+        | @ignore |
+        | @tagtwo |
 
     When I generate Markdown output
 

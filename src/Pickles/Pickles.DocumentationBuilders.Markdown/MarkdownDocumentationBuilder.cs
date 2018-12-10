@@ -46,9 +46,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
         // TODO: new class handles file system interaction
         private void WriteContentToFile(string filePath, string content)
         {
-            fileSystem.File.Create(filePath);
+            using (var file = fileSystem.FileInfo.FromFileName(filePath).CreateText())
+            {
+                file.Write(content);
 
-            fileSystem.File.AppendAllText(filePath, content);
+                file.Close();
+            }
         }
 
         private string TargetFile()

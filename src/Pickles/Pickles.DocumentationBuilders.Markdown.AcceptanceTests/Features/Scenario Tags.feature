@@ -7,9 +7,9 @@ Scenario: Output has tags for scenario
     Given I have a feature called 'My Tagged Feature'
     And I have a scenario called 'Scenario With Tags'
     And I have the scenario tags
-        | Tag    |
-        | ignore |
-        | tagtwo |
+        | Tag     |
+        | @ignore |
+        | @tagtwo |
 
     When I generate Markdown output
     
