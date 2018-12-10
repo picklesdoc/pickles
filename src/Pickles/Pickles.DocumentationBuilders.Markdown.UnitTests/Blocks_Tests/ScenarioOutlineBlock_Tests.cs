@@ -94,6 +94,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         }
 
         [Test]
+        public void When_A_ScenarioOutline_Step_Is_Available_It_Has_Escape_Characters_For_Placeholder_Brackets()
+        {
+            var mockStyle = new MockStylist
+            {
+                ScenarioOutlineHeadingFormat = "ScenarioOutlineHeading: {0}",
+                StepFormat = "Keyword: {0} Step: {1}"
+            };
+            var scenarioOutline = new ScenarioOutline
+            {
+                Name = "ScenarioOutline with placeholder Step"
+            };
+            scenarioOutline.Steps.Add(new Step() { NativeKeyword = "Natkey ", Name = "I am a <placeholder> step" });
+
+            var scenarioOutlineBlock = new ScenarioOutlineBlock(scenarioOutline, mockStyle);
+            var actualString = scenarioOutlineBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("ScenarioOutlineHeading: ScenarioOutline with placeholder Step", actualString[0]);
+            Assert.AreEqual(@"Keyword: Natkey Step: I am a \<placeholder\> step", actualString[2]);
+            Assert.AreEqual(4, actualString.Length);
+        }
+
+        [Test]
         public void Examples_Are_Included_As_Table()
         {
             var mockStyle = new MockStylist

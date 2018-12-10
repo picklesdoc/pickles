@@ -86,6 +86,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
         internal override string AsStep(string keyword, string step)
         {
+            step = EscapeMarkdownSensitiveCharacters(step);
+
             return string.Format(StepFormat, keyword.Trim(), step.Trim());
         }
     }

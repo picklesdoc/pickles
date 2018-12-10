@@ -136,6 +136,17 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         }
 
         [Test]
+        public void A_Stylist_Can_Style_A_Step_With_Angle_Brakets()
+        {
+            var expectedStyle = @"> **Keyword** Step \<placeholder\>";
+            var style = new Stylist();
+
+            var actualStyle = style.AsStep("Keyword", "Step <placeholder>");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
         public void A_Stylist_Can_Style_A_Step_Table()
         {
             var expectedStyle = "> | HeadingOne | HeadingTwo |";

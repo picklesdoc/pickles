@@ -50,5 +50,28 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual("> | Col1Row2 | Col2Row2 |", actualString[3]);
             Assert.AreEqual(5, actualString.Length);
         }
+
+        [Test]
+        public void A_Table_Is_Formatted_With_Placeholders()
+        {
+            var mockStyle = new MockStylist
+            {
+            };
+
+            var table = new Table();
+            table.HeaderRow = new TableRow(new[] { "Col1", "Col2" });
+            table.DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>();
+            table.DataRows.Add(new TableRow(new[] { "Col1Row1", "<Col2Row1>" }));
+            table.DataRows.Add(new TableRow(new[] { "<Col1Row2>", "Col2Row2" }));
+
+            var tableBlock = new TableBlock(table, mockStyle);
+            var actualString = tableBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("> | Col1 | Col2 |", actualString[0]);
+            Assert.AreEqual("> | --- | --- |", actualString[1]);
+            Assert.AreEqual(@"> | Col1Row1 | \<Col2Row1\> |", actualString[2]);
+            Assert.AreEqual(@"> | \<Col1Row2\> | Col2Row2 |", actualString[3]);
+            Assert.AreEqual(5, actualString.Length);
+        }
     }
 }

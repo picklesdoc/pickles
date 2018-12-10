@@ -135,7 +135,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                     currentIndexPosition++;
                 }
 
-                Assert.IsTrue(found, string.Format("Line \"{0}\" not found or not later than expected", expectedValue));
+                Assert.IsTrue(found, string.Format("Line \"{0}\" not found or later than expected", expectedValue));
             }
         }
 

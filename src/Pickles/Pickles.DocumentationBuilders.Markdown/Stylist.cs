@@ -107,10 +107,19 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
         {
             var stepLineTemplate = "> {0}";
 
-            var styledStepLine = string.Format(stepLineTemplate,stepLine)
+            var styledStepLine = string.Format(stepLineTemplate, EscapeMarkdownSensitiveCharacters(stepLine))
                 .TrimEnd();
 
             return styledStepLine;
+        }
+
+        protected string EscapeMarkdownSensitiveCharacters(string rawText)
+        {
+            var escapedText = rawText
+                .Replace("<", @"\<")
+                .Replace(">", @"\>");
+
+            return escapedText;
         }
     }
 }

@@ -117,11 +117,11 @@ this.ScenarioSetup(scenarioInfo);
             table3.AddRow(new string[] {
                         ">"});
             table3.AddRow(new string[] {
-                        "> **Given** I have a simple given step for <data_one>"});
+                        "> **Given** I have a simple given step for \\<data_one\\>"});
             table3.AddRow(new string[] {
                         ">"});
             table3.AddRow(new string[] {
-                        "> **And** I have second given for <data_two>"});
+                        "> **And** I have second given for \\<data_two\\>"});
             table3.AddRow(new string[] {
                         ">"});
             table3.AddRow(new string[] {
@@ -140,6 +140,91 @@ this.ScenarioSetup(scenarioInfo);
                         "> | Third | three | tree |"});
 #line 25
     testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table3, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Output has table step scenario outline")]
+        public virtual void OutputHasTableStepScenarioOutline()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Output has table step scenario outline", ((string[])(null)));
+#line 41
+this.ScenarioSetup(scenarioInfo);
+#line 43
+    testRunner.Given("I have a feature called \'My Scenario Outline Feature\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 45
+    testRunner.And("I have a scenario outline called \'Scenario Outline with table step\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "TableColA",
+                        "TableColb"});
+            table4.AddRow(new string[] {
+                        "<data_one>",
+                        "TDB1"});
+            table4.AddRow(new string[] {
+                        "TDA2",
+                        "<data_two>"});
+#line 47
+    testRunner.And("I have the scenario step with table \'Given I have a table\'", ((string)(null)), table4, "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Scenario",
+                        "data_one",
+                        "data_two"});
+            table5.AddRow(new string[] {
+                        "First",
+                        "one",
+                        "wun"});
+            table5.AddRow(new string[] {
+                        "Second",
+                        "two",
+                        "too"});
+            table5.AddRow(new string[] {
+                        "Third",
+                        "three",
+                        "tree"});
+#line 52
+    testRunner.And("I have an examples table", ((string)(null)), table5, "And ");
+#line 58
+    testRunner.When("I generate Markdown output", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Content"});
+            table6.AddRow(new string[] {
+                        "#### Scenario Outline: Scenario Outline with table step"});
+            table6.AddRow(new string[] {
+                        ">"});
+            table6.AddRow(new string[] {
+                        "> **Given** I have a table"});
+            table6.AddRow(new string[] {
+                        ">"});
+            table6.AddRow(new string[] {
+                        "> | TableColA | TableColb |"});
+            table6.AddRow(new string[] {
+                        "> | --- | --- |"});
+            table6.AddRow(new string[] {
+                        "> | \\<data_one\\> | TDB1 |"});
+            table6.AddRow(new string[] {
+                        "> | TDA2 | \\<data_two\\> |"});
+            table6.AddRow(new string[] {
+                        ">"});
+            table6.AddRow(new string[] {
+                        "> Examples:"});
+            table6.AddRow(new string[] {
+                        ">"});
+            table6.AddRow(new string[] {
+                        "> | Scenario | data_one | data_two |"});
+            table6.AddRow(new string[] {
+                        "> | --- | --- | --- |"});
+            table6.AddRow(new string[] {
+                        "> | First | one | wun |"});
+            table6.AddRow(new string[] {
+                        "> | Second | two | too |"});
+            table6.AddRow(new string[] {
+                        "> | Third | three | tree |"});
+#line 60
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table6, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
