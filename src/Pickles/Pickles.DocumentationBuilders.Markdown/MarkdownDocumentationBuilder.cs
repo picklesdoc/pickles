@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using PicklesDoc.Pickles.DataStructures;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.IO.Abstractions;
 
@@ -30,10 +32,25 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
         private readonly IFileSystem fileSystem;
         private readonly IConfiguration configuration;
 
+        private readonly string namespaceOfResources;
+
+        private readonly string outputFolder;
+
+
         public MarkdownDocumentationBuilder(IFileSystem fileSystem, IConfiguration configuration)
         {
             this.fileSystem = fileSystem;
             this.configuration = configuration;
+            this.namespaceOfResources = "PicklesDoc.Pickles.DocumentationBuilders.Markdown.Resource.";
+
+            if (configuration.OutputFolder == null)
+            {
+                outputFolder = @"C:\testing";
+            }
+            else
+            {
+                outputFolder = configuration.OutputFolder.FullName;
+            }
         }
 
         public void Build(Tree featureTree)
@@ -41,6 +58,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             var documentation = new Documentation(featureTree);
 
             WriteContentToFile(TargetFile(), documentation.CurrentPage);
+
+            WriteImage(outputFolder, "pass_32.png", "pass.png");
+            WriteImage(outputFolder, "fail_32.png", "fail.png");
+            WriteImage(outputFolder, "inconclusive_32.png", "inconclusive.png");
         }
 
         // TODO: new class handles file system interaction
@@ -59,16 +80,29 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             var fileName = "features.md";
 
             string defaultOutputFile = string.Empty;
-            if (configuration.OutputFolder == null)
-            {
-                defaultOutputFile = Path.Combine(@"C:\testing", fileName);
-            }
-            else
-            {
-                defaultOutputFile = Path.Combine(configuration.OutputFolder.FullName, fileName);
-            }
+            defaultOutputFile = Path.Combine(outputFolder, fileName);
 
             return defaultOutputFile;
+        }
+
+
+
+        private void WriteImage(string folder, string sourcefilename, string targetfilename)
+        {
+            string path = this.fileSystem.Path.Combine(folder, targetfilename);
+
+            using (Image image = Image.FromStream(this.GetResourceStream(this.namespaceOfResources + sourcefilename)))
+            {
+                using (var stream = this.fileSystem.File.Create(path))
+                {
+                    image.Save(stream, ImageFormat.Png);
+                }
+            }
+        }
+
+        private Stream GetResourceStream(string nameOfResource)
+        {
+            return this.GetType().Assembly.GetManifestResourceStream(nameOfResource);
         }
     }
 }

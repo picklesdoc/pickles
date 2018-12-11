@@ -72,6 +72,24 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         }
 
         [Test]
+        public void When_I_Build_Documentation_Icon_Files_Are_Created()
+        {
+            var outputFolder = @"c:\output";
+
+            var container = BuildContainer();
+            var configuration = container.Resolve<IConfiguration>();
+            var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
+            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
+
+            markdownDocumentationBuilder.Build(null);
+
+            Assert.IsTrue(fileSystem.FileExists(@"c:\output\pass.png"));
+            Assert.IsTrue(fileSystem.FileExists(@"c:\output\fail.png"));
+            Assert.IsTrue(fileSystem.FileExists(@"c:\output\inconclusive.png"));
+        }
+
+        [Test]
         public void With_A_Null_Tree_The_Output_Has_Default_Content()
         {
             var outputFolder = @"c:\output";
