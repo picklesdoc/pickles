@@ -18,6 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using PicklesDoc.Pickles.ObjectModel;
+
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 {
     class Stylist
@@ -54,6 +56,39 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             var scenarioHeadingTemplate = "#### Scenario: {0}";
 
             var styledScenarioHeading = string.Format(scenarioHeadingTemplate, scenarioName);
+
+            return styledScenarioHeading;
+        }
+
+        internal virtual string AsScenarioHeading(string scenarioName, TestResult result)
+        {
+            var scenarioHeadingTemplate = "#### Scenario: ![{0}]({1}) {2}";
+
+            var resultText = string.Empty;
+            var resultIcon = string.Empty;
+
+            switch (result)
+            {
+                case TestResult.Passed:
+                    resultText = "Passed";
+                    resultIcon = "pass.png";
+                    break;
+
+                case TestResult.Failed:
+                    resultText = "Failed";
+                    resultIcon = "fail.png";
+                    break;
+
+                case TestResult.Inconclusive:
+                    resultText = "Inconclusive";
+                    resultIcon = "inconclusive.png";
+                    break;
+
+                default:
+                    throw new System.Exception("Unhandled TestResult value");
+            }
+
+            var styledScenarioHeading = string.Format(scenarioHeadingTemplate, resultText, resultIcon, scenarioName);
 
             return styledScenarioHeading;
         }

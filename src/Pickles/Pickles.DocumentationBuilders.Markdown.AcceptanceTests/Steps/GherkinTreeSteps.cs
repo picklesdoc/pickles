@@ -208,6 +208,30 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             };
         }
 
+        [Given(@"the scenario test run outcome was (.*)")]
+        public void Given_The_Scenario_Test_Run_Outcome_Was(string outcome)
+        {
+            var lastScenario = TryToGetLastScenario();
+
+            TestResult result = TestResult.NotProvided;
+
+            switch (outcome)
+            {
+                case "passed":
+                    result = TestResult.Passed;
+                    break;
+                case "failed":
+                    result = TestResult.Failed;
+                    break;
+                case "inconclusive":
+                    result = TestResult.Inconclusive;
+                    break;
+                default:
+                    break;
+            }
+
+            lastScenario.Result = result;
+        }
 
 
         private ScenarioBase TryToGetLastScenario()

@@ -19,6 +19,8 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 
+using PicklesDoc.Pickles.ObjectModel;
+
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
     class MockStylist : Stylist
@@ -59,6 +61,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         internal override string AsScenarioHeading(string scenarioName)
         {
             return string.Format(ScenarioHeadingFormat, scenarioName);
+        }
+
+        internal override string AsScenarioHeading(string scenarioName, TestResult result)
+        {
+            return string.Format(ScenarioHeadingFormat, string.Concat("result ",scenarioName));
         }
 
         public string ScenarioOutlineHeadingFormat { get; set; }

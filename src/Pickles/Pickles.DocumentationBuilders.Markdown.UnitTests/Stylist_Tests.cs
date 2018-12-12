@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using NUnit.Framework;
+using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
@@ -76,6 +77,17 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var style = new Stylist();
 
             var actualStyle = style.AsScenarioHeading("My Styled Scenario");
+
+            Assert.AreEqual(expectedStyle, actualStyle);
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Scenario_Heading_With_Result()
+        {
+            var expectedStyle = "#### Scenario: ![Passed](pass.png) My Styled Scenario";
+            var style = new Stylist();
+
+            var actualStyle = style.AsScenarioHeading("My Styled Scenario", TestResult.Passed);
 
             Assert.AreEqual(expectedStyle, actualStyle);
         }

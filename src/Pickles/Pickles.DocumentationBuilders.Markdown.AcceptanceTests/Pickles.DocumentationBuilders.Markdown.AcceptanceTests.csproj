@@ -87,6 +87,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Scenario Outline.feature</DependentUpon>
     </Compile>
+    <Compile Include="Features\Scenario Status Icons.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Scenario Status Icons.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Scenario Steps.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -146,6 +151,10 @@
     <None Include="Features\Scenario Outline.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Scenario Outline.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Scenario Status Icons.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Scenario Status Icons.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Scenario Steps.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

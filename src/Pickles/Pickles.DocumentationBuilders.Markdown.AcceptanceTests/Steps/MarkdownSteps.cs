@@ -139,11 +139,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             }
         }
 
-        [Then(@"the file '(.*)\\features.md' exists")]
-        public void Then_The_Features_Markdown_File_Exists(string outputFolder)
+        [Then(@"the file '(.*)' exists")]
+        public void Then_The_File_Exists(string expectedFile)
         {
-            var expectedFile = Path.Combine(outputFolder, "features.md");
-            Assert.IsTrue(this.FileSystem.File.Exists(expectedFile));
+            Assert.IsTrue(this.FileSystem.File.Exists(expectedFile),string.Format("File \"{0}\" not found",expectedFile));
         }
 
         // Duplicated logic from Builder class, should be moved to it's own class?

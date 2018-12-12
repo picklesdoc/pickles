@@ -69,10 +69,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         protected virtual Lines Heading()
         {
-            var lines = new Lines
+            var lines = new Lines();
+
+            if(scenario.Result != TestResult.NotProvided)
             {
-                style.AsScenarioHeading(scenario.Name)
-            };
+                lines.Add(style.AsScenarioHeading(scenario.Name, scenario.Result));
+            }
+            else
+            {
+                lines.Add(style.AsScenarioHeading(scenario.Name));
+            }
 
             return lines;
         }
