@@ -211,9 +211,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                         };
                     });
 
-            var notTestedScenarioByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, "@NotTested");
-            var manualScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, "@manual");
-            var automatedScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, "@automated");
+            var notTestedScenarioByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Contains("@NotTested", StringComparer.OrdinalIgnoreCase));
+            var manualScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Contains("@manual", StringComparer.OrdinalIgnoreCase));
+            var automatedScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Contains("@automated", StringComparer.OrdinalIgnoreCase));
 
             // calculate top-level folder summary - @NotTested scenarios only
             var topLevelNotTestedFolderSummary = TopLevelFolderSummaryByTag(featuresByFolder, notTestedScenarioByFolder);
@@ -276,13 +276,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                 .ToLookup(x => x.Folder, x => x.Element);
         }
 
-        private static HashSet<IJsonFeatureElement> RetrieveScenariosWithACertainTag(List<JsonFeatureWithMetaInfo> features, List<IJsonFeatureElement> scenarios, string tag)
+        private static HashSet<IJsonFeatureElement> RetrieveScenariosWithACertainTag(List<JsonFeatureWithMetaInfo> features, List<IJsonFeatureElement> scenarios, Func<IEnumerable<string>, bool> tagSelector)
         {
             return new HashSet<IJsonFeatureElement>(
                 features
-                    .Where(f => f.Feature.Tags.Contains(tag, StringComparer.OrdinalIgnoreCase))
+                    .Where(f => tagSelector(f.Feature.Tags))
                     .SelectMany(f => f.Feature.FeatureElements)
-                    .Union(scenarios.Where(s => s.Tags.Contains(tag, StringComparer.OrdinalIgnoreCase)))
+                    .Union(scenarios.Where(s => tagSelector(s.Tags)))
                     .Distinct());
         }
 
@@ -290,9 +290,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
             List<JsonFeatureWithMetaInfo> features,
             List<IJsonFeatureElement> scenarios,
             Regex topLevelFolderName,
-            string tag)
+            Func<IEnumerable<string>, bool> tagSelector)
         {
-            var featuresWithACertainTag = RetrieveScenariosWithACertainTag(features, scenarios, tag);
+            var featuresWithACertainTag = RetrieveScenariosWithACertainTag(features, scenarios, tagSelector);
 
             var result = RetrieveScenarioByFolder(features, topLevelFolderName, featuresWithACertainTag);
 
