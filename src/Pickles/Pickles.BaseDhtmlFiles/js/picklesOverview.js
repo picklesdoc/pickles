@@ -7,7 +7,9 @@ var PicklesOverview = function(summary) {
         createOverallTotalsChart: createOverallTotalsChart,
         createByTagChart: createByTagChart,
         createByRootFolderChart: createByRootFolderChart,
-        createNotTestedByRootFolderChart: createNotTestedByRootFolderChart
+        createNotTestedByRootFolderChart: createNotTestedByRootFolderChart,
+        createManualByRootFolderChart: createManualByRootFolderChart,
+        createAutomatedByRootFolderChart: createAutomatedByRootFolderChart
     };
 
     /////
@@ -163,5 +165,13 @@ var PicklesOverview = function(summary) {
 
     function createNotTestedByRootFolderChart(context) {
         internalCreateByRootFolderChart(context, summary.NotTestedFolders);
+    }
+
+    function createManualByRootFolderChart(context) {
+        internalCreateByRootFolderChart(context, summary.ManualFolders);
+    }
+
+    function createAutomatedByRootFolderChart(context) {
+        internalCreateByRootFolderChart(context, summary.AutomatedFolders);
     }
 };
