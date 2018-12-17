@@ -27,9 +27,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
     {
         readonly Table table;
 
-        public TableBlock(Table table, Stylist style) : base(style)
+        private bool hasResults;
+
+        public TableBlock(Table table, Stylist style) : this(table,style,false)
+        {
+        }
+
+        public TableBlock(Table table, Stylist style, bool withResults): base(style)
         {
             this.table = table;
+            this.hasResults = withResults;
             this.lines = RenderedBlock();
         }
 
@@ -56,6 +63,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         private Lines TableHeader(TableRow headerRow)
         {
+            if (hasResults)
+            {
+                headerRow.Cells.Add("Result");
+            }
+
             var lines = new Lines
             {
                 style.AsStepTable(TableLine(headerRow)),
@@ -80,6 +92,31 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         private Lines TableRow(TableRow row)
         {
+            if(hasResults)
+            {
+                string result = "";
+
+                switch ((row as TableRowWithTestResult).Result)
+                {
+                    case TestResult.Passed:
+                        result = "![Passed](pass.png)";
+                        break;
+
+                    case TestResult.Failed:
+                        result = "![Failed](fail.png)";
+                        break;
+
+                    case TestResult.Inconclusive:
+                        result = "![Inconclusive](inconclusive.png)";
+                        break;
+
+                    default:
+                        break;
+                }
+
+                row.Cells.Add(result);
+            }
+
             var lines = new Lines
             {
                 style.AsStepTable(TableLine(row))

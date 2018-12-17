@@ -109,7 +109,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
                     lines.Add(style.AsStepLine(string.Empty));
 
-                    var tableBlock = new TableBlock(example.TableArgument, style);
+                    var withResults = true;
+
+                    if (scenarioOutline.Result == TestResult.NotProvided)
+                    {
+                        withResults = false;
+                    }
+
+                    var tableBlock = new TableBlock(example.TableArgument, style, withResults);
 
                     lines.Add(tableBlock.Lines);
                 }

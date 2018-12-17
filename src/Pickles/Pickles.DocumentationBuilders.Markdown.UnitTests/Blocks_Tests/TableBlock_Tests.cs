@@ -73,5 +73,41 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual(@"> | \<Col1Row2\> | Col2Row2 |", actualString[3]);
             Assert.AreEqual(5, actualString.Length);
         }
+
+        [Test]
+        public void A_Table_Is_Formatted_With_Results()
+        {
+            var mockStyle = new MockStylist
+            {
+            };
+
+            var table = new Table();
+            table.HeaderRow = new TableRow(new[] { "Col1", "Col2" });
+            table.DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>();
+            AddRowWithResult(table, new[] { "Col1Row1", "Col2Row1" }, TestResult.Passed);
+            AddRowWithResult(table, new[] { "Col1Row2", "Col2Row2" }, TestResult.Failed);
+            AddRowWithResult(table, new[] { "Col1Row3", "Col2Row3" }, TestResult.Inconclusive);
+            AddRowWithResult(table, new[] { "Col1Row4", "Col2Row4" }, TestResult.NotProvided);
+
+            var tableBlock = new TableBlock(table, mockStyle, true);
+            var actualString = tableBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+
+            Assert.AreEqual("> | Col1 | Col2 | Result |", actualString[0]);
+            Assert.AreEqual("> | --- | --- | --- |", actualString[1]);
+            Assert.AreEqual("> | Col1Row1 | Col2Row1 | ![Passed](pass.png) |", actualString[2]);
+            Assert.AreEqual("> | Col1Row2 | Col2Row2 | ![Failed](fail.png) |", actualString[3]);
+            Assert.AreEqual("> | Col1Row3 | Col2Row3 | ![Inconclusive](inconclusive.png) |", actualString[4]);
+            Assert.AreEqual("> | Col1Row4 | Col2Row4 |  |", actualString[5]);
+            Assert.AreEqual(7, actualString.Length);
+        }
+
+        private void AddRowWithResult(Table table,string[] data, TestResult result)
+        {
+            var tableRowWithResult = new TableRowWithTestResult(data)
+            {
+                Result = result
+            };
+            table.DataRows.Add(tableRowWithResult);
+        }
     }
 }

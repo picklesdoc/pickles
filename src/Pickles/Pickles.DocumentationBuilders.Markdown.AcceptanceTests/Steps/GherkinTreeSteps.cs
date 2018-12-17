@@ -208,6 +208,26 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             };
         }
 
+        [Given(@"I have an examples table with results")]
+        public void Given_I_Have_An_Examples_Table_With_Results(TechTalk.SpecFlow.Table table)
+        {
+            ScenarioOutline lastScenario = TryToGetLastScenario() as ScenarioOutline;
+
+            lastScenario.Result = TestResult.Inconclusive;
+
+            var examplesTable = ConvertSpecflowTableToExamplesWithResultsTable(table);
+
+            var example = new Example()
+            {
+                TableArgument = examplesTable
+            };
+
+            lastScenario.Examples = new System.Collections.Generic.List<Example>
+            {
+                example
+            };
+        }
+
         [Given(@"the scenario test run outcome was (.*)")]
         public void Given_The_Scenario_Test_Run_Outcome_Was(string outcome)
         {
@@ -298,6 +318,72 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             foreach (var row in specflowTable.Rows)
             {
                 exampleTable.DataRows.Add(new ObjectModel.TableRow(row.Values));
+            }
+
+            return exampleTable;
+        }
+
+        private ObjectModel.ExampleTable ConvertSpecflowTableToExamplesWithResultsTable(TechTalk.SpecFlow.Table specflowTable)
+        {
+            // Rest In Peace, Marshall 2018-12-12
+            var columnCount = specflowTable.Header.Count -1;
+            var resultLocation = specflowTable.Header.Count -1;
+
+            var headerRow = new string[columnCount];
+
+            int i = 0;
+            foreach(var header in specflowTable.Header)
+            {
+                headerRow[i] = header;
+                i++;
+                if (i == columnCount)
+                {
+                    break;
+                }
+            }
+
+            var exampleTable = new ObjectModel.ExampleTable
+            {
+                HeaderRow = new ObjectModel.TableRow(headerRow),
+
+                DataRows = new System.Collections.Generic.List<ObjectModel.TableRow>()
+            };
+
+            foreach (var row in specflowTable.Rows)
+            {
+                var tableRow = new string[columnCount];
+
+                int r = 0;
+                foreach (var rowValue in row.Values)
+                {
+                    tableRow[r] = rowValue;
+                    r++;
+                    if (r == columnCount)
+                    {
+                        break;
+                    }
+                }
+
+                var outcome = row[resultLocation];
+
+                var gherkinTableRow = new ObjectModel.TableRowWithTestResult(tableRow);
+
+                switch (outcome)
+                {
+                    case "passed":
+                        gherkinTableRow.Result = TestResult.Passed;
+                        break;
+                    case "failed":
+                        gherkinTableRow.Result = TestResult.Failed;
+                        break;
+                    case "inconclusive":
+                        gherkinTableRow.Result = TestResult.Inconclusive;
+                        break;
+                    default:
+                        break;
+                }
+
+                exampleTable.DataRows.Add(gherkinTableRow);
             }
 
             return exampleTable;

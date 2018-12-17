@@ -114,6 +114,65 @@ this.ScenarioSetup(scenarioInfo);
 #line hidden
             this.ScenarioCleanup();
         }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Scenario Outline Example displays results icon")]
+        public virtual void ScenarioOutlineExampleDisplaysResultsIcon()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Scenario Outline Example displays results icon", ((string[])(null)));
+#line 36
+this.ScenarioSetup(scenarioInfo);
+#line 37
+    testRunner.Given("I have a feature called \'My Scenario Outline Results Feature\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 38
+    testRunner.And("I have a scenario outline called \'Scenario Outline with result\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Scenario",
+                        "data_one",
+                        "data_two",
+                        "outcome"});
+            table2.AddRow(new string[] {
+                        "First",
+                        "one",
+                        "wun",
+                        "passed"});
+            table2.AddRow(new string[] {
+                        "Second",
+                        "two",
+                        "too",
+                        "failed"});
+            table2.AddRow(new string[] {
+                        "Third",
+                        "three",
+                        "tree",
+                        "inconclusive"});
+#line 39
+    testRunner.And("I have an examples table with results", ((string)(null)), table2, "And ");
+#line 45
+    testRunner.When("I generate Markdown output", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Content"});
+            table3.AddRow(new string[] {
+                        "> Examples:"});
+            table3.AddRow(new string[] {
+                        ">"});
+            table3.AddRow(new string[] {
+                        "> | Scenario | data_one | data_two | Result |"});
+            table3.AddRow(new string[] {
+                        "> | --- | --- | --- | --- |"});
+            table3.AddRow(new string[] {
+                        "> | First | one | wun | ![Passed](pass.png) |"});
+            table3.AddRow(new string[] {
+                        "> | Second | two | too | ![Failed](fail.png) |"});
+            table3.AddRow(new string[] {
+                        "> | Third | three | tree | ![Inconclusive](inconclusive.png) |"});
+#line 47
+    testRunner.Then("the Markdown output has the lines in the following order", ((string)(null)), table3, "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
     }
 }
 #pragma warning restore

@@ -31,3 +31,25 @@ Examples:
     | Passed        | passed       | pass.png         |
     | Failed        | failed       | fail.png         |
     | Inconclusive  | inconclusive | inconclusive.png |
+
+
+Scenario: Scenario Outline Example displays results icon
+    Given I have a feature called 'My Scenario Outline Results Feature'
+    And I have a scenario outline called 'Scenario Outline with result'
+    And I have an examples table with results
+        | Scenario | data_one | data_two | outcome      |
+        | First    | one      | wun      | passed       |
+        | Second   | two      | too      | failed       |
+        | Third    | three    | tree     | inconclusive |
+
+    When I generate Markdown output
+
+    Then the Markdown output has the lines in the following order
+        | Content                                                             |
+        | > Examples:                                                         |
+        | >                                                                   |
+        | > \| Scenario \| data_one \| data_two \| Result \|                  |
+        | > \| --- \| --- \| --- \| --- \|                                    |
+        | > \| First \| one \| wun \| ![Passed](pass.png) \|                  |
+        | > \| Second \| two \| too \| ![Failed](fail.png) \|                 |
+        | > \| Third \| three \| tree \| ![Inconclusive](inconclusive.png) \| |
