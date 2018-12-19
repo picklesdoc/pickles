@@ -24,6 +24,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 {
     class Stylist
     {
+        public string TableResultHeading { get { return "Result"; } }
+
         internal virtual string AsTitle(string title)
         {
             var titleTemplate = "# {0}";
@@ -60,35 +62,41 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
             return styledScenarioHeading;
         }
 
-        internal virtual string AsScenarioHeading(string scenarioName, TestResult result)
+        internal virtual string AsResult(TestResult testresult)
         {
-            var scenarioHeadingTemplate = "#### Scenario: ![{0}]({1}) {2}";
+            var resultTemplate = "![{0}]({1})";
 
-            var resultText = string.Empty;
-            var resultIcon = string.Empty;
+            string styledResult = "";
 
-            switch (result)
+            switch (testresult)
             {
                 case TestResult.Passed:
-                    resultText = "Passed";
-                    resultIcon = "pass.png";
+                    styledResult = string.Format(resultTemplate,"Passed","pass.png");
                     break;
 
                 case TestResult.Failed:
-                    resultText = "Failed";
-                    resultIcon = "fail.png";
+                    styledResult = string.Format(resultTemplate, "Failed", "fail.png");
                     break;
 
                 case TestResult.Inconclusive:
-                    resultText = "Inconclusive";
-                    resultIcon = "inconclusive.png";
+                    styledResult = string.Format(resultTemplate, "Inconclusive", "inconclusive.png");
+                    break;
+
+                case TestResult.NotProvided:
                     break;
 
                 default:
                     throw new System.Exception("Unhandled TestResult value");
             }
 
-            var styledScenarioHeading = string.Format(scenarioHeadingTemplate, resultText, resultIcon, scenarioName);
+            return styledResult;
+        }
+
+        internal virtual string AsScenarioHeading(string scenarioName, TestResult result)
+        {
+            var scenarioHeadingTemplate = "#### Scenario: {0} {1}";
+
+            var styledScenarioHeading = string.Format(scenarioHeadingTemplate, AsResult(result), scenarioName);
 
             return styledScenarioHeading;
         }

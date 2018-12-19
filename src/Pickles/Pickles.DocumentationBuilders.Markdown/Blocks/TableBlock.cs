@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
     {
         readonly Table table;
 
-        private bool hasResults;
+        private readonly bool hasResults;
 
         public TableBlock(Table table, Stylist style) : this(table,style,false)
         {
@@ -52,11 +52,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         private Lines Table()
         {
-            var lines = new Lines();
+            var lines = new Lines
+            {
+                TableHeader(table.HeaderRow),
 
-            lines.Add(TableHeader(table.HeaderRow));
-
-            lines.Add(TableRows(table.DataRows));
+                TableRows(table.DataRows)
+            };
 
             return lines;
         }
@@ -65,7 +66,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
         {
             if (hasResults)
             {
-                headerRow.Cells.Add("Result");
+                headerRow.Cells.Add(style.TableResultHeading);
             }
 
             var lines = new Lines
@@ -94,25 +95,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
         {
             if(hasResults)
             {
-                string result = "";
-
-                switch ((row as TableRowWithTestResult).Result)
-                {
-                    case TestResult.Passed:
-                        result = "![Passed](pass.png)";
-                        break;
-
-                    case TestResult.Failed:
-                        result = "![Failed](fail.png)";
-                        break;
-
-                    case TestResult.Inconclusive:
-                        result = "![Inconclusive](inconclusive.png)";
-                        break;
-
-                    default:
-                        break;
-                }
+                string result = style.AsResult((row as TableRowWithTestResult).Result);
 
                 row.Cells.Add(result);
             }

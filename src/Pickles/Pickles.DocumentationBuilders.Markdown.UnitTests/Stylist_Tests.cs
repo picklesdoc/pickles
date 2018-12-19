@@ -177,5 +177,23 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             Assert.AreEqual(">", style.AsStepLine(string.Empty));
             Assert.AreEqual("> Text", style.AsStepLine("Text"));
         }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Result()
+        {
+            var style = new Stylist();
+
+            Assert.AreEqual("![Passed](pass.png)", style.AsResult(TestResult.Passed));
+            Assert.AreEqual("![Failed](fail.png)", style.AsResult(TestResult.Failed));
+            Assert.AreEqual("![Inconclusive](inconclusive.png)", style.AsResult(TestResult.Inconclusive));
+        }
+
+        [Test]
+        public void A_Stylist_Can_Style_A_Table_Result_Heading()
+        {
+            var style = new Stylist();
+
+            Assert.AreEqual("Result", style.TableResultHeading);
+        }
     }
 }
