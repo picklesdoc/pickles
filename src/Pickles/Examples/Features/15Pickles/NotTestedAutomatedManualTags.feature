@@ -16,7 +16,7 @@ Scenario: Verified manually
 	When I run pickles
 	Then it appears in the @manual summary
 
-@notTested
+@notTested_waitingForAutomation
 Scenario: Verified automatically
 	Given a feature that is not verified
 	When I run pickles

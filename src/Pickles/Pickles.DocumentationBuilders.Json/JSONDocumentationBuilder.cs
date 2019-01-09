@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.Abstractions;
 using System.Linq;
 using System.Reflection;
@@ -211,9 +212,16 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                         };
                     });
 
-            var notTestedScenarioByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Contains("@NotTested", StringComparer.OrdinalIgnoreCase));
+            var notTestedScenarioByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Any(t => t.StartsWith("@NotTested", StringComparison.OrdinalIgnoreCase)));
             var manualScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Contains("@manual", StringComparer.OrdinalIgnoreCase));
-            var automatedScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(features, scenarios, topLevelFolderName, tags => tags.Contains("@automated", StringComparer.OrdinalIgnoreCase));
+            var automatedScenariosByFolder = RetrieveScenariosWithACertainTagByFolder(
+                features,
+                scenarios,
+                topLevelFolderName,
+                tags => tags.Contains("@automated", StringComparer.OrdinalIgnoreCase) ||
+                        (!tags.Contains("@manual", StringComparer.OrdinalIgnoreCase)
+                         &&
+                         !tags.Any(t => t.StartsWith("@NotTested", StringComparison.OrdinalIgnoreCase))));
 
             // calculate top-level folder summary - @NotTested scenarios only
             var topLevelNotTestedFolderSummary = TopLevelFolderSummaryByTag(featuresByFolder, notTestedScenarioByFolder);
@@ -278,11 +286,29 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 
         private static HashSet<IJsonFeatureElement> RetrieveScenariosWithACertainTag(List<JsonFeatureWithMetaInfo> features, List<IJsonFeatureElement> scenarios, Func<IEnumerable<string>, bool> tagSelector)
         {
+            var jsonFeatureElements = features
+                .Where(f => tagSelector(f.Feature.Tags))
+                .SelectMany(f => f.Feature.FeatureElements);
+
+            foreach (var jsonFeatureElement in jsonFeatureElements)
+            {
+                Debug.WriteLine(jsonFeatureElement.Name);
+            }
+
+            var featureElements = scenarios.Where(s => tagSelector(s.Tags));
+
+            Debug.WriteLine("");
+            Debug.WriteLine("");
+            Debug.WriteLine("");
+
+            foreach (var featureElement in featureElements)
+            {
+                Debug.WriteLine(featureElement.Name);
+            }
+
             return new HashSet<IJsonFeatureElement>(
-                features
-                    .Where(f => tagSelector(f.Feature.Tags))
-                    .SelectMany(f => f.Feature.FeatureElements)
-                    .Union(scenarios.Where(s => tagSelector(s.Tags)))
+                jsonFeatureElements
+                    .Union(featureElements)
                     .Distinct());
         }
 
