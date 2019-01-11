@@ -114,20 +114,20 @@ var PicklesOverview = function(summary) {
             labels: labels,
             datasets: [
                 {
-                    fillColor: colors.inconclusive.color,
-                    strokeColor: colors.inconclusive.stroke,
-                    highlightFill: colors.inconclusive.highlight,
-                    highlightStroke: colors.inconclusive.highlightstroke,
-                    label: "Manual Scenarios",
-                    data: manualData
-                },
-                {
                     fillColor: colors.failing.color,
                     strokeColor: colors.failing.stroke,
                     highlightFill: colors.failing.highlight,
                     highlightStroke: colors.failing.highlightstroke,
                     label: "NotTested Scenarios",
                     data: notTestedData
+                },
+                {
+                    fillColor: colors.inconclusive.color,
+                    strokeColor: colors.inconclusive.stroke,
+                    highlightFill: colors.inconclusive.highlight,
+                    highlightStroke: colors.inconclusive.highlightstroke,
+                    label: "Manual Scenarios",
+                    data: manualData
                 },
                 {
                     fillColor: colors.passing.color,

@@ -111,7 +111,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
             // calculate top-level folder summary - @NotTested scenarios only
             var topLevelNotTestedFolderSummary = TopLevelFolderSummaryByTag(featuresByFolder, notTestedScenarioByFolder);
 
-            var foldersWithTestKinds = TopLevelFolderSummaryByTag2(featuresByFolder, automatedScenariosByFolder, manualScenariosByFolder, notTestedScenarioByFolder);
+            var foldersWithTestKinds = CreateFoldersWithTestKinds(featuresByFolder, automatedScenariosByFolder, manualScenariosByFolder, notTestedScenarioByFolder);
             return new SummaryResult
             {
                 Tags = tagSummary,
@@ -153,7 +153,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                     };
                 });
         }
-        private static IEnumerable<FolderWithTestKinds> TopLevelFolderSummaryByTag2(
+        private static IEnumerable<FolderWithTestKinds> CreateFoldersWithTestKinds(
             ILookup<string, IJsonFeatureElement> featuresByFolder,
             ILookup<string, IJsonFeatureElement> automatedScenarios,
             ILookup<string, IJsonFeatureElement> manualScenarios,
