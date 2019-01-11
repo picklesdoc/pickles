@@ -8,9 +8,6 @@ var PicklesOverview = function(summary) {
         createByTagChart: createByTagChart,
         createByRootFolderChart: createByRootFolderChart,
         createByTestKindChart: createByTestKindChart,
-        createNotTestedByRootFolderChart: createNotTestedByRootFolderChart,
-        createManualByRootFolderChart: createManualByRootFolderChart,
-        createAutomatedByRootFolderChart: createAutomatedByRootFolderChart
     };
 
     /////
@@ -222,17 +219,5 @@ var PicklesOverview = function(summary) {
 
     function createByRootFolderChart(context) {
         internalCreateByRootFolderChart(context, summary.Folders);
-    }
-
-    function createNotTestedByRootFolderChart(context) {
-        internalCreateByRootFolderChart(context, summary.NotTestedFolders);
-    }
-
-    function createManualByRootFolderChart(context) {
-        internalCreateByRootFolderChart(context, summary.ManualFolders);
-    }
-
-    function createAutomatedByRootFolderChart(context) {
-        internalCreateByRootFolderChart(context, summary.AutomatedFolders);
     }
 };

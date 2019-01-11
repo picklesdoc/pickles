@@ -272,18 +272,6 @@
                     <h3 class="header">Test Kind Summary by Root Namespace</h3>
                     <canvas id="byTestKindCanvas"></canvas>
                 </div>
-                <div>
-                    <h3 class="header">@NotTested Scenario Summary by Root Namespace</h3>
-                    <canvas id="notTestedByRootFolderCanvas"></canvas>
-                </div>
-                <div>
-                    <h3 class="header">@Manual Scenario Summary by Root Namespace</h3>
-                    <canvas id="manualByRootFolderCanvas"></canvas>
-                </div>
-                <div>
-                    <h3 class="header">@Automated Scenario Summary by Root Namespace</h3>
-                    <canvas id="automatedByRootFolderCanvas"></canvas>
-                </div>
             </div>
         </div>
         <div id="scenarioLinkModal" class="modal fade" tabindex="-1" role="dialog">
@@ -378,9 +366,6 @@
           self.overview.createByTagChart($('#byTagCanvas').get(0).getContext('2d'));
           self.overview.createByRootFolderChart($('#byRootFolderCanvas').get(0).getContext('2d'));
           self.overview.createByTestKindChart($('#byTestKindCanvas').get(0).getContext('2d'));
-          self.overview.createNotTestedByRootFolderChart($('#notTestedByRootFolderCanvas').get(0).getContext('2d'));
-          self.overview.createManualByRootFolderChart($('#manualByRootFolderCanvas').get(0).getContext('2d'));
-          self.overview.createAutomatedByRootFolderChart($('#automatedByRootFolderCanvas').get(0).getContext('2d'));
           self.totals(self.overview.getTotalsData());
         }
       } else {
