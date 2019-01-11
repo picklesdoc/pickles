@@ -19,9 +19,11 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Json
 {
@@ -111,6 +113,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
             var topLevelManualFolderSummary = TopLevelFolderSummaryByTag(featuresByFolder, manualScenariosByFolder);
             var topLevelAutomatedFolderSummary = TopLevelFolderSummaryByTag(featuresByFolder, automatedScenariosByFolder);
 
+            var foldersWithTestKinds = TopLevelFolderSummaryByTag2(featuresByFolder, automatedScenariosByFolder, manualScenariosByFolder, notTestedScenarioByFolder);
             return new SummaryResult
             {
                 Tags = tagSummary,
@@ -118,6 +121,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                 NotTestedFolders = topLevelNotTestedFolderSummary,
                 ManualFolders = topLevelManualFolderSummary,
                 AutomatedFolders = topLevelAutomatedFolderSummary,
+                FoldersWithTestKinds = foldersWithTestKinds,
                 Scenarios = new Totals
                 {
                     Total = scenarios.Count,
@@ -152,6 +156,23 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
                         Inconclusive = scenariosInFolder.LongCount(x => !x.Result.WasExecuted)
                     };
                 });
+        }
+        private static IEnumerable<FolderWithTestKinds> TopLevelFolderSummaryByTag2(
+            ILookup<string, IJsonFeatureElement> featuresByFolder,
+            ILookup<string, IJsonFeatureElement> automatedScenarios,
+            ILookup<string, IJsonFeatureElement> manualScenarios,
+            ILookup<string, IJsonFeatureElement> nonTestedScenarios)
+        {
+            return featuresByFolder
+                .Select(x => x.Key)
+                .Select(folder =>
+                    new FolderWithTestKinds
+                    {
+                        Folder = folder,
+                        Automated = automatedScenarios[folder].LongCount(),
+                        Manual = manualScenarios[folder].LongCount(),
+                        NotTested = nonTestedScenarios[folder].LongCount()
+                    });
         }
 
         private static ILookup<string, IJsonFeatureElement> RetrieveScenarioByFolder(List<JsonFeatureWithMetaInfo> filteredFeatures, Regex topLevelFolderName, HashSet<IJsonFeatureElement> interestingScenarios)
@@ -197,6 +218,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         public IEnumerable<FolderWithTotals> AutomatedFolders { get; set; }
         public Totals Scenarios { get; set; }
         public Totals Features { get; set; }
+        public IEnumerable<FolderWithTestKinds> FoldersWithTestKinds { get; set; }
     }
 
     public class FolderWithTotals
@@ -206,6 +228,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json
         public long Passing { get; set; }
         public long Failing { get; set; }
         public long Inconclusive { get; set; }
+    }
+
+    public class FolderWithTestKinds
+    {
+        public string Folder { get; set; }
+        public long Total => Automated + Manual + NotTested;
+        public long Automated { get; set; }
+        public long Manual { get; set; }
+        public long NotTested { get; set; }
     }
 
     public class TagWithTotals

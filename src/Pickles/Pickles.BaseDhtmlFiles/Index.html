@@ -269,6 +269,10 @@
                     <canvas id="byTagCanvas"></canvas>
                 </div>
                 <div>
+                    <h3 class="header">Test Kind Summary by Root Namespace</h3>
+                    <canvas id="byTestKindCanvas"></canvas>
+                </div>
+                <div>
                     <h3 class="header">@NotTested Scenario Summary by Root Namespace</h3>
                     <canvas id="notTestedByRootFolderCanvas"></canvas>
                 </div>
@@ -373,6 +377,7 @@
           self.overview.createOverallTotalsChart($('#overallCompleteCanvas').get(0).getContext('2d'));
           self.overview.createByTagChart($('#byTagCanvas').get(0).getContext('2d'));
           self.overview.createByRootFolderChart($('#byRootFolderCanvas').get(0).getContext('2d'));
+          self.overview.createByTestKindChart($('#byTestKindCanvas').get(0).getContext('2d'));
           self.overview.createNotTestedByRootFolderChart($('#notTestedByRootFolderCanvas').get(0).getContext('2d'));
           self.overview.createManualByRootFolderChart($('#manualByRootFolderCanvas').get(0).getContext('2d'));
           self.overview.createAutomatedByRootFolderChart($('#automatedByRootFolderCanvas').get(0).getContext('2d'));
