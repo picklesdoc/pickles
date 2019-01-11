@@ -64,6 +64,7 @@
       <Link>VersionInfo.cs</Link>
     </Compile>
     <Compile Include="IJsonFeatureElement.cs" />
+    <Compile Include="IJsonFeatureElementExtensions.cs" />
     <Compile Include="JsonComment.cs" />
     <Compile Include="JSONDocumentationBuilder.cs" />
     <Compile Include="JsonExample.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Mapper\TableToJsonTableMapper.cs" />
     <Compile Include="Mapper\TestResultToJsonTestResultMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SummaryGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj">
