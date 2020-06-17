@@ -41,9 +41,30 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
     {
         private readonly XDocument resultsDocument;
 
+        private readonly ILookup<string, XElement> featureScenarios;
+
+        private readonly IDictionary<Guid, TestResult> executionOutcomes;
+
         public VsTestSingleResults(XDocument resultsDocument)
         {
             this.resultsDocument = resultsDocument;
+
+            this.featureScenarios = this.resultsDocument.AllScenarios()
+                .Select(x => new
+                {
+                    Feature = x.Feature(),
+                    Scenario = x
+                })
+                .Where(x => x.Feature != null)
+                .ToLookup(
+                    x => x.Feature,
+                    x => x.Scenario,
+                    StringComparer.OrdinalIgnoreCase);
+
+            this.executionOutcomes = this.resultsDocument.AllExecutionResults()
+                .ToDictionary(
+                    x => x.ExecutionIdAttribute(),
+                    x => x.Outcome());
         }
 
         public override TestResult GetFeatureResult(Feature feature)
@@ -65,11 +86,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
         /// that belong to the specified feature.</returns>
         private IEnumerable<XElement> GetScenariosForFeature(Feature feature)
         {
-            var scenarios = from scenario in this.resultsDocument.AllScenarios()
-                            where scenario.BelongsToFeature(feature.Name)
-                            select scenario;
-
-            return scenarios;
+            return this.featureScenarios[SpecFlowNameMapping.Build(feature.Name)];
         }
 
         private TestResult GetExecutionResult(IEnumerable<Guid> featureExecutionIds)
@@ -80,12 +97,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
 
         private TestResult GetExecutionResult(Guid scenarioExecutionId)
         {
-            var query =
-                this.resultsDocument.AllExecutionResults()
-                    .Where(er => er.ExecutionIdAttribute() == scenarioExecutionId)
-                    .Select(sr => sr.Outcome());
-
-            var result = query.FirstOrDefault();
+            TestResult result;
+            this.executionOutcomes.TryGetValue(scenarioExecutionId, out result);
 
             return result;
         }

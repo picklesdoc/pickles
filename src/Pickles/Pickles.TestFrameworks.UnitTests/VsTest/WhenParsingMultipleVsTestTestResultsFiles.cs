@@ -33,7 +33,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests.VsTest
     public class WhenParsingMultipleVsTestTestResultsFiles : WhenParsingTestResultFiles<VsTestResults>
     {
         public WhenParsingMultipleVsTestTestResultsFiles()
-            : base("VsTest." + "results-example-vstest - Run 1 (failing).trx;" + "MsTest." + "results-example-mstest - Run 2 (passing).trx")
+            : base("VsTest." + "results-example-vstest - Run 1 (failing).trx;" + "VsTest." + "results-example-vstest - Run 2 (passing).trx")
         {
         }
 

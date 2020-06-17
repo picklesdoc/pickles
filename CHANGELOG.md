@@ -26,6 +26,8 @@ This document is formatted according to the principles of [Keep A CHANGELOG](htt
 
 ### Fixed
 
+- Improve performance of VS Test results file parsing ([586](https://github.com/picklesdoc/pickles/pull/586)) (by [@tlecomte](https://github.com/tlecomte))
+
 ### Security
 
 ## [2.20.1] - 2018-10-17

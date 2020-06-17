@@ -33,22 +33,26 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
 
         private static readonly XNamespace Ns = @"http://microsoft.com/schemas/VisualStudio/TeamTest/2010";
 
-        internal static bool BelongsToFeature(this XElement parentElement, string featureTitle)
+        internal static string Feature(this XElement parentElement)
         {
             //// <UnitTest>
             ////     <TestMethod className="  featureName  " />
             //// </UnitTest>
 
-            var propertiesElement = parentElement.Element(Ns + "TestMethod");
+            var className = parentElement
+                .Element(Ns + "TestMethod")
+                ?.Attributes("className")
+                ?.FirstOrDefault()
+                ?.Value;
 
-            if (propertiesElement == null)
+            if (className == null || !className.EndsWith("Feature", StringComparison.OrdinalIgnoreCase))
             {
-                return false;
+                return null;
             }
 
-            var attributes = propertiesElement.Attributes("className");
-            bool b = attributes.Any(a => a.Value.ToUpperInvariant().Contains(TransformName(featureTitle) + "FEATURE"));
-            return b;
+            var feature = className.Substring(0, className.LastIndexOf("Feature", StringComparison.OrdinalIgnoreCase)).Split('.').Last();
+
+            return feature;
         }
 
         internal static string Name(this XElement scenario)
