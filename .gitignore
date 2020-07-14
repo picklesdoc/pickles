@@ -63,7 +63,7 @@ reports/
 merged/
 test/
 Documentation-*/
-Output/
+#Output/
 
 #nCrunch files
 *.crunchproject.local.xml

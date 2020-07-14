@@ -14,24 +14,16 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
-## Unreleased
+## [2.21.0] - 2020-07-14
 
 ### Added
 
 - First Draft of the MarkDown output format. Expect some rough edges here. ([237](https://github.com/picklesdoc/pickles/issues/237)) (by [@darrencomeau](https://github.com/darrencomeau))
 
-### Changed
-
-### Deprecated
-
-### Removed
-
 ### Fixed
 
 - Improve performance of VS Test results file parsing ([586](https://github.com/picklesdoc/pickles/pull/586)) (by [@tlecomte](https://github.com/tlecomte))
 - Fix matching of scenario outline with duplicate values with VsTest ([542](https://github.com/picklesdoc/pickles/pull/542)) (by [@rik-smeets](https://github.com/rik-smeets) and [@jvandertil](https://github.com/jvandertil))
-
-### Security
 
 ## [2.20.1] - 2018-10-17
 

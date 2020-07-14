@@ -2696,6 +2696,134 @@
       }
     },
     {
+      "RelativeFolder": "Features\\15Pickles\\NotTestedAutomatedManualTags.feature",
+      "Feature": {
+        "Name": "Kinds of verification",
+        "Description": "In order to increase stakeholder engagement with pickled specs\r\nAs a SpecFlow evangelist\r\nI want to make clear how many scenarios are automated, manually tested and not tested\r\nSo that the stakeholders have a better overview of progress",
+        "FeatureElements": [
+          {
+            "Name": "Verified automatically",
+            "Slug": "verified-automatically",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a feature that is verified automatically",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "I run pickles",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "it appears in the @automated summary",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@automated"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          },
+          {
+            "Name": "Verified manually",
+            "Slug": "verified-manually",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a feature that is verified manually",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "I run pickles",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "it appears in the @manual summary",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@manual"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          },
+          {
+            "Name": "Verified automatically",
+            "Slug": "verified-automatically",
+            "Description": "",
+            "Steps": [
+              {
+                "Keyword": "Given",
+                "NativeKeyword": "Given ",
+                "Name": "a feature that is not verified",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "When",
+                "NativeKeyword": "When ",
+                "Name": "I run pickles",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              },
+              {
+                "Keyword": "Then",
+                "NativeKeyword": "Then ",
+                "Name": "it appears in the @notTested summary",
+                "StepComments": [],
+                "AfterLastStepComments": []
+              }
+            ],
+            "Tags": [
+              "@notTested_waitingForAutomation"
+            ],
+            "Result": {
+              "WasExecuted": false,
+              "WasSuccessful": false,
+              "WasProvided": false
+            }
+          }
+        ],
+        "Result": {
+          "WasExecuted": false,
+          "WasSuccessful": false,
+          "WasProvided": false
+        },
+        "Tags": []
+      },
+      "Result": {
+        "WasExecuted": false,
+        "WasSuccessful": false,
+        "WasProvided": false
+      }
+    },
+    {
       "RelativeFolder": "Features\\Arithmetic.feature",
       "Feature": {
         "Name": "Arithmetic",
@@ -3178,6 +3306,27 @@
         "Inconclusive": 1
       },
       {
+        "Tag": "@automated",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Tag": "@manual",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
+        "Tag": "@notTested_waitingForAutomation",
+        "Total": 1,
+        "Passing": 0,
+        "Failing": 0,
+        "Inconclusive": 1
+      },
+      {
         "Tag": "@arithmetic",
         "Total": 4,
         "Passing": 0,
@@ -3216,37 +3365,46 @@
     "Folders": [
       {
         "Folder": "Features",
-        "Total": 54,
+        "Total": 57,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 54
+        "Inconclusive": 57
       }
     ],
     "NotTestedFolders": [
       {
         "Folder": "Features",
-        "Total": 0,
+        "Total": 1,
         "Passing": 0,
         "Failing": 0,
-        "Inconclusive": 0
+        "Inconclusive": 1
       }
     ],
     "Scenarios": {
-      "Total": 54,
+      "Total": 57,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 54
+      "Inconclusive": 57
     },
     "Features": {
-      "Total": 23,
+      "Total": 24,
       "Passing": 0,
       "Failing": 0,
-      "Inconclusive": 23
-    }
+      "Inconclusive": 24
+    },
+    "FoldersWithTestKinds": [
+      {
+        "Folder": "Features",
+        "Total": 57,
+        "Automated": 55,
+        "Manual": 1,
+        "NotTested": 1
+      }
+    ]
   },
   "Configuration": {
     "SutName": "Pickles",
-    "SutVersion": "2.20.1",
-    "GeneratedOn": "18 Oktober 2018 19:07:15"
+    "SutVersion": "2.21.0",
+    "GeneratedOn": "14 Juli 2020 12:05:39"
   }
 }
