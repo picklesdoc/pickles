@@ -18,6 +18,8 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
+
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 {
     class TitleBlock : Block
@@ -46,7 +48,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks
 
         private string GenerationInfo()
         {
-            var generatedDateTime = TestableDateTime.Instance.Now;
+            var generatedDateTime = DateTime.Now;
 
             return string.Format(Localization.GenerationDateTime, generatedDateTime);
         }

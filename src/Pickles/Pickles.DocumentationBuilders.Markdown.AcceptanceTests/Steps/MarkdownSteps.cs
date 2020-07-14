@@ -50,21 +50,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             var configuration = this.Configuration;
             var markdownDocumentationBuilder = this.Container.Resolve<MarkdownDocumentationBuilder>();
 
-            DateTime executionTime;
-
-            if (ScenarioContext.Current.ContainsKey("DateTime.Now"))
-            {
-                executionTime = (DateTime)ScenarioContext.Current["DateTime.Now"];
-            }
-            else
-            {
-                executionTime = DateTime.Now;
-            }
-
-            using (var DateTimeContext = new DisposableTestDateTime(executionTime))
-            {
-                markdownDocumentationBuilder.Build(featureTree);
-            }
+            markdownDocumentationBuilder.Build(featureTree);
         }
 
         [Then(@"the Markdown output has the line")]

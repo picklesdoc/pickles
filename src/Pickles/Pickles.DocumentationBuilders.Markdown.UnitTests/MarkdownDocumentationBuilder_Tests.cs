@@ -27,6 +27,7 @@ using System;
 using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using System.Reflection;
+using NFluent;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
@@ -98,7 +99,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             {
                 "# Features",
                 "",
-                "Generated on: 25 October 2018 at 18:53:00"
+                "Generated on:"
             };
 
             var container = BuildContainer();
@@ -107,14 +108,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
-            var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
-            using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
+            markdownDocumentationBuilder.Build(null);
+
+            var actualFile = fileSystem.File.ReadAllLines(defaultOutputFile);
+
+            for (int i = 0; i < expectedFile.Length; ++i)
             {
-                markdownDocumentationBuilder.Build(null);
-
-                var actualfile = fileSystem.File.ReadAllLines(defaultOutputFile);
-
-                Assert.AreEqual(expectedFile, actualfile);
+                Check.That(actualFile[i]).Contains(expectedFile[i]);
             }
         }
 
@@ -127,7 +127,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             {
                 "# Features",
                 "",
-                "Generated on: 25 October 2018 at 18:53:00",
+                "Generated on:",
                 "",
                 "### Simple Feature",
                 ""
@@ -147,14 +147,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var featureTree = new Tree(new FolderNode(location, relPath));
             featureTree.Add(newNode);
 
-            var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
-            using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
+            markdownDocumentationBuilder.Build(featureTree);
+
+            var actualFile = fileSystem.File.ReadAllLines(defaultOutputFile);
+
+            for (int i = 0; i < expectedFile.Length; ++i)
             {
-                markdownDocumentationBuilder.Build(featureTree);
-
-                var actualfile = fileSystem.File.ReadAllLines(defaultOutputFile);
-
-                Assert.AreEqual(expectedFile, actualfile);
+                Check.That(actualFile[i]).Contains(expectedFile[i]);
             }
         }
 

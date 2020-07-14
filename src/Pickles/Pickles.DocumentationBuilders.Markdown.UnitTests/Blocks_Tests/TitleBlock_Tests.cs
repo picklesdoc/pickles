@@ -20,7 +20,7 @@
 
 using NUnit.Framework;
 using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
-using System;
+using NFluent;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 {
@@ -36,29 +36,19 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var titleBlock = new TitleBlock(mockStyle);
             string actualString = titleBlock.ToString();
 
-            Assert.IsTrue(
-                actualString.Contains(expectedString),
-                string.Format("String \"{0}\" not found in \"{1}\"", expectedString, actualString)
-                );
+            Check.That(actualString).Contains(expectedString);
         }
 
         [Test]
         public void A_New_TitleBlock_Has_Generation_Line()
         {
-            var expectedString = "Generated on: 25 October 2018 at 18:53:00";
-            var expectedDateTime = new DateTime(2018, 10, 25, 18, 53, 00, DateTimeKind.Local);
-            using (var DateTimeContext = new DisposableTestDateTime(expectedDateTime))
-            {
-                var mockStyle = new MockStylist();
+            var expectedString = "Generated on: ";
+            var mockStyle = new MockStylist();
 
-                var titleBlock = new TitleBlock(mockStyle);
-                string actualString = titleBlock.ToString();
+            var titleBlock = new TitleBlock(mockStyle);
+            string actualString = titleBlock.ToString();
 
-                Assert.IsTrue(
-                    actualString.Contains(expectedString),
-                    string.Format("String \"{0}\" not found in \"{1}\"", expectedString, actualString)
-                    );
-            }
+            Check.That(actualString).Contains(expectedString);
         }
     }
 }

@@ -112,11 +112,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>File Location.feature</DependentUpon>
     </Compile>
-    <Compile Include="Features\Generated Info.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Generated Info.feature</DependentUpon>
-    </Compile>
     <Compile Include="Features\Scenario Heading.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,7 +123,6 @@
       <DependentUpon>Title.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\DateTimeSteps.cs" />
     <Compile Include="Steps\GherkinTreeSteps.cs" />
     <Compile Include="Steps\MarkdownSteps.cs" />
   </ItemGroup>
@@ -171,10 +165,6 @@
     <None Include="Features\File Location.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>File Location.feature.cs</LastGenOutput>
-    </None>
-    <None Include="Features\Generated Info.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Generated Info.feature.cs</LastGenOutput>
     </None>
     <None Include="Features\Scenario Heading.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

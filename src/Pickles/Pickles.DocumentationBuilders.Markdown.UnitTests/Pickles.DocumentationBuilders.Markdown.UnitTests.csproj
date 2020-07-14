@@ -37,6 +37,9 @@
       <HintPath>..\packages\Autofac.4.8.0\lib\net45\Autofac.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NFluent, Version=2.2.0.125, Culture=neutral, PublicKeyToken=18828b37b84b1437, processorArchitecture=MSIL">
+      <HintPath>..\packages\NFluent.2.2.0\lib\net45\NFluent.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework, Version=3.10.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
       <HintPath>..\packages\NUnit.3.10.1\lib\net45\nunit.framework.dll</HintPath>
     </Reference>
@@ -63,7 +66,6 @@
     <Compile Include="Blocks_Tests\FeatureBlock_Tests.cs" />
     <Compile Include="Lines_Tests.cs" />
     <Compile Include="MockBlock.cs" />
-    <Compile Include="TestableDateTime_Tests.cs" />
     <Compile Include="Localization_Tests.cs" />
     <Compile Include="MockStylist.cs" />
     <Compile Include="Stylist_Tests.cs" />
