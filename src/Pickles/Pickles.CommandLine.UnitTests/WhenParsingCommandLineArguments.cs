@@ -54,7 +54,15 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             "      --df, --documentation-format=VALUE" + "{0}" +
             "                             the format of the output documentation" + "{0}" +
             "  -v, --version              " + "{0}" +
-            "  -h, -?, --help",
+            "  -h, -?, --help             " + "{0}" +
+            "      --exp, --include-experimental-features" + "{0}" +
+            "                             whether to include experimental features" + "{0}" +
+            "      --cmt, --enableComments=VALUE" + "{0}" +
+            "                             whether to enable comments in the output" + "{0}" +
+            "      --et, --excludeTags=VALUE" + "{0}" +
+            "                             exclude scenarios that match this tag" + "{0}" +
+            "      --ht, --hideTags=VALUE Technical tags that shouldn't be displayed " + "{0}" +
+            "                               (separated by ;)" + "{0}",
             Environment.NewLine);
 
         private static readonly string ExpectedVersionString = string.Format(@"Pickles version {0}", Assembly.GetExecutingAssembly().GetName().Version);
@@ -442,13 +450,26 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
 
             var configuration = new Configuration();
             var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
-            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+            commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
 
             Check.That(configuration.Language).IsEqualTo("en");
         }
 
         [Test]
-        public void ThenCanParseExcludeTagsSuccessfully()
+        public void ThenCanParseShortExcludeTagsSuccessfully()
+        {
+            var args = new[] { @"-et=exclude-tag" };
+
+            IConfiguration configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.ExcludeTags).IsEqualTo("exclude-tag");
+        }
+
+        [Test]
+        public void ThenCanParseLongExcludeTagsSuccessfully()
         {
             var args = new[] { @"-excludeTags=exclude-tag" };
 
@@ -459,6 +480,33 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.ExcludeTags).IsEqualTo("exclude-tag");
         }
+
+        [Test]
+        public void ThenCanParseShortHideTagsSuccessfully()
+        {
+            var args = new[] { @"-ht=hide-tag" };
+
+            IConfiguration configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.HideTags).IsEqualTo("hide-tag");
+        }
+
+        [Test]
+        public void ThenCanParseLongHideTagsSuccessfully()
+        {
+            var args = new[] { @"-hideTags=hide-tag" };
+
+            IConfiguration configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.HideTags).IsEqualTo("hide-tag");
+        }
+
 
         private static readonly object[] TestResultsFormatCases =
         {
