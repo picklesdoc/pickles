@@ -68,7 +68,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                                 .Elements("property")
                                 .Any(
                                     p =>
-                                    IsDescriptionAttribute(p) && p.Attribute("value").Value == scenario.Name));
+                                    IsDescriptionAttribute(p) && p.Attribute("value").Value.Contains(scenario.Name)));
             }
 
             return scenarioElement;
@@ -90,7 +90,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
                                 .Any(
                                     p =>
                                     IsDescriptionAttribute(p)
-                                    && p.Attribute("value").Value == scenarioOutline.Name));
+                                    && p.Attribute("value").Value.Contains(scenarioOutline.Name)));
             }
 
             return scenarioOutlineElement;
@@ -108,15 +108,8 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
             if (featureElement != null)
             {
                 var parameterizedTestElement =
-                    featureElement.Descendants("test-suite")
-                        .FirstOrDefault(
-                            ts =>
-                            ts.Elements("properties")
-                                .Elements("property")
-                                .Any(
-                                    p =>
-                                    IsDescriptionAttribute(p)
-                                    && p.Attribute("value").Value == scenarioOutline.Name));
+                    featureElement
+                    .Descendants("test-suite");
 
                 if (parameterizedTestElement != null)
                 {
@@ -131,10 +124,10 @@ namespace PicklesDoc.Pickles.TestFrameworks.NUnit.NUnit3
 
         private static bool IsDescriptionAttribute(XElement p)
         {
-            return (
-                p.Attribute("name").Value == "Description" ||
-                p.Attribute("name").Value == "_DESCRIPTION"
-                );
+            bool bExists = p.Attribute("name").Value == "Description" ||
+                p.Attribute("name").Value == "_DESCRIPTION";
+
+            return bExists;
         }
     }
 }
