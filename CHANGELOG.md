@@ -14,6 +14,11 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.3.1] - 2021-03-11
+
+### Fixed
+- Fixing a packaging and deployment error
+
 ## [2.3.0] - 2021-03-11
 
 ### Updated
