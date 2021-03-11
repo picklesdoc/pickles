@@ -1,5 +1,5 @@
 @echo off
-set "picklesVersion=2.21.1"
+set "picklesVersion=2.3.1"
 
 cls
 
@@ -16,7 +16,6 @@ if errorlevel 1 goto handleerror1orhigher
 
 call InstallPackages.cmd
 
-rem FOR %%A IN (testRunnerMsBuild ) DO (
 FOR %%A IN (testRunnerCmd testRunnerMsBuild testRunnerPowerShell) DO (
    call %%A.cmd %picklesVersion%
   if errorlevel 1 goto handleerror1orhigher

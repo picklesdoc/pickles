@@ -14,6 +14,11 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [2.3.0] - 2021-03-11
+
+### Updated
+- Updated all projects to .NET Framework 4.8. This will help in preparing for the dotnet core update.
+
 ## [2.21.1] - 2021-02-25
 
 ### Fixed
