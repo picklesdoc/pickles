@@ -21,6 +21,9 @@ jobs:
 
         - name: Restore NuGet Packages
           run: nuget restore src\pickles\pickles.sln
+        
+        - name: Run build
+          run: build.bat
 
         #- name: Build and Publish Web App
         #  run: C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\msbuild SimpleFrameworkApp.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
