@@ -1,4 +1,4 @@
-﻿//  --------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="StepDefinitions.cs" company="PicklesDoc">
 //  Copyright 2017 Dmitry Grekov
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -44,19 +44,19 @@ namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
         [Given("I have this feature description")]
         public void IHaveThisFeatureDescription(string featureDescription)
         {
-            var configuration = this.Configuration;
+            FeatureParser parser = new FeatureParser(Configuration);
             FeatureParser parser = new FeatureParser(configuration);
 
             var feature = parser.Parse(new StringReader(featureDescription));
 
-            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\"), string.Empty, feature));
+            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"output"), string.Empty, feature));
         }
 
         [When(@"I generate the documentation")]
         public void WhenIGenerateTheJsonDocumentation()
         {
             var configuration = this.Configuration;
-            configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\");
+            configuration.OutputFolder = this.FileSystem.GetOrCreateDirectory("output");
             var jsonDocumentationBuilder = this.Container.Resolve<CucumberDocumentationBuilder>();
 
             jsonDocumentationBuilder.Build(this.nodes);
@@ -65,7 +65,7 @@ namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
         [Then("the JSON file should contain")]
         public void ThenTheResultShouldBe(string expectedResult)
         {
-            var actualResult = this.FileSystem.File.ReadAllText(@"c:\output\cucumberResult.json");
+            var actualResult = this.FileSystem.File.ReadAllText(FileSystem.Path.Combine("output","cucumberResult.json"));
 
             //standardize newlines across various environments
             actualResult = actualResult.Replace("\r\n", "\n");

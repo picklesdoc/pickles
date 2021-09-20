@@ -46,7 +46,7 @@ Scenario: A simple feature
             "name": "I have entered 50 into the calculator",
             "line": 8,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           },
@@ -55,7 +55,7 @@ Scenario: A simple feature
             "name": "I have entered 70 into the calculator",
             "line": 9,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           },
@@ -64,7 +64,7 @@ Scenario: A simple feature
             "name": "I press C",
             "line": 10,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           },
@@ -73,7 +73,7 @@ Scenario: A simple feature
             "name": "the screen should be empty",
             "line": 11,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           }
@@ -140,7 +140,7 @@ Scenario: A feature with a table
             "name": "a feature with a large table of data:",
             "line": 8,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           },
@@ -149,7 +149,7 @@ Scenario: A feature with a table
             "name": "I click on the table heading",
             "line": 32,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           },
@@ -158,8 +158,9 @@ Scenario: A feature with a table
             "name": "the table body should collapse",
             "line": 33,
             "result": {
-              "status": "inconclusive",
+              "status": "Undefined",
               "duration": 1
             }
           }
 """
+

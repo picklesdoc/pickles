@@ -1,4 +1,4 @@
-﻿//  --------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="CucumberDocumentationBuilder.cs" company="PicklesDoc">
 //  Copyright 2017 Dmitry Grekov
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -59,50 +59,53 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
                 Log.Info("Writing Cucumber to {0}", this.configuration.OutputFolder.FullName);
             }
 
-            List<Feature> featuresToFormat = new List<Feature>();
+            List<FeatureNode> featuresToFormat = new List<FeatureNode>();
 
             foreach (var node in features)
             {
                 var featureTreeNode = node as FeatureNode;
                 if (featureTreeNode != null)
                 {
-                    featuresToFormat.Add(featureTreeNode.Feature);
+                    featuresToFormat.Add(featureTreeNode);
                 }
             }
 
             CreateFile(OutputFilePath, GenerateJson(featuresToFormat));
         }
 
-        private string GenerateJson(List<Feature> features)
+        private string GenerateJson(List<FeatureNode> features)
         {
-            var toOutPut = features.Select(f => new
+            var toOutPut = features.Select(n =>
             {
-                keyword = "Feature",
-                name = f.Name,
-                tags = f.Tags.Select(t => new { name = t }),
-                line = 1,
-                elements = f.FeatureElements.Select(fe =>
-                    new
-                    {
-                        keyword = fe is Scenario ? "Scenario" : "Scenario Outline",
-                        name = fe.Name,
-                        line = fe.Location.Line,
-                        type = fe is Scenario ? "scenario" : "scenario_outline",
-                        tags = fe.Tags.Select(t => new { name = t }),
-                        steps = fe.Steps.Select(s => new
+                var f = n.Feature;
+                return new
+                {
+                    keyword = "Feature",
+                    name = f.Name,
+                    tags = f.Tags.Select(t => new { name = t }),
+                    line = 1,
+                    elements = f.FeatureElements.Select(fe =>
+                        new
                         {
-                            keyword = s.Keyword,
-                            name = s.Name,
-                            line = s.Location.Line,
-                            result = new
+                            keyword = fe is Scenario ? "Scenario" : "Scenario Outline",
+                            name = fe.Name,
+                            line = fe.Location.Line,
+                            type = fe is Scenario ? "scenario" : "scenario_outline",
+                            tags = fe.Tags.Select(t => new { name = t }),
+                            steps = fe.Steps.Select(s => new
                             {
-                                status = DetermineStatus(fe),
-                                duration = 1
-                            }
-                        })
-                    }
-                      ),
-
+                                keyword = s.Keyword,
+                                name = s.Name,
+                                line = s.Location.Line,
+                                result = new
+                                {
+                                    status = DetermineStatus(fe),
+                                    duration = 1
+                                }
+                            })
+                        }
+                    ),
+                };
             });
 
             JsonSerializerSettings settings = new JsonSerializerSettings
@@ -118,13 +121,26 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
         private static string DetermineStatus(IFeatureElement fe)
         {
             var testResult = fe.Result;
-
-            if (testResult == TestResult.NotProvided)
+            CucumberTestResults cucumberTestResult;
+            switch (testResult)
             {
-                testResult = TestResult.Inconclusive;
+                case TestResult.Inconclusive:
+                    cucumberTestResult = CucumberTestResults.Ambiguous;
+                    break;
+                case TestResult.Failed:
+                    cucumberTestResult = CucumberTestResults.Failed;
+                    break;
+                case TestResult.Passed:
+                    cucumberTestResult = CucumberTestResults.Passed;
+                    break;
+                case TestResult.NotProvided:
+                    cucumberTestResult = CucumberTestResults.Undefined;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException("Unknown test result "+testResult);
             }
 
-            return testResult.ToString().ToLowerInvariant();
+            return Enum.GetName(typeof(CucumberTestResults),cucumberTestResult);
         }
 
         private void CreateFile(string outputFolderName, string jsonToWrite)
