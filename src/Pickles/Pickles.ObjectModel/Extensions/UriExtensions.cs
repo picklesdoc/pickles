@@ -19,64 +19,84 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using System.IO.Abstractions;
 
 namespace PicklesDoc.Pickles.Extensions
 {
     public static class UriExtensions
     {
-        public static Uri ToUri(this DirectoryInfoBase instance)
+        private const string _fileSchema = "file://";
+        private static readonly string _directorySeparator = Path.DirectorySeparatorChar.ToString();
+
+        public static Uri ToUri(this IDirectoryInfo instance)
         {
-            string fullName = instance.FullName;
-
-            if (!instance.FullName.EndsWith(@"\"))
-            {
-                fullName = fullName + @"\";
-            }
-
-            return fullName.ToFolderUri();
+            return instance.FullName.ToFolderUri();
         }
 
-        public static Uri ToFileUriCombined(this DirectoryInfoBase instance, string file, IFileSystem fileSystem)
+        public static Uri ToFileUriCombined(this IDirectoryInfo instance, string file, IFileSystem fileSystem)
         {
             string path = fileSystem.Path.Combine(instance.FullName, file);
 
             return path.ToFileUri();
         }
 
-        public static Uri ToUri(this FileSystemInfoBase instance)
+        public static Uri GetFileUri(this IDirectoryInfo instance, string file)
         {
-            var di = instance as DirectoryInfoBase;
+            return instance.FileSystem.Path.Combine(instance.FullName, file).ToFileUri();
+        }
+
+        public static Uri ToUri(this IFileSystemInfo instance)
+        {
+            var di = instance as IDirectoryInfo;
 
             if (di != null)
             {
                 return ToUri(di);
             }
 
-            return ToUri((FileInfoBase)instance);
+            return ToFileUri(instance.FullName);
         }
 
-        public static Uri ToUri(this FileInfoBase instance)
+        public static Uri ToUri(this IFileInfo instance)
         {
             return ToFileUri(instance.FullName);
         }
 
-        public static Uri ToFileUri(this string instance)
+        public static Uri ToFileUri(this string filePath)
         {
-            return new Uri(instance);
+            filePath = AddFileSchema(filePath);
+            return new Uri(filePath);
         }
 
-        public static Uri ToFolderUri(this string instance)
+        private static string AddFileSchema(string filePath)
         {
-            if (!instance.EndsWith(@"\"))
-            {
-                return new Uri(instance + @"\");
-            }
-
-            return new Uri(instance);
+            if (!filePath.StartsWith(_fileSchema))
+                filePath = _fileSchema + filePath;
+            return filePath;
         }
 
-        public static string GetUriForTargetRelativeToMe(this Uri me, FileSystemInfoBase target, string newExtension)
+        public static Uri ToFolderUri(this string folderPath)
+        {
+            folderPath = AddFileSchema(folderPath);
+
+            //Win-specific folder path
+            if (folderPath.EndsWith("\\"))
+                return new Uri(folderPath);
+
+            if (!folderPath.EndsWith(_directorySeparator))
+                folderPath = folderPath + _directorySeparator;
+
+            return new Uri(folderPath);
+        }
+
+        public static Uri ToFolderUri(this Uri uri)
+        {
+            var uriString = uri.IsAbsoluteUri ? uri.AbsoluteUri : uri.ToString();
+            return uriString.EndsWith("/") ? uri : new Uri(uriString + "/",UriKind.RelativeOrAbsolute);
+        }
+
+        public static string GetUriForTargetRelativeToMe(this Uri me, IFileSystemInfo target, string newExtension)
         {
             return target.FullName != me.LocalPath
                 ? me.MakeRelativeUri(target.ToUri()).ToString().Replace(target.Extension, newExtension)

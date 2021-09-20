@@ -100,20 +100,20 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void ThenSavesCssFilesToCorrectLocation()
         {
-            FileSystem.AddDirectory(@"c:\output\");
+            FileSystem.AddDirectory("output");
             var htmlResourceWriter = new HtmlResourceWriter(FileSystem);
 
-            htmlResourceWriter.WriteTo(@"c:\output\");
+            htmlResourceWriter.WriteTo("output");
 
             var filesOnFileSystem = FileSystem.AllFiles.AsEnumerable<string>().ToArray();
 
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\master.css");
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\reset.css");
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\global.css");
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\global.css");
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\structure.css");
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\print.css");
-            Check.That(filesOnFileSystem).Contains(@"c:\output\css\font-awesome.css");
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","master.css")));
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","reset.css")));
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","global.css")));
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","global.css")));
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","structure.css")));
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","print.css")));
+            Check.That(filesOnFileSystem).Contains(FileSystem.Path.GetFullPath(FileSystem.Path.Combine("output","css","font-awesome.css")));
         }
     }
 }

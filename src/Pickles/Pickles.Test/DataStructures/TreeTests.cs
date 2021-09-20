@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 
@@ -34,8 +35,12 @@ namespace PicklesDoc.Pickles.Test.DataStructures
     [TestFixture]
     public class TreeTests : BaseFixture
     {
-        private const string RootPath = FileSystemPrefix + @"OrderingTests";
+        private string RootPath {get;}
 
+        public TreeTests()
+        {
+            RootPath =FileSystem.Path.Combine(FileSystemPrefix,"OrderingTests");
+        }
         [Test]
         public void ShouldIterateInRightOrder()
         {
@@ -102,7 +107,7 @@ namespace PicklesDoc.Pickles.Test.DataStructures
 
             public string Name { get; }
 
-            public FileSystemInfoBase OriginalLocation { get; }
+            public IFileSystemInfo OriginalLocation { get; }
 
             public Uri OriginalLocationUrl { get; }
 

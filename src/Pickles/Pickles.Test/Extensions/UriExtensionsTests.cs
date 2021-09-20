@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using NFluent;
 using NUnit.Framework;
 using PicklesDoc.Pickles.Extensions;
@@ -31,19 +32,19 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToFileUriCombined_ValidIntput_ValidOutput()
         {
-            var info = FileSystem.DirectoryInfo.FromDirectoryName(@"c:\temp");
+            var info = FileSystem.DirectoryInfo.FromDirectoryName("temp");
 
             Uri uri = info.ToFileUriCombined("test.txt", FileSystem);
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/test.txt");
+            Check.That(uri).IsEqualTo(new Uri("file://" + FileSystem.Path.Combine(info.FullName,"test.txt")));
         }
 
         [Test]
         public void ToFileUriString_WithoutTrailingSlash_ValidOutputWithTrailingSlash()
         {
-            Uri uri = @"c:\temp\test.txt".ToFileUri();
+            Uri uri =FileSystem.Path.Combine("temp","test.txt").ToFileUri();
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/test.txt");
+            Check.That(uri).IsEqualTo(new Uri("file://" + FileSystem.Path.Combine("temp","test.txt")));
         }
 
         [Test]
@@ -65,51 +66,51 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToUriDirectoryInfo_WithTrailingSlash_ProducesUriWithTrailingSlash()
         {
-            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName(@"c:\temp\");
+            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName("temp"+Path.DirectorySeparatorChar);
 
             Uri uri = directoryInfo.ToUri();
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/");
+            Check.That(uri).IsEqualTo(new Uri("file://"+directoryInfo.FullName+"/"));
         }
 
         [Test]
         public void ToUriDirectoryInfo_WithoutTrailingSlash_ProducesUriWithTrailingSlash()
         {
-            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName(@"c:\temp");
+            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName("temp");
 
             Uri uri = directoryInfo.ToUri();
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/");
+            Check.That(uri).IsEqualTo(new Uri("file://"+directoryInfo.FullName+"/"));
         }
 
         [Test]
         public void ToUriFileInfo_NormalFilename_ProducesUri()
         {
-            var fileInfo = FileSystem.FileInfo.FromFileName(@"c:\temp\test.txt");
+            var fileInfo = FileSystem.FileInfo.FromFileName(FileSystem.Path.Combine("temp","test.txt"));
 
             Uri uri = fileInfo.ToUri();
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/test.txt");
+            Check.That(uri).IsEqualTo(new Uri("file://"+fileInfo.FullName));
         }
 
         [Test]
         public void ToUriFileSystemInfo_DirectoryWithTrailingSlash_ProducesUriWithTrailingSlash()
         {
-            var fsi = FileSystem.DirectoryInfo.FromDirectoryName(@"c:\temp\");
+            var fsi = FileSystem.DirectoryInfo.FromDirectoryName("temp");
 
             Uri uri = fsi.ToUri();
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/");
+            Check.That(uri).IsEqualTo(new Uri("file://"+fsi.FullName+"/"));
         }
 
         [Test]
         public void ToUriFileSystemInfo_FileInfo_ProducesUri()
         {
-            var fsi = FileSystem.FileInfo.FromFileName(@"c:\temp\test.txt");
+            var fsi = FileSystem.FileInfo.FromFileName(FileSystem.Path.Combine("temp","test.txt"));
 
             Uri uri = fsi.ToUri();
 
-            Check.That(uri.ToString()).IsEqualTo("file:///c:/temp/test.txt");
+            Check.That(uri).IsEqualTo(new Uri("file://"+fsi.FullName));
         }
     }
 }

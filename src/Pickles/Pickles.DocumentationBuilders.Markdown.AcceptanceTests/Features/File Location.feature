@@ -6,8 +6,8 @@
 
 Scenario: Output is written to specified location
 
-    Given I specify the output folder as 'C:\testing'
-    
+    Given I specify the output folder as 'testing'
+
     When I generate Markdown output
-    
-    Then the file 'C:\testing\features.md' exists
+
+    Then the file 'features.md' exists in folder 'testing'

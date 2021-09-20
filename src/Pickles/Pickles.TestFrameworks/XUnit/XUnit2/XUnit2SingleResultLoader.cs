@@ -29,7 +29,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.XUnit.XUnit2
     {
         private readonly XmlDeserializer<assemblies> xmlDeserializer = new XmlDeserializer<assemblies>();
 
-        public SingleTestRunBase Load(FileInfoBase fileInfo)
+        public SingleTestRunBase Load(IFileInfo fileInfo)
         {
             return new XUnit2SingleResults(this.xmlDeserializer.Load(fileInfo));
         }

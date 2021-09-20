@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
 {
     public class ImageNode : INode
     {
-        public ImageNode(FileSystemInfoBase location, string relativePathFromRoot)
+        public ImageNode(IFileSystemInfo location, string relativePathFromRoot)
         {
             this.OriginalLocation = location;
             this.OriginalLocationUrl = location.ToUri();
@@ -44,7 +44,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             get { return this.OriginalLocation.Name; }
         }
 
-        public FileSystemInfoBase OriginalLocation { get; }
+        public IFileSystemInfo OriginalLocation { get; }
 
         public Uri OriginalLocationUrl { get; }
 

@@ -19,9 +19,11 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using System.IO.Abstractions.TestingHelpers;
 using NFluent;
 using NUnit.Framework;
+using PicklesDoc.Pickles.Extensions;
 
 namespace PicklesDoc.Pickles.Test
 {
@@ -31,13 +33,14 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void Parse_InvalidFeatureFile_ThrowsFeatureParseExceptionWithFilename()
         {
-            FileSystem.AddFile(@"c:\temp\featurefile.feature", new MockFileData("Invalid feature file"));
+            var filePath =FileSystem.Path.Combine("temp","featurefile.feature");
+            FileSystem.AddFile(filePath, new MockFileData("Invalid feature file"));
+            var fileInfo=FileSystem.FileInfo.FromFileName(filePath);
             var parser = new FileSystemBasedFeatureParser(new FeatureParser(Configuration), FileSystem);
 
-            Check.ThatCode(() => parser.Parse(@"c:\temp\featurefile.feature")).Throws<FeatureParseException>()
-                .WithMessage(@"There was an error parsing the feature file here: c:\temp\featurefile.feature" +
+            Check.ThatCode(() => parser.Parse(filePath)).Throws<FeatureParseException>()
+                .WithMessage(@"There was an error parsing the feature file here: "+ fileInfo.FullName +
                              Environment.NewLine + @"Errormessage was: 'Unable to parse feature'");
         }
-
     }
 }

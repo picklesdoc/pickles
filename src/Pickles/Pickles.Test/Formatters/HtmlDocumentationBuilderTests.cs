@@ -19,7 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-
+using System.IO;
 using Autofac;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DirectoryCrawler;
@@ -30,8 +30,12 @@ namespace PicklesDoc.Pickles.Test.Formatters
     [TestFixture]
     public class HtmlDocumentationBuilderTests : BaseFixture
     {
-        private const string RootPath = FileSystemPrefix + @"EmptyFolderTests";
+        private string RootPath { get; }
 
+        public HtmlDocumentationBuilderTests()
+        {
+             RootPath =FileSystem.Path.Combine(FileSystemPrefix, "EmptyFolderTests");
+        }
         [Test]
         public void ShouldNotBlowUpWHenParsingEmptyFolder()
         {

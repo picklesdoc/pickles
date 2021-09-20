@@ -44,12 +44,12 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.fileSystem = fileSystem;
         }
 
-        public Tree Crawl(DirectoryInfoBase directory, ParsingReport parsingReport)
+        public Tree Crawl(IDirectoryInfo directory, ParsingReport parsingReport)
         {
             return this.Crawl(directory, null, parsingReport);
         }
 
-        private Tree Crawl(DirectoryInfoBase directory, INode rootNode, ParsingReport parsingReport)
+        private Tree Crawl(IDirectoryInfo directory, INode rootNode, ParsingReport parsingReport)
         {
             INode currentNode =
                 this.featureNodeFactory.Create(rootNode != null ? rootNode.OriginalLocation : null, directory, parsingReport);
@@ -73,11 +73,11 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             return tree;
         }
 
-        private bool CollectDirectories(DirectoryInfoBase directory, INode rootNode, Tree tree, ParsingReport parsingReport)
+        private bool CollectDirectories(IDirectoryInfo directory, INode rootNode, Tree tree, ParsingReport parsingReport)
         {
             List<Tree> collectedNodes = new List<Tree>();
 
-            foreach (DirectoryInfoBase subDirectory in directory.GetDirectories().OrderBy(di => di.Name))
+            foreach (IDirectoryInfo subDirectory in directory.GetDirectories().OrderBy(di => di.Name))
             {
                 Tree subTree = this.Crawl(subDirectory, rootNode, parsingReport);
                 if (subTree != null)
@@ -94,11 +94,11 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             return collectedNodes.Count > 0;
         }
 
-        private bool CollectFiles(DirectoryInfoBase directory, INode rootNode, Tree tree, ParsingReport parsingReport)
+        private bool CollectFiles(IDirectoryInfo directory, INode rootNode, Tree tree, ParsingReport parsingReport)
         {
             List<INode> collectedNodes = new List<INode>();
 
-            foreach (FileInfoBase file in directory.GetFiles().Where(file => this.relevantFileDetector.IsRelevant(file)))
+            foreach (IFileInfo file in directory.GetFiles().Where(file => this.relevantFileDetector.IsRelevant(file)))
             {
                 INode node = this.featureNodeFactory.Create(rootNode.OriginalLocation, file, parsingReport);
                 if(node != null)

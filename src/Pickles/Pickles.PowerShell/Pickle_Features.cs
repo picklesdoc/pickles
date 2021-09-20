@@ -68,7 +68,7 @@ namespace PicklesDoc.Pickles.PowerShell
 
         [Parameter(HelpMessage = CommandLineArgumentHelpTexts.HelpHideTags, Mandatory = false)]
         public string HideTags { get; set; }
-        
+
 
         protected override void ProcessRecord()
         {
@@ -149,9 +149,9 @@ namespace PicklesDoc.Pickles.PowerShell
             }
         }
 
-        private DirectoryInfoBase DetermineFeatureFolder(IFileSystem fileSystem, PathInfo currentFileSystemLocation, string directory)
+        private IDirectoryInfo DetermineFeatureFolder(IFileSystem fileSystem, PathInfo currentFileSystemLocation, string directory)
         {
-            DirectoryInfoBase result;
+            IDirectoryInfo result;
 
             if (fileSystem.Path.IsPathRooted(directory))
             {

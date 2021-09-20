@@ -81,10 +81,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             return xElement;
         }
 
-        private XElement AddNodeForHome(XNamespace xmlns, Uri file, DirectoryInfoBase rootFolder)
+        private XElement AddNodeForHome(XNamespace xmlns, Uri file, IDirectoryInfo rootFolder)
         {
-            var rootfile = this.fileSystem.FileInfo.FromFileName(this.fileSystem.Path.Combine(rootFolder.FullName, "index.html"));
-
+            var rootfile = (IFileInfo)this.fileSystem.FileInfo.FromFileName(this.fileSystem.Path.Combine(rootFolder.FullName, "index.html"));
             var xElement = new XElement(xmlns + "li", new XAttribute("class", "file"), new XAttribute("id", "root"));
 
             string nodeText = "Home";
@@ -105,7 +104,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             return xElement;
         }
 
-        private bool DetermineWhetherFileIsTheRootFile(Uri file, FileInfoBase rootfile)
+        private bool DetermineWhetherFileIsTheRootFile(Uri file, IFileInfo rootfile)
         {
             var fileInfo = this.fileSystem.FileInfo.FromFileName(file.LocalPath);
 
@@ -171,7 +170,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
                 new XText("«"));
         }
 
-        public XElement Format(Uri file, Tree features, DirectoryInfoBase outputFolder)
+        public XElement Format(Uri file, Tree features, IDirectoryInfo outputFolder)
         {
             XNamespace xmlns = HtmlNamespace.Xhtml;
 

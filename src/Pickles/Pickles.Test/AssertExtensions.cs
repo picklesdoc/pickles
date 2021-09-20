@@ -23,6 +23,8 @@ using System.Linq;
 using System.Xml.Linq;
 using NFluent;
 using NFluent.Extensibility;
+using NFluent.Kernel;
+using NFluent.Messages;
 
 namespace PicklesDoc.Pickles.Test
 {
@@ -65,7 +67,7 @@ namespace PicklesDoc.Pickles.Test
 
             if (!XNode.DeepEquals(element, actual))
             {
-                var fluentMessage = FluentMessage.BuildMessage("The {0} is not equal to the given one (using deep comparison)").For("XML element").On(element.ToString()).And.WithGivenValue(actual.ToString());
+                var fluentMessage = FluentMessage.BuildMessage("The {0} is not equal to the given one (using deep comparison)").For(new EntityNamingLogic("XML element")).On(element.ToString()).And.WithGivenValue(actual.ToString());
 
                 throw new FluentCheckException(fluentMessage.ToString());
             }

@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.MsTest
     {
         private readonly XDocumentLoader documentLoader = new XDocumentLoader();
 
-        public SingleTestRunBase Load(FileInfoBase fileInfo)
+        public SingleTestRunBase Load(IFileInfo fileInfo)
         {
             return new MsTestSingleResults(this.documentLoader.Load(fileInfo));
         }

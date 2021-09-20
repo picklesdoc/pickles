@@ -32,12 +32,12 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.imageFileDetector = new ImageFileDetector();
         }
 
-        public bool IsFeatureFile(FileInfoBase file)
+        public bool IsFeatureFile(IFileInfo file)
         {
             return file.Extension.Equals(".feature", StringComparison.InvariantCultureIgnoreCase);
         }
 
-        public bool IsMarkdownFile(FileInfoBase file)
+        public bool IsMarkdownFile(IFileInfo file)
         {
             if (file.Name.EndsWith("csproj.FileListAbsolute.txt"))
             {
@@ -61,12 +61,12 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             return false;
         }
 
-        public bool IsRelevant(FileInfoBase file)
+        public bool IsRelevant(IFileInfo file)
         {
             return this.IsFeatureFile(file) || this.IsMarkdownFile(file) || this.imageFileDetector.IsRelevant(file);
         }
 
-        public bool IsImageFile(FileInfoBase file)
+        public bool IsImageFile(IFileInfo file)
         {
             return this.imageFileDetector.IsRelevant(file);
         }

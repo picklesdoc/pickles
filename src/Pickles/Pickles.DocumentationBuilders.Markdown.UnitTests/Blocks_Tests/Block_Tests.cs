@@ -18,6 +18,7 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DocumentationBuilders.Markdown.Blocks;
 
@@ -34,7 +35,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests.Blocks_Tes
 
             (mockBlock as MockBlock).Add("Hello, World");
 
-            Assert.AreEqual("Hello, World\r\n", mockBlock.ToString());
+            Assert.AreEqual("Hello, World"+Environment.NewLine, mockBlock.ToString());
         }
 
         [Test]

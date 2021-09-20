@@ -1,4 +1,4 @@
-﻿//  --------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="Configuration.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -31,7 +31,7 @@ namespace PicklesDoc.Pickles
     public class Configuration : IConfiguration
     {
         private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
-        private readonly List<FileInfoBase> testResultsFiles;
+        private readonly List<IFileInfo> testResultsFiles;
 
         public Configuration()
             : this(new LanguageServicesRegistry())
@@ -40,13 +40,13 @@ namespace PicklesDoc.Pickles
 
         public Configuration(ILanguageServicesRegistry languageServicesRegistry)
         {
-            this.testResultsFiles = new List<FileInfoBase>();
+            this.testResultsFiles = new List<IFileInfo>();
             this.Language = languageServicesRegistry.DefaultLanguage;
         }
 
-        public DirectoryInfoBase FeatureFolder { get; set; }
+        public IDirectoryInfo FeatureFolder { get; set; }
 
-        public DirectoryInfoBase OutputFolder { get; set; }
+        public IDirectoryInfo OutputFolder { get; set; }
 
         public DocumentationFormat DocumentationFormat { get; set; }
 
@@ -59,12 +59,12 @@ namespace PicklesDoc.Pickles
             get { return this.TestResultsFiles != null && this.testResultsFiles.Count > 0; }
         }
 
-        public FileInfoBase TestResultsFile
+        public IFileInfo TestResultsFile
         {
             get { return this.testResultsFiles[0]; }
         }
 
-        public IEnumerable<FileInfoBase> TestResultsFiles
+        public IEnumerable<IFileInfo> TestResultsFiles
         {
             get { return this.testResultsFiles; }
         }
@@ -100,15 +100,16 @@ namespace PicklesDoc.Pickles
         public bool ShouldIncludeExperimentalFeatures { get; private set; }
 
         public void AddTestResultFile(FileInfoBase fileInfoBase)
+        public void AddTestResultFile(IFileInfo IFileInfo)
         {
-            this.AddTestResultFileIfItExists(fileInfoBase);
+            this.AddTestResultFileIfItExists(IFileInfo);
         }
 
-        public void AddTestResultFiles(IEnumerable<FileInfoBase> fileInfoBases)
+        public void AddTestResultFiles(IEnumerable<IFileInfo> IFileInfos)
         {
-            foreach (var fileInfoBase in fileInfoBases ?? new FileInfoBase[0])
+            foreach (var IFileInfo in IFileInfos ?? new IFileInfo[0])
             {
-                this.AddTestResultFileIfItExists(fileInfoBase);
+                this.AddTestResultFileIfItExists(IFileInfo);
             }
         }
 
@@ -116,15 +117,15 @@ namespace PicklesDoc.Pickles
 
         public string HideTags { get; set; }
 
-        private void AddTestResultFileIfItExists(FileInfoBase fileInfoBase)
+        private void AddTestResultFileIfItExists(IFileInfo IFileInfo)
         {
-            if (fileInfoBase.Exists)
+            if (IFileInfo.Exists)
             {
-                this.testResultsFiles.Add(fileInfoBase);
+                this.testResultsFiles.Add(IFileInfo);
             }
             else
             {
-                Log.Error("A test result file could not be found, it will be skipped: {0}", fileInfoBase.FullName);
+                Log.Error("A test result file could not be found, it will be skipped: {0}", IFileInfo.FullName);
             }
         }
     }

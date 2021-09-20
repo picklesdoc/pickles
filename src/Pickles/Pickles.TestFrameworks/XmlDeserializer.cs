@@ -32,7 +32,7 @@ namespace PicklesDoc.Pickles.TestFrameworks
     public class XmlDeserializer<TItem>
         where TItem : class
     {
-        public TItem Load(FileInfoBase fileInfo)
+        public TItem Load(IFileInfo fileInfo)
         {
             TItem document;
 

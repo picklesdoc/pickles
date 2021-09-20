@@ -45,19 +45,19 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             if (configuration.OutputFolder == null)
             {
-                outputFolder = @"C:\testing";
+                configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName("testing");
             }
-            else
-            {
-                outputFolder = configuration.OutputFolder.FullName;
-            }
+            if(!configuration.OutputFolder.Exists)
+                configuration.OutputFolder.Create();
+
+            outputFolder = configuration.OutputFolder.FullName;
         }
 
         public void Build(Tree featureTree)
         {
             var documentation = new Documentation(featureTree);
 
-            WriteContentToFile(TargetFile(), documentation.CurrentPage);
+            this.WriteContentToFile(fileSystem.Path.Combine(this.outputFolder, "features.md"), documentation.CurrentPage);
 
             WriteImage(outputFolder, "pass_32.png", "pass.png");
             WriteImage(outputFolder, "fail_32.png", "fail.png");
@@ -74,17 +74,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
                 file.Close();
             }
         }
-
-        private string TargetFile()
-        {
-            var fileName = "features.md";
-
-            string defaultOutputFile = string.Empty;
-            defaultOutputFile = Path.Combine(outputFolder, fileName);
-
-            return defaultOutputFile;
-        }
-
 
 
         private void WriteImage(string folder, string sourcefilename, string targetfilename)

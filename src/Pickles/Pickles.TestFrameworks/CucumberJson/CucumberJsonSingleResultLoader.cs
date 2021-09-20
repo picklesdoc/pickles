@@ -28,12 +28,12 @@ namespace PicklesDoc.Pickles.TestFrameworks.CucumberJson
 {
     public class CucumberJsonSingleResultLoader : ISingleResultLoader
     {
-        public SingleTestRunBase Load(FileInfoBase fileInfo)
+        public SingleTestRunBase Load(IFileInfo fileInfo)
         {
             return new CucumberJsonSingleResults(this.ReadResultsFile(fileInfo));
         }
 
-        private List<Feature> ReadResultsFile(FileInfoBase testResultsFile)
+        private List<Feature> ReadResultsFile(IFileInfo testResultsFile)
         {
             List<Feature> result;
             //using (var stream = testResultsFile.OpenRead())

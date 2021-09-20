@@ -46,17 +46,17 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             this.fileSystem = fileSystem;
         }
 
-        public INode Create(FileSystemInfoBase root, FileSystemInfoBase location, ParsingReport report)
+        public INode Create(IFileSystemInfo root, IFileSystemInfo location, ParsingReport report)
         {
             string relativePathFromRoot = root == null ? @".\" : PathExtensions.MakeRelativePath(root, location, this.fileSystem);
 
-            var directory = location as DirectoryInfoBase;
+            var directory = location as IDirectoryInfo;
             if (directory != null)
             {
                 return new FolderNode(directory, relativePathFromRoot);
             }
 
-            var file = location as FileInfoBase;
+            var file = location as IFileInfo;
 
             if (file != null)
             {

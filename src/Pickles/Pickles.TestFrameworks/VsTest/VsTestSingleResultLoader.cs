@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.VsTest
     {
         private readonly XDocumentLoader documentLoader = new XDocumentLoader();
 
-        public SingleTestRunBase Load(FileInfoBase fileInfo)
+        public SingleTestRunBase Load(IFileInfo fileInfo)
         {
             return new VsTestSingleResults(this.documentLoader.Load(fileInfo));
         }

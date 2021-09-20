@@ -53,10 +53,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac" Version="4.8.0" />
-    <PackageReference Include="DocumentFormat.OpenXml" Version="2.10.1" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.13.1" />
     <PackageReference Include="gherkin" Version="6.0.0" />
     <PackageReference Include="NLog" Version="4.5.3" />
-    <PackageReference Include="System.IO.Abstractions" Version="2.1.0.178" />
+    <PackageReference Include="System.IO.Abstractions" Version="13.2.47" />
     <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.1" />
     <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.1" />
     <PackageReference Include="System.ServiceModel.Federation" Version="4.8.1" />

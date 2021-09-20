@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -36,9 +37,13 @@ namespace PicklesDoc.Pickles.Test.Formatters
     [TestFixture]
     public class TableOfContentsShouldBeCreatedFromAFolderStructure : BaseFixture
     {
-        private const string RootPath = FileSystemPrefix + @"FeatureCrawlerTests";
+        private string RootPath { get; }
         private XElement toc;
 
+        public TableOfContentsShouldBeCreatedFromAFolderStructure()
+        {
+            RootPath =FileSystem.Path.Combine(FileSystemPrefix,"FeatureCrawlerTests");
+        }
         public void Setup()
         {
             var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(RootPath);

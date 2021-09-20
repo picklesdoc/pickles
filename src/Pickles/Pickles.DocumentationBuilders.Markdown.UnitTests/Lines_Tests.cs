@@ -18,6 +18,7 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using NUnit.Framework;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
@@ -66,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             lines.Add("Hello");
             lines.Add("World");
 
-            Assert.AreEqual("Hello\r\nWorld\r\n", lines.ToString());
+            Assert.AreEqual($"Hello{Environment.NewLine}World{Environment.NewLine}", lines.ToString());
         }
     }
 }

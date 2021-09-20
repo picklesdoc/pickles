@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using Autofac;
 using NFluent;
 using NUnit.Framework;
@@ -35,7 +36,7 @@ namespace PicklesDoc.Pickles.Test
         {
             this.AddFakeFolderStructures();
 
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix + @"FeatureCrawlerTests");
+            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystem.Path.Combine(FileSystemPrefix,"FeatureCrawlerTests"));
             Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
 
             Check.That(features).IsNotNull();
@@ -67,7 +68,7 @@ namespace PicklesDoc.Pickles.Test
             INode subLevelOneDirectory = features.ChildNodes[4].Data;
             Check.That(subLevelOneDirectory).IsNotNull();
             Check.That(subLevelOneDirectory.Name).IsEqualTo("Sub Level One");
-            Check.That(subLevelOneDirectory.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\");
+            Check.That(subLevelOneDirectory.RelativePathFromRoot).IsEqualTo(@"SubLevelOne"+Path.DirectorySeparatorChar);
             Check.That(subLevelOneDirectory).IsInstanceOf<FolderNode>();
 
             Tree subLevelOneNode = features.ChildNodes[4];
@@ -76,13 +77,13 @@ namespace PicklesDoc.Pickles.Test
             INode levelOneSublevelOneFeature = subLevelOneNode.ChildNodes[0].Data;
             Check.That(levelOneSublevelOneFeature).IsNotNull();
             Check.That(levelOneSublevelOneFeature.Name).IsEqualTo("Addition");
-            Check.That(levelOneSublevelOneFeature.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\LevelOneSublevelOne.feature");
+            Check.That(levelOneSublevelOneFeature.RelativePathFromRoot).IsEqualTo(FileSystem.Path.Combine("SubLevelOne","LevelOneSublevelOne.feature"));
             Check.That(levelOneSublevelOneFeature).IsInstanceOf<FeatureNode>();
 
             INode levelOneSublevelTwoFeature = subLevelOneNode.ChildNodes[1].Data;
             Check.That(levelOneSublevelTwoFeature).IsNotNull();
             Check.That(levelOneSublevelTwoFeature.Name).IsEqualTo("Addition");
-            Check.That(levelOneSublevelTwoFeature.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\LevelOneSublevelTwo.feature");
+            Check.That(levelOneSublevelTwoFeature.RelativePathFromRoot).IsEqualTo(FileSystem.Path.Combine("SubLevelOne","LevelOneSublevelTwo.feature"));
             Check.That(levelOneSublevelTwoFeature).IsInstanceOf<FeatureNode>();
 
             Tree subLevelTwoNode = subLevelOneNode.ChildNodes[2];
@@ -91,13 +92,13 @@ namespace PicklesDoc.Pickles.Test
             INode subLevelTwoDirectory = subLevelOneNode.ChildNodes[2].Data;
             Check.That(subLevelTwoDirectory).IsNotNull();
             Check.That(subLevelTwoDirectory.Name).IsEqualTo("Sub Level Two");
-            Check.That(subLevelTwoDirectory.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\SubLevelTwo\");
+            Check.That(subLevelTwoDirectory.RelativePathFromRoot).IsEqualTo(FileSystem.Path.Combine("SubLevelOne","SubLevelTwo")+Path.DirectorySeparatorChar);
             Check.That(subLevelTwoDirectory).IsInstanceOf<FolderNode>();
 
             INode levelOneSublevelOneSubLevelTwoDirectory = subLevelOneNode.ChildNodes[2].ChildNodes[0].Data;
             Check.That(levelOneSublevelOneSubLevelTwoDirectory).IsNotNull();
             Check.That(levelOneSublevelOneSubLevelTwoDirectory.Name).IsEqualTo("Addition");
-            Check.That(levelOneSublevelOneSubLevelTwoDirectory.RelativePathFromRoot).IsEqualTo(@"SubLevelOne\SubLevelTwo\LevelOneSublevelOneSubLevelTwo.feature");
+            Check.That(levelOneSublevelOneSubLevelTwoDirectory.RelativePathFromRoot).IsEqualTo(FileSystem.Path.Combine("SubLevelOne","SubLevelTwo","LevelOneSublevelOneSubLevelTwo.feature"));
             Check.That(levelOneSublevelOneSubLevelTwoDirectory).IsInstanceOf<FeatureNode>();
         }
     }

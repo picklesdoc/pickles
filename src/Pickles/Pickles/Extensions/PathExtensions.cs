@@ -1,4 +1,4 @@
-﻿//  --------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="PathExtensions.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.IO.Abstractions;
 using System.Linq;
 
@@ -39,33 +40,17 @@ namespace PicklesDoc.Pickles.Extensions
                 throw new ArgumentNullException("to");
             }
 
-            string fromString = AddTrailingSlashToDirectoriesForUriMethods(from, fileSystem);
-            string toString = AddTrailingSlashToDirectoriesForUriMethods(to, fileSystem);
-
-            var fromUri = new Uri(fromString);
-            var toUri = new Uri(toString);
+            var fromUri = fileSystem.GetUri(from);
+            var toUri = fileSystem.GetUri(to);
 
             Uri relativeUri = fromUri.MakeRelativeUri(toUri);
             string relativePath = Uri.UnescapeDataString(relativeUri.ToString());
 
-            return relativePath.Replace('/', fileSystem.Path.DirectorySeparatorChar);
+            return relativePath.Replace(Uri.SchemeDelimiter, fileSystem.Path.DirectorySeparatorChar.ToString());
         }
 
-        private static string AddTrailingSlashToDirectoriesForUriMethods(string path, IFileSystem fileSystem)
-        {
-            // Uri class treats paths that end in \ as directories, and without \ as files.
-            // So if its a file then we need to append the \ to make the Uri class recognize it as a directory
-            path = RemoveEndSlashSoWeDoNotHaveTwoIfThisIsADirectory(path);
 
-            return fileSystem.Directory.Exists(path) ? path + @"\" : path;
-        }
-
-        private static string RemoveEndSlashSoWeDoNotHaveTwoIfThisIsADirectory(string path)
-        {
-            return path.TrimEnd('\\');
-        }
-
-        public static string MakeRelativePath(FileSystemInfoBase from, FileSystemInfoBase to, IFileSystem fileSystem)
+        public static string MakeRelativePath(IFileSystemInfo from, IFileSystemInfo to, IFileSystem fileSystem)
         {
             if (from == null)
             {
@@ -80,21 +65,23 @@ namespace PicklesDoc.Pickles.Extensions
             return MakeRelativePath(from.FullName, to.FullName, fileSystem);
         }
 
-        private static string[] GetAllFilesFromPathAndFileNameWithOptionalWildCards(string fileFullName, IFileSystem fileSystem)
+        private static string[] GetAllFilesFromPathAndFileNameWithOptionalWildCards(string fileFilePath, IFileSystem fileSystem)
         {
-            var path = fileSystem.Path.GetDirectoryName(fileFullName);
-            var wildcardFileName = fileSystem.Path.GetFileName(fileFullName);
+            var path = fileSystem.Path.GetDirectoryName(fileFilePath);
+            var wildcardFileName = fileSystem.Path.GetFileName(fileFilePath);
+            if (string.IsNullOrWhiteSpace(path))
+                path = fileSystem.Directory.GetCurrentDirectory();
             // GetFiles returns an array with 1 empty string when wildcard match is not found.
             return fileSystem.Directory.GetFiles(path, wildcardFileName).Where(x => !string.IsNullOrEmpty(x)).ToArray();
         }
 
-        public static IEnumerable<FileInfoBase> GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(string fileFullName, IFileSystem fileSystem)
+        public static IEnumerable<IFileInfo> GetAllFilesFromPathAndFileNameWithOptionalSemicolonsAndWildCards(string fileFullName, IFileSystem fileSystem)
         {
             var files = fileFullName.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
             return files.SelectMany(f => GetAllFilesFromPathAndFileNameWithOptionalWildCards(f, fileSystem))
                     .Distinct()
                     .Select(f => fileSystem.FileInfo.FromFileName(f));
         }
-        
+
     }
 }

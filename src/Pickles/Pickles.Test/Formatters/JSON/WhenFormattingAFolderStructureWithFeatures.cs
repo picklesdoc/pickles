@@ -19,6 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
+using System.IO;
 using Autofac;
 using NUnit.Framework;
 using PicklesDoc.Pickles.DataStructures;
@@ -31,8 +32,12 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
     [TestFixture]
     public class WhenFormattingAFolderStructureWithFeatures : BaseFixture
     {
-        private const string OutputDirectory = FileSystemPrefix + @"JSONFeatureOutput";
+        private string OutputDirectory { get; }
 
+        public WhenFormattingAFolderStructureWithFeatures()
+        {
+            OutputDirectory =FileSystem.Path.Combine(FileSystemPrefix, "JSONFeatureOutput");
+        }
         public void Setup()
         {
             var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);

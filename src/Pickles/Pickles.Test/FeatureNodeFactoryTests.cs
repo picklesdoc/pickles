@@ -20,6 +20,7 @@
 
 using System;
 using System.IO;
+using System.IO.Abstractions;
 using System.IO.Abstractions.TestingHelpers;
 using System.Linq;
 using NFluent;
@@ -35,30 +36,31 @@ namespace PicklesDoc.Pickles.Test
         [Test]
         public void Create_InvalidFeatureFile_AddsEntryToReport()
         {
-            FileSystem.AddFile(@"c:\test.feature", new MockFileData("Invalid feature file"));
+            FileSystem.AddFile(@"test.feature", new MockFileData("Invalid feature file"));
 
             var featureNodeFactory = this.CreateFeatureNodeFactory();
 
             var report = new ParsingReport();
 
-            featureNodeFactory.Create(null, FileSystem.FileInfo.FromFileName(@"c:\test.feature"), report);
+            featureNodeFactory.Create(null, FileSystem.FileInfo.FromFileName(@"test.feature"), report);
 
-            Check.That(report.First()).Contains(@"c:\test.feature");
+            Check.That(report.First()).Contains(@"test.feature");
         }
 
         [Test]
         public void Create_MarkdownParsingError_AddsEntryToReport()
         {
-            FileSystem.AddFile(@"c:\test.md", new MockFileData("* Some Markdown text"));
+            FileSystem.AddFile(@"test.md", new MockFileData("* Some Markdown text"));
 
             var featureNodeFactory = this.CreateFeatureNodeFactory(new MockMarkdownProvider());
 
             var report = new ParsingReport();
 
-            featureNodeFactory.Create(null, FileSystem.FileInfo.FromFileName(@"c:\test.md"), report);
+            var fileInfo = FileSystem.FileInfo.FromFileName(@"test.md");
+            featureNodeFactory.Create(null, fileInfo, report);
 
             Check.That(report.Count).Equals(1);
-            Check.That(report.First()).Equals(@"Error parsing the Markdown file located at c:\test.md. Error: Error parsing text.");
+            Check.That(report.First()).Equals($"Error parsing the Markdown file located at {fileInfo.FullName}. Error: Error parsing text.");
         }
 
         private FeatureNodeFactory CreateFeatureNodeFactory()
@@ -99,41 +101,43 @@ namespace PicklesDoc.Pickles.Test
 
             var report = new ParsingReport();
 
-            featureNodeFactory.Create(null, new BogusFileSystemInfoBase { fullName = "Totally Bad Name"}, report);
+            featureNodeFactory.Create(null, new BogusIFileSystemInfo { fullName = "Totally Bad Name"}, report);
 
             Check.That(report.First()).Contains(@"Totally Bad Name");
         }
 
-        private class BogusFileSystemInfoBase : System.IO.Abstractions.FileSystemInfoBase
+        private class BogusIFileSystemInfo : System.IO.Abstractions.IFileSystemInfo
         {
             internal string fullName;
 
-            public override void Delete()
+            public void Delete()
             {
                 throw new NotImplementedException();
             }
 
-            public override void Refresh()
+            public void Refresh()
             {
                 throw new NotImplementedException();
             }
 
-            public override FileAttributes Attributes { get; set; }
-            public override DateTime CreationTime { get; set; }
-            public override DateTime CreationTimeUtc { get; set; }
-            public override bool Exists { get; }
-            public override string Extension { get; }
+            public IFileSystem FileSystem { get; set; }
 
-            public override string FullName
+            public FileAttributes Attributes { get; set; }
+            public DateTime CreationTime { get; set; }
+            public DateTime CreationTimeUtc { get; set; }
+            public bool Exists { get; }
+            public string Extension { get; }
+
+            public string FullName
             {
                 get { return this.fullName; }
             }
 
-            public override DateTime LastAccessTime { get; set; }
-            public override DateTime LastAccessTimeUtc { get; set; }
-            public override DateTime LastWriteTime { get; set; }
-            public override DateTime LastWriteTimeUtc { get; set; }
-            public override string Name { get; }
+            public DateTime LastAccessTime { get; set; }
+            public DateTime LastAccessTimeUtc { get; set; }
+            public DateTime LastWriteTime { get; set; }
+            public DateTime LastWriteTimeUtc { get; set; }
+            public string Name { get; }
         }
 
         private class MockMarkdownProvider : IMarkdownProvider

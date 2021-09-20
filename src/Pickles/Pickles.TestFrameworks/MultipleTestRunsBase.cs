@@ -84,7 +84,7 @@ namespace PicklesDoc.Pickles.TestFrameworks
             return results.Merge(true);
         }
 
-        protected SingleTestRunBase ConstructSingleTestResult(FileInfoBase fileInfo)
+        protected SingleTestRunBase ConstructSingleTestResult(IFileInfo fileInfo)
         {
             return this.singleResultLoader.Load(fileInfo);
         }

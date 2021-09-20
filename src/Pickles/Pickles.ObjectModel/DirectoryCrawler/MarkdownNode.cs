@@ -28,7 +28,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
 {
     public class MarkdownNode : INode
     {
-        public MarkdownNode(FileSystemInfoBase location, string relativePathFromRoot, XElement markdownContent)
+        public MarkdownNode(IFileSystemInfo location, string relativePathFromRoot, XElement markdownContent)
         {
             this.OriginalLocation = location;
             this.OriginalLocationUrl = location.ToUri();
@@ -55,7 +55,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
             }
         }
 
-        public FileSystemInfoBase OriginalLocation { get; }
+        public IFileSystemInfo OriginalLocation { get; }
 
         public Uri OriginalLocationUrl { get; }
 

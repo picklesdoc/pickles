@@ -27,7 +27,7 @@ namespace PicklesDoc.Pickles.TestFrameworks
 {
     public class XDocumentLoader
     {
-        public XDocument Load(FileInfoBase fileInfo)
+        public XDocument Load(IFileInfo fileInfo)
         {
             XDocument document;
             using (var stream = fileInfo.OpenRead())

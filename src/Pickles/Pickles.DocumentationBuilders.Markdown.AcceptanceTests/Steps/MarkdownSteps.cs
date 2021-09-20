@@ -31,6 +31,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
     [Binding]
     public sealed class MarkdownSteps : BaseFixture
     {
+        private string filePath;
+
         [Given(@"I specify the output folder as '(.*)'")]
         public void Given_I_Specify_The_Output_File_As(string outputFolder)
         {
@@ -125,10 +127,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             }
         }
 
-        [Then(@"the file '(.*)' exists")]
-        public void Then_The_File_Exists(string expectedFile)
+        [Then(@"the file '(.*)' exists in folder '(.*)'")]
+
+        public void Then_The_File_Exists(string expectedFile, string expectedFolder)
         {
-            Assert.IsTrue(this.FileSystem.File.Exists(expectedFile),string.Format("File \"{0}\" not found",expectedFile));
+            this.filePath = FileSystem.Path.Combine(expectedFolder,expectedFile);
+            Assert.IsTrue(this.FileSystem.File.Exists(this.filePath),string.Format("File \"{0}\" not found",filePath));
         }
 
         // Duplicated logic from Builder class, should be moved to it's own class?
@@ -139,11 +143,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             string defaultOutputFile = string.Empty;
             if (configuration.OutputFolder == null)
             {
-                defaultOutputFile = Path.Combine(@"C:\testing", fileName);
+                defaultOutputFile =FileSystem.Path.Combine(@"C:\testing", fileName);
             }
             else
             {
-                defaultOutputFile = Path.Combine(configuration.OutputFolder.FullName, fileName);
+                defaultOutputFile =FileSystem.Path.Combine(configuration.OutputFolder.FullName, fileName);
             }
 
             return defaultOutputFile;

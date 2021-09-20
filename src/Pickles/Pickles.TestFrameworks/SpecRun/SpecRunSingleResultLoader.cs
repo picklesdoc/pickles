@@ -29,7 +29,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.SpecRun
 {
     public class SpecRunSingleResultLoader : ISingleResultLoader
     {
-        public SingleTestRunBase Load(FileInfoBase fileInfo)
+        public SingleTestRunBase Load(IFileInfo fileInfo)
         {
             var document = this.ReadResultsFile(fileInfo);
             var features = this.ToFeatures(document);
@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.SpecRun
             return readResultsFile.Descendants("feature").Select(Factory.ToSpecRunFeature).ToList();
         }
 
-        private XDocument ReadResultsFile(FileInfoBase testResultsFile)
+        private XDocument ReadResultsFile(IFileInfo testResultsFile)
         {
             XDocument document;
             //using (var stream = testResultsFile.OpenRead())

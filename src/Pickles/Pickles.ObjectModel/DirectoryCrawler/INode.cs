@@ -47,7 +47,7 @@ namespace PicklesDoc.Pickles.DirectoryCrawler
 
         string Name { get; }
 
-        FileSystemInfoBase OriginalLocation { get; }
+        IFileSystemInfo OriginalLocation { get; }
 
         Uri OriginalLocationUrl { get; }
 

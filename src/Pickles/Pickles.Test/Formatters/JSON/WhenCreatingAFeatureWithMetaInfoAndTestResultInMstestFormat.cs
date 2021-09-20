@@ -20,6 +20,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using Autofac;
 using NFluent;
@@ -39,16 +40,16 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
     {
         public string Setup()
         {
-            const string OutputDirectoryName = FileSystemPrefix + @"JSONFeatureOutput";
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix + @"JSON\Features");
+            string OutputDirectoryName =FileSystem.Path.Combine(FileSystemPrefix,"JSONFeatureOutput");
+            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystem.Path.Combine(FileSystemPrefix,"JSON","Features"));
 
-            const string TestResultFilePath = FileSystemPrefix + @"JSON\results-example-failing-and-pasing-mstest.trx";
+            var TestResultFilePath = FileSystem.Path.Combine(FileSystemPrefix,"JSON","results-example-failing-and-pasing-mstest.trx");
 
             string filePath = FileSystem.Path.Combine(OutputDirectoryName, JsonDocumentationBuilder.JsonFileName);
 
             this.AddFakeFolderAndFiles("JSON", new[] { "results-example-failing-and-pasing-mstest.trx" });
             this.AddFakeFolderAndFiles(
-                @"JSON\Features",
+               FileSystem.Path.Combine("JSON","Features"),
                 new[]
                 {
                     "OneScenarioTransferingMoneyBetweenAccountsFailing.feature",

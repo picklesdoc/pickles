@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
           </ul>
        <div>
        */
-            var directoryInfo = node.OriginalLocation as DirectoryInfoBase;
+            var directoryInfo = node.OriginalLocation as IDirectoryInfo;
 
             if (directoryInfo == null)
             {
@@ -55,7 +55,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
             string[] files = directoryInfo.GetFiles().Select(f => f.FullName).ToArray();
 
             INode[] featuresThatAreDirectChildrenOfFolder =
-                features.Where(f => f.OriginalLocation is FileInfoBase).Where(
+                features.Where(f => f.OriginalLocation is IFileInfo).Where(
                     f => files.Contains(f.OriginalLocation.FullName)).ToArray();
 
             var div = new XElement(
