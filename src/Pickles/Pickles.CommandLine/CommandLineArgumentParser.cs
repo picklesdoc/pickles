@@ -46,6 +46,7 @@ namespace PicklesDoc.Pickles.CommandLine
         private string enableCommentsValue;
         private string excludeTags;
         private string hideTags;
+        private string featureBaseUri;
 
         public CommandLineArgumentParser(IFileSystem fileSystem)
         {
@@ -65,7 +66,9 @@ namespace PicklesDoc.Pickles.CommandLine
                 { "exp|include-experimental-features", CommandLineArgumentHelpTexts.HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
                 { "cmt|enableComments=", CommandLineArgumentHelpTexts.HelpEnableComments, v => this.enableCommentsValue = v },
                 { "et|excludeTags=", CommandLineArgumentHelpTexts.HelpExcludeTags, v => this.excludeTags = v },
-                { "ht|hideTags=", CommandLineArgumentHelpTexts.HelpHideTags, v => this.hideTags = v }
+                { "ht|hideTags=", CommandLineArgumentHelpTexts.HelpHideTags, v => this.hideTags = v },
+                { "fbu|feature-base-uri=", CommandLineArgumentHelpTexts.HelpFeatureBaseUri, v => this.featureBaseUri = v },
+
             };
         }
 
@@ -152,6 +155,18 @@ namespace PicklesDoc.Pickles.CommandLine
             if (bool.TryParse(this.enableCommentsValue, out enableComments) && enableComments == false)
             {
                 configuration.DisableComments();
+            }
+
+            if (!string.IsNullOrEmpty(this.featureBaseUri))
+            {
+                if (Uri.TryCreate(this.featureBaseUri, UriKind.RelativeOrAbsolute, out var uri))
+                {
+                    configuration.FeatureBaseUri = uri;
+                }
+                else
+                {
+                    stdout.WriteLine("Failed to parse features base uri");
+                }
             }
 
             return true;

@@ -1,4 +1,4 @@
-//  --------------------------------------------------------------------------------------------------------------------
+﻿//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="CucumberDocumentationBuilder.cs" company="PicklesDoc">
 //  Copyright 2017 Dmitry Grekov
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -18,12 +18,14 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.IO.Abstractions;
 using System.Reflection;
 using NLog;
 using PicklesDoc.Pickles.DirectoryCrawler;
+using PicklesDoc.Pickles.Extensions;
 using PicklesDoc.Pickles.ObjectModel;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
@@ -42,6 +44,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
         private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType?.Name);
         private readonly IConfiguration configuration;
         private readonly IFileSystem fileSystem;
+        private static readonly Uri rootFileUri = new Uri("file://");
 
 
         public string OutputFilePath => this.fileSystem.Path.Combine(this.configuration.OutputFolder.FullName, CucumberFileName);
@@ -82,6 +85,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
                 {
                     keyword = "Feature",
                     name = f.Name,
+                    uri = this.GetUri(n),
                     tags = f.Tags.Select(t => new { name = t }),
                     line = 1,
                     elements = f.FeatureElements.Select(fe =>
@@ -116,6 +120,25 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
             };
 
             return JsonConvert.SerializeObject(toOutPut, Formatting.Indented, settings);
+        }
+
+        private string GetUri(FeatureNode n)
+        {
+            var baseUri = this.configuration.FeatureBaseUri;
+
+            if (baseUri == null)
+                return String.IsNullOrWhiteSpace(n.RelativePathFromRoot) ? null : n.RelativePathFromRoot;
+
+            baseUri = baseUri.ToFolderUri();
+
+            if(baseUri.IsAbsoluteUri)
+            {
+                return new Uri(baseUri, n.RelativePathFromRoot).ToString();
+            }
+
+            var absoluteBaseUri = new Uri(rootFileUri, baseUri);
+            var combined = new Uri(absoluteBaseUri, n.RelativePathFromRoot);
+            return rootFileUri.MakeRelativeUri(combined).ToString();
         }
 
         private static string DetermineStatus(IFeatureElement fe)

@@ -1,4 +1,4 @@
-//  --------------------------------------------------------------------------------------------------------------------
+﻿//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="Configuration.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -18,6 +18,7 @@
 //  </copyright>
 //  --------------------------------------------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.IO.Abstractions;
 using System.Reflection;
@@ -99,7 +100,8 @@ namespace PicklesDoc.Pickles
 
         public bool ShouldIncludeExperimentalFeatures { get; private set; }
 
-        public void AddTestResultFile(FileInfoBase fileInfoBase)
+        public Uri FeatureBaseUri { get; set; }
+
         public void AddTestResultFile(IFileInfo IFileInfo)
         {
             this.AddTestResultFileIfItExists(IFileInfo);

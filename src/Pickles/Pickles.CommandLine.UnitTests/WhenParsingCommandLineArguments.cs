@@ -1,4 +1,4 @@
-//  --------------------------------------------------------------------------------------------------------------------
+﻿//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="WhenParsingCommandLineArguments.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -62,7 +62,10 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             "      --et, --excludeTags=VALUE" + "{0}" +
             "                             exclude scenarios that match this tag" + "{0}" +
             "      --ht, --hideTags=VALUE Technical tags that shouldn't be displayed " + "{0}" +
-            "                               (separated by ;)" + "{0}",
+            "                               (separated by ;)" + "{0}" +
+            "      --fbu, --feature-base-uri=VALUE" + "{0}" +
+            "                             base uri to use for features uri field in some " + "{0}" +
+            "                               reports like cucumber json ",
             Environment.NewLine);
 
         private static readonly string ExpectedVersionString = string.Format(@"Pickles version {0}", Assembly.GetExecutingAssembly().GetName().Version);
@@ -568,6 +571,31 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
 
             Check.That(shouldContinue).IsTrue();
             Check.That(configuration.TestResultsFormat).IsEqualTo(expectedResultsFormat);
+        }
+
+        [Test]
+        public void ThenCanParseLongFeatureBaseUriSuccessfully()
+        {
+            var args = new[] { @"-feature-base-uri=http://test" };
+
+            IConfiguration configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.FeatureBaseUri).IsEqualTo(new Uri("http://test",UriKind.Absolute));
+        }
+        [Test]
+        public void ThenCanParseShortFeatureBaseUriSuccessfully()
+        {
+            var args = new[] { @"-fbu=test/dir" };
+
+            IConfiguration configuration = new Configuration();
+            var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
+            bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
+
+            Check.That(shouldContinue).IsTrue();
+            Check.That(configuration.FeatureBaseUri).IsEqualTo(new Uri("test/dir",UriKind.Relative));
         }
     }
 }

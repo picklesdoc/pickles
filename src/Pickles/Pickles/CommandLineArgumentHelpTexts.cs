@@ -1,4 +1,4 @@
-﻿//  --------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="CommandLineArgumentHelpTexts.cs" company="PicklesDoc">
 //  Copyright 2011 Jeffrey Cameron
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -32,6 +32,7 @@ namespace PicklesDoc.Pickles
         public const string HelpEnableComments = "whether to enable comments in the output";
         public const string HelpExcludeTags = "exclude scenarios that match this tag";
         public const string HelpHideTags = "Technical tags that shouldn't be displayed (separated by ;)";
+        public const string HelpFeatureBaseUri = "base uri to use for features uri field in some reports like cucumber json";
 
         public const string HelpTestResultsFile =
             "the path to the linked test results file (can be a semicolon-separated list of files)";
