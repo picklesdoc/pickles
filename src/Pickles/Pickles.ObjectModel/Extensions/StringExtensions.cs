@@ -20,6 +20,7 @@
 
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace PicklesDoc.Pickles.Extensions
 {
@@ -46,6 +47,28 @@ namespace PicklesDoc.Pickles.Extensions
             }
 
             return sb.ToString();
+        }
+
+        /// <summary>
+        /// Takes a string and returns a url-friendly version of the string (slug) with all special characters
+        /// and extra spaces stripped out, with words seperated by dashes.
+        /// </summary>
+        /// <param name="text">The string that will be used to create the slug.</param>
+        /// <returns>A slug generated from the given string.</returns>
+        public static string ToSlug(this string text)
+        {
+            // remove any accent characters
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            var bytes = Encoding.GetEncoding("Cyrillic").GetBytes(text);
+            var str = Encoding.ASCII.GetString(bytes);
+
+            // modify string to slug format
+            str = str.ToLower();
+            str = Regex.Replace(str, @"[^a-z0-9\s-]", "");
+            str = Regex.Replace(str, @"\s+", " ").Trim();
+            str = Regex.Replace(str, @"\s", "-");
+
+            return str;
         }
     }
 }

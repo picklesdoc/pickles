@@ -1,4 +1,4 @@
-﻿//  --------------------------------------------------------------------------------------------------------------------
+//  --------------------------------------------------------------------------------------------------------------------
 //  <copyright file="CucumberDocumentationBuilder.cs" company="PicklesDoc">
 //  Copyright 2017 Dmitry Grekov
 //  Copyright 2012-present PicklesDoc team and community contributors
@@ -81,8 +81,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
             var toOutPut = features.Select(n =>
             {
                 var f = n.Feature;
+                var featureId = f.Name.ToSlug();
                 return new
                 {
+                    id = featureId,
                     keyword = "Feature",
                     name = f.Name,
                     uri = this.GetUri(n),
@@ -91,6 +93,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
                     elements = f.FeatureElements.Select(fe =>
                         new
                         {
+                            id = featureId+";"+fe.Slug,
                             keyword = fe is Scenario ? "Scenario" : "Scenario Outline",
                             name = fe.Name,
                             line = fe.Location.Line,
@@ -101,6 +104,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
                                 keyword = s.Keyword,
                                 name = s.Name,
                                 line = s.Location.Line,
+                                hidden = false,
                                 result = new
                                 {
                                     status = DetermineStatus(fe),

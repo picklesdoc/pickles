@@ -22,12 +22,14 @@ Scenario: A simple feature
 """
 [
   {
+    "id": "clearing-screen",
     "keyword": "Feature",
     "name": "Clearing Screen",
     "tags": [],
     "line": 1,
     "elements": [
       {
+        "id": "clearing-screen;clear-the-screen",
         "keyword": "Scenario",
         "name": "Clear the screen",
         "line": 7,
@@ -45,6 +47,7 @@ Scenario: A simple feature
             "keyword": "Given",
             "name": "I have entered 50 into the calculator",
             "line": 8,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
@@ -54,6 +57,7 @@ Scenario: A simple feature
             "keyword": "And",
             "name": "I have entered 70 into the calculator",
             "line": 9,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
@@ -63,6 +67,7 @@ Scenario: A simple feature
             "keyword": "When",
             "name": "I press C",
             "line": 10,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
@@ -72,6 +77,7 @@ Scenario: A simple feature
             "keyword": "Then",
             "name": "the screen should be empty",
             "line": 11,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
@@ -123,12 +129,14 @@ Scenario: A feature with a table
 """
 [
   {
+    "id": "interactive-dhtml-view",
     "keyword": "Feature",
     "name": "Interactive DHTML View",
     "tags": [],
     "line": 1,
     "elements": [
       {
+        "id": "interactive-dhtml-view;scenario-with-large-data-table",
         "keyword": "Scenario",
         "name": "Scenario with large data table",
         "line": 7,
@@ -139,6 +147,7 @@ Scenario: A feature with a table
             "keyword": "Given",
             "name": "a feature with a large table of data:",
             "line": 8,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
@@ -148,6 +157,7 @@ Scenario: A feature with a table
             "keyword": "When",
             "name": "I click on the table heading",
             "line": 32,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
@@ -157,6 +167,7 @@ Scenario: A feature with a table
             "keyword": "Then",
             "name": "the table body should collapse",
             "line": 33,
+            "hidden": false,
             "result": {
               "status": "Undefined",
               "duration": 1
