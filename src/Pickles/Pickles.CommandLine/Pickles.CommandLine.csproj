@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <OutputType>Exe</OutputType>
@@ -34,9 +34,9 @@
     <Version>0.1.0.0</Version>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <Authors>PicklesDoc and contributors</Authors>
-    <PackageIconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.png</PackageIconUrl>
+    <IconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.png</IconUrl>
     <PackageId>Pickles.CommandLine</PackageId>
-    <PackageLicenseUrl>http://apache.org/licenses/LICENSE-2.0.html</PackageLicenseUrl>
+    <PackageLicense>http://apache.org/licenses/LICENSE-2.0.html</PackageLicense>
     <PackageProjectUrl>http://www.picklesdoc.com/</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/picklesdoc/pickles/blob/master/CHANGELOG.md</PackageReleaseNotes>
     <PackageTags>SpecificationByExample BDD SpecFlow Gherkin Cucumber SpecByEx LivingDocumentation Documentation</PackageTags>
@@ -45,6 +45,10 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <RepositoryUrl>https://github.com/picklesdoc/pickles</RepositoryUrl>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>pickles</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>

@@ -99,3 +99,5 @@ node_modules/
 #include output docs
 !docs/Output/
 src/Pickles/.vs/config/applicationhost.config
+
+nupkg*/
