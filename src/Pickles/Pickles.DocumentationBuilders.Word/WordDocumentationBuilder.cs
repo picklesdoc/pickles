@@ -19,7 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.IO.Abstractions;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Xml.Linq;
@@ -41,9 +41,6 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
         private readonly WordFeatureFormatter wordFeatureFormatter;
         private readonly WordFontApplicator wordFontApplicator;
         private readonly WordHeaderFooterFormatter wordHeaderFooterFormatter;
-
-        private readonly IFileSystem fileSystem;
-
         private readonly WordStyleApplicator wordStyleApplicator;
 
         public WordDocumentationBuilder(
@@ -51,15 +48,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             WordFeatureFormatter wordFeatureFormatter,
             WordStyleApplicator wordStyleApplicator,
             WordFontApplicator wordFontApplicator,
-            WordHeaderFooterFormatter wordHeaderFooterFormatter,
-            IFileSystem fileSystem)
+            WordHeaderFooterFormatter wordHeaderFooterFormatter)
         {
             this.configuration = configuration;
             this.wordFeatureFormatter = wordFeatureFormatter;
             this.wordStyleApplicator = wordStyleApplicator;
             this.wordFontApplicator = wordFontApplicator;
             this.wordHeaderFooterFormatter = wordHeaderFooterFormatter;
-            this.fileSystem = fileSystem;
         }
 
         public void Build(Tree features)
@@ -67,12 +62,15 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             string filename = string.IsNullOrEmpty(this.configuration.SystemUnderTestName)
                 ? "features.docx"
                 : this.configuration.SystemUnderTestName + ".docx";
-            string documentFileName = this.fileSystem.Path.Combine(this.configuration.OutputFolder.FullName, filename);
-            if (this.fileSystem.File.Exists(documentFileName))
+
+            Directory.CreateDirectory(this.configuration.OutputFolder.FullName);
+            string documentFileName = Path.Combine(this.configuration.OutputFolder.FullName, filename);
+
+            if (File.Exists(documentFileName))
             {
                 try
                 {
-                    this.fileSystem.File.Delete(documentFileName);
+                    File.Delete(documentFileName);
                 }
                 catch (System.IO.IOException ex)
                 {
@@ -81,7 +79,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
                 }
             }
 
-            using (var stream = this.fileSystem.File.Create(documentFileName))
+            using (var stream = new FileStream(documentFileName, FileMode.CreateNew))
             using (
                 WordprocessingDocument wordProcessingDocument = WordprocessingDocument.Create(
                     stream,
@@ -114,7 +112,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             }
 
             // HACK - Add the table of contents
-            using (var stream = this.fileSystem.File.Open(documentFileName, System.IO.FileMode.Open))
+            using (var stream = new FileStream(documentFileName, System.IO.FileMode.Open))
             using (WordprocessingDocument wordProcessingDocument = WordprocessingDocument.Open(stream, true))
             {
                 XElement firstPara = wordProcessingDocument

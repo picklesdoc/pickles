@@ -82,7 +82,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests
 
             var outputPath =FileSystem.Path.Combine(Configuration.OutputFolder.FullName, "features.docx");
 
-            using (var stream = this.FileSystem.File.OpenRead(outputPath))
+            using (var stream = File.OpenRead(outputPath))
             {
                 var doc = WordprocessingDocument.Open(stream, false);
                 var body = doc.MainDocumentPart.Document.Body;
