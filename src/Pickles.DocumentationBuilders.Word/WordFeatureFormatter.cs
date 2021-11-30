@@ -19,7 +19,7 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using DocumentFormat.OpenXml;
+using System.Linq;
 using DocumentFormat.OpenXml.Wordprocessing;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using PicklesDoc.Pickles.DocumentationBuilders.Word.Extensions;
@@ -58,8 +58,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
         public void Format(Body body, FeatureNode featureNode)
         {
             Feature feature = featureNode.Feature;
+            var hideTags = configuration.HideTags?.Split(';', '@', ' ')
+                .Select(s => s[0] == '@' ? s : '@' + s).ToArray() ?? Array.Empty<string>();
+            if (feature.Tags.Intersect(hideTags, StringComparer.InvariantCultureIgnoreCase).Any())
+            {
+                return;
+            }
 
-            body.InsertPageBreak();
+            if (this.configuration.FeaturesOnSamePage)
+            {
+                body.GenerateParagraph("", "Normal");
+            }
+            else
+            {
+                body.InsertPageBreak();
+            }
 
             if (this.configuration.HasTestResults)
             {
@@ -76,7 +89,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
             body.GenerateParagraph(feature.Name, "Heading1");
 
-            if ( feature.Tags.Count != 0 )
+            if ( feature.Tags.Count != 0 &&
+                 !hideTags.Contains("@Tag"))
             {
                 var paragraph = new Paragraph(new ParagraphProperties(new ParagraphStyleId {Val = "Normal"}));
                 var tagrunProp = new RunProperties(new Italic(), new Color {ThemeColor = ThemeColorValues.Text2}) {Bold = new Bold() {Val = false}};
@@ -86,7 +100,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
 
             this.wordDescriptionFormatter.Format(body, feature.Description);
 
-            if (feature.Background != null)
+            if ((feature.Background != null) &&
+                !hideTags.Contains("@Background") &&
+                !feature.Background.Tags.Intersect(hideTags, StringComparer.InvariantCultureIgnoreCase).Any())
             {
                 this.wordBackgroundFormatter.Format(body, feature.Background);
             }
@@ -94,7 +110,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word
             foreach (IFeatureElement featureElement in feature.FeatureElements)
             {
                 var scenario = featureElement as Scenario;
-                if (scenario != null)
+                if ((scenario != null) &&
+                    !hideTags.Contains("@Scenario") &&
+                    !scenario.Tags.Intersect(hideTags, StringComparer.InvariantCultureIgnoreCase).Any())
                 {
                     this.wordScenarioFormatter.Format(body, scenario);
                 }

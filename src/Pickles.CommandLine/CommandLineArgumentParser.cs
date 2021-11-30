@@ -43,6 +43,7 @@ namespace PicklesDoc.Pickles.CommandLine
         private string testResultsFormat;
         private bool versionRequested;
         private bool includeExperimentalFeatures;
+        private bool featuresOnSamePage;
         private string enableCommentsValue;
         private string excludeTags;
         private string hideTags;
@@ -64,6 +65,7 @@ namespace PicklesDoc.Pickles.CommandLine
                 { "v|version", v => this.versionRequested = v != null },
                 { "h|?|help", v => this.helpRequested = v != null },
                 { "exp|include-experimental-features", CommandLineArgumentHelpTexts.HelpIncludeExperimentalFeatures, v => this.includeExperimentalFeatures = v != null },
+                { "page|features-on-same-page", CommandLineArgumentHelpTexts.HelpFeaturesOnSamePage, v => this.featuresOnSamePage = v != null },
                 { "cmt|enableComments=", CommandLineArgumentHelpTexts.HelpEnableComments, v => this.enableCommentsValue = v },
                 { "et|excludeTags=", CommandLineArgumentHelpTexts.HelpExcludeTags, v => this.excludeTags = v },
                 { "ht|hideTags=", CommandLineArgumentHelpTexts.HelpHideTags, v => this.hideTags = v },
@@ -148,6 +150,11 @@ namespace PicklesDoc.Pickles.CommandLine
             if (!string.IsNullOrEmpty(this.hideTags))
             {
                 configuration.HideTags = this.hideTags;
+            }
+
+            if (featuresOnSamePage)
+            {
+                configuration.FeaturesOnSamePage = this.featuresOnSamePage;
             }
 
             bool enableComments;

@@ -48,7 +48,10 @@ namespace PicklesDoc.Pickles
 
         bool ShouldIncludeExperimentalFeatures { get; }
 
+        /// <summary> Semicolon-separated List of Tags without the @ Character </summary>
         string ExcludeTags { get; set; }
+
+        /// <summary> Semicolon-separated List of Tags without the @ Character </summary>
         string HideTags { get; set; }
         Uri FeatureBaseUri { get; set; }
 
@@ -61,6 +64,9 @@ namespace PicklesDoc.Pickles
         void DisableExperimentalFeatures();
 
         bool ShouldEnableComments { get; }
+
+        /// <summary> Optional Flag to keep all Features on the same Page in the Word Output </summary>
+        bool FeaturesOnSamePage { get; set; }
 
         void EnableComments();
 

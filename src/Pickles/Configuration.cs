@@ -29,6 +29,7 @@ using NLog;
 
 namespace PicklesDoc.Pickles
 {
+    /// <inheritdoc />
     public class Configuration : IConfiguration
     {
         private static readonly Logger Log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType.Name);
@@ -114,6 +115,8 @@ namespace PicklesDoc.Pickles
                 this.AddTestResultFileIfItExists(IFileInfo);
             }
         }
+
+        public bool FeaturesOnSamePage { get; set; }
 
         public string ExcludeTags { get; set; }
 

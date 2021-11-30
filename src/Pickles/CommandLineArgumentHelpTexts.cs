@@ -29,6 +29,7 @@ namespace PicklesDoc.Pickles
         public const string HelpDocumentationFormat = "the format of the output documentation";
         public const string HelpTestResultsFormat = "the format of the linked test results (nunit|nunit3|xunit|xunit2|mstest |cucumberjson|specrun|vstest)";
         public const string HelpIncludeExperimentalFeatures = "whether to include experimental features";
+        public const string HelpFeaturesOnSamePage = "whether to allow printing multiple Features on the same Page";
         public const string HelpEnableComments = "whether to enable comments in the output";
         public const string HelpExcludeTags = "exclude scenarios that match this tag";
         public const string HelpHideTags = "Technical tags that shouldn't be displayed (separated by ;)";
