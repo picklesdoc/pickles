@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Html</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Html</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
     <AssemblyTitle>Pickles.DocumentationBuilders.Html</AssemblyTitle>
     <Description>A Pickles output formatter that outputs HTML documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -66,7 +66,7 @@
     <EmbeddedResource Include="Resources\js\scripts.js" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.8.0" />
+    <PackageReference Include="Autofac" Version="6.3.0" />
     <PackageReference Include="NLog" Version="4.5.3" />
     <PackageReference Include="System.Drawing.Common" Version="5.0.2" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />

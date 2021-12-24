@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>PicklesDoc.Pickles.CommandLine</RootNamespace>
     <AssemblyName>Pickles</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64;linux-x64</RuntimeIdentifiers>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Pickles\</SolutionDir>
     <AssemblyTitle>Pickles.CommandLine</AssemblyTitle>
@@ -48,6 +48,7 @@
     <RepositoryUrl>https://github.com/picklesdoc/pickles</RepositoryUrl>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>pickles</ToolCommandName>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>

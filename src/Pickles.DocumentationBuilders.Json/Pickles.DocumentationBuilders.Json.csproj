@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Json</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Json</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
     <AssemblyTitle>Pickles.DocumentationBuilders.Json</AssemblyTitle>
     <Description>A Pickles output formatter that outputs Json documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -24,7 +24,7 @@
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="4.8.0" />
+    <PackageReference Include="Autofac" Version="6.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="NLog" Version="4.5.3" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />

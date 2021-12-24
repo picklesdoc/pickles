@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>PicklesDoc.Pickles.Test</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.Test</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <AssemblyTitle>Pickles.Test</AssemblyTitle>
     <Description>Unit and integration tests for Pickles</Description>

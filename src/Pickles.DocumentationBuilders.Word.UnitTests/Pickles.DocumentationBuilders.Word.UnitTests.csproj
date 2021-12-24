@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
     <AssemblyTitle>Pickles.DocumentationBuilders.Word.UnitTests</AssemblyTitle>
     <Description>Unit Tests for the Pickles output formatter that outputs MS Word documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

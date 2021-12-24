@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
     <AssemblyTitle>Pickles.DocumentationBuilders.Markdown.UnitTests</AssemblyTitle>
     <Description>Unit tests for the Pickles output formatter that outputs Markdown documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

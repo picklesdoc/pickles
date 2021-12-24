@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests</AssemblyName>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
     <AssemblyTitle>Pickles.DocumentationBuilders.Dhtml.UnitTests</AssemblyTitle>
     <Description>Unit tests for the Pickles output formatter that outputs DHTML documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
