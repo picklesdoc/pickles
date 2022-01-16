@@ -57,6 +57,9 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             "  -h, -?, --help             " + "{0}" +
             "      --exp, --include-experimental-features" + "{0}" +
             "                             whether to include experimental features" + "{0}" +
+            "      --page, --features-on-same-page" + "{0}" +
+            "                             whether to allow printing multiple features on " + "{0}" +
+            "                               the same page" + "{0}" +
             "      --cmt, --enableComments=VALUE" + "{0}" +
             "                             whether to enable comments in the output" + "{0}" +
             "      --et, --excludeTags=VALUE" + "{0}" +
