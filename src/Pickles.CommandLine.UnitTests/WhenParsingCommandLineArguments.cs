@@ -357,7 +357,8 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
 
             Check.That(shouldContinue).IsTrue();
-            Check.That(configuration.HasTestResults).IsFalse();
+            Check.That(configuration.HasTestResults).IsTrue();
+            Check.That(configuration.TestResultsFiles.Count()).IsEqualTo(2);
         }
 
         [Test]

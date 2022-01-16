@@ -28,6 +28,9 @@ namespace PicklesDoc.Pickles.Extensions
 {
     public static class PathExtensions
     {
+        /// <summary> Since <see cref="Uri"/> is used, the Separator is NOT OS-dependent like <see cref="Path"/> assumes </summary>
+        public const char Separator = '/';
+
         public static string MakeRelativePath(string from, string to, IFileSystem fileSystem)
         {
             if (string.IsNullOrEmpty(from))

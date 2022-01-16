@@ -30,6 +30,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
     [TestFixture]
     internal class PathExtensionsTests : BaseFixture
     {
+
         [Test]
         public void Get_A_Relative_Path_When_Location_Is_Deeper_Than_Root()
         {
@@ -38,7 +39,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
 
             string actual = PathExtensions.MakeRelativePath("test",FileSystem.Path.Combine("test","deep","blah.feature"), fileSystem);
 
-            Check.That(actual).IsEqualTo(FileSystem.Path.Combine("deep","blah.feature"));
+            Check.That(actual).IsEqualTo("deep" + PathExtensions.Separator + "blah.feature");
         }
 
         [Test]
@@ -49,7 +50,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
 
             string actual = PathExtensions.MakeRelativePath("test",FileSystem.Path.Combine("test","deep","blah.feature"), fileSystem);
 
-            Check.That(actual).IsEqualTo(FileSystem.Path.Combine("deep","blah.feature"));
+            Check.That(actual).IsEqualTo("deep" + PathExtensions.Separator + "blah.feature");
         }
     }
 }

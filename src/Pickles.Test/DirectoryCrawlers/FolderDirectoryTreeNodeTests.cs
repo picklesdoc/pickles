@@ -154,7 +154,7 @@ namespace PicklesDoc.Pickles.Test.DirectoryCrawlers
 
             string relative = node.GetRelativeUriTo(uri);
 
-            Check.That(relative).IsEqualTo("DistributionOfRights"+Path.DirectorySeparatorChar);
+            Check.That(relative).IsEqualTo("DistributionOfRights/");
         }
     }
 }
