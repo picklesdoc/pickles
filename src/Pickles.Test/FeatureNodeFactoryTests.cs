@@ -138,6 +138,8 @@ namespace PicklesDoc.Pickles.Test
             public DateTime LastWriteTime { get; set; }
             public DateTime LastWriteTimeUtc { get; set; }
             public string Name { get; }
+
+            public string LinkTarget => throw new NotImplementedException();
         }
 
         private class MockMarkdownProvider : IMarkdownProvider

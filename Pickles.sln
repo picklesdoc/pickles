@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31019.35
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runners", "Runners", "{4E977674-6919-4F15-A6E3-37BFAC18C7E5}"
 EndProject
@@ -44,32 +44,38 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.DocumentationBuilde
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.DocumentationBuilders.Markdown", "src\Pickles.DocumentationBuilders.Markdown\Pickles.DocumentationBuilders.Markdown.csproj", "{732039F2-CAD8-44BC-9647-EC0ACAF59632}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.CommandLine", "src\Pickles.CommandLine\Pickles.CommandLine.csproj", "{453AA469-4548-4195-8E8E-940B3D29C84A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.CommandLine", "src\Pickles.CommandLine\Pickles.CommandLine.csproj", "{453AA469-4548-4195-8E8E-940B3D29C84A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.ObjectModel", "src\Pickles.ObjectModel\Pickles.ObjectModel.csproj", "{AA5E87FC-1116-44F4-8C25-8CFDECB88417}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.ObjectModel", "src\Pickles.ObjectModel\Pickles.ObjectModel.csproj", "{AA5E87FC-1116-44F4-8C25-8CFDECB88417}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.Test", "src\Pickles.Test\Pickles.Test.csproj", "{FAA00162-E809-4629-B61B-B3B8B0DF1678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.Test", "src\Pickles.Test\Pickles.Test.csproj", "{FAA00162-E809-4629-B61B-B3B8B0DF1678}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "markdowndeep", "src\markdowndeep\markdowndeep.csproj", "{22AE877D-C944-4451-A754-B03173250052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "markdowndeep", "src\markdowndeep\markdowndeep.csproj", "{22AE877D-C944-4451-A754-B03173250052}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.CommandLine.UnitTests", "src\Pickles.CommandLine.UnitTests\Pickles.CommandLine.UnitTests.csproj", "{4DFDDA7F-6CC6-4CF8-B3C2-C97B9746EC01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.CommandLine.UnitTests", "src\Pickles.CommandLine.UnitTests\Pickles.CommandLine.UnitTests.csproj", "{4DFDDA7F-6CC6-4CF8-B3C2-C97B9746EC01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.MSBuild", "src\Pickles.MSBuild\Pickles.MSBuild.csproj", "{BF34D482-3E0A-4384-AB61-FCF6BCE2E306}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.MSBuild", "src\Pickles.MSBuild\Pickles.MSBuild.csproj", "{BF34D482-3E0A-4384-AB61-FCF6BCE2E306}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles.PowerShell", "src\Pickles.PowerShell\Pickles.PowerShell.csproj", "{FA2D2086-9811-459D-86A9-779DBF1984BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles.PowerShell", "src\Pickles.PowerShell\Pickles.PowerShell.csproj", "{FA2D2086-9811-459D-86A9-779DBF1984BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pickles", "src\Pickles\Pickles.csproj", "{9AD58876-1368-493B-9D8A-08782AAAA0AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pickles", "src\Pickles\Pickles.csproj", "{9AD58876-1368-493B-9D8A-08782AAAA0AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_build", "build\_build.csproj", "{0C2B878C-B6A6-4548-9CC8-DCFA64A64908}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "build\_build.csproj", "{0C2B878C-B6A6-4548-9CC8-DCFA64A64908}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Release", "Release", "{436E3469-289B-4EC3-9E2F-0C72885D1014}"
-ProjectSection(SolutionItems) = preProject
-	README.md = README.md
-	CHANGELOG.md = CHANGELOG.md
-	LICENSE.txt = LICENSE.txt
-	CONTRIBUTING.md = CONTRIBUTING.md
-	pickles.png = pickles.png
-EndProjectSection
+	ProjectSection(SolutionItems) = preProject
+		Build.md = Build.md
+		CHANGELOG.md = CHANGELOG.md
+		CONTRIBUTING.md = CONTRIBUTING.md
+		LICENSE.txt = LICENSE.txt
+		pickles.png = pickles.png
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFiles", "SolutionFiles", "{9AE94E28-A5DF-4C0F-B7E4-A3AFA3ED608A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

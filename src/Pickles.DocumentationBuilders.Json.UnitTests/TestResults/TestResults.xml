@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="b9b63abe-74eb-48c8-a8c0-37382bc2f3f4" name="@Erics-MBP 2021-10-04 17:15:01" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2021-10-04T17:15:01.6109540-04:00" queuing="2021-10-04T17:15:01.6109540-04:00" start="2021-10-04T17:14:59.2971710-04:00" finish="2021-10-04T17:15:01.6291340-04:00" />
-  <TestSettings name="default" id="86e34e69-01db-40be-9be4-c1857ad637eb">
-    <Deployment runDeploymentRoot="_Erics-MBP_2021-10-04_17_15_01" />
+<TestRun id="a81f2299-7ae8-461e-8ed7-1b2d517c0b4c" name="ericcarlson@ERICCARLSONBBE6 2022-05-04 14:46:28" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-05-04T14:46:28.7855744-04:00" queuing="2022-05-04T14:46:28.7855745-04:00" start="2022-05-04T14:46:26.9992005-04:00" finish="2022-05-04T14:46:28.7905255-04:00" />
+  <TestSettings name="default" id="e36c9f40-9472-409c-af7c-c0a866712233">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-04_14_46_28" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="1fe2908a-c7b4-4b78-9bae-8d6adbd21657" testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" testName="AllTags_TagsInFeatureElement_ReturnsTags" computerName="Erics-MBP" duration="00:00:00.0031550" startTime="2021-10-04T17:15:01.3431890-04:00" endTime="2021-10-04T17:15:01.3463440-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1fe2908a-c7b4-4b78-9bae-8d6adbd21657" />
-    <UnitTestResult executionId="738cfeb7-2403-4fd7-a9ab-8152a8b5d643" testId="cc93a4b7-9290-755a-31cf-84b614824764" testName="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" computerName="Erics-MBP" duration="00:00:00.0063190" startTime="2021-10-04T17:15:01.3368300-04:00" endTime="2021-10-04T17:15:01.3431480-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="738cfeb7-2403-4fd7-a9ab-8152a8b5d643" />
-    <UnitTestResult executionId="3f7e68fb-d7c7-4746-981d-67f2d8049f90" testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" testName="AllTags_NullArgument_ThrowsNullReferenceException" computerName="Erics-MBP" duration="00:00:00.0101300" startTime="2021-10-04T17:15:01.3266410-04:00" endTime="2021-10-04T17:15:01.3367680-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f7e68fb-d7c7-4746-981d-67f2d8049f90" />
-    <UnitTestResult executionId="36955843-3b51-4ebd-b8b3-99d6416edfb3" testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" testName="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" computerName="Erics-MBP" duration="00:00:00.0104100" startTime="2021-10-04T17:15:01.3030530-04:00" endTime="2021-10-04T17:15:01.3132580-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36955843-3b51-4ebd-b8b3-99d6416edfb3" />
-    <UnitTestResult executionId="ecc3115e-e4b3-4c6d-bc2d-408df6b9bfbd" testId="5b98b001-80ec-3c39-0a53-5664dded3676" testName="AllTags_TagsInScenarioElement_ReturnsTags" computerName="Erics-MBP" duration="00:00:00.0004630" startTime="2021-10-04T17:15:01.3464200-04:00" endTime="2021-10-04T17:15:01.3468830-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ecc3115e-e4b3-4c6d-bc2d-408df6b9bfbd" />
+    <UnitTestResult executionId="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" testName="AllTags_TagsInFeatureElement_ReturnsTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0021370" startTime="2022-05-04T14:46:28.6890939-04:00" endTime="2022-05-04T14:46:28.6912301-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" />
+    <UnitTestResult executionId="edd79f91-31ef-4fbf-9cc0-45fedf60c425" testId="cc93a4b7-9290-755a-31cf-84b614824764" testName="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" computerName="ERICCARLSONBBE6" duration="00:00:00.0027529" startTime="2022-05-04T14:46:28.6863272-04:00" endTime="2022-05-04T14:46:28.6890800-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="edd79f91-31ef-4fbf-9cc0-45fedf60c425" />
+    <UnitTestResult executionId="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" testId="5b98b001-80ec-3c39-0a53-5664dded3676" testName="AllTags_TagsInScenarioElement_ReturnsTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0001820" startTime="2022-05-04T14:46:28.6912645-04:00" endTime="2022-05-04T14:46:28.6914460-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" />
+    <UnitTestResult executionId="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" testName="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" computerName="ERICCARLSONBBE6" duration="00:00:00.0303230" startTime="2022-05-04T14:46:28.6498517-04:00" endTime="2022-05-04T14:46:28.6800925-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" />
+    <UnitTestResult executionId="6f32ca5a-71b3-46f7-acbe-8f5027be3255" testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" testName="AllTags_NullArgument_ThrowsNullReferenceException" computerName="ERICCARLSONBBE6" duration="00:00:00.0046260" startTime="2022-05-04T14:46:28.6816805-04:00" endTime="2022-05-04T14:46:28.6863069-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f32ca5a-71b3-46f7-acbe-8f5027be3255" />
   </Results>
   <TestDefinitions>
-    <UnitTest name="AllTags_NullArgument_ThrowsNullReferenceException" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.json.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3">
-      <Execution id="3f7e68fb-d7c7-4746-981d-67f2d8049f90" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_NullArgument_ThrowsNullReferenceException" />
+    <UnitTest name="AllTags_NullArgument_ThrowsNullReferenceException" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3">
+      <Execution id="6f32ca5a-71b3-46f7-acbe-8f5027be3255" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_NullArgument_ThrowsNullReferenceException" />
     </UnitTest>
-    <UnitTest name="AllTags_TagsInScenarioElement_ReturnsTags" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.json.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="5b98b001-80ec-3c39-0a53-5664dded3676">
-      <Execution id="ecc3115e-e4b3-4c6d-bc2d-408df6b9bfbd" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsInScenarioElement_ReturnsTags" />
+    <UnitTest name="AllTags_TagsInScenarioElement_ReturnsTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="5b98b001-80ec-3c39-0a53-5664dded3676">
+      <Execution id="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsInScenarioElement_ReturnsTags" />
     </UnitTest>
-    <UnitTest name="AllTags_TagsInFeatureElement_ReturnsTags" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.json.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="26d00b18-4ae6-a4ee-cfe5-51f0b401a468">
-      <Execution id="1fe2908a-c7b4-4b78-9bae-8d6adbd21657" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsInFeatureElement_ReturnsTags" />
+    <UnitTest name="AllTags_TagsInFeatureElement_ReturnsTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="26d00b18-4ae6-a4ee-cfe5-51f0b401a468">
+      <Execution id="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsInFeatureElement_ReturnsTags" />
     </UnitTest>
-    <UnitTest name="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.json.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="84c840c6-def3-f8b5-446a-2ca10eac9c81">
-      <Execution id="36955843-3b51-4ebd-b8b3-99d6416edfb3" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" />
+    <UnitTest name="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="84c840c6-def3-f8b5-446a-2ca10eac9c81">
+      <Execution id="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" />
     </UnitTest>
-    <UnitTest name="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.json.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="cc93a4b7-9290-755a-31cf-84b614824764">
-      <Execution id="738cfeb7-2403-4fd7-a9ab-8152a8b5d643" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" />
+    <UnitTest name="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="cc93a4b7-9290-755a-31cf-84b614824764">
+      <Execution id="edd79f91-31ef-4fbf-9cc0-45fedf60c425" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" executionId="1fe2908a-c7b4-4b78-9bae-8d6adbd21657" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cc93a4b7-9290-755a-31cf-84b614824764" executionId="738cfeb7-2403-4fd7-a9ab-8152a8b5d643" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" executionId="3f7e68fb-d7c7-4746-981d-67f2d8049f90" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" executionId="36955843-3b51-4ebd-b8b3-99d6416edfb3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="5b98b001-80ec-3c39-0a53-5664dded3676" executionId="ecc3115e-e4b3-4c6d-bc2d-408df6b9bfbd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" executionId="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc93a4b7-9290-755a-31cf-84b614824764" executionId="edd79f91-31ef-4fbf-9cc0-45fedf60c425" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b98b001-80ec-3c39-0a53-5664dded3676" executionId="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" executionId="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" executionId="6f32ca5a-71b3-46f7-acbe-8f5027be3255" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -47,10 +47,10 @@
   <ResultSummary outcome="Completed">
     <Counters total="5" executed="5" passed="5" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
-      <StdOut>NUnit Adapter 3.17.0.0: Test execution started
-Running all tests in /Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Json.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll
-   NUnit3TestExecutor discovered 5 of 5 NUnit test cases
-NUnit Adapter 3.17.0.0: Test execution complete
+      <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
+Running all tests in C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll&#xD;
+   NUnit3TestExecutor discovered 5 of 5 NUnit test cases&#xD;
+NUnit Adapter 3.17.0.0: Test execution complete&#xD;
 </StdOut>
     </Output>
   </ResultSummary>

@@ -58,6 +58,10 @@
     <ProjectReference Include="..\Pickles\Pickles.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="NuGetizer" Version="0.7.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="System.Management.Automation" Version="6.0.4" />
   </ItemGroup>
 </Project>

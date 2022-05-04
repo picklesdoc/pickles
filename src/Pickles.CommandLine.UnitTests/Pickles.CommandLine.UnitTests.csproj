@@ -39,8 +39,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="NFluent" Version="2.7.2" />
+    <PackageReference Include="NuGetizer" Version="0.7.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="NUnit" Version="3.13.1" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="13.2.47" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="17.0.3" />
   </ItemGroup>
 </Project>

@@ -29,7 +29,6 @@ using PicklesDoc.Pickles.Test;
 using PicklesDoc.Pickles.DataStructures;
 using PicklesDoc.Pickles;
 using System.IO;
-using System.IO.Abstractions;
 using PicklesDoc.Pickles.DirectoryCrawler;
 using Autofac;
 using NFluent;
@@ -77,7 +76,7 @@ namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
 
             var feature = parser.Parse(new StringReader(featureDescription));
 
-            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"output"), string.Empty, feature));
+            this.nodes = new Tree(new FeatureNode(FileSystem.DirectoryInfo.FromDirectoryName(@"output"), string.Empty, feature));
         }
 
         [When(@"I generate the documentation")]

@@ -56,7 +56,7 @@ class Build : NukeBuild
 
     String AssemblyProduct = "Pickles";
     String AssemblyCompany = "Pickles";
-    String Version = "3.0.1";
+    String Version = "3.1.0";
     String Copyright = "Copyright (c) Jeffrey Cameron 2010-2012, PicklesDoc 2012-present";
     String NuGetApiKey = "";
 

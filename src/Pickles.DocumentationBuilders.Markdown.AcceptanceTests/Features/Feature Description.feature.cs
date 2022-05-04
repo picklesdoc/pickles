@@ -35,9 +35,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature Description", "    In order include the description (In order, As a, I want) for each feature\n  " +
-                    "  As a reader of the generated documentation\n    I want the feature description " +
-                    "included below the feature heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature Description", "    In order include the description (In order, As a, I want) for each feature\r\n " +
+                    "   As a reader of the generated documentation\r\n    I want the feature descriptio" +
+                    "n included below the feature heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

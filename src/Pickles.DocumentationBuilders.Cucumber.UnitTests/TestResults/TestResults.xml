@@ -1,309 +1,309 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="8f4e7e1c-6fde-4704-9599-d3c743f8aa17" name="@Erics-MBP 2021-10-04 17:15:02" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2021-10-04T17:15:02.9492860-04:00" queuing="2021-10-04T17:15:02.9492860-04:00" start="2021-10-04T17:14:59.3321800-04:00" finish="2021-10-04T17:15:02.9649440-04:00" />
-  <TestSettings name="default" id="efe8d591-c864-4857-8ecc-ec3d0297d133">
-    <Deployment runDeploymentRoot="_Erics-MBP_2021-10-04_17_15_02" />
+<TestRun id="19a4b05a-e6dc-4fc6-8aa4-38bc42ea5d04" name="ericcarlson@ERICCARLSONBBE6 2022-05-04 14:46:26" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-05-04T14:46:26.4341154-04:00" queuing="2022-05-04T14:46:26.4341156-04:00" start="2022-05-04T14:46:22.1868811-04:00" finish="2022-05-04T14:46:26.4389020-04:00" />
+  <TestSettings name="default" id="fa0a9029-505e-46aa-864d-0c24387a233a">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-04_14_46_26" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="9a5886be-78aa-4248-8750-e98062c1137c" testId="f39f3621-b2db-acf4-6024-7330b5675c0a" testName="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" computerName="Erics-MBP" duration="00:00:00.2418330" startTime="2021-10-04T17:15:02.0390900-04:00" endTime="2021-10-04T17:15:02.2807290-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a5886be-78aa-4248-8750-e98062c1137c" />
-    <UnitTestResult executionId="e4811cd7-ba48-4bd3-966d-867d55dfb8ac" testId="de3560be-e722-db99-5be6-2a40c144ed43" testName="ASimpleFeatureInAFolderWithFileBaseUri" computerName="Erics-MBP" duration="00:00:00.0167500" startTime="2021-10-04T17:15:02.6249470-04:00" endTime="2021-10-04T17:15:02.6416980-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4811cd7-ba48-4bd3-966d-867d55dfb8ac">
+    <UnitTestResult executionId="a8ab851e-5669-4cb0-a456-54b24e71f1be" testId="de3560be-e722-db99-5be6-2a40c144ed43" testName="ASimpleFeatureInAFolderWithFileBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:00.0058170" startTime="2022-05-04T14:46:26.2959024-04:00" endTime="2022-05-04T14:46:26.3017194-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8ab851e-5669-4cb0-a456-54b24e71f1be">
       <Output>
-        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-     Given I have entered 50 into the calculator
-     And I have entered 70 into the calculator
-     When I press C
-     Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)
-And feature base uri is provided from configuration as 'test'
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("test") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "test/FeatureTest/SettingUriForAFeature.feature"
+        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+     Given I have entered 50 into the calculator&#xD;
+     And I have entered 70 into the calculator&#xD;
+     When I press C&#xD;
+     Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+And feature base uri is provided from configuration as 'test'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("test") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "test/FeatureTest/SettingUriForAFeature.feature"&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "test/Feat...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="3c167ca6-6d57-4ac4-97b7-c0581c29a878" testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" testName="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" computerName="Erics-MBP" duration="00:00:00.2990750" startTime="2021-10-04T17:15:02.3182710-04:00" endTime="2021-10-04T17:15:02.6173500-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c167ca6-6d57-4ac4-97b7-c0581c29a878">
+    <UnitTestResult executionId="f69dd06f-6856-4fc3-ac46-f22c18dcdfc9" testId="a2666154-353c-538d-1d94-f354067d2903" testName="ASimpleFeatureInAFolderWithoutBaseUriSet" computerName="ERICCARLSONBBE6" duration="00:00:00.0126590" startTime="2022-05-04T14:46:26.3069869-04:00" endTime="2022-05-04T14:46:26.3196458-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f69dd06f-6856-4fc3-ac46-f22c18dcdfc9">
       <Output>
-        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-     Given I have entered 50 into the calculator
-     And I have entered 70 into the calculator
-     When I press C
-     Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.2s)
-And feature base uri is provided from configuration as 'http://root/test/'
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "http://root/test/FeatureTest/SettingUriForAFeature.feature"
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "http://ro...") (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="fda50df3-9dcd-4bf6-ab6b-546d66ab3ea2" testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" testName="ASimpleFeature" computerName="Erics-MBP" duration="00:00:00.0092980" startTime="2021-10-04T17:15:02.6989690-04:00" endTime="2021-10-04T17:15:02.7082670-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fda50df3-9dcd-4bf6-ab6b-546d66ab3ea2">
-      <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  Feature: Clearing Screen
-      In order to restart a new set of calculations
-      As a math idiot
-      I want to be able to clear the screen
-  
-  @workflow @slow
-  Scenario: Clear the screen
-      Given I have entered 50 into the calculator
-      And I have entered 70 into the calculator
-      When I press C
-      Then the screen should be empty
--&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Clearing...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  [
-    {
-      "id": "clearing-screen",
-      "keyword": "Feature",
-      "name": "Clearing Screen",
-      "tags": [],
-      "line": 1,
-      "elements": [
-        {
-          "id": "clearing-screen;clear-the-screen",
-          "keyword": "Scenario",
-          "name": "Clear the screen",
-          "line": 7,
-          "type": "scenario",
-          "tags": [
-            {
-              "name": "@workflow"
-            },
-            {
-              "name": "@slow"
-            }
-          ],
-          "steps": [
-            {
-              "keyword": "Given",
-              "name": "I have entered 50 into the calculator",
-              "line": 8,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "And",
-              "name": "I have entered 70 into the calculator",
-              "line": 9,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "When",
-              "name": "I press C",
-              "line": 10,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "Then",
-              "name": "the screen should be empty",
-              "line": 11,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            }
--&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="560f4cc2-ae11-44dc-8721-41ec5b584878" testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" testName="ASimpleFeatureInAFolderWithFolderBaseUri" computerName="Erics-MBP" duration="00:00:00.0092040" startTime="2021-10-04T17:15:02.6417390-04:00" endTime="2021-10-04T17:15:02.6509430-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="560f4cc2-ae11-44dc-8721-41ec5b584878">
-      <Output>
-        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-     Given I have entered 50 into the calculator
-     And I have entered 70 into the calculator
-     When I press C
-     Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)
-And feature base uri is provided from configuration as 'root/test/'
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("root/test/") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "root/test/FeatureTest/SettingUriForAFeature.feature"
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "root/test...") (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="1cd5d7e3-0e9f-4b14-a98d-d92d393c98fc" testId="a2666154-353c-538d-1d94-f354067d2903" testName="ASimpleFeatureInAFolderWithoutBaseUriSet" computerName="Erics-MBP" duration="00:00:00.0086050" startTime="2021-10-04T17:15:02.6509970-04:00" endTime="2021-10-04T17:15:02.6596020-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1cd5d7e3-0e9f-4b14-a98d-d92d393c98fc">
-      <Output>
-        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-      Given I have entered 50 into the calculator
-      And I have entered 70 into the calculator
-      When I press C
-      Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "FeatureTest/SettingUriForAFeature.feature"
+        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+      Given I have entered 50 into the calculator&#xD;
+      And I have entered 70 into the calculator&#xD;
+      When I press C&#xD;
+      Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "FeatureTest/SettingUriForAFeature.feature"&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "FeatureTe...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f7ab4d76-6392-483c-9e72-0f4d0d902578" testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" testName="AFeatureWithATable" computerName="Erics-MBP" duration="00:00:00.0232330" startTime="2021-10-04T17:15:02.6756930-04:00" endTime="2021-10-04T17:15:02.6989260-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7ab4d76-6392-483c-9e72-0f4d0d902578">
+    <UnitTestResult executionId="6e6bd849-e558-457d-9102-9015b6822f2b" testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" testName="AFeatureWithATable" computerName="ERICCARLSONBBE6" duration="00:00:00.0110379" startTime="2022-05-04T14:46:26.3206994-04:00" endTime="2022-05-04T14:46:26.3317376-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6e6bd849-e558-457d-9102-9015b6822f2b">
       <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  Feature: Interactive DHTML View
-      In order to increase stakeholder engagement with pickled specs
-      As a SpecFlow evangelist
-      I want to adjust the level of detail in the DHTML view to suit my audience
-      So that I do not overwhelm them.
-  
-  Scenario: Scenario with large data table
-      Given a feature with a large table of data:
-          | heading    | page # |
-          | Chapter 1  | 1      |
-          | Chapter 2  | 5      |
-          | Chapter 3  | 10     |
-          | Chapter 4  | 15     |
-          | Chapter 5  | 20     |
-          | Chapter 6  | 25     |
-          | Chapter 7  | 30     |
-          | Chapter 8  | 35     |
-          | Chapter 9  | 40     |
-          | Chapter 10 | 45     |
-          | Chapter 11 | 50     |
-          | Chapter 12 | 55     |
-          | Chapter 13 | 60     |
-          | Chapter 14 | 65     |
-          | Chapter 15 | 70     |
-          | Chapter 16 | 75     |
-          | Chapter 17 | 80     |
-          | Chapter 18 | 85     |
-          | Chapter 19 | 90     |
-          | Chapter 20 | 95     |
-          | Chapter 21 | 100    |
-          | Chapter 22 | 105    |
-      When I click on the table heading
-      Then the table body should collapse
--&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Interact...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  [
-    {
-      "id": "interactive-dhtml-view",
-      "keyword": "Feature",
-      "name": "Interactive DHTML View",
-      "tags": [],
-      "line": 1,
-      "elements": [
-        {
-          "id": "interactive-dhtml-view;scenario-with-large-data-table",
-          "keyword": "Scenario",
-          "name": "Scenario with large data table",
-          "line": 7,
-          "type": "scenario",
-          "tags": [],
-          "steps": [
-            {
-              "keyword": "Given",
-              "name": "a feature with a large table of data:",
-              "line": 8,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "When",
-              "name": "I click on the table heading",
-              "line": 32,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "Then",
-              "name": "the table body should collapse",
-              "line": 33,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            }
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Interactive DHTML View&#xD;
+      In order to increase stakeholder engagement with pickled specs&#xD;
+      As a SpecFlow evangelist&#xD;
+      I want to adjust the level of detail in the DHTML view to suit my audience&#xD;
+      So that I do not overwhelm them.&#xD;
+  &#xD;
+  Scenario: Scenario with large data table&#xD;
+      Given a feature with a large table of data:&#xD;
+          | heading    | page # |&#xD;
+          | Chapter 1  | 1      |&#xD;
+          | Chapter 2  | 5      |&#xD;
+          | Chapter 3  | 10     |&#xD;
+          | Chapter 4  | 15     |&#xD;
+          | Chapter 5  | 20     |&#xD;
+          | Chapter 6  | 25     |&#xD;
+          | Chapter 7  | 30     |&#xD;
+          | Chapter 8  | 35     |&#xD;
+          | Chapter 9  | 40     |&#xD;
+          | Chapter 10 | 45     |&#xD;
+          | Chapter 11 | 50     |&#xD;
+          | Chapter 12 | 55     |&#xD;
+          | Chapter 13 | 60     |&#xD;
+          | Chapter 14 | 65     |&#xD;
+          | Chapter 15 | 70     |&#xD;
+          | Chapter 16 | 75     |&#xD;
+          | Chapter 17 | 80     |&#xD;
+          | Chapter 18 | 85     |&#xD;
+          | Chapter 19 | 90     |&#xD;
+          | Chapter 20 | 95     |&#xD;
+          | Chapter 21 | 100    |&#xD;
+          | Chapter 22 | 105    |&#xD;
+      When I click on the table heading&#xD;
+      Then the table body should collapse&#xD;
+-&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Interact...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  [&#xD;
+    {&#xD;
+      "id": "interactive-dhtml-view",&#xD;
+      "keyword": "Feature",&#xD;
+      "name": "Interactive DHTML View",&#xD;
+      "tags": [],&#xD;
+      "line": 1,&#xD;
+      "elements": [&#xD;
+        {&#xD;
+          "id": "interactive-dhtml-view;scenario-with-large-data-table",&#xD;
+          "keyword": "Scenario",&#xD;
+          "name": "Scenario with large data table",&#xD;
+          "line": 7,&#xD;
+          "type": "scenario",&#xD;
+          "tags": [],&#xD;
+          "steps": [&#xD;
+            {&#xD;
+              "keyword": "Given",&#xD;
+              "name": "a feature with a large table of data:",&#xD;
+              "line": 8,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "When",&#xD;
+              "name": "I click on the table heading",&#xD;
+              "line": 32,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "Then",&#xD;
+              "name": "the table body should collapse",&#xD;
+              "line": 33,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            }&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="931b65a9-1392-4e31-9755-d846f8d43440" testId="f39f3621-b2db-acf4-6024-7330b5675c0a" testName="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" computerName="ERICCARLSONBBE6" duration="00:00:00.3246830" startTime="2022-05-04T14:46:24.9122266-04:00" endTime="2022-05-04T14:46:25.2368416-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="931b65a9-1392-4e31-9755-d846f8d43440" />
+    <UnitTestResult executionId="c7fc33f1-839a-44d3-a85b-7751a6f754ed" testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" testName="ASimpleFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0033200" startTime="2022-05-04T14:46:26.3317683-04:00" endTime="2022-05-04T14:46:26.3350884-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c7fc33f1-839a-44d3-a85b-7751a6f754ed">
+      <Output>
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+      In order to restart a new set of calculations&#xD;
+      As a math idiot&#xD;
+      I want to be able to clear the screen&#xD;
+  &#xD;
+  @workflow @slow&#xD;
+  Scenario: Clear the screen&#xD;
+      Given I have entered 50 into the calculator&#xD;
+      And I have entered 70 into the calculator&#xD;
+      When I press C&#xD;
+      Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Clearing...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  [&#xD;
+    {&#xD;
+      "id": "clearing-screen",&#xD;
+      "keyword": "Feature",&#xD;
+      "name": "Clearing Screen",&#xD;
+      "tags": [],&#xD;
+      "line": 1,&#xD;
+      "elements": [&#xD;
+        {&#xD;
+          "id": "clearing-screen;clear-the-screen",&#xD;
+          "keyword": "Scenario",&#xD;
+          "name": "Clear the screen",&#xD;
+          "line": 7,&#xD;
+          "type": "scenario",&#xD;
+          "tags": [&#xD;
+            {&#xD;
+              "name": "@workflow"&#xD;
+            },&#xD;
+            {&#xD;
+              "name": "@slow"&#xD;
+            }&#xD;
+          ],&#xD;
+          "steps": [&#xD;
+            {&#xD;
+              "keyword": "Given",&#xD;
+              "name": "I have entered 50 into the calculator",&#xD;
+              "line": 8,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "And",&#xD;
+              "name": "I have entered 70 into the calculator",&#xD;
+              "line": 9,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "When",&#xD;
+              "name": "I press C",&#xD;
+              "line": 10,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "Then",&#xD;
+              "name": "the screen should be empty",&#xD;
+              "line": 11,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            }&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3d002b00-bc38-4bb7-897e-4351e16a2593" testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" testName="ASimpleFeatureInAFolderWithFolderBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:00.0052370" startTime="2022-05-04T14:46:26.3017365-04:00" endTime="2022-05-04T14:46:26.3069731-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d002b00-bc38-4bb7-897e-4351e16a2593">
+      <Output>
+        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+     Given I have entered 50 into the calculator&#xD;
+     And I have entered 70 into the calculator&#xD;
+     When I press C&#xD;
+     Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+And feature base uri is provided from configuration as 'root/test/'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("root/test/") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "root/test...") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="75f1b8dc-b3cf-4f14-87ca-99e86b138c47" testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" testName="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:01.0541799" startTime="2022-05-04T14:46:25.2416740-04:00" endTime="2022-05-04T14:46:26.2958537-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="75f1b8dc-b3cf-4f14-87ca-99e86b138c47">
+      <Output>
+        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+     Given I have entered 50 into the calculator&#xD;
+     And I have entered 70 into the calculator&#xD;
+     When I press C&#xD;
+     Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.9s)&#xD;
+And feature base uri is provided from configuration as 'http://root/test/'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "http://root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "http://ro...") (0.1s)</StdOut>
       </Output>
     </UnitTestResult>
   </Results>
   <TestDefinitions>
-    <UnitTest name="ASimpleFeatureInAFolderWithoutBaseUriSet" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="a2666154-353c-538d-1d94-f354067d2903">
-      <Execution id="1cd5d7e3-0e9f-4b14-a98d-d92d393c98fc" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithoutBaseUriSet" />
+    <UnitTest name="ASimpleFeatureInAFolderWithoutBaseUriSet" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="a2666154-353c-538d-1d94-f354067d2903">
+      <Execution id="f69dd06f-6856-4fc3-ac46-f22c18dcdfc9" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithoutBaseUriSet" />
     </UnitTest>
-    <UnitTest name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="59ff08fb-5d87-ad92-134e-e652c18e54d2">
-      <Execution id="3c167ca6-6d57-4ac4-97b7-c0581c29a878" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" />
+    <UnitTest name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="59ff08fb-5d87-ad92-134e-e652c18e54d2">
+      <Execution id="75f1b8dc-b3cf-4f14-87ca-99e86b138c47" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" />
     </UnitTest>
-    <UnitTest name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="f39f3621-b2db-acf4-6024-7330b5675c0a">
-      <Execution id="9a5886be-78aa-4248-8750-e98062c1137c" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.CucumberDocumentationBuilderTests" name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" />
+    <UnitTest name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="f39f3621-b2db-acf4-6024-7330b5675c0a">
+      <Execution id="931b65a9-1392-4e31-9755-d846f8d43440" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.CucumberDocumentationBuilderTests" name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" />
     </UnitTest>
-    <UnitTest name="ASimpleFeature" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="797e3bf8-d1b0-5307-6959-1a39dacd6819">
-      <Execution id="fda50df3-9dcd-4bf6-ab6b-546d66ab3ea2" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="ASimpleFeature" />
+    <UnitTest name="ASimpleFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="797e3bf8-d1b0-5307-6959-1a39dacd6819">
+      <Execution id="c7fc33f1-839a-44d3-a85b-7751a6f754ed" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="ASimpleFeature" />
     </UnitTest>
-    <UnitTest name="AFeatureWithATable" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="4cd6546d-4c91-a70f-160f-162ed395a6c4">
-      <Execution id="f7ab4d76-6392-483c-9e72-0f4d0d902578" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="AFeatureWithATable" />
+    <UnitTest name="AFeatureWithATable" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="4cd6546d-4c91-a70f-160f-162ed395a6c4">
+      <Execution id="6e6bd849-e558-457d-9102-9015b6822f2b" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="AFeatureWithATable" />
     </UnitTest>
-    <UnitTest name="ASimpleFeatureInAFolderWithFileBaseUri" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="de3560be-e722-db99-5be6-2a40c144ed43">
-      <Execution id="e4811cd7-ba48-4bd3-966d-867d55dfb8ac" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFileBaseUri" />
+    <UnitTest name="ASimpleFeatureInAFolderWithFileBaseUri" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="de3560be-e722-db99-5be6-2a40c144ed43">
+      <Execution id="a8ab851e-5669-4cb0-a456-54b24e71f1be" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFileBaseUri" />
     </UnitTest>
-    <UnitTest name="ASimpleFeatureInAFolderWithFolderBaseUri" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.cucumber.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="8ffcd521-b686-09ef-40ee-6003dae1bbfb">
-      <Execution id="560f4cc2-ae11-44dc-8721-41ec5b584878" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFolderBaseUri" />
+    <UnitTest name="ASimpleFeatureInAFolderWithFolderBaseUri" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="8ffcd521-b686-09ef-40ee-6003dae1bbfb">
+      <Execution id="3d002b00-bc38-4bb7-897e-4351e16a2593" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFolderBaseUri" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="f39f3621-b2db-acf4-6024-7330b5675c0a" executionId="9a5886be-78aa-4248-8750-e98062c1137c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="de3560be-e722-db99-5be6-2a40c144ed43" executionId="e4811cd7-ba48-4bd3-966d-867d55dfb8ac" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" executionId="3c167ca6-6d57-4ac4-97b7-c0581c29a878" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" executionId="fda50df3-9dcd-4bf6-ab6b-546d66ab3ea2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" executionId="560f4cc2-ae11-44dc-8721-41ec5b584878" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a2666154-353c-538d-1d94-f354067d2903" executionId="1cd5d7e3-0e9f-4b14-a98d-d92d393c98fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" executionId="f7ab4d76-6392-483c-9e72-0f4d0d902578" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de3560be-e722-db99-5be6-2a40c144ed43" executionId="a8ab851e-5669-4cb0-a456-54b24e71f1be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2666154-353c-538d-1d94-f354067d2903" executionId="f69dd06f-6856-4fc3-ac46-f22c18dcdfc9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" executionId="6e6bd849-e558-457d-9102-9015b6822f2b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f39f3621-b2db-acf4-6024-7330b5675c0a" executionId="931b65a9-1392-4e31-9755-d846f8d43440" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" executionId="c7fc33f1-839a-44d3-a85b-7751a6f754ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" executionId="3d002b00-bc38-4bb7-897e-4351e16a2593" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" executionId="75f1b8dc-b3cf-4f14-87ca-99e86b138c47" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -312,251 +312,251 @@ Then the JSON file should contain
   <ResultSummary outcome="Completed">
     <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
-      <StdOut>NUnit Adapter 3.17.0.0: Test execution started
-Running all tests in /Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Cucumber.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll
-   NUnit3TestExecutor discovered 7 of 7 NUnit test cases
-Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-     Given I have entered 50 into the calculator
-     And I have entered 70 into the calculator
-     When I press C
-     Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.2s)
-And feature base uri is provided from configuration as 'http://root/test/'
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "http://root/test/FeatureTest/SettingUriForAFeature.feature"
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "http://ro...") (0.0s)
-
-Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-     Given I have entered 50 into the calculator
-     And I have entered 70 into the calculator
-     When I press C
-     Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)
-And feature base uri is provided from configuration as 'test'
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("test") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "test/FeatureTest/SettingUriForAFeature.feature"
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "test/Feat...") (0.0s)
-
-Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-     Given I have entered 50 into the calculator
-     And I have entered 70 into the calculator
-     When I press C
-     Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)
-And feature base uri is provided from configuration as 'root/test/'
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("root/test/") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "root/test/FeatureTest/SettingUriForAFeature.feature"
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "root/test...") (0.0s)
-
-Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'
-  --- multiline step argument ---
-  Feature: Clearing Screen
-  Scenario: Clear the screen
-      Given I have entered 50 into the calculator
-      And I have entered 70 into the calculator
-      When I press C
-      Then the screen should be empty
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  "uri": "FeatureTest/SettingUriForAFeature.feature"
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "FeatureTe...") (0.0s)
-
-Given I have this feature description
-  --- multiline step argument ---
-  Feature: Interactive DHTML View
-      In order to increase stakeholder engagement with pickled specs
-      As a SpecFlow evangelist
-      I want to adjust the level of detail in the DHTML view to suit my audience
-      So that I do not overwhelm them.
-  
-  Scenario: Scenario with large data table
-      Given a feature with a large table of data:
-          | heading    | page # |
-          | Chapter 1  | 1      |
-          | Chapter 2  | 5      |
-          | Chapter 3  | 10     |
-          | Chapter 4  | 15     |
-          | Chapter 5  | 20     |
-          | Chapter 6  | 25     |
-          | Chapter 7  | 30     |
-          | Chapter 8  | 35     |
-          | Chapter 9  | 40     |
-          | Chapter 10 | 45     |
-          | Chapter 11 | 50     |
-          | Chapter 12 | 55     |
-          | Chapter 13 | 60     |
-          | Chapter 14 | 65     |
-          | Chapter 15 | 70     |
-          | Chapter 16 | 75     |
-          | Chapter 17 | 80     |
-          | Chapter 18 | 85     |
-          | Chapter 19 | 90     |
-          | Chapter 20 | 95     |
-          | Chapter 21 | 100    |
-          | Chapter 22 | 105    |
-      When I click on the table heading
-      Then the table body should collapse
--&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Interact...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  [
-    {
-      "id": "interactive-dhtml-view",
-      "keyword": "Feature",
-      "name": "Interactive DHTML View",
-      "tags": [],
-      "line": 1,
-      "elements": [
-        {
-          "id": "interactive-dhtml-view;scenario-with-large-data-table",
-          "keyword": "Scenario",
-          "name": "Scenario with large data table",
-          "line": 7,
-          "type": "scenario",
-          "tags": [],
-          "steps": [
-            {
-              "keyword": "Given",
-              "name": "a feature with a large table of data:",
-              "line": 8,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "When",
-              "name": "I click on the table heading",
-              "line": 32,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "Then",
-              "name": "the table body should collapse",
-              "line": 33,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            }
--&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)
-
-Given I have this feature description
-  --- multiline step argument ---
-  Feature: Clearing Screen
-      In order to restart a new set of calculations
-      As a math idiot
-      I want to be able to clear the screen
-  
-  @workflow @slow
-  Scenario: Clear the screen
-      Given I have entered 50 into the calculator
-      And I have entered 70 into the calculator
-      When I press C
-      Then the screen should be empty
--&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Clearing...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)
-Then the JSON file should contain
-  --- multiline step argument ---
-  [
-    {
-      "id": "clearing-screen",
-      "keyword": "Feature",
-      "name": "Clearing Screen",
-      "tags": [],
-      "line": 1,
-      "elements": [
-        {
-          "id": "clearing-screen;clear-the-screen",
-          "keyword": "Scenario",
-          "name": "Clear the screen",
-          "line": 7,
-          "type": "scenario",
-          "tags": [
-            {
-              "name": "@workflow"
-            },
-            {
-              "name": "@slow"
-            }
-          ],
-          "steps": [
-            {
-              "keyword": "Given",
-              "name": "I have entered 50 into the calculator",
-              "line": 8,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "And",
-              "name": "I have entered 70 into the calculator",
-              "line": 9,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "When",
-              "name": "I press C",
-              "line": 10,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            },
-            {
-              "keyword": "Then",
-              "name": "the screen should be empty",
-              "line": 11,
-              "hidden": false,
-              "result": {
-                "status": "Undefined",
-                "duration": 1
-              }
-            }
--&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)
-
-NUnit Adapter 3.17.0.0: Test execution complete
+      <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
+Running all tests in C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll&#xD;
+   NUnit3TestExecutor discovered 7 of 7 NUnit test cases&#xD;
+Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+     Given I have entered 50 into the calculator&#xD;
+     And I have entered 70 into the calculator&#xD;
+     When I press C&#xD;
+     Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.9s)&#xD;
+And feature base uri is provided from configuration as 'http://root/test/'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "http://root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "http://ro...") (0.1s)&#xD;
+&#xD;
+Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+     Given I have entered 50 into the calculator&#xD;
+     And I have entered 70 into the calculator&#xD;
+     When I press C&#xD;
+     Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+And feature base uri is provided from configuration as 'test'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("test") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "test/Feat...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+     Given I have entered 50 into the calculator&#xD;
+     And I have entered 70 into the calculator&#xD;
+     When I press C&#xD;
+     Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+And feature base uri is provided from configuration as 'root/test/'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("root/test/") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "root/test...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+      Given I have entered 50 into the calculator&#xD;
+      And I have entered 70 into the calculator&#xD;
+      When I press C&#xD;
+      Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "FeatureTe...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Interactive DHTML View&#xD;
+      In order to increase stakeholder engagement with pickled specs&#xD;
+      As a SpecFlow evangelist&#xD;
+      I want to adjust the level of detail in the DHTML view to suit my audience&#xD;
+      So that I do not overwhelm them.&#xD;
+  &#xD;
+  Scenario: Scenario with large data table&#xD;
+      Given a feature with a large table of data:&#xD;
+          | heading    | page # |&#xD;
+          | Chapter 1  | 1      |&#xD;
+          | Chapter 2  | 5      |&#xD;
+          | Chapter 3  | 10     |&#xD;
+          | Chapter 4  | 15     |&#xD;
+          | Chapter 5  | 20     |&#xD;
+          | Chapter 6  | 25     |&#xD;
+          | Chapter 7  | 30     |&#xD;
+          | Chapter 8  | 35     |&#xD;
+          | Chapter 9  | 40     |&#xD;
+          | Chapter 10 | 45     |&#xD;
+          | Chapter 11 | 50     |&#xD;
+          | Chapter 12 | 55     |&#xD;
+          | Chapter 13 | 60     |&#xD;
+          | Chapter 14 | 65     |&#xD;
+          | Chapter 15 | 70     |&#xD;
+          | Chapter 16 | 75     |&#xD;
+          | Chapter 17 | 80     |&#xD;
+          | Chapter 18 | 85     |&#xD;
+          | Chapter 19 | 90     |&#xD;
+          | Chapter 20 | 95     |&#xD;
+          | Chapter 21 | 100    |&#xD;
+          | Chapter 22 | 105    |&#xD;
+      When I click on the table heading&#xD;
+      Then the table body should collapse&#xD;
+-&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Interact...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  [&#xD;
+    {&#xD;
+      "id": "interactive-dhtml-view",&#xD;
+      "keyword": "Feature",&#xD;
+      "name": "Interactive DHTML View",&#xD;
+      "tags": [],&#xD;
+      "line": 1,&#xD;
+      "elements": [&#xD;
+        {&#xD;
+          "id": "interactive-dhtml-view;scenario-with-large-data-table",&#xD;
+          "keyword": "Scenario",&#xD;
+          "name": "Scenario with large data table",&#xD;
+          "line": 7,&#xD;
+          "type": "scenario",&#xD;
+          "tags": [],&#xD;
+          "steps": [&#xD;
+            {&#xD;
+              "keyword": "Given",&#xD;
+              "name": "a feature with a large table of data:",&#xD;
+              "line": 8,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "When",&#xD;
+              "name": "I click on the table heading",&#xD;
+              "line": 32,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "Then",&#xD;
+              "name": "the table body should collapse",&#xD;
+              "line": 33,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            }&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+      In order to restart a new set of calculations&#xD;
+      As a math idiot&#xD;
+      I want to be able to clear the screen&#xD;
+  &#xD;
+  @workflow @slow&#xD;
+  Scenario: Clear the screen&#xD;
+      Given I have entered 50 into the calculator&#xD;
+      And I have entered 70 into the calculator&#xD;
+      When I press C&#xD;
+      Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Clearing...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  [&#xD;
+    {&#xD;
+      "id": "clearing-screen",&#xD;
+      "keyword": "Feature",&#xD;
+      "name": "Clearing Screen",&#xD;
+      "tags": [],&#xD;
+      "line": 1,&#xD;
+      "elements": [&#xD;
+        {&#xD;
+          "id": "clearing-screen;clear-the-screen",&#xD;
+          "keyword": "Scenario",&#xD;
+          "name": "Clear the screen",&#xD;
+          "line": 7,&#xD;
+          "type": "scenario",&#xD;
+          "tags": [&#xD;
+            {&#xD;
+              "name": "@workflow"&#xD;
+            },&#xD;
+            {&#xD;
+              "name": "@slow"&#xD;
+            }&#xD;
+          ],&#xD;
+          "steps": [&#xD;
+            {&#xD;
+              "keyword": "Given",&#xD;
+              "name": "I have entered 50 into the calculator",&#xD;
+              "line": 8,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "And",&#xD;
+              "name": "I have entered 70 into the calculator",&#xD;
+              "line": 9,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "When",&#xD;
+              "name": "I press C",&#xD;
+              "line": 10,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "Then",&#xD;
+              "name": "the screen should be empty",&#xD;
+              "line": 11,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            }&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)&#xD;
+&#xD;
+NUnit Adapter 3.17.0.0: Test execution complete&#xD;
 </StdOut>
     </Output>
   </ResultSummary>

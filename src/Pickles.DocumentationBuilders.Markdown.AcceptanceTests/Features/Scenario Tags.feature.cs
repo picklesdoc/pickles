@@ -35,9 +35,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Scenario Tags", "    In order to include the tags for each scenario\n    As a reader of the generat" +
-                    "ed documentation\n    I want the scenario tags included in single line above the " +
-                    "scenario heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Scenario Tags", "    In order to include the tags for each scenario\r\n    As a reader of the genera" +
+                    "ted documentation\r\n    I want the scenario tags included in single line above th" +
+                    "e scenario heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

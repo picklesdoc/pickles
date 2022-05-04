@@ -35,9 +35,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Scenario Status Icons", "    In order to display the outcome of Scenarios and Scenario Outlines\n    As a r" +
-                    "eader of the generated documentation\n    I want the result to indicated as Pass," +
-                    " Fail, or Inconclusive by an appropriate icon.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Scenario Status Icons", "    In order to display the outcome of Scenarios and Scenario Outlines\r\n    As a " +
+                    "reader of the generated documentation\r\n    I want the result to indicated as Pas" +
+                    "s, Fail, or Inconclusive by an appropriate icon.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

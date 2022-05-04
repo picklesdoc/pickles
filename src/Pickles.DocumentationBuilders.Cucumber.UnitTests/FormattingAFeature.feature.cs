@@ -119,25 +119,26 @@ Scenario: Clear the screen
     testRunner.When("I generate the documentation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 21
-    testRunner.Then("the JSON file should contain", "[\n  {\n    \"id\": \"clearing-screen\",\n    \"keyword\": \"Feature\",\n    \"name\": \"Clearin" +
-                        "g Screen\",\n    \"tags\": [],\n    \"line\": 1,\n    \"elements\": [\n      {\n        \"id\"" +
-                        ": \"clearing-screen;clear-the-screen\",\n        \"keyword\": \"Scenario\",\n        \"na" +
-                        "me\": \"Clear the screen\",\n        \"line\": 7,\n        \"type\": \"scenario\",\n        " +
-                        "\"tags\": [\n          {\n            \"name\": \"@workflow\"\n          },\n          {\n " +
-                        "           \"name\": \"@slow\"\n          }\n        ],\n        \"steps\": [\n          {" +
-                        "\n            \"keyword\": \"Given\",\n            \"name\": \"I have entered 50 into the" +
-                        " calculator\",\n            \"line\": 8,\n            \"hidden\": false,\n            \"r" +
-                        "esult\": {\n              \"status\": \"Undefined\",\n              \"duration\": 1\n     " +
-                        "       }\n          },\n          {\n            \"keyword\": \"And\",\n            \"nam" +
-                        "e\": \"I have entered 70 into the calculator\",\n            \"line\": 9,\n            " +
-                        "\"hidden\": false,\n            \"result\": {\n              \"status\": \"Undefined\",\n  " +
-                        "            \"duration\": 1\n            }\n          },\n          {\n            \"ke" +
-                        "yword\": \"When\",\n            \"name\": \"I press C\",\n            \"line\": 10,\n       " +
-                        "     \"hidden\": false,\n            \"result\": {\n              \"status\": \"Undefined" +
-                        "\",\n              \"duration\": 1\n            }\n          },\n          {\n          " +
-                        "  \"keyword\": \"Then\",\n            \"name\": \"the screen should be empty\",\n         " +
-                        "   \"line\": 11,\n            \"hidden\": false,\n            \"result\": {\n            " +
-                        "  \"status\": \"Undefined\",\n              \"duration\": 1\n            }\n          }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.Then("the JSON file should contain", "[\r\n  {\r\n    \"id\": \"clearing-screen\",\r\n    \"keyword\": \"Feature\",\r\n    \"name\": \"Cle" +
+                        "aring Screen\",\r\n    \"tags\": [],\r\n    \"line\": 1,\r\n    \"elements\": [\r\n      {\r\n   " +
+                        "     \"id\": \"clearing-screen;clear-the-screen\",\r\n        \"keyword\": \"Scenario\",\r\n" +
+                        "        \"name\": \"Clear the screen\",\r\n        \"line\": 7,\r\n        \"type\": \"scenar" +
+                        "io\",\r\n        \"tags\": [\r\n          {\r\n            \"name\": \"@workflow\"\r\n         " +
+                        " },\r\n          {\r\n            \"name\": \"@slow\"\r\n          }\r\n        ],\r\n        " +
+                        "\"steps\": [\r\n          {\r\n            \"keyword\": \"Given\",\r\n            \"name\": \"I" +
+                        " have entered 50 into the calculator\",\r\n            \"line\": 8,\r\n            \"hid" +
+                        "den\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefined\",\r\n   " +
+                        "           \"duration\": 1\r\n            }\r\n          },\r\n          {\r\n            " +
+                        "\"keyword\": \"And\",\r\n            \"name\": \"I have entered 70 into the calculator\",\r" +
+                        "\n            \"line\": 9,\r\n            \"hidden\": false,\r\n            \"result\": {\r\n" +
+                        "              \"status\": \"Undefined\",\r\n              \"duration\": 1\r\n            }" +
+                        "\r\n          },\r\n          {\r\n            \"keyword\": \"When\",\r\n            \"name\":" +
+                        " \"I press C\",\r\n            \"line\": 10,\r\n            \"hidden\": false,\r\n          " +
+                        "  \"result\": {\r\n              \"status\": \"Undefined\",\r\n              \"duration\": 1" +
+                        "\r\n            }\r\n          },\r\n          {\r\n            \"keyword\": \"Then\",\r\n    " +
+                        "        \"name\": \"the screen should be empty\",\r\n            \"line\": 11,\r\n        " +
+                        "    \"hidden\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefine" +
+                        "d\",\r\n              \"duration\": 1\r\n            }\r\n          }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

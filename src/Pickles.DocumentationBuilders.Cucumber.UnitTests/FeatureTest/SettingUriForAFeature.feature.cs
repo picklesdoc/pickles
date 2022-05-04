@@ -104,9 +104,9 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 5
     testRunner.Given("I have this feature description placed in a folder \'FeatureTest\' in a file \'Setti" +
-                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\nScenario: Clear the screen\n    Given I have entered 50 i" +
-                        "nto the calculator\n    And I have entered 70 into the calculator\n    When I pres" +
-                        "s C\n    Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\r\nScenario: Clear the screen\r\n    Given I have entered 50" +
+                        " into the calculator\r\n    And I have entered 70 into the calculator\r\n    When I " +
+                        "press C\r\n    Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 14
     testRunner.When("I generate the documentation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
@@ -149,9 +149,9 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 23
     testRunner.Given("I have this feature description placed in a folder \'FeatureTest\' in a file \'Setti" +
-                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\nScenario: Clear the screen\n   Given I have entered 50 in" +
-                        "to the calculator\n   And I have entered 70 into the calculator\n   When I press C" +
-                        "\n   Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\r\nScenario: Clear the screen\r\n   Given I have entered 50 " +
+                        "into the calculator\r\n   And I have entered 70 into the calculator\r\n   When I pre" +
+                        "ss C\r\n   Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 32
     testRunner.And("feature base uri is provided from configuration as \'test\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -197,9 +197,9 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 40
     testRunner.Given("I have this feature description placed in a folder \'FeatureTest\' in a file \'Setti" +
-                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\nScenario: Clear the screen\n   Given I have entered 50 in" +
-                        "to the calculator\n   And I have entered 70 into the calculator\n   When I press C" +
-                        "\n   Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\r\nScenario: Clear the screen\r\n   Given I have entered 50 " +
+                        "into the calculator\r\n   And I have entered 70 into the calculator\r\n   When I pre" +
+                        "ss C\r\n   Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 49
     testRunner.And("feature base uri is provided from configuration as \'root/test/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -245,9 +245,9 @@ this.ScenarioInitialize(scenarioInfo);
                 this.ScenarioStart();
 #line 58
     testRunner.Given("I have this feature description placed in a folder \'FeatureTest\' in a file \'Setti" +
-                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\nScenario: Clear the screen\n   Given I have entered 50 in" +
-                        "to the calculator\n   And I have entered 70 into the calculator\n   When I press C" +
-                        "\n   Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
+                        "ngUriForAFeature.feature\'", "Feature: Clearing Screen\r\nScenario: Clear the screen\r\n   Given I have entered 50 " +
+                        "into the calculator\r\n   And I have entered 70 into the calculator\r\n   When I pre" +
+                        "ss C\r\n   Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 67
     testRunner.And("feature base uri is provided from configuration as \'http://root/test/\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

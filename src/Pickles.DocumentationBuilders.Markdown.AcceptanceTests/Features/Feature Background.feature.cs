@@ -35,9 +35,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Background Steps", "    In order to document the background Gherkin steps run before each scenario\n  " +
-                    "  As a reader of the generated documentation\n    I want the background steps to " +
-                    "be included in the Markdown output.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Background Steps", "    In order to document the background Gherkin steps run before each scenario\r\n " +
+                    "   As a reader of the generated documentation\r\n    I want the background steps t" +
+                    "o be included in the Markdown output.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

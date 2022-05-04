@@ -35,9 +35,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature Heading", "    In order to identify each feature file in the documentation\n    As a reader o" +
-                    "f the generated documentation\n    I want the feature title visually differentiat" +
-                    "ed from the other text.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Feature Heading", "    In order to identify each feature file in the documentation\r\n    As a reader " +
+                    "of the generated documentation\r\n    I want the feature title visually differenti" +
+                    "ated from the other text.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

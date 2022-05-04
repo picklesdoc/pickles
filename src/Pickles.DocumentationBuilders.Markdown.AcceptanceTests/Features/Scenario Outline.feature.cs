@@ -35,9 +35,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Feat
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Scenario Outlines", "    In order to document the Scenario Outlines\n    As a reader of the generated d" +
-                    "ocumentation\n    I want the scenario outlines to appear with steps and examples " +
-                    "below the feature heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Scenario Outlines", "    In order to document the Scenario Outlines\r\n    As a reader of the generated " +
+                    "documentation\r\n    I want the scenario outlines to appear with steps and example" +
+                    "s below the feature heading.", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         

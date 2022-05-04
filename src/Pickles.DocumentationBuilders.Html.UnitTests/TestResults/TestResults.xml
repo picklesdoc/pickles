@@ -1,395 +1,395 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="6d91922a-36ac-48a6-8039-01a203a668d3" name="@Erics-MBP 2021-10-04 17:15:03" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2021-10-04T17:15:03.1549770-04:00" queuing="2021-10-04T17:15:03.1549770-04:00" start="2021-10-04T17:14:59.9275500-04:00" finish="2021-10-04T17:15:03.3933580-04:00" />
-  <TestSettings name="default" id="d1aed18c-841d-452e-b950-f7d77d3f6216">
-    <Deployment runDeploymentRoot="_Erics-MBP_2021-10-04_17_15_03" />
+<TestRun id="2a4c5b36-912d-42c4-b707-ce3344dc9ff6" name="ericcarlson@ERICCARLSONBBE6 2022-05-04 14:46:22" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-05-04T14:46:22.3428484-04:00" queuing="2022-05-04T14:46:22.3428487-04:00" start="2022-05-04T14:46:17.5359362-04:00" finish="2022-05-04T14:46:22.6793994-04:00" />
+  <TestSettings name="default" id="98238a51-82f0-460b-ad8b-868091f60b8a">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-04_14_46_22" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="d861dc36-7ed4-49d2-99a8-159446aaaa24" testId="a3f0acb0-1d7a-00ec-600c-f232b83f2801" testName="ThenCanFormatNormalMultilineStringSuccessfully" computerName="Erics-MBP" duration="00:00:00.0006030" startTime="2021-10-04T17:15:03.1917000-04:00" endTime="2021-10-04T17:15:03.1923040-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d861dc36-7ed4-49d2-99a8-159446aaaa24" />
-    <UnitTestResult executionId="3f4c0a31-2db6-4838-9783-33cf1767b37a" testId="ce052cff-935c-d43b-e9c8-4e93e9f003cd" testName="Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal" computerName="Erics-MBP" duration="00:00:00.0034230" startTime="2021-10-04T17:15:03.2578700-04:00" endTime="2021-10-04T17:15:03.2612920-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f4c0a31-2db6-4838-9783-33cf1767b37a" />
-    <UnitTestResult executionId="b3ef8d2e-aec3-4931-9198-9ee06a153b91" testId="2dafa7b4-c7d4-6e6b-c792-4ef75d362dd8" testName="DescriptionWithImageShouldRenderCorrectly" computerName="Erics-MBP" duration="00:00:00.2716120" startTime="2021-10-04T17:15:02.6509200-04:00" endTime="2021-10-04T17:15:02.9225350-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3ef8d2e-aec3-4931-9198-9ee06a153b91">
+    <UnitTestResult executionId="c6bc12e5-2743-482b-9fb9-e0e2e4e0b5b1" testId="b386585d-f938-b051-f06a-722958237108" testName="ThenCanFormatMarkdownTableExtensionsEvenIfTheyAreSomewhatMalstructured" computerName="ERICCARLSONBBE6" duration="00:00:00.0015590" startTime="2022-05-04T14:46:22.4902631-04:00" endTime="2022-05-04T14:46:22.4918228-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6bc12e5-2743-482b-9fb9-e0e2e4e0b5b1" />
+    <UnitTestResult executionId="93d80bb1-d31c-4839-bff7-074e9f21d0df" testId="c946a4f0-440c-29d7-29e0-2380f4f3cc86" testName="ThenCanFormatScenarioWithMissingExampleCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.0091130" startTime="2022-05-04T14:46:22.5801006-04:00" endTime="2022-05-04T14:46:22.5892138-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="93d80bb1-d31c-4839-bff7-074e9f21d0df" />
+    <UnitTestResult executionId="601ec712-c31e-442f-b42a-51af3545285e" testId="7ac5016c-fe33-4cff-6cbb-f8d264ca8b85" testName="MarkdownTablesShouldBeFormattedAsHTMLTables" computerName="ERICCARLSONBBE6" duration="00:00:00.0044160" startTime="2022-05-04T14:46:22.1134113-04:00" endTime="2022-05-04T14:46:22.1178281-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="601ec712-c31e-442f-b42a-51af3545285e">
       <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  Including a picture: ![](./image.png)
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.3s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="" /&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&#xD;
+  &#xD;
+  | Table Header 1 | Table Header 2 |&#xD;
+  | -------------- | -------------- |&#xD;
+  | Cell value 1   | Cell value 2   |&#xD;
+  | Cell value 3   |                |&#xD;
+  | Cell value 4   | Cell value 5   |&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;&#xD;
+      &lt;table&gt;&#xD;
+        &lt;thead&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;th&gt;Table Header 1&lt;/th&gt;&#xD;
+            &lt;th&gt;Table Header 2&lt;/th&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/thead&gt;&#xD;
+        &lt;tbody&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 1&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 2&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 3&lt;/td&gt;&#xD;
+            &lt;td&gt;&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 4&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 5&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/tbody&gt;&#xD;
+      &lt;/table&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="2cacc242-c39f-44d8-a69e-012817d4197e" testId="052570fd-ad65-bf0e-f545-55733284e59c" testName="ShouldRenderHrAsClosed" computerName="Erics-MBP" duration="00:00:00.0289960" startTime="2021-10-04T17:15:02.9568640-04:00" endTime="2021-10-04T17:15:02.9858590-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2cacc242-c39f-44d8-a69e-012817d4197e" />
-    <UnitTestResult executionId="25ff5c05-a7bb-480a-b98e-f583a88d81a5" testId="eedbc798-6ce7-3b4c-392c-89fb084d9898" testName="Comments_after_the_last_step_are_displayed" computerName="Erics-MBP" duration="00:00:00.0022380" startTime="2021-10-04T17:15:03.2517550-04:00" endTime="2021-10-04T17:15:03.2539920-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="25ff5c05-a7bb-480a-b98e-f583a88d81a5" />
-    <UnitTestResult executionId="383b11ec-73de-4f70-b349-13724b924e15" testId="2f5a7c6a-6521-5330-5ab9-92ebf93c04bb" testName="ThenCanFormatCompleteScenarioCorrectly" computerName="Erics-MBP" duration="00:00:00.0221660" startTime="2021-10-04T17:15:03.2028100-04:00" endTime="2021-10-04T17:15:03.2249760-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="383b11ec-73de-4f70-b349-13724b924e15" />
-    <UnitTestResult executionId="2991eaab-592d-44e5-9e06-00e5638915f0" testId="9dce075a-681f-a0f1-3507-01804a196153" testName="ThenCanFormatScenarioWithMissingTableFromExampleCorrectly" computerName="Erics-MBP" duration="00:00:00.0038320" startTime="2021-10-04T17:15:03.2423730-04:00" endTime="2021-10-04T17:15:03.2462050-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2991eaab-592d-44e5-9e06-00e5638915f0" />
-    <UnitTestResult executionId="3018a21e-7be9-4698-b16f-fcc35a01da93" testId="b3ec2790-be6f-f1ef-1928-97a01f966eb1" testName="ThenCanFormatScenarioWithMissingDescriptionCorrectly" computerName="Erics-MBP" duration="00:00:00.0023970" startTime="2021-10-04T17:15:03.2250080-04:00" endTime="2021-10-04T17:15:03.2274050-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3018a21e-7be9-4698-b16f-fcc35a01da93" />
-    <UnitTestResult executionId="0f84333f-c49b-41a6-beff-2992427a0ce6" testId="8b1ca603-b44e-4178-090a-6171855f0a30" testName="SomewhatMalformedMarkdownTablesShouldBeFormattedAsHTMLTablesAsWell" computerName="Erics-MBP" duration="00:00:00.0050490" startTime="2021-10-04T17:15:02.6406830-04:00" endTime="2021-10-04T17:15:02.6457320-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0f84333f-c49b-41a6-beff-2992427a0ce6">
+    <UnitTestResult executionId="1b852f0d-383f-41eb-9efc-7422615a050c" testId="ce052cff-935c-d43b-e9c8-4e93e9f003cd" testName="Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal" computerName="ERICCARLSONBBE6" duration="00:00:00.0009630" startTime="2022-05-04T14:46:22.5996392-04:00" endTime="2022-05-04T14:46:22.6006024-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b852f0d-383f-41eb-9efc-7422615a050c" />
+    <UnitTestResult executionId="4ab47f90-a637-408a-b68e-a4e114d424ed" testId="796f49b7-3a42-db9e-15d1-dc4270da8d0d" testName="Multiline_comments_are_displayed_in_the_same_element" computerName="ERICCARLSONBBE6" duration="00:00:00.0009800" startTime="2022-05-04T14:46:22.5985175-04:00" endTime="2022-05-04T14:46:22.5994971-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ab47f90-a637-408a-b68e-a4e114d424ed" />
+    <UnitTestResult executionId="ac6b2bfc-dfca-448f-aefe-e5507739bbf0" testId="6cfb4e14-c3c5-c283-c05b-a1f0537d9edc" testName="Steps_get_selected_Language" computerName="ERICCARLSONBBE6" duration="00:00:00.0008410" startTime="2022-05-04T14:46:22.6014718-04:00" endTime="2022-05-04T14:46:22.6023126-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac6b2bfc-dfca-448f-aefe-e5507739bbf0" />
+    <UnitTestResult executionId="0a9483e9-af94-4dbd-8c93-729f03da2e27" testId="eedbc798-6ce7-3b4c-392c-89fb084d9898" testName="Comments_after_the_last_step_are_displayed" computerName="ERICCARLSONBBE6" duration="00:00:00.0015299" startTime="2022-05-04T14:46:22.5956950-04:00" endTime="2022-05-04T14:46:22.5972249-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0a9483e9-af94-4dbd-8c93-729f03da2e27" />
+    <UnitTestResult executionId="62bbdc45-9a08-42d4-a74e-e9635f4ca7f9" testId="b3ec2790-be6f-f1ef-1928-97a01f966eb1" testName="ThenCanFormatScenarioWithMissingDescriptionCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.0014480" startTime="2022-05-04T14:46:22.5786184-04:00" endTime="2022-05-04T14:46:22.5800662-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="62bbdc45-9a08-42d4-a74e-e9635f4ca7f9" />
+    <UnitTestResult executionId="4ea4261c-585e-4308-80f2-dda1228c2273" testId="56b39fb1-2c90-d86e-0a60-ea1da22d0bdb" testName="ThenCanFormatNullTableSuccessfully" computerName="ERICCARLSONBBE6" duration="00:00:00.0007730" startTime="2022-05-04T14:46:22.6078052-04:00" endTime="2022-05-04T14:46:22.6085785-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4ea4261c-585e-4308-80f2-dda1228c2273" />
+    <UnitTestResult executionId="e65d10d8-c865-47bf-aed9-18b8467e4e0a" testId="350d626d-9919-e1ff-7b14-b8ce24c122f0" testName="DescriptionShouldBeFormattedAsMarkdown" computerName="ERICCARLSONBBE6" duration="00:00:01.3497610" startTime="2022-05-04T14:46:20.7621190-04:00" endTime="2022-05-04T14:46:22.1117946-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e65d10d8-c865-47bf-aed9-18b8467e4e0a">
       <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables
-  
-  | Table Header 1 | Table Header 2                         |
-  | -------------- | -------------------------------------- |
-  | Cell value 1   | Cell value 2                           |
-  | Cell value 3     Note the missing column delimiter here |
-  | Cell value 4   | Cell value 5                           |
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;
-      &lt;table&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th&gt;Table Header 1&lt;/th&gt;
-            &lt;th&gt;Table Header 2&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 1&lt;/td&gt;
-            &lt;td&gt;Cell value 2&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 3     Note the missing column delimiter here&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 4&lt;/td&gt;
-            &lt;td&gt;Cell value 5&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered as HTML&#xD;
+  &#xD;
+  Introduction&#xD;
+  ============&#xD;
+  &#xD;
+  This feature should have some markdown elements that get displayed properly&#xD;
+  &#xD;
+  Context&#xD;
+  -------&#xD;
+  &#xD;
+  &gt; I really like blockquotes to describe&#xD;
+  &gt; to describe text&#xD;
+  &#xD;
+  I also enjoy using lists as well, here are the reasons&#xD;
+  &#xD;
+  - Lists are easy to read&#xD;
+  - Lists make my life easier&#xD;
+  &#xD;
+  I also enjoy ordering things&#xD;
+  &#xD;
+  1. This is the first reason&#xD;
+  2. This is the second reason&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.1s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered as HTML&lt;/p&gt;&#xD;
+      &lt;h1&gt;Introduction&lt;/h1&gt;&#xD;
+      &lt;p&gt;This feature should have some markdown elements that get displayed properly&lt;/p&gt;&#xD;
+      &lt;h2&gt;Context&lt;/h2&gt;&#xD;
+      &lt;blockquote&gt;&#xD;
+        &lt;p&gt;I really like blockquotes to describe&#xD;
+  to describe text&lt;/p&gt;&#xD;
+      &lt;/blockquote&gt;&#xD;
+      &lt;p&gt;I also enjoy using lists as well, here are the reasons&lt;/p&gt;&#xD;
+      &lt;ul&gt;&#xD;
+        &lt;li&gt;Lists are easy to read&lt;/li&gt;&#xD;
+        &lt;li&gt;Lists make my life easier&lt;/li&gt;&#xD;
+      &lt;/ul&gt;&#xD;
+      &lt;p&gt;I also enjoy ordering things&lt;/p&gt;&#xD;
+      &lt;ol&gt;&#xD;
+        &lt;li&gt;This is the first reason&lt;/li&gt;&#xD;
+        &lt;li&gt;This is the second reason&lt;/li&gt;&#xD;
+      &lt;/ol&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.1s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d1ca7ba5-c7db-4c20-b016-4fa7c2200d46" testId="e52f3b1c-1b3c-42b1-713f-769797285fb1" testName="ThenCanFormatMarkdownTableExtensions" computerName="ERICCARLSONBBE6" duration="00:00:00.0012930" startTime="2022-05-04T14:46:22.4889016-04:00" endTime="2022-05-04T14:46:22.4901941-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1ca7ba5-c7db-4c20-b016-4fa7c2200d46" />
+    <UnitTestResult executionId="b020597d-825b-4678-8c95-16ca6f6ac72d" testId="1b8ab176-c36b-30cb-96b6-9c88a1107583" testName="ThenCanRenderTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0029240" startTime="2022-05-04T14:46:22.5919916-04:00" endTime="2022-05-04T14:46:22.5949155-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b020597d-825b-4678-8c95-16ca6f6ac72d" />
+    <UnitTestResult executionId="c58d15a5-d8f0-42ba-b2e9-cf283048a95d" testId="a3f0acb0-1d7a-00ec-600c-f232b83f2801" testName="ThenCanFormatNormalMultilineStringSuccessfully" computerName="ERICCARLSONBBE6" duration="00:00:00.0003780" startTime="2022-05-04T14:46:22.5581168-04:00" endTime="2022-05-04T14:46:22.5584945-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c58d15a5-d8f0-42ba-b2e9-cf283048a95d" />
+    <UnitTestResult executionId="b67f1f2b-81f3-463e-9a90-c542e1303e49" testId="79b6198d-8eac-ee8a-99fa-163c77e49ccc" testName="FeatureTagsAreAddedToScenarioTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0020760" startTime="2022-05-04T14:46:22.5622849-04:00" endTime="2022-05-04T14:46:22.5643616-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b67f1f2b-81f3-463e-9a90-c542e1303e49" />
+    <UnitTestResult executionId="e4710070-cbd9-4acf-aee1-d653a8760244" testId="cea46ab5-a417-696a-1808-76dcba2c0c6f" testName="TagsAreRenderedAlphabetically" computerName="ERICCARLSONBBE6" duration="00:00:00.0011370" startTime="2022-05-04T14:46:22.5654553-04:00" endTime="2022-05-04T14:46:22.5665926-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e4710070-cbd9-4acf-aee1-d653a8760244" />
+    <UnitTestResult executionId="a787e743-09e1-437c-bfaa-d9b42452cba4" testId="dbca7286-1920-ac61-d71a-e9333d72b24f" testName="Tables_are_formatted_as_list_items_with_tables_internal" computerName="ERICCARLSONBBE6" duration="00:00:00.0013220" startTime="2022-05-04T14:46:22.6023423-04:00" endTime="2022-05-04T14:46:22.6036639-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a787e743-09e1-437c-bfaa-d9b42452cba4" />
+    <UnitTestResult executionId="aa0c6db4-0e80-43a2-8cb2-8dd29aadee7c" testId="052570fd-ad65-bf0e-f545-55733284e59c" testName="ShouldRenderHrAsClosed" computerName="ERICCARLSONBBE6" duration="00:00:00.0055980" startTime="2022-05-04T14:46:22.3902526-04:00" endTime="2022-05-04T14:46:22.3958504-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aa0c6db4-0e80-43a2-8cb2-8dd29aadee7c" />
+    <UnitTestResult executionId="69cd43ab-b6fa-4f75-b70e-8a06dfe1c8da" testId="2dafa7b4-c7d4-6e6b-c792-4ef75d362dd8" testName="DescriptionWithImageShouldRenderCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.2516640" startTime="2022-05-04T14:46:22.1249395-04:00" endTime="2022-05-04T14:46:22.3766037-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69cd43ab-b6fa-4f75-b70e-8a06dfe1c8da">
+      <Output>
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Including a picture: ![](./image.png)&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.2s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="" /&gt;&lt;/p&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="b57fcb39-dbff-4d35-9211-311908cc01cd" testId="040ce861-3db1-bc3a-5151-d0eaa9f58fd0" testName="Simple_steps_are_formatted_as_list_items" computerName="Erics-MBP" duration="00:00:00.0026610" startTime="2021-10-04T17:15:03.2651910-04:00" endTime="2021-10-04T17:15:03.2678520-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b57fcb39-dbff-4d35-9211-311908cc01cd" />
-    <UnitTestResult executionId="77052419-2cd7-4ecf-b1ff-65aad86db9bc" testId="918cf8f8-6f7d-a1c7-d5f3-ae7d22e1fc4b" testName="Comments_are_displayed_above_their_related_step" computerName="Erics-MBP" duration="00:00:00.0017340" startTime="2021-10-04T17:15:03.2540450-04:00" endTime="2021-10-04T17:15:03.2557800-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77052419-2cd7-4ecf-b1ff-65aad86db9bc" />
-    <UnitTestResult executionId="06d74211-85c9-41b9-bab2-91b5c1508be6" testId="0f8c6b0a-ae71-de83-eaf5-82ca2a60e460" testName="DescriptionWithImageWithExtraAttributesShouldRenderCorrectly" computerName="Erics-MBP" duration="00:00:00.0314689" startTime="2021-10-04T17:15:02.9248770-04:00" endTime="2021-10-04T17:15:02.9563480-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="06d74211-85c9-41b9-bab2-91b5c1508be6">
+    <UnitTestResult executionId="61d116f7-5412-4cf9-89be-20e82de6fec8" testId="24860c7b-1813-b54a-7af2-4521ce835091" testName="ThenShouldLocalizeExamplesKeyword" computerName="ERICCARLSONBBE6" duration="00:00:00.0628350" startTime="2022-05-04T14:46:22.4928533-04:00" endTime="2022-05-04T14:46:22.5556724-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="61d116f7-5412-4cf9-89be-20e82de6fec8" />
+    <UnitTestResult executionId="adfc1bd3-1e5c-439d-a951-b2711e54ffb7" testId="040ce861-3db1-bc3a-5151-d0eaa9f58fd0" testName="Simple_steps_are_formatted_as_list_items" computerName="ERICCARLSONBBE6" duration="00:00:00.0008040" startTime="2022-05-04T14:46:22.6006332-04:00" endTime="2022-05-04T14:46:22.6014375-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="adfc1bd3-1e5c-439d-a951-b2711e54ffb7" />
+    <UnitTestResult executionId="7bf9f0d3-7762-4a82-bfce-6f498ecce2e1" testId="9dce075a-681f-a0f1-3507-01804a196153" testName="ThenCanFormatScenarioWithMissingTableFromExampleCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.0012870" startTime="2022-05-04T14:46:22.5906742-04:00" endTime="2022-05-04T14:46:22.5919614-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7bf9f0d3-7762-4a82-bfce-6f498ecce2e1" />
+    <UnitTestResult executionId="64abf7fd-6ef1-4fb5-bf9e-98eaa08ace77" testId="0f8c6b0a-ae71-de83-eaf5-82ca2a60e460" testName="DescriptionWithImageWithExtraAttributesShouldRenderCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.0133260" startTime="2022-05-04T14:46:22.3766404-04:00" endTime="2022-05-04T14:46:22.3899665-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64abf7fd-6ef1-4fb5-bf9e-98eaa08ace77">
       <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  Including a picture: ![alt text](./image.png "Image Title")
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="alt text" title="Image Title" /&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Including a picture: ![alt text](./image.png "Image Title")&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="alt text" title="Image Title" /&gt;&lt;/p&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="b15eeda9-f416-44f9-84d2-6ad61fb13840" testId="796f49b7-3a42-db9e-15d1-dc4270da8d0d" testName="Multiline_comments_are_displayed_in_the_same_element" computerName="Erics-MBP" duration="00:00:00.0019550" startTime="2021-10-04T17:15:03.2558320-04:00" endTime="2021-10-04T17:15:03.2577870-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b15eeda9-f416-44f9-84d2-6ad61fb13840" />
-    <UnitTestResult executionId="cb576e39-4afc-4ae2-879a-f8ef5f870da3" testId="56b39fb1-2c90-d86e-0a60-ea1da22d0bdb" testName="ThenCanFormatNullTableSuccessfully" computerName="Erics-MBP" duration="00:00:00.0021040" startTime="2021-10-04T17:15:03.2877650-04:00" endTime="2021-10-04T17:15:03.2898680-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb576e39-4afc-4ae2-879a-f8ef5f870da3" />
-    <UnitTestResult executionId="1d523081-919f-4940-84bb-995463a31ec2" testId="6cfb4e14-c3c5-c283-c05b-a1f0537d9edc" testName="Steps_get_selected_Language" computerName="Erics-MBP" duration="00:00:00.0021740" startTime="2021-10-04T17:15:03.2748980-04:00" endTime="2021-10-04T17:15:03.2770730-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d523081-919f-4940-84bb-995463a31ec2" />
-    <UnitTestResult executionId="2b3287df-2b0e-4bdc-a1bf-4df9306edc07" testId="e52f3b1c-1b3c-42b1-713f-769797285fb1" testName="ThenCanFormatMarkdownTableExtensions" computerName="Erics-MBP" duration="00:00:00.0032250" startTime="2021-10-04T17:15:03.0501970-04:00" endTime="2021-10-04T17:15:03.0534210-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b3287df-2b0e-4bdc-a1bf-4df9306edc07" />
-    <UnitTestResult executionId="e3c6e39d-e651-4793-97fb-3ead81f873a7" testId="5b218172-baab-78a2-5eea-7f97dd1408ea" testName="ThenCanFormatNormalTableSuccessfully" computerName="Erics-MBP" duration="00:00:00.0054330" startTime="2021-10-04T17:15:03.2822210-04:00" endTime="2021-10-04T17:15:03.2876530-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e3c6e39d-e651-4793-97fb-3ead81f873a7" />
-    <UnitTestResult executionId="5f0f9930-53f3-4fd7-b9a8-cda9d04b526c" testId="b386585d-f938-b051-f06a-722958237108" testName="ThenCanFormatMarkdownTableExtensionsEvenIfTheyAreSomewhatMalstructured" computerName="Erics-MBP" duration="00:00:00.0025829" startTime="2021-10-04T17:15:03.0534600-04:00" endTime="2021-10-04T17:15:03.0560430-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f0f9930-53f3-4fd7-b9a8-cda9d04b526c" />
-    <UnitTestResult executionId="03d93e7a-e3a9-4c3f-a225-f24b3a91e24b" testId="1b8ab176-c36b-30cb-96b6-9c88a1107583" testName="ThenCanRenderTags" computerName="Erics-MBP" duration="00:00:00.0025220" startTime="2021-10-04T17:15:03.2462750-04:00" endTime="2021-10-04T17:15:03.2487970-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="03d93e7a-e3a9-4c3f-a225-f24b3a91e24b" />
-    <UnitTestResult executionId="a66dc466-9650-40e4-bef5-309a526b98f1" testId="33f0753a-3e1f-1038-a755-bae465e6ef26" testName="NoTags" computerName="Erics-MBP" duration="00:00:00.0020550" startTime="2021-10-04T17:15:03.1981200-04:00" endTime="2021-10-04T17:15:03.2001750-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a66dc466-9650-40e4-bef5-309a526b98f1" />
-    <UnitTestResult executionId="f42929c7-1828-43d3-99e5-14215468b17f" testId="cea46ab5-a417-696a-1808-76dcba2c0c6f" testName="TagsAreRenderedAlphabetically" computerName="Erics-MBP" duration="00:00:00.0024650" startTime="2021-10-04T17:15:03.2002580-04:00" endTime="2021-10-04T17:15:03.2027230-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f42929c7-1828-43d3-99e5-14215468b17f" />
-    <UnitTestResult executionId="3c8b26cc-262b-461d-be0d-decde4c418f5" testId="cd414111-c12c-30de-a8ff-df3230f15f41" testName="ThenCanFormatNullMultilineStringSuccessfully" computerName="Erics-MBP" duration="00:00:00.0014800" startTime="2021-10-04T17:15:03.1923630-04:00" endTime="2021-10-04T17:15:03.1938420-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c8b26cc-262b-461d-be0d-decde4c418f5" />
-    <UnitTestResult executionId="26a2f9ef-fecc-4ccb-acd6-c5923f5bd910" testId="79b6198d-8eac-ee8a-99fa-163c77e49ccc" testName="FeatureTagsAreAddedToScenarioTags" computerName="Erics-MBP" duration="00:00:00.0026540" startTime="2021-10-04T17:15:03.1953960-04:00" endTime="2021-10-04T17:15:03.1980510-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="26a2f9ef-fecc-4ccb-acd6-c5923f5bd910" />
-    <UnitTestResult executionId="664429ba-32ce-473e-b654-a5eb2778b65d" testId="d5ba5cb7-42ad-070e-0239-910f6b492b3c" testName="ThenCanFormatDescriptionAsMarkdown" computerName="Erics-MBP" duration="00:00:00.0442270" startTime="2021-10-04T17:15:03.0059240-04:00" endTime="2021-10-04T17:15:03.0501510-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="664429ba-32ce-473e-b654-a5eb2778b65d" />
-    <UnitTestResult executionId="dd3f9905-9560-47fa-b631-0fac081d8a6b" testId="646034e9-b341-deb0-2537-c8a8b144fecd" testName="ThenCanFormatScenarioWithMissingNameCorrectly" computerName="Erics-MBP" duration="00:00:00.0024420" startTime="2021-10-04T17:15:03.2398930-04:00" endTime="2021-10-04T17:15:03.2423350-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd3f9905-9560-47fa-b631-0fac081d8a6b" />
-    <UnitTestResult executionId="708c79a7-f529-4f5c-b04f-88d7f7390876" testId="24860c7b-1813-b54a-7af2-4521ce835091" testName="ThenShouldLocalizeExamplesKeyword" computerName="Erics-MBP" duration="00:00:00.1319940" startTime="2021-10-04T17:15:03.0580040-04:00" endTime="2021-10-04T17:15:03.1900000-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="708c79a7-f529-4f5c-b04f-88d7f7390876" />
-    <UnitTestResult executionId="95b65ad4-884b-49c3-848a-5d0cb580c78a" testId="c946a4f0-440c-29d7-29e0-2380f4f3cc86" testName="ThenCanFormatScenarioWithMissingExampleCorrectly" computerName="Erics-MBP" duration="00:00:00.0123730" startTime="2021-10-04T17:15:03.2274620-04:00" endTime="2021-10-04T17:15:03.2398340-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="95b65ad4-884b-49c3-848a-5d0cb580c78a" />
-    <UnitTestResult executionId="0821e413-2318-40bd-a9ab-2bb3a6ab3efb" testId="dbca7286-1920-ac61-d71a-e9333d72b24f" testName="Tables_are_formatted_as_list_items_with_tables_internal" computerName="Erics-MBP" duration="00:00:00.0032340" startTime="2021-10-04T17:15:03.2771920-04:00" endTime="2021-10-04T17:15:03.2804260-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0821e413-2318-40bd-a9ab-2bb3a6ab3efb" />
-    <UnitTestResult executionId="af11832d-1e04-442c-9d14-d3206d77b835" testId="7ac5016c-fe33-4cff-6cbb-f8d264ca8b85" testName="MarkdownTablesShouldBeFormattedAsHTMLTables" computerName="Erics-MBP" duration="00:00:00.0090760" startTime="2021-10-04T17:15:02.6315600-04:00" endTime="2021-10-04T17:15:02.6406350-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af11832d-1e04-442c-9d14-d3206d77b835">
+    <UnitTestResult executionId="6f8fa588-df5d-4a99-bb61-94e0a93d4996" testId="8b1ca603-b44e-4178-090a-6171855f0a30" testName="SomewhatMalformedMarkdownTablesShouldBeFormattedAsHTMLTablesAsWell" computerName="ERICCARLSONBBE6" duration="00:00:00.0022540" startTime="2022-05-04T14:46:22.1193917-04:00" endTime="2022-05-04T14:46:22.1216458-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f8fa588-df5d-4a99-bb61-94e0a93d4996">
       <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables
-  
-  | Table Header 1 | Table Header 2 |
-  | -------------- | -------------- |
-  | Cell value 1   | Cell value 2   |
-  | Cell value 3   |                |
-  | Cell value 4   | Cell value 5   |
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;
-      &lt;table&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th&gt;Table Header 1&lt;/th&gt;
-            &lt;th&gt;Table Header 2&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 1&lt;/td&gt;
-            &lt;td&gt;Cell value 2&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 3&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 4&lt;/td&gt;
-            &lt;td&gt;Cell value 5&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&#xD;
+  &#xD;
+  | Table Header 1 | Table Header 2                         |&#xD;
+  | -------------- | -------------------------------------- |&#xD;
+  | Cell value 1   | Cell value 2                           |&#xD;
+  | Cell value 3     Note the missing column delimiter here |&#xD;
+  | Cell value 4   | Cell value 5                           |&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;&#xD;
+      &lt;table&gt;&#xD;
+        &lt;thead&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;th&gt;Table Header 1&lt;/th&gt;&#xD;
+            &lt;th&gt;Table Header 2&lt;/th&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/thead&gt;&#xD;
+        &lt;tbody&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 1&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 2&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 3     Note the missing column delimiter here&lt;/td&gt;&#xD;
+            &lt;td&gt;&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 4&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 5&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/tbody&gt;&#xD;
+      &lt;/table&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="a5764102-1d64-4730-86af-e00eb87e5b96" testId="350d626d-9919-e1ff-7b14-b8ce24c122f0" testName="DescriptionShouldBeFormattedAsMarkdown" computerName="Erics-MBP" duration="00:00:00.2859770" startTime="2021-10-04T17:15:02.3428100-04:00" endTime="2021-10-04T17:15:02.6286230-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5764102-1d64-4730-86af-e00eb87e5b96">
-      <Output>
-        <StdOut>Given I have this feature description
-  --- multiline step argument ---
-  In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered as HTML
-  
-  Introduction
-  ============
-  
-  This feature should have some markdown elements that get displayed properly
-  
-  Context
-  -------
-  
-  &gt; I really like blockquotes to describe
-  &gt; to describe text
-  
-  I also enjoy using lists as well, here are the reasons
-  
-  - Lists are easy to read
-  - Lists make my life easier
-  
-  I also enjoy ordering things
-  
-  1. This is the first reason
-  2. This is the second reason
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.1s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered as HTML&lt;/p&gt;
-      &lt;h1&gt;Introduction&lt;/h1&gt;
-      &lt;p&gt;This feature should have some markdown elements that get displayed properly&lt;/p&gt;
-      &lt;h2&gt;Context&lt;/h2&gt;
-      &lt;blockquote&gt;
-        &lt;p&gt;I really like blockquotes to describe
-  to describe text&lt;/p&gt;
-      &lt;/blockquote&gt;
-      &lt;p&gt;I also enjoy using lists as well, here are the reasons&lt;/p&gt;
-      &lt;ul&gt;
-        &lt;li&gt;Lists are easy to read&lt;/li&gt;
-        &lt;li&gt;Lists make my life easier&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;p&gt;I also enjoy ordering things&lt;/p&gt;
-      &lt;ol&gt;
-        &lt;li&gt;This is the first reason&lt;/li&gt;
-        &lt;li&gt;This is the second reason&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
+    <UnitTestResult executionId="f01f0dad-a96f-4bf5-b215-8487e1cc3105" testId="5b218172-baab-78a2-5eea-7f97dd1408ea" testName="ThenCanFormatNormalTableSuccessfully" computerName="ERICCARLSONBBE6" duration="00:00:00.0033790" startTime="2022-05-04T14:46:22.6043943-04:00" endTime="2022-05-04T14:46:22.6077730-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f01f0dad-a96f-4bf5-b215-8487e1cc3105" />
+    <UnitTestResult executionId="318588cf-5854-4f87-865a-2badbd205dd0" testId="33f0753a-3e1f-1038-a755-bae465e6ef26" testName="NoTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0010310" startTime="2022-05-04T14:46:22.5643965-04:00" endTime="2022-05-04T14:46:22.5654271-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="318588cf-5854-4f87-865a-2badbd205dd0" />
+    <UnitTestResult executionId="9586b12f-1104-4ff8-b45f-47e82728a379" testId="918cf8f8-6f7d-a1c7-d5f3-ae7d22e1fc4b" testName="Comments_are_displayed_above_their_related_step" computerName="ERICCARLSONBBE6" duration="00:00:00.0009750" startTime="2022-05-04T14:46:22.5973723-04:00" endTime="2022-05-04T14:46:22.5983470-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9586b12f-1104-4ff8-b45f-47e82728a379" />
+    <UnitTestResult executionId="b0e106d2-1deb-4b9f-bf3f-7960e47caadb" testId="2f5a7c6a-6521-5330-5ab9-92ebf93c04bb" testName="ThenCanFormatCompleteScenarioCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.0119520" startTime="2022-05-04T14:46:22.5666222-04:00" endTime="2022-05-04T14:46:22.5785735-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0e106d2-1deb-4b9f-bf3f-7960e47caadb" />
+    <UnitTestResult executionId="35e14a24-6b6c-4cd4-a9a9-2ab9e6265101" testId="cd414111-c12c-30de-a8ff-df3230f15f41" testName="ThenCanFormatNullMultilineStringSuccessfully" computerName="ERICCARLSONBBE6" duration="00:00:00.0005720" startTime="2022-05-04T14:46:22.5586230-04:00" endTime="2022-05-04T14:46:22.5591949-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="35e14a24-6b6c-4cd4-a9a9-2ab9e6265101" />
+    <UnitTestResult executionId="3ed4ae5b-0f6d-4f11-b919-f3ca4dd6937b" testId="646034e9-b341-deb0-2537-c8a8b144fecd" testName="ThenCanFormatScenarioWithMissingNameCorrectly" computerName="ERICCARLSONBBE6" duration="00:00:00.0013900" startTime="2022-05-04T14:46:22.5892536-04:00" endTime="2022-05-04T14:46:22.5906430-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ed4ae5b-0f6d-4f11-b919-f3ca4dd6937b" />
+    <UnitTestResult executionId="6d083f14-0a26-4d6f-9b39-b48f55b92492" testId="d5ba5cb7-42ad-070e-0239-910f6b492b3c" testName="ThenCanFormatDescriptionAsMarkdown" computerName="ERICCARLSONBBE6" duration="00:00:00.0175810" startTime="2022-05-04T14:46:22.4712805-04:00" endTime="2022-05-04T14:46:22.4888620-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d083f14-0a26-4d6f-9b39-b48f55b92492" />
   </Results>
   <TestDefinitions>
-    <UnitTest name="DescriptionShouldBeFormattedAsMarkdown" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="350d626d-9919-e1ff-7b14-b8ce24c122f0">
-      <Execution id="a5764102-1d64-4730-86af-e00eb87e5b96" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureFeature" name="DescriptionShouldBeFormattedAsMarkdown" />
+    <UnitTest name="DescriptionShouldBeFormattedAsMarkdown" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="350d626d-9919-e1ff-7b14-b8ce24c122f0">
+      <Execution id="e65d10d8-c865-47bf-aed9-18b8467e4e0a" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureFeature" name="DescriptionShouldBeFormattedAsMarkdown" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatNullMultilineStringSuccessfully" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="cd414111-c12c-30de-a8ff-df3230f15f41">
-      <Execution id="3c8b26cc-262b-461d-be0d-decde4c418f5" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingMultilineStrings" name="ThenCanFormatNullMultilineStringSuccessfully" />
+    <UnitTest name="ThenCanFormatNullMultilineStringSuccessfully" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="cd414111-c12c-30de-a8ff-df3230f15f41">
+      <Execution id="35e14a24-6b6c-4cd4-a9a9-2ab9e6265101" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingMultilineStrings" name="ThenCanFormatNullMultilineStringSuccessfully" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatMarkdownTableExtensionsEvenIfTheyAreSomewhatMalstructured" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="b386585d-f938-b051-f06a-722958237108">
-      <Execution id="5f0f9930-53f3-4fd7-b9a8-cda9d04b526c" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingFeatures" name="ThenCanFormatMarkdownTableExtensionsEvenIfTheyAreSomewhatMalstructured" />
+    <UnitTest name="ThenCanFormatMarkdownTableExtensionsEvenIfTheyAreSomewhatMalstructured" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="b386585d-f938-b051-f06a-722958237108">
+      <Execution id="c6bc12e5-2743-482b-9fb9-e0e2e4e0b5b1" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingFeatures" name="ThenCanFormatMarkdownTableExtensionsEvenIfTheyAreSomewhatMalstructured" />
     </UnitTest>
-    <UnitTest name="Comments_are_displayed_above_their_related_step" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="918cf8f8-6f7d-a1c7-d5f3-ae7d22e1fc4b">
-      <Execution id="77052419-2cd7-4ecf-b1ff-65aad86db9bc" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Comments_are_displayed_above_their_related_step" />
+    <UnitTest name="Comments_are_displayed_above_their_related_step" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="918cf8f8-6f7d-a1c7-d5f3-ae7d22e1fc4b">
+      <Execution id="9586b12f-1104-4ff8-b45f-47e82728a379" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Comments_are_displayed_above_their_related_step" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatCompleteScenarioCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="2f5a7c6a-6521-5330-5ab9-92ebf93c04bb">
-      <Execution id="383b11ec-73de-4f70-b349-13724b924e15" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatCompleteScenarioCorrectly" />
+    <UnitTest name="ThenCanFormatCompleteScenarioCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="2f5a7c6a-6521-5330-5ab9-92ebf93c04bb">
+      <Execution id="b0e106d2-1deb-4b9f-bf3f-7960e47caadb" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatCompleteScenarioCorrectly" />
     </UnitTest>
-    <UnitTest name="DescriptionWithImageWithExtraAttributesShouldRenderCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="0f8c6b0a-ae71-de83-eaf5-82ca2a60e460">
-      <Execution id="06d74211-85c9-41b9-bab2-91b5c1508be6" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureUsingStrikeFeature" name="DescriptionWithImageWithExtraAttributesShouldRenderCorrectly" />
+    <UnitTest name="DescriptionWithImageWithExtraAttributesShouldRenderCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="0f8c6b0a-ae71-de83-eaf5-82ca2a60e460">
+      <Execution id="64abf7fd-6ef1-4fb5-bf9e-98eaa08ace77" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureUsingStrikeFeature" name="DescriptionWithImageWithExtraAttributesShouldRenderCorrectly" />
     </UnitTest>
-    <UnitTest name="ShouldRenderHrAsClosed" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="052570fd-ad65-bf0e-f545-55733284e59c">
-      <Execution id="2cacc242-c39f-44d8-a69e-012817d4197e" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.StrikeMarkdownProviderTests" name="ShouldRenderHrAsClosed" />
+    <UnitTest name="ShouldRenderHrAsClosed" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="052570fd-ad65-bf0e-f545-55733284e59c">
+      <Execution id="aa0c6db4-0e80-43a2-8cb2-8dd29aadee7c" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.StrikeMarkdownProviderTests" name="ShouldRenderHrAsClosed" />
     </UnitTest>
-    <UnitTest name="FeatureTagsAreAddedToScenarioTags" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="79b6198d-8eac-ee8a-99fa-163c77e49ccc">
-      <Execution id="26a2f9ef-fecc-4ccb-acd6-c5923f5bd910" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="FeatureTagsAreAddedToScenarioTags" />
+    <UnitTest name="FeatureTagsAreAddedToScenarioTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="79b6198d-8eac-ee8a-99fa-163c77e49ccc">
+      <Execution id="b67f1f2b-81f3-463e-9a90-c542e1303e49" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="FeatureTagsAreAddedToScenarioTags" />
     </UnitTest>
-    <UnitTest name="NoTags" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="33f0753a-3e1f-1038-a755-bae465e6ef26">
-      <Execution id="a66dc466-9650-40e4-bef5-309a526b98f1" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="NoTags" />
+    <UnitTest name="NoTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="33f0753a-3e1f-1038-a755-bae465e6ef26">
+      <Execution id="318588cf-5854-4f87-865a-2badbd205dd0" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="NoTags" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatNormalTableSuccessfully" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="5b218172-baab-78a2-5eea-7f97dd1408ea">
-      <Execution id="e3c6e39d-e651-4793-97fb-3ead81f873a7" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingTables" name="ThenCanFormatNormalTableSuccessfully" />
+    <UnitTest name="ThenCanFormatNormalTableSuccessfully" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="5b218172-baab-78a2-5eea-7f97dd1408ea">
+      <Execution id="f01f0dad-a96f-4bf5-b215-8487e1cc3105" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingTables" name="ThenCanFormatNormalTableSuccessfully" />
     </UnitTest>
-    <UnitTest name="Comments_after_the_last_step_are_displayed" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="eedbc798-6ce7-3b4c-392c-89fb084d9898">
-      <Execution id="25ff5c05-a7bb-480a-b98e-f583a88d81a5" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Comments_after_the_last_step_are_displayed" />
+    <UnitTest name="Comments_after_the_last_step_are_displayed" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="eedbc798-6ce7-3b4c-392c-89fb084d9898">
+      <Execution id="0a9483e9-af94-4dbd-8c93-729f03da2e27" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Comments_after_the_last_step_are_displayed" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatNormalMultilineStringSuccessfully" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="a3f0acb0-1d7a-00ec-600c-f232b83f2801">
-      <Execution id="d861dc36-7ed4-49d2-99a8-159446aaaa24" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingMultilineStrings" name="ThenCanFormatNormalMultilineStringSuccessfully" />
+    <UnitTest name="ThenCanFormatNormalMultilineStringSuccessfully" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="a3f0acb0-1d7a-00ec-600c-f232b83f2801">
+      <Execution id="c58d15a5-d8f0-42ba-b2e9-cf283048a95d" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingMultilineStrings" name="ThenCanFormatNormalMultilineStringSuccessfully" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatScenarioWithMissingExampleCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="c946a4f0-440c-29d7-29e0-2380f4f3cc86">
-      <Execution id="95b65ad4-884b-49c3-848a-5d0cb580c78a" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingExampleCorrectly" />
+    <UnitTest name="ThenCanFormatScenarioWithMissingExampleCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="c946a4f0-440c-29d7-29e0-2380f4f3cc86">
+      <Execution id="93d80bb1-d31c-4839-bff7-074e9f21d0df" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingExampleCorrectly" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatScenarioWithMissingNameCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="646034e9-b341-deb0-2537-c8a8b144fecd">
-      <Execution id="dd3f9905-9560-47fa-b631-0fac081d8a6b" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingNameCorrectly" />
+    <UnitTest name="ThenCanFormatScenarioWithMissingNameCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="646034e9-b341-deb0-2537-c8a8b144fecd">
+      <Execution id="3ed4ae5b-0f6d-4f11-b919-f3ca4dd6937b" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingNameCorrectly" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatDescriptionAsMarkdown" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="d5ba5cb7-42ad-070e-0239-910f6b492b3c">
-      <Execution id="664429ba-32ce-473e-b654-a5eb2778b65d" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingFeatures" name="ThenCanFormatDescriptionAsMarkdown" />
+    <UnitTest name="ThenCanFormatDescriptionAsMarkdown" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="d5ba5cb7-42ad-070e-0239-910f6b492b3c">
+      <Execution id="6d083f14-0a26-4d6f-9b39-b48f55b92492" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingFeatures" name="ThenCanFormatDescriptionAsMarkdown" />
     </UnitTest>
-    <UnitTest name="MarkdownTablesShouldBeFormattedAsHTMLTables" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="7ac5016c-fe33-4cff-6cbb-f8d264ca8b85">
-      <Execution id="af11832d-1e04-442c-9d14-d3206d77b835" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureFeature" name="MarkdownTablesShouldBeFormattedAsHTMLTables" />
+    <UnitTest name="MarkdownTablesShouldBeFormattedAsHTMLTables" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="7ac5016c-fe33-4cff-6cbb-f8d264ca8b85">
+      <Execution id="601ec712-c31e-442f-b42a-51af3545285e" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureFeature" name="MarkdownTablesShouldBeFormattedAsHTMLTables" />
     </UnitTest>
-    <UnitTest name="SomewhatMalformedMarkdownTablesShouldBeFormattedAsHTMLTablesAsWell" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="8b1ca603-b44e-4178-090a-6171855f0a30">
-      <Execution id="0f84333f-c49b-41a6-beff-2992427a0ce6" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureFeature" name="SomewhatMalformedMarkdownTablesShouldBeFormattedAsHTMLTablesAsWell" />
+    <UnitTest name="SomewhatMalformedMarkdownTablesShouldBeFormattedAsHTMLTablesAsWell" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="8b1ca603-b44e-4178-090a-6171855f0a30">
+      <Execution id="6f8fa588-df5d-4a99-bb61-94e0a93d4996" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureFeature" name="SomewhatMalformedMarkdownTablesShouldBeFormattedAsHTMLTablesAsWell" />
     </UnitTest>
-    <UnitTest name="Tables_are_formatted_as_list_items_with_tables_internal" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="dbca7286-1920-ac61-d71a-e9333d72b24f">
-      <Execution id="0821e413-2318-40bd-a9ab-2bb3a6ab3efb" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Tables_are_formatted_as_list_items_with_tables_internal" />
+    <UnitTest name="Tables_are_formatted_as_list_items_with_tables_internal" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="dbca7286-1920-ac61-d71a-e9333d72b24f">
+      <Execution id="a787e743-09e1-437c-bfaa-d9b42452cba4" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Tables_are_formatted_as_list_items_with_tables_internal" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatNullTableSuccessfully" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="56b39fb1-2c90-d86e-0a60-ea1da22d0bdb">
-      <Execution id="cb576e39-4afc-4ae2-879a-f8ef5f870da3" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingTables" name="ThenCanFormatNullTableSuccessfully" />
+    <UnitTest name="ThenCanFormatNullTableSuccessfully" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="56b39fb1-2c90-d86e-0a60-ea1da22d0bdb">
+      <Execution id="4ea4261c-585e-4308-80f2-dda1228c2273" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingTables" name="ThenCanFormatNullTableSuccessfully" />
     </UnitTest>
-    <UnitTest name="DescriptionWithImageShouldRenderCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="2dafa7b4-c7d4-6e6b-c792-4ef75d362dd8">
-      <Execution id="b3ef8d2e-aec3-4931-9198-9ee06a153b91" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureUsingStrikeFeature" name="DescriptionWithImageShouldRenderCorrectly" />
+    <UnitTest name="DescriptionWithImageShouldRenderCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="2dafa7b4-c7d4-6e6b-c792-4ef75d362dd8">
+      <Execution id="69cd43ab-b6fa-4f75-b70e-8a06dfe1c8da" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.FormattingAFeatureUsingStrikeFeature" name="DescriptionWithImageShouldRenderCorrectly" />
     </UnitTest>
-    <UnitTest name="ThenCanRenderTags" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="1b8ab176-c36b-30cb-96b6-9c88a1107583">
-      <Execution id="03d93e7a-e3a9-4c3f-a225-f24b3a91e24b" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanRenderTags" />
+    <UnitTest name="ThenCanRenderTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="1b8ab176-c36b-30cb-96b6-9c88a1107583">
+      <Execution id="b020597d-825b-4678-8c95-16ca6f6ac72d" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanRenderTags" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatMarkdownTableExtensions" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="e52f3b1c-1b3c-42b1-713f-769797285fb1">
-      <Execution id="2b3287df-2b0e-4bdc-a1bf-4df9306edc07" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingFeatures" name="ThenCanFormatMarkdownTableExtensions" />
+    <UnitTest name="ThenCanFormatMarkdownTableExtensions" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="e52f3b1c-1b3c-42b1-713f-769797285fb1">
+      <Execution id="d1ca7ba5-c7db-4c20-b016-4fa7c2200d46" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingFeatures" name="ThenCanFormatMarkdownTableExtensions" />
     </UnitTest>
-    <UnitTest name="TagsAreRenderedAlphabetically" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="cea46ab5-a417-696a-1808-76dcba2c0c6f">
-      <Execution id="f42929c7-1828-43d3-99e5-14215468b17f" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="TagsAreRenderedAlphabetically" />
+    <UnitTest name="TagsAreRenderedAlphabetically" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="cea46ab5-a417-696a-1808-76dcba2c0c6f">
+      <Execution id="e4710070-cbd9-4acf-aee1-d653a8760244" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="TagsAreRenderedAlphabetically" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatScenarioWithMissingDescriptionCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="b3ec2790-be6f-f1ef-1928-97a01f966eb1">
-      <Execution id="3018a21e-7be9-4698-b16f-fcc35a01da93" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingDescriptionCorrectly" />
+    <UnitTest name="ThenCanFormatScenarioWithMissingDescriptionCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="b3ec2790-be6f-f1ef-1928-97a01f966eb1">
+      <Execution id="62bbdc45-9a08-42d4-a74e-e9635f4ca7f9" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingDescriptionCorrectly" />
     </UnitTest>
-    <UnitTest name="Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="ce052cff-935c-d43b-e9c8-4e93e9f003cd">
-      <Execution id="3f4c0a31-2db6-4838-9783-33cf1767b37a" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal" />
+    <UnitTest name="Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="ce052cff-935c-d43b-e9c8-4e93e9f003cd">
+      <Execution id="1b852f0d-383f-41eb-9efc-7422615a050c" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Multiline_strings_are_formatted_as_list_items_with_pre_elements_formatted_as_code_internal" />
     </UnitTest>
-    <UnitTest name="ThenCanFormatScenarioWithMissingTableFromExampleCorrectly" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="9dce075a-681f-a0f1-3507-01804a196153">
-      <Execution id="2991eaab-592d-44e5-9e06-00e5638915f0" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingTableFromExampleCorrectly" />
+    <UnitTest name="ThenCanFormatScenarioWithMissingTableFromExampleCorrectly" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="9dce075a-681f-a0f1-3507-01804a196153">
+      <Execution id="7bf9f0d3-7762-4a82-bfce-6f498ecce2e1" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingScenario" name="ThenCanFormatScenarioWithMissingTableFromExampleCorrectly" />
     </UnitTest>
-    <UnitTest name="ThenShouldLocalizeExamplesKeyword" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="24860c7b-1813-b54a-7af2-4521ce835091">
-      <Execution id="708c79a7-f529-4f5c-b04f-88d7f7390876" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingLocalizedFeatures" name="ThenShouldLocalizeExamplesKeyword" />
+    <UnitTest name="ThenShouldLocalizeExamplesKeyword" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="24860c7b-1813-b54a-7af2-4521ce835091">
+      <Execution id="61d116f7-5412-4cf9-89be-20e82de6fec8" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingLocalizedFeatures" name="ThenShouldLocalizeExamplesKeyword" />
     </UnitTest>
-    <UnitTest name="Multiline_comments_are_displayed_in_the_same_element" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="796f49b7-3a42-db9e-15d1-dc4270da8d0d">
-      <Execution id="b15eeda9-f416-44f9-84d2-6ad61fb13840" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Multiline_comments_are_displayed_in_the_same_element" />
+    <UnitTest name="Multiline_comments_are_displayed_in_the_same_element" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="796f49b7-3a42-db9e-15d1-dc4270da8d0d">
+      <Execution id="4ab47f90-a637-408a-b68e-a4e114d424ed" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Multiline_comments_are_displayed_in_the_same_element" />
     </UnitTest>
-    <UnitTest name="Simple_steps_are_formatted_as_list_items" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="040ce861-3db1-bc3a-5151-d0eaa9f58fd0">
-      <Execution id="b57fcb39-dbff-4d35-9211-311908cc01cd" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Simple_steps_are_formatted_as_list_items" />
+    <UnitTest name="Simple_steps_are_formatted_as_list_items" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="040ce861-3db1-bc3a-5151-d0eaa9f58fd0">
+      <Execution id="adfc1bd3-1e5c-439d-a951-b2711e54ffb7" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Simple_steps_are_formatted_as_list_items" />
     </UnitTest>
-    <UnitTest name="Steps_get_selected_Language" storage="/users/ericcarlson/repos/pickles/src/pickles/pickles.documentationbuilders.html.unittests/bin/debug/netcoreapp3.1/picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="6cfb4e14-c3c5-c283-c05b-a1f0537d9edc">
-      <Execution id="1d523081-919f-4940-84bb-995463a31ec2" />
-      <TestMethod codeBase="/Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Steps_get_selected_Language" />
+    <UnitTest name="Steps_get_selected_Language" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.html.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.html.unittests.dll" id="6cfb4e14-c3c5-c283-c05b-a1f0537d9edc">
+      <Execution id="ac6b2bfc-dfca-448f-aefe-e5507739bbf0" />
+      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.WhenFormattingStep" name="Steps_get_selected_Language" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="a3f0acb0-1d7a-00ec-600c-f232b83f2801" executionId="d861dc36-7ed4-49d2-99a8-159446aaaa24" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ce052cff-935c-d43b-e9c8-4e93e9f003cd" executionId="3f4c0a31-2db6-4838-9783-33cf1767b37a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2dafa7b4-c7d4-6e6b-c792-4ef75d362dd8" executionId="b3ef8d2e-aec3-4931-9198-9ee06a153b91" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="052570fd-ad65-bf0e-f545-55733284e59c" executionId="2cacc242-c39f-44d8-a69e-012817d4197e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="eedbc798-6ce7-3b4c-392c-89fb084d9898" executionId="25ff5c05-a7bb-480a-b98e-f583a88d81a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2f5a7c6a-6521-5330-5ab9-92ebf93c04bb" executionId="383b11ec-73de-4f70-b349-13724b924e15" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9dce075a-681f-a0f1-3507-01804a196153" executionId="2991eaab-592d-44e5-9e06-00e5638915f0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b3ec2790-be6f-f1ef-1928-97a01f966eb1" executionId="3018a21e-7be9-4698-b16f-fcc35a01da93" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8b1ca603-b44e-4178-090a-6171855f0a30" executionId="0f84333f-c49b-41a6-beff-2992427a0ce6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="040ce861-3db1-bc3a-5151-d0eaa9f58fd0" executionId="b57fcb39-dbff-4d35-9211-311908cc01cd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="918cf8f8-6f7d-a1c7-d5f3-ae7d22e1fc4b" executionId="77052419-2cd7-4ecf-b1ff-65aad86db9bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0f8c6b0a-ae71-de83-eaf5-82ca2a60e460" executionId="06d74211-85c9-41b9-bab2-91b5c1508be6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="796f49b7-3a42-db9e-15d1-dc4270da8d0d" executionId="b15eeda9-f416-44f9-84d2-6ad61fb13840" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="56b39fb1-2c90-d86e-0a60-ea1da22d0bdb" executionId="cb576e39-4afc-4ae2-879a-f8ef5f870da3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="6cfb4e14-c3c5-c283-c05b-a1f0537d9edc" executionId="1d523081-919f-4940-84bb-995463a31ec2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="e52f3b1c-1b3c-42b1-713f-769797285fb1" executionId="2b3287df-2b0e-4bdc-a1bf-4df9306edc07" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="5b218172-baab-78a2-5eea-7f97dd1408ea" executionId="e3c6e39d-e651-4793-97fb-3ead81f873a7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b386585d-f938-b051-f06a-722958237108" executionId="5f0f9930-53f3-4fd7-b9a8-cda9d04b526c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="1b8ab176-c36b-30cb-96b6-9c88a1107583" executionId="03d93e7a-e3a9-4c3f-a225-f24b3a91e24b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="33f0753a-3e1f-1038-a755-bae465e6ef26" executionId="a66dc466-9650-40e4-bef5-309a526b98f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cea46ab5-a417-696a-1808-76dcba2c0c6f" executionId="f42929c7-1828-43d3-99e5-14215468b17f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cd414111-c12c-30de-a8ff-df3230f15f41" executionId="3c8b26cc-262b-461d-be0d-decde4c418f5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="79b6198d-8eac-ee8a-99fa-163c77e49ccc" executionId="26a2f9ef-fecc-4ccb-acd6-c5923f5bd910" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="d5ba5cb7-42ad-070e-0239-910f6b492b3c" executionId="664429ba-32ce-473e-b654-a5eb2778b65d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="646034e9-b341-deb0-2537-c8a8b144fecd" executionId="dd3f9905-9560-47fa-b631-0fac081d8a6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="24860c7b-1813-b54a-7af2-4521ce835091" executionId="708c79a7-f529-4f5c-b04f-88d7f7390876" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="c946a4f0-440c-29d7-29e0-2380f4f3cc86" executionId="95b65ad4-884b-49c3-848a-5d0cb580c78a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="dbca7286-1920-ac61-d71a-e9333d72b24f" executionId="0821e413-2318-40bd-a9ab-2bb3a6ab3efb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7ac5016c-fe33-4cff-6cbb-f8d264ca8b85" executionId="af11832d-1e04-442c-9d14-d3206d77b835" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="350d626d-9919-e1ff-7b14-b8ce24c122f0" executionId="a5764102-1d64-4730-86af-e00eb87e5b96" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b386585d-f938-b051-f06a-722958237108" executionId="c6bc12e5-2743-482b-9fb9-e0e2e4e0b5b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c946a4f0-440c-29d7-29e0-2380f4f3cc86" executionId="93d80bb1-d31c-4839-bff7-074e9f21d0df" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7ac5016c-fe33-4cff-6cbb-f8d264ca8b85" executionId="601ec712-c31e-442f-b42a-51af3545285e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ce052cff-935c-d43b-e9c8-4e93e9f003cd" executionId="1b852f0d-383f-41eb-9efc-7422615a050c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="796f49b7-3a42-db9e-15d1-dc4270da8d0d" executionId="4ab47f90-a637-408a-b68e-a4e114d424ed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6cfb4e14-c3c5-c283-c05b-a1f0537d9edc" executionId="ac6b2bfc-dfca-448f-aefe-e5507739bbf0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eedbc798-6ce7-3b4c-392c-89fb084d9898" executionId="0a9483e9-af94-4dbd-8c93-729f03da2e27" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3ec2790-be6f-f1ef-1928-97a01f966eb1" executionId="62bbdc45-9a08-42d4-a74e-e9635f4ca7f9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="56b39fb1-2c90-d86e-0a60-ea1da22d0bdb" executionId="4ea4261c-585e-4308-80f2-dda1228c2273" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="350d626d-9919-e1ff-7b14-b8ce24c122f0" executionId="e65d10d8-c865-47bf-aed9-18b8467e4e0a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e52f3b1c-1b3c-42b1-713f-769797285fb1" executionId="d1ca7ba5-c7db-4c20-b016-4fa7c2200d46" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1b8ab176-c36b-30cb-96b6-9c88a1107583" executionId="b020597d-825b-4678-8c95-16ca6f6ac72d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a3f0acb0-1d7a-00ec-600c-f232b83f2801" executionId="c58d15a5-d8f0-42ba-b2e9-cf283048a95d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="79b6198d-8eac-ee8a-99fa-163c77e49ccc" executionId="b67f1f2b-81f3-463e-9a90-c542e1303e49" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cea46ab5-a417-696a-1808-76dcba2c0c6f" executionId="e4710070-cbd9-4acf-aee1-d653a8760244" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dbca7286-1920-ac61-d71a-e9333d72b24f" executionId="a787e743-09e1-437c-bfaa-d9b42452cba4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="052570fd-ad65-bf0e-f545-55733284e59c" executionId="aa0c6db4-0e80-43a2-8cb2-8dd29aadee7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2dafa7b4-c7d4-6e6b-c792-4ef75d362dd8" executionId="69cd43ab-b6fa-4f75-b70e-8a06dfe1c8da" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="24860c7b-1813-b54a-7af2-4521ce835091" executionId="61d116f7-5412-4cf9-89be-20e82de6fec8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="040ce861-3db1-bc3a-5151-d0eaa9f58fd0" executionId="adfc1bd3-1e5c-439d-a951-b2711e54ffb7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9dce075a-681f-a0f1-3507-01804a196153" executionId="7bf9f0d3-7762-4a82-bfce-6f498ecce2e1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0f8c6b0a-ae71-de83-eaf5-82ca2a60e460" executionId="64abf7fd-6ef1-4fb5-bf9e-98eaa08ace77" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b1ca603-b44e-4178-090a-6171855f0a30" executionId="6f8fa588-df5d-4a99-bb61-94e0a93d4996" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b218172-baab-78a2-5eea-7f97dd1408ea" executionId="f01f0dad-a96f-4bf5-b215-8487e1cc3105" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33f0753a-3e1f-1038-a755-bae465e6ef26" executionId="318588cf-5854-4f87-865a-2badbd205dd0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="918cf8f8-6f7d-a1c7-d5f3-ae7d22e1fc4b" executionId="9586b12f-1104-4ff8-b45f-47e82728a379" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2f5a7c6a-6521-5330-5ab9-92ebf93c04bb" executionId="b0e106d2-1deb-4b9f-bf3f-7960e47caadb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cd414111-c12c-30de-a8ff-df3230f15f41" executionId="35e14a24-6b6c-4cd4-a9a9-2ab9e6265101" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="646034e9-b341-deb0-2537-c8a8b144fecd" executionId="3ed4ae5b-0f6d-4f11-b919-f3ca4dd6937b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d5ba5cb7-42ad-070e-0239-910f6b492b3c" executionId="6d083f14-0a26-4d6f-9b39-b48f55b92492" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -398,201 +398,201 @@ Then the result should be
   <ResultSummary outcome="Completed">
     <Counters total="30" executed="30" passed="30" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
-      <StdOut>NUnit Adapter 3.17.0.0: Test execution started
-Running all tests in /Users/ericcarlson/repos/pickles/src/Pickles/Pickles.DocumentationBuilders.Html.UnitTests/bin/Debug/netcoreapp3.1/PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll
-   NUnit3TestExecutor discovered 30 of 30 NUnit test cases
-Given I have this feature description
-  --- multiline step argument ---
-  In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered as HTML
-  
-  Introduction
-  ============
-  
-  This feature should have some markdown elements that get displayed properly
-  
-  Context
-  -------
-  
-  &gt; I really like blockquotes to describe
-  &gt; to describe text
-  
-  I also enjoy using lists as well, here are the reasons
-  
-  - Lists are easy to read
-  - Lists make my life easier
-  
-  I also enjoy ordering things
-  
-  1. This is the first reason
-  2. This is the second reason
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.1s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered as HTML&lt;/p&gt;
-      &lt;h1&gt;Introduction&lt;/h1&gt;
-      &lt;p&gt;This feature should have some markdown elements that get displayed properly&lt;/p&gt;
-      &lt;h2&gt;Context&lt;/h2&gt;
-      &lt;blockquote&gt;
-        &lt;p&gt;I really like blockquotes to describe
-  to describe text&lt;/p&gt;
-      &lt;/blockquote&gt;
-      &lt;p&gt;I also enjoy using lists as well, here are the reasons&lt;/p&gt;
-      &lt;ul&gt;
-        &lt;li&gt;Lists are easy to read&lt;/li&gt;
-        &lt;li&gt;Lists make my life easier&lt;/li&gt;
-      &lt;/ul&gt;
-      &lt;p&gt;I also enjoy ordering things&lt;/p&gt;
-      &lt;ol&gt;
-        &lt;li&gt;This is the first reason&lt;/li&gt;
-        &lt;li&gt;This is the second reason&lt;/li&gt;
-      &lt;/ol&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)
-
-Given I have this feature description
-  --- multiline step argument ---
-  In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables
-  
-  | Table Header 1 | Table Header 2 |
-  | -------------- | -------------- |
-  | Cell value 1   | Cell value 2   |
-  | Cell value 3   |                |
-  | Cell value 4   | Cell value 5   |
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;
-      &lt;table&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th&gt;Table Header 1&lt;/th&gt;
-            &lt;th&gt;Table Header 2&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 1&lt;/td&gt;
-            &lt;td&gt;Cell value 2&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 3&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 4&lt;/td&gt;
-            &lt;td&gt;Cell value 5&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)
-
-Given I have this feature description
-  --- multiline step argument ---
-  In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables
-  
-  | Table Header 1 | Table Header 2                         |
-  | -------------- | -------------------------------------- |
-  | Cell value 1   | Cell value 2                           |
-  | Cell value 3     Note the missing column delimiter here |
-  | Cell value 4   | Cell value 5                           |
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;In order to see the description as nice HTML
-  As a Pickles user
-  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;
-      &lt;table&gt;
-        &lt;thead&gt;
-          &lt;tr&gt;
-            &lt;th&gt;Table Header 1&lt;/th&gt;
-            &lt;th&gt;Table Header 2&lt;/th&gt;
-          &lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 1&lt;/td&gt;
-            &lt;td&gt;Cell value 2&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 3     Note the missing column delimiter here&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-          &lt;/tr&gt;
-          &lt;tr&gt;
-            &lt;td&gt;Cell value 4&lt;/td&gt;
-            &lt;td&gt;Cell value 5&lt;/td&gt;
-          &lt;/tr&gt;
-        &lt;/tbody&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)
-
-Given I have this feature description
-  --- multiline step argument ---
-  Including a picture: ![](./image.png)
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.3s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="" /&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)
-
-Given I have this feature description
-  --- multiline step argument ---
-  Including a picture: ![alt text](./image.png "Image Title")
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)
-When I generate the documentation
--&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)
-Then the result should be
-  --- multiline step argument ---
-  &lt;div id="feature"&gt;
-    &lt;h1&gt;a feature&lt;/h1&gt;
-    &lt;div class="description"&gt;
-      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="alt text" title="Image Title" /&gt;&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;ul id="scenarios" /&gt;
-  &lt;/div&gt;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)
-
-NUnit Adapter 3.17.0.0: Test execution complete
+      <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
+Running all tests in C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Html.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Html.UnitTests.dll&#xD;
+   NUnit3TestExecutor discovered 30 of 30 NUnit test cases&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered as HTML&#xD;
+  &#xD;
+  Introduction&#xD;
+  ============&#xD;
+  &#xD;
+  This feature should have some markdown elements that get displayed properly&#xD;
+  &#xD;
+  Context&#xD;
+  -------&#xD;
+  &#xD;
+  &gt; I really like blockquotes to describe&#xD;
+  &gt; to describe text&#xD;
+  &#xD;
+  I also enjoy using lists as well, here are the reasons&#xD;
+  &#xD;
+  - Lists are easy to read&#xD;
+  - Lists make my life easier&#xD;
+  &#xD;
+  I also enjoy ordering things&#xD;
+  &#xD;
+  1. This is the first reason&#xD;
+  2. This is the second reason&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.1s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered as HTML&lt;/p&gt;&#xD;
+      &lt;h1&gt;Introduction&lt;/h1&gt;&#xD;
+      &lt;p&gt;This feature should have some markdown elements that get displayed properly&lt;/p&gt;&#xD;
+      &lt;h2&gt;Context&lt;/h2&gt;&#xD;
+      &lt;blockquote&gt;&#xD;
+        &lt;p&gt;I really like blockquotes to describe&#xD;
+  to describe text&lt;/p&gt;&#xD;
+      &lt;/blockquote&gt;&#xD;
+      &lt;p&gt;I also enjoy using lists as well, here are the reasons&lt;/p&gt;&#xD;
+      &lt;ul&gt;&#xD;
+        &lt;li&gt;Lists are easy to read&lt;/li&gt;&#xD;
+        &lt;li&gt;Lists make my life easier&lt;/li&gt;&#xD;
+      &lt;/ul&gt;&#xD;
+      &lt;p&gt;I also enjoy ordering things&lt;/p&gt;&#xD;
+      &lt;ol&gt;&#xD;
+        &lt;li&gt;This is the first reason&lt;/li&gt;&#xD;
+        &lt;li&gt;This is the second reason&lt;/li&gt;&#xD;
+      &lt;/ol&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.1s)&#xD;
+&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&#xD;
+  &#xD;
+  | Table Header 1 | Table Header 2 |&#xD;
+  | -------------- | -------------- |&#xD;
+  | Cell value 1   | Cell value 2   |&#xD;
+  | Cell value 3   |                |&#xD;
+  | Cell value 4   | Cell value 5   |&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;&#xD;
+      &lt;table&gt;&#xD;
+        &lt;thead&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;th&gt;Table Header 1&lt;/th&gt;&#xD;
+            &lt;th&gt;Table Header 2&lt;/th&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/thead&gt;&#xD;
+        &lt;tbody&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 1&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 2&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 3&lt;/td&gt;&#xD;
+            &lt;td&gt;&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 4&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 5&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/tbody&gt;&#xD;
+      &lt;/table&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&#xD;
+  &#xD;
+  | Table Header 1 | Table Header 2                         |&#xD;
+  | -------------- | -------------------------------------- |&#xD;
+  | Cell value 1   | Cell value 2                           |&#xD;
+  | Cell value 3     Note the missing column delimiter here |&#xD;
+  | Cell value 4   | Cell value 5                           |&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("In order to see t...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;In order to see the description as nice HTML&#xD;
+  As a Pickles user&#xD;
+  I want to see the descriptions written in markdown rendered with tables&lt;/p&gt;&#xD;
+      &lt;table&gt;&#xD;
+        &lt;thead&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;th&gt;Table Header 1&lt;/th&gt;&#xD;
+            &lt;th&gt;Table Header 2&lt;/th&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/thead&gt;&#xD;
+        &lt;tbody&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 1&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 2&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 3     Note the missing column delimiter here&lt;/td&gt;&#xD;
+            &lt;td&gt;&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+          &lt;tr&gt;&#xD;
+            &lt;td&gt;Cell value 4&lt;/td&gt;&#xD;
+            &lt;td&gt;Cell value 5&lt;/td&gt;&#xD;
+          &lt;/tr&gt;&#xD;
+        &lt;/tbody&gt;&#xD;
+      &lt;/table&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Including a picture: ![](./image.png)&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.2s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="" /&gt;&lt;/p&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)&#xD;
+&#xD;
+Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Including a picture: ![alt text](./image.png "Image Title")&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescription("Including a pictu...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheDocumentation() (0.0s)&#xD;
+Then the result should be&#xD;
+  --- multiline step argument ---&#xD;
+  &lt;div id="feature"&gt;&#xD;
+    &lt;h1&gt;a feature&lt;/h1&gt;&#xD;
+    &lt;div class="description"&gt;&#xD;
+      &lt;p&gt;Including a picture: &lt;img src="./image.png" alt="alt text" title="Image Title" /&gt;&lt;/p&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;ul id="scenarios" /&gt;&#xD;
+  &lt;/div&gt;&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("&lt;div id="feature"...") (0.0s)&#xD;
+&#xD;
+NUnit Adapter 3.17.0.0: Test execution complete&#xD;
 </StdOut>
     </Output>
   </ResultSummary>
