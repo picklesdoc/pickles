@@ -2,8 +2,8 @@
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>PicklesDoc.Pickles</RootNamespace>
-    <AssemblyName>PicklesDoc.Pickles.Library</AssemblyName>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <AssemblyName>specsynx.Pickles.Library</AssemblyName>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <AssemblyTitle>Pickles</AssemblyTitle>
     <Description>A documentation generator for features written in the Gherkin language</Description>
@@ -71,7 +71,7 @@
   </ItemGroup>
   <PropertyGroup>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <PackageId>PicklesDoc.Pickles.Library</PackageId>
+    <PackageId>specsynx.Pickles.Library</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 </Project>

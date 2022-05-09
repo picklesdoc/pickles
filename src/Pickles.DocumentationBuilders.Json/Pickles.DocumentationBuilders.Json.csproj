@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Json</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Json</AssemblyName>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Json</AssemblyTitle>
     <Description>A Pickles output formatter that outputs Json documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

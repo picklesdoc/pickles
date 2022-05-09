@@ -14,6 +14,11 @@ Features in Experimental are subject to change and removal without being conside
 
 This document is formatted according to the principles of [Keep A CHANGELOG](http://keepachangelog.com).
 
+## [4.0.0] - 2022-05-09
+
+### Updated
+- .NET 6 Support
+
 ## [3.0.1] - 2021-10-04
 
 ### Updated

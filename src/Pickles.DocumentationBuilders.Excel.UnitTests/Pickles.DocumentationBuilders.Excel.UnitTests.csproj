@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests</AssemblyName>
-   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Excel.UnitTests</AssemblyTitle>
     <Description>Unit Tests for the Pickles output formatter that outputs MS Excel documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

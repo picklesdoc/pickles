@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="d97ea098-c18e-4f67-a54a-337917da707a" name="ericcarlson@ERICCARLSONBBE6 2022-05-04 14:46:21" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-05-04T14:46:21.4012620-04:00" queuing="2022-05-04T14:46:21.4012621-04:00" start="2022-05-04T14:46:18.0247674-04:00" finish="2022-05-04T14:46:21.4076135-04:00" />
-  <TestSettings name="default" id="ef874329-7cec-4582-9c0f-bf2742dd1ff1">
-    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-04_14_46_21" />
+<TestRun id="8f20f323-ae52-4575-8dfa-fa2ebfbfc5c1" name="ericcarlson@ERICCARLSONBBE6 2022-05-09 16:19:10" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-05-09T16:19:10.7072857-04:00" queuing="2022-05-09T16:19:10.7072858-04:00" start="2022-05-09T16:19:07.2926016-04:00" finish="2022-05-09T16:19:10.7128395-04:00" />
+  <TestSettings name="default" id="e1292364-6e00-413d-ab40-2e61b503e132">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-09_16_19_10" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="1cd609b4-fc00-48e2-96d5-fe46867d9fa1" testId="f1333ab2-3b88-68fb-4397-9c0dea5e9c51" testName="CanAddFunctionWrapperAroundJson" computerName="ERICCARLSONBBE6" duration="00:00:00.1093560" startTime="2022-05-04T14:46:21.0967132-04:00" endTime="2022-05-04T14:46:21.2060006-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1cd609b4-fc00-48e2-96d5-fe46867d9fa1" />
-    <UnitTestResult executionId="1094d78e-7050-4363-ae88-4940cdaf9103" testId="60f0324a-6bff-8fe0-f447-001f5d9a9df1" testName="TestTheResourceWriter" computerName="ERICCARLSONBBE6" duration="00:00:00.1133440" startTime="2022-05-04T14:46:21.2169231-04:00" endTime="2022-05-04T14:46:21.3302673-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1094d78e-7050-4363-ae88-4940cdaf9103" />
-    <UnitTestResult executionId="eaa51729-f1fb-4b94-9605-c040a3ebd2ec" testId="cda15230-9dee-6fe3-1218-a25c1c5d77a2" testName="CanRenameJsonFile" computerName="ERICCARLSONBBE6" duration="00:00:00.0059270" startTime="2022-05-04T14:46:21.2109500-04:00" endTime="2022-05-04T14:46:21.2168782-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eaa51729-f1fb-4b94-9605-c040a3ebd2ec" />
+    <UnitTestResult executionId="14d96a03-363c-42b6-addb-91b264e266c4" testId="f1333ab2-3b88-68fb-4397-9c0dea5e9c51" testName="CanAddFunctionWrapperAroundJson" computerName="ERICCARLSONBBE6" duration="00:00:00.1195520" startTime="2022-05-09T16:19:10.3516047-04:00" endTime="2022-05-09T16:19:10.4710667-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="14d96a03-363c-42b6-addb-91b264e266c4" />
+    <UnitTestResult executionId="1a221c14-a73e-4c5f-93e6-f23d4bc5edfb" testId="60f0324a-6bff-8fe0-f447-001f5d9a9df1" testName="TestTheResourceWriter" computerName="ERICCARLSONBBE6" duration="00:00:00.1245350" startTime="2022-05-09T16:19:10.4965076-04:00" endTime="2022-05-09T16:19:10.6210426-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a221c14-a73e-4c5f-93e6-f23d4bc5edfb" />
+    <UnitTestResult executionId="b7c1238a-1f93-4382-b26c-f62ea8ce93c0" testId="cda15230-9dee-6fe3-1218-a25c1c5d77a2" testName="CanRenameJsonFile" computerName="ERICCARLSONBBE6" duration="00:00:00.0113670" startTime="2022-05-09T16:19:10.4824022-04:00" endTime="2022-05-09T16:19:10.4937687-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b7c1238a-1f93-4382-b26c-f62ea8ce93c0" />
   </Results>
   <TestDefinitions>
     <UnitTest name="CanRenameJsonFile" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.dhtml.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.dhtml.unittests.dll" id="cda15230-9dee-6fe3-1218-a25c1c5d77a2">
-      <Execution id="eaa51729-f1fb-4b94-9605-c040a3ebd2ec" />
+      <Execution id="b7c1238a-1f93-4382-b26c-f62ea8ce93c0" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Dhtml.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests.WhenDoingSomeIntegrationTests" name="CanRenameJsonFile" />
     </UnitTest>
     <UnitTest name="TestTheResourceWriter" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.dhtml.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.dhtml.unittests.dll" id="60f0324a-6bff-8fe0-f447-001f5d9a9df1">
-      <Execution id="1094d78e-7050-4363-ae88-4940cdaf9103" />
+      <Execution id="1a221c14-a73e-4c5f-93e6-f23d4bc5edfb" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Dhtml.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests.WhenDoingSomeIntegrationTests" name="TestTheResourceWriter" />
     </UnitTest>
     <UnitTest name="CanAddFunctionWrapperAroundJson" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.dhtml.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.dhtml.unittests.dll" id="f1333ab2-3b88-68fb-4397-9c0dea5e9c51">
-      <Execution id="1cd609b4-fc00-48e2-96d5-fe46867d9fa1" />
+      <Execution id="14d96a03-363c-42b6-addb-91b264e266c4" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Dhtml.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests.WhenDoingSomeIntegrationTests" name="CanAddFunctionWrapperAroundJson" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="f1333ab2-3b88-68fb-4397-9c0dea5e9c51" executionId="1cd609b4-fc00-48e2-96d5-fe46867d9fa1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="60f0324a-6bff-8fe0-f447-001f5d9a9df1" executionId="1094d78e-7050-4363-ae88-4940cdaf9103" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cda15230-9dee-6fe3-1218-a25c1c5d77a2" executionId="eaa51729-f1fb-4b94-9605-c040a3ebd2ec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f1333ab2-3b88-68fb-4397-9c0dea5e9c51" executionId="14d96a03-363c-42b6-addb-91b264e266c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="60f0324a-6bff-8fe0-f447-001f5d9a9df1" executionId="1a221c14-a73e-4c5f-93e6-f23d4bc5edfb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cda15230-9dee-6fe3-1218-a25c1c5d77a2" executionId="b7c1238a-1f93-4382-b26c-f62ea8ce93c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />

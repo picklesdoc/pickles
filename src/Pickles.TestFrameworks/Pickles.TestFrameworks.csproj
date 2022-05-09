@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.TestFrameworks</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.TestFrameworks</AssemblyName>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>PicklesDoc.Pickles.TestFrameworks</AssemblyTitle>
     <Description>Supported test frameworks for inputting test results to Pickles</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

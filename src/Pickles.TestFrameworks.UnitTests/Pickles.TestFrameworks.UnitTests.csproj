@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.TestFrameworks.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.TestFrameworks.UnitTests</AssemblyName>
-   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyTitle>PicklesDoc.Pickles.TestFrameworks.UnitTests</AssemblyTitle>
     <Description>Unit tests for the supported test frameworks for inputting test results to Pickles</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

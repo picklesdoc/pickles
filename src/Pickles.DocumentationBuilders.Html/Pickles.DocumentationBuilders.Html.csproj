@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Html</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Html</AssemblyName>
-    <TargetFrameworks>netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Html</AssemblyTitle>
     <Description>A Pickles output formatter that outputs HTML documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>

@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="a81f2299-7ae8-461e-8ed7-1b2d517c0b4c" name="ericcarlson@ERICCARLSONBBE6 2022-05-04 14:46:28" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-05-04T14:46:28.7855744-04:00" queuing="2022-05-04T14:46:28.7855745-04:00" start="2022-05-04T14:46:26.9992005-04:00" finish="2022-05-04T14:46:28.7905255-04:00" />
-  <TestSettings name="default" id="e36c9f40-9472-409c-af7c-c0a866712233">
-    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-04_14_46_28" />
+<TestRun id="61e43b38-b745-454e-80c4-af24f557376e" name="ericcarlson@ERICCARLSONBBE6 2022-05-09 16:19:18" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-05-09T16:19:18.0712079-04:00" queuing="2022-05-09T16:19:18.0712080-04:00" start="2022-05-09T16:19:16.1250306-04:00" finish="2022-05-09T16:19:18.0763253-04:00" />
+  <TestSettings name="default" id="91b01a3e-546b-4127-ac46-479c5e78dee2">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-09_16_19_18" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" testName="AllTags_TagsInFeatureElement_ReturnsTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0021370" startTime="2022-05-04T14:46:28.6890939-04:00" endTime="2022-05-04T14:46:28.6912301-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" />
-    <UnitTestResult executionId="edd79f91-31ef-4fbf-9cc0-45fedf60c425" testId="cc93a4b7-9290-755a-31cf-84b614824764" testName="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" computerName="ERICCARLSONBBE6" duration="00:00:00.0027529" startTime="2022-05-04T14:46:28.6863272-04:00" endTime="2022-05-04T14:46:28.6890800-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="edd79f91-31ef-4fbf-9cc0-45fedf60c425" />
-    <UnitTestResult executionId="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" testId="5b98b001-80ec-3c39-0a53-5664dded3676" testName="AllTags_TagsInScenarioElement_ReturnsTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0001820" startTime="2022-05-04T14:46:28.6912645-04:00" endTime="2022-05-04T14:46:28.6914460-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" />
-    <UnitTestResult executionId="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" testName="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" computerName="ERICCARLSONBBE6" duration="00:00:00.0303230" startTime="2022-05-04T14:46:28.6498517-04:00" endTime="2022-05-04T14:46:28.6800925-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" />
-    <UnitTestResult executionId="6f32ca5a-71b3-46f7-acbe-8f5027be3255" testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" testName="AllTags_NullArgument_ThrowsNullReferenceException" computerName="ERICCARLSONBBE6" duration="00:00:00.0046260" startTime="2022-05-04T14:46:28.6816805-04:00" endTime="2022-05-04T14:46:28.6863069-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f32ca5a-71b3-46f7-acbe-8f5027be3255" />
+    <UnitTestResult executionId="383b5770-dd7c-4cab-8362-7539f0e98195" testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" testName="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" computerName="ERICCARLSONBBE6" duration="00:00:00.0326040" startTime="2022-05-09T16:19:17.9240624-04:00" endTime="2022-05-09T16:19:17.9565846-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="383b5770-dd7c-4cab-8362-7539f0e98195" />
+    <UnitTestResult executionId="934f85eb-1f66-4ae1-9bb1-734051c0a479" testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" testName="AllTags_TagsInFeatureElement_ReturnsTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0020020" startTime="2022-05-09T16:19:17.9657582-04:00" endTime="2022-05-09T16:19:17.9677606-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="934f85eb-1f66-4ae1-9bb1-734051c0a479" />
+    <UnitTestResult executionId="b5ab5d9f-7465-4529-91a6-c3b2aeb5fbe7" testId="5b98b001-80ec-3c39-0a53-5664dded3676" testName="AllTags_TagsInScenarioElement_ReturnsTags" computerName="ERICCARLSONBBE6" duration="00:00:00.0001950" startTime="2022-05-09T16:19:17.9677745-04:00" endTime="2022-05-09T16:19:17.9679689-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b5ab5d9f-7465-4529-91a6-c3b2aeb5fbe7" />
+    <UnitTestResult executionId="84245baf-f07d-4550-97b8-cbca5a6294cc" testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" testName="AllTags_NullArgument_ThrowsNullReferenceException" computerName="ERICCARLSONBBE6" duration="00:00:00.0046800" startTime="2022-05-09T16:19:17.9582203-04:00" endTime="2022-05-09T16:19:17.9629001-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="84245baf-f07d-4550-97b8-cbca5a6294cc" />
+    <UnitTestResult executionId="12cc9ee4-e135-49d0-ab5d-1ae7e9ea7b4b" testId="cc93a4b7-9290-755a-31cf-84b614824764" testName="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" computerName="ERICCARLSONBBE6" duration="00:00:00.0028210" startTime="2022-05-09T16:19:17.9629232-04:00" endTime="2022-05-09T16:19:17.9657439-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="12cc9ee4-e135-49d0-ab5d-1ae7e9ea7b4b" />
   </Results>
   <TestDefinitions>
     <UnitTest name="AllTags_NullArgument_ThrowsNullReferenceException" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3">
-      <Execution id="6f32ca5a-71b3-46f7-acbe-8f5027be3255" />
+      <Execution id="84245baf-f07d-4550-97b8-cbca5a6294cc" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_NullArgument_ThrowsNullReferenceException" />
     </UnitTest>
     <UnitTest name="AllTags_TagsInScenarioElement_ReturnsTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="5b98b001-80ec-3c39-0a53-5664dded3676">
-      <Execution id="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" />
+      <Execution id="b5ab5d9f-7465-4529-91a6-c3b2aeb5fbe7" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsInScenarioElement_ReturnsTags" />
     </UnitTest>
     <UnitTest name="AllTags_TagsInFeatureElement_ReturnsTags" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="26d00b18-4ae6-a4ee-cfe5-51f0b401a468">
-      <Execution id="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" />
+      <Execution id="934f85eb-1f66-4ae1-9bb1-734051c0a479" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsInFeatureElement_ReturnsTags" />
     </UnitTest>
     <UnitTest name="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="84c840c6-def3-f8b5-446a-2ca10eac9c81">
-      <Execution id="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" />
+      <Execution id="383b5770-dd7c-4cab-8362-7539f0e98195" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_NoTagsInFeatureElementAndInFeature_ReturnsEmptyList" />
     </UnitTest>
     <UnitTest name="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.json.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.json.unittests.dll" id="cc93a4b7-9290-755a-31cf-84b614824764">
-      <Execution id="edd79f91-31ef-4fbf-9cc0-45fedf60c425" />
+      <Execution id="12cc9ee4-e135-49d0-ab5d-1ae7e9ea7b4b" />
       <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Json.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.IJsonFeatureElementExtensionsTests" name="AllTags_TagsBothInScenarioAndInFeatureElement_ReturnsEachTagOnlyOnce" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" executionId="ad87f29d-5d88-45de-bb5e-f0c6b5c11ef7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cc93a4b7-9290-755a-31cf-84b614824764" executionId="edd79f91-31ef-4fbf-9cc0-45fedf60c425" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="5b98b001-80ec-3c39-0a53-5664dded3676" executionId="0c3a1d2d-0aae-4f1b-b5f0-3fa899e985b2" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" executionId="bf9c8a48-f47f-4bb4-a11b-6a8f9e5ca698" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" executionId="6f32ca5a-71b3-46f7-acbe-8f5027be3255" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="84c840c6-def3-f8b5-446a-2ca10eac9c81" executionId="383b5770-dd7c-4cab-8362-7539f0e98195" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26d00b18-4ae6-a4ee-cfe5-51f0b401a468" executionId="934f85eb-1f66-4ae1-9bb1-734051c0a479" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5b98b001-80ec-3c39-0a53-5664dded3676" executionId="b5ab5d9f-7465-4529-91a6-c3b2aeb5fbe7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8d011fee-7a8e-7bf7-d3f5-7161ecc0d0a3" executionId="84245baf-f07d-4550-97b8-cbca5a6294cc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cc93a4b7-9290-755a-31cf-84b614824764" executionId="12cc9ee4-e135-49d0-ab5d-1ae7e9ea7b4b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />

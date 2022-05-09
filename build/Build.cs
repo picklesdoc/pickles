@@ -5,6 +5,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Xml;
 using Microsoft.Extensions.Configuration;
 using Nuke.Common;
 using Nuke.Common.CI;
@@ -46,6 +47,7 @@ class Build : NukeBuild
     AbsolutePath SourceDirectory => RootDirectory / "src";
     AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
     AbsolutePath PublishDirectory => ArtifactsDirectory / "publish";
+    AbsolutePath LibraryDirectory => PublishDirectory / "library";
     AbsolutePath CommandLineDirectory => PublishDirectory / "exe";
     AbsolutePath MsBuildDirectory => PublishDirectory / "msbuild";
     AbsolutePath PowerShellDirectory => PublishDirectory / "powershell";
@@ -56,9 +58,11 @@ class Build : NukeBuild
 
     String AssemblyProduct = "Pickles";
     String AssemblyCompany = "Pickles";
-    String Version = "3.1.0";
+    String Version = "4.0.1";
     String Copyright = "Copyright (c) Jeffrey Cameron 2010-2012, PicklesDoc 2012-present";
     String NuGetApiKey = "";
+    //String tfm = "net6.0"; //currently only supporting one target framework for executables and tools
+    String winRuntime = "win10-x86"; //use for tools that are windows only
 
     Target Clean => _ => _
         .Before(Test)
@@ -87,50 +91,108 @@ class Build : NukeBuild
         .DependsOn(Test)
         .Executes(() =>
         {
-            var publishCombinations =
-                from runtime in new[] {"win10-x86", "osx-x64", "linux-x64"}
-                select new {runtime};
+            DotNetPublish(p => p
+                .SetProject(RootDirectory / "src" / "Pickles")
+                .SetConfiguration(Configuration)
+                .SetVersion(Version)
+                .SetSelfContained(false)
+                .SetOutput(LibraryDirectory)
+            );
+
+            UpdatePackageId(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.csproj", "Pickles.CommandLine", "");
 
             DotNetPublish(p => p
                 .SetProject(RootDirectory / "src" / "Pickles.CommandLine")
                 .SetConfiguration(Configuration)
                 .SetVersion(Version)
-                .CombineWith(publishCombinations, (s, v) => s
-                    .SetRuntime(v.runtime)
-                    .SetOutput(CommandLineDirectory / v.runtime)
-                )
+                .SetRuntime(winRuntime)
+                //.SetFramework(tfm)
+                .SetSelfContained(false)
+                .SetOutput(CommandLineDirectory / "win-framework")
             );
+
+            foreach (var rt in new[] { "win10-x86", "osx.10.11-x64", "linux-x64" })
+            {
+               string platform = GetPlatformFromRuntime(rt);
+
+                UpdatePackageId(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.csproj", "Pickles.CommandLine", platform);
+
+                DotNetPublish(p => p
+                    .SetProject(RootDirectory / "src" / "Pickles.CommandLine")
+                    .SetConfiguration(Configuration)
+                    .SetVersion(Version)
+                    .SetRuntime(rt)
+                    //.SetFramework(tfm)
+                    .SetSelfContained(true)
+                    .SetOutput(CommandLineDirectory / platform)
+                );
+
+                ZipFile.CreateFromDirectory(CommandLineDirectory / platform,
+                       DeployDirectory / "zip" / "Pickles-exe-" + rt + "-" + Version + ".zip");
+            }
+
+            //reset to the base packageid so it will be prepped for next test run
+            UpdatePackageId(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.csproj", "Pickles.CommandLine", "");
 
             DotNetPublish(p => p
                 .SetProject(RootDirectory / "src" / "Pickles.MsBuild")
                 .SetConfiguration(Configuration)
                 .SetVersion(Version)
-                .CombineWith(publishCombinations, (s, v) => s
-                    .SetRuntime(v.runtime)
-                    .SetOutput(MsBuildDirectory / v.runtime)
-                )
+                    .SetRuntime(winRuntime)
+                    .SetOutput(MsBuildDirectory)
             );
+
+            ZipFile.CreateFromDirectory(MsBuildDirectory,
+               DeployDirectory / "zip" / "Pickles-msbuild-" + Version + ".zip");
 
             DotNetPublish(p => p
                 .SetProject(RootDirectory / "src" / "Pickles.PowerShell")
                 .SetConfiguration(Configuration)
                 .SetVersion(Version)
-                .CombineWith(publishCombinations, (s, v) => s
-                    .SetRuntime(v.runtime)
-                    .SetOutput(PowerShellDirectory / v.runtime)
-                )
+                .SetRuntime(winRuntime)
+                .SetOutput(PowerShellDirectory)
             );
 
-            foreach (var p in publishCombinations)
-            {
-                ZipFile.CreateFromDirectory(CommandLineDirectory / p.runtime,
-                    DeployDirectory / "zip" / "Pickles-exe-" + p.runtime + "-" + Version + ".zip");
-                ZipFile.CreateFromDirectory(MsBuildDirectory / p.runtime,
-                    DeployDirectory / "zip" / "Pickles-msbuild-" + p.runtime + "-" + Version + ".zip");
-                ZipFile.CreateFromDirectory(PowerShellDirectory / p.runtime,
-                    DeployDirectory / "zip" / "Pickles-powershell-" + p.runtime + "-" + Version + ".zip");
-            }
+            ZipFile.CreateFromDirectory(PowerShellDirectory,
+               DeployDirectory / "zip" / "Pickles-powershell-" + Version + ".zip");
         });
+
+    private string GetPlatformFromRuntime(string rt)
+    {
+
+        if (rt.Contains("osx"))
+        {
+            return "osx";
+        }
+        else if (rt.Contains("linux"))
+        {
+            return "linux";
+        }
+        else if (rt.Contains("win"))
+        {
+            return "win";
+        }
+
+        return "not supported";
+    }
+    private void UpdatePackageId(AbsolutePath projectFilePathAndName, string basePackageId, string platform = "")
+    {
+        XmlDocument doc = new XmlDocument();
+        doc.Load(projectFilePathAndName);
+
+        XmlNode packageIdNode = doc.SelectSingleNode("/Project/PropertyGroup/PackageId");
+
+        string packageId = basePackageId;
+
+        if(!String.IsNullOrEmpty(platform))
+        {
+            packageId += "." + platform;
+        } 
+        
+        packageIdNode.InnerText = packageId;
+
+        doc.Save(projectFilePathAndName);
+    }
 
     Target GenerateSampleOutput => _ => _
         .DependsOn(Publish)
@@ -161,9 +223,10 @@ class Build : NukeBuild
             foreach (var format in formats)
             {
                 outputFolder = OutputDirectory / format;
+                string platform = GetPlatformFromRuntime(runtime);
 
                 ProcessStartInfo processStartInfo =
-                    new ProcessStartInfo(PublishDirectory / "exe" / runtime / "Pickles",
+                    new ProcessStartInfo(PublishDirectory / "exe" / platform / "Pickles",
                         $"-f={exampleSource} -o={outputFolder} -df={format} --sn=Pickles --sv={Version}");
 
                 processStartInfo.CreateNoWindow = false;
@@ -198,99 +261,16 @@ class Build : NukeBuild
         .DependsOn(GenerateSampleOutput)
         .Executes(() =>
         {
-            var commandLineProject = File.ReadAllText(RootDirectory / "src" / "Pickles.CommandLine" /
-                                                      "Pickles.CommandLine.csproj");
+            var fileLibrary = new FileInfo(RootDirectory / "src" / "Pickles" / "bin" / "Release" / $"specsynx.Pickles.Library.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"specsynx.Pickles.Library.{Version}.nupkg");
 
-            //Setting PackageId via the dotnet pack command sets the id for all referenced projects and
-            //throws the "ambiguous project name" error. Duplicating the project file is a temporary hack
-            //till this gets fixed.
-            var clPackage = commandLineProject.Replace("PACKAGE_ID", "Pickles.CommandLine");
-            File.WriteAllText(
-                RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.cl.csproj", clPackage);
+            var fileCL = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.{Version}.nupkg");
+            var fileWin = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.win.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.win.{Version}.nupkg");
+            var fileOsx = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.osx.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.osx.{Version}.nupkg");
+            var fileLinux = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.linux.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.linux.{Version}.nupkg");
 
-            DotNetPack(s => s
-                    .SetProject(RootDirectory / "src" / "Pickles.CommandLine" /
-                                "Pickles.CommandLine.cl.csproj")
-                    .SetConfiguration(Configuration)
-                    .SetProperty("Version", Version)
-                    .SetRuntime("win10-x86")
-                    .SetOutputDirectory(DeployDirectory / "nuget")
+            var filePowerShell = new FileInfo(RootDirectory / "src" / "Pickles.PowerShell" / "bin" / "Release" / $"Pickles.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.{Version}.nupkg");
 
-                //.SetCopyright(Copyright)
-            );
-
-            File.Delete(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.cl.csproj");
-
-            var winPackage = commandLineProject.Replace("PACKAGE_ID", "Pickles.CommandLine.win");
-            File.WriteAllText(
-                RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.win.csproj", winPackage);
-
-            DotNetPack(s => s
-                    .SetProject(RootDirectory / "src" / "Pickles.CommandLine" /
-                                "Pickles.CommandLine.win.csproj")
-                    .SetConfiguration(Configuration)
-                    .SetProperty("Version", Version)
-                    //.SetProperty("NuspecFile", "")
-                    .SetRuntime("win10-x86")
-                    .SetOutputDirectory(DeployDirectory / "nuget")
-                //.SetCopyright(Copyright)
-            );
-
-            File.Delete(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.win.csproj");
-
-            var macPackage = commandLineProject.Replace("PACKAGE_ID", "Pickles.CommandLine.mac");
-            File.WriteAllText(
-                RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.mac.csproj", macPackage);
-
-            DotNetPack(s => s
-                    .SetProject(RootDirectory / "src" / "Pickles.CommandLine" /
-                                "Pickles.CommandLine.mac.csproj")
-                    .SetConfiguration(Configuration)
-                    .SetProperty("Version", Version)
-                    .SetRuntime("osx-x64")
-                    .SetOutputDirectory(DeployDirectory / "nuget")
-
-                //.SetCopyright(Copyright)
-            );
-
-            File.Delete(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.mac.csproj");
-
-            var linuxPackage = commandLineProject.Replace("PACKAGE_ID", "Pickles.CommandLine.linux");
-            File.WriteAllText(
-                RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.linux.csproj", linuxPackage);
-
-            DotNetPack(s => s
-                    .SetProject(RootDirectory / "src" / "Pickles.CommandLine" /
-                                "Pickles.CommandLine.linux.csproj")
-                    .SetConfiguration(Configuration)
-                    .SetProperty("Version", Version)
-                    .SetRuntime("linux-x64")
-                    .SetOutputDirectory(DeployDirectory / "nuget")
-
-               //.SetCopyright(Copyright)
-             );
-
-            File.Delete(RootDirectory / "src" / "Pickles.CommandLine" / "Pickles.CommandLine.linux.csproj");
-
-            //TODO Create MsBuild nuget package
-            // DotNetPack(s => s
-            //         .SetProject(RootDirectory / "src" / "Pickles.MsBuild" / "Pickles.MsBuild.csproj")
-            //         .SetConfiguration(Configuration)
-            //         .SetRuntime("win10-x86")
-            //         .SetProperty("Version", Version)
-            //         .SetOutputDirectory(DeployDirectory / "nuget")
-            //     //.SetCopyright(Copyright)
-            // );
-
-            DotNetPack(s => s
-                    .SetProject(RootDirectory / "src" / "Pickles.PowerShell" /
-                                "Pickles.PowerShell.csproj")
-                    .SetConfiguration(Configuration)
-                    .SetRuntime("win10-x86")
-                    .SetProperty("Version", Version)
-                    .SetOutputDirectory(DeployDirectory / "nuget")
-                //.SetCopyright(Copyright)
-            );
+            var fileMsBuild = new FileInfo(RootDirectory / "src" / "Pickles.MSBuild" / "bin" / "Release" / $"Pickles.MSBuild.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.MSBuild.{Version}.nupkg");
         });
 
     Target PublishNuGet => _ => _
@@ -301,6 +281,12 @@ class Build : NukeBuild
             {
                 NuGetApiKey = config["NugetApiKey"];
             }
+
+            NuGetTasks.NuGetPush(s => s
+                .SetSource("https://www.nuget.org/api/v2/package")
+                .SetApiKey(NuGetApiKey)
+                .SetTargetPath(DeployDirectory / "nuget" / $"specsynx.Pickles.Library.{Version}.nupkg")
+            );
 
             NuGetTasks.NuGetPush(s => s
                 .SetSource("https://www.nuget.org/api/v2/package")
@@ -323,7 +309,7 @@ class Build : NukeBuild
             NuGetTasks.NuGetPush(s => s
                 .SetSource("https://www.nuget.org/api/v2/package")
                 .SetApiKey(NuGetApiKey)
-                .SetTargetPath(DeployDirectory / "nuget" / $"Pickles.CommandLine.mac.{Version}.nupkg")
+                .SetTargetPath(DeployDirectory / "nuget" / $"Pickles.CommandLine.osx.{Version}.nupkg")
             );
 
             NuGetTasks.NuGetPush(s => s
@@ -332,11 +318,11 @@ class Build : NukeBuild
                 .SetTargetPath(DeployDirectory / "nuget" / $"Pickles.CommandLine.linux.{Version}.nupkg")
             );
 
-            // NuGetTasks.NuGetPush(s => s
-            //     .SetSource("https://www.nuget.org/api/v2/package")
-            //     .SetApiKey(NuGetApiKey)
-            //     .SetTargetPath(DeployDirectory / "nuget" / $"Pickles.MsBuild.{Version}.nupkg")
-            // );
+            NuGetTasks.NuGetPush(s => s
+                .SetSource("https://www.nuget.org/api/v2/package")
+                .SetApiKey(NuGetApiKey)
+                .SetTargetPath(DeployDirectory / "nuget" / $"Pickles.MsBuild.{Version}.nupkg")
+            );
         });
 }
 

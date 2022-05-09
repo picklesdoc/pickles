@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests</AssemblyName>
-   <TargetFrameworks>netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFramework>net6.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Json.UnitTests</AssemblyTitle>
     <Description>Unit tests for the Pickles output formatter that outputs Json documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
