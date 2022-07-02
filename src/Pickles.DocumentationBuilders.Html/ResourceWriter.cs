@@ -19,10 +19,10 @@
 //  --------------------------------------------------------------------------------------------------------------------
 
 using System;
-using System.Drawing;
-using System.Drawing.Imaging;
 using System.IO;
 using System.IO.Abstractions;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Formats.Png;
 
 namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 {
@@ -104,11 +104,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
         {
             string path = this.fileSystem.Path.Combine(folder, filename);
 
-            using (Image image = Image.FromStream(this.GetResourceStream(this.namespaceOfResources + "img." + filename)))
+            using (Image image = Image.Load(this.GetResourceStream(this.namespaceOfResources + "img." + filename)))
             {
                 using (var stream = this.fileSystem.File.Create(path))
                 {
-                    image.Save(stream, ImageFormat.Png);
+                    image.Save(stream, new PngEncoder());
                 }
             }
         }

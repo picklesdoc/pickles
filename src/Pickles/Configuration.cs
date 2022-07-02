@@ -108,9 +108,9 @@ namespace PicklesDoc.Pickles
             this.AddTestResultFileIfItExists(IFileInfo);
         }
 
-        public void AddTestResultFiles(IEnumerable<IFileInfo> IFileInfos)
+        public void AddTestResultFiles(IEnumerable<IFileInfo> fileInfos)
         {
-            foreach (var IFileInfo in IFileInfos ?? new IFileInfo[0])
+            foreach (var IFileInfo in fileInfos ?? new IFileInfo[0])
             {
                 this.AddTestResultFileIfItExists(IFileInfo);
             }
