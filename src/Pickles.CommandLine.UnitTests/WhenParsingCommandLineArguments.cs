@@ -351,9 +351,9 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         [Test]
         public void ThenNoExceptionIsThrownWhenResultsFileIsDir()
         {
-            FileSystem.AddFile(@"temp\results_foo1.xml", "<xml />");
-            FileSystem.AddFile(@"temp\results_foo2.xml", "<xml />");
-            var args = new[] { @"-link-results-file=temp\" };
+            FileSystem.AddFile(System.IO.Path.Combine("temp", "results_foo1.xml"), "<xml />");
+            FileSystem.AddFile(System.IO.Path.Combine("temp", "results_foo2.xml"), "<xml />");
+            var args = new[] { @"-link-results-file=temp" + System.IO.Path.DirectorySeparatorChar };
 
             var configuration = new Configuration();
             var commandLineArgumentParser = new CommandLineArgumentParser(FileSystem);
