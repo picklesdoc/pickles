@@ -12,6 +12,7 @@ Scenario: A simple feature
 
         @workflow @slow
         Scenario: Clear the screen
+            Clear the screen by pressing C
             Given I have entered 50 into the calculator
             And I have entered 70 into the calculator
             When I press C
@@ -25,6 +26,7 @@ Scenario: A simple feature
     "id": "clearing-screen",
     "keyword": "Feature",
     "name": "Clearing Screen",
+    "description": "In order to restart a new set of calculations\r\nAs a math idiot\r\nI want to be able to clear the screen",
     "tags": [],
     "line": 1,
     "elements": [
@@ -32,6 +34,7 @@ Scenario: A simple feature
         "id": "clearing-screen;clear-the-screen",
         "keyword": "Scenario",
         "name": "Clear the screen",
+        "description": "Clear the screen by pressing C",
         "line": 7,
         "type": "scenario",
         "tags": [
@@ -46,7 +49,7 @@ Scenario: A simple feature
           {
             "keyword": "Given",
             "name": "I have entered 50 into the calculator",
-            "line": 8,
+            "line": 9,
             "hidden": false,
             "result": {
               "status": "Undefined",
@@ -56,7 +59,7 @@ Scenario: A simple feature
           {
             "keyword": "And",
             "name": "I have entered 70 into the calculator",
-            "line": 9,
+            "line": 10,
             "hidden": false,
             "result": {
               "status": "Undefined",
@@ -66,7 +69,7 @@ Scenario: A simple feature
           {
             "keyword": "When",
             "name": "I press C",
-            "line": 10,
+            "line": 11,
             "hidden": false,
             "result": {
               "status": "Undefined",
@@ -76,7 +79,7 @@ Scenario: A simple feature
           {
             "keyword": "Then",
             "name": "the screen should be empty",
-            "line": 11,
+            "line": 12,
             "hidden": false,
             "result": {
               "status": "Undefined",
@@ -132,6 +135,7 @@ Scenario: A feature with a table
     "id": "interactive-dhtml-view",
     "keyword": "Feature",
     "name": "Interactive DHTML View",
+    "description": "In order to increase stakeholder engagement with pickled specs\r\nAs a SpecFlow evangelist\r\nI want to adjust the level of detail in the DHTML view to suit my audience\r\nSo that I do not overwhelm them.",
     "tags": [],
     "line": 1,
     "elements": [
@@ -139,6 +143,7 @@ Scenario: A feature with a table
         "id": "interactive-dhtml-view;scenario-with-large-data-table",
         "keyword": "Scenario",
         "name": "Scenario with large data table",
+        "description": "",
         "line": 7,
         "type": "scenario",
         "tags": [],

@@ -110,35 +110,39 @@ this.ScenarioInitialize(scenarioInfo);
 
 @workflow @slow
 Scenario: Clear the screen
+    Clear the screen by pressing C
     Given I have entered 50 into the calculator
     And I have entered 70 into the calculator
     When I press C
     Then the screen should be empty", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 20
+#line 21
     testRunner.When("I generate the documentation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 21
+#line 22
     testRunner.Then("the JSON file should contain", "[\r\n  {\r\n    \"id\": \"clearing-screen\",\r\n    \"keyword\": \"Feature\",\r\n    \"name\": \"Cle" +
-                        "aring Screen\",\r\n    \"tags\": [],\r\n    \"line\": 1,\r\n    \"elements\": [\r\n      {\r\n   " +
-                        "     \"id\": \"clearing-screen;clear-the-screen\",\r\n        \"keyword\": \"Scenario\",\r\n" +
-                        "        \"name\": \"Clear the screen\",\r\n        \"line\": 7,\r\n        \"type\": \"scenar" +
-                        "io\",\r\n        \"tags\": [\r\n          {\r\n            \"name\": \"@workflow\"\r\n         " +
-                        " },\r\n          {\r\n            \"name\": \"@slow\"\r\n          }\r\n        ],\r\n        " +
-                        "\"steps\": [\r\n          {\r\n            \"keyword\": \"Given\",\r\n            \"name\": \"I" +
-                        " have entered 50 into the calculator\",\r\n            \"line\": 8,\r\n            \"hid" +
-                        "den\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefined\",\r\n   " +
-                        "           \"duration\": 1\r\n            }\r\n          },\r\n          {\r\n            " +
-                        "\"keyword\": \"And\",\r\n            \"name\": \"I have entered 70 into the calculator\",\r" +
-                        "\n            \"line\": 9,\r\n            \"hidden\": false,\r\n            \"result\": {\r\n" +
-                        "              \"status\": \"Undefined\",\r\n              \"duration\": 1\r\n            }" +
-                        "\r\n          },\r\n          {\r\n            \"keyword\": \"When\",\r\n            \"name\":" +
-                        " \"I press C\",\r\n            \"line\": 10,\r\n            \"hidden\": false,\r\n          " +
-                        "  \"result\": {\r\n              \"status\": \"Undefined\",\r\n              \"duration\": 1" +
-                        "\r\n            }\r\n          },\r\n          {\r\n            \"keyword\": \"Then\",\r\n    " +
-                        "        \"name\": \"the screen should be empty\",\r\n            \"line\": 11,\r\n        " +
-                        "    \"hidden\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefine" +
-                        "d\",\r\n              \"duration\": 1\r\n            }\r\n          }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                        "aring Screen\",\r\n    \"description\": \"In order to restart a new set of calculation" +
+                        "s\\r\\nAs a math idiot\\r\\nI want to be able to clear the screen\",\r\n    \"tags\": []," +
+                        "\r\n    \"line\": 1,\r\n    \"elements\": [\r\n      {\r\n        \"id\": \"clearing-screen;cle" +
+                        "ar-the-screen\",\r\n        \"keyword\": \"Scenario\",\r\n        \"name\": \"Clear the scre" +
+                        "en\",\r\n        \"description\": \"Clear the screen by pressing C\",\r\n        \"line\": " +
+                        "7,\r\n        \"type\": \"scenario\",\r\n        \"tags\": [\r\n          {\r\n            \"na" +
+                        "me\": \"@workflow\"\r\n          },\r\n          {\r\n            \"name\": \"@slow\"\r\n      " +
+                        "    }\r\n        ],\r\n        \"steps\": [\r\n          {\r\n            \"keyword\": \"Give" +
+                        "n\",\r\n            \"name\": \"I have entered 50 into the calculator\",\r\n            \"" +
+                        "line\": 9,\r\n            \"hidden\": false,\r\n            \"result\": {\r\n              " +
+                        "\"status\": \"Undefined\",\r\n              \"duration\": 1\r\n            }\r\n          }," +
+                        "\r\n          {\r\n            \"keyword\": \"And\",\r\n            \"name\": \"I have entere" +
+                        "d 70 into the calculator\",\r\n            \"line\": 10,\r\n            \"hidden\": false" +
+                        ",\r\n            \"result\": {\r\n              \"status\": \"Undefined\",\r\n              " +
+                        "\"duration\": 1\r\n            }\r\n          },\r\n          {\r\n            \"keyword\": " +
+                        "\"When\",\r\n            \"name\": \"I press C\",\r\n            \"line\": 11,\r\n            " +
+                        "\"hidden\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefined\",\r" +
+                        "\n              \"duration\": 1\r\n            }\r\n          },\r\n          {\r\n        " +
+                        "    \"keyword\": \"Then\",\r\n            \"name\": \"the screen should be empty\",\r\n     " +
+                        "       \"line\": 12,\r\n            \"hidden\": false,\r\n            \"result\": {\r\n     " +
+                        "         \"status\": \"Undefined\",\r\n              \"duration\": 1\r\n            }\r\n   " +
+                        "       }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -153,7 +157,7 @@ Scenario: Clear the screen
                     "cucumber"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("A feature with a table", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 89
+#line 92
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -173,7 +177,7 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 91
+#line 94
     testRunner.Given("I have this feature description", @"Feature: Interactive DHTML View
     In order to increase stakeholder engagement with pickled specs
     As a SpecFlow evangelist
@@ -208,56 +212,29 @@ Scenario: Scenario with large data table
     When I click on the table heading
     Then the table body should collapse", ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 127
+#line 130
     testRunner.When("I generate the documentation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 128
-    testRunner.Then("the JSON file should contain", @"[
-  {
-    ""id"": ""interactive-dhtml-view"",
-    ""keyword"": ""Feature"",
-    ""name"": ""Interactive DHTML View"",
-    ""tags"": [],
-    ""line"": 1,
-    ""elements"": [
-      {
-        ""id"": ""interactive-dhtml-view;scenario-with-large-data-table"",
-        ""keyword"": ""Scenario"",
-        ""name"": ""Scenario with large data table"",
-        ""line"": 7,
-        ""type"": ""scenario"",
-        ""tags"": [],
-        ""steps"": [
-          {
-            ""keyword"": ""Given"",
-            ""name"": ""a feature with a large table of data:"",
-            ""line"": 8,
-            ""hidden"": false,
-            ""result"": {
-              ""status"": ""Undefined"",
-              ""duration"": 1
-            }
-          },
-          {
-            ""keyword"": ""When"",
-            ""name"": ""I click on the table heading"",
-            ""line"": 32,
-            ""hidden"": false,
-            ""result"": {
-              ""status"": ""Undefined"",
-              ""duration"": 1
-            }
-          },
-          {
-            ""keyword"": ""Then"",
-            ""name"": ""the table body should collapse"",
-            ""line"": 33,
-            ""hidden"": false,
-            ""result"": {
-              ""status"": ""Undefined"",
-              ""duration"": 1
-            }
-          }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 131
+    testRunner.Then("the JSON file should contain", "[\r\n  {\r\n    \"id\": \"interactive-dhtml-view\",\r\n    \"keyword\": \"Feature\",\r\n    \"name" +
+                        "\": \"Interactive DHTML View\",\r\n    \"description\": \"In order to increase stakehold" +
+                        "er engagement with pickled specs\\r\\nAs a SpecFlow evangelist\\r\\nI want to adjust" +
+                        " the level of detail in the DHTML view to suit my audience\\r\\nSo that I do not o" +
+                        "verwhelm them.\",\r\n    \"tags\": [],\r\n    \"line\": 1,\r\n    \"elements\": [\r\n      {\r\n " +
+                        "       \"id\": \"interactive-dhtml-view;scenario-with-large-data-table\",\r\n        \"" +
+                        "keyword\": \"Scenario\",\r\n        \"name\": \"Scenario with large data table\",\r\n      " +
+                        "  \"description\": \"\",\r\n        \"line\": 7,\r\n        \"type\": \"scenario\",\r\n        \"" +
+                        "tags\": [],\r\n        \"steps\": [\r\n          {\r\n            \"keyword\": \"Given\",\r\n  " +
+                        "          \"name\": \"a feature with a large table of data:\",\r\n            \"line\": " +
+                        "8,\r\n            \"hidden\": false,\r\n            \"result\": {\r\n              \"status" +
+                        "\": \"Undefined\",\r\n              \"duration\": 1\r\n            }\r\n          },\r\n     " +
+                        "     {\r\n            \"keyword\": \"When\",\r\n            \"name\": \"I click on the tabl" +
+                        "e heading\",\r\n            \"line\": 32,\r\n            \"hidden\": false,\r\n            " +
+                        "\"result\": {\r\n              \"status\": \"Undefined\",\r\n              \"duration\": 1\r\n" +
+                        "            }\r\n          },\r\n          {\r\n            \"keyword\": \"Then\",\r\n      " +
+                        "      \"name\": \"the table body should collapse\",\r\n            \"line\": 33,\r\n      " +
+                        "      \"hidden\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefi" +
+                        "ned\",\r\n              \"duration\": 1\r\n            }\r\n          }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
