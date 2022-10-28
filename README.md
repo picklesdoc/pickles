@@ -1,6 +1,8 @@
 Pickles
 =======
 
+## Currently looking for a new maintainer. Please contact me if you are interested in taking over this project.
+
 Pickles is an open source living documentation generator that works on feature files written in the Gherkin language, popularized in tools like Cucumber and SpecFlow.
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
