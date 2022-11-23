@@ -2,8 +2,9 @@
   <PropertyGroup>
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>PicklesDoc.Pickles</RootNamespace>
-    <AssemblyName>specsynx.Pickles.Library</AssemblyName>
+    <AssemblyName>Pickles.Library</AssemblyName>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <AssemblyTitle>Pickles</AssemblyTitle>
     <Description>A documentation generator for features written in the Gherkin language</Description>
@@ -53,7 +54,7 @@
     <PackageReference Include="DocumentFormat.OpenXml" Version="2.16.0" />
     <PackageReference Include="gherkin" Version="23.0.1" />
     <PackageReference Include="NLog" Version="4.7.15" />
-    <PackageReference Include="NuGetizer" Version="0.7.5">
+    <PackageReference Include="NuGetizer" Version="0.9.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -71,7 +72,8 @@
   </ItemGroup>
   <PropertyGroup>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <PackageId>specsynx.Pickles.Library</PackageId>
+    <PackageId>Pickles.Library</PackageId>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
   </PropertyGroup>
 </Project>

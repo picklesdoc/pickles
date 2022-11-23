@@ -58,11 +58,11 @@ class Build : NukeBuild
 
     String AssemblyProduct = "Pickles";
     String AssemblyCompany = "Pickles";
-    String Version = "4.0.1";
+    String Version = "4.0.3";
     String Copyright = "Copyright (c) Jeffrey Cameron 2010-2012, PicklesDoc 2012-present";
     String NuGetApiKey = "";
     //String tfm = "net6.0"; //currently only supporting one target framework for executables and tools
-    String winRuntime = "win10-x86"; //use for tools that are windows only
+    String winRuntime = "win-x64"; //use for tools that are windows only
 
     Target Clean => _ => _
         .Before(Test)
@@ -110,8 +110,8 @@ class Build : NukeBuild
                 .SetSelfContained(false)
                 .SetOutput(CommandLineDirectory / "win-framework")
             );
-
-            foreach (var rt in new[] { "win10-x86", "osx.10.11-x64", "linux-x64" })
+            
+            foreach (var rt in new[] { "win-x64", "osx-x64", "linux-x64" })
             {
                string platform = GetPlatformFromRuntime(rt);
 
@@ -123,7 +123,7 @@ class Build : NukeBuild
                     .SetVersion(Version)
                     .SetRuntime(rt)
                     //.SetFramework(tfm)
-                    .SetSelfContained(true)
+                    .SetSelfContained(false)
                     .SetOutput(CommandLineDirectory / platform)
                 );
 
@@ -261,16 +261,16 @@ class Build : NukeBuild
         .DependsOn(GenerateSampleOutput)
         .Executes(() =>
         {
-            var fileLibrary = new FileInfo(RootDirectory / "src" / "Pickles" / "bin" / "Release" / $"specsynx.Pickles.Library.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"specsynx.Pickles.Library.{Version}.nupkg");
+            var fileLibrary = new FileInfo(RootDirectory / "src" / "Pickles" / "nupkg" / $"Pickles.Library.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.Library.{Version}.nupkg");
 
-            var fileCL = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.{Version}.nupkg");
-            var fileWin = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.win.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.win.{Version}.nupkg");
-            var fileOsx = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.osx.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.osx.{Version}.nupkg");
-            var fileLinux = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "bin" / "Release" / $"Pickles.CommandLine.linux.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.linux.{Version}.nupkg");
+            var fileCL = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "nupkg" / $"Pickles.CommandLine.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.{Version}.nupkg");
+            var fileWin = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "nupkg" / $"Pickles.CommandLine.win.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.win.{Version}.nupkg");
+            var fileOsx = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "nupkg" / $"Pickles.CommandLine.osx.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.osx.{Version}.nupkg");
+            var fileLinux = new FileInfo(RootDirectory / "src" / "Pickles.CommandLine" / "nupkg" / $"Pickles.CommandLine.linux.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.CommandLine.linux.{Version}.nupkg");
 
-            var filePowerShell = new FileInfo(RootDirectory / "src" / "Pickles.PowerShell" / "bin" / "Release" / $"Pickles.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.{Version}.nupkg");
+            var filePowerShell = new FileInfo(RootDirectory / "src" / "Pickles.PowerShell" / "nupkg" / $"Pickles.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.{Version}.nupkg");
 
-            var fileMsBuild = new FileInfo(RootDirectory / "src" / "Pickles.MSBuild" / "bin" / "Release" / $"Pickles.MSBuild.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.MSBuild.{Version}.nupkg");
+            var fileMsBuild = new FileInfo(RootDirectory / "src" / "Pickles.MSBuild" / "nupkg" / $"Pickles.MSBuild.{Version}.nupkg").CopyTo(DeployDirectory / "nuget" / $"Pickles.MSBuild.{Version}.nupkg");
         });
 
     Target PublishNuGet => _ => _
@@ -285,7 +285,7 @@ class Build : NukeBuild
             NuGetTasks.NuGetPush(s => s
                 .SetSource("https://www.nuget.org/api/v2/package")
                 .SetApiKey(NuGetApiKey)
-                .SetTargetPath(DeployDirectory / "nuget" / $"specsynx.Pickles.Library.{Version}.nupkg")
+                .SetTargetPath(DeployDirectory / "nuget" / $"Pickles.Library.{Version}.nupkg")
             );
 
             NuGetTasks.NuGetPush(s => s

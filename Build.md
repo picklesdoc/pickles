@@ -12,9 +12,14 @@ set version number in _build\Build.cs
 
 PowerShell
 
+- To execute all build targets use the following commands:
+
 set-executionpolicy -scope process -executionpolicy bypass
 .\build.ps1
 
+- To only run a specific target and it's dependencies include the target name after the build command:
+
+set-executionpolicy -scope process -executionpolicy bypass
 .\build.ps1 -target publish
 
 Build Targets

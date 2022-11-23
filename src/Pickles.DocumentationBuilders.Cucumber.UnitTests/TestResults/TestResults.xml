@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="6de0766d-ed43-436e-a069-f8349c491254" name="ericcarlson@ERICCARLSONBBE6 2022-05-09 16:19:15" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-05-09T16:19:15.8027842-04:00" queuing="2022-05-09T16:19:15.8027844-04:00" start="2022-05-09T16:19:11.1950933-04:00" finish="2022-05-09T16:19:15.8088107-04:00" />
-  <TestSettings name="default" id="67962380-3a80-4243-92db-8f9ee3c962d4">
-    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-09_16_19_15" />
+<TestRun id="8e0e1771-4a55-415e-82e3-5383959add14" name="ericcarlson@ERICCARLSONBBE6 2022-11-23 12:19:29" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-11-23T12:19:29.2860346-05:00" queuing="2022-11-23T12:19:29.2860347-05:00" start="2022-11-23T12:19:24.8103103-05:00" finish="2022-11-23T12:19:29.5556360-05:00" />
+  <TestSettings name="default" id="2602d74f-5f46-4e1e-a2cd-6016ed7b1798">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-11-23_12_19_29" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="dd1c340b-bcbd-43eb-b408-359769127a68" testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" testName="ASimpleFeatureInAFolderWithFolderBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:00.0049980" startTime="2022-05-09T16:19:15.6602858-04:00" endTime="2022-05-09T16:19:15.6652841-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dd1c340b-bcbd-43eb-b408-359769127a68">
+    <UnitTestResult executionId="758e043f-b049-4a22-8e9e-c053b3a23191" testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" testName="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:01.3128110" startTime="2022-11-23T12:19:28.1274691-05:00" endTime="2022-11-23T12:19:29.4402800-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="758e043f-b049-4a22-8e9e-c053b3a23191">
       <Output>
         <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
   --- multiline step argument ---&#xD;
@@ -15,124 +15,19 @@
      And I have entered 70 into the calculator&#xD;
      When I press C&#xD;
      Then the screen should be empty&#xD;
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
-And feature base uri is provided from configuration as 'root/test/'&#xD;
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("root/test/") (0.0s)&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (1.2s)&#xD;
+And feature base uri is provided from configuration as 'http://root/test/'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)&#xD;
 When I generate the documentation&#xD;
 -&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
 Then the JSON file should contain&#xD;
   --- multiline step argument ---&#xD;
-  "uri": "root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "root/test...") (0.0s)</StdOut>
+  "uri": "http://root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "http://ro...") (0.1s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="241f7b00-f3a0-4875-8685-1a6ce73d9862" testId="a2666154-353c-538d-1d94-f354067d2903" testName="ASimpleFeatureInAFolderWithoutBaseUriSet" computerName="ERICCARLSONBBE6" duration="00:00:00.0118150" startTime="2022-05-09T16:19:15.6652971-04:00" endTime="2022-05-09T16:19:15.6771122-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="241f7b00-f3a0-4875-8685-1a6ce73d9862">
-      <Output>
-        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
-  --- multiline step argument ---&#xD;
-  Feature: Clearing Screen&#xD;
-  Scenario: Clear the screen&#xD;
-      Given I have entered 50 into the calculator&#xD;
-      And I have entered 70 into the calculator&#xD;
-      When I press C&#xD;
-      Then the screen should be empty&#xD;
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
-When I generate the documentation&#xD;
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
-Then the JSON file should contain&#xD;
-  --- multiline step argument ---&#xD;
-  "uri": "FeatureTest/SettingUriForAFeature.feature"&#xD;
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "FeatureTe...") (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="6186ea17-ce48-4460-89c5-ad782b57ea9a" testId="f39f3621-b2db-acf4-6024-7330b5675c0a" testName="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" computerName="ERICCARLSONBBE6" duration="00:00:00.3410869" startTime="2022-05-09T16:19:14.2118547-04:00" endTime="2022-05-09T16:19:14.5528705-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6186ea17-ce48-4460-89c5-ad782b57ea9a" />
-    <UnitTestResult executionId="344ffc64-b404-4664-8177-6bb27852f92e" testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" testName="ASimpleFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0036050" startTime="2022-05-09T16:19:15.6896181-04:00" endTime="2022-05-09T16:19:15.6932229-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="344ffc64-b404-4664-8177-6bb27852f92e">
-      <Output>
-        <StdOut>Given I have this feature description&#xD;
-  --- multiline step argument ---&#xD;
-  Feature: Clearing Screen&#xD;
-      In order to restart a new set of calculations&#xD;
-      As a math idiot&#xD;
-      I want to be able to clear the screen&#xD;
-  &#xD;
-  @workflow @slow&#xD;
-  Scenario: Clear the screen&#xD;
-      Given I have entered 50 into the calculator&#xD;
-      And I have entered 70 into the calculator&#xD;
-      When I press C&#xD;
-      Then the screen should be empty&#xD;
--&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Clearing...") (0.0s)&#xD;
-When I generate the documentation&#xD;
--&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
-Then the JSON file should contain&#xD;
-  --- multiline step argument ---&#xD;
-  [&#xD;
-    {&#xD;
-      "id": "clearing-screen",&#xD;
-      "keyword": "Feature",&#xD;
-      "name": "Clearing Screen",&#xD;
-      "tags": [],&#xD;
-      "line": 1,&#xD;
-      "elements": [&#xD;
-        {&#xD;
-          "id": "clearing-screen;clear-the-screen",&#xD;
-          "keyword": "Scenario",&#xD;
-          "name": "Clear the screen",&#xD;
-          "line": 7,&#xD;
-          "type": "scenario",&#xD;
-          "tags": [&#xD;
-            {&#xD;
-              "name": "@workflow"&#xD;
-            },&#xD;
-            {&#xD;
-              "name": "@slow"&#xD;
-            }&#xD;
-          ],&#xD;
-          "steps": [&#xD;
-            {&#xD;
-              "keyword": "Given",&#xD;
-              "name": "I have entered 50 into the calculator",&#xD;
-              "line": 8,&#xD;
-              "hidden": false,&#xD;
-              "result": {&#xD;
-                "status": "Undefined",&#xD;
-                "duration": 1&#xD;
-              }&#xD;
-            },&#xD;
-            {&#xD;
-              "keyword": "And",&#xD;
-              "name": "I have entered 70 into the calculator",&#xD;
-              "line": 9,&#xD;
-              "hidden": false,&#xD;
-              "result": {&#xD;
-                "status": "Undefined",&#xD;
-                "duration": 1&#xD;
-              }&#xD;
-            },&#xD;
-            {&#xD;
-              "keyword": "When",&#xD;
-              "name": "I press C",&#xD;
-              "line": 10,&#xD;
-              "hidden": false,&#xD;
-              "result": {&#xD;
-                "status": "Undefined",&#xD;
-                "duration": 1&#xD;
-              }&#xD;
-            },&#xD;
-            {&#xD;
-              "keyword": "Then",&#xD;
-              "name": "the screen should be empty",&#xD;
-              "line": 11,&#xD;
-              "hidden": false,&#xD;
-              "result": {&#xD;
-                "status": "Undefined",&#xD;
-                "duration": 1&#xD;
-              }&#xD;
-            }&#xD;
--&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="a8896d8d-5c26-4369-ba53-d6ac55e6709a" testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" testName="AFeatureWithATable" computerName="ERICCARLSONBBE6" duration="00:00:00.0114360" startTime="2022-05-09T16:19:15.6781428-04:00" endTime="2022-05-09T16:19:15.6895786-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8896d8d-5c26-4369-ba53-d6ac55e6709a">
+    <UnitTestResult executionId="e23c1b53-c3be-4471-af52-db141daca9fa" testId="f39f3621-b2db-acf4-6024-7330b5675c0a" testName="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" computerName="ERICCARLSONBBE6" duration="00:00:00.3995580" startTime="2022-11-23T12:19:27.7224557-05:00" endTime="2022-11-23T12:19:28.1219279-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e23c1b53-c3be-4471-af52-db141daca9fa" />
+    <UnitTestResult executionId="c04f9837-d5b7-4dc5-a531-05f04f567718" testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" testName="AFeatureWithATable" computerName="ERICCARLSONBBE6" duration="00:00:00.0111630" startTime="2022-11-23T12:19:29.4654020-05:00" endTime="2022-11-23T12:19:29.4765654-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c04f9837-d5b7-4dc5-a531-05f04f567718">
       <Output>
         <StdOut>Given I have this feature description&#xD;
   --- multiline step argument ---&#xD;
@@ -223,7 +118,112 @@ Then the JSON file should contain&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="af77eb25-5be4-48e9-82fb-c60fed72f330" testId="de3560be-e722-db99-5be6-2a40c144ed43" testName="ASimpleFeatureInAFolderWithFileBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:00.0056770" startTime="2022-05-09T16:19:15.6545918-04:00" endTime="2022-05-09T16:19:15.6602690-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af77eb25-5be4-48e9-82fb-c60fed72f330">
+    <UnitTestResult executionId="24f7ccf8-8bed-4ced-9718-677006a3e187" testId="a2666154-353c-538d-1d94-f354067d2903" testName="ASimpleFeatureInAFolderWithoutBaseUriSet" computerName="ERICCARLSONBBE6" duration="00:00:00.0127470" startTime="2022-11-23T12:19:29.4514879-05:00" endTime="2022-11-23T12:19:29.4642349-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24f7ccf8-8bed-4ced-9718-677006a3e187">
+      <Output>
+        <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+  Scenario: Clear the screen&#xD;
+      Given I have entered 50 into the calculator&#xD;
+      And I have entered 70 into the calculator&#xD;
+      When I press C&#xD;
+      Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  "uri": "FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "FeatureTe...") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="67526ae5-bbde-46d0-a03e-ab0cfaeb5eea" testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" testName="ASimpleFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0034430" startTime="2022-11-23T12:19:29.4766045-05:00" endTime="2022-11-23T12:19:29.4800479-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="67526ae5-bbde-46d0-a03e-ab0cfaeb5eea">
+      <Output>
+        <StdOut>Given I have this feature description&#xD;
+  --- multiline step argument ---&#xD;
+  Feature: Clearing Screen&#xD;
+      In order to restart a new set of calculations&#xD;
+      As a math idiot&#xD;
+      I want to be able to clear the screen&#xD;
+  &#xD;
+  @workflow @slow&#xD;
+  Scenario: Clear the screen&#xD;
+      Given I have entered 50 into the calculator&#xD;
+      And I have entered 70 into the calculator&#xD;
+      When I press C&#xD;
+      Then the screen should be empty&#xD;
+-&gt; done: StepDefinitions.IHaveThisFeatureDescription("Feature: Clearing...") (0.0s)&#xD;
+When I generate the documentation&#xD;
+-&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
+Then the JSON file should contain&#xD;
+  --- multiline step argument ---&#xD;
+  [&#xD;
+    {&#xD;
+      "id": "clearing-screen",&#xD;
+      "keyword": "Feature",&#xD;
+      "name": "Clearing Screen",&#xD;
+      "tags": [],&#xD;
+      "line": 1,&#xD;
+      "elements": [&#xD;
+        {&#xD;
+          "id": "clearing-screen;clear-the-screen",&#xD;
+          "keyword": "Scenario",&#xD;
+          "name": "Clear the screen",&#xD;
+          "line": 7,&#xD;
+          "type": "scenario",&#xD;
+          "tags": [&#xD;
+            {&#xD;
+              "name": "@workflow"&#xD;
+            },&#xD;
+            {&#xD;
+              "name": "@slow"&#xD;
+            }&#xD;
+          ],&#xD;
+          "steps": [&#xD;
+            {&#xD;
+              "keyword": "Given",&#xD;
+              "name": "I have entered 50 into the calculator",&#xD;
+              "line": 8,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "And",&#xD;
+              "name": "I have entered 70 into the calculator",&#xD;
+              "line": 9,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "When",&#xD;
+              "name": "I press C",&#xD;
+              "line": 10,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            },&#xD;
+            {&#xD;
+              "keyword": "Then",&#xD;
+              "name": "the screen should be empty",&#xD;
+              "line": 11,&#xD;
+              "hidden": false,&#xD;
+              "result": {&#xD;
+                "status": "Undefined",&#xD;
+                "duration": 1&#xD;
+              }&#xD;
+            }&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe("[\r\n  {\r\n    "...") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="859296b4-b75d-47e0-b9b6-090164a2cc80" testId="de3560be-e722-db99-5be6-2a40c144ed43" testName="ASimpleFeatureInAFolderWithFileBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:00.0055940" startTime="2022-11-23T12:19:29.4403290-05:00" endTime="2022-11-23T12:19:29.4459231-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="859296b4-b75d-47e0-b9b6-090164a2cc80">
       <Output>
         <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
   --- multiline step argument ---&#xD;
@@ -244,7 +244,7 @@ Then the JSON file should contain&#xD;
 -&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "test/Feat...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="9ed459a1-7618-400d-9bb6-91045843638f" testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" testName="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:01.0939220" startTime="2022-05-09T16:19:14.5606224-04:00" endTime="2022-05-09T16:19:15.6545449-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9ed459a1-7618-400d-9bb6-91045843638f">
+    <UnitTestResult executionId="ac60cd79-edc1-481b-be4d-76357fa3c915" testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" testName="ASimpleFeatureInAFolderWithFolderBaseUri" computerName="ERICCARLSONBBE6" duration="00:00:00.0055370" startTime="2022-11-23T12:19:29.4459388-05:00" endTime="2022-11-23T12:19:29.4514754-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac60cd79-edc1-481b-be4d-76357fa3c915">
       <Output>
         <StdOut>Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
   --- multiline step argument ---&#xD;
@@ -254,56 +254,56 @@ Then the JSON file should contain&#xD;
      And I have entered 70 into the calculator&#xD;
      When I press C&#xD;
      Then the screen should be empty&#xD;
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (1.0s)&#xD;
-And feature base uri is provided from configuration as 'http://root/test/'&#xD;
--&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (0.0s)&#xD;
+And feature base uri is provided from configuration as 'root/test/'&#xD;
+-&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("root/test/") (0.0s)&#xD;
 When I generate the documentation&#xD;
 -&gt; done: StepDefinitions.WhenIGenerateTheJsonDocumentation() (0.0s)&#xD;
 Then the JSON file should contain&#xD;
   --- multiline step argument ---&#xD;
-  "uri": "http://root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
--&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "http://ro...") (0.1s)</StdOut>
+  "uri": "root/test/FeatureTest/SettingUriForAFeature.feature"&#xD;
+-&gt; done: StepDefinitions.ThenTheResultShouldBe(""uri": "root/test...") (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
   </Results>
   <TestDefinitions>
     <UnitTest name="ASimpleFeatureInAFolderWithoutBaseUriSet" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="a2666154-353c-538d-1d94-f354067d2903">
-      <Execution id="241f7b00-f3a0-4875-8685-1a6ce73d9862" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithoutBaseUriSet" />
+      <Execution id="24f7ccf8-8bed-4ced-9718-677006a3e187" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithoutBaseUriSet" />
     </UnitTest>
     <UnitTest name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="59ff08fb-5d87-ad92-134e-e652c18e54d2">
-      <Execution id="9ed459a1-7618-400d-9bb6-91045843638f" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" />
+      <Execution id="758e043f-b049-4a22-8e9e-c053b3a23191" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithAnAbsoluteBaseUri" />
     </UnitTest>
     <UnitTest name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="f39f3621-b2db-acf4-6024-7330b5675c0a">
-      <Execution id="6186ea17-ce48-4460-89c5-ad782b57ea9a" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.CucumberDocumentationBuilderTests" name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" />
+      <Execution id="e23c1b53-c3be-4471-af52-db141daca9fa" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.CucumberDocumentationBuilderTests" name="GIVEN_MacOS_test_When_create_document_Then_there_is_no_error" />
     </UnitTest>
     <UnitTest name="ASimpleFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="797e3bf8-d1b0-5307-6959-1a39dacd6819">
-      <Execution id="344ffc64-b404-4664-8177-6bb27852f92e" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="ASimpleFeature" />
+      <Execution id="67526ae5-bbde-46d0-a03e-ab0cfaeb5eea" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="ASimpleFeature" />
     </UnitTest>
     <UnitTest name="AFeatureWithATable" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="4cd6546d-4c91-a70f-160f-162ed395a6c4">
-      <Execution id="a8896d8d-5c26-4369-ba53-d6ac55e6709a" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="AFeatureWithATable" />
+      <Execution id="c04f9837-d5b7-4dc5-a531-05f04f567718" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FormattingAFeatureFeature" name="AFeatureWithATable" />
     </UnitTest>
     <UnitTest name="ASimpleFeatureInAFolderWithFileBaseUri" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="de3560be-e722-db99-5be6-2a40c144ed43">
-      <Execution id="af77eb25-5be4-48e9-82fb-c60fed72f330" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFileBaseUri" />
+      <Execution id="859296b4-b75d-47e0-b9b6-090164a2cc80" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFileBaseUri" />
     </UnitTest>
     <UnitTest name="ASimpleFeatureInAFolderWithFolderBaseUri" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.cucumber.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.cucumber.unittests.dll" id="8ffcd521-b686-09ef-40ee-6003dae1bbfb">
-      <Execution id="dd1c340b-bcbd-43eb-b408-359769127a68" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFolderBaseUri" />
+      <Execution id="ac60cd79-edc1-481b-be4d-76357fa3c915" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.FeatureTest.SettingUriForAFeatureInAFolderFeature" name="ASimpleFeatureInAFolderWithFolderBaseUri" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" executionId="dd1c340b-bcbd-43eb-b408-359769127a68" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a2666154-353c-538d-1d94-f354067d2903" executionId="241f7b00-f3a0-4875-8685-1a6ce73d9862" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f39f3621-b2db-acf4-6024-7330b5675c0a" executionId="6186ea17-ce48-4460-89c5-ad782b57ea9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" executionId="344ffc64-b404-4664-8177-6bb27852f92e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" executionId="a8896d8d-5c26-4369-ba53-d6ac55e6709a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="de3560be-e722-db99-5be6-2a40c144ed43" executionId="af77eb25-5be4-48e9-82fb-c60fed72f330" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" executionId="9ed459a1-7618-400d-9bb6-91045843638f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="59ff08fb-5d87-ad92-134e-e652c18e54d2" executionId="758e043f-b049-4a22-8e9e-c053b3a23191" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f39f3621-b2db-acf4-6024-7330b5675c0a" executionId="e23c1b53-c3be-4471-af52-db141daca9fa" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4cd6546d-4c91-a70f-160f-162ed395a6c4" executionId="c04f9837-d5b7-4dc5-a531-05f04f567718" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2666154-353c-538d-1d94-f354067d2903" executionId="24f7ccf8-8bed-4ced-9718-677006a3e187" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="797e3bf8-d1b0-5307-6959-1a39dacd6819" executionId="67526ae5-bbde-46d0-a03e-ab0cfaeb5eea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de3560be-e722-db99-5be6-2a40c144ed43" executionId="859296b4-b75d-47e0-b9b6-090164a2cc80" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ffcd521-b686-09ef-40ee-6003dae1bbfb" executionId="ac60cd79-edc1-481b-be4d-76357fa3c915" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -313,7 +313,7 @@ Then the JSON file should contain&#xD;
     <Counters total="7" executed="7" passed="7" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
-Running all tests in C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll&#xD;
+Running all tests in C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Cucumber.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests.dll&#xD;
    NUnit3TestExecutor discovered 7 of 7 NUnit test cases&#xD;
 Given I have this feature description placed in a folder 'FeatureTest' in a file 'SettingUriForAFeature.feature'&#xD;
   --- multiline step argument ---&#xD;
@@ -323,7 +323,7 @@ Given I have this feature description placed in a folder 'FeatureTest' in a file
      And I have entered 70 into the calculator&#xD;
      When I press C&#xD;
      Then the screen should be empty&#xD;
--&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (1.0s)&#xD;
+-&gt; done: StepDefinitions.GivenIHaveThisFeatureDescriptionPlacedInAFolder("FeatureTest", "SettingUriForAFea...", "Feature: Clearing...") (1.2s)&#xD;
 And feature base uri is provided from configuration as 'http://root/test/'&#xD;
 -&gt; done: StepDefinitions.GivenFeatureBaseUriIsProvidedFromConfigurationAs("http://root/test/") (0.0s)&#xD;
 When I generate the documentation&#xD;

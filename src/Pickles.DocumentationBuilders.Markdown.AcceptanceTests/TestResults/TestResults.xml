@@ -1,381 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="b0e7657e-db96-4c99-ac7b-61fd8eb4728d" name="ericcarlson@ERICCARLSONBBE6 2022-05-09 16:19:06" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-05-09T16:19:06.6439514-04:00" queuing="2022-05-09T16:19:06.6439518-04:00" start="2022-05-09T16:19:02.4843279-04:00" finish="2022-05-09T16:19:06.8221305-04:00" />
-  <TestSettings name="default" id="5c7fa660-31d2-40ad-9a10-fdc56e521f2e">
-    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-09_16_19_06" />
+<TestRun id="89d093c2-7fd4-4a96-b605-1eb7cbb62b28" name="ericcarlson@ERICCARLSONBBE6 2022-11-23 12:19:44" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-11-23T12:19:44.6511412-05:00" queuing="2022-11-23T12:19:44.6511414-05:00" start="2022-11-23T12:19:40.0644321-05:00" finish="2022-11-23T12:19:44.9056943-05:00" />
+  <TestSettings name="default" id="559eda32-b48a-40b5-a6e5-af86308b9909">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-11-23_12_19_44" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="5f458a82-4fd2-44ca-8fa4-df8a18022a34" testId="c0b1ee9c-f455-e634-bb7c-275492950bfa" testName="OutputHasScenarioHeading" computerName="ERICCARLSONBBE6" duration="00:00:00.0067650" startTime="2022-05-09T16:19:06.5123723-04:00" endTime="2022-05-09T16:19:06.5191381-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f458a82-4fd2-44ca-8fa4-df8a18022a34">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Heading'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Heading") (0.0s)&#xD;
-And I have a scenario called 'Scenario heading included in output'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines&#xD;
-  --- table step argument ---&#xD;
-  | Content                                            |&#xD;
-  | #### Scenario: Scenario heading included in output |&#xD;
--&gt; done: MarkdownSteps.ThenTheMarkdownOutputHasTheLines(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="4513d044-1a63-4134-8438-429bf7a6083b" testId="efecd384-b47f-ed42-e21b-23b3777cbb82" testName="OutputHasSimpleGivenStepForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0094000" startTime="2022-05-09T16:19:06.7170497-04:00" endTime="2022-05-09T16:19:06.7264494-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4513d044-1a63-4134-8438-429bf7a6083b">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Steps Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Steps...") (0.0s)&#xD;
-And I have a scenario called 'Simple Given Step'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Simple Given Step") (0.0s)&#xD;
-And I have the scenario steps&#xD;
-  --- table step argument ---&#xD;
-  | Keyword | Step                       |&#xD;
-  | Given   | I have a simple given step |&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveTheScenarioSteps(&lt;table&gt;) (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                                |&#xD;
-  | #### Scenario: Simple Given Step       |&#xD;
-  | &gt;                                      |&#xD;
-  | &gt; **Given** I have a simple given step |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="d7291f7d-9594-4c25-bdf4-f9a14e7f7c30" testId="ea98bfc2-9b61-ee7f-0ad3-fe468ff6f1f5" testName="ScenarioDisplaysResultsIcon(&quot;Passed&quot;,&quot;passed&quot;,&quot;pass.png&quot;,null)" computerName="ERICCARLSONBBE6" duration="00:00:00.0053819" startTime="2022-05-09T16:19:06.6253486-04:00" endTime="2022-05-09T16:19:06.6307304-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d7291f7d-9594-4c25-bdf4-f9a14e7f7c30">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Results Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Resul...") (0.0s)&#xD;
-And I have a scenario called 'Scenario with result'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario with result") (0.0s)&#xD;
-And the scenario test run outcome was passed&#xD;
--&gt; done: GherkinTreeSteps.Given_The_Scenario_Test_Run_Outcome_Was("passed") (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                                                 |&#xD;
-  | #### Scenario: ![Passed](pass.png) Scenario with result |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="3261a31b-d060-4ded-b9b9-c660fbf5510f" testId="070937af-0890-76c8-fc3a-6801ec8b808e" testName="OutputHasSimpleScenarioOutline" computerName="ERICCARLSONBBE6" duration="00:00:00.0688400" startTime="2022-05-09T16:19:06.5403804-04:00" endTime="2022-05-09T16:19:06.6092200-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3261a31b-d060-4ded-b9b9-c660fbf5510f">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Outline Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Outli...") (0.0s)&#xD;
-And I have a scenario outline called 'Scenario Outline with Single Example'&#xD;
--&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
-        [Given(@"I have a scenario outline called '(.*)'")]&#xD;
-        public void GivenIHaveAScenarioOutlineCalled(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-&#xD;
-And I have the scenario steps&#xD;
-  --- table step argument ---&#xD;
-  | Keyword | Step                                      |&#xD;
-  | Given   | I have a simple given step for &lt;data_one&gt; |&#xD;
-  | And     | I have second given for &lt;data_two&gt;        |&#xD;
--&gt; skipped because of previous errors&#xD;
-And I have an examples table&#xD;
-  --- table step argument ---&#xD;
-  | Scenario | data_one | data_two |&#xD;
-  | First    | one      | wun      |&#xD;
-  | Second   | two      | too      |&#xD;
-  | Third    | three    | tree     |&#xD;
--&gt; skipped because of previous errors&#xD;
-When I generate Markdown output&#xD;
--&gt; skipped because of previous errors&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                                                     |&#xD;
-  | #### Scenario Outline: Scenario Outline with Single Example |&#xD;
-  | &gt;                                                           |&#xD;
-  | &gt; **Given** I have a simple given step for \&lt;data_one\&gt;     |&#xD;
-  | &gt;                                                           |&#xD;
-  | &gt; **And** I have second given for \&lt;data_two\&gt;              |&#xD;
-  | &gt;                                                           |&#xD;
-  | &gt; Examples:                                                 |&#xD;
-  | &gt;                                                           |&#xD;
-  | &gt; | Scenario | data_one | data_two |                        |&#xD;
-  | &gt; | --- | --- | --- |                                       |&#xD;
-  | &gt; | First | one | wun |                                     |&#xD;
-  | &gt; | Second | two | too |                                    |&#xD;
-  | &gt; | Third | three | tree |                                  |&#xD;
--&gt; skipped because of previous errors&#xD;
-&#xD;
-No matching step definition found for one or more steps.&#xD;
-using System;&#xD;
-using TechTalk.SpecFlow;&#xD;
-&#xD;
-namespace MyNamespace&#xD;
-{&#xD;
-    [Binding]&#xD;
-    public class StepDefinitions&#xD;
-    {&#xD;
-        private readonly ScenarioContext _scenarioContext;&#xD;
-&#xD;
-        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
-        {&#xD;
-            _scenarioContext = scenarioContext;&#xD;
-        }&#xD;
-        [Given(@"I have a scenario outline called '(.*)'")]&#xD;
-        public void GivenIHaveAScenarioOutlineCalled(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-    }&#xD;
-}</StdOut>
-        <ErrorInfo>
-          <Message>No matching step definition found for one or more steps.&#xD;
-using System;&#xD;
-using TechTalk.SpecFlow;&#xD;
-&#xD;
-namespace MyNamespace&#xD;
-{&#xD;
-    [Binding]&#xD;
-    public class StepDefinitions&#xD;
-    {&#xD;
-        private readonly ScenarioContext _scenarioContext;&#xD;
-&#xD;
-        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
-        {&#xD;
-            _scenarioContext = scenarioContext;&#xD;
-        }&#xD;
-        [Given(@"I have a scenario outline called '(.*)'")]&#xD;
-        public void GivenIHaveAScenarioOutlineCalled(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-    }&#xD;
-}&#xD;
-</Message>
-        </ErrorInfo>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="908d4b82-36bf-4959-afc0-c952d83546e5" testId="a315689e-0a3d-1b07-2d11-f58d4a6bc2d8" testName="OutputHasTitleOnFirstLine" computerName="ERICCARLSONBBE6" duration="00:00:00.0095110" startTime="2022-05-09T16:19:06.7336920-04:00" endTime="2022-05-09T16:19:06.7432025-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="908d4b82-36bf-4959-afc0-c952d83546e5">
-      <Output>
-        <StdOut>When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the line&#xD;
-  --- table step argument ---&#xD;
-  | Line No. | Content    |&#xD;
-  | 1        | # Features |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Line(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="6bb89604-03f7-41b9-acb3-9b744c0fe48d" testId="752345d7-6965-4f3b-cc14-87344eddb348" testName="OutputHasFeatureDescriptionForFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0055210" startTime="2022-05-09T16:19:06.4907712-04:00" endTime="2022-05-09T16:19:06.4962922-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6bb89604-03f7-41b9-acb3-9b744c0fe48d">
-      <Output>
-        <StdOut>Given I have a feature called 'My Described Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Described Feature") (0.0s)&#xD;
-And I have the description&#xD;
-  --- table step argument ---&#xD;
-  | Description                                                                   |&#xD;
-  | In order to include the description (In order, As a, I want) for each feature |&#xD;
-  | As a reader of the generated documentation                                    |&#xD;
-  | I want the feature description included below the feature heading.            |&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveTheDescription(&lt;table&gt;) (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                                                                       |&#xD;
-  | ### My Described Feature                                                      |&#xD;
-  | In order to include the description (In order, As a, I want) for each feature |&#xD;
-  | As a reader of the generated documentation                                    |&#xD;
-  | I want the feature description included below the feature heading.            |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="ddca9655-fa41-40cf-b9bf-1262e78e251d" testId="89927b35-50ec-c5d2-f073-d7e7c9a64808" testName="OutputHasTagsForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0061870" startTime="2022-05-09T16:19:06.7269754-04:00" endTime="2022-05-09T16:19:06.7331623-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ddca9655-fa41-40cf-b9bf-1262e78e251d">
-      <Output>
-        <StdOut>Given I have a feature called 'My Tagged Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Tagged Feature") (0.0s)&#xD;
-And I have a scenario called 'Scenario With Tags'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario With Tags") (0.0s)&#xD;
-And I have the scenario tags&#xD;
-  --- table step argument ---&#xD;
-  | Tag     |&#xD;
-  | @ignore |&#xD;
-  | @tagtwo |&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveTheScenarioTags(&lt;table&gt;) (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                           |&#xD;
-  | *`@ignore`* *`@tagtwo`*           |&#xD;
-  | #### Scenario: Scenario With Tags |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="b97a6fa8-e1bb-4915-8b70-0a7ef29c90c1" testId="acff9c79-cf93-5ac4-8813-8afa29cff076" testName="ScenarioDisplaysResultsIcon(&quot;Inconclusive&quot;,&quot;inconclusive&quot;,&quot;inconclusive.png&quot;,null)" computerName="ERICCARLSONBBE6" duration="00:00:00.0086000" startTime="2022-05-09T16:19:06.6354167-04:00" endTime="2022-05-09T16:19:06.6440165-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b97a6fa8-e1bb-4915-8b70-0a7ef29c90c1">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Results Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Resul...") (0.0s)&#xD;
-And I have a scenario called 'Scenario with result'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario with result") (0.0s)&#xD;
-And the scenario test run outcome was inconclusive&#xD;
--&gt; done: GherkinTreeSteps.Given_The_Scenario_Test_Run_Outcome_Was("inconclusive") (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                                                               |&#xD;
-  | #### Scenario: ![Inconclusive](inconclusive.png) Scenario with result |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="5e83227d-a5f9-4ab0-84e0-27991cb27c5c" testId="cb5a31eb-5613-c696-c78c-5bbfa7837427" testName="OutputHasAStepWithATableForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0090940" startTime="2022-05-09T16:19:06.7033815-04:00" endTime="2022-05-09T16:19:06.7124751-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5e83227d-a5f9-4ab0-84e0-27991cb27c5c">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Steps Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Steps...") (0.0s)&#xD;
-And I have a scenario called 'Table Given Step'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Table Given Step") (0.0s)&#xD;
-And I have the scenario step with table 'Given I have a table'&#xD;
-  --- table step argument ---&#xD;
-  | TableColA | TableColb |&#xD;
-  | TDA1      | TDB1      |&#xD;
-  | TDA2      | TDB2      |&#xD;
--&gt; done: GherkinTreeSteps.Given_I_Have_The_Scenario_Step_With_Table("Given ", "I have a table", &lt;table&gt;) (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                         |&#xD;
-  | #### Scenario: Table Given Step |&#xD;
-  | &gt;                               |&#xD;
-  | &gt; **Given** I have a table      |&#xD;
-  | &gt;                               |&#xD;
-  | &gt; | TableColA | TableColb |     |&#xD;
-  | &gt; | --- | --- |                 |&#xD;
-  | &gt; | TDA1 | TDB1 |               |&#xD;
-  | &gt; | TDA2 | TDB2 |               |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="c055d6cb-5794-4b73-a3ff-bea295b15f3c" testId="b46302c3-cde4-45c9-b3a9-3bef7f7e5910" testName="OutputHasSimpleGivenAndStepForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0045040" startTime="2022-05-09T16:19:06.7125117-04:00" endTime="2022-05-09T16:19:06.7170153-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c055d6cb-5794-4b73-a3ff-bea295b15f3c">
-      <Output>
-        <StdOut>Given I have a feature called 'My Scenario Steps Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Steps...") (0.0s)&#xD;
-And I have a scenario called 'Multiple Given Steps'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Multiple Given Steps") (0.0s)&#xD;
-And I have the scenario steps&#xD;
-  --- table step argument ---&#xD;
-  | Keyword | Step                       |&#xD;
-  | Given   | I have a simple given step |&#xD;
-  | And     | I have second given        |&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveTheScenarioSteps(&lt;table&gt;) (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                                |&#xD;
-  | #### Scenario: Multiple Given Steps    |&#xD;
-  | &gt;                                      |&#xD;
-  | &gt; **Given** I have a simple given step |&#xD;
-  | &gt;                                      |&#xD;
-  | &gt; **And** I have second given          |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="64e53dae-d694-48b7-9134-3fd4c79d7581" testId="2106db9a-9b42-d6b4-2887-e18204fb75b0" testName="OutputHasFeatureSectionForEachFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0049020" startTime="2022-05-09T16:19:06.4966856-04:00" endTime="2022-05-09T16:19:06.5015877-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64e53dae-d694-48b7-9134-3fd4c79d7581">
-      <Output>
-        <StdOut>Given I have a feature called 'My First Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My First Feature") (0.0s)&#xD;
-And I have a feature called 'My Second Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Second Feature") (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content               |&#xD;
-  | ### My First Feature  |&#xD;
-  | ### My Second Feature |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="d3733567-166f-4ab5-bc18-236c59db641f" testId="9fc7aa2a-6d38-b857-79eb-9023f0709ad5" testName="StatusIconsAreWrittenToSpecifiedLocation" computerName="ERICCARLSONBBE6" duration="00:00:00.0479250" startTime="2022-05-09T16:19:06.6549654-04:00" endTime="2022-05-09T16:19:06.7028903-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3733567-166f-4ab5-bc18-236c59db641f">
-      <Output>
-        <StdOut>Given I specify the output folder as 'C:\testing'&#xD;
--&gt; done: MarkdownSteps.Given_I_Specify_The_Output_File_As("C:\testing") (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the file 'C:\testing\pass.png' exists&#xD;
--&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
-        [Then(@"the file '(.*)' exists")]&#xD;
-        public void ThenTheFileExists(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-&#xD;
-And the file 'C:\testing\fail.png' exists&#xD;
--&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
-        [Then(@"the file '(.*)' exists")]&#xD;
-        public void ThenTheFileExists(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-&#xD;
-And the file 'C:\testing\inconclusive.png' exists&#xD;
--&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
-        [Then(@"the file '(.*)' exists")]&#xD;
-        public void ThenTheFileExists(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-&#xD;
-&#xD;
-No matching step definition found for one or more steps.&#xD;
-using System;&#xD;
-using TechTalk.SpecFlow;&#xD;
-&#xD;
-namespace MyNamespace&#xD;
-{&#xD;
-    [Binding]&#xD;
-    public class StepDefinitions&#xD;
-    {&#xD;
-        private readonly ScenarioContext _scenarioContext;&#xD;
-&#xD;
-        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
-        {&#xD;
-            _scenarioContext = scenarioContext;&#xD;
-        }&#xD;
-        [Then(@"the file '(.*)' exists")]&#xD;
-        public void ThenTheFileExists(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-    }&#xD;
-}</StdOut>
-        <ErrorInfo>
-          <Message>No matching step definition found for one or more steps.&#xD;
-using System;&#xD;
-using TechTalk.SpecFlow;&#xD;
-&#xD;
-namespace MyNamespace&#xD;
-{&#xD;
-    [Binding]&#xD;
-    public class StepDefinitions&#xD;
-    {&#xD;
-        private readonly ScenarioContext _scenarioContext;&#xD;
-&#xD;
-        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
-        {&#xD;
-            _scenarioContext = scenarioContext;&#xD;
-        }&#xD;
-        [Then(@"the file '(.*)' exists")]&#xD;
-        public void ThenTheFileExists(string p0)&#xD;
-        {&#xD;
-            _scenarioContext.Pending();&#xD;
-        }&#xD;
-    }&#xD;
-}&#xD;
-</Message>
-        </ErrorInfo>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="cca0f013-5ce8-4ab5-a634-22bc3f4197e7" testId="a273a767-3eae-cb2b-0c72-aae8888d3beb" testName="ScenarioOutlineExampleDisplaysResultsIcon" computerName="ERICCARLSONBBE6" duration="00:00:00.0108250" startTime="2022-05-09T16:19:06.6440777-04:00" endTime="2022-05-09T16:19:06.6549019-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cca0f013-5ce8-4ab5-a634-22bc3f4197e7">
+    <UnitTestResult executionId="69c0f956-4048-4dd0-9211-75b3d52664ae" testId="a273a767-3eae-cb2b-0c72-aae8888d3beb" testName="ScenarioOutlineExampleDisplaysResultsIcon" computerName="ERICCARLSONBBE6" duration="00:00:00.0098540" startTime="2022-11-23T12:19:44.7583163-05:00" endTime="2022-11-23T12:19:44.7681704-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69c0f956-4048-4dd0-9211-75b3d52664ae">
       <Output>
         <StdOut>Given I have a feature called 'My Scenario Outline Results Feature'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Outli...") (0.0s)&#xD;
@@ -457,68 +87,169 @@ namespace MyNamespace&#xD;
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="7eac7551-a79d-4acb-8929-742f75c64125" testId="09180ce3-5f84-95ae-f71e-9e45bb8cd892" testName="OutputHasScenarioHeadingForEachScenarioInSameFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0040460" startTime="2022-05-09T16:19:06.5358666-04:00" endTime="2022-05-09T16:19:06.5399126-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7eac7551-a79d-4acb-8929-742f75c64125">
+    <UnitTestResult executionId="3c2d1e5c-7cc6-4b75-8a82-b74cdc22273a" testId="c0b1ee9c-f455-e634-bb7c-275492950bfa" testName="OutputHasScenarioHeading" computerName="ERICCARLSONBBE6" duration="00:00:00.0047690" startTime="2022-11-23T12:19:44.6276250-05:00" endTime="2022-11-23T12:19:44.6323937-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3c2d1e5c-7cc6-4b75-8a82-b74cdc22273a">
       <Output>
         <StdOut>Given I have a feature called 'My Scenario Heading'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Heading") (0.0s)&#xD;
-And I have a scenario called 'Scenario heading included in output - 1'&#xD;
+And I have a scenario called 'Scenario heading included in output'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
-And I have a scenario called 'Scenario heading included in output - 2'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines&#xD;
+  --- table step argument ---&#xD;
+  | Content                                            |&#xD;
+  | #### Scenario: Scenario heading included in output |&#xD;
+-&gt; done: MarkdownSteps.ThenTheMarkdownOutputHasTheLines(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="28ba6a18-e008-4f0a-ae38-85381074154b" testId="ea98bfc2-9b61-ee7f-0ad3-fe468ff6f1f5" testName="ScenarioDisplaysResultsIcon(&quot;Passed&quot;,&quot;passed&quot;,&quot;pass.png&quot;,null)" computerName="ERICCARLSONBBE6" duration="00:00:00.0051040" startTime="2022-11-23T12:19:44.7281435-05:00" endTime="2022-11-23T12:19:44.7332474-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="28ba6a18-e008-4f0a-ae38-85381074154b">
+      <Output>
+        <StdOut>Given I have a feature called 'My Scenario Results Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Resul...") (0.0s)&#xD;
+And I have a scenario called 'Scenario with result'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario with result") (0.0s)&#xD;
+And the scenario test run outcome was passed&#xD;
+-&gt; done: GherkinTreeSteps.Given_The_Scenario_Test_Run_Outcome_Was("passed") (0.0s)&#xD;
 When I generate Markdown output&#xD;
 -&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
 Then the Markdown output has the lines in the following order&#xD;
   --- table step argument ---&#xD;
-  | Content                                                |&#xD;
-  | ### My Scenario Heading                                |&#xD;
-  | #### Scenario: Scenario heading included in output - 1 |&#xD;
-  | #### Scenario: Scenario heading included in output - 2 |&#xD;
+  | Content                                                 |&#xD;
+  | #### Scenario: ![Passed](pass.png) Scenario with result |&#xD;
 -&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f2968332-b7b0-4a45-90bc-d11fda1aa3ce" testId="91e6cbf3-b1af-74fc-b7e8-9e370fdad471" testName="OutputHasTagsForFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0048710" startTime="2022-05-09T16:19:06.5019366-04:00" endTime="2022-05-09T16:19:06.5068071-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f2968332-b7b0-4a45-90bc-d11fda1aa3ce">
+    <UnitTestResult executionId="1c8ea7e6-e011-4739-9a5d-952efa5f27d6" testId="efecd384-b47f-ed42-e21b-23b3777cbb82" testName="OutputHasSimpleGivenStepForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0061050" startTime="2022-11-23T12:19:44.8091737-05:00" endTime="2022-11-23T12:19:44.8152790-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c8ea7e6-e011-4739-9a5d-952efa5f27d6">
       <Output>
-        <StdOut>Given I have a feature called 'My Tagged Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Tagged Feature") (0.0s)&#xD;
-And I have the tags&#xD;
-  --- table step argument ---&#xD;
-  | Tag     |&#xD;
-  | @ignore |&#xD;
-  | @tagtwo |&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveTheTags(&lt;table&gt;) (0.0s)&#xD;
-When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the Markdown output has the lines in the following order&#xD;
-  --- table step argument ---&#xD;
-  | Content                 |&#xD;
-  | *`@ignore`* *`@tagtwo`* |&#xD;
-  | ### My Tagged Feature   |&#xD;
--&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
-      </Output>
-    </UnitTestResult>
-    <UnitTestResult executionId="f8c6a6dc-ddd9-44f7-afdb-82c95d24c142" testId="76a91881-48f8-2f7b-c424-8a97b8bf6740" testName="OutputHasBackgroundGivenStepForFeature" computerName="ERICCARLSONBBE6" duration="00:00:01.3038250" startTime="2022-05-09T16:19:05.1824694-04:00" endTime="2022-05-09T16:19:06.4862125-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f8c6a6dc-ddd9-44f7-afdb-82c95d24c142">
-      <Output>
-        <StdOut>Given I have a feature called 'My Background Steps Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Background Ste...") (1.1s)&#xD;
-And I have a background section&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveABackgroundSection() (0.0s)&#xD;
-And I have the background steps&#xD;
+        <StdOut>Given I have a feature called 'My Scenario Steps Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Steps...") (0.0s)&#xD;
+And I have a scenario called 'Simple Given Step'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Simple Given Step") (0.0s)&#xD;
+And I have the scenario steps&#xD;
   --- table step argument ---&#xD;
   | Keyword | Step                       |&#xD;
   | Given   | I have a simple given step |&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveTheBackgroundSteps(&lt;table&gt;) (0.0s)&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveTheScenarioSteps(&lt;table&gt;) (0.0s)&#xD;
 When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.1s)&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
 Then the Markdown output has the lines in the following order&#xD;
   --- table step argument ---&#xD;
   | Content                                |&#xD;
-  | #### Background:                       |&#xD;
+  | #### Scenario: Simple Given Step       |&#xD;
   | &gt;                                      |&#xD;
   | &gt; **Given** I have a simple given step |&#xD;
 -&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="413dc0eb-6148-4952-a998-2a1dc792a007" testId="a2e402c9-de56-912c-3457-c8299faabaea" testName="ScenarioDisplaysResultsIcon(&quot;Failed&quot;,&quot;failed&quot;,&quot;fail.png&quot;,null)" computerName="ERICCARLSONBBE6" duration="00:00:00.0046100" startTime="2022-05-09T16:19:06.6307692-04:00" endTime="2022-05-09T16:19:06.6353787-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="413dc0eb-6148-4952-a998-2a1dc792a007">
+    <UnitTestResult executionId="de3fba7e-ad12-4142-810b-dd0b95553991" testId="cb5a31eb-5613-c696-c78c-5bbfa7837427" testName="OutputHasAStepWithATableForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0067370" startTime="2022-11-23T12:19:44.7982768-05:00" endTime="2022-11-23T12:19:44.8050137-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de3fba7e-ad12-4142-810b-dd0b95553991">
+      <Output>
+        <StdOut>Given I have a feature called 'My Scenario Steps Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Steps...") (0.0s)&#xD;
+And I have a scenario called 'Table Given Step'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Table Given Step") (0.0s)&#xD;
+And I have the scenario step with table 'Given I have a table'&#xD;
+  --- table step argument ---&#xD;
+  | TableColA | TableColb |&#xD;
+  | TDA1      | TDB1      |&#xD;
+  | TDA2      | TDB2      |&#xD;
+-&gt; done: GherkinTreeSteps.Given_I_Have_The_Scenario_Step_With_Table("Given ", "I have a table", &lt;table&gt;) (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                         |&#xD;
+  | #### Scenario: Table Given Step |&#xD;
+  | &gt;                               |&#xD;
+  | &gt; **Given** I have a table      |&#xD;
+  | &gt;                               |&#xD;
+  | &gt; | TableColA | TableColb |     |&#xD;
+  | &gt; | --- | --- |                 |&#xD;
+  | &gt; | TDA1 | TDB1 |               |&#xD;
+  | &gt; | TDA2 | TDB2 |               |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f01f958b-0e70-4b40-92dd-ffd265c0a53c" testId="9fc7aa2a-6d38-b857-79eb-9023f0709ad5" testName="StatusIconsAreWrittenToSpecifiedLocation" computerName="ERICCARLSONBBE6" duration="00:00:00.0295440" startTime="2022-11-23T12:19:44.7682120-05:00" endTime="2022-11-23T12:19:44.7977553-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f01f958b-0e70-4b40-92dd-ffd265c0a53c">
+      <Output>
+        <StdOut>Given I specify the output folder as 'C:\testing'&#xD;
+-&gt; done: MarkdownSteps.Given_I_Specify_The_Output_File_As("C:\testing") (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the file 'C:\testing\pass.png' exists&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [Then(@"the file '(.*)' exists")]&#xD;
+        public void ThenTheFileExists(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+And the file 'C:\testing\fail.png' exists&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [Then(@"the file '(.*)' exists")]&#xD;
+        public void ThenTheFileExists(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+And the file 'C:\testing\inconclusive.png' exists&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [Then(@"the file '(.*)' exists")]&#xD;
+        public void ThenTheFileExists(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+&#xD;
+No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [Then(@"the file '(.*)' exists")]&#xD;
+        public void ThenTheFileExists(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}</StdOut>
+        <ErrorInfo>
+          <Message>No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [Then(@"the file '(.*)' exists")]&#xD;
+        public void ThenTheFileExists(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+</Message>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="df8727c0-b5ef-4a9f-99d5-466ff689e786" testId="a2e402c9-de56-912c-3457-c8299faabaea" testName="ScenarioDisplaysResultsIcon(&quot;Failed&quot;,&quot;failed&quot;,&quot;fail.png&quot;,null)" computerName="ERICCARLSONBBE6" duration="00:00:00.0040350" startTime="2022-11-23T12:19:44.7332840-05:00" endTime="2022-11-23T12:19:44.7373188-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="df8727c0-b5ef-4a9f-99d5-466ff689e786">
       <Output>
         <StdOut>Given I have a feature called 'My Scenario Results Feature'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Resul...") (0.0s)&#xD;
@@ -535,17 +266,165 @@ Then the Markdown output has the lines in the following order&#xD;
 -&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="3b1f0333-fe77-482b-b172-eaf7a3320dc3" testId="fee57c87-2a77-c491-7670-059c6a3a2555" testName="OutputIsWrittenToSpecifiedLocation" computerName="ERICCARLSONBBE6" duration="00:00:00.0045710" startTime="2022-05-09T16:19:06.5071469-04:00" endTime="2022-05-09T16:19:06.5117182-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3b1f0333-fe77-482b-b172-eaf7a3320dc3">
+    <UnitTestResult executionId="e684918e-3b4b-4450-870a-b88bf9264b2d" testId="f7a24e05-87a4-02a2-704f-1fb11f01bcf4" testName="OutputHasScenarioHeadingForEachScenarioInDifferentFeatures" computerName="ERICCARLSONBBE6" duration="00:00:00.0089180" startTime="2022-11-23T12:19:44.6324055-05:00" endTime="2022-11-23T12:19:44.6413237-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e684918e-3b4b-4450-870a-b88bf9264b2d">
       <Output>
-        <StdOut>Given I specify the output folder as 'testing'&#xD;
--&gt; done: MarkdownSteps.Given_I_Specify_The_Output_File_As("testing") (0.0s)&#xD;
+        <StdOut>Given I have a feature called 'My Scenario Heading A'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Headi...") (0.0s)&#xD;
+And I have a scenario called 'Scenario heading included in output - A'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
+And I have a feature called 'My Scenario Heading B'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Headi...") (0.0s)&#xD;
+And I have a scenario called 'Scenario heading included in output - B'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
 When I generate Markdown output&#xD;
 -&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
-Then the file 'features.md' exists in folder 'testing'&#xD;
--&gt; done: MarkdownSteps.Then_The_File_Exists("features.md", "testing") (0.0s)</StdOut>
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                                                |&#xD;
+  | ### My Scenario Heading A                              |&#xD;
+  | #### Scenario: Scenario heading included in output - A |&#xD;
+  | ### My Scenario Heading B                              |&#xD;
+  | #### Scenario: Scenario heading included in output - B |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="05db3efd-79fa-4f99-a541-f907ceca029c" testId="7731d6c5-b80f-f74d-ebb0-5bfea6e31836" testName="OutputHasTableStepScenarioOutline" computerName="ERICCARLSONBBE6" duration="00:00:00.0155350" startTime="2022-05-09T16:19:06.6092676-04:00" endTime="2022-05-09T16:19:06.6248031-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="05db3efd-79fa-4f99-a541-f907ceca029c">
+    <UnitTestResult executionId="bc27e0f9-86ae-4e5e-b889-5c6e6568b0bc" testId="89927b35-50ec-c5d2-f073-d7e7c9a64808" testName="OutputHasTagsForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0043600" startTime="2022-11-23T12:19:44.8157886-05:00" endTime="2022-11-23T12:19:44.8201489-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bc27e0f9-86ae-4e5e-b889-5c6e6568b0bc">
+      <Output>
+        <StdOut>Given I have a feature called 'My Tagged Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Tagged Feature") (0.0s)&#xD;
+And I have a scenario called 'Scenario With Tags'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario With Tags") (0.0s)&#xD;
+And I have the scenario tags&#xD;
+  --- table step argument ---&#xD;
+  | Tag     |&#xD;
+  | @ignore |&#xD;
+  | @tagtwo |&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveTheScenarioTags(&lt;table&gt;) (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                           |&#xD;
+  | *`@ignore`* *`@tagtwo`*           |&#xD;
+  | #### Scenario: Scenario With Tags |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="64ea283b-7c97-4bbc-8f47-21554f441828" testId="b46302c3-cde4-45c9-b3a9-3bef7f7e5910" testName="OutputHasSimpleGivenAndStepForScenario" computerName="ERICCARLSONBBE6" duration="00:00:00.0040920" startTime="2022-11-23T12:19:44.8050481-05:00" endTime="2022-11-23T12:19:44.8091397-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64ea283b-7c97-4bbc-8f47-21554f441828">
+      <Output>
+        <StdOut>Given I have a feature called 'My Scenario Steps Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Steps...") (0.0s)&#xD;
+And I have a scenario called 'Multiple Given Steps'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Multiple Given Steps") (0.0s)&#xD;
+And I have the scenario steps&#xD;
+  --- table step argument ---&#xD;
+  | Keyword | Step                       |&#xD;
+  | Given   | I have a simple given step |&#xD;
+  | And     | I have second given        |&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveTheScenarioSteps(&lt;table&gt;) (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                                |&#xD;
+  | #### Scenario: Multiple Given Steps    |&#xD;
+  | &gt;                                      |&#xD;
+  | &gt; **Given** I have a simple given step |&#xD;
+  | &gt;                                      |&#xD;
+  | &gt; **And** I have second given          |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9f86fa9d-0f77-4fb3-aca1-77993635f46c" testId="752345d7-6965-4f3b-cc14-87344eddb348" testName="OutputHasFeatureDescriptionForFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0041410" startTime="2022-11-23T12:19:44.6119491-05:00" endTime="2022-11-23T12:19:44.6160904-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f86fa9d-0f77-4fb3-aca1-77993635f46c">
+      <Output>
+        <StdOut>Given I have a feature called 'My Described Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Described Feature") (0.0s)&#xD;
+And I have the description&#xD;
+  --- table step argument ---&#xD;
+  | Description                                                                   |&#xD;
+  | In order to include the description (In order, As a, I want) for each feature |&#xD;
+  | As a reader of the generated documentation                                    |&#xD;
+  | I want the feature description included below the feature heading.            |&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveTheDescription(&lt;table&gt;) (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                                                                       |&#xD;
+  | ### My Described Feature                                                      |&#xD;
+  | In order to include the description (In order, As a, I want) for each feature |&#xD;
+  | As a reader of the generated documentation                                    |&#xD;
+  | I want the feature description included below the feature heading.            |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="267982d7-5ded-46b1-8764-922bf7d2bc81" testId="2106db9a-9b42-d6b4-2887-e18204fb75b0" testName="OutputHasFeatureSectionForEachFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0032210" startTime="2022-11-23T12:19:44.6163931-05:00" endTime="2022-11-23T12:19:44.6196140-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="267982d7-5ded-46b1-8764-922bf7d2bc81">
+      <Output>
+        <StdOut>Given I have a feature called 'My First Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My First Feature") (0.0s)&#xD;
+And I have a feature called 'My Second Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Second Feature") (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content               |&#xD;
+  | ### My First Feature  |&#xD;
+  | ### My Second Feature |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e73ea485-3b7e-4f9c-8bd4-b5e703b34181" testId="76a91881-48f8-2f7b-c424-8a97b8bf6740" testName="OutputHasBackgroundGivenStepForFeature" computerName="ERICCARLSONBBE6" duration="00:00:01.6104270" startTime="2022-11-23T12:19:42.9978366-05:00" endTime="2022-11-23T12:19:44.6081956-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e73ea485-3b7e-4f9c-8bd4-b5e703b34181">
+      <Output>
+        <StdOut>Given I have a feature called 'My Background Steps Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Background Ste...") (1.3s)&#xD;
+And I have a background section&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveABackgroundSection() (0.0s)&#xD;
+And I have the background steps&#xD;
+  --- table step argument ---&#xD;
+  | Keyword | Step                       |&#xD;
+  | Given   | I have a simple given step |&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveTheBackgroundSteps(&lt;table&gt;) (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.3s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                                |&#xD;
+  | #### Background:                       |&#xD;
+  | &gt;                                      |&#xD;
+  | &gt; **Given** I have a simple given step |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a24b4ad1-1ead-4b2c-9b5c-1248bdd67820" testId="acff9c79-cf93-5ac4-8813-8afa29cff076" testName="ScenarioDisplaysResultsIcon(&quot;Inconclusive&quot;,&quot;inconclusive&quot;,&quot;inconclusive.png&quot;,null)" computerName="ERICCARLSONBBE6" duration="00:00:00.0209060" startTime="2022-11-23T12:19:44.7373544-05:00" endTime="2022-11-23T12:19:44.7582604-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a24b4ad1-1ead-4b2c-9b5c-1248bdd67820">
+      <Output>
+        <StdOut>Given I have a feature called 'My Scenario Results Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Resul...") (0.0s)&#xD;
+And I have a scenario called 'Scenario with result'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario with result") (0.0s)&#xD;
+And the scenario test run outcome was inconclusive&#xD;
+-&gt; done: GherkinTreeSteps.Given_The_Scenario_Test_Run_Outcome_Was("inconclusive") (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                                                               |&#xD;
+  | #### Scenario: ![Inconclusive](inconclusive.png) Scenario with result |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0e89ef9b-e650-43c3-9cd7-1c2f2b8953b3" testId="a315689e-0a3d-1b07-2d11-f58d4a6bc2d8" testName="OutputHasTitleOnFirstLine" computerName="ERICCARLSONBBE6" duration="00:00:00.0089230" startTime="2022-11-23T12:19:44.8205179-05:00" endTime="2022-11-23T12:19:44.8294405-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0e89ef9b-e650-43c3-9cd7-1c2f2b8953b3">
+      <Output>
+        <StdOut>When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the line&#xD;
+  --- table step argument ---&#xD;
+  | Line No. | Content    |&#xD;
+  | 1        | # Features |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Line(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3116e8cf-05cc-402f-9f97-eed74a867fe6" testId="7731d6c5-b80f-f74d-ebb0-5bfea6e31836" testName="OutputHasTableStepScenarioOutline" computerName="ERICCARLSONBBE6" duration="00:00:00.0135520" startTime="2022-11-23T12:19:44.7140412-05:00" endTime="2022-11-23T12:19:44.7275934-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3116e8cf-05cc-402f-9f97-eed74a867fe6">
       <Output>
         <StdOut>Given I have a feature called 'My Scenario Outline Feature'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Outli...") (0.0s)&#xD;
@@ -642,132 +521,253 @@ namespace MyNamespace&#xD;
         </ErrorInfo>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="fb2f8960-2e6b-4e53-9825-3d432afecec6" testId="f7a24e05-87a4-02a2-704f-1fb11f01bcf4" testName="OutputHasScenarioHeadingForEachScenarioInDifferentFeatures" computerName="ERICCARLSONBBE6" duration="00:00:00.0160630" startTime="2022-05-09T16:19:06.5197612-04:00" endTime="2022-05-09T16:19:06.5358248-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb2f8960-2e6b-4e53-9825-3d432afecec6">
+    <UnitTestResult executionId="10716665-d70a-41a8-adab-51e192124fc5" testId="09180ce3-5f84-95ae-f71e-9e45bb8cd892" testName="OutputHasScenarioHeadingForEachScenarioInSameFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0035920" startTime="2022-11-23T12:19:44.6413446-05:00" endTime="2022-11-23T12:19:44.6449363-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="10716665-d70a-41a8-adab-51e192124fc5">
       <Output>
-        <StdOut>Given I have a feature called 'My Scenario Heading A'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Headi...") (0.0s)&#xD;
-And I have a scenario called 'Scenario heading included in output - A'&#xD;
+        <StdOut>Given I have a feature called 'My Scenario Heading'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Heading") (0.0s)&#xD;
+And I have a scenario called 'Scenario heading included in output - 1'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
-And I have a feature called 'My Scenario Heading B'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Headi...") (0.0s)&#xD;
-And I have a scenario called 'Scenario heading included in output - B'&#xD;
+And I have a scenario called 'Scenario heading included in output - 2'&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveAScenarioCalled("Scenario heading ...") (0.0s)&#xD;
 When I generate Markdown output&#xD;
 -&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
 Then the Markdown output has the lines in the following order&#xD;
   --- table step argument ---&#xD;
   | Content                                                |&#xD;
-  | ### My Scenario Heading A                              |&#xD;
-  | #### Scenario: Scenario heading included in output - A |&#xD;
-  | ### My Scenario Heading B                              |&#xD;
-  | #### Scenario: Scenario heading included in output - B |&#xD;
+  | ### My Scenario Heading                                |&#xD;
+  | #### Scenario: Scenario heading included in output - 1 |&#xD;
+  | #### Scenario: Scenario heading included in output - 2 |&#xD;
 -&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5fcf7902-a4fa-4b5d-9a5a-60f28424002d" testId="fee57c87-2a77-c491-7670-059c6a3a2555" testName="OutputIsWrittenToSpecifiedLocation" computerName="ERICCARLSONBBE6" duration="00:00:00.0035050" startTime="2022-11-23T12:19:44.6238111-05:00" endTime="2022-11-23T12:19:44.6273164-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5fcf7902-a4fa-4b5d-9a5a-60f28424002d">
+      <Output>
+        <StdOut>Given I specify the output folder as 'testing'&#xD;
+-&gt; done: MarkdownSteps.Given_I_Specify_The_Output_File_As("testing") (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the file 'features.md' exists in folder 'testing'&#xD;
+-&gt; done: MarkdownSteps.Then_The_File_Exists("features.md", "testing") (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d1ef8e75-6c44-4d1a-908d-53011cc0157c" testId="91e6cbf3-b1af-74fc-b7e8-9e370fdad471" testName="OutputHasTagsForFeature" computerName="ERICCARLSONBBE6" duration="00:00:00.0034660" startTime="2022-11-23T12:19:44.6200314-05:00" endTime="2022-11-23T12:19:44.6234972-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d1ef8e75-6c44-4d1a-908d-53011cc0157c">
+      <Output>
+        <StdOut>Given I have a feature called 'My Tagged Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Tagged Feature") (0.0s)&#xD;
+And I have the tags&#xD;
+  --- table step argument ---&#xD;
+  | Tag     |&#xD;
+  | @ignore |&#xD;
+  | @tagtwo |&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveTheTags(&lt;table&gt;) (0.0s)&#xD;
+When I generate Markdown output&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.0s)&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                 |&#xD;
+  | *`@ignore`* *`@tagtwo`* |&#xD;
+  | ### My Tagged Feature   |&#xD;
+-&gt; done: MarkdownSteps.Then_The_Markdown_Output_Has_The_Lines_In_The_Following_Order(&lt;table&gt;) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="092f99ba-eb35-42ad-acf7-49be3d9640b3" testId="070937af-0890-76c8-fc3a-6801ec8b808e" testName="OutputHasSimpleScenarioOutline" computerName="ERICCARLSONBBE6" duration="00:00:00.0682379" startTime="2022-11-23T12:19:44.6457522-05:00" endTime="2022-11-23T12:19:44.7139899-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="092f99ba-eb35-42ad-acf7-49be3d9640b3">
+      <Output>
+        <StdOut>Given I have a feature called 'My Scenario Outline Feature'&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Scenario Outli...") (0.0s)&#xD;
+And I have a scenario outline called 'Scenario Outline with Single Example'&#xD;
+-&gt; No matching step definition found for the step. Use the following code to create one:&#xD;
+        [Given(@"I have a scenario outline called '(.*)'")]&#xD;
+        public void GivenIHaveAScenarioOutlineCalled(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+&#xD;
+And I have the scenario steps&#xD;
+  --- table step argument ---&#xD;
+  | Keyword | Step                                      |&#xD;
+  | Given   | I have a simple given step for &lt;data_one&gt; |&#xD;
+  | And     | I have second given for &lt;data_two&gt;        |&#xD;
+-&gt; skipped because of previous errors&#xD;
+And I have an examples table&#xD;
+  --- table step argument ---&#xD;
+  | Scenario | data_one | data_two |&#xD;
+  | First    | one      | wun      |&#xD;
+  | Second   | two      | too      |&#xD;
+  | Third    | three    | tree     |&#xD;
+-&gt; skipped because of previous errors&#xD;
+When I generate Markdown output&#xD;
+-&gt; skipped because of previous errors&#xD;
+Then the Markdown output has the lines in the following order&#xD;
+  --- table step argument ---&#xD;
+  | Content                                                     |&#xD;
+  | #### Scenario Outline: Scenario Outline with Single Example |&#xD;
+  | &gt;                                                           |&#xD;
+  | &gt; **Given** I have a simple given step for \&lt;data_one\&gt;     |&#xD;
+  | &gt;                                                           |&#xD;
+  | &gt; **And** I have second given for \&lt;data_two\&gt;              |&#xD;
+  | &gt;                                                           |&#xD;
+  | &gt; Examples:                                                 |&#xD;
+  | &gt;                                                           |&#xD;
+  | &gt; | Scenario | data_one | data_two |                        |&#xD;
+  | &gt; | --- | --- | --- |                                       |&#xD;
+  | &gt; | First | one | wun |                                     |&#xD;
+  | &gt; | Second | two | too |                                    |&#xD;
+  | &gt; | Third | three | tree |                                  |&#xD;
+-&gt; skipped because of previous errors&#xD;
+&#xD;
+No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [Given(@"I have a scenario outline called '(.*)'")]&#xD;
+        public void GivenIHaveAScenarioOutlineCalled(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}</StdOut>
+        <ErrorInfo>
+          <Message>No matching step definition found for one or more steps.&#xD;
+using System;&#xD;
+using TechTalk.SpecFlow;&#xD;
+&#xD;
+namespace MyNamespace&#xD;
+{&#xD;
+    [Binding]&#xD;
+    public class StepDefinitions&#xD;
+    {&#xD;
+        private readonly ScenarioContext _scenarioContext;&#xD;
+&#xD;
+        public StepDefinitions(ScenarioContext scenarioContext)&#xD;
+        {&#xD;
+            _scenarioContext = scenarioContext;&#xD;
+        }&#xD;
+        [Given(@"I have a scenario outline called '(.*)'")]&#xD;
+        public void GivenIHaveAScenarioOutlineCalled(string p0)&#xD;
+        {&#xD;
+            _scenarioContext.Pending();&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+</Message>
+        </ErrorInfo>
       </Output>
     </UnitTestResult>
   </Results>
   <TestDefinitions>
     <UnitTest name="OutputHasScenarioHeading" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="c0b1ee9c-f455-e634-bb7c-275492950bfa">
-      <Execution id="5f458a82-4fd2-44ca-8fa4-df8a18022a34" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioHeadingFeature" name="OutputHasScenarioHeading" />
+      <Execution id="3c2d1e5c-7cc6-4b75-8a82-b74cdc22273a" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioHeadingFeature" name="OutputHasScenarioHeading" />
     </UnitTest>
     <UnitTest name="ScenarioDisplaysResultsIcon(&quot;Failed&quot;,&quot;failed&quot;,&quot;fail.png&quot;,null)" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="a2e402c9-de56-912c-3457-c8299faabaea">
-      <Execution id="413dc0eb-6148-4952-a998-2a1dc792a007" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioDisplaysResultsIcon(&quot;Failed&quot;,&quot;failed&quot;,&quot;fail.png&quot;,null)" />
+      <Execution id="df8727c0-b5ef-4a9f-99d5-466ff689e786" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioDisplaysResultsIcon(&quot;Failed&quot;,&quot;failed&quot;,&quot;fail.png&quot;,null)" />
     </UnitTest>
     <UnitTest name="OutputHasTitleOnFirstLine" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="a315689e-0a3d-1b07-2d11-f58d4a6bc2d8">
-      <Execution id="908d4b82-36bf-4959-afc0-c952d83546e5" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.TitleFeature" name="OutputHasTitleOnFirstLine" />
+      <Execution id="0e89ef9b-e650-43c3-9cd7-1c2f2b8953b3" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.TitleFeature" name="OutputHasTitleOnFirstLine" />
     </UnitTest>
     <UnitTest name="OutputHasTagsForFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="91e6cbf3-b1af-74fc-b7e8-9e370fdad471">
-      <Execution id="f2968332-b7b0-4a45-90bc-d11fda1aa3ce" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FeatureTagsFeature" name="OutputHasTagsForFeature" />
+      <Execution id="d1ef8e75-6c44-4d1a-908d-53011cc0157c" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FeatureTagsFeature" name="OutputHasTagsForFeature" />
     </UnitTest>
     <UnitTest name="OutputHasTagsForScenario" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="89927b35-50ec-c5d2-f073-d7e7c9a64808">
-      <Execution id="ddca9655-fa41-40cf-b9bf-1262e78e251d" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioTagsFeature" name="OutputHasTagsForScenario" />
+      <Execution id="bc27e0f9-86ae-4e5e-b889-5c6e6568b0bc" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioTagsFeature" name="OutputHasTagsForScenario" />
     </UnitTest>
     <UnitTest name="OutputHasAStepWithATableForScenario" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="cb5a31eb-5613-c696-c78c-5bbfa7837427">
-      <Execution id="5e83227d-a5f9-4ab0-84e0-27991cb27c5c" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStepsFeature" name="OutputHasAStepWithATableForScenario" />
+      <Execution id="de3fba7e-ad12-4142-810b-dd0b95553991" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStepsFeature" name="OutputHasAStepWithATableForScenario" />
     </UnitTest>
     <UnitTest name="OutputHasTableStepScenarioOutline" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="7731d6c5-b80f-f74d-ebb0-5bfea6e31836">
-      <Execution id="05db3efd-79fa-4f99-a541-f907ceca029c" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioOutlinesFeature" name="OutputHasTableStepScenarioOutline" />
+      <Execution id="3116e8cf-05cc-402f-9f97-eed74a867fe6" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioOutlinesFeature" name="OutputHasTableStepScenarioOutline" />
     </UnitTest>
     <UnitTest name="OutputHasSimpleGivenStepForScenario" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="efecd384-b47f-ed42-e21b-23b3777cbb82">
-      <Execution id="4513d044-1a63-4134-8438-429bf7a6083b" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStepsFeature" name="OutputHasSimpleGivenStepForScenario" />
+      <Execution id="1c8ea7e6-e011-4739-9a5d-952efa5f27d6" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStepsFeature" name="OutputHasSimpleGivenStepForScenario" />
     </UnitTest>
     <UnitTest name="OutputHasScenarioHeadingForEachScenarioInSameFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="09180ce3-5f84-95ae-f71e-9e45bb8cd892">
-      <Execution id="7eac7551-a79d-4acb-8929-742f75c64125" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioHeadingFeature" name="OutputHasScenarioHeadingForEachScenarioInSameFeature" />
+      <Execution id="10716665-d70a-41a8-adab-51e192124fc5" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioHeadingFeature" name="OutputHasScenarioHeadingForEachScenarioInSameFeature" />
     </UnitTest>
     <UnitTest name="ScenarioOutlineExampleDisplaysResultsIcon" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="a273a767-3eae-cb2b-0c72-aae8888d3beb">
-      <Execution id="cca0f013-5ce8-4ab5-a634-22bc3f4197e7" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioOutlineExampleDisplaysResultsIcon" />
+      <Execution id="69c0f956-4048-4dd0-9211-75b3d52664ae" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioOutlineExampleDisplaysResultsIcon" />
     </UnitTest>
     <UnitTest name="ScenarioDisplaysResultsIcon(&quot;Inconclusive&quot;,&quot;inconclusive&quot;,&quot;inconclusive.png&quot;,null)" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="acff9c79-cf93-5ac4-8813-8afa29cff076">
-      <Execution id="b97a6fa8-e1bb-4915-8b70-0a7ef29c90c1" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioDisplaysResultsIcon(&quot;Inconclusive&quot;,&quot;inconclusive&quot;,&quot;inconclusive.png&quot;,null)" />
+      <Execution id="a24b4ad1-1ead-4b2c-9b5c-1248bdd67820" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioDisplaysResultsIcon(&quot;Inconclusive&quot;,&quot;inconclusive&quot;,&quot;inconclusive.png&quot;,null)" />
     </UnitTest>
     <UnitTest name="OutputHasFeatureSectionForEachFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="2106db9a-9b42-d6b4-2887-e18204fb75b0">
-      <Execution id="64e53dae-d694-48b7-9134-3fd4c79d7581" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FeatureHeadingFeature" name="OutputHasFeatureSectionForEachFeature" />
+      <Execution id="267982d7-5ded-46b1-8764-922bf7d2bc81" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FeatureHeadingFeature" name="OutputHasFeatureSectionForEachFeature" />
     </UnitTest>
     <UnitTest name="StatusIconsAreWrittenToSpecifiedLocation" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="9fc7aa2a-6d38-b857-79eb-9023f0709ad5">
-      <Execution id="d3733567-166f-4ab5-bc18-236c59db641f" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="StatusIconsAreWrittenToSpecifiedLocation" />
+      <Execution id="f01f958b-0e70-4b40-92dd-ffd265c0a53c" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="StatusIconsAreWrittenToSpecifiedLocation" />
     </UnitTest>
     <UnitTest name="OutputHasFeatureDescriptionForFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="752345d7-6965-4f3b-cc14-87344eddb348">
-      <Execution id="6bb89604-03f7-41b9-acb3-9b744c0fe48d" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FeatureDescriptionFeature" name="OutputHasFeatureDescriptionForFeature" />
+      <Execution id="9f86fa9d-0f77-4fb3-aca1-77993635f46c" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FeatureDescriptionFeature" name="OutputHasFeatureDescriptionForFeature" />
     </UnitTest>
     <UnitTest name="OutputIsWrittenToSpecifiedLocation" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="fee57c87-2a77-c491-7670-059c6a3a2555">
-      <Execution id="3b1f0333-fe77-482b-b172-eaf7a3320dc3" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FileLocationFeature" name="OutputIsWrittenToSpecifiedLocation" />
+      <Execution id="5fcf7902-a4fa-4b5d-9a5a-60f28424002d" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.FileLocationFeature" name="OutputIsWrittenToSpecifiedLocation" />
     </UnitTest>
     <UnitTest name="OutputHasScenarioHeadingForEachScenarioInDifferentFeatures" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="f7a24e05-87a4-02a2-704f-1fb11f01bcf4">
-      <Execution id="fb2f8960-2e6b-4e53-9825-3d432afecec6" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioHeadingFeature" name="OutputHasScenarioHeadingForEachScenarioInDifferentFeatures" />
+      <Execution id="e684918e-3b4b-4450-870a-b88bf9264b2d" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioHeadingFeature" name="OutputHasScenarioHeadingForEachScenarioInDifferentFeatures" />
     </UnitTest>
     <UnitTest name="OutputHasSimpleGivenAndStepForScenario" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="b46302c3-cde4-45c9-b3a9-3bef7f7e5910">
-      <Execution id="c055d6cb-5794-4b73-a3ff-bea295b15f3c" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStepsFeature" name="OutputHasSimpleGivenAndStepForScenario" />
+      <Execution id="64ea283b-7c97-4bbc-8f47-21554f441828" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStepsFeature" name="OutputHasSimpleGivenAndStepForScenario" />
     </UnitTest>
     <UnitTest name="ScenarioDisplaysResultsIcon(&quot;Passed&quot;,&quot;passed&quot;,&quot;pass.png&quot;,null)" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="ea98bfc2-9b61-ee7f-0ad3-fe468ff6f1f5">
-      <Execution id="d7291f7d-9594-4c25-bdf4-f9a14e7f7c30" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioDisplaysResultsIcon(&quot;Passed&quot;,&quot;passed&quot;,&quot;pass.png&quot;,null)" />
+      <Execution id="28ba6a18-e008-4f0a-ae38-85381074154b" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioStatusIconsFeature" name="ScenarioDisplaysResultsIcon(&quot;Passed&quot;,&quot;passed&quot;,&quot;pass.png&quot;,null)" />
     </UnitTest>
     <UnitTest name="OutputHasSimpleScenarioOutline" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="070937af-0890-76c8-fc3a-6801ec8b808e">
-      <Execution id="3261a31b-d060-4ded-b9b9-c660fbf5510f" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioOutlinesFeature" name="OutputHasSimpleScenarioOutline" />
+      <Execution id="092f99ba-eb35-42ad-acf7-49be3d9640b3" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.ScenarioOutlinesFeature" name="OutputHasSimpleScenarioOutline" />
     </UnitTest>
     <UnitTest name="OutputHasBackgroundGivenStepForFeature" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.markdown.acceptancetests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.markdown.acceptancetests.dll" id="76a91881-48f8-2f7b-c424-8a97b8bf6740">
-      <Execution id="f8c6a6dc-ddd9-44f7-afdb-82c95d24c142" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.BackgroundStepsFeature" name="OutputHasBackgroundGivenStepForFeature" />
+      <Execution id="e73ea485-3b7e-4f9c-8bd4-b5e703b34181" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Features.BackgroundStepsFeature" name="OutputHasBackgroundGivenStepForFeature" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="c0b1ee9c-f455-e634-bb7c-275492950bfa" executionId="5f458a82-4fd2-44ca-8fa4-df8a18022a34" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="efecd384-b47f-ed42-e21b-23b3777cbb82" executionId="4513d044-1a63-4134-8438-429bf7a6083b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ea98bfc2-9b61-ee7f-0ad3-fe468ff6f1f5" executionId="d7291f7d-9594-4c25-bdf4-f9a14e7f7c30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="070937af-0890-76c8-fc3a-6801ec8b808e" executionId="3261a31b-d060-4ded-b9b9-c660fbf5510f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a315689e-0a3d-1b07-2d11-f58d4a6bc2d8" executionId="908d4b82-36bf-4959-afc0-c952d83546e5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="752345d7-6965-4f3b-cc14-87344eddb348" executionId="6bb89604-03f7-41b9-acb3-9b744c0fe48d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="89927b35-50ec-c5d2-f073-d7e7c9a64808" executionId="ddca9655-fa41-40cf-b9bf-1262e78e251d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="acff9c79-cf93-5ac4-8813-8afa29cff076" executionId="b97a6fa8-e1bb-4915-8b70-0a7ef29c90c1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="cb5a31eb-5613-c696-c78c-5bbfa7837427" executionId="5e83227d-a5f9-4ab0-84e0-27991cb27c5c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="b46302c3-cde4-45c9-b3a9-3bef7f7e5910" executionId="c055d6cb-5794-4b73-a3ff-bea295b15f3c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="2106db9a-9b42-d6b4-2887-e18204fb75b0" executionId="64e53dae-d694-48b7-9134-3fd4c79d7581" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="9fc7aa2a-6d38-b857-79eb-9023f0709ad5" executionId="d3733567-166f-4ab5-bc18-236c59db641f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a273a767-3eae-cb2b-0c72-aae8888d3beb" executionId="cca0f013-5ce8-4ab5-a634-22bc3f4197e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="09180ce3-5f84-95ae-f71e-9e45bb8cd892" executionId="7eac7551-a79d-4acb-8929-742f75c64125" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="91e6cbf3-b1af-74fc-b7e8-9e370fdad471" executionId="f2968332-b7b0-4a45-90bc-d11fda1aa3ce" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="76a91881-48f8-2f7b-c424-8a97b8bf6740" executionId="f8c6a6dc-ddd9-44f7-afdb-82c95d24c142" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="a2e402c9-de56-912c-3457-c8299faabaea" executionId="413dc0eb-6148-4952-a998-2a1dc792a007" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="fee57c87-2a77-c491-7670-059c6a3a2555" executionId="3b1f0333-fe77-482b-b172-eaf7a3320dc3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7731d6c5-b80f-f74d-ebb0-5bfea6e31836" executionId="05db3efd-79fa-4f99-a541-f907ceca029c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="f7a24e05-87a4-02a2-704f-1fb11f01bcf4" executionId="fb2f8960-2e6b-4e53-9825-3d432afecec6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a273a767-3eae-cb2b-0c72-aae8888d3beb" executionId="69c0f956-4048-4dd0-9211-75b3d52664ae" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c0b1ee9c-f455-e634-bb7c-275492950bfa" executionId="3c2d1e5c-7cc6-4b75-8a82-b74cdc22273a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea98bfc2-9b61-ee7f-0ad3-fe468ff6f1f5" executionId="28ba6a18-e008-4f0a-ae38-85381074154b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="efecd384-b47f-ed42-e21b-23b3777cbb82" executionId="1c8ea7e6-e011-4739-9a5d-952efa5f27d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cb5a31eb-5613-c696-c78c-5bbfa7837427" executionId="de3fba7e-ad12-4142-810b-dd0b95553991" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9fc7aa2a-6d38-b857-79eb-9023f0709ad5" executionId="f01f958b-0e70-4b40-92dd-ffd265c0a53c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a2e402c9-de56-912c-3457-c8299faabaea" executionId="df8727c0-b5ef-4a9f-99d5-466ff689e786" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f7a24e05-87a4-02a2-704f-1fb11f01bcf4" executionId="e684918e-3b4b-4450-870a-b88bf9264b2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="89927b35-50ec-c5d2-f073-d7e7c9a64808" executionId="bc27e0f9-86ae-4e5e-b889-5c6e6568b0bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b46302c3-cde4-45c9-b3a9-3bef7f7e5910" executionId="64ea283b-7c97-4bbc-8f47-21554f441828" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="752345d7-6965-4f3b-cc14-87344eddb348" executionId="9f86fa9d-0f77-4fb3-aca1-77993635f46c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2106db9a-9b42-d6b4-2887-e18204fb75b0" executionId="267982d7-5ded-46b1-8764-922bf7d2bc81" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="76a91881-48f8-2f7b-c424-8a97b8bf6740" executionId="e73ea485-3b7e-4f9c-8bd4-b5e703b34181" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="acff9c79-cf93-5ac4-8813-8afa29cff076" executionId="a24b4ad1-1ead-4b2c-9b5c-1248bdd67820" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a315689e-0a3d-1b07-2d11-f58d4a6bc2d8" executionId="0e89ef9b-e650-43c3-9cd7-1c2f2b8953b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7731d6c5-b80f-f74d-ebb0-5bfea6e31836" executionId="3116e8cf-05cc-402f-9f97-eed74a867fe6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09180ce3-5f84-95ae-f71e-9e45bb8cd892" executionId="10716665-d70a-41a8-adab-51e192124fc5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fee57c87-2a77-c491-7670-059c6a3a2555" executionId="5fcf7902-a4fa-4b5d-9a5a-60f28424002d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91e6cbf3-b1af-74fc-b7e8-9e370fdad471" executionId="d1ef8e75-6c44-4d1a-908d-53011cc0157c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="070937af-0890-76c8-fc3a-6801ec8b808e" executionId="092f99ba-eb35-42ad-acf7-49be3d9640b3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -777,10 +777,10 @@ Then the Markdown output has the lines in the following order&#xD;
     <Counters total="20" executed="16" passed="16" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
-Running all tests in C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll&#xD;
+Running all tests in C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Markdown.AcceptanceTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.dll&#xD;
    NUnit3TestExecutor discovered 20 of 20 NUnit test cases&#xD;
 Given I have a feature called 'My Background Steps Feature'&#xD;
--&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Background Ste...") (1.1s)&#xD;
+-&gt; done: GherkinTreeSteps.GivenIHaveAFeatureCalled("My Background Ste...") (1.3s)&#xD;
 And I have a background section&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveABackgroundSection() (0.0s)&#xD;
 And I have the background steps&#xD;
@@ -789,7 +789,7 @@ And I have the background steps&#xD;
   | Given   | I have a simple given step |&#xD;
 -&gt; done: GherkinTreeSteps.GivenIHaveTheBackgroundSteps(&lt;table&gt;) (0.0s)&#xD;
 When I generate Markdown output&#xD;
--&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.1s)&#xD;
+-&gt; done: MarkdownSteps.When_I_Generate_Markdown_Output() (0.3s)&#xD;
 Then the Markdown output has the lines in the following order&#xD;
   --- table step argument ---&#xD;
   | Content                                |&#xD;

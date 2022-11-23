@@ -5,7 +5,11 @@
     <RootNamespace>PicklesDoc.Pickles.CommandLine</RootNamespace>
     <AssemblyName>Pickles</AssemblyName>
     <TargetFramework>net6.0</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;linux-x64</RuntimeIdentifiers>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>pickles</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+    <PackageId>Pickles.CommandLine</PackageId>
+    <RuntimeIdentifiers>win-x64;osx-x64;linux-x64</RuntimeIdentifiers>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Pickles\</SolutionDir>
     <AssemblyTitle>Pickles.CommandLine</AssemblyTitle>
     <Description>
@@ -31,12 +35,12 @@
         - Cucumber JSON
     </Description>
     <Copyright>Copyright © 2010-2012 Jeffrey Cameron, Copyright © 2013-present PicklesDoc and contributors</Copyright>
-    <Version>0.1.0.0</Version>
+    <Version>4.0.2</Version>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <Authors>PicklesDoc and contributors</Authors>
     <IconUrl>https://cdn.rawgit.com/picklesdoc/pickles/master/pickles.png</IconUrl>
-    <PackageLicense>http://apache.org/licenses/LICENSE-2.0.html</PackageLicense>
     <PackageProjectUrl>http://www.picklesdoc.com/</PackageProjectUrl>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageReleaseNotes>https://github.com/picklesdoc/pickles/blob/main/CHANGELOG.md</PackageReleaseNotes>
     <PackageTags>SpecificationByExample BDD SpecFlow Gherkin Cucumber SpecByEx LivingDocumentation Documentation</PackageTags>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -44,10 +48,7 @@
     <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <PackageId>Pickles.CommandLine</PackageId>
     <RepositoryUrl>https://github.com/picklesdoc/pickles</RepositoryUrl>
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>pickles</ToolCommandName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugType>full</DebugType>
@@ -74,7 +75,7 @@
   <ItemGroup>
     <PackageReference Include="NDesk.Options.Core" Version="1.2.5" />
     <PackageReference Include="Microsoft.Win32.Primitives" Version="4.3.0" />
-    <PackageReference Include="NuGetizer" Version="0.7.5">
+    <PackageReference Include="NuGetizer" Version="0.9.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
