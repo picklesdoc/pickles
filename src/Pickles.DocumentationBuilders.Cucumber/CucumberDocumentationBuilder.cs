@@ -167,7 +167,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber
                     throw new ArgumentOutOfRangeException("Unknown test result "+testResult);
             }
 
-            return Enum.GetName(typeof(CucumberTestResults),cucumberTestResult);
+            return Enum.GetName(typeof(CucumberTestResults),cucumberTestResult).ToLowerInvariant();
         }
 
         private void CreateFile(string outputFolderName, string jsonToWrite)

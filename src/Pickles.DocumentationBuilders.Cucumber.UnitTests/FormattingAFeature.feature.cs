@@ -127,17 +127,17 @@ Scenario: Clear the screen
                         " },\r\n          {\r\n            \"name\": \"@slow\"\r\n          }\r\n        ],\r\n        " +
                         "\"steps\": [\r\n          {\r\n            \"keyword\": \"Given\",\r\n            \"name\": \"I" +
                         " have entered 50 into the calculator\",\r\n            \"line\": 8,\r\n            \"hid" +
-                        "den\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefined\",\r\n   " +
+                        "den\": false,\r\n            \"result\": {\r\n              \"status\": \"undefined\",\r\n   " +
                         "           \"duration\": 1\r\n            }\r\n          },\r\n          {\r\n            " +
                         "\"keyword\": \"And\",\r\n            \"name\": \"I have entered 70 into the calculator\",\r" +
                         "\n            \"line\": 9,\r\n            \"hidden\": false,\r\n            \"result\": {\r\n" +
-                        "              \"status\": \"Undefined\",\r\n              \"duration\": 1\r\n            }" +
+                        "              \"status\": \"undefined\",\r\n              \"duration\": 1\r\n            }" +
                         "\r\n          },\r\n          {\r\n            \"keyword\": \"When\",\r\n            \"name\":" +
                         " \"I press C\",\r\n            \"line\": 10,\r\n            \"hidden\": false,\r\n          " +
-                        "  \"result\": {\r\n              \"status\": \"Undefined\",\r\n              \"duration\": 1" +
+                        "  \"result\": {\r\n              \"status\": \"undefined\",\r\n              \"duration\": 1" +
                         "\r\n            }\r\n          },\r\n          {\r\n            \"keyword\": \"Then\",\r\n    " +
                         "        \"name\": \"the screen should be empty\",\r\n            \"line\": 11,\r\n        " +
-                        "    \"hidden\": false,\r\n            \"result\": {\r\n              \"status\": \"Undefine" +
+                        "    \"hidden\": false,\r\n            \"result\": {\r\n              \"status\": \"undefine" +
                         "d\",\r\n              \"duration\": 1\r\n            }\r\n          }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -234,7 +234,7 @@ Scenario: Scenario with large data table
             ""line"": 8,
             ""hidden"": false,
             ""result"": {
-              ""status"": ""Undefined"",
+              ""status"": ""undefined"",
               ""duration"": 1
             }
           },
@@ -244,7 +244,7 @@ Scenario: Scenario with large data table
             ""line"": 32,
             ""hidden"": false,
             ""result"": {
-              ""status"": ""Undefined"",
+              ""status"": ""undefined"",
               ""duration"": 1
             }
           },
@@ -254,7 +254,7 @@ Scenario: Scenario with large data table
             ""line"": 33,
             ""hidden"": false,
             ""result"": {
-              ""status"": ""Undefined"",
+              ""status"": ""undefined"",
               ""duration"": 1
             }
           }", ((TechTalk.SpecFlow.Table)(null)), "Then ");
