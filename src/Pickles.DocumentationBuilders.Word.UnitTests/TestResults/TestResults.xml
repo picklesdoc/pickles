@@ -1,32 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TestRun id="fe7ea9b2-c9c2-4443-9489-566a596c295b" name="ericcarlson@ERICCARLSONBBE6 2022-05-09 16:18:56" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <Times creation="2022-05-09T16:18:56.0232967-04:00" queuing="2022-05-09T16:18:56.0232969-04:00" start="2022-05-09T16:18:52.1796949-04:00" finish="2022-05-09T16:18:56.0290646-04:00" />
-  <TestSettings name="default" id="2406070d-8d44-4156-b0eb-5599e322063c">
-    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-05-09_16_18_56" />
+<TestRun id="38eb1397-37b2-448e-b760-e00ade4fe683" name="ericcarlson@ERICCARLSONBBE6 2022-11-23 12:19:35" runUser="ERICCARLSONBBE6\ericcarlson" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2022-11-23T12:19:35.2132438-05:00" queuing="2022-11-23T12:19:35.2132445-05:00" start="2022-11-23T12:19:30.0126505-05:00" finish="2022-11-23T12:19:35.2294411-05:00" />
+  <TestSettings name="default" id="9d704419-f1ba-4127-82ef-5d148f7bc8c8">
+    <Deployment runDeploymentRoot="ericcarlson_ERICCARLSONBBE6_2022-11-23_12_19_35" />
   </TestSettings>
   <Results>
-    <UnitTestResult executionId="24d2bad7-5f3c-415e-8abb-9374bbc7211e" testId="c72350a2-cfdb-2408-cbfe-f2c70205f923" testName="ShouldOutputFeaturesInParsedOrder" computerName="ERICCARLSONBBE6" duration="00:00:00.8992490" startTime="2022-05-09T16:18:54.9306901-04:00" endTime="2022-05-09T16:18:55.8296990-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24d2bad7-5f3c-415e-8abb-9374bbc7211e" />
-    <UnitTestResult executionId="9875884b-aff1-4f4d-929c-ed5d9a521fcf" testId="ee8fb249-7752-00eb-f5f7-cf72691ee577" testName="SplitDescription_NullArgument_DoesNotThrowException" computerName="ERICCARLSONBBE6" duration="00:00:00.1000250" startTime="2022-05-09T16:18:55.8332539-04:00" endTime="2022-05-09T16:18:55.9332792-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9875884b-aff1-4f4d-929c-ed5d9a521fcf" />
-    <UnitTestResult executionId="00947cac-b15c-4524-ab10-6b0bea8da621" testId="0ae873f0-c958-75a7-82d8-39bc83f086ea" testName="SplitDescription_NullArgument_ReturnsEmptyArgument" computerName="ERICCARLSONBBE6" duration="00:00:00.0037660" startTime="2022-05-09T16:18:55.9333380-04:00" endTime="2022-05-09T16:18:55.9371035-04:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="00947cac-b15c-4524-ab10-6b0bea8da621" />
+    <UnitTestResult executionId="d4dfe5b2-84ab-474e-bf30-4ddeafc8e00a" testId="c72350a2-cfdb-2408-cbfe-f2c70205f923" testName="ShouldOutputFeaturesInParsedOrder" computerName="ERICCARLSONBBE6" duration="00:00:01.0218370" startTime="2022-11-23T12:19:33.9575177-05:00" endTime="2022-11-23T12:19:34.9792625-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d4dfe5b2-84ab-474e-bf30-4ddeafc8e00a" />
+    <UnitTestResult executionId="527897bc-deca-46a8-b3b9-865fa66dad97" testId="0ae873f0-c958-75a7-82d8-39bc83f086ea" testName="SplitDescription_NullArgument_ReturnsEmptyArgument" computerName="ERICCARLSONBBE6" duration="00:00:00.0030720" startTime="2022-11-23T12:19:35.1079840-05:00" endTime="2022-11-23T12:19:35.1110565-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="527897bc-deca-46a8-b3b9-865fa66dad97" />
+    <UnitTestResult executionId="ffae4769-1ebb-402b-83f4-cc36a7e8ab7e" testId="ee8fb249-7752-00eb-f5f7-cf72691ee577" testName="SplitDescription_NullArgument_DoesNotThrowException" computerName="ERICCARLSONBBE6" duration="00:00:00.1176440" startTime="2022-11-23T12:19:34.9902644-05:00" endTime="2022-11-23T12:19:35.1079081-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ffae4769-1ebb-402b-83f4-cc36a7e8ab7e" />
   </Results>
   <TestDefinitions>
     <UnitTest name="SplitDescription_NullArgument_DoesNotThrowException" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.word.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.word.unittests.dll" id="ee8fb249-7752-00eb-f5f7-cf72691ee577">
-      <Execution id="9875884b-aff1-4f4d-929c-ed5d9a521fcf" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.WordDescriptionFormatterTests" name="SplitDescription_NullArgument_DoesNotThrowException" />
+      <Execution id="ffae4769-1ebb-402b-83f4-cc36a7e8ab7e" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.WordDescriptionFormatterTests" name="SplitDescription_NullArgument_DoesNotThrowException" />
     </UnitTest>
     <UnitTest name="ShouldOutputFeaturesInParsedOrder" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.word.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.word.unittests.dll" id="c72350a2-cfdb-2408-cbfe-f2c70205f923">
-      <Execution id="24d2bad7-5f3c-415e-8abb-9374bbc7211e" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.WhenBuildingWordDocuments" name="ShouldOutputFeaturesInParsedOrder" />
+      <Execution id="d4dfe5b2-84ab-474e-bf30-4ddeafc8e00a" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.WhenBuildingWordDocuments" name="ShouldOutputFeaturesInParsedOrder" />
     </UnitTest>
     <UnitTest name="SplitDescription_NullArgument_ReturnsEmptyArgument" storage="c:\users\ericcarlson\documents\github\pickles\src\pickles.documentationbuilders.word.unittests\bin\debug\net6.0\picklesdoc.pickles.documentationbuilders.word.unittests.dll" id="0ae873f0-c958-75a7-82d8-39bc83f086ea">
-      <Execution id="00947cac-b15c-4524-ab10-6b0bea8da621" />
-      <TestMethod codeBase="C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.WordDescriptionFormatterTests" name="SplitDescription_NullArgument_ReturnsEmptyArgument" />
+      <Execution id="527897bc-deca-46a8-b3b9-865fa66dad97" />
+      <TestMethod codeBase="C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll" adapterTypeName="executor://nunit3testexecutor/" className="PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.WordDescriptionFormatterTests" name="SplitDescription_NullArgument_ReturnsEmptyArgument" />
     </UnitTest>
   </TestDefinitions>
   <TestEntries>
-    <TestEntry testId="c72350a2-cfdb-2408-cbfe-f2c70205f923" executionId="24d2bad7-5f3c-415e-8abb-9374bbc7211e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="ee8fb249-7752-00eb-f5f7-cf72691ee577" executionId="9875884b-aff1-4f4d-929c-ed5d9a521fcf" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="0ae873f0-c958-75a7-82d8-39bc83f086ea" executionId="00947cac-b15c-4524-ab10-6b0bea8da621" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c72350a2-cfdb-2408-cbfe-f2c70205f923" executionId="d4dfe5b2-84ab-474e-bf30-4ddeafc8e00a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ae873f0-c958-75a7-82d8-39bc83f086ea" executionId="527897bc-deca-46a8-b3b9-865fa66dad97" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ee8fb249-7752-00eb-f5f7-cf72691ee577" executionId="ffae4769-1ebb-402b-83f4-cc36a7e8ab7e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <TestLists>
     <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
@@ -36,7 +36,7 @@
     <Counters total="3" executed="3" passed="3" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
     <Output>
       <StdOut>NUnit Adapter 3.17.0.0: Test execution started&#xD;
-Running all tests in C:\Users\ericcarlson\Documents\GitHub\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll&#xD;
+Running all tests in C:\Users\ericcarlson\documents\github\pickles\src\Pickles.DocumentationBuilders.Word.UnitTests\bin\Debug\net6.0\PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests.dll&#xD;
    NUnit3TestExecutor discovered 3 of 3 NUnit test cases&#xD;
 NUnit Adapter 3.17.0.0: Test execution complete&#xD;
 </StdOut>
