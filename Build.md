@@ -1,5 +1,11 @@
 #Development Environment
 
+Install the nuke-build tool in order to run the build commands:
+
+```
+dotnet tool install Nuke.GlobalTool --global
+```
+
 Install the dotnet-nugetize tool to assist with debugging packaging issues
 
 ```
@@ -31,17 +37,8 @@ Build Targets
 - PublishNuGet
 
 
-#Test
+#Test NuGet Packages Locally
 
-dotnet tool install -g --add-source <path to .nupkg without file name> <file name without version>
-
-
-#Docker
-
--Dockerfile
---tools
----Pickles.CommandLine.[versionnumber].nupkg
-
-To install from the root folder/docker context (after copying it into the context):
-dotnet tool install --global --add-source ./tools Pickles.CommandLine --version [versionnumber]
-
+- create an empty folder
+- at the command line enter "dotnet new tool-manifest"
+- at the command line enter "dotnet tool install --add-source <path to .nupkg without file name> <file name without version>"
