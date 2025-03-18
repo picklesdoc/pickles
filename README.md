@@ -1,7 +1,12 @@
 Pickles
 =======
 
-## Currently looking for a new maintainer. Please contact me if you are interested in taking over this project.
+## Pickles End of life
+
+**Tricentis has end-of-lifed SpecFlow. Since Pickles is built completely around SpecFlow, there is no point in continuing with Pickles. In fact, there has been little activity over the past several years. Let’s make official what we have all known (and presumably accepted) for a long time: Pickles is going to remain as it is.**
+
+**All is not lost, however: the repositories will remain. More importantly, there is a good fork of SpecFlow: [ReqnRoll](https://reqnroll.net/). If you want a Reqnroll-based Living Documentation generator, head over to Reqnroll and ask how you can support that effort.**
+
 
 Pickles is an open source living documentation generator that works on feature files written in the Gherkin language, popularized in tools like Cucumber and SpecFlow.
 
