@@ -43,7 +43,12 @@ namespace PicklesDoc.Pickles.ObjectModel
 
         public string MapToString(G.TableCell cell)
         {
-            return cell?.Value;
+            return cell.Value;
+        }
+
+        public string MapToString(G.TableCell? cell)
+        {
+            return cell.HasValue ? cell.Value.Value : null; // Exemple
         }
 
         public TableRow MapToTableRow(G.TableRow tableRow)
@@ -185,9 +190,9 @@ namespace PicklesDoc.Pickles.ObjectModel
             };
         }
 
-        public Location MapToLocation(G.Location location)
+        public Location MapToLocation(G.Location? location)
         {
-            return location != null ? new Location { Column = location.Column, Line = location.Line } : null;
+            return location.HasValue ? new Location { Column = location.Value.Column, Line = location.Value.Line } : null;
         }
 
         public Scenario MapToScenario(G.Scenario scenario, params string[] tagsToHide)

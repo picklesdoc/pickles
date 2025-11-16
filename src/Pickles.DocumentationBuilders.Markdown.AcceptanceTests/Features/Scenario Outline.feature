@@ -1,4 +1,6 @@
-﻿Feature: Scenario Outlines
+﻿# language: en
+
+Feature: Scenario Outlines
     In order to document the Scenario Outlines
     As a reader of the generated documentation
     I want the scenario outlines to appear with steps and examples below the feature heading.

@@ -165,15 +165,15 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
             bool shouldContinue = commandLineArgumentParser.Parse(args, configuration, TextWriter.Null);
 
             Check.That(shouldContinue).IsTrue();
-            Check.That(configuration.FeatureFolder.FullName).IsEqualTo(FileSystem.DirectoryInfo.FromDirectoryName("features").FullName);
-            Check.That(configuration.OutputFolder.FullName).IsEqualTo(FileSystem.DirectoryInfo.FromDirectoryName("features-output").FullName);
+            Check.That(configuration.FeatureFolder.FullName).IsEqualTo(FileSystem.DirectoryInfo.New("features").FullName);
+            Check.That(configuration.OutputFolder.FullName).IsEqualTo(FileSystem.DirectoryInfo.New("features-output").FullName);
         }
 
         [Test]
         public void ThenCanParseResultsFileWithLongFormSuccessfully()
         {
             FileSystem.AddFile(@"results.xml", "<xml />");
-            var resultPath = FileSystem.FileInfo.FromFileName("results.xml").FullName;
+            var resultPath = FileSystem.FileInfo.New("results.xml").FullName;
             var args = new[] { @"-link-results-file=" + resultPath };
 
             var configuration = new Configuration();
@@ -189,9 +189,9 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseResultsFileAsSemicolonSeparatedList()
         {
             FileSystem.AddFile(@"results1.xml", "<xml />");
-            var result1path = FileSystem.FileInfo.FromFileName("results1.xml").FullName;
+            var result1path = FileSystem.FileInfo.New("results1.xml").FullName;
             FileSystem.AddFile(@"results2.xml", "<xml />");
-            var result2path = FileSystem.FileInfo.FromFileName("results2.xml").FullName;
+            var result2path = FileSystem.FileInfo.New("results2.xml").FullName;
 
             var args = new[] { $"-link-results-file={result1path};{result2path}" };
 
@@ -210,7 +210,7 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseResultsFileAsSemicolonSeparatedListAndTestResultsFileContainsTheFirstElementOfTestResultsFiles()
         {
             FileSystem.AddFile("results1.xml", "<xml />");
-            var result1path = FileSystem.FileInfo.FromFileName("results1.xml").FullName;
+            var result1path = FileSystem.FileInfo.New("results1.xml").FullName;
             FileSystem.AddFile("results2.xml", "<xml />");
 
             var args = new[] { "-link-results-file=results1.xml;results2.xml" };
@@ -229,7 +229,7 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseResultsFileAsSemicolonSeparatedListThatStartsWithASemicolon()
         {
             FileSystem.AddFile(@"results1.xml", "<xml />");
-            var result1Path = FileSystem.FileInfo.FromFileName("results1.xml").FullName;
+            var result1Path = FileSystem.FileInfo.New("results1.xml").FullName;
             var args = new[] { @"-link-results-file=;results1.xml" };
 
             var configuration = new Configuration();
@@ -246,7 +246,7 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         [Test]
         public void ThenCanParseResultsFileAsSemicolonSeparatedListThatEndsWithASemicolon()
         {
-            var fileInfo = FileSystem.FileInfo.FromFileName("results1.xml");
+            var fileInfo = FileSystem.FileInfo.New("results1.xml");
             FileSystem.AddFile(@"results1.xml", "<xml />");
             var args = new[] { $"-link-results-file={fileInfo.FullName};" };
 
@@ -265,9 +265,9 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseMultipleResultsFilesWithWildCard()
         {
             FileSystem.AddFile("results1.xml", "<xml />");
-            var result1FileInfo = FileSystem.FileInfo.FromFileName("results1.xml");
+            var result1FileInfo = FileSystem.FileInfo.New("results1.xml");
             FileSystem.AddFile("results2.xml", "<xml />");
-            var result2FileInfo = FileSystem.FileInfo.FromFileName("results2.xml");
+            var result2FileInfo = FileSystem.FileInfo.New("results2.xml");
 
             var args = new[] { @"-link-results-file=results*.xml" };
 
@@ -286,9 +286,9 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseMultipleResultsFilesWithWildCardWhereNoMatchIsExcluded()
         {
             FileSystem.AddFile(@"results1.xml", "<xml />");
-            var result1path = FileSystem.FileInfo.FromFileName("results1.xml").FullName;
+            var result1path = FileSystem.FileInfo.New("results1.xml").FullName;
             FileSystem.AddFile(@"results2.xml", "<xml />");
-            var result2path = FileSystem.FileInfo.FromFileName("results2.xml").FullName;
+            var result2path = FileSystem.FileInfo.New("results2.xml").FullName;
             FileSystem.AddFile(@"nomatch_results3.xml", "<xml />");
 
             var args = new[] { @"-link-results-file=results*.xml" };
@@ -308,11 +308,11 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseMultipleResultsFilesWithWildCardAndSemicolon()
         {
             FileSystem.AddFile(@"results_foo1.xml", "<xml />");
-            var foo1Path = FileSystem.FileInfo.FromFileName("results_foo1.xml").FullName;
+            var foo1Path = FileSystem.FileInfo.New("results_foo1.xml").FullName;
             FileSystem.AddFile(@"results_foo2.xml", "<xml />");
-            var foo2Path = FileSystem.FileInfo.FromFileName("results_foo2.xml").FullName;
+            var foo2Path = FileSystem.FileInfo.New("results_foo2.xml").FullName;
             FileSystem.AddFile(@"results_bar.xml", "<xml />");
-            var resultsPath = FileSystem.FileInfo.FromFileName("results_bar.xml").FullName;
+            var resultsPath = FileSystem.FileInfo.New("results_bar.xml").FullName;
 
             var args = new[] { @"-link-results-file=results_foo*.xml;results_bar.xml" };
 
@@ -368,7 +368,7 @@ namespace PicklesDoc.Pickles.CommandLine.UnitTests
         public void ThenCanParseResultsFilesWithMultipleMatchesResolvingInSingleMatch()
         {
             FileSystem.AddFile(@"results_foo.xml", "<xml />");
-            var fileInfo=FileSystem.FileInfo.FromFileName("results_foo.xml");
+            var fileInfo=FileSystem.FileInfo.New("results_foo.xml");
 
             var args = new[] { $"-link-results-file={FileSystem.Path.Combine(fileInfo.Directory.FullName,"results*.xml")};*foo.xml" };
 

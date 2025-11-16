@@ -23,7 +23,7 @@ namespace PicklesDoc.Pickles
             if (this.fileSystem.File.Exists(filename))
             {
                 var bom = new byte[4];
-                using (var file = this.fileSystem.FileInfo.FromFileName(filename).OpenRead())
+                using (var file = this.fileSystem.FileInfo.New(filename).OpenRead())
                 {
                     file.Read(bom, 0, 4);
                 }

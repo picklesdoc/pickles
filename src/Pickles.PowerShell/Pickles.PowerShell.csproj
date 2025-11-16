@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>PicklesDoc.Pickles.PowerShell</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.PowerShell</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\Pickles\</SolutionDir>
     <AssemblyTitle>Pickles.PowerShell</AssemblyTitle>
     <Description>
@@ -60,10 +60,10 @@
     <ProjectReference Include="..\Pickles\Pickles.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NuGetizer" Version="0.9.1">
+    <PackageReference Include="NuGetizer" Version="1.4.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.Management.Automation" Version="6.0.4" />
+    <PackageReference Include="System.Management.Automation" Version="7.5.4" />
   </ItemGroup>
 </Project>

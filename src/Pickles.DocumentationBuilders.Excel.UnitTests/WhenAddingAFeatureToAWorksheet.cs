@@ -54,9 +54,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
                 excelFeatureFormatter.Format(worksheet, feature);
 
-                Check.That(worksheet.Cell("A1").Value).IsEqualTo(feature.Name);
-                Check.That(worksheet.Cell("C2").Value).IsEqualTo("tag1, tag2");
-                Check.That(worksheet.Cell("B3").Value).IsEqualTo(feature.Description);
+                Check.That(worksheet.Cell("A1").GetValue<string>()).IsEqualTo(feature.Name);
+                Check.That(worksheet.Cell("C2").GetValue<string>()).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("B3").GetValue<string>()).IsEqualTo(feature.Description);
             }
         }
 
@@ -87,10 +87,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
             {
                 IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
                 excelFeatureFormatter.Format(worksheet, feature);
-                Check.That(worksheet.Cell("B5").Value).IsEqualTo(background.Name);
-                Check.That(worksheet.Cell("C6").Value).IsEqualTo("tag1, tag2");
-                Check.That(worksheet.Cell("C7").Value).IsEqualTo(background.Description);
-                Check.That(worksheet.Cell("D8").Value).IsEqualTo(given.Name);
+                Check.That(worksheet.Cell("B5").GetValue<string>()).IsEqualTo(background.Name);
+                Check.That(worksheet.Cell("C6").GetValue<string>()).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C7").GetValue<string>()).IsEqualTo(background.Description);
+                Check.That(worksheet.Cell("D8").GetValue<string>()).IsEqualTo(given.Name);
             }
         }
 
@@ -122,10 +122,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 IXLWorksheet worksheet = workbook.AddWorksheet("SHEET1");
                 excelFeatureFormatter.Format(worksheet, feature);
 
-                Check.That(worksheet.Cell("B5").Value).IsEqualTo(scenario.Name);
-                Check.That(worksheet.Cell("C6").Value).IsEqualTo("tag1, tag2");
-                Check.That(worksheet.Cell("C7").Value).IsEqualTo(scenario.Description);
-                Check.That(worksheet.Cell("D8").Value).IsEqualTo(given.Name);
+                Check.That(worksheet.Cell("B5").GetValue<string>()).IsEqualTo(scenario.Name);
+                Check.That(worksheet.Cell("C6").GetValue<string>()).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C7").GetValue<string>()).IsEqualTo(scenario.Description);
+                Check.That(worksheet.Cell("D8").GetValue<string>()).IsEqualTo(given.Name);
             }
         }
     }

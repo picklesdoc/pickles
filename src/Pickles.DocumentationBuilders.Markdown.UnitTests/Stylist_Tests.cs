@@ -34,7 +34,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsTitle("Title");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsFeatureHeading("My Styled Feature");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -56,7 +56,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsBackgroundHeading("My Styled Background");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsBackgroundHeading(null);
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -78,7 +78,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsScenarioHeading("My Styled Scenario");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -89,7 +89,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsScenarioHeading("My Styled Scenario", TestResult.Passed);
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -100,7 +100,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsScenarioOutlineHeading("My Styled Scenario Outline");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -111,7 +111,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsExampleHeading("My Styled Example");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -122,7 +122,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsExampleHeading(string.Empty);
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -133,7 +133,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsTag("@Tag");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -144,7 +144,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsStep("Keyword", "Step");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -155,7 +155,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsStep("Keyword", "Step <placeholder>");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -166,7 +166,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var actualStyle = style.AsStepTable("{0}HeadingOne{0}HeadingTwo{0}");
 
-            Assert.AreEqual(expectedStyle, actualStyle);
+            Assert.That(expectedStyle, Is.EqualTo(actualStyle));
         }
 
         [Test]
@@ -174,8 +174,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             var style = new Stylist();
 
-            Assert.AreEqual(">", style.AsStepLine(string.Empty));
-            Assert.AreEqual("> Text", style.AsStepLine("Text"));
+            Assert.That(">", Is.EqualTo(style.AsStepLine(string.Empty)));
+            Assert.That("> Text", Is.EqualTo(style.AsStepLine("Text")));
         }
 
         [Test]
@@ -183,9 +183,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             var style = new Stylist();
 
-            Assert.AreEqual("![Passed](pass.png)", style.AsResult(TestResult.Passed));
-            Assert.AreEqual("![Failed](fail.png)", style.AsResult(TestResult.Failed));
-            Assert.AreEqual("![Inconclusive](inconclusive.png)", style.AsResult(TestResult.Inconclusive));
+            Assert.That("![Passed](pass.png)", Is.EqualTo(style.AsResult(TestResult.Passed)));
+            Assert.That("![Failed](fail.png)", Is.EqualTo(style.AsResult(TestResult.Failed)));
+            Assert.That("![Inconclusive](inconclusive.png)", Is.EqualTo(style.AsResult(TestResult.Inconclusive)));
         }
 
         [Test]
@@ -193,7 +193,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             var style = new Stylist();
 
-            Assert.AreEqual("Result", style.TableResultHeading);
+            Assert.That("Result", Is.EqualTo(style.TableResultHeading));
         }
     }
 }

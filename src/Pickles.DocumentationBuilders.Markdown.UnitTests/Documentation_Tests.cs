@@ -40,8 +40,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var actualPageCount = documentation.PageCount;
             var actualPage = documentation.CurrentPage;
 
-            Assert.AreEqual(1, documentation.PageCount);
-            Assert.Contains("# Features", actualPage.Split(new string[] { Environment.NewLine }, StringSplitOptions.None));
+            Assert.That(1, Is.EqualTo(documentation.PageCount));
+            Assert.That(
+                actualPage.Split(new string[] { Environment.NewLine }, StringSplitOptions.None),
+                Has.Member("# Features"));
         }
 
         [Test]
@@ -50,7 +52,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var simpleFeature = new Feature();
             simpleFeature.Name = "My Feature";
             var relPath = "fakedir";
-            var location = fileSystem.FileInfo.FromFileName(@"c:\");
+            var location = fileSystem.FileInfo.New(@"c:\");
             var newNode = new FeatureNode(location, relPath, simpleFeature);
             var featureTree = new Tree(new FolderNode(location, relPath));
             featureTree.Add(newNode);
@@ -59,9 +61,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var actualPageCount = documentation.PageCount;
             var actualPage = documentation.CurrentPage.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual(1, documentation.PageCount);
-            Assert.Contains("# Features", actualPage);
-            Assert.Contains("### My Feature", actualPage);
+            Assert.That(1, Is.EqualTo(documentation.PageCount));
+
+            Assert.That(actualPage, Has.Member("# Features"));
+            Assert.That(actualPage, Has.Member("### My Feature"));
         }
     }
 }

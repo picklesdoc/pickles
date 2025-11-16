@@ -77,7 +77,7 @@ namespace PicklesDoc.Pickles.CommandLine
         public bool Parse(string[] args, IConfiguration configuration, TextWriter stdout)
         {
             var currentDirectory =
-                this.fileSystem.DirectoryInfo.FromDirectoryName(this.fileSystem.Directory.GetCurrentDirectory());
+                this.fileSystem.DirectoryInfo.New(this.fileSystem.Directory.GetCurrentDirectory());
             configuration.FeatureFolder = currentDirectory;
             configuration.OutputFolder = currentDirectory;
 
@@ -96,12 +96,12 @@ namespace PicklesDoc.Pickles.CommandLine
 
             if (!string.IsNullOrEmpty(this.featureDirectory))
             {
-                configuration.FeatureFolder = this.fileSystem.DirectoryInfo.FromDirectoryName(this.featureDirectory);
+                configuration.FeatureFolder = this.fileSystem.DirectoryInfo.New(this.featureDirectory);
             }
 
             if (!string.IsNullOrEmpty(this.outputDirectory))
             {
-                configuration.OutputFolder = this.fileSystem.DirectoryInfo.FromDirectoryName(this.outputDirectory);
+                configuration.OutputFolder = this.fileSystem.DirectoryInfo.New(this.outputDirectory);
             }
 
             if (!string.IsNullOrEmpty(this.testResultsFormat))

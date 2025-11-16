@@ -47,7 +47,7 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
         {
             var mapper = factory.CreateMapper();
 
-            string result = mapper.MapToString((G.TableCell)null);
+            string result = mapper.MapToString((G.TableCell?)null);
 
             Check.That(result).IsNull();
         }

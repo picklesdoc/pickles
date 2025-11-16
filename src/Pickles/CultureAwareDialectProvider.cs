@@ -33,7 +33,7 @@ namespace PicklesDoc.Pickles
 
         /// <remarks>We need to override only this method. The overload without
         /// Dictionary internally calls this method.</remarks>
-        public override GherkinDialect GetDialect(string language, Location location)
+        public override GherkinDialect GetDialect(string language, Location? location)
         {
             GherkinDialect result;
 

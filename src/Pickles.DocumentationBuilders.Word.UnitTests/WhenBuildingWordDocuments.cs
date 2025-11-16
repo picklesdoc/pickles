@@ -51,11 +51,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Word.UnitTests
         [SetUp]
         public void Setup()
         {
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(RootPath);
+            var rootPath = FileSystem.DirectoryInfo.New(RootPath);
 
             AddFakeFolderStructures();
 
-            Configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
+            Configuration.OutputFolder = this.FileSystem.DirectoryInfo.New(FileSystemPrefix);
             this.features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
             this.builder = Container.Resolve<WordDocumentationBuilder>();
         }

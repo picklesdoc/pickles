@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.TestFrameworks.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.TestFrameworks.UnitTests</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyTitle>PicklesDoc.Pickles.TestFrameworks.UnitTests</AssemblyTitle>
     <Description>Unit tests for the supported test frameworks for inputting test results to Pickles</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -111,8 +111,8 @@
     <EmbeddedResource Include="NUnit\NUnit3\results-example-nunit2-with-nunit3-runner.xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
   </ItemGroup>
 </Project>

@@ -98,7 +98,7 @@ namespace PicklesDoc.Pickles.TestFrameworks.UnitTests
         {
             var configuration = this.Container.Resolve<IConfiguration>();
             configuration.TestResultsFormat = format;
-            configuration.AddTestResultFiles(new[] { this.FileSystem.FileInfo.FromFileName(example) });
+            configuration.AddTestResultFiles(new[] { this.FileSystem.FileInfo.New(example) });
         }
     }
 }

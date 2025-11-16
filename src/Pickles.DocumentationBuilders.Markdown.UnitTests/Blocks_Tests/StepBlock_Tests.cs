@@ -40,8 +40,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var stepBlock = new StepBlock(step, mockStyle);
             var actualString = stepBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("Keyword: Natkey Step: I am a step", actualString[0]);
-            Assert.AreEqual(2, actualString.Length);
+            Assert.That("Keyword: Natkey Step: I am a step", Is.EqualTo(actualString[0]));
+            Assert.That(2, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -63,13 +63,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var stepBlock = new StepBlock(step, mockStyle);
             var actualString = stepBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("Keyword: Natkey Step: I am a step", actualString[0]);
-            Assert.AreEqual(">", actualString[1]);
-            Assert.AreEqual("> | Col1 | Col2 |", actualString[2]);
-            Assert.AreEqual("> | --- | --- |", actualString[3]);
-            Assert.AreEqual("> | Col1Row1 | Col2Row1 |", actualString[4]);
-            Assert.AreEqual("> | Col1Row2 | Col2Row2 |", actualString[5]);
-            Assert.AreEqual(7, actualString.Length);
+            Assert.That("Keyword: Natkey Step: I am a step", Is.EqualTo(actualString[0]));
+            Assert.That(">", Is.EqualTo(actualString[1]));
+            Assert.That("> | Col1 | Col2 |", Is.EqualTo(actualString[2]));
+            Assert.That("> | --- | --- |", Is.EqualTo(actualString[3]));
+            Assert.That("> | Col1Row1 | Col2Row1 |", Is.EqualTo(actualString[4]));
+            Assert.That("> | Col1Row2 | Col2Row2 |", Is.EqualTo(actualString[5]));
+            Assert.That(7, Is.EqualTo(actualString.Length));
         }
     }
 }

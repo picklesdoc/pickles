@@ -31,7 +31,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel
         private void WriteFileCell(IXLWorksheet worksheet, ref int row, int column, IXLWorksheet featureWorksheet)
         {
             worksheet.Cell(row, column).Value = featureWorksheet.Cell("A1").Value;
-            worksheet.Cell(row++, column).Hyperlink = new XLHyperlink(featureWorksheet.Name + "!A1");
+            worksheet.Cell(row++, column).SetHyperlink(new XLHyperlink(featureWorksheet.Name + "!A1"));
         }
 
         private void WriteDirectoryCell(IXLWorksheet worksheet, ref int row, int column, string directoryName)

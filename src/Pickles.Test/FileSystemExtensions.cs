@@ -26,7 +26,7 @@ namespace PicklesDoc.Pickles.Test
     {
         public static IDirectoryInfo GetOrCreateDirectory(this IFileSystem fileSystem, string directory)
         {
-            var directoryInfo = fileSystem.DirectoryInfo.FromDirectoryName(directory);
+            var directoryInfo = fileSystem.DirectoryInfo.New(directory);
             if(!directoryInfo.Exists)
                 directoryInfo.Create();
             return directoryInfo;

@@ -30,9 +30,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             var title = Localization.Title;
 
-            Assert.IsNotNull(title);
-            Assert.IsNotEmpty(title);
-            Assert.AreEqual("Features", title);
+            Assert.That(title, Is.Not.Null);
+            Assert.That(title, Is.Not.Empty);
+            Assert.That("Features", Is.EqualTo(title));
         }
 
         [Test]
@@ -40,9 +40,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             var generationDateTime = Localization.GenerationDateTime;
 
-            Assert.IsNotNull(generationDateTime);
-            Assert.IsNotEmpty(generationDateTime);
-            Assert.AreEqual("Generated on: {0:dd MMMM yyyy} at {0:H:mm:ss}", generationDateTime);
+            Assert.That(generationDateTime, Is.Not.Null);
+            Assert.That(generationDateTime, Is.Not.Empty);
+            Assert.That("Generated on: {0:dd MMMM yyyy} at {0:H:mm:ss}", Is.EqualTo(generationDateTime));
         }
     }
 }

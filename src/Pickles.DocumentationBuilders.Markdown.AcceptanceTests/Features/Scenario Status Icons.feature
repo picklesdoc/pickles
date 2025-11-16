@@ -1,4 +1,6 @@
-﻿Feature: Scenario Status Icons
+﻿# language: en
+
+Feature: Scenario Status Icons
     In order to display the outcome of Scenarios and Scenario Outlines
     As a reader of the generated documentation
     I want the result to indicated as Pass, Fail, or Inconclusive by an appropriate icon.

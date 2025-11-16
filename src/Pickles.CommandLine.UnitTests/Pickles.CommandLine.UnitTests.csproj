@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.CommandLine.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.CommandLine.UnitTests</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
     <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
     <IsCodedUITest>False</IsCodedUITest>
@@ -24,9 +24,9 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.2.3" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="4.0.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="4.0.2" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\VersionInfo.cs" Link="VersionInfo.cs" />
@@ -38,13 +38,13 @@
     <ProjectReference Include="..\Pickles\Pickles.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NFluent" Version="2.7.2" />
-    <PackageReference Include="NuGetizer" Version="0.9.1">
+    <PackageReference Include="NFluent" Version="3.1.0" />
+    <PackageReference Include="NuGetizer" Version="1.4.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="17.0.3" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.16" />
   </ItemGroup>
 </Project>

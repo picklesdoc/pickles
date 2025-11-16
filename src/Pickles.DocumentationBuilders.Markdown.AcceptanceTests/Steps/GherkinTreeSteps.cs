@@ -44,7 +44,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
             newFeature.Name = p0;
 
             var relPath = "fakedir";
-            var location = FileSystem.FileInfo.FromFileName(@"c:\");
+            var location = FileSystem.FileInfo.New(@"c:\");
 
             INode newNode = new FeatureNode(location, relPath, newFeature);
 

@@ -35,7 +35,7 @@ namespace PicklesDoc.Pickles.Test
         {
             var filePath =FileSystem.Path.Combine("temp","featurefile.feature");
             FileSystem.AddFile(filePath, new MockFileData("Invalid feature file"));
-            var fileInfo=FileSystem.FileInfo.FromFileName(filePath);
+            var fileInfo=FileSystem.FileInfo.New(filePath);
             var parser = new FileSystemBasedFeatureParser(new FeatureParser(Configuration), FileSystem);
 
             Check.ThatCode(() => parser.Parse(filePath)).Throws<FeatureParseException>()

@@ -54,7 +54,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
             var formatter = new HtmlContentFormatter(fakeHtmlFeatureFormatter, new HtmlIndexFormatter());
 
             var featureNode = new FeatureNode(
-                FileSystem.FileInfo.FromFileName(@"c:\temp\test.feature"),
+                FileSystem.FileInfo.New(@"c:\temp\test.feature"),
                 ".",
                 new Feature());
 

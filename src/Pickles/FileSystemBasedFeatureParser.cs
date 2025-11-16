@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles
         {
             Feature feature = null;
             var encoding = this.encodingDetector.GetEncoding(filename);
-            using (var fileStream = this.fileSystem.FileInfo.FromFileName(filename).OpenRead())
+            using (var fileStream = this.fileSystem.FileInfo.New(filename).OpenRead())
             {
                 var specificEncoderReader = new StreamReader(fileStream, encoding);
                 

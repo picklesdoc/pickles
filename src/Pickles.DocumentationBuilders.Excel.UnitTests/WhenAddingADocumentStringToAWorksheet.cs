@@ -47,9 +47,9 @@ in testing";
                 int row = 7;
                 excelDocumentStringFormatter.Format(worksheet, documentString, ref row);
 
-                Check.That(worksheet.Cell("D7").Value).IsEqualTo("This is an example");
-                Check.That(worksheet.Cell("D8").Value).IsEqualTo("document string for use");
-                Check.That(worksheet.Cell("D9").Value).IsEqualTo("in testing");
+                Check.That(worksheet.Cell("D7").GetValue<string>()).IsEqualTo("This is an example");
+                Check.That(worksheet.Cell("D8").GetValue<string>()).IsEqualTo("document string for use");
+                Check.That(worksheet.Cell("D9").GetValue<string>()).IsEqualTo("in testing");
                 Check.That(row).IsEqualTo(10);
             }
         }

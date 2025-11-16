@@ -54,7 +54,7 @@ namespace PicklesDoc.Pickles.Test.DirectoryCrawlers
             ImageFileDetector fileDetector = CreateImageFileDetector();
 
             var fileSystem = new MockFileSystem();
-            var file = fileSystem.FileInfo.FromFileName(imageName);
+            var file = fileSystem.FileInfo.New(imageName);
 
             bool isRelevant = fileDetector.IsRelevant(file);
 
@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.Test.DirectoryCrawlers
             ImageFileDetector fileDetector = CreateImageFileDetector();
 
             var fileSystem = new MockFileSystem();
-            var file = fileSystem.FileInfo.FromFileName("image.pdf");
+            var file = fileSystem.FileInfo.New("image.pdf");
 
             bool isRelevant = fileDetector.IsRelevant(file);
 
@@ -80,7 +80,7 @@ namespace PicklesDoc.Pickles.Test.DirectoryCrawlers
             ImageFileDetector fileDetector = CreateImageFileDetector();
 
             var fileSystem = new MockFileSystem();
-            var file = fileSystem.FileInfo.FromFileName("image.PnG");
+            var file = fileSystem.FileInfo.New("image.PnG");
 
             bool isRelevant = fileDetector.IsRelevant(file);
 

@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests
 
             IReadOnlyList<string> tags = scenario.AllTags();
 
-            Assert.IsEmpty(tags);
+            Assert.That(tags, Is.Empty);
         }
 
         [Test]
@@ -60,7 +60,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests
 
             IReadOnlyList<string> tags = scenario.AllTags();
 
-            CollectionAssert.AreEquivalent(new[] { "tag1", "tag2" }, tags);
+            Assert.That(tags, Is.EquivalentTo(new[] { "tag1", "tag2" }));
         }
 
         [Test]
@@ -80,7 +80,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests
 
             IReadOnlyList<string> tags = scenario.AllTags();
 
-            CollectionAssert.AreEquivalent(new[] { "tag1", "tag2" }, tags);
+            Assert.That(tags, Is.EquivalentTo(new[] { "tag1", "tag2" }));
         }
 
         [Test]
@@ -103,7 +103,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests
 
             IReadOnlyList<string> tags = scenario.AllTags();
 
-            CollectionAssert.AreEquivalent(new[] { "tag1" }, tags);
+            Assert.That(tags, Is.EquivalentTo(new[] { "tag1" }));
         }
     }
 }

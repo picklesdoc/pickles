@@ -44,8 +44,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var featureBlock = new FeatureBlock(feature,mockStyle);
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual(expectedString, actualString[0]);
-            Assert.AreEqual(3, actualString.Length);
+            Assert.That(expectedString, Is.EqualTo(actualString[0]));
+            Assert.That(3, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -67,11 +67,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var featureBlock = new FeatureBlock(feature, mockStyle);
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("FeatureHeading: Feature with description", actualString[0]);
-            Assert.AreEqual("In order to determine that world is flat", actualString[2]);
-            Assert.AreEqual("As a captain of a ship", actualString[4]);
-            Assert.AreEqual("I want to sail beyond the horizion", actualString[6]);
-            Assert.AreEqual(9, actualString.Length);
+
+            Assert.That("FeatureHeading: Feature with description", Is.EqualTo(actualString[0]));
+            Assert.That("In order to determine that world is flat", Is.EqualTo(actualString[2]));
+            Assert.That("As a captain of a ship", Is.EqualTo(actualString[4]));
+            Assert.That("I want to sail beyond the horizion", Is.EqualTo(actualString[6]));
+            Assert.That(9, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -92,9 +93,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var featureBlock = new FeatureBlock(feature, mockStyle);
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual(">>>tagone<<< >>>tagtwo<<<", actualString[0]);
-            Assert.AreEqual("FeatureHeading: Feature with Tags", actualString[2]);
-            Assert.AreEqual(5, actualString.Length);
+            Assert.That(">>>tagone<<< >>>tagtwo<<<", Is.EqualTo(actualString[0]));
+            Assert.That("FeatureHeading: Feature with Tags", Is.EqualTo(actualString[2]));
+            Assert.That(5, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -114,9 +115,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var featureBlock = new FeatureBlock(feature, mockStyle);
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("FeatureHeading: Feature with Scenario", actualString[0]);
-            Assert.AreEqual("ScenarioHeading: My Scenario", actualString[2]);
-            Assert.AreEqual(5, actualString.Length);
+            Assert.That("FeatureHeading: Feature with Scenario", Is.EqualTo(actualString[0]));
+            Assert.That("ScenarioHeading: My Scenario", Is.EqualTo(actualString[2]));
+            Assert.That(5, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -137,10 +138,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var featureBlock = new FeatureBlock(feature, mockStyle);
             var actualString = featureBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("FeatureHeading: Feature with Scenario", actualString[0]);
-            Assert.AreEqual("ScenarioHeading: My Scenario one", actualString[2]);
-            Assert.AreEqual("ScenarioHeading: My Scenario two", actualString[4]);
-            Assert.AreEqual(7, actualString.Length);
+            Assert.That("FeatureHeading: Feature with Scenario", Is.EqualTo(actualString[0]));
+            Assert.That("ScenarioHeading: My Scenario one", Is.EqualTo(actualString[2]));
+            Assert.That("ScenarioHeading: My Scenario two", Is.EqualTo(actualString[4]));
+            Assert.That(7, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -166,9 +167,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
                 i++;
             }
 
-            Assert.AreEqual("FeatureHeading: Feature with Background", results[0]);
-            Assert.AreEqual("BackgroundHeading:", results[2]);
-            Assert.AreEqual(3, results.Length);
+            Assert.That("FeatureHeading: Feature with Background", Is.EqualTo(results[0]));
+            Assert.That("BackgroundHeading:", Is.EqualTo(results[2]));
+            Assert.That(3, Is.EqualTo(results.Length));
         }
     }
 }

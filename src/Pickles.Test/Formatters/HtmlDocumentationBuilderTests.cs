@@ -39,12 +39,12 @@ namespace PicklesDoc.Pickles.Test.Formatters
         [Test]
         public void ShouldNotBlowUpWHenParsingEmptyFolder()
         {
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(RootPath);
+            var rootPath = FileSystem.DirectoryInfo.New(RootPath);
 
             this.AddFakeFolderStructures();
 
             var configuration = this.Configuration;
-            configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
+            configuration.OutputFolder = this.FileSystem.DirectoryInfo.New(FileSystemPrefix);
             var features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
             var builder = Container.Resolve<HtmlDocumentationBuilder>();
 

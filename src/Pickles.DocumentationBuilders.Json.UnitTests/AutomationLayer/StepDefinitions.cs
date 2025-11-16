@@ -46,14 +46,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Json.UnitTests.AutomationLaye
 
             var feature = parser.Parse(new StringReader(featureDescription));
 
-            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\"), string.Empty, feature));
+            this.nodes = new Tree(new FeatureNode(this.FileSystem.DirectoryInfo.New(@"c:\output\"), string.Empty, feature));
         }
 
         [When(@"I generate the documentation")]
         public void WhenIGenerateTheJsonDocumentation()
         {
             var configuration = this.Configuration;
-            configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(@"c:\output\");
+            configuration.OutputFolder = this.FileSystem.DirectoryInfo.New(@"c:\output\");
             var jsonDocumentationBuilder = this.Container.Resolve<JsonDocumentationBuilder>();
 
             jsonDocumentationBuilder.Build(this.nodes);

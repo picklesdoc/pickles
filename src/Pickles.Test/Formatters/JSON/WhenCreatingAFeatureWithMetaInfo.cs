@@ -47,7 +47,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
         public void Setup()
         {
             this.testFeature = new Feature { Name = "Test" };
-            this.featureFileInfo = this.FileSystem.FileInfo.FromFileName(FileSystem.Path.Combine(RootPath, FeaturePath));
+            this.featureFileInfo = this.FileSystem.FileInfo.New(FileSystem.Path.Combine(RootPath, FeaturePath));
             this.featureDirectoryNode = new FeatureNode(this.featureFileInfo, RelativePath, this.testFeature);
 
             this.featureWithMeta = new JsonFeatureWithMetaInfo(this.featureDirectoryNode, new LanguageServicesRegistry());

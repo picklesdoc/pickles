@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Json</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Json</AssemblyName>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Json</AssemblyTitle>
     <Description>A Pickles output formatter that outputs Json documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -24,17 +24,17 @@
     <ProjectReference Include="..\Pickles.ObjectModel\Pickles.ObjectModel.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Autofac" Version="6.3.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="NLog" Version="4.7.15" />
-    <PackageReference Include="NuGetizer" Version="0.9.1">
+    <PackageReference Include="Autofac" Version="8.4.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="NLog" Version="6.0.6" />
+    <PackageReference Include="NuGetizer" Version="1.4.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-    <PackageReference Include="System.ServiceModel.Duplex" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.NetTcp" Version="4.9.0" />
-    <PackageReference Include="System.ServiceModel.Federation" Version="4.9.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.6.1" />
+    <PackageReference Include="System.ServiceModel.Duplex" Version="6.0.0" />
+    <PackageReference Include="System.ServiceModel.NetTcp" Version="10.0.652802" />
+    <PackageReference Include="System.ServiceModel.Federation" Version="10.0.652802" />
     <PackageReference Include="Microsoft.Win32.Primitives" Version="4.3.0" />
     <PackageReference Include="System.Net.Primitives" Version="4.3.1" />
   </ItemGroup>

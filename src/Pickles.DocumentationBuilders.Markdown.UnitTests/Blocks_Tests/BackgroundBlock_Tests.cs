@@ -44,8 +44,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var backgroundBlock = new BackgroundBlock(scenario,mockStyle);
             var actualString = backgroundBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual(expectedString, actualString[0]);
-            Assert.AreEqual(2, actualString.Length);
+
+            Assert.That(expectedString, Is.EqualTo(actualString[0]));
+            Assert.That(2, Is.EqualTo(actualString.Length));
         }
     }
 }

@@ -55,7 +55,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Name).IsEqualTo("I enter '50' in the calculator");
             Check.That(result.DocStringArgument).IsNull();
             Check.That(result.TableArgument).IsNull();
-            Check.That(result.Location).IsNull();
+            Check.That(result.Location.Line).IsEqualTo(0);
+            Check.That(result.Location.Column).IsEqualTo(0);
             Check.That(result.Comments).IsEmpty();
         }
 
@@ -73,7 +74,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Name).IsEqualTo("I press 'enter'");
             Check.That(result.DocStringArgument).IsNull();
             Check.That(result.TableArgument).IsNull();
-            Check.That(result.Location).IsNull();
+            Check.That(result.Location.Line).IsEqualTo(0);
+            Check.That(result.Location.Column).IsEqualTo(0);
             Check.That(result.Comments).IsEmpty();
         }
 
@@ -111,7 +113,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.Name).IsEqualTo("I see this value on the screen");
             Check.That(result.DocStringArgument).IsEqualTo("120");
             Check.That(result.TableArgument).IsNull();
-            Check.That(result.Location).IsNull();
+            Check.That(result.Location.Line).IsEqualTo(0);
+            Check.That(result.Location.Column).IsEqualTo(0);
             Check.That(result.Comments).IsEmpty();
         }
 
@@ -138,7 +141,8 @@ namespace PicklesDoc.Pickles.Test.ObjectModel
             Check.That(result.TableArgument.DataRows).HasSize(1);
             Check.That(result.TableArgument.DataRows[0].Cells).ContainsExactly("Value 1", "Value 2");
             Check.That(result.DocStringArgument).IsNull();
-            Check.That(result.Location).IsNull();
+            Check.That(result.Location.Line).IsEqualTo(0);
+            Check.That(result.Location.Column).IsEqualTo(0);
             Check.That(result.Comments).IsEmpty();
         }
 

@@ -31,7 +31,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
         {
             var lines = new Lines();
 
-            Assert.AreEqual(0, lines.Count);
+            Assert.That(0, Is.EqualTo(lines.Count));
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             lines.Add("Hello, World");
 
-            Assert.AreEqual(1, lines.Count);
+            Assert.That(1, Is.EqualTo(lines.Count));
         }
 
         [Test]
@@ -56,8 +56,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             lines.Add(moreLines);
 
-            Assert.AreEqual(3, lines.Count);
-            Assert.AreEqual(2, moreLines.Count);
+            Assert.That(3, Is.EqualTo(lines.Count));
+            Assert.That(2, Is.EqualTo(moreLines.Count));
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             lines.Add("Hello");
             lines.Add("World");
 
-            Assert.AreEqual($"Hello{Environment.NewLine}World{Environment.NewLine}", lines.ToString());
+            Assert.That($"Hello{Environment.NewLine}World{Environment.NewLine}", Is.EqualTo(lines.ToString()));
         }
     }
 }

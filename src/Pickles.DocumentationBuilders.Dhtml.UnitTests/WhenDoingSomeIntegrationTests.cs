@@ -35,7 +35,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Dhtml.UnitTests
         public void TestTheResourceWriter()
         {
             var conf = new Configuration();
-            conf.OutputFolder = FileSystem.DirectoryInfo.FromDirectoryName(@"d:\output");
+            conf.OutputFolder = FileSystem.DirectoryInfo.New(@"d:\output");
             var resourceWriter = new DhtmlResourceWriter(FileSystem, conf);
             resourceWriter.WriteTo(conf.OutputFolder.FullName);
         }

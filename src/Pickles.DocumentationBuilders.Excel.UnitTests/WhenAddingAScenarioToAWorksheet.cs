@@ -63,22 +63,22 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 3;
                 excelScenarioFormatter.Format(worksheet, scenario, ref row);
 
-                Check.That(worksheet.Cell("B3").Value).IsEqualTo(scenario.Name);
-                Check.That(worksheet.Cell("C4").Value).IsEqualTo("tag1, tag2");
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(scenario.Description);
-                Check.That(worksheet.Cell("B7").Value).IsEqualTo("Examples");
-                Check.That(worksheet.Cell("D8").Value).IsEqualTo("Var1");
-                Check.That(worksheet.Cell("E8").Value).IsEqualTo("Var2");
-                Check.That(worksheet.Cell("F8").Value).IsEqualTo("Var3");
-                Check.That(worksheet.Cell("G8").Value).IsEqualTo("Var4");
-                Check.That(worksheet.Cell("D9").Value).IsEqualTo(1.0);
-                Check.That(worksheet.Cell("E9").Value).IsEqualTo(2.0);
-                Check.That(worksheet.Cell("F9").Value).IsEqualTo(3.0);
-                Check.That(worksheet.Cell("G9").Value).IsEqualTo(4.0);
-                Check.That(worksheet.Cell("D10").Value).IsEqualTo(5.0);
-                Check.That(worksheet.Cell("E10").Value).IsEqualTo(6.0);
-                Check.That(worksheet.Cell("F10").Value).IsEqualTo(7.0);
-                Check.That(worksheet.Cell("G10").Value).IsEqualTo(8.0);
+                Check.That(worksheet.Cell("B3").GetValue<string>()).IsEqualTo(scenario.Name);
+                Check.That(worksheet.Cell("C4").GetValue<string>()).IsEqualTo("tag1, tag2");
+                Check.That(worksheet.Cell("C5").GetValue<string>()).IsEqualTo(scenario.Description);
+                Check.That(worksheet.Cell("B7").GetValue<string>()).IsEqualTo("Examples");
+                Check.That(worksheet.Cell("D8").GetValue<string>()).IsEqualTo("Var1");
+                Check.That(worksheet.Cell("E8").GetValue<string>()).IsEqualTo("Var2");
+                Check.That(worksheet.Cell("F8").GetValue<string>()).IsEqualTo("Var3");
+                Check.That(worksheet.Cell("G8").GetValue<string>()).IsEqualTo("Var4");
+                Check.That(worksheet.Cell("D9").GetValue<string>()).IsEqualTo("1");
+                Check.That(worksheet.Cell("E9").GetValue<string>()).IsEqualTo("2");
+                Check.That(worksheet.Cell("F9").GetValue<string>()).IsEqualTo("3");
+                Check.That(worksheet.Cell("G9").GetValue<string>()).IsEqualTo("4");
+                Check.That(worksheet.Cell("D10").GetValue<string>()).IsEqualTo("5");
+                Check.That(worksheet.Cell("E10").GetValue<string>()).IsEqualTo("6");
+                Check.That(worksheet.Cell("F10").GetValue<string>()).IsEqualTo("7");
+                Check.That(worksheet.Cell("G10").GetValue<string>()).IsEqualTo("8");
                 Check.That(row).IsEqualTo(11);
             }
         }
@@ -112,21 +112,21 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 3;
                 excelScenarioFormatter.Format(worksheet, scenario, ref row);
 
-                Check.That(worksheet.Cell("B3").Value).IsEqualTo(scenario.Name);
-                Check.That(worksheet.Cell("C4").Value).IsEqualTo(scenario.Description);
-                Check.That(worksheet.Cell("B9").Value).IsEqualTo("Examples");
-                Check.That(worksheet.Cell("D10").Value).IsEqualTo("Var1");
-                Check.That(worksheet.Cell("E10").Value).IsEqualTo("Var2");
-                Check.That(worksheet.Cell("F10").Value).IsEqualTo("Var3");
-                Check.That(worksheet.Cell("G10").Value).IsEqualTo("Var4");
-                Check.That(worksheet.Cell("D11").Value).IsEqualTo(1.0);
-                Check.That(worksheet.Cell("E11").Value).IsEqualTo(2.0);
-                Check.That(worksheet.Cell("F11").Value).IsEqualTo(3.0);
-                Check.That(worksheet.Cell("G11").Value).IsEqualTo(4.0);
-                Check.That(worksheet.Cell("D12").Value).IsEqualTo(5.0);
-                Check.That(worksheet.Cell("E12").Value).IsEqualTo(6.0);
-                Check.That(worksheet.Cell("F12").Value).IsEqualTo(7.0);
-                Check.That(worksheet.Cell("G12").Value).IsEqualTo(8.0);
+                Check.That(worksheet.Cell("B3").GetValue<string>()).IsEqualTo(scenario.Name);
+                Check.That(worksheet.Cell("C4").GetValue<string>()).IsEqualTo(scenario.Description);
+                Check.That(worksheet.Cell("B9").GetValue<string>()).IsEqualTo("Examples");
+                Check.That(worksheet.Cell("D10").GetValue<string>()).IsEqualTo("Var1");
+                Check.That(worksheet.Cell("E10").GetValue<string>()).IsEqualTo("Var2");
+                Check.That(worksheet.Cell("F10").GetValue<string>()).IsEqualTo("Var3");
+                Check.That(worksheet.Cell("G10").GetValue<string>()).IsEqualTo("Var4");
+                Check.That(worksheet.Cell("D11").GetValue<string>()).IsEqualTo("1");
+                Check.That(worksheet.Cell("E11").GetValue<string>()).IsEqualTo("2");
+                Check.That(worksheet.Cell("F11").GetValue<string>()).IsEqualTo("3");
+                Check.That(worksheet.Cell("G11").GetValue<string>()).IsEqualTo("4");
+                Check.That(worksheet.Cell("D12").GetValue<string>()).IsEqualTo("5");
+                Check.That(worksheet.Cell("E12").GetValue<string>()).IsEqualTo("6");
+                Check.That(worksheet.Cell("F12").GetValue<string>()).IsEqualTo("7");
+                Check.That(worksheet.Cell("G12").GetValue<string>()).IsEqualTo("8");
                 Check.That(row).IsEqualTo(13);
             }
         }
@@ -147,7 +147,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 3;
                 excelScenarioFormatter.Format(worksheet, scenario, ref row);
 
-                Check.That(worksheet.Cell("B5").Value).IsEqualTo("Voorbeelden");
+                Check.That(worksheet.Cell("B5").GetValue<string>()).IsEqualTo("Voorbeelden");
             }
         }
 

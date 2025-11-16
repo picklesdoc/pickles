@@ -3,7 +3,7 @@
     <ProductVersion>8.0.30703</ProductVersion>
     <RootNamespace>PicklesDoc.Pickles.Test</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.Test</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
     <AssemblyTitle>Pickles.Test</AssemblyTitle>
     <Description>Unit and integration tests for Pickles</Description>
@@ -81,16 +81,16 @@
     <EmbeddedResource Include="FakeFolderStructures\JSON\results-example-failing-and-pasing-mstest.trx" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Castle.Core" Version="4.2.1" />
+    <PackageReference Include="Castle.Core" Version="5.2.1" />
 
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
-    <PackageReference Include="NFluent" Version="2.7.2" />
-    <PackageReference Include="NSubstitute" Version="3.1.0" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="17.0.3" />
-    <PackageReference Include="System.IO.Packaging" Version="5.0.0" />
-    <PackageReference Include="System.Resources.Extensions" Version="5.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="NFluent" Version="3.1.0" />
+    <PackageReference Include="NSubstitute" Version="5.3.0" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.16" />
+    <PackageReference Include="System.IO.Packaging" Version="10.0.0" />
+    <PackageReference Include="System.Resources.Extensions" Version="10.0.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="Helpers\XElementExtensions.cs" />

@@ -83,7 +83,7 @@ namespace PicklesDoc.Pickles.Extensions
             var files = fileFullName.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
             return files.SelectMany(f => GetAllFilesFromPathAndFileNameWithOptionalWildCards(f, fileSystem))
                     .Distinct()
-                    .Select(f => fileSystem.FileInfo.FromFileName(f));
+                    .Select(f => fileSystem.FileInfo.New(f));
         }
 
     }

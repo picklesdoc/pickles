@@ -28,8 +28,8 @@ namespace PicklesDoc.Pickles.Extensions
         public static Uri GetUri(this IFileSystem fileSystem, string path)
         {
             if(fileSystem.Directory.Exists(path))
-                return fileSystem.DirectoryInfo.FromDirectoryName(path).FullName.ToFolderUri();
-            return fileSystem.FileInfo.FromFileName(path).FullName.ToFileUri();
+                return fileSystem.DirectoryInfo.New(path).FullName.ToFolderUri();
+            return fileSystem.FileInfo.New(path).FullName.ToFileUri();
         }
     }
 }

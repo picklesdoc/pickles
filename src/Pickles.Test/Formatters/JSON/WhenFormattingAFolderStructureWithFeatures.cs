@@ -40,13 +40,13 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
         }
         public void Setup()
         {
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystemPrefix);
+            var rootPath = FileSystem.DirectoryInfo.New(FileSystemPrefix);
 
             this.AddFakeFolderStructures();
 
             Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
 
-            var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectory);
+            var outputDirectory = FileSystem.DirectoryInfo.New(OutputDirectory);
             if (!outputDirectory.Exists)
             {
                 outputDirectory.Create();
@@ -54,7 +54,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
 
             var configuration = new Configuration
             {
-                OutputFolder = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectory),
+                OutputFolder = FileSystem.DirectoryInfo.New(OutputDirectory),
                 DocumentationFormat = DocumentationFormat.Json
             };
 

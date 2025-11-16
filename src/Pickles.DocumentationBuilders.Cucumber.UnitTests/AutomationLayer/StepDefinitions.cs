@@ -46,10 +46,10 @@ namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
         [Given(@"I have this feature description placed in a folder '(.*)' in a file '(.*)'")]
         public void GivenIHaveThisFeatureDescriptionPlacedInAFolder(string featureFolder, string featureFile, string multilineText)
         {
-            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName(featureFolder);
+            var directoryInfo = FileSystem.DirectoryInfo.New(featureFolder);
             directoryInfo.Create();
             var fileName = FileSystem.Path.Combine(featureFolder,featureFile);
-            var fileInfo = FileSystem.FileInfo.FromFileName(fileName);
+            var fileInfo = FileSystem.FileInfo.New(fileName);
             using var writer = fileInfo.CreateText();
             {
                 writer.Write(multilineText);
@@ -66,7 +66,7 @@ namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
                                                    featureNodeFactory,
                                                    FileSystem);
             this.nodes =
-                crawler.Crawl(FileSystem.DirectoryInfo.FromDirectoryName(FileSystem.Directory.GetCurrentDirectory()),
+                crawler.Crawl(FileSystem.DirectoryInfo.New(FileSystem.Directory.GetCurrentDirectory()),
                     new ParsingReport());
         }
         [Given("I have this feature description")]
@@ -76,7 +76,7 @@ namespace Pickles.DocumentationBuilders.Cucumber.UnitTests.AutomationLayer
 
             var feature = parser.Parse(new StringReader(featureDescription));
 
-            this.nodes = new Tree(new FeatureNode(FileSystem.DirectoryInfo.FromDirectoryName(@"output"), string.Empty, feature));
+            this.nodes = new Tree(new FeatureNode(FileSystem.DirectoryInfo.New(@"output"), string.Empty, feature));
         }
 
         [When(@"I generate the documentation")]

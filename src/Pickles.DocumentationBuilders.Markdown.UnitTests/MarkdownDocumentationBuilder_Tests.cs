@@ -43,7 +43,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var documentationBuilder = new MarkdownDocumentationBuilder(filesystem, configuration);
 
-            Assert.IsInstanceOf<IDocumentationBuilder>(documentationBuilder);
+            Assert.That(documentationBuilder, Is.InstanceOf<IDocumentationBuilder>());
         }
 
         [Test]
@@ -53,7 +53,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
 
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
-            Assert.IsNotNull(markdownDocumentationBuilder);
+            Assert.That(markdownDocumentationBuilder, Is.Not.Null);
         }
 
         [Test]
@@ -66,12 +66,12 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
             var defaultOutputFile = fileSystem.Path.Combine("output","features.md");
 
-            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            configuration.OutputFolder = fileSystem.DirectoryInfo.New(outputFolder);
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
             markdownDocumentationBuilder.Build(null);
 
-            Assert.IsTrue(fileSystem.FileExists(defaultOutputFile));
+            Assert.That(fileSystem.FileExists(defaultOutputFile), Is.True);
         }
 
         [Test]
@@ -82,14 +82,14 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var container = BuildContainer();
             var configuration = container.Resolve<IConfiguration>();
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
-            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            configuration.OutputFolder = fileSystem.DirectoryInfo.New(outputFolder);
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
             markdownDocumentationBuilder.Build(null);
 
-            Assert.IsTrue(fileSystem.FileExists(fileSystem.Path.Combine("output","pass.png")));
-            Assert.IsTrue(fileSystem.FileExists(fileSystem.Path.Combine("output","fail.png")));
-            Assert.IsTrue(fileSystem.FileExists(fileSystem.Path.Combine("output","inconclusive.png")));
+            Assert.That(fileSystem.FileExists(fileSystem.Path.Combine("output", "pass.png")), Is.True);
+            Assert.That(fileSystem.FileExists(fileSystem.Path.Combine("output", "fail.png")), Is.True);
+            Assert.That(fileSystem.FileExists(fileSystem.Path.Combine("output", "inconclusive.png")), Is.True);
         }
 
         [Test]
@@ -108,7 +108,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
             var defaultOutputFile = fileSystem.Path.Combine("output","features.md");
 
-            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            configuration.OutputFolder = fileSystem.DirectoryInfo.New(outputFolder);
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
             markdownDocumentationBuilder.Build(null);
@@ -140,13 +140,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var fileSystem = (MockFileSystem)container.Resolve<IFileSystem>();
             var defaultOutputFile = fileSystem.Path.Combine("output", "features.md");
 
-            configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            configuration.OutputFolder = fileSystem.DirectoryInfo.New(outputFolder);
             var markdownDocumentationBuilder = container.Resolve<MarkdownDocumentationBuilder>();
 
             var simpleFeature = new Feature();
             simpleFeature.Name = "Simple Feature";
             var relPath = "fakedir";
-            var location = fileSystem.FileInfo.FromFileName(fileSystem.Directory.GetCurrentDirectory());
+            var location = fileSystem.FileInfo.New(fileSystem.Directory.GetCurrentDirectory());
             var newNode = new FeatureNode(location, relPath, simpleFeature);
             var featureTree = new Tree(new FolderNode(location, relPath));
             featureTree.Add(newNode);

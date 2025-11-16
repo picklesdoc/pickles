@@ -50,8 +50,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 5;
                 excelStepFormatter.Format(worksheet, step, ref row);
 
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.NativeKeyword);
-                Check.That(worksheet.Cell("D5").Value).IsEqualTo(step.Name);
+                Check.That(worksheet.Cell("C5").GetValue<string>()).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D5").GetValue<string>()).IsEqualTo(step.Name);
             }
         }
 
@@ -79,9 +79,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 5;
                 excelStepFormatter.Format(worksheet, step, ref row);
 
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments.First().Text);
-                Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.NativeKeyword);
-                Check.That(worksheet.Cell("D6").Value).IsEqualTo(step.Name);
+                Check.That(worksheet.Cell("C5").GetValue<string>()).IsEqualTo(step.Comments.First().Text);
+                Check.That(worksheet.Cell("C6").GetValue<string>()).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D6").GetValue<string>()).IsEqualTo(step.Name);
             }
         }
 
@@ -114,10 +114,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 5;
                 excelStepFormatter.Format(worksheet, step, ref row);
 
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments[0].Text);
-                Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.Comments[1].Text);
-                Check.That(worksheet.Cell("C7").Value).IsEqualTo(step.NativeKeyword);
-                Check.That(worksheet.Cell("D7").Value).IsEqualTo(step.Name);
+                Check.That(worksheet.Cell("C5").GetValue<string>()).IsEqualTo(step.Comments[0].Text);
+                Check.That(worksheet.Cell("C6").GetValue<string>()).IsEqualTo(step.Comments[1].Text);
+                Check.That(worksheet.Cell("C7").GetValue<string>()).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D7").GetValue<string>()).IsEqualTo(step.Name);
             }
         }
 
@@ -150,10 +150,10 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Excel.UnitTests
                 int row = 5;
                 excelStepFormatter.Format(worksheet, step, ref row);
 
-                Check.That(worksheet.Cell("C5").Value).IsEqualTo(step.Comments.First(o => o.Type == CommentType.StepComment).Text);
-                Check.That(worksheet.Cell("C6").Value).IsEqualTo(step.NativeKeyword);
-                Check.That(worksheet.Cell("D6").Value).IsEqualTo(step.Name);
-                Check.That(worksheet.Cell("C7").Value).IsEqualTo(step.Comments.First(o => o.Type == CommentType.AfterLastStepComment).Text);
+                Check.That(worksheet.Cell("C5").GetValue<string>()).IsEqualTo(step.Comments.First(o => o.Type == CommentType.StepComment).Text);
+                Check.That(worksheet.Cell("C6").GetValue<string>()).IsEqualTo(step.NativeKeyword);
+                Check.That(worksheet.Cell("D6").GetValue<string>()).IsEqualTo(step.Name);
+                Check.That(worksheet.Cell("C7").GetValue<string>()).IsEqualTo(step.Comments.First(o => o.Type == CommentType.AfterLastStepComment).Text);
             }
         }
     }

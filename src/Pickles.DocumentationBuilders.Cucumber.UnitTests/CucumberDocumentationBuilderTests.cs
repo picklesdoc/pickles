@@ -49,7 +49,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Cucumber.UnitTests
 
             var fileSystem = new FileSystem();
             fileSystem.Directory.SetCurrentDirectory(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
-            var IFileSystemInfo = fileSystem.DirectoryInfo.FromDirectoryName(@"./");
+            var IFileSystemInfo = fileSystem.DirectoryInfo.New(@"./");
             var configuration = new Configuration
             {
                 OutputFolder = IFileSystemInfo

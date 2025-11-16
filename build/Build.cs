@@ -17,10 +17,9 @@ using Nuke.Common.Tooling;
 using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.NuGet;
 using Nuke.Common.Utilities.Collections;
-using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 
-[CheckBuildProjectConfigurations]
+
 [ShutdownDotNetAfterServerBuild]
 class Build : NukeBuild
 {
@@ -68,13 +67,13 @@ class Build : NukeBuild
         .Before(Test)
         .Executes(() =>
         {
-            SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-            EnsureCleanDirectory(ArtifactsDirectory);
-            EnsureCleanDirectory(DeployDirectory);
-            EnsureCleanDirectory(DeployDirectory / "zip");
-            EnsureCleanDirectory(DeployDirectory / "nuget");
-            EnsureCleanDirectory(OutputDirectory);
-            EnsureCleanDirectory(DocsOutputDirectory);
+            //SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(CreateOrCleanDirectory);
+            ArtifactsDirectory.CreateOrCleanDirectory();
+            DeployDirectory.CreateOrCleanDirectory();
+            (DeployDirectory / "zip").CreateOrCleanDirectory();
+            (DeployDirectory / "nuget").CreateOrCleanDirectory();
+            DeployDirectory.CreateOrCleanDirectory();
+            DocsOutputDirectory.CreateOrCleanDirectory();
         });
 
     Target Test => _ => _

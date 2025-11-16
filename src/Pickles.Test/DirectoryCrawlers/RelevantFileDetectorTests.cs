@@ -34,7 +34,7 @@ namespace PicklesDoc.Pickles.Test.DirectoryCrawlers
             var fileDetector = new RelevantFileDetector();
 
             var fileSystem = new MockFileSystem();
-            var file = fileSystem.FileInfo.FromFileName("image.png");
+            var file = fileSystem.FileInfo.New("image.png");
 
             bool isRelevant = fileDetector.IsRelevant(file);
 

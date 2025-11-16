@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles.Test
 
             var report = new ParsingReport();
 
-            featureNodeFactory.Create(null, FileSystem.FileInfo.FromFileName(@"test.feature"), report);
+            featureNodeFactory.Create(null, FileSystem.FileInfo.New(@"test.feature"), report);
 
             Check.That(report.First()).Contains(@"test.feature");
         }
@@ -56,7 +56,7 @@ namespace PicklesDoc.Pickles.Test
 
             var report = new ParsingReport();
 
-            var fileInfo = FileSystem.FileInfo.FromFileName(@"test.md");
+            var fileInfo = FileSystem.FileInfo.New(@"test.md");
             featureNodeFactory.Create(null, fileInfo, report);
 
             Check.That(report.Count).Equals(1);
@@ -89,7 +89,7 @@ namespace PicklesDoc.Pickles.Test
 
             var report = new ParsingReport();
 
-            featureNodeFactory.Create(null, FileSystem.FileInfo.FromFileName(@"c:\test.dll"), report);
+            featureNodeFactory.Create(null, FileSystem.FileInfo.New(@"c:\test.dll"), report);
 
             Check.That(report.First()).Contains(@"c:\test.dll");
         }
@@ -109,6 +109,33 @@ namespace PicklesDoc.Pickles.Test
         private class BogusIFileSystemInfo : System.IO.Abstractions.IFileSystemInfo
         {
             internal string fullName;
+            public IFileSystem FileSystem => throw new NotImplementedException();
+
+            public FileAttributes Attributes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public DateTime CreationTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public DateTime CreationTimeUtc { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+            public bool Exists => throw new NotImplementedException();
+
+            public string Extension => throw new NotImplementedException();
+
+            public string FullName => fullName;
+
+            public DateTime LastAccessTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public DateTime LastAccessTimeUtc { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public DateTime LastWriteTime { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+            public DateTime LastWriteTimeUtc { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+            public string LinkTarget => throw new NotImplementedException();
+
+            public string Name => throw new NotImplementedException();
+
+            public UnixFileMode UnixFileMode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+            public void CreateAsSymbolicLink(string pathToTarget)
+            {
+                throw new NotImplementedException();
+            }
 
             public void Delete()
             {
@@ -120,26 +147,10 @@ namespace PicklesDoc.Pickles.Test
                 throw new NotImplementedException();
             }
 
-            public IFileSystem FileSystem { get; set; }
-
-            public FileAttributes Attributes { get; set; }
-            public DateTime CreationTime { get; set; }
-            public DateTime CreationTimeUtc { get; set; }
-            public bool Exists { get; }
-            public string Extension { get; }
-
-            public string FullName
+            public IFileSystemInfo ResolveLinkTarget(bool returnFinalTarget)
             {
-                get { return this.fullName; }
+                throw new NotImplementedException();
             }
-
-            public DateTime LastAccessTime { get; set; }
-            public DateTime LastAccessTimeUtc { get; set; }
-            public DateTime LastWriteTime { get; set; }
-            public DateTime LastWriteTimeUtc { get; set; }
-            public string Name { get; }
-
-            public string LinkTarget => throw new NotImplementedException();
         }
 
         private class MockMarkdownProvider : IMarkdownProvider

@@ -44,8 +44,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var scenarioBlock = new ScenarioBlock(scenario,mockStyle);
             var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual(expectedString, actualString[0]);
-            Assert.AreEqual(2, actualString.Length);
+            Assert.That(expectedString, Is.EqualTo(actualString[0]));
+            Assert.That(2, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -66,9 +66,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var scenarioBlock = new ScenarioBlock(scenario, mockStyle);
             var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual(">>>tagone<<< >>>tagtwo<<<", actualString[0]);
-            Assert.AreEqual("ScenarioHeading: Scenario with Tags", actualString[2]);
-            Assert.AreEqual(4, actualString.Length);
+            Assert.That(">>>tagone<<< >>>tagtwo<<<", Is.EqualTo(actualString[0]));
+            Assert.That("ScenarioHeading: Scenario with Tags", Is.EqualTo(actualString[2]));
+            Assert.That(4, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -88,9 +88,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var scenarioBlock = new ScenarioBlock(scenario, mockStyle);
             var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("ScenarioHeading: Scenario with Step", actualString[0]);
-            Assert.AreEqual("Keyword: Natkey Step: I am a step", actualString[2]);
-            Assert.AreEqual(4, actualString.Length);
+            Assert.That("ScenarioHeading: Scenario with Step", Is.EqualTo(actualString[0]));
+            Assert.That("Keyword: Natkey Step: I am a step", Is.EqualTo(actualString[2]));
+            Assert.That(4, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -110,8 +110,8 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var scenarioBlock = new ScenarioBlock(scenario, mockStyle);
             var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("ScenarioHeading: result Scenario with Step", actualString[0]);
-            Assert.AreEqual(2, actualString.Length);
+            Assert.That("ScenarioHeading: result Scenario with Step", Is.EqualTo(actualString[0]));
+            Assert.That(2, Is.EqualTo(actualString.Length));
         }
 		
         [Test]
@@ -131,9 +131,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var scenarioBlock = new ScenarioBlock(scenario, mockStyle);
             var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("ScenarioHeading: Scenario with placeholder Step", actualString[0]);
-            Assert.AreEqual(@"Keyword: Natkey Step: I am a \<placeholder\> step", actualString[2]);
-            Assert.AreEqual(4, actualString.Length);
+            Assert.That("ScenarioHeading: Scenario with placeholder Step", Is.EqualTo(actualString[0]));
+            Assert.That(@"Keyword: Natkey Step: I am a \<placeholder\> step", Is.EqualTo(actualString[2]));
+            Assert.That(4, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -174,13 +174,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var scenarioBlock = new ScenarioBlock(scenario, mockStyle);
             var actualString = scenarioBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("ScenarioHeading: Scenario with Examples", actualString[0]);
-            Assert.AreEqual("ExampleHeading: My Examples", actualString[2]);
-            Assert.AreEqual("> | example | val_one | val_two |", actualString[4]);
-            Assert.AreEqual("> | --- | --- | --- |", actualString[5]);
-            Assert.AreEqual("> | ex.one | one.one | one.two |", actualString[6]);
-            Assert.AreEqual("> | ex.two | two.one | two.two |", actualString[7]);
-            Assert.AreEqual(9, actualString.Length);
+            Assert.That("ScenarioHeading: Scenario with Examples", Is.EqualTo(actualString[0]));
+            Assert.That("ExampleHeading: My Examples", Is.EqualTo(actualString[2]));
+            Assert.That("> | example | val_one | val_two |", Is.EqualTo(actualString[4]));
+            Assert.That("> | --- | --- | --- |", Is.EqualTo(actualString[5]));
+            Assert.That("> | ex.one | one.one | one.two |", Is.EqualTo(actualString[6]));
+            Assert.That("> | ex.two | two.one | two.two |", Is.EqualTo(actualString[7]));
+            Assert.That(9, Is.EqualTo(actualString.Length));
         }
     }
 }

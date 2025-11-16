@@ -33,21 +33,21 @@ namespace PicklesDoc.Pickles.Test
         public void ThenCanDetectFeatureFilesSuccessfully()
         {
             var relevantFileDetector = Container.Resolve<RelevantFileDetector>();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.feature"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.markdown"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.mdown"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.mkdn"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.md"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.mdwn"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.mdtext"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.mdtxt"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.text"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.txt"))).IsTrue();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.pdf"))).IsFalse();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.doc"))).IsFalse();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.docx"))).IsFalse();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("test.docx"))).IsFalse();
-            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.FromFileName("myproject.csproj.FileListAbsolute.txt"))).IsFalse();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.feature"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.markdown"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.mdown"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.mkdn"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.md"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.mdwn"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.mdtext"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.mdtxt"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.text"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.txt"))).IsTrue();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.pdf"))).IsFalse();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.doc"))).IsFalse();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.docx"))).IsFalse();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("test.docx"))).IsFalse();
+            Check.That(relevantFileDetector.IsRelevant(FileSystem.FileInfo.New("myproject.csproj.FileListAbsolute.txt"))).IsFalse();
         }
     }
 }

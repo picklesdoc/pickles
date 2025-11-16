@@ -1,8 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Markdown.UnitTests</AssemblyTitle>
     <Description>Unit tests for the Pickles output formatter that outputs Markdown documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -27,13 +27,13 @@
     <ProjectReference Include="..\Pickles\Pickles.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
-    <PackageReference Include="MSTest.TestAdapter" Version="2.2.3" />
-    <PackageReference Include="MSTest.TestFramework" Version="1.4.0" />
-    <PackageReference Include="NFluent" Version="2.7.2" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.7.38" />
-    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="17.0.3" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="4.0.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="4.0.2" />
+    <PackageReference Include="NFluent" Version="3.1.0" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
+    <PackageReference Include="System.IO.Abstractions.TestingHelpers" Version="22.0.16" />
   </ItemGroup>
 </Project>

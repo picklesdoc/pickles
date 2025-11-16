@@ -44,11 +44,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var tableBlock = new TableBlock(table, mockStyle);
             var actualString = tableBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("> | Col1 | Col2 |", actualString[0]);
-            Assert.AreEqual("> | --- | --- |", actualString[1]);
-            Assert.AreEqual("> | Col1Row1 | Col2Row1 |", actualString[2]);
-            Assert.AreEqual("> | Col1Row2 | Col2Row2 |", actualString[3]);
-            Assert.AreEqual(5, actualString.Length);
+            Assert.That("> | Col1 | Col2 |", Is.EqualTo(actualString[0]));
+            Assert.That("> | --- | --- |", Is.EqualTo(actualString[1]));
+            Assert.That("> | Col1Row1 | Col2Row1 |", Is.EqualTo(actualString[2]));
+            Assert.That("> | Col1Row2 | Col2Row2 |", Is.EqualTo(actualString[3]));
+            Assert.That(5, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -67,11 +67,11 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var tableBlock = new TableBlock(table, mockStyle);
             var actualString = tableBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("> | Col1 | Col2 |", actualString[0]);
-            Assert.AreEqual("> | --- | --- |", actualString[1]);
-            Assert.AreEqual(@"> | Col1Row1 | \<Col2Row1\> |", actualString[2]);
-            Assert.AreEqual(@"> | \<Col1Row2\> | Col2Row2 |", actualString[3]);
-            Assert.AreEqual(5, actualString.Length);
+            Assert.That("> | Col1 | Col2 |", Is.EqualTo(actualString[0]));
+            Assert.That("> | --- | --- |", Is.EqualTo(actualString[1]));
+            Assert.That(@"> | Col1Row1 | \<Col2Row1\> |", Is.EqualTo(actualString[2]));
+            Assert.That(@"> | \<Col1Row2\> | Col2Row2 |", Is.EqualTo(actualString[3]));
+            Assert.That(5, Is.EqualTo(actualString.Length));
         }
 
         [Test]
@@ -92,13 +92,13 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests
             var tableBlock = new TableBlock(table, mockStyle, true);
             var actualString = tableBlock.ToString().Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.AreEqual("> | Col1 | Col2 | Result |", actualString[0]);
-            Assert.AreEqual("> | --- | --- | --- |", actualString[1]);
-            Assert.AreEqual("> | Col1Row1 | Col2Row1 | ![Passed](pass.png) |", actualString[2]);
-            Assert.AreEqual("> | Col1Row2 | Col2Row2 | ![Failed](fail.png) |", actualString[3]);
-            Assert.AreEqual("> | Col1Row3 | Col2Row3 | ![Inconclusive](inconclusive.png) |", actualString[4]);
-            Assert.AreEqual("> | Col1Row4 | Col2Row4 |  |", actualString[5]);
-            Assert.AreEqual(7, actualString.Length);
+            Assert.That("> | Col1 | Col2 | Result |", Is.EqualTo(actualString[0]));
+            Assert.That("> | --- | --- | --- |", Is.EqualTo(actualString[1]));
+            Assert.That("> | Col1Row1 | Col2Row1 | ![Passed](pass.png) |", Is.EqualTo(actualString[2]));
+            Assert.That("> | Col1Row2 | Col2Row2 | ![Failed](fail.png) |", Is.EqualTo(actualString[3]));
+            Assert.That("> | Col1Row3 | Col2Row3 | ![Inconclusive](inconclusive.png) |", Is.EqualTo(actualString[4]));
+            Assert.That("> | Col1Row4 | Col2Row4 |  |", Is.EqualTo(actualString[5]));
+            Assert.That(7, Is.EqualTo(actualString.Length));
         }
 
         private void AddRowWithResult(Table table,string[] data, TestResult result)

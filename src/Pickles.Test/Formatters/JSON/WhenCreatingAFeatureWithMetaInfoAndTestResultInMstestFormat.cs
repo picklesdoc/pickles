@@ -41,7 +41,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
         public string Setup()
         {
             string OutputDirectoryName =FileSystem.Path.Combine(FileSystemPrefix,"JSONFeatureOutput");
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(FileSystem.Path.Combine(FileSystemPrefix,"JSON","Features"));
+            var rootPath = FileSystem.DirectoryInfo.New(FileSystem.Path.Combine(FileSystemPrefix,"JSON","Features"));
 
             var TestResultFilePath = FileSystem.Path.Combine(FileSystemPrefix,"JSON","results-example-failing-and-pasing-mstest.trx");
 
@@ -63,7 +63,7 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
 
             Tree features = Container.Resolve<DirectoryTreeCrawler>().Crawl(rootPath, new ParsingReport());
 
-            var outputDirectory = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectoryName);
+            var outputDirectory = FileSystem.DirectoryInfo.New(OutputDirectoryName);
             if (!outputDirectory.Exists)
             {
                 outputDirectory.Create();
@@ -71,13 +71,13 @@ namespace PicklesDoc.Pickles.Test.Formatters.JSON
 
             var configuration = new Configuration
             {
-                OutputFolder = FileSystem.DirectoryInfo.FromDirectoryName(OutputDirectoryName),
+                OutputFolder = FileSystem.DirectoryInfo.New(OutputDirectoryName),
                 DocumentationFormat = DocumentationFormat.Json,
                 TestResultsFormat = TestResultsFormat.MsTest,
                 SystemUnderTestName = "SUT Name",
                 SystemUnderTestVersion = "SUT Version"
             };
-            configuration.AddTestResultFile(FileSystem.FileInfo.FromFileName(TestResultFilePath));
+            configuration.AddTestResultFile(FileSystem.FileInfo.New(TestResultFilePath));
 
             ITestResults testResults = new MsTestResults(configuration, new MsTestSingleResultLoader(), new MsTestScenarioExampleMatcher());
             var jsonDocumentationBuilder = new JsonDocumentationBuilder(configuration, testResults, FileSystem, new LanguageServicesRegistry());

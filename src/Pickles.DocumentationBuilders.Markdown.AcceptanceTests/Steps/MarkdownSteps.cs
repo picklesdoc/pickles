@@ -42,7 +42,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         [Given(@"I specify the output folder as '(.*)'")]
         public void Given_I_Specify_The_Output_File_As(string outputFolder)
         {
-            Configuration.OutputFolder = this.FileSystem.DirectoryInfo.FromDirectoryName(outputFolder);
+            Configuration.OutputFolder = this.FileSystem.DirectoryInfo.New(outputFolder);
         }
 
         [When(@"I generate Markdown output")]
@@ -73,8 +73,9 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                 var expectedValue = check["Content"];
                 var expectedRow = int.Parse(check["Line No."]);
 
-                Assert.IsTrue(resultArray.Length >= expectedRow, "Not enough lines in output");
-                Assert.AreEqual(expectedValue, resultArray[expectedRow-1]);
+
+                Assert.That(resultArray.Length >= expectedRow, Is.True);
+                Assert.That(expectedValue, Is.EqualTo(resultArray[expectedRow - 1]));
             }
         }
 
@@ -85,7 +86,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
 
             var resultArray = actualResult.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.IsTrue(resultArray.Length >= table.RowCount, "Not enough lines in output");
+            Assert.That(resultArray.Length >= table.RowCount, Is.True);
 
             foreach (var check in table.Rows)
             {
@@ -100,7 +101,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                     }
                 }
 
-                Assert.IsTrue(found, string.Format("Line \"{0}\" not found in output", expectedValue));
+                Assert.That(found, Is.True);
             }
         }
 
@@ -111,7 +112,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
 
             var resultArray = actualResult.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            Assert.IsTrue(resultArray.Length >= table.RowCount, "Not enough lines in output");
+            Assert.That(resultArray.Length >= table.RowCount, Is.True);
 
             var currentIndexPosition = 0;
 
@@ -129,7 +130,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
                     currentIndexPosition++;
                 }
 
-                Assert.IsTrue(found, string.Format("Line \"{0}\" not found or later than expected", expectedValue));
+                Assert.That(found, Is.True);
             }
         }
 
@@ -138,7 +139,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests.Step
         public void Then_The_File_Exists(string expectedFile, string expectedFolder)
         {
             this.filePath = FileSystem.Path.Combine(expectedFolder,expectedFile);
-            Assert.IsTrue(this.FileSystem.File.Exists(this.filePath),string.Format("File \"{0}\" not found",filePath));
+            Assert.That(this.FileSystem.File.Exists(this.filePath), Is.True);
         }
 
         // Duplicated logic from Builder class, should be moved to it's own class?

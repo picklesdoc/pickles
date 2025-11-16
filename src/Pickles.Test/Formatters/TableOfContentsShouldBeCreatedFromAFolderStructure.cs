@@ -46,7 +46,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
         }
         public void Setup()
         {
-            var rootPath = FileSystem.DirectoryInfo.FromDirectoryName(RootPath);
+            var rootPath = FileSystem.DirectoryInfo.New(RootPath);
 
             this.AddFakeFolderStructures();
 
@@ -56,7 +56,7 @@ namespace PicklesDoc.Pickles.Test.Formatters
             this.toc = formatter.Format(
                 features.ChildNodes[0].Data.OriginalLocationUrl,
                 features,
-                FileSystem.DirectoryInfo.FromDirectoryName(RootPath));
+                FileSystem.DirectoryInfo.New(RootPath));
         }
 
         [Test]

@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.Test
 
         private HtmlResourceSet CreateHtmlResourceSet()
         {
-            var configuration = new Configuration { OutputFolder = FileSystem.DirectoryInfo.FromDirectoryName(@"c:\") };
+            var configuration = new Configuration { OutputFolder = FileSystem.DirectoryInfo.New(@"c:\") };
             var htmlResources = new HtmlResourceSet(configuration, FileSystem);
             return htmlResources;
         }

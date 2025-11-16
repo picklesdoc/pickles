@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>PicklesDoc.Pickles.CommandLine</RootNamespace>
     <AssemblyName>Pickles</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>pickles</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
@@ -73,9 +73,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="NDesk.Options.Core" Version="1.2.5" />
+    <PackageReference Include="NDesk.Options.Core" Version="1.2.8" />
     <PackageReference Include="Microsoft.Win32.Primitives" Version="4.3.0" />
-    <PackageReference Include="NuGetizer" Version="0.9.1">
+    <PackageReference Include="NuGetizer" Version="1.4.6">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

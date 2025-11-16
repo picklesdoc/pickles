@@ -45,7 +45,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
 
             if (configuration.OutputFolder == null)
             {
-                configuration.OutputFolder = fileSystem.DirectoryInfo.FromDirectoryName("testing");
+                configuration.OutputFolder = fileSystem.DirectoryInfo.New("testing");
             }
             if(!configuration.OutputFolder.Exists)
                 configuration.OutputFolder.Create();
@@ -67,7 +67,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown
         // TODO: new class handles file system interaction
         private void WriteContentToFile(string filePath, string content)
         {
-            using (var file = fileSystem.FileInfo.FromFileName(filePath).CreateText())
+            using (var file = fileSystem.FileInfo.New(filePath).CreateText())
             {
                 file.Write(content);
 

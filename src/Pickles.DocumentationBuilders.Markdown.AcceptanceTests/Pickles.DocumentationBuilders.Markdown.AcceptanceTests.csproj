@@ -2,7 +2,7 @@
   <PropertyGroup>
     <RootNamespace>PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests</RootNamespace>
     <AssemblyName>PicklesDoc.Pickles.DocumentationBuilders.Markdown.AcceptanceTests</AssemblyName>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AssemblyTitle>Pickles.DocumentationBuilders.Markdown.AcceptanceTests</AssemblyTitle>
     <Description>Acceptance tests for the Pickles output formatter that outputs Markdown documents</Description>
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -61,10 +61,10 @@
     <ProjectReference Include="..\Pickles.Test\Pickles.Test.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
-    <PackageReference Include="NUnit" Version="3.13.1" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
-    <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
-    <PackageReference Include="SpecFlow.NUnit" Version="3.7.38" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="18.0.1" />
+    <PackageReference Include="NUnit" Version="4.4.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="5.2.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="3.1.12" />
+    <PackageReference Include="SpecFlow.NUnit" Version="3.9.74" />
   </ItemGroup>
 </Project>

@@ -32,7 +32,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToFileUriCombined_ValidIntput_ValidOutput()
         {
-            var info = FileSystem.DirectoryInfo.FromDirectoryName("temp");
+            var info = FileSystem.DirectoryInfo.New("temp");
 
             Uri uri = info.ToFileUriCombined("test.txt", FileSystem);
 
@@ -66,7 +66,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToUriDirectoryInfo_WithTrailingSlash_ProducesUriWithTrailingSlash()
         {
-            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName("temp"+Path.DirectorySeparatorChar);
+            var directoryInfo = FileSystem.DirectoryInfo.New("temp"+Path.DirectorySeparatorChar);
 
             Uri uri = directoryInfo.ToUri();
 
@@ -76,7 +76,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToUriDirectoryInfo_WithoutTrailingSlash_ProducesUriWithTrailingSlash()
         {
-            var directoryInfo = FileSystem.DirectoryInfo.FromDirectoryName("temp");
+            var directoryInfo = FileSystem.DirectoryInfo.New("temp");
 
             Uri uri = directoryInfo.ToUri();
 
@@ -86,7 +86,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToUriFileInfo_NormalFilename_ProducesUri()
         {
-            var fileInfo = FileSystem.FileInfo.FromFileName(FileSystem.Path.Combine("temp","test.txt"));
+            var fileInfo = FileSystem.FileInfo.New(FileSystem.Path.Combine("temp","test.txt"));
 
             Uri uri = fileInfo.ToUri();
 
@@ -96,7 +96,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToUriFileSystemInfo_DirectoryWithTrailingSlash_ProducesUriWithTrailingSlash()
         {
-            var fsi = FileSystem.DirectoryInfo.FromDirectoryName("temp");
+            var fsi = FileSystem.DirectoryInfo.New("temp");
 
             Uri uri = fsi.ToUri();
 
@@ -106,7 +106,7 @@ namespace PicklesDoc.Pickles.Test.Extensions
         [Test]
         public void ToUriFileSystemInfo_FileInfo_ProducesUri()
         {
-            var fsi = FileSystem.FileInfo.FromFileName(FileSystem.Path.Combine("temp","test.txt"));
+            var fsi = FileSystem.FileInfo.New(FileSystem.Path.Combine("temp","test.txt"));
 
             Uri uri = fsi.ToUri();
 

@@ -35,7 +35,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests.Blocks_Tes
 
             (mockBlock as MockBlock).Add("Hello, World");
 
-            Assert.AreEqual("Hello, World"+Environment.NewLine, mockBlock.ToString());
+            Assert.That("Hello, World"+Environment.NewLine, Is.EqualTo(mockBlock.ToString()));
         }
 
         [Test]
@@ -46,7 +46,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Markdown.UnitTests.Blocks_Tes
 
             (mockBlock as MockBlock).Add("Hello, World");
 
-            Assert.AreEqual(1, mockBlock.Lines.Count);
+            Assert.That(1, Is.EqualTo(mockBlock.Lines.Count));
         }
     }
 }

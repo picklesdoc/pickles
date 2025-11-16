@@ -84,7 +84,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
         private XElement AddNodeForHome(XNamespace xmlns, Uri file, IDirectoryInfo rootFolder)
         {
             var rootfile =
-                (IFileInfo) this.fileSystem.FileInfo.FromFileName(
+                (IFileInfo) this.fileSystem.FileInfo.New(
                     this.fileSystem.Path.Combine(rootFolder.FullName, "index.html"));
             var xElement = new XElement(xmlns + "li", new XAttribute("class", "file"), new XAttribute("id", "root"));
 
@@ -108,7 +108,7 @@ namespace PicklesDoc.Pickles.DocumentationBuilders.Html
 
         private bool DetermineWhetherFileIsTheRootFile(Uri file, IFileInfo rootfile)
         {
-            var fileInfo = this.fileSystem.FileInfo.FromFileName(file.LocalPath);
+            var fileInfo = this.fileSystem.FileInfo.New(file.LocalPath);
 
             if (rootfile.DirectoryName != fileInfo.DirectoryName)
             {
